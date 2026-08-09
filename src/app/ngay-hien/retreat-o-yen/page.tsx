@@ -172,11 +172,25 @@ export default function RetreatOYenPage() {
         </div>
       </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.4rem", color: "var(--color-moss)", margin: "0 0 0.3rem" }}>+80</p>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", margin: 0 }}>
-          chuyến retreat đã diễn ra tại mlf
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.6rem, 10vw, 5.5rem)", lineHeight: 0.85, color: "var(--color-moss)", marginBottom: "0.5rem" }}>+80</span>
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.4rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>chuyến retreat</span>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.6rem" }}>trong 3 năm qua</span>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1.2rem" }}>
+          mlf không hứa hẹn một điều gì lớn lao. chỉ là một không gian đủ dịu dàng, để bạn tự khám phá điều mình thực sự cần.
         </p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
+          mỗi chuyến retreat đều có một chủ đề riêng, tạo nên bầu không khí và trải nghiệm riêng — dựa trên sự tham gia của bạn, nhà mộc sẽ thiết kế lịch trình để thật sự xuôi dòng. khi bạn nhắn cho nhà mộc, sẽ có một buổi trao đổi ngắn để cùng thiết kế lịch trình và chủ đề riêng cho nhóm của bạn, trước khi xác nhận ngày.
+        </p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "1rem 0 0" }}>
+          lưu ý: lịch trình chi tiết sẽ được gửi vào từng ngày diễn ra retreat, để giữ tính thong thả, uyển chuyển.
+        </p>
+      </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+        <Link href={routes.retreatOYenLichTrinh} className="cta-btn">
+          xem lịch trình tham khảo <span className="ar">→</span>
+        </Link>
       </div>
 
       <div className="wrap" style={{ marginBottom: "0.5rem" }}>

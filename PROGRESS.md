@@ -65,7 +65,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 
 **cộng đồng (Supabase-backed — see README §Interactive Features)**
 - [x] một ngày ở-yên — `/mot-ngay-o-yen` ← `MLF Mot Ngay O Yen.dc.html` (new `OneDayOYen`: rotating hints, live Supabase counter via `increment_oyen_days()` RPC, locked-until-contributed note form, auto-rotating notes reader — verified live reads work against the real Supabase project; fixed a `Math.random()` SSR/client hydration mismatch)
-- [ ] cộng đồng ở-yên — `/cong-dong-o-yen` ← `MLF Cong Dong O Yen.dc.html`
+- [x] cộng đồng ở-yên — `/cong-dong-o-yen` ← `MLF Cong Dong O Yen.dc.html` (new `VoiceCarousel`, `FaqPlusList`; pillar reveal via existing `RevealStagger`; 2×2 space cross-grid; alternating keeper editorial rows)
 - [ ] kho lời nhắn ở-yên — `/kho-loi-nhan-o-yen` ← `MLF Kho Loi Nhan O Yen.dc.html`
 
 **mlf**

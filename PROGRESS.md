@@ -72,10 +72,10 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] về mlf — `/ve-mlf` ← `MLF Ve Mlf.dc.html` (new `.mlf-tl-row`/`.mlf-branch-block`/`.mlf-prog-row` CSS — dashed milestone timeline + 3-branch program list)
 - [x] biên-thư-cho-Hy — `/bien-thu-cho-hy` ← `MLF Bien Thu Cho Hy.dc.html` (new `LetterReader` component: idx-rail letter picker + wax-stamp reading pane, 10 letters verbatim; new `.letters-shell`/`.idx-rail`/`.idx-item`/`.letter-stamp`/`.letter-para` CSS)
 - [x] chuyện-về — `/chuyen-ve` ← `MLF Chuyen Ve.dc.html` (new `ChuyenVeReader`: reuses `.cv-shell`/`.cv-rail`/`.cv-item`/`.qa-q`/`.qa-a` from the tuần-du blog reader, new `.interlude`/`.sub-label` CSS — 2 full Q&A interview episodes verbatim)
-- [ ] mlf journal (hub) — `/journal` ← `MLF Journal.dc.html`
+- [x] mlf journal (hub) — `/journal` ← `MLF Journal.dc.html` (new `JournalIssue` component: shared active-issue state across masthead folio/cover spread/kho tạp chí picker/trích trang; new `.wrap-wide`/`.folio`/`.toc-row`/`.toc-leader` CSS; reuses `.cta-btn`/`.drop-cap`/`Reveal`/`RevealStagger`)
 
-Journal is a blog index — check whether it needs its own `[slug]` dynamic route once
-individual post pages are in scope (not obviously covered by the 37 files above).
+Journal is confirmed a hub-only page — the source has no individual post/article
+templates, so no `[slug]` dynamic route is needed. All 4 mlf-section pages done.
 
 ## Notes for whoever builds the next page
 - Night-palette pages (per README): Chuyện Về, Be Still, Biên Thư, some Journal posts —

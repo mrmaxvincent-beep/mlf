@@ -30,13 +30,13 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] chuỗi tuần-du — `/tuan-du/chuoi` ← `MLF Chuoi Tuan Du.dc.html`
 - [x] tuần-du blog ("người đi qua") — `/tuan-du/blog` ← `MLF Tuan Du Blog.dc.html` (new `BlogReader` component)
 
-**be-still**
-- [ ] be-still (hub) — `/be-still` ← `MLF Be Still.dc.html`
-- [ ] khai tâm — `/be-still/khai-tam` ← `MLF Khai Tam.dc.html`
-- [ ] im lặng, chữ nghĩa — `/be-still/im-lang-chu-nghia` ← `MLF Im Lang Chu Nghia.dc.html`
-- [ ] clari-tea — `/be-still/clari-tea` ← `MLF Clari Tea.dc.html`
-- [ ] phía sáng — `/be-still/phia-sang` ← `MLF Phia Sang.dc.html`
-- [ ] nhất-hiện — `/be-still/nhat-hien` ← `MLF Nhat Hien.dc.html`
+**be-still** (all daytime palette — README's "night pages" list didn't match the actual source files for this section)
+- [x] be-still (hub) — `/be-still` ← `MLF Be Still.dc.html`
+- [x] khai tâm — `/be-still/khai-tam` ← `MLF Khai Tam.dc.html`
+- [x] im lặng, chữ nghĩa — `/be-still/im-lang-chu-nghia` ← `MLF Im Lang Chu Nghia.dc.html` (new `SessionTabs` component)
+- [x] clari-tea — `/be-still/clari-tea` ← `MLF Clari Tea.dc.html`
+- [x] phía sáng — `/be-still/phia-sang` ← `MLF Phia Sang.dc.html`
+- [x] nhất-hiện — `/be-still/nhat-hien` ← `MLF Nhat Hien.dc.html`
 
 **tea · mind**
 - [ ] tea·mind (hub) — `/tea-mind` ← `MLF Tea Mind.dc.html`

@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ChuyenVeReader } from "@/components/ChuyenVeReader";
+import { Reveal } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
 import { episodes } from "@/data/chuyenVe";
 
@@ -31,14 +32,14 @@ export default function ChuyenVePage() {
 
       <div className="cv-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>
         <div />
-        <div style={{ maxWidth: "60ch" }}>
+        <Reveal style={{ maxWidth: "60ch" }}>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
             Mỗi kỳ, mlf ngồi lại cùng một người bạn thân quen — người đã ghé mlf nhiều lần, mang theo một câu chuyện riêng. Chọn một kỳ ở khung bên trái để đọc.
           </p>
           <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
             <Motif name="dom-muc" size={32} />
           </div>
-        </div>
+        </Reveal>
       </div>
 
       <ChuyenVeReader episodes={episodes} />

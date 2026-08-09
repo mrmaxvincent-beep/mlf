@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { LetterReader } from "@/components/LetterReader";
+import { Reveal } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
 import { letters } from "@/data/bienThuChoHy";
 
@@ -29,14 +30,14 @@ export default function BienThuChoHyPage() {
         <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen" aspectRatio="auto" style={{ width: "100%", height: "100%" }} />
       </div>
 
-      <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "3rem", maxWidth: "60ch" }}>
+      <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "3rem", maxWidth: "60ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Từ 2023, cứ mỗi độ ở mlf có điều gì lắng lại đủ sâu, người sáng lập mlf lại ngồi xuống viết một lá thư gửi Hy — một người bạn trong tâm tưởng, để mà kể lại những gì đang diễn ra ở nhà mộc. Những lá thư dưới đây được xếp theo dòng thời gian, mới nhất ở trên. Chọn một ngày ở khung bên trái để đọc.
         </p>
         <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
           <Motif name="dom-muc" size={32} />
         </div>
-      </div>
+      </Reveal>
 
       <div style={{ marginBottom: "5rem" }}>
         <LetterReader letters={letters} />

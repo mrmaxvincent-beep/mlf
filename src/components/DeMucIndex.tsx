@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Reveal } from "@/components/Reveal";
 import type { IndexGroup } from "@/data/deMucChiTiet";
 
 type Door = {
@@ -20,7 +21,7 @@ export function DeMucIndex({ doors, spaceGroups }: { doors: Door[]; spaceGroups:
 
   return (
     <>
-      <div className="wrap" style={{ marginBottom: "3.5rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "3.5rem" }}>
         {doors.map((d) => {
           const isOpen = openDoor === d.key;
           return (
@@ -50,7 +51,7 @@ export function DeMucIndex({ doors, spaceGroups }: { doors: Door[]; spaceGroups:
             </div>
           );
         })}
-      </div>
+      </Reveal>
 
       {showFullIndex
         ? spaceGroups.map((grp) => (

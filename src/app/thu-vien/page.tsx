@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { LibraryReader } from "@/components/LibraryReader";
+import { Reveal } from "@/components/Reveal";
 import { notes } from "@/data/thuVien";
 
 export const metadata: Metadata = {
@@ -30,9 +31,11 @@ export default function ThuVienPage() {
 
       <div className="lib-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>
         <div />
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "left", margin: 0, maxWidth: "60ch" }}>
-          Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình. Gõ từ khoá để tìm, hoặc chọn một số bên trái.
-        </p>
+        <Reveal>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "left", margin: 0, maxWidth: "60ch" }}>
+            Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình. Gõ từ khoá để tìm, hoặc chọn một số bên trái.
+          </p>
+        </Reveal>
       </div>
 
       <div style={{ marginBottom: "5rem" }}>

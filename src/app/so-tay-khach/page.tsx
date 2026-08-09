@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { Reveal } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
 import { routes } from "@/lib/nav";
 import {
@@ -76,7 +77,7 @@ export default function SoTayKhachPage() {
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
         <span className="eyebrow">trước tiên</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
         <p style={proseP}>một lúc, ta chợt nhận ra hình như trên bước đường của mình, ta đã đánh rơi một điều gì đó.</p>
         <p style={proseP}>trong khi cứ mải miết chạy theo nhịp của deadline, mục tiêu, bao vai trò và kỳ vọng chồng lên nhau, ngày này qua ngày khác.</p>
 
@@ -111,21 +112,21 @@ export default function SoTayKhachPage() {
         </div>
 
         <p style={{ ...proseP, margin: 0 }}>những ngày-hiền với một chút chủ ý - từ nội dung, nhịp sống, đến từng bữa ăn, giấc ngủ - để mọi thứ vơi đi. và trong cái vơi ấy, có lẽ, ta sẽ thấy rõ hơn mình đã đánh rơi điều gì?</p>
-      </div>
+      </Reveal>
 
       {/* TRIẾT LÝ */}
       <div className="wrap" style={{ marginBottom: "1.5rem", marginTop: "2.5rem" }}>
         <span className="eyebrow">triết lý</span>
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.7rem", color: "var(--color-ink)", margin: 0 }}>05 chữ của mlf.</h2>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         {philosophy.map((p) => (
           <div key={p.word} className="row-b" style={{ display: "grid", gridTemplateColumns: "5rem 1fr", alignItems: "baseline", gap: "1rem" }}>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.4rem", color: "var(--color-moss)" }}>{p.word}</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", color: "var(--color-stone-alt)", lineHeight: 1.7 }}>{p.desc}</span>
           </div>
         ))}
-      </div>
+      </Reveal>
 
       {/* PHẦN 1 */}
       <div id="phan-1" className="wrap part-divider">
@@ -141,7 +142,7 @@ export default function SoTayKhachPage() {
         <span className="eyebrow">hành trình đến mộc little farm</span>
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>từ khi đặt chỗ đến khi bắt đầu.</h3>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {steps.map((s) => (
           <div key={s.title} className="row-b" style={{ display: "grid", gridTemplateColumns: "1.5rem 1fr", gap: "0.9rem", alignItems: "baseline" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.8rem", color: "var(--color-moss)" }}>→</span>
@@ -151,8 +152,8 @@ export default function SoTayKhachPage() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <div style={{ border: "1px solid var(--color-mist)", padding: "1.25rem 1.5rem", display: "flex", alignItems: "center", gap: "1.1rem" }}>
           <div style={{ flex: "none", width: "3rem", height: "3rem", background: "var(--color-cotton)", border: "1px solid var(--color-mist)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-mono)", fontSize: "0.5rem", color: "var(--color-stone)", textAlign: "center" }}>
             QR
@@ -163,7 +164,7 @@ export default function SoTayKhachPage() {
             <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", color: "var(--color-stone)", lineHeight: 1.6 }}>thông tin chuyến đi, lịch trình, liên lạc trực tiếp với nhà mlf</div>
           </div>
         </div>
-      </div>
+      </Reveal>
 
       {/* 02 DI CHUYỂN */}
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
@@ -171,7 +172,7 @@ export default function SoTayKhachPage() {
         <span className="eyebrow">hướng dẫn di chuyển đến Măng Đen</span>
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>đường đến đây cũng là một phần của chuyến đi.</h3>
       </div>
-      <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
         <div className="row-b">
           <span style={subLabel}>máy bay</span>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", color: "var(--color-ink)", margin: "0 0 0.5rem" }}>Điểm đến: sân bay Pleiku, Gia Lai.</p>
@@ -202,7 +203,7 @@ export default function SoTayKhachPage() {
           <span style={{ ...kvKey, fontSize: "0.68rem" }}>google maps pin</span>
           <span style={{ ...kvVal, color: "var(--color-moss)" }}>mlf sẽ gửi qua Zalo</span>
         </div>
-      </div>
+      </Reveal>
 
       {/* 03 MANG THEO */}
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
@@ -210,7 +211,7 @@ export default function SoTayKhachPage() {
         <span className="eyebrow">những điều cần mang theo</span>
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>mang vừa đủ để nhẹ bước.</h3>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <span style={subLabel}>đồ dùng cá nhân</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
           {personalItemsLine} — <span style={{ color: "var(--color-moss)", fontStyle: "italic" }}>hạn chế đồ dùng một lần và rác thải nhựa.</span>
@@ -221,7 +222,7 @@ export default function SoTayKhachPage() {
 
         <span style={subLabel}>nhà mộc đã chuẩn bị sẵn</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.84rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{providedLine}</p>
-      </div>
+      </Reveal>
 
       {/* 04 THỜI TIẾT */}
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
@@ -230,7 +231,7 @@ export default function SoTayKhachPage() {
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: "0 0 0.6rem" }}>cao nguyên. sương. gió.</h3>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", color: "var(--color-stone)", margin: 0 }}>Măng Đen mát quanh năm, hay có sương, và rất nhiều gió.</p>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         <div className="grid2">
           {weatherCells.map((w) => (
             <div key={w.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem" }}>
@@ -241,8 +242,8 @@ export default function SoTayKhachPage() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         <div className="row-b" style={kvRow}>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", color: "var(--color-ink)" }}>Mùa mưa</span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "var(--color-stone)" }}>tháng 5 – 10 · chiều &amp; tối</span>
@@ -251,10 +252,10 @@ export default function SoTayKhachPage() {
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", color: "var(--color-ink)" }}>Mùa khô</span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "var(--color-stone)" }}>tháng 11 – 4 · trời trong xanh</span>
         </div>
-      </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.84rem", color: "var(--color-stone)", margin: 0 }}>Dù đến mùa nào, hãy mang áo khoác. Buổi sáng và đêm lúc nào cũng khá lạnh.</p>
-      </div>
+      </Reveal>
 
       {/* PHẦN 2 */}
       <div id="phan-2" className="wrap part-divider">
@@ -270,7 +271,7 @@ export default function SoTayKhachPage() {
         <span className="eyebrow">nhịp ngày tại mlf</span>
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>một ngày ở mlf.</h3>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={proseP}>Một ngày thường bắt đầu trước khi mặt trời lên cao.</p>
         <p style={proseP}>Sáng sớm, khi sương còn đọng là lúc yên tĩnh nhất. Nhiều người chọn ngồi thiền, viết nhật ký, hay ngồi với tách trà nhìn ra vườn.</p>
 
@@ -291,7 +292,7 @@ export default function SoTayKhachPage() {
           <br />
           và thức dậy nhẹ nhàng hơn.
         </p>
-      </div>
+      </Reveal>
 
       {/* 06 CÓ THỂ LÀM */}
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
@@ -300,22 +301,22 @@ export default function SoTayKhachPage() {
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: "0 0 0.6rem" }}>chọn điều mình cần.</h3>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", color: "var(--color-stone)", margin: 0 }}>Khoảng tự do trong ngày, đây là những gì sẵn có:</p>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {activityGroups.map((g) => (
           <div key={g.label} className="row-b">
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.5rem" }}>{g.label}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>{g.line}</p>
           </div>
         ))}
-      </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>
         <span style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--color-moss)", display: "inline-block", marginBottom: "1.5rem" }} />
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
           Hoặc không làm gì cả.
           <br />
           Đôi khi, đó là điều cần thiết nhất.
         </p>
-      </div>
+      </Reveal>
 
       {/* 07 NẾP NHÀ */}
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
@@ -323,9 +324,9 @@ export default function SoTayKhachPage() {
         <span className="eyebrow">những điều cùng giữ</span>
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>một vài nếp nhà</h3>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{houseRulesLine}</p>
-      </div>
+      </Reveal>
 
       {/* PHẦN 3 */}
       <div id="phan-3" className="wrap part-divider">
@@ -342,7 +343,7 @@ export default function SoTayKhachPage() {
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>bạn sẽ được nhà mộc dẫn tham quan ngay sau khi đến.</h3>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
         <div style={{ background: "var(--color-cotton)", border: "1px solid var(--color-mist)", padding: "1.1rem 0.9rem" }}>
           <svg width="100%" viewBox="0 0 320 240" fill="none">
             <rect width="320" height="240" fill="#F3EEE5" />
@@ -421,15 +422,15 @@ export default function SoTayKhachPage() {
             </span>
           </div>
         </div>
-      </div>
+      </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "0.6rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "0.6rem" }}>
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)" }}>cái kén nằm im</span>
-      </div>
+      </Reveal>
       <div className="wrap" style={{ marginBottom: "1.2rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "var(--color-stone)", margin: 0 }}>Phòng ngủ được thiết kế vừa-đủ như một chiếc kén nhỏ để nghỉ ngơi.</p>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         <div className="grid2">
           {roomCells.map((r) => (
             <div key={r.name} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
@@ -438,15 +439,15 @@ export default function SoTayKhachPage() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "56ch" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "56ch" }}>
         {roomInfo.map((i) => (
           <div key={i.k} className="row-b" style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", color: "var(--color-stone)", flex: "none" }}>{i.k}</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-ink)", textAlign: "right" }}>{i.v}</span>
           </div>
         ))}
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.75rem" }}>
         <Motif name="mam-la" size={32} />
@@ -454,7 +455,7 @@ export default function SoTayKhachPage() {
           các trang bị
         </span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <span style={{ ...subLabel, color: "var(--color-stone)", marginBottom: "0.7rem" }}>di chuyển</span>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "1.75rem" }}>
           {vehicleTags.map((v) => (
@@ -469,7 +470,7 @@ export default function SoTayKhachPage() {
 
         <span style={{ ...subLabel, color: "var(--color-stone)" }}>bếp &amp; pha chế</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>{kitchenAmenitiesLine}</p>
-      </div>
+      </Reveal>
 
       {/* 09 NẾP ĂN */}
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
@@ -479,18 +480,18 @@ export default function SoTayKhachPage() {
       <div className="wrap" style={{ marginBottom: "0.8rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", color: "var(--color-stone)", margin: 0 }}>để nhắc lại mối quan hệ giữa mình với thức ăn, với đất, với mùa.</p>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {foodInfo.map((i) => (
           <div key={i.k} className="row-b" style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", color: "var(--color-stone)", flex: "none" }}>{i.k}</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-ink)", textAlign: "right" }}>{i.v}</span>
           </div>
         ))}
-      </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <span style={subLabel}>nhà mộc tự tay làm</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.84rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{homemadeFoodLine}</p>
-      </div>
+      </Reveal>
 
       {/* PHẦN 4 */}
       <div id="phan-4" className="wrap part-divider">
@@ -505,20 +506,20 @@ export default function SoTayKhachPage() {
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", marginBottom: "0.3rem" }}>10</span>
         <span className="eyebrow">những điều nên chuẩn bị cho tâm</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {heartLines.map((h) => (
           <p key={h} className="row-b" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0, padding: "0.9rem 0" }}>
             {h}
           </p>
         ))}
-      </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
+      </Reveal>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>Những ngày-hiền ở mlf mầu nhiệm ở chỗ:</p>
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.02em", color: "var(--color-stone)", margin: 0 }}>là khoảng lặng để ta nghe thấy điều mình vốn biết, mà đã quên.</p>
-      </div>
+      </Reveal>
 
       {/* CLOSING */}
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-ink)", margin: "0 0 1.2rem" }}>Hẹn gặp bạn ở Măng Đen.</p>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.2rem" }}>
           <Motif name="dom-muc" size={42} />
@@ -526,7 +527,7 @@ export default function SoTayKhachPage() {
         <Link className="mono-link" href={routes.ngayHien} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang ngày-hiền →
         </Link>
-      </div>
+      </Reveal>
 
       <Footer />
     </>

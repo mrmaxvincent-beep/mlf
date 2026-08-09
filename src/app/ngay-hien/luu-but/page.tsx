@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { LuuButReader } from "@/components/LuuButReader";
+import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 import { entries } from "@/data/luuBut";
 
@@ -30,9 +31,9 @@ export default function LuuButPage() {
         <ImagePlaceholder label="ảnh · trang lưu bút viết tay" aspectRatio="auto" style={{ height: "100%" }} />
       </div>
 
-      <div style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>
+      <Reveal style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>
         <LuuButReader entries={entries} />
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
         <Link href={routes.ngayHien} className="cta-btn">

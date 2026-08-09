@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { BlogReader } from "@/components/BlogReader";
+import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 import { posts } from "@/data/tuanDuBlog";
 
@@ -41,9 +42,11 @@ export default function TuanDuBlogPage() {
 
       <div style={{ maxWidth: 1080, margin: "3.5rem auto 3rem", padding: "0 1.5rem", display: "grid", gridTemplateColumns: "17rem 1fr", gap: "3rem" }}>
         <div />
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "60ch" }}>
-          Sau mỗi chuyến tuần-du, luôn còn lại những dòng chữ — ghi chép của người đồng hành, nhật ký của người đi qua từng vùng đất. Chọn một bài ở khung bên trái để đọc.
-        </p>
+        <Reveal>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "60ch" }}>
+            Sau mỗi chuyến tuần-du, luôn còn lại những dòng chữ — ghi chép của người đồng hành, nhật ký của người đi qua từng vùng đất. Chọn một bài ở khung bên trái để đọc.
+          </p>
+        </Reveal>
       </div>
 
       <BlogReader posts={posts} />

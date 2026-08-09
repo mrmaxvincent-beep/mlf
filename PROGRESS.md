@@ -57,7 +57,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] stay+talk — `/stay-talk` ← `MLF Stay Talk.dc.html` (reuses `.info-row`, `.day-num`, `Schedule`, `PricingPanel`, `FaqShowMore`)
 
 **thư viện**
-- [ ] thư viện ở-yên — `/thu-vien` ← `MLF Thu Vien.dc.html`
+- [x] thư viện ở-yên — `/thu-vien` ← `MLF Thu Vien.dc.html` (new `LibraryReader` component: searchable rail + centered reading pane, 20 notes)
 - [ ] sổ tay khách — `/so-tay-khach` ← `MLF So Tay Khach.dc.html`
 - [ ] đề mục chi tiết — `/de-muc-chi-tiet` ← `MLF De Muc Chi Tiet.dc.html`
 - [ ] dạo một vòng — `/dao-mot-vong` ← `MLF Dao Mot Vong.dc.html`

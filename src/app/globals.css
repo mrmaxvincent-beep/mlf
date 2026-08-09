@@ -731,6 +731,76 @@ details[open] > summary .acc-icon {
   }
 }
 
+/* Day-by-day retreat/tuần-du itinerary schedule ("lịch trình" pages) */
+.itin-day {
+  margin-bottom: 3rem;
+}
+.itin-day:last-child {
+  margin-bottom: 0;
+}
+.itin-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-moss);
+  margin: 0 0 0.4rem;
+}
+.itin-theme {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.35rem;
+  color: var(--color-ink);
+  margin: 0 0 1.4rem;
+}
+.time-row {
+  display: flex;
+  gap: 1.1rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--color-mist);
+  align-items: flex-start;
+}
+.time-row:last-child {
+  border-bottom: none;
+}
+.time-row time {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--color-stone);
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 82px;
+  padding-top: 0.2rem;
+}
+.time-row .activity {
+  flex: 1;
+  min-width: 0;
+}
+.time-row .activity .title {
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  color: var(--color-ink);
+  font-weight: 500;
+  margin: 0 0 0.3rem;
+}
+.time-row .activity .detail {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: var(--color-stone-alt);
+  margin: 0.25rem 0 0;
+  line-height: 1.65;
+}
+@media (max-width: 600px) {
+  .time-row {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .time-row time {
+    width: auto;
+  }
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

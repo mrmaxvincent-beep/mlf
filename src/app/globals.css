@@ -1059,6 +1059,29 @@ details[open] > summary .acc-icon {
   }
 }
 
+/* đề mục chi tiết: door accordions + full curriculum index */
+.part-row {
+  border-top: 1px solid var(--color-mist);
+}
+.part-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+.item-row {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  align-items: baseline;
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

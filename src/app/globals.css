@@ -1302,6 +1302,37 @@ details[open] > summary .acc-icon {
   padding-bottom: 1.1rem;
 }
 
+/* về mlf: dashed milestone timeline + branch program rows */
+.mlf-tl-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.mlf-tl-row:not(:last-child) {
+  border-bottom: 1px dashed var(--color-mist);
+}
+.mlf-tl-row.upcoming {
+  opacity: 0.55;
+}
+@media (max-width: 560px) {
+  .mlf-tl-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+.mlf-branch-block:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+.mlf-prog-row {
+  display: block;
+  padding: 0.55rem 0;
+  background-image: linear-gradient(var(--color-mist), var(--color-mist));
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom left;
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

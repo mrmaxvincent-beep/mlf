@@ -69,7 +69,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] kho lời nhắn ở-yên — `/kho-loi-nhan-o-yen` ← `MLF Kho Loi Nhan O Yen.dc.html` (new `KhoLoiNhan`: full live feed of approved notes via Supabase realtime, shares `notesFallback` with một-ngày-ở-yên — verified against real production data)
 
 **mlf**
-- [ ] về mlf — `/ve-mlf` ← `MLF Ve Mlf.dc.html`
+- [x] về mlf — `/ve-mlf` ← `MLF Ve Mlf.dc.html` (new `.mlf-tl-row`/`.mlf-branch-block`/`.mlf-prog-row` CSS — dashed milestone timeline + 3-branch program list)
 - [ ] biên-thư-cho-Hy — `/bien-thu-cho-hy` ← `MLF Bien Thu Cho Hy.dc.html`
 - [ ] chuyện-về — `/chuyen-ve` ← `MLF Chuyen Ve.dc.html`
 - [ ] mlf journal (hub) — `/journal` ← `MLF Journal.dc.html`

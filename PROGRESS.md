@@ -69,14 +69,14 @@ matches; moved from flat `/retreat/*` and `/stay-talk` slugs)
 **thư viện**
 - [x] thư viện ở-yên — `/thu-vien` ← `MLF Thu Vien.dc.html` (new `LibraryReader` component: searchable rail + centered reading pane, 20 notes)
 - [x] sổ tay khách — `/so-tay-khach` ← `MLF So Tay Khach.dc.html` (long-form guide: TOC jump nav, 4-part structure, inline floor-plan SVG; new `.row-b`/`.grid2`/`.part-divider` CSS + global `scroll-behavior: smooth`)
-- [x] đề mục chi tiết — `/de-muc-chi-tiet` ← `MLF De Muc Chi Tiet.dc.html` (new `DeMucIndex` component: 3 door accordions + full curriculum index toggle — 4 groups, 12 units, 59 parts)
+- [x] đề mục chi tiết — `/cong-dong-o-yen/de-muc-chi-tiet` ← `MLF De Muc Chi Tiet.dc.html` (new `DeMucIndex` component: 3 door accordions + full curriculum index toggle — 4 groups, 12 units, 59 parts; nested under cộng đồng ở-yên to match its own breadcrumb — was flat `/de-muc-chi-tiet`)
 - [x] dạo một vòng — `/ngay-hien/dao-mot-vong` ← `MLF Dao Mot Vong.dc.html` (new `ImageStoryCarousel`, `GuestWhyRotator`, `AmenityTabs`; alternating `.spot-row` tour + auto-scrolling food marquee; nested under ngày-hiền to match its own breadcrumb — was flat `/dao-mot-vong`)
 - [x] lưu bút — `/ngay-hien/luu-but` ← `MLF Luu But.dc.html` (new `LuuButReader`: numbered-grid picker + reading pane, 26 guestbook entries; nested under ngày-hiền to match its own breadcrumb — was flat `/luu-but`)
 
 **cộng đồng (Supabase-backed — see README §Interactive Features)**
 - [x] một ngày ở-yên — `/mot-ngay-o-yen` ← `MLF Mot Ngay O Yen.dc.html` (new `OneDayOYen`: rotating hints, live Supabase counter via `increment_oyen_days()` RPC, locked-until-contributed note form, auto-rotating notes reader — verified live reads work against the real Supabase project; fixed a `Math.random()` SSR/client hydration mismatch)
 - [x] cộng đồng ở-yên — `/cong-dong-o-yen` ← `MLF Cong Dong O Yen.dc.html` (new `VoiceCarousel`, `FaqPlusList`; pillar reveal via existing `RevealStagger`; 2×2 space cross-grid; alternating keeper editorial rows)
-- [x] kho lời nhắn ở-yên — `/kho-loi-nhan-o-yen` ← `MLF Kho Loi Nhan O Yen.dc.html` (new `KhoLoiNhan`: full live feed of approved notes via Supabase realtime, shares `notesFallback` with một-ngày-ở-yên — verified against real production data)
+- [x] kho lời nhắn ở-yên — `/mot-ngay-o-yen/kho-loi-nhan-o-yen` ← `MLF Kho Loi Nhan O Yen.dc.html` (new `KhoLoiNhan`: full live feed of approved notes via Supabase realtime, shares `notesFallback` with một-ngày-ở-yên — verified against real production data; nested under một ngày ở-yên to match its own breadcrumb — was flat `/kho-loi-nhan-o-yen`)
 
 **mlf**
 - [x] về mlf — `/ve-mlf` ← `MLF Ve Mlf.dc.html` (new `.mlf-tl-row`/`.mlf-branch-block`/`.mlf-prog-row` CSS — dashed milestone timeline + 3-branch program list)

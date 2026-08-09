@@ -39,11 +39,11 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] nhất-hiện — `/be-still/nhat-hien` ← `MLF Nhat Hien.dc.html`
 
 **tea · mind**
-- [ ] tea·mind (hub) — `/tea-mind` ← `MLF Tea Mind.dc.html`
-- [ ] trà — `/tea-mind/tra` ← `MLF Tea Mind Tra.dc.html`
-- [ ] gốm — `/tea-mind/gom` ← `MLF Tea Mind Gom.dc.html`
-- [ ] tranh — `/tea-mind/tranh` ← `MLF Tea Mind Tranh.dc.html`
-- [ ] lịch — `/tea-mind/lich` ← `MLF Tea Mind Lich.dc.html`
+- [x] tea·mind (hub) — `/tea-mind` ← `MLF Tea Mind.dc.html`
+- [x] trà — `/tea-mind/tra` ← `MLF Tea Mind Tra.dc.html`
+- [x] gốm — `/tea-mind/gom` ← `MLF Tea Mind Gom.dc.html` (new `WorkGallery` component)
+- [x] tranh — `/tea-mind/tranh` ← `MLF Tea Mind Tranh.dc.html`
+- [x] lịch — `/tea-mind/lich` ← `MLF Tea Mind Lich.dc.html`
 
 **thinh · không**
 - [ ] thinh · không — `/thinh-khong` ← `MLF Thinh Khong.dc.html`

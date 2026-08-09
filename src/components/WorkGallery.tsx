@@ -1,0 +1,17 @@
+import { ImagePlaceholder } from "./ImagePlaceholder";
+
+/** 2-column image + caption grid — tea·mind's gốm/tranh product pages. */
+export function WorkGallery({ works }: { works: { label: string; title: string }[] }) {
+  return (
+    <div className="work-grid">
+      {works.map((w) => (
+        <div key={w.title}>
+          <div style={{ width: "100%", aspectRatio: "4/5", marginBottom: "0.9rem" }}>
+            <ImagePlaceholder label={w.label} aspectRatio="4/5" />
+          </div>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-ink)" }}>{w.title}</span>
+        </div>
+      ))}
+    </div>
+  );
+}

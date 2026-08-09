@@ -1149,6 +1149,60 @@ details[open] > summary .acc-icon {
   animation-play-state: paused;
 }
 
+/* lưu bút: numbered-grid picker + reading pane */
+.lb-shell {
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+  gap: 3rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.lb-rail {
+  position: sticky;
+  top: 6.5rem;
+  align-self: start;
+}
+.lb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.lb-item {
+  width: 2.6rem;
+  height: 2.6rem;
+  text-align: center;
+  background: none;
+  border: 1px solid var(--color-mist);
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-stone);
+  transition: all 0.2s var(--ease-standard);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.lb-item:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+.lb-item.active {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: #ffffff;
+}
+@media (max-width: 840px) {
+  .lb-shell {
+    grid-template-columns: 1fr;
+  }
+  .lb-rail {
+    position: static;
+  }
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

@@ -61,7 +61,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] sổ tay khách — `/so-tay-khach` ← `MLF So Tay Khach.dc.html` (long-form guide: TOC jump nav, 4-part structure, inline floor-plan SVG; new `.row-b`/`.grid2`/`.part-divider` CSS + global `scroll-behavior: smooth`)
 - [x] đề mục chi tiết — `/de-muc-chi-tiet` ← `MLF De Muc Chi Tiet.dc.html` (new `DeMucIndex` component: 3 door accordions + full curriculum index toggle — 4 groups, 12 units, 59 parts)
 - [x] dạo một vòng — `/dao-mot-vong` ← `MLF Dao Mot Vong.dc.html` (new `ImageStoryCarousel`, `GuestWhyRotator`, `AmenityTabs`; alternating `.spot-row` tour + auto-scrolling food marquee)
-- [ ] lưu bút — `/luu-but` ← `MLF Luu But.dc.html`
+- [x] lưu bút — `/luu-but` ← `MLF Luu But.dc.html` (new `LuuButReader`: numbered-grid picker + reading pane, 26 guestbook entries)
 
 **cộng đồng (Supabase-backed — see README §Interactive Features)**
 - [ ] một ngày ở-yên — `/mot-ngay-o-yen` ← `MLF Mot Ngay O Yen.dc.html` (+ v1 draft, skip)

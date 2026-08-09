@@ -1461,3 +1461,32 @@ details[open] > summary .acc-icon {
     padding: 0.5rem 1rem 0.5rem 0;
   }
 }
+
+/* chuyện-về: interview interlude asides + section sub-labels */
+.interlude {
+  text-align: center;
+  color: var(--color-cham);
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+.interlude-text {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-stone-alt);
+  line-height: 1.85;
+  max-width: 46ch;
+  margin: 0.6rem auto 0;
+  text-align: center;
+}
+.sub-label {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin: 2.5rem 0 1.5rem;
+}

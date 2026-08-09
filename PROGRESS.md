@@ -71,7 +71,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 **mlf**
 - [x] về mlf — `/ve-mlf` ← `MLF Ve Mlf.dc.html` (new `.mlf-tl-row`/`.mlf-branch-block`/`.mlf-prog-row` CSS — dashed milestone timeline + 3-branch program list)
 - [x] biên-thư-cho-Hy — `/bien-thu-cho-hy` ← `MLF Bien Thu Cho Hy.dc.html` (new `LetterReader` component: idx-rail letter picker + wax-stamp reading pane, 10 letters verbatim; new `.letters-shell`/`.idx-rail`/`.idx-item`/`.letter-stamp`/`.letter-para` CSS)
-- [ ] chuyện-về — `/chuyen-ve` ← `MLF Chuyen Ve.dc.html`
+- [x] chuyện-về — `/chuyen-ve` ← `MLF Chuyen Ve.dc.html` (new `ChuyenVeReader`: reuses `.cv-shell`/`.cv-rail`/`.cv-item`/`.qa-q`/`.qa-a` from the tuần-du blog reader, new `.interlude`/`.sub-label` CSS — 2 full Q&A interview episodes verbatim)
 - [ ] mlf journal (hub) — `/journal` ← `MLF Journal.dc.html`
 
 Journal is a blog index — check whether it needs its own `[slug]` dynamic route once

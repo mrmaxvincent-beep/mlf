@@ -49,7 +49,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] thinh · không — `/thinh-khong` ← `MLF Thinh Khong.dc.html` (new `ChangTabs`, `InfoTabs` components)
 
 **retreats**
-- [ ] retreat ở-yên — `/retreat/o-yen` ← `MLF Retreat O Yen.dc.html`
+- [x] retreat ở-yên — `/retreat/o-yen` ← `MLF Retreat O Yen.dc.html` (new `PricingPanel`, `FaqShowMore` components)
 - [ ] retreat ở-yên · lịch trình — `/retreat/o-yen/lich-trinh` ← `MLF Retreat O Yen Lich Trinh.dc.html`
 - [ ] retreat hàm-dưỡng — `/retreat/ham-duong` ← `MLF Retreat Ham Duong.dc.html`
 - [ ] retreat hàm-dưỡng · lịch trình — `/retreat/ham-duong/lich-trinh` ← `MLF Retreat Ham Duong Lich Trinh.dc.html`

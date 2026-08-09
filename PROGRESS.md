@@ -15,11 +15,19 @@ building a new page.
       confirmed on. `supabase/schema.sql`'s `CREATE TABLE` isn't needed (tables already
       exist); its RLS/policy statements are there for reference if that ever needs redoing.
 
+- [x] All 36 remaining pages built (see checklist below — every section done)
+- [x] Final verification pass: `npx tsc --noEmit` clean, `next build` succeeds
+      (37 static routes generated, zero errors), all 37 routes return HTTP 200
+      against `next start`, spot-checked console on homepage + 3 interactive
+      pages (`mot-ngay-o-yen`, `de-muc-chi-tiet`, `dao-mot-vong`) — no errors,
+      no hydration warnings.
+
 ## Not done yet
 - [ ] `upcoming_events.href` rows still point to old `MLF *.dc.html` filenames — owner is
       fixing these directly in Supabase Table Editor to the new route slugs.
+- [ ] Push to GitHub — deliberately not done; wait for explicit go-ahead.
 
-## Remaining 36 pages
+## Remaining 36 pages — ALL DONE
 Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely traffic/linkage:
 
 **hoạt động**

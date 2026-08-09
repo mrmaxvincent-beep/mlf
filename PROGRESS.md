@@ -46,7 +46,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] lịch — `/tea-mind/lich` ← `MLF Tea Mind Lich.dc.html`
 
 **thinh · không**
-- [ ] thinh · không — `/thinh-khong` ← `MLF Thinh Khong.dc.html`
+- [x] thinh · không — `/thinh-khong` ← `MLF Thinh Khong.dc.html` (new `ChangTabs`, `InfoTabs` components)
 
 **retreats**
 - [ ] retreat ở-yên — `/retreat/o-yen` ← `MLF Retreat O Yen.dc.html`

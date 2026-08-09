@@ -6,7 +6,7 @@ export function Schedule({ rows }: { rows: ScheduleRow[] }) {
     <div style={{ border: "1px solid var(--color-mist)" }}>
       {rows.map((r, i) => (
         <div
-          key={r.time}
+          key={i}
           className="schedule-row"
           style={{
             display: "grid",

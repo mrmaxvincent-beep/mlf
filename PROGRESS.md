@@ -53,7 +53,7 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] retreat ở-yên · lịch trình — `/retreat/o-yen/lich-trinh` ← `MLF Retreat O Yen Lich Trinh.dc.html` (new `ItinerarySchedule` component, reusable for hàm-dưỡng lịch trình)
 - [x] retreat hàm-dưỡng — `/retreat/ham-duong` ← `MLF Retreat Ham Duong.dc.html` (added `note` prop to `PricingPanel`)
 - [x] retreat hàm-dưỡng · lịch trình — `/retreat/ham-duong/lich-trinh` ← `MLF Retreat Ham Duong Lich Trinh.dc.html` (extended `ItinerarySchedule` with `detailed` variant + highlight/note row styles + day-anchor journey nav)
-- [ ] retreat an-vui — `/retreat/an-vui` ← `MLF Retreat An Vui.dc.html`
+- [x] retreat an-vui — `/retreat/an-vui` ← `MLF Retreat An Vui.dc.html` (new `.info-row`/`.space-card`/`.rhythm-block`/`.day-num` CSS; fixed a `Schedule` key-collision bug for rows sharing the same "—" time)
 - [ ] stay+talk — `/stay-talk` ← `MLF Stay Talk.dc.html`
 
 **thư viện**

@@ -801,6 +801,39 @@ details[open] > summary .acc-icon {
   }
 }
 
+/* "detailed" itinerary variant (retreat hàm-dưỡng lịch trình): bigger underlined day
+   theme, wider time column, italic details, plus highlight/note row treatments */
+.itin-day--detailed {
+  margin-bottom: 4rem;
+}
+.itin-day--detailed .itin-theme {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-mist);
+}
+.itin-day--detailed .time-row time {
+  width: 96px;
+}
+.itin-day--detailed .time-row .activity .detail {
+  font-style: italic;
+}
+.time-row--highlight {
+  background: var(--color-cotton);
+  padding: 1.4rem;
+  border-radius: 2px;
+  border-bottom: none;
+}
+.time-row--note .activity .detail {
+  border-left: 2px solid var(--color-moss);
+  padding-left: 0.9rem;
+  font-style: normal;
+}
+@media (max-width: 600px) {
+  .time-row--highlight {
+    padding: 1.1rem;
+  }
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

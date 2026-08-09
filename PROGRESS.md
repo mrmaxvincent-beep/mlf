@@ -21,8 +21,8 @@ building a new page.
 Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely traffic/linkage:
 
 **hoạt động**
-- [ ] ngày-hiền — `/ngay-hien` ← `MLF Ngay Hien.dc.html`
-- [ ] giữa · middle — `/giua` ← `MLF Giua.dc.html`
+- [x] ngày-hiền — `/ngay-hien` ← `MLF Ngay Hien.dc.html`
+- [x] giữa · middle — `/giua` ← `MLF Giua.dc.html`
 - [ ] tuần-du — `/tuan-du` ← `MLF Tuan Du.dc.html`
 - [ ] tuần-du tới — `/tuan-du/toi` ← `MLF Tuan Du Toi.dc.html`
 - [ ] tuần-du blog — `/tuan-du/blog` ← `MLF Tuan Du Blog.dc.html`

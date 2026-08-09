@@ -2,13 +2,18 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // threshold is a fraction of the target's own area, not the viewport's — for a
+    // block much taller than the viewport (a multi-day itinerary, say), even a
+    // fully-scrolled-into-view element may never cover 15% of its own bounding box,
+    // so it'd stay opacity:0 forever. threshold:0 fires as soon as any part enters,
+    // which is robust regardless of the wrapped content's height.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

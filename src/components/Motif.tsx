@@ -15,7 +15,9 @@ const motifs = {
   "to-my": "motif-to-my.svg",
 } as const;
 
-/** One of the small hand-drawn ink motifs — punctuation, not hero art. Max 1-2 per page per the design system. */
+/** One of the small hand-drawn ink motifs — punctuation, not hero art. Max 1-2 per page per the design system.
+ * Source PNGs are exported on an oversized transparent canvas, not cropped to the glyph, so this sizes a
+ * fixed box and lets `fill` + `contain` fit the art inside it rather than assuming a square intrinsic ratio. */
 export function Motif({
   name,
   size = 30,
@@ -26,13 +28,11 @@ export function Motif({
   className?: string;
 }) {
   return (
-    <Image
-      src={`/assets/${motifs[name]}`}
-      alt=""
-      width={size}
-      height={size}
+    <span
       className={className}
-      style={{ width: size, height: "auto", opacity: 0.4, display: "inline-block" }}
-    />
+      style={{ position: "relative", width: size, height: size, display: "inline-block", opacity: 0.4 }}
+    >
+      <Image src={`/assets/${motifs[name]}`} alt="" fill sizes={`${size}px`} style={{ objectFit: "contain" }} />
+    </span>
   );
 }

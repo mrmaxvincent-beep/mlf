@@ -18,13 +18,9 @@ export function Footer() {
           fanpage
         </a>
       </div>
-      <Image
-        src="/assets/wordmark-o-yen.png"
-        alt="ở-yên"
-        width={53}
-        height={53}
-        style={{ width: 52.5, height: "auto", opacity: 0.8, display: "block", margin: "0 auto 1rem" }}
-      />
+      <span style={{ position: "relative", width: 52.5, height: 66, display: "block", margin: "0 auto 1rem", opacity: 0.8 }}>
+        <Image src="/assets/wordmark-o-yen.png" alt="ở-yên" fill sizes="53px" style={{ objectFit: "contain" }} />
+      </span>
       <span
         style={{
           fontFamily: "var(--font-mono)",

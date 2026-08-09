@@ -206,3 +206,33 @@ a:hover {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Program cards (ngày-hiền and similar hub pages) */
+.prog-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--color-mist);
+}
+.prog-card:last-child {
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  .prog-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Alternating editorial image/text rows ("moments" sections) */
+@media (max-width: 680px) {
+  .ed-row {
+    grid-template-columns: 1fr !important;
+  }
+  .ed-row > div {
+    order: initial !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+}

@@ -31,9 +31,7 @@ export default function HomePage() {
     <>
       <Header overlay />
 
-      {/* HERO — TODO: swap the gradient for the real hero video/photo once that
-          asset is handed off (the .dc.html referenced an uploads/ mp4 that
-          wasn't part of this bundle). */}
+      {/* HERO */}
       <div
         style={{
           position: "relative",
@@ -43,10 +41,20 @@ export default function HomePage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          // shows while the video loads, and stays as the fallback if it can't play
           background:
             "radial-gradient(circle at 30% 20%, var(--color-cham) 0%, var(--color-cham-dem) 60%)",
         }}
       >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+        >
+          <source src="/video/home-hero.mp4" type="video/mp4" />
+        </video>
         <div
           className="wrap hero-bottom"
           style={{
@@ -61,22 +69,30 @@ export default function HomePage() {
           }}
         >
           <div>
-            <Image
-              src="/assets/logo-moc.png"
-              alt="mộc little farm"
-              width={400}
-              height={190}
-              priority
+            <span
               style={{
+                position: "relative",
+                width: 152,
                 height: 190,
-                width: "auto",
                 display: "block",
                 margin: "-1.6rem 0 -0.9rem -1.2rem",
-                filter:
-                  "brightness(0) saturate(100%) invert(94%) sepia(6%) saturate(383%) hue-rotate(357deg) brightness(101%) contrast(94%)",
-                opacity: 0.95,
               }}
-            />
+            >
+              <Image
+                src="/assets/logo-moc.png"
+                alt="mộc little farm"
+                fill
+                sizes="152px"
+                priority
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "left",
+                  filter:
+                    "brightness(0) saturate(100%) invert(94%) sepia(6%) saturate(383%) hue-rotate(357deg) brightness(101%) contrast(94%)",
+                  opacity: 0.95,
+                }}
+              />
+            </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.735rem", lineHeight: 1.4, color: "var(--color-paper-dem)", margin: "0 0 0.2rem", maxWidth: "22ch" }}>
               một không gian tinh thần dựa trên triết lý ở yên.
             </p>
@@ -149,7 +165,7 @@ export default function HomePage() {
       <div style={{ padding: "2.2rem 0" }} />
 
       <div style={{ aspectRatio: "21/9", minHeight: 340, position: "relative" }}>
-        <Image src="/assets/split-ve-mlf.webp" alt="nhà mộc, măng đen" fill style={{ objectFit: "cover" }} />
+        <Image src="/assets/split-ve-mlf.webp" alt="nhà mộc, măng đen" fill sizes="100vw" style={{ objectFit: "cover" }} />
       </div>
 
       <div style={{ padding: "2.2rem 0" }} />
@@ -175,7 +191,7 @@ export default function HomePage() {
             {vibeImages.map((v, i) => (
               <div key={v.id} style={{ background: "var(--color-paper)", padding: "0.9rem 0.9rem 1.1rem" }}>
                 <div style={{ width: "100%", aspectRatio: "1/1", overflow: "hidden", background: "var(--color-photo-placeholder)", position: "relative" }}>
-                  <Image src={`/assets/${v.src}`} alt={v.label} fill style={{ objectFit: "cover" }} />
+                  <Image src={`/assets/${v.src}`} alt={v.label} fill sizes="(max-width: 600px) 50vw, 33vw" style={{ objectFit: "cover" }} />
                 </div>
                 <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-stone)", display: "block", marginTop: "0.7rem" }}>
                   ( {String(i + 1).padStart(2, "0")} )
@@ -200,13 +216,13 @@ export default function HomePage() {
             ở đây luôn có đủ thời gian để nấu ba bữa một ngày · trên bàn ăn bao giờ cũng có vài bông hoa nhỏ hái ngoài vườn
           </span>
           <div style={{ position: "relative", width: "100%", aspectRatio: "4/5" }}>
-            <Image src="/assets/photo-ban-an.jpg" alt="bàn ăn nhà mộc" fill style={{ objectFit: "cover" }} />
+            <Image src="/assets/photo-ban-an.jpg" alt="bàn ăn nhà mộc" fill sizes="(max-width: 600px) 100vw, 370px" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
         <div className="side-grid" style={{ margin: "2.5rem 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
           <div style={{ position: "relative", width: "100%", aspectRatio: "4/5" }}>
-            <Image src="/assets/photo-rot-tra.jpg" alt="rót trà" fill style={{ objectFit: "cover" }} />
+            <Image src="/assets/photo-rot-tra.jpg" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 370px" style={{ objectFit: "cover" }} />
           </div>
           <div style={{ fontSize: "0.88rem", lineHeight: 1.85 }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", letterSpacing: "0.04em", display: "block", lineHeight: 1.7 }}>
@@ -227,7 +243,7 @@ export default function HomePage() {
             </span>
           </div>
           <div style={{ position: "relative", width: "100%", aspectRatio: "4/5" }}>
-            <Image src="/assets/photo-nha-moc.jpg" alt="nhà mộc · măng đen" fill style={{ objectFit: "cover" }} />
+            <Image src="/assets/photo-nha-moc.jpg" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 370px" style={{ objectFit: "cover" }} />
           </div>
         </div>
       </div>
@@ -272,7 +288,7 @@ export default function HomePage() {
       </div>
 
       <div style={{ aspectRatio: "21/9", minHeight: 340, position: "relative" }}>
-        <Image src="/assets/split-ve-oyen.webp" alt="khoảnh khắc ở-yên" fill style={{ objectFit: "cover" }} />
+        <Image src="/assets/split-ve-oyen.webp" alt="khoảnh khắc ở-yên" fill sizes="100vw" style={{ objectFit: "cover" }} />
       </div>
 
       <div style={{ padding: "2.2rem 0" }} />

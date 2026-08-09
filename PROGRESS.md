@@ -26,9 +26,9 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 - [x] ngày-hiền — `/ngay-hien` ← `MLF Ngay Hien.dc.html`
 - [x] giữa · middle — `/giua` ← `MLF Giua.dc.html`
 - [x] tuần-du — `/tuan-du` ← `MLF Tuan Du.dc.html` (built with new `Schedule`/`Callout` shared components)
-- [ ] tuần-du tới — `/tuan-du/toi` ← `MLF Tuan Du Toi.dc.html`
-- [ ] chuỗi tuần-du — `/tuan-du/chuoi` ← `MLF Chuoi Tuan Du.dc.html` (missed in the first pass of this list — it's in the source `pages/` folder, confirmed)
-- [ ] tuần-du blog ("người đi qua") — `/tuan-du/blog` ← `MLF Tuan Du Blog.dc.html`
+- [x] tuần-du tới — `/tuan-du/toi` ← `MLF Tuan Du Toi.dc.html` (new `DayItinerary`/`Accordion`/`FaqAccordion` components)
+- [x] chuỗi tuần-du — `/tuan-du/chuoi` ← `MLF Chuoi Tuan Du.dc.html`
+- [x] tuần-du blog ("người đi qua") — `/tuan-du/blog` ← `MLF Tuan Du Blog.dc.html` (new `BlogReader` component)
 
 **be-still**
 - [ ] be-still (hub) — `/be-still` ← `MLF Be Still.dc.html`

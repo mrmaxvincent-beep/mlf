@@ -1,0 +1,7 @@
+/* MLF design tokens — copied from design handoff (_ds/tokens). Fonts are loaded
+   via next/font/google in layout.tsx instead of tokens/fonts.css's @import,
+   for self-hosting + no render-blocking request; same three families. */
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/motion.css';

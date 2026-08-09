@@ -1,0 +1,32 @@
+:root{
+  --font-serif:'Cormorant Garamond', Georgia, serif;
+  --font-sans:'Crimson Text', Georgia, serif;
+  --font-mono:'JetBrains Mono', 'SFMono-Regular', monospace;
+
+  /* display / hero — serif italic, light */
+  --text-hero:clamp(2.4rem,7vw,3.6rem);
+  --text-display:2.6rem;
+  --text-h2:1.55rem;
+  --text-day-title:1.9rem;
+  --text-poem:1.25rem;
+
+  /* body */
+  --text-body:0.95rem;
+  --text-lead:0.98rem;
+  --text-small:0.86rem;
+  --text-caption:0.78rem;
+
+  /* labels / mono */
+  --text-label:0.625rem;
+  --text-kick:0.62rem;
+  --text-mono:0.75rem;
+  --text-mono-sm:0.6rem;
+
+  --leading-body:1.85;
+  --leading-tight:1.1;
+  --leading-poem:1.65;
+  --tracking-label:0.22em;
+  --tracking-mono:0.16em;
+
+  --measure-body:42ch;
+}

@@ -1,0 +1,11 @@
+:root{
+  --space-1:1rem;
+  --space-2:1.5rem;
+  --space-3:2rem;
+  --space-4:3rem;
+  --space-5:4rem;
+  --space-6:6rem;
+  --radius-sharp:2px;
+  --radius-panel:4px;
+  --border-w:1px;
+}

@@ -1,0 +1,34 @@
+:root{
+  /* base — ngày · cotton */
+  --color-paper:#ffffff;
+  --color-cotton:#F3EEE5;
+  --color-mist:#E2DDD7;
+  --color-stone:#9A9590;
+  --color-stone-alt:#A39D93;
+  --color-ink:#2A2824;
+  --color-moss:#7D9B8A;
+  /* base — đêm · chàm (5-step dye scale, "chưa nhuộm" → "chàm đêm") */
+  --color-cham-suong:#9AA7B8;
+  --color-cham-vai:#5C6E85;
+  --color-cham:#3A4C63;
+  --color-cham-dem:#232E3F;
+  --color-paper-dem:#E9E4D8;
+  /* functional (used sparingly — before/after only) */
+  --color-before:#F0997B;
+  --color-after:#5DCAA5;
+  --color-photo-placeholder:#C9C3B8;
+
+  /* semantic */
+  --surface-page:var(--color-cotton);
+  --surface-card:var(--color-paper);
+  --surface-night:var(--color-cham-dem);
+  --surface-pricing:var(--color-paper);
+  --border-default:var(--color-mist);
+  --border-night:#33445a;
+  --text-primary:var(--color-ink);
+  --text-secondary:var(--color-stone);
+  --text-accent:var(--color-moss);
+  --text-on-night:var(--color-paper-dem);
+  --text-on-night-secondary:var(--color-cham-suong);
+  --accent:var(--color-moss);
+}

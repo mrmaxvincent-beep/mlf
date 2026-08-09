@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
+import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 
 type Note = { body: string; from: string };
@@ -172,7 +173,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
       </header>
 
       {/* GỢI Ý */}
-      <section style={{ margin: "0 -1.5rem 7rem", padding: "4rem 2.8rem 3.4rem", background: "var(--color-cotton)", borderRadius: 3 }}>
+      <Reveal style={{ margin: "0 -1.5rem 7rem", padding: "4rem 2.8rem 3.4rem", background: "var(--color-cotton)", borderRadius: 3 }}>
         <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "0.9rem", textAlign: "center" }}>
           có thể bắt đầu từ đây
         </span>
@@ -209,10 +210,10 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             gợi ý khác →
           </button>
         </div>
-      </section>
+      </Reveal>
 
       {/* DAY POEM */}
-      <div style={{ paddingBottom: "7rem", textAlign: "center" }}>
+      <Reveal style={{ paddingBottom: "7rem", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "1rem" }}>{dayPoem.tam}</span>
         {dayPoem.lines.map((line) => (
           <p key={line} style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
@@ -220,10 +221,10 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
           </p>
         ))}
         <span style={{ display: "block", marginTop: "1rem", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>— {dayPoem.attribution}</span>
-      </div>
+      </Reveal>
 
       {/* GÓP MỘT NGÀY */}
-      <section style={{ padding: "0 0 7rem", textAlign: "center" }}>
+      <Reveal style={{ padding: "0 0 7rem", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "2.6rem" }}>
           sự hiện-diện của bạn
         </span>
@@ -248,10 +249,10 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             <p style={{ fontSize: "0.85rem", lineHeight: 1.9, color: "var(--color-stone)", margin: "0.7rem 0 0" }}>hôm nay là của bạn.</p>
           </div>
         ) : null}
-      </section>
+      </Reveal>
 
       {/* VIẾT LỜI NHẮN */}
-      <section style={{ margin: "0 -1.5rem 7rem", position: "relative" }}>
+      <Reveal style={{ margin: "0 -1.5rem 7rem", position: "relative" }}>
         <div style={{ position: "relative", background: "var(--color-cham-dem)", padding: "5rem 1.8rem" }}>
           <div style={{ position: "relative", maxWidth: 440, margin: "0 auto" }}>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "#ffffff", opacity: 0.85, display: "block", marginBottom: "2.2rem", textAlign: "center" }}>
@@ -304,10 +305,10 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             ) : null}
           </div>
         </div>
-      </section>
+      </Reveal>
 
       {/* ĐỌC LỜI NHẮN */}
-      <section style={{ padding: "0 0 6rem", textAlign: "center" }}>
+      <Reveal style={{ padding: "0 0 6rem", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "0.7rem" }}>
           những người đã ở-yên trước đó
         </span>
@@ -336,7 +337,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             xem toàn bộ kho lời nhắn ở-yên →
           </Link>
         </div>
-      </section>
+      </Reveal>
     </>
   );
 }

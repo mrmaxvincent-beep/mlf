@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { WorkGallery } from "@/components/WorkGallery";
+import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
@@ -34,13 +35,13 @@ export default function TeaMindTranhPage() {
         </p>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "2.5rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem" }}>
         <WorkGallery works={works} />
-      </div>
+      </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>
         <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">

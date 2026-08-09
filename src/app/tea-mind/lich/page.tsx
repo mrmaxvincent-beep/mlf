@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 import { seasons, specs } from "@/data/teaMindLich";
 
@@ -35,37 +36,37 @@ export default function TeaMindLichPage() {
         <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm" aspectRatio="auto" style={{ height: "100%" }} />
       </div>
 
-      <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Mỗi tháng là một chén trà, một mùa trong tâm, một lời nhắc rất khẽ để quay về với hơi thở và sự sống đang có mặt.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Mỗi khi ánh mắt chạm vào chiếc chén trà, tự nhiên có một khoảng dừng nhẹ trong ngày — mười hai mùa tâm, mười hai nhịp thở, để năm mới đi qua một cách hiền hòa, tĩnh lặng và tròn đầy.
         </p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">12 mùa tâm trong 2026</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
         {seasons.map((s) => (
           <div key={s.num} className="season-row">
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: "var(--color-stone)", flex: "none", width: "1.5rem" }}>{s.num}</span>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.98rem", color: "var(--color-ink)" }}>{s.name}</span>
           </div>
         ))}
-      </div>
+      </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
           &ldquo;thiên nhiên có bốn mùa, còn trái tim thì có đến mười hai mùa tâm để trở về.&rdquo;
         </p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">thông tin sản phẩm</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
         {specs.map((sp) => (
           <div key={sp.k} className="spec-row">
             <span style={{ color: "var(--color-stone-alt)" }}>{sp.k}</span>
@@ -76,13 +77,13 @@ export default function TeaMindLichPage() {
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>giá</span>
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-stone-alt)" }}>150.000đ</span>
         </div>
-      </div>
+      </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
           mỗi tháng là một chén trà. mỗi chén trà là một mùa trong tâm. và mỗi mùa trong tâm lại là một bước rất mềm trên con đường trở về với chính mình.
         </p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>

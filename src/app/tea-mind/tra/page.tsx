@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
@@ -41,19 +42,19 @@ export default function TeaMindTraPage() {
       <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "1.2rem" }}>
         <span className="eyebrow">về buổi trà</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Không phải một lớp học pha trà đúng cách — mà là một khoảng lặng để nhìn lại nhịp tay mình đang vội vã đến đâu.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Vũ sẽ đồng hành cùng bạn qua từng bước — chọn trà, đun nước, rót và mời — không có gì đúng-sai, chỉ có việc ở lại trọn vẹn trong từng cử chỉ.
         </p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">một buổi diễn ra như thế nào</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
         {steps.map((s) => (
           <div key={s.num} className="step-row">
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-moss)", flex: "none", width: "2rem" }}>{s.num}</span>
@@ -63,11 +64,11 @@ export default function TeaMindTraPage() {
             </div>
           </div>
         ))}
-      </div>
+      </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>&ldquo;cái-đẹp không phải để giữ, mà để cảm.&rdquo;</p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>
         <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">

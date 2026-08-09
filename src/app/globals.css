@@ -1082,6 +1082,73 @@ details[open] > summary .acc-icon {
   align-items: baseline;
 }
 
+/* dạo một vòng: alternating spot rows, room/sơ-đồ grids, auto-scrolling food marquee */
+.spot-row {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--color-mist);
+  scroll-margin-top: 5rem;
+}
+.spot-row.rev {
+  grid-template-columns: 7fr 5fr;
+}
+.spot-row.rev .spot-img {
+  order: 2;
+}
+.spot-row.rev .spot-text {
+  order: 1;
+}
+.spot-row:last-child {
+  border-bottom: none;
+}
+.spot-index {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.2rem;
+  color: var(--color-stone-alt);
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+@media (max-width: 720px) {
+  .spot-row,
+  .spot-row.rev {
+    grid-template-columns: 1fr;
+  }
+  .spot-row.rev .spot-img {
+    order: 1;
+  }
+  .spot-row.rev .spot-text {
+    order: 2;
+  }
+  .sodo-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .rooms-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@keyframes foodSlide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-42%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.food-marquee-track {
+  animation: foodSlide 32s ease-in-out infinite;
+}
+.food-marquee:hover .food-marquee-track {
+  animation-play-state: paused;
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

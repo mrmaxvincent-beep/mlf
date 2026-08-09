@@ -112,10 +112,13 @@ export const testimonials = [
 ];
 
 export const vibeImages = [
-  { id: "vibe-01", src: "vibe-01.webp", label: "ảnh · góc nhà mộc" },
-  { id: "vibe-02", src: "vibe-02.webp", label: "ảnh · trang sổ tay" },
-  { id: "vibe-04", src: "vibe-04.webp", label: "ảnh · buổi sáng" },
-  { id: "vibe-06", src: "vibe-06.webp", label: "ảnh · hiên nhà" },
-  { id: "vibe-07", src: "vibe-07.webp", label: "ảnh · góc nghỉ" },
-  { id: "vibe-08", src: "vibe-08.webp", label: "ảnh · đọc sách" },
+  { id: "vibe-01", type: "image" as const, src: "vibe-01.webp", label: "ảnh · góc nhà mộc" },
+  { id: "vibe-02", type: "image" as const, src: "vibe-02.webp", label: "ảnh · trang sổ tay" },
+  { id: "vibe-03", type: "video" as const, label: "video · mặt nước gợn sóng" },
+  { id: "vibe-04", type: "image" as const, src: "vibe-04.webp", label: "ảnh · buổi sáng" },
+  { id: "vibe-05", type: "video" as const, label: "video · mặt nước gợn sóng" },
+  { id: "vibe-06", type: "image" as const, src: "vibe-06.webp", label: "ảnh · hiên nhà" },
+  { id: "vibe-07", type: "image" as const, src: "vibe-07.webp", label: "ảnh · góc nghỉ" },
+  { id: "vibe-08", type: "image" as const, src: "vibe-08.webp", label: "ảnh · đọc sách" },
+  { id: "vibe-09", type: "video" as const, label: "video · mặt nước gợn sóng" },
 ];

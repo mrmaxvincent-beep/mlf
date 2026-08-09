@@ -8,6 +8,7 @@ import { Motif } from "@/components/Motif";
 import { ArrowLink } from "@/components/Button";
 import { Testimonials } from "@/components/Testimonials";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
+import { HeroClock } from "@/components/HeroClock";
 import { routes } from "@/lib/nav";
 import {
   entries,
@@ -99,12 +100,26 @@ export default function HomePage() {
             <span style={{ fontFamily: "var(--font-sans)", color: "var(--color-paper-dem)", fontSize: "0.56rem", lineHeight: 1.4 }}>
               nơi mọi thứ nảy mầm
             </span>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: "2.4rem", marginBottom: "1.4rem" }}>
+              <span style={{ color: "var(--color-paper-dem)", position: "relative", paddingBottom: "0.5rem" }}>
+                vietnamese
+                <span style={{ position: "absolute", left: "50%", bottom: 0, transform: "translateX(-50%)", width: 3, height: 3, borderRadius: "50%", background: "var(--color-paper-dem)", display: "block" }} />
+              </span>
+              <span style={{ color: "var(--color-cham-suong)" }}>|</span>
+              <span style={{ color: "var(--color-paper-dem)" }}>english</span>
+            </div>
           </div>
           <div style={{ textAlign: "right" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-paper-dem)", display: "block", marginBottom: "0.4rem" }}>
               Măng Đen · Kon Tum
             </span>
+            <HeroClock />
           </div>
+        </div>
+
+        <div style={{ position: "absolute", bottom: "2.5rem", left: "50%", transform: "translateX(-50%)", zIndex: 2, display: "flex", flexDirection: "column", alignItems: "center", gap: "0.6rem", color: "var(--color-paper-dem)" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>cuộn xuống</span>
+          <span className="scroll-hint-line" />
         </div>
       </div>
 
@@ -191,7 +206,13 @@ export default function HomePage() {
             {vibeImages.map((v, i) => (
               <div key={v.id} style={{ background: "var(--color-paper)", padding: "0.9rem 0.9rem 1.1rem" }}>
                 <div style={{ width: "100%", aspectRatio: "1/1", overflow: "hidden", background: "var(--color-photo-placeholder)", position: "relative" }}>
-                  <Image src={`/assets/${v.src}`} alt={v.label} fill sizes="(max-width: 600px) 50vw, 33vw" style={{ objectFit: "cover" }} />
+                  {v.type === "video" ? (
+                    <video autoPlay muted loop playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }}>
+                      <source src="/video/home-hero.mp4" type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image src={`/assets/${v.src}`} alt={v.label} fill sizes="(max-width: 600px) 50vw, 33vw" style={{ objectFit: "cover" }} />
+                  )}
                 </div>
                 <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-stone)", display: "block", marginTop: "0.7rem" }}>
                   ( {String(i + 1).padStart(2, "0")} )
@@ -330,11 +351,16 @@ export default function HomePage() {
       <div style={{ padding: "2.2rem 0" }} />
 
       <div className="wrap" style={{ padding: "4rem 0", position: "relative", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)", display: "block", marginBottom: "1.5rem" }}>
+        <span className="vertical-label">khoảng dừng giữa hai suy nghĩ</span>
+        <span className="mobile-label" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)", textAlign: "center", marginBottom: "1.5rem" }}>
           khoảng dừng giữa hai suy nghĩ
         </span>
         <div style={{ maxWidth: 420, margin: "0 auto" }}>
-          <div style={{ position: "relative", aspectRatio: "5/4", overflow: "hidden", background: "var(--color-mist)" }} />
+          <div style={{ position: "relative", aspectRatio: "5/4", overflow: "hidden" }}>
+            <video autoPlay muted loop playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }}>
+              <source src="/video/home-hero.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <div style={{ textAlign: "center", marginTop: "3rem" }}>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.5, color: "var(--color-ink)", display: "block" }}>

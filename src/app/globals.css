@@ -1147,6 +1147,52 @@ details[open] > summary .acc-icon {
     transform: translateX(0);
   }
 }
+
+/* Homepage hero: scroll-down hint's breathing line */
+@keyframes mlf-drop {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    transform-origin: top;
+    opacity: 0.2;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 0.6;
+  }
+}
+.scroll-hint-line {
+  width: 1px;
+  height: 34px;
+  background: currentColor;
+  opacity: 0.5;
+  animation: mlf-drop 2.4s ease-in-out infinite;
+}
+
+/* "khoảng dừng giữa hai suy nghĩ" — vertical label beside the pause video on
+   desktop, centered horizontal label above it on narrow viewports. */
+.vertical-label {
+  position: absolute;
+  left: 1.5rem;
+  top: 6rem;
+  writing-mode: vertical-rl;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+.mobile-label {
+  display: none;
+}
+@media (max-width: 700px) {
+  .vertical-label {
+    display: none;
+  }
+  .mobile-label {
+    display: block !important;
+  }
+}
 .food-marquee-track {
   animation: foodSlide 32s ease-in-out infinite;
 }

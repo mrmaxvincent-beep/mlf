@@ -73,6 +73,13 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       </button>
 
       <div className="nav-links" style={{ display: "flex", gap: "2rem", alignItems: "baseline", flexWrap: "wrap" }}>
+        <Link href={routes.home} aria-label="trang chủ" style={{ display: "inline-flex", alignItems: "center", alignSelf: "center", color: navTextColor }}>
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M2 7L7.5 2.2L13 7" stroke="currentColor" strokeWidth="1" />
+            <path d="M3.4 6V12.4H11.6V6" stroke="currentColor" strokeWidth="1" />
+          </svg>
+        </Link>
+
         <NavDropdown
           label="hoạt động"
           items={hoatDongMenu}

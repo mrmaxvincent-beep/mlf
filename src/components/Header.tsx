@@ -31,7 +31,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   return (
     <div
       style={{
-        position: overlay ? "fixed" : "sticky",
+        position: "fixed",
         top: 0,
         left: 0,
         right: 0,

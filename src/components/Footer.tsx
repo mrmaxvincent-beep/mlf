@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollExtras } from "@/components/ScrollExtras";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -32,6 +33,8 @@ export function Footer() {
       >
         mộc little farm · {year}
       </span>
+
+      <ScrollExtras />
     </footer>
   );
 }

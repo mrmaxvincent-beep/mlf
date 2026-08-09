@@ -7,7 +7,7 @@ export const doors = [
     articles: [
       { title: "biên-thư-cho-Hy", desc: "những lá thư riêng, gửi một người bạn tên Hy", href: "/bien-thu-cho-hy" },
       { title: "người đi qua", desc: "ghi chép từ những chuyến tuần-du", href: "/tuan-du/blog" },
-      { title: "lưu bút", desc: "những lời thì thầm của người đã đến ở nhà mộc", href: "/luu-but" },
+      { title: "lưu bút", desc: "những lời thì thầm của người đã đến ở nhà mộc", href: "/ngay-hien/luu-but" },
     ],
   },
   {
@@ -27,7 +27,7 @@ export const doors = [
     name: "khai mở",
     feel: "Khi khuôn cũ đã chật, và lòng đang tìm một cách nhìn khác.",
     articles: [
-      { title: "dạo một vòng", desc: "tinh thần tại mlf", href: "/dao-mot-vong" },
+      { title: "dạo một vòng", desc: "tinh thần tại mlf", href: "/ngay-hien/dao-mot-vong" },
       { title: "từ im lặng", desc: "30 ngày tìm lại mạch chữ của mình", href: "/be-still/im-lang-chu-nghia" },
       { title: "khai tâm", desc: "chương trình thực hành nội tâm", href: "/be-still/khai-tam" },
     ],

@@ -56,20 +56,22 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 **thinh · không**
 - [x] thinh · không — `/thinh-khong` ← `MLF Thinh Khong.dc.html` (new `ChangTabs`, `InfoTabs` components)
 
-**retreats**
-- [x] retreat ở-yên — `/retreat/o-yen` ← `MLF Retreat O Yen.dc.html` (new `PricingPanel`, `FaqShowMore` components)
-- [x] retreat ở-yên · lịch trình — `/retreat/o-yen/lich-trinh` ← `MLF Retreat O Yen Lich Trinh.dc.html` (new `ItinerarySchedule` component, reusable for hàm-dưỡng lịch trình)
-- [x] retreat hàm-dưỡng — `/retreat/ham-duong` ← `MLF Retreat Ham Duong.dc.html` (added `note` prop to `PricingPanel`)
-- [x] retreat hàm-dưỡng · lịch trình — `/retreat/ham-duong/lich-trinh` ← `MLF Retreat Ham Duong Lich Trinh.dc.html` (extended `ItinerarySchedule` with `detailed` variant + highlight/note row styles + day-anchor journey nav)
-- [x] retreat an-vui — `/retreat/an-vui` ← `MLF Retreat An Vui.dc.html` (new `.info-row`/`.space-card`/`.rhythm-block`/`.day-num` CSS; fixed a `Schedule` key-collision bug for rows sharing the same "—" time)
-- [x] stay+talk — `/stay-talk` ← `MLF Stay Talk.dc.html` (reuses `.info-row`, `.day-num`, `Schedule`, `PricingPanel`, `FaqShowMore`)
+**retreats** (nested under `/ngay-hien/` — these pages' own breadcrumbs and the
+programs-panel mega-menu treat them as ngày-hiền's children, so the route now
+matches; moved from flat `/retreat/*` and `/stay-talk` slugs)
+- [x] retreat ở-yên — `/ngay-hien/retreat-o-yen` ← `MLF Retreat O Yen.dc.html` (new `PricingPanel`, `FaqShowMore` components)
+- [x] retreat ở-yên · lịch trình — `/ngay-hien/retreat-o-yen/lich-trinh` ← `MLF Retreat O Yen Lich Trinh.dc.html` (new `ItinerarySchedule` component, reusable for hàm-dưỡng lịch trình)
+- [x] retreat hàm-dưỡng — `/ngay-hien/retreat-ham-duong` ← `MLF Retreat Ham Duong.dc.html` (added `note` prop to `PricingPanel`)
+- [x] retreat hàm-dưỡng · lịch trình — `/ngay-hien/retreat-ham-duong/lich-trinh` ← `MLF Retreat Ham Duong Lich Trinh.dc.html` (extended `ItinerarySchedule` with `detailed` variant + highlight/note row styles + day-anchor journey nav)
+- [x] retreat an-vui — `/ngay-hien/retreat-an-vui` ← `MLF Retreat An Vui.dc.html` (new `.info-row`/`.space-card`/`.rhythm-block`/`.day-num` CSS; fixed a `Schedule` key-collision bug for rows sharing the same "—" time)
+- [x] stay+talk — `/ngay-hien/stay-talk` ← `MLF Stay Talk.dc.html` (reuses `.info-row`, `.day-num`, `Schedule`, `PricingPanel`, `FaqShowMore`)
 
 **thư viện**
 - [x] thư viện ở-yên — `/thu-vien` ← `MLF Thu Vien.dc.html` (new `LibraryReader` component: searchable rail + centered reading pane, 20 notes)
 - [x] sổ tay khách — `/so-tay-khach` ← `MLF So Tay Khach.dc.html` (long-form guide: TOC jump nav, 4-part structure, inline floor-plan SVG; new `.row-b`/`.grid2`/`.part-divider` CSS + global `scroll-behavior: smooth`)
 - [x] đề mục chi tiết — `/de-muc-chi-tiet` ← `MLF De Muc Chi Tiet.dc.html` (new `DeMucIndex` component: 3 door accordions + full curriculum index toggle — 4 groups, 12 units, 59 parts)
-- [x] dạo một vòng — `/dao-mot-vong` ← `MLF Dao Mot Vong.dc.html` (new `ImageStoryCarousel`, `GuestWhyRotator`, `AmenityTabs`; alternating `.spot-row` tour + auto-scrolling food marquee)
-- [x] lưu bút — `/luu-but` ← `MLF Luu But.dc.html` (new `LuuButReader`: numbered-grid picker + reading pane, 26 guestbook entries)
+- [x] dạo một vòng — `/ngay-hien/dao-mot-vong` ← `MLF Dao Mot Vong.dc.html` (new `ImageStoryCarousel`, `GuestWhyRotator`, `AmenityTabs`; alternating `.spot-row` tour + auto-scrolling food marquee; nested under ngày-hiền to match its own breadcrumb — was flat `/dao-mot-vong`)
+- [x] lưu bút — `/ngay-hien/luu-but` ← `MLF Luu But.dc.html` (new `LuuButReader`: numbered-grid picker + reading pane, 26 guestbook entries; nested under ngày-hiền to match its own breadcrumb — was flat `/luu-but`)
 
 **cộng đồng (Supabase-backed — see README §Interactive Features)**
 - [x] một ngày ở-yên — `/mot-ngay-o-yen` ← `MLF Mot Ngay O Yen.dc.html` (new `OneDayOYen`: rotating hints, live Supabase counter via `increment_oyen_days()` RPC, locked-until-contributed note form, auto-rotating notes reader — verified live reads work against the real Supabase project; fixed a `Math.random()` SSR/client hydration mismatch)

@@ -31,14 +31,14 @@ export const routes = {
   khoLoiNhanOYen: "/kho-loi-nhan-o-yen",
   soTayKhach: "/so-tay-khach",
   deMucChiTiet: "/de-muc-chi-tiet",
-  daoMotVong: "/dao-mot-vong",
-  luuBut: "/luu-but",
-  stayTalk: "/stay-talk",
-  retreatOYen: "/retreat/o-yen",
-  retreatOYenLichTrinh: "/retreat/o-yen/lich-trinh",
-  retreatHamDuong: "/retreat/ham-duong",
-  retreatHamDuongLichTrinh: "/retreat/ham-duong/lich-trinh",
-  retreatAnVui: "/retreat/an-vui",
+  daoMotVong: "/ngay-hien/dao-mot-vong",
+  luuBut: "/ngay-hien/luu-but",
+  stayTalk: "/ngay-hien/stay-talk",
+  retreatOYen: "/ngay-hien/retreat-o-yen",
+  retreatOYenLichTrinh: "/ngay-hien/retreat-o-yen/lich-trinh",
+  retreatHamDuong: "/ngay-hien/retreat-ham-duong",
+  retreatHamDuongLichTrinh: "/ngay-hien/retreat-ham-duong/lich-trinh",
+  retreatAnVui: "/ngay-hien/retreat-an-vui",
 } as const;
 
 export const hoatDongMenu = [

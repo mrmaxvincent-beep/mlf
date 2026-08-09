@@ -7,6 +7,7 @@ export const routes = {
   giua: "/giua",
   tuanDu: "/tuan-du",
   tuanDuToi: "/tuan-du/toi",
+  chuoiTuanDu: "/tuan-du/chuoi",
   tuanDuBlog: "/tuan-du/blog",
   beStill: "/be-still",
   khaiTam: "/be-still/khai-tam",

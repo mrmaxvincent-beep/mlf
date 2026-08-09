@@ -10,12 +10,14 @@ building a new page.
 - [x] Shared components: `Header`, `Footer`, `Reveal`/`RevealStagger`, `Button`/`ArrowLink`, `Motif`
 - [x] Supabase client scaffold (`src/lib/supabase.ts`, `supabase/schema.sql`, `.env.local.example`)
 - [x] Homepage (`src/app/page.tsx`)
+- [x] Hero video wired in (`public/video/home-hero.mp4`)
+- [x] Supabase connected — reusing the design-prototype project (owner-confirmed), RLS
+      confirmed on. `supabase/schema.sql`'s `CREATE TABLE` isn't needed (tables already
+      exist); its RLS/policy statements are there for reference if that ever needs redoing.
 
 ## Not done yet
-- [ ] Hero video/photo asset — the homepage `.dc.html` referenced an `uploads/*.mp4` that
-      wasn't in the handoff bundle. Homepage currently uses a gradient placeholder.
-- [ ] Supabase project not yet created — run `supabase/schema.sql` in a new production
-      project, then fill `.env.local` from `.env.local.example`.
+- [ ] `upcoming_events.href` rows still point to old `MLF *.dc.html` filenames — owner is
+      fixing these directly in Supabase Table Editor to the new route slugs.
 
 ## Remaining 36 pages
 Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely traffic/linkage:
@@ -23,9 +25,10 @@ Route slugs are defined in `src/lib/nav.ts`. Build order suggested by likely tra
 **hoạt động**
 - [x] ngày-hiền — `/ngay-hien` ← `MLF Ngay Hien.dc.html`
 - [x] giữa · middle — `/giua` ← `MLF Giua.dc.html`
-- [ ] tuần-du — `/tuan-du` ← `MLF Tuan Du.dc.html`
+- [x] tuần-du — `/tuan-du` ← `MLF Tuan Du.dc.html` (built with new `Schedule`/`Callout` shared components)
 - [ ] tuần-du tới — `/tuan-du/toi` ← `MLF Tuan Du Toi.dc.html`
-- [ ] tuần-du blog — `/tuan-du/blog` ← `MLF Tuan Du Blog.dc.html`
+- [ ] chuỗi tuần-du — `/tuan-du/chuoi` ← `MLF Chuoi Tuan Du.dc.html` (missed in the first pass of this list — it's in the source `pages/` folder, confirmed)
+- [ ] tuần-du blog ("người đi qua") — `/tuan-du/blog` ← `MLF Tuan Du Blog.dc.html`
 
 **be-still**
 - [ ] be-still (hub) — `/be-still` ← `MLF Be Still.dc.html`

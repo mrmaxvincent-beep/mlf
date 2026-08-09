@@ -225,6 +225,13 @@ a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .schedule-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.3rem !important;
+  }
+}
+
 /* Alternating editorial image/text rows ("moments" sections) */
 @media (max-width: 680px) {
   .ed-row {

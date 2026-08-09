@@ -4,6 +4,7 @@ export function PricingPanel({
   subtitle,
   price,
   items,
+  note,
   ctaLabel,
   ctaHref,
 }: {
@@ -11,6 +12,7 @@ export function PricingPanel({
   subtitle: string;
   price: string;
   items: string[];
+  note?: string;
   ctaLabel: string;
   ctaHref: string;
 }) {
@@ -30,6 +32,9 @@ export function PricingPanel({
       <a href={ctaHref} target="_blank" rel="noopener" className="cta-btn" style={{ justifyContent: "center" }}>
         {ctaLabel} <span className="ar">→</span>
       </a>
+      {note ? (
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.72rem", lineHeight: 1.7, color: "var(--color-stone-alt)", margin: "1.1rem 0 0" }}>{note}</p>
+      ) : null}
     </div>
   );
 }

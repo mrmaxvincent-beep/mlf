@@ -4,7 +4,7 @@ import { ScrollExtras } from "@/components/ScrollExtras";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="wrap" style={{ padding: "2.5rem 0 2rem", textAlign: "center", borderTop: "1px solid var(--color-mist)" }}>
+    <footer className="wrap" style={{ padding: "2.5rem 1.5rem 2rem", textAlign: "center", borderTop: "1px solid var(--color-mist)" }}>
       <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "1.75rem" }}>
         <a className="mono-link" href="tel:0932037803" style={footerLinkStyle}>
           093 203 7803

@@ -195,7 +195,7 @@ export default function HomePage() {
       <div style={{ padding: "2.2rem 0" }} />
 
       {/* về mlf */}
-      <div className="wrap" style={{ padding: "2.5rem 0 3rem", position: "relative" }}>
+      <div className="wrap" style={{ padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
         {/* demo: placeholder line-art — swap for real illustration asset later */}
         <LineArt style={{ top: "-0.5rem", right: "-100px" }} />
         <Reveal className="section-number">
@@ -349,7 +349,7 @@ export default function HomePage() {
       <div style={{ padding: "2rem 0" }} />
 
       {/* về ở-yên */}
-      <div className="wrap" style={{ padding: "3rem 0", position: "relative" }}>
+      <div className="wrap" style={{ padding: "3rem 1.5rem", position: "relative" }}>
         {/* demo: placeholder line-art, mirrored to the left for asymmetry — swap for real illustration asset later */}
         <LineArt flip style={{ top: "0.5rem", left: "-100px" }} />
         <Reveal className="section-number">
@@ -369,7 +369,7 @@ export default function HomePage() {
 
       <div style={{ padding: "2.2rem 0" }} />
 
-      <div className="wrap" style={{ padding: "4rem 0", position: "relative", textAlign: "center" }}>
+      <div className="wrap" style={{ padding: "4rem 1.5rem", position: "relative", textAlign: "center" }}>
         <span className="vertical-label">khoảng dừng giữa hai suy nghĩ</span>
         <span className="mobile-label" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)", textAlign: "center", marginBottom: "1.5rem" }}>
           khoảng dừng giữa hai suy nghĩ

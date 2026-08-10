@@ -196,13 +196,16 @@ export default function HomePage() {
 
       {/* về mlf */}
       <div className="wrap" style={{ padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
-        {/* demo: placeholder line-art — swap for real illustration asset later */}
+        {/* demo: placeholder line-art, one on each side — swap for real illustration assets later */}
+        <LineArt flip style={{ top: "1rem", left: "-100px" }} />
         <LineArt style={{ top: "-0.5rem", right: "-100px" }} />
-        <Reveal className="section-number">
-          <span className="num">01</span>
-          <span className="label">về mlf</span>
-        </Reveal>
-        <Prose paragraphs={veMlfIntro} />
+        <div style={{ maxWidth: "42rem", margin: "0 auto" }}>
+          <Reveal className="section-number">
+            <span className="num">01</span>
+            <span className="label">về mlf</span>
+          </Reveal>
+          <Prose paragraphs={veMlfIntro} />
+        </div>
 
         <div style={{ margin: "2.5rem 0 3rem" }}>
           <div className="wrap" style={{ marginBottom: "1.5rem", paddingLeft: 0, paddingRight: 0 }}>
@@ -253,15 +256,15 @@ export default function HomePage() {
         </div>
 
         <div className="side-grid" style={{ margin: "3.5rem 0", display: "grid", gridTemplateColumns: "7fr 5fr", gap: "2rem", alignItems: "start" }}>
-          <div style={{ position: "relative", width: "100%", aspectRatio: "1/1" }}>
-            <Image src="/assets/photo-rot-tra.jpg" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 420px" style={{ objectFit: "cover" }} />
-          </div>
           <div style={{ fontSize: "0.88rem", lineHeight: 1.85, paddingTop: "1.5rem" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", letterSpacing: "0.04em", display: "block", lineHeight: 1.7 }}>
               &ldquo;Vũ nhấc ấm, chuyền từ tay nọ sang tay kia, rót nước vào bình trà. Nước chảy mềm, thành một dòng, không xoắn, không xòe. Như thể mỗi giọt nước, đều biết chỗ của mình.&rdquo;
               <br />
               <span style={{ fontStyle: "normal" }}>có những buổi trà kéo tới khuya - chỉ vì hiếm khi nào người ta thật tâm ngồi xuống cùng nhau.</span>
             </span>
+          </div>
+          <div className="reorder-first-desktop" style={{ position: "relative", width: "100%", aspectRatio: "1/1" }}>
+            <Image src="/assets/photo-rot-tra.jpg" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 420px" style={{ objectFit: "cover" }} />
           </div>
         </div>
 

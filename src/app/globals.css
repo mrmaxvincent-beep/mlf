@@ -229,7 +229,16 @@ a:hover {
     display: none !important;
   }
 }
+/* "về mlf" block 2: image is second in DOM (so mobile stacking reads
+   caption-then-image, matching the other two blocks) but visually placed
+   first/left on desktop via order. */
+.reorder-first-desktop {
+  order: -1;
+}
 @media (max-width: 600px) {
+  .reorder-first-desktop {
+    order: 0;
+  }
   .vibe-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }

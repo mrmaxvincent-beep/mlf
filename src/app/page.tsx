@@ -9,6 +9,7 @@ import { ArrowLink } from "@/components/Button";
 import { Testimonials } from "@/components/Testimonials";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 import { HeroClock } from "@/components/HeroClock";
+import { LineArt } from "@/components/LineArt";
 import { routes } from "@/lib/nav";
 import {
   entries,
@@ -121,6 +122,13 @@ export default function HomePage() {
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>cuộn xuống</span>
           <span className="scroll-hint-line" />
         </div>
+
+        {/* demo: organic wave divider — swap this path if a different curve is wanted */}
+        <div className="hero-wave">
+          <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style={{ width: "100%", height: 40, display: "block" }}>
+            <path d="M0,22 C360,40 1080,4 1440,26 L1440,40 L0,40 Z" fill="var(--color-paper)" />
+          </svg>
+        </div>
       </div>
 
       <div style={{ padding: "2.2rem 0" }} />
@@ -186,7 +194,9 @@ export default function HomePage() {
       <div style={{ padding: "2.2rem 0" }} />
 
       {/* về mlf */}
-      <div className="wrap" style={{ padding: "2.5rem 0 3rem" }}>
+      <div className="wrap" style={{ padding: "2.5rem 0 3rem", position: "relative" }}>
+        {/* demo: placeholder line-art — swap for real illustration asset later */}
+        <LineArt style={{ top: "-0.5rem", right: "-100px" }} />
         <Reveal className="section-number">
           <span className="num">01</span>
           <span className="label">về mlf</span>
@@ -338,7 +348,9 @@ export default function HomePage() {
       <div style={{ padding: "2rem 0" }} />
 
       {/* về ở-yên */}
-      <div className="wrap" style={{ padding: "3rem 0" }}>
+      <div className="wrap" style={{ padding: "3rem 0", position: "relative" }}>
+        {/* demo: placeholder line-art, mirrored to the left for asymmetry — swap for real illustration asset later */}
+        <LineArt flip style={{ top: "0.5rem", left: "-100px" }} />
         <Reveal className="section-number">
           <span className="num">02</span>
           <span className="label">về ở-yên</span>

@@ -1169,6 +1169,28 @@ details[open] > summary .acc-icon {
   animation: mlf-drop 2.4s ease-in-out infinite;
 }
 
+/* Demo: organic wave divider + hand-drawn line-art accents (placeholder art —
+   see src/components/LineArt.tsx) */
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  line-height: 0;
+  pointer-events: none;
+}
+.line-art-accent {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+}
+@media (min-width: 1100px) {
+  .line-art-accent {
+    display: block;
+  }
+}
+
 /* "khoảng dừng giữa hai suy nghĩ" — vertical label beside the pause video on
    desktop, centered horizontal label above it on narrow viewports. */
 .vertical-label {

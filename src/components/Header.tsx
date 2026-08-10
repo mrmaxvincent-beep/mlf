@@ -61,8 +61,10 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           background: "none",
           border: "none",
           cursor: "pointer",
-          padding: 0,
+          padding: "16px 12px",
+          margin: "-16px -12px",
           flexDirection: "column",
+          justifyContent: "center",
           gap: 5,
           color: navTextColor,
         }}

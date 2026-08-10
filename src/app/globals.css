@@ -208,6 +208,28 @@ a:hover {
   }
 }
 @media (max-width: 600px) {
+  .hero-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.5rem;
+  }
+  .hero-bottom > div:last-child {
+    text-align: left !important;
+  }
+  .hero-logo {
+    width: 88px !important;
+    height: 110px !important;
+    margin: -0.6rem 0 -0.3rem -0.5rem !important;
+  }
+  /* hero-bottom's stacked content on narrow screens can grow tall enough
+     (long clock/weather string, wrapped tagline) to reach the scroll hint's
+     fixed bottom offset — the hint is a decorative desktop affordance, so
+     drop it here instead of chasing a content-dependent height. */
+  .scroll-hint-wrap {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
   .vibe-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }

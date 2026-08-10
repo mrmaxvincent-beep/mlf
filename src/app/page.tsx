@@ -232,20 +232,20 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="side-grid" style={{ margin: "2rem 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
+        <div className="side-grid" style={{ margin: "2rem 0", display: "grid", gridTemplateColumns: "5fr 7fr", gap: "2rem", alignItems: "end" }}>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
             ở đây luôn có đủ thời gian để nấu ba bữa một ngày · trên bàn ăn bao giờ cũng có vài bông hoa nhỏ hái ngoài vườn
           </span>
           <div style={{ position: "relative", width: "100%", aspectRatio: "4/5" }}>
-            <Image src="/assets/photo-ban-an.jpg" alt="bàn ăn nhà mộc" fill sizes="(max-width: 600px) 100vw, 370px" style={{ objectFit: "cover" }} />
+            <Image src="/assets/photo-ban-an.jpg" alt="bàn ăn nhà mộc" fill sizes="(max-width: 600px) 100vw, 420px" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
-        <div className="side-grid" style={{ margin: "2.5rem 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
-          <div style={{ position: "relative", width: "100%", aspectRatio: "4/5" }}>
-            <Image src="/assets/photo-rot-tra.jpg" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 370px" style={{ objectFit: "cover" }} />
+        <div className="side-grid" style={{ margin: "3.5rem 0", display: "grid", gridTemplateColumns: "7fr 5fr", gap: "2rem", alignItems: "start" }}>
+          <div style={{ position: "relative", width: "100%", aspectRatio: "1/1" }}>
+            <Image src="/assets/photo-rot-tra.jpg" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 420px" style={{ objectFit: "cover" }} />
           </div>
-          <div style={{ fontSize: "0.88rem", lineHeight: 1.85 }}>
+          <div style={{ fontSize: "0.88rem", lineHeight: 1.85, paddingTop: "1.5rem" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", letterSpacing: "0.04em", display: "block", lineHeight: 1.7 }}>
               &ldquo;Vũ nhấc ấm, chuyền từ tay nọ sang tay kia, rót nước vào bình trà. Nước chảy mềm, thành một dòng, không xoắn, không xòe. Như thể mỗi giọt nước, đều biết chỗ của mình.&rdquo;
               <br />
@@ -254,7 +254,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="side-grid" style={{ marginTop: "3.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "center" }}>
+        <div className="side-grid" style={{ marginTop: "4rem", display: "grid", gridTemplateColumns: "4fr 7fr", gap: "2rem", alignItems: "center" }}>
           <div style={{ fontSize: "0.88rem", lineHeight: 1.85 }}>
             <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", letterSpacing: "0.04em", lineHeight: 1.7, margin: "0 0 1rem" }}>
               một cô gái từng lên đây hai lần, nhắn lúc tối muộn: &ldquo;nhớ nhà mình ghê gớm. em chuẩn bị lên đây.&rdquo;
@@ -263,8 +263,8 @@ export default function HomePage() {
               chúng tôi không biết từ lúc nào, người ta gọi nơi này là nhà mình.
             </span>
           </div>
-          <div style={{ position: "relative", width: "100%", aspectRatio: "4/5" }}>
-            <Image src="/assets/photo-nha-moc.jpg" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 370px" style={{ objectFit: "cover" }} />
+          <div style={{ position: "relative", width: "100%", aspectRatio: "5/6", marginTop: "-2rem" }}>
+            <Image src="/assets/photo-nha-moc.jpg" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 420px" style={{ objectFit: "cover" }} />
           </div>
         </div>
       </div>
@@ -312,7 +312,13 @@ export default function HomePage() {
         <Image src="/assets/split-ve-oyen.webp" alt="khoảnh khắc ở-yên" fill sizes="100vw" style={{ objectFit: "cover" }} />
       </div>
 
-      <div style={{ padding: "2.2rem 0" }} />
+      <Reveal
+        style={{ padding: "2.5rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.75rem" }}
+      >
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)" }}>chậm lại</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)" }}>để nghe</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)" }}>chính mình</span>
+      </Reveal>
 
       <div style={{ padding: "4.5rem 0" }}>
         <div className="wrap" style={{ maxWidth: "34rem", marginLeft: "auto", marginRight: "auto" }}>

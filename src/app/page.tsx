@@ -196,9 +196,9 @@ export default function HomePage() {
 
       {/* về mlf */}
       <div className="wrap" style={{ padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
-        {/* demo: placeholder line-art, one on each side — swap for real illustration assets later */}
+        {/* demo: placeholder line-art, diagonal like the reference (top-left / bottom-right) — swap for real illustration assets later */}
         <LineArt flip style={{ top: "1rem", left: "-100px" }} />
-        <LineArt style={{ top: "-0.5rem", right: "-100px" }} />
+        <LineArt style={{ bottom: "2rem", right: "-100px" }} />
         <div style={{ maxWidth: "42rem", margin: "0 auto" }}>
           <Reveal className="section-number">
             <span className="num">01</span>

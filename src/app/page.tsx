@@ -274,7 +274,7 @@ export default function HomePage() {
               chúng tôi không biết từ lúc nào, người ta gọi nơi này là nhà mình.
             </span>
           </div>
-          <div style={{ position: "relative", width: "100%", aspectRatio: "5/6", marginTop: "-2rem" }}>
+          <div style={{ position: "relative", width: "100%", aspectRatio: "5/6" }}>
             <Image src="/assets/photo-nha-moc.jpg" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 420px" style={{ objectFit: "cover" }} />
           </div>
         </div>

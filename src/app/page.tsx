@@ -123,13 +123,6 @@ export default function HomePage() {
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>cuộn xuống</span>
           <span className="scroll-hint-line" />
         </div>
-
-        {/* demo: organic wave divider — swap this path if a different curve is wanted */}
-        <div className="hero-wave">
-          <svg viewBox="0 0 1440 40" preserveAspectRatio="none" style={{ width: "100%", height: 40, display: "block" }}>
-            <path d="M0,22 C360,40 1080,4 1440,26 L1440,40 L0,40 Z" fill="var(--color-paper)" />
-          </svg>
-        </div>
       </div>
 
       <div style={{ padding: "2.2rem 0" }} />
@@ -198,13 +191,13 @@ export default function HomePage() {
       <div className="wrap" style={{ padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
         {/* demo: placeholder line-art, diagonal like the reference (top-left / bottom-right) — swap for real illustration assets later */}
         <LineArt flip style={{ top: "1rem", left: "-100px" }} />
-        <LineArt style={{ bottom: "2rem", right: "-100px" }} />
-        <div style={{ maxWidth: "42rem", margin: "0 auto" }}>
+        <div style={{ maxWidth: "42rem", margin: "0 auto", position: "relative" }}>
           <Reveal className="section-number">
             <span className="num">01</span>
             <span className="label">về mlf</span>
           </Reveal>
           <Prose paragraphs={veMlfIntro} />
+          <LineArt style={{ bottom: "-1rem", right: "-160px" }} />
         </div>
 
         <div style={{ margin: "2.5rem 0 3rem" }}>

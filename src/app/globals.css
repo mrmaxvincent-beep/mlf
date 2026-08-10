@@ -1200,17 +1200,7 @@ details[open] > summary .acc-icon {
   animation: mlf-drop 2.4s ease-in-out infinite;
 }
 
-/* Demo: organic wave divider + hand-drawn line-art accents (placeholder art —
-   see src/components/LineArt.tsx) */
-.hero-wave {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  line-height: 0;
-  pointer-events: none;
-}
+/* Demo: hand-drawn line-art accents (placeholder art — see src/components/LineArt.tsx) */
 .line-art-accent {
   display: none;
   position: absolute;

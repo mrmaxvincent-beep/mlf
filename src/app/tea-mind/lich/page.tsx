@@ -33,8 +33,8 @@ export default function TeaMindLichPage() {
       </div>
 
       <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", height: "auto" }}>
-        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm 1" aspectRatio="3/4" src="/assets/teamind_lich01.jpg" />
-        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm 2" aspectRatio="3/4" src="/assets/teamind_lich02.jpg" />
+        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm 1" aspectRatio="3/4" src="/assets/teamind_lich01.webp" />
+        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm 2" aspectRatio="3/4" src="/assets/teamind_lich02.webp" />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>

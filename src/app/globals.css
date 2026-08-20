@@ -19,7 +19,7 @@ html {
    texture is hard to fake convincingly with generated noise alone). */
 body {
   background-color: var(--color-paper);
-  background-image: url("/assets/light_background2.png");
+  background-image: url("/assets/light_background2.webp");
   background-attachment: fixed;
   background-size: cover;
   color: var(--color-ink);

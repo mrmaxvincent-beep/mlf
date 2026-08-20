@@ -31,7 +31,7 @@ export default function PhiaSangPage() {
       </div>
 
       <div className="wrap" style={{ margin: "4rem auto", maxWidth: 440 }}>
-        <ImagePlaceholder label="ảnh · buổi trò chuyện phía sáng" aspectRatio="4/5" src="/assets/phiasang.jpg" />
+        <ImagePlaceholder label="ảnh · buổi trò chuyện phía sáng" aspectRatio="4/5" src="/assets/phiasang.webp" />
       </div>
 
       <Reveal className="wrap letter" style={{ marginTop: "1rem", marginBottom: "2.5rem", maxWidth: "58ch" }}>

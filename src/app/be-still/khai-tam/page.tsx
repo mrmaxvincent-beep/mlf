@@ -40,7 +40,7 @@ export default function KhaiTamPage() {
       </div>
 
       <div className="wrap" style={{ margin: "5rem auto", maxWidth: 420 }}>
-        <ImagePlaceholder label="ảnh · nhật ký khai tâm" aspectRatio="4/5" src="/assets/khaitam.jpg" alt="khai-tam" />
+        <ImagePlaceholder label="ảnh · nhật ký khai tâm" aspectRatio="4/5" src="/assets/khaitam.webp" alt="khai-tam" />
       </div>
 
       <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "3.5rem", maxWidth: "56ch", textAlign: "center" }}>

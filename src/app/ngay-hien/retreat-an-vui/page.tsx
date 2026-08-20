@@ -79,9 +79,9 @@ export default function RetreatAnVuiPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · retreat an-vui 1" aspectRatio="16/12" src="/assets/ngayhien_anvui_01.jpg" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · retreat an-vui 2" aspectRatio="16/12" src="/assets/ngayhien_anvui_02.jpg" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · retreat an-vui 3" aspectRatio="16/12" src="/assets/ngayhien_anvui_03.jpg" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat an-vui 1" aspectRatio="16/12" src="/assets/ngayhien_anvui_01.webp" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat an-vui 2" aspectRatio="16/12" src="/assets/ngayhien_anvui_02.webp" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat an-vui 3" aspectRatio="16/12" src="/assets/ngayhien_anvui_03.webp" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div style={{ height: "2rem" }}></div>
@@ -108,7 +108,7 @@ export default function RetreatAnVuiPage() {
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/nauan.png" alt="nauan" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/nauan.webp" alt="nauan" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -174,7 +174,7 @@ export default function RetreatAnVuiPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "126ch", width: "100%" }}>
-          <ImagePlaceholder label="ảnh · làm bánh quê cùng cô chú" aspectRatio="16/9" src="/assets/ngayhienanvui44.jpg" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · làm bánh quê cùng cô chú" aspectRatio="16/9" src="/assets/ngayhienanvui44.webp" style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
 

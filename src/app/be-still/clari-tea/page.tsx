@@ -32,7 +32,7 @@ export default function ClariTeaPage() {
       </div>
 
       <div className="wrap" style={{ margin: "4rem auto", maxWidth: 420 }}>
-        <ImagePlaceholder label="ảnh · chén trà, clari-tea" aspectRatio="4/5" src="/assets/claritea.jpg" alt="clari-tea" />
+        <ImagePlaceholder label="ảnh · chén trà, clari-tea" aspectRatio="4/5" src="/assets/claritea.webp" alt="clari-tea" />
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "42ch", textAlign: "center" }}>

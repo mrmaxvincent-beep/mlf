@@ -41,9 +41,9 @@ export const reasons = [
 ];
 
 export const keepers = [
-  { role: "ẩm thực & tổ ấm", name: "Vũ", label: "ảnh · Vũ", src: "/assets/vu.png", desc: "người bảo vệ cái đẹp, đầu bếp chay, đưa ta thật sự trở về với căn bếp và ngôi nhà." },
-  { role: "cơ thể & dưỡng sinh", name: "Thuận", label: "ảnh · Thuận", src: "/assets/thuan.png", desc: "người chăm sóc thân thể bằng yoga và dưỡng sinh, để lắng nghe cơ thể theo nhịp thuận tự nhiên." },
-  { role: "nội tâm & thiền tập", name: "Tâm", label: "ảnh · Tâm", src: "/assets/tam.png", desc: "người đồng hành tinh thần, dẫn dắt những buổi thiền và quán chiếu, nhận ra khoảng sáng tối nơi nội tâm." },
+  { role: "ẩm thực & tổ ấm", name: "Vũ", label: "ảnh · Vũ", src: "/assets/vu.webp", desc: "người bảo vệ cái đẹp, đầu bếp chay, đưa ta thật sự trở về với căn bếp và ngôi nhà." },
+  { role: "cơ thể & dưỡng sinh", name: "Thuận", label: "ảnh · Thuận", src: "/assets/thuan.webp", desc: "người chăm sóc thân thể bằng yoga và dưỡng sinh, để lắng nghe cơ thể theo nhịp thuận tự nhiên." },
+  { role: "nội tâm & thiền tập", name: "Tâm", label: "ảnh · Tâm", src: "/assets/tam.webp", desc: "người đồng hành tinh thần, dẫn dắt những buổi thiền và quán chiếu, nhận ra khoảng sáng tối nơi nội tâm." },
 ];
 
 export const voices = [

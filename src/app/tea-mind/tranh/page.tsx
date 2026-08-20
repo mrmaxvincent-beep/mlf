@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const works = [
-  { label: "ảnh · tranh màu nước", title: "", src: "/assets/teamind_tranh1.jpg" },
-  { label: "ảnh · tranh phong cảnh", title: "", src: "/assets/teamind_tranh2.jpg" },
-  { label: "ảnh · tranh tĩnh vật trà", title: "", src: "/assets/teamind_tranh03.jpg" },
-  { label: "ảnh · tranh chân dung", title: "", src: "/assets/teamind_tranh4.jpg" },
+  { label: "ảnh · tranh màu nước", title: "", src: "/assets/teamind_tranh1.webp" },
+  { label: "ảnh · tranh phong cảnh", title: "", src: "/assets/teamind_tranh2.webp" },
+  { label: "ảnh · tranh tĩnh vật trà", title: "", src: "/assets/teamind_tranh03.webp" },
+  { label: "ảnh · tranh chân dung", title: "", src: "/assets/teamind_tranh4.webp" },
 ];
 
 export default function TeaMindTranhPage() {

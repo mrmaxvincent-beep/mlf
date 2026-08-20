@@ -37,7 +37,7 @@ export default function TeaMindTraPage() {
 
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "48vh", minHeight: 300, maxHeight: 460 }}>
         <div style={{ height: "100%", aspectRatio: "16/9" }}>
-          <ImagePlaceholder label="ảnh · pha trà" aspectRatio="16/9" src="/assets/teamind_tra.jpg" style={{ width: "100%", height: "100%" }} />
+          <ImagePlaceholder label="ảnh · pha trà" aspectRatio="16/9" src="/assets/teamind_tra.webp" style={{ width: "100%", height: "100%" }} />
         </div>
       </div>
 

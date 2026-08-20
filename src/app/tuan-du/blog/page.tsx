@@ -37,9 +37,9 @@ export default function TuanDuBlogPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 1" aspectRatio="16/12" src="/assets/blogtuandu01.jpg" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 2" aspectRatio="16/12" src="/assets/blogtuandu2.jpg" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 3" aspectRatio="16/12" src="/assets/blogtuandu3.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 1" aspectRatio="16/12" src="/assets/blogtuandu01.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 2" aspectRatio="16/12" src="/assets/blogtuandu2.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 3" aspectRatio="16/12" src="/assets/blogtuandu3.webp" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="cv-shell" style={{ margin: "3.5rem auto 3rem" }}>

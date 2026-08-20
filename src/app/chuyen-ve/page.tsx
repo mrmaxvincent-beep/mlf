@@ -27,9 +27,9 @@ export default function ChuyenVePage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · hai người ngồi trò chuyện, ánh đèn vàng 1" aspectRatio="16/12" src="/assets/chuyenve01.jpg" alt="chuyen-ve" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · hai người ngồi trò chuyện, ánh đèn vàng 2" aspectRatio="16/12" src="/assets/chuyenve02.jpg" alt="chuyen-ve" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · hai người ngồi trò chuyện, ánh đèn vàng 3" aspectRatio="16/12" src="/assets/chuyenve03.jpg" alt="chuyen-ve" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · hai người ngồi trò chuyện, ánh đèn vàng 1" aspectRatio="16/12" src="/assets/chuyenve01.webp" alt="chuyen-ve" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · hai người ngồi trò chuyện, ánh đèn vàng 2" aspectRatio="16/12" src="/assets/chuyenve02.webp" alt="chuyen-ve" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · hai người ngồi trò chuyện, ánh đèn vàng 3" aspectRatio="16/12" src="/assets/chuyenve03.webp" alt="chuyen-ve" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="cv-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>

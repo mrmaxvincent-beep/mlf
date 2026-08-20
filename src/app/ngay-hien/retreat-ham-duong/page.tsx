@@ -81,9 +81,9 @@ export default function RetreatHamDuongPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · retreat hàm-dưỡng 1" aspectRatio="16/12" src="/assets/ngayhien_hamduong_01.jpg" alt="retreat hàm-dưỡng" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · retreat hàm-dưỡng 2" aspectRatio="16/12" src="/assets/ngayhien_hamduong_2.jpg" alt="retreat hàm-dưỡng" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · retreat hàm-dưỡng 3" aspectRatio="16/12" src="/assets/ngayhien_hamduong_03.jpg" alt="retreat hàm-dưỡng" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat hàm-dưỡng 1" aspectRatio="16/12" src="/assets/ngayhien_hamduong_01.webp" alt="retreat hàm-dưỡng" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat hàm-dưỡng 2" aspectRatio="16/12" src="/assets/ngayhien_hamduong_2.webp" alt="retreat hàm-dưỡng" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat hàm-dưỡng 3" aspectRatio="16/12" src="/assets/ngayhien_hamduong_03.webp" alt="retreat hàm-dưỡng" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "4rem", marginBottom: "5rem", maxWidth: "52ch" }}>
@@ -96,7 +96,7 @@ export default function RetreatHamDuongPage() {
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "100%", maxWidth: "180px", aspectRatio: "180/140" }}>
-          <Image src="/assets/chentra.png" alt="chentra" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/chentra.webp" alt="chentra" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -288,7 +288,7 @@ export default function RetreatHamDuongPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "126ch", width: "100%" }}>
-          <ImagePlaceholder label="ảnh · đêm kết nối tại mlf" aspectRatio="16/9" src="/assets/ngayhien_hamduong_44.jpg" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · đêm kết nối tại mlf" aspectRatio="16/9" src="/assets/ngayhien_hamduong_44.webp" style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
 

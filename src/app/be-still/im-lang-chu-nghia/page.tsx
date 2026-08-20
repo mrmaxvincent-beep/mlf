@@ -36,7 +36,7 @@ export default function ImLangChuNghiaPage() {
       </div>
 
       <div className="wrap" style={{ margin: "4.5rem auto", maxWidth: 440 }}>
-        <ImagePlaceholder label="ảnh · trang giấy, chữ viết" aspectRatio="4/5" src="/assets/imlangchunghia.jpg" />
+        <ImagePlaceholder label="ảnh · trang giấy, chữ viết" aspectRatio="4/5" src="/assets/imlangchunghia.webp" />
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "70ch", textAlign: "center" }}>
@@ -196,9 +196,9 @@ export default function ImLangChuNghiaPage() {
       </div>
 
       <div style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 0, marginBottom: "4rem" }}>
-        <ImagePlaceholder label="ảnh · im lặng chữ nghĩa 1" aspectRatio="16/12" src="/assets/ilcn01.jpg" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · im lặng chữ nghĩa 2" aspectRatio="16/12" src="/assets/ilcn02.jpg" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · im lặng chữ nghĩa 3" aspectRatio="16/12" src="/assets/ilcn3.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · im lặng chữ nghĩa 1" aspectRatio="16/12" src="/assets/ilcn01.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · im lặng chữ nghĩa 2" aspectRatio="16/12" src="/assets/ilcn02.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · im lặng chữ nghĩa 3" aspectRatio="16/12" src="/assets/ilcn3.webp" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>

@@ -47,7 +47,7 @@ export default function BeStillPage() {
         </div>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>
-            <ImagePlaceholder label="ảnh chân dung · Hồ Thành Tâm" src="/assets/tam.png" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
+            <ImagePlaceholder label="ảnh chân dung · Hồ Thành Tâm" src="/assets/tam.webp" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 0.9rem" }}>
@@ -59,9 +59,9 @@ export default function BeStillPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · không gian tĩnh, be-still 1" aspectRatio="16/12" src="/assets/bestill01.jpg" alt="be-still" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · không gian tĩnh, be-still 2" aspectRatio="16/12" src="/assets/bestill02.jpg" alt="be-still" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · không gian tĩnh, be-still 3" aspectRatio="16/12" src="/assets/bestill03.jpg" alt="be-still" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · không gian tĩnh, be-still 1" aspectRatio="16/12" src="/assets/bestill01.webp" alt="be-still" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · không gian tĩnh, be-still 2" aspectRatio="16/12" src="/assets/bestill02.webp" alt="be-still" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · không gian tĩnh, be-still 3" aspectRatio="16/12" src="/assets/bestill03.webp" alt="be-still" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>

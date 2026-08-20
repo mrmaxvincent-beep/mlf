@@ -29,9 +29,9 @@ export default function CongDongOYenPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · góc ngồi yên, ánh sáng dịu 1" aspectRatio="16/12" src="/assets/congdongoyen01.jpg" alt="cong-dong-o-yen" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · góc ngồi yên, ánh sáng dịu 2" aspectRatio="16/12" src="/assets/congdongoyen02.jpg" alt="cong-dong-o-yen" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · góc ngồi yên, ánh sáng dịu 3" aspectRatio="16/12" src="/assets/congdongoyen03.jpg" alt="cong-dong-o-yen" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · góc ngồi yên, ánh sáng dịu 1" aspectRatio="16/12" src="/assets/congdongoyen01.webp" alt="cong-dong-o-yen" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · góc ngồi yên, ánh sáng dịu 2" aspectRatio="16/12" src="/assets/congdongoyen02.webp" alt="cong-dong-o-yen" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · góc ngồi yên, ánh sáng dịu 3" aspectRatio="16/12" src="/assets/congdongoyen03.webp" alt="cong-dong-o-yen" style={{ width: "100%", height: "auto" }} />
       </div>
 
       {/* POEM */}
@@ -55,7 +55,7 @@ export default function CongDongOYenPage() {
 
       <div className="wrap" style={{ display: "flex", justifyContent: "center", marginBottom: "4rem" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/comnam.png" alt="comnam" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/comnam.webp" alt="comnam" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -228,7 +228,7 @@ export default function CongDongOYenPage() {
             một khoảng dừng giữa những điều đang diễn ra
           </span>
           <div style={{ width: 340, maxWidth: "100%", aspectRatio: "4/5" }}>
-            <ImagePlaceholder label="ảnh · một khoảnh khắc ở-yên" aspectRatio="4/5" src="/assets/congdongoyen4.jpg" style={{ width: "100%", height: "100%" }} />
+            <ImagePlaceholder label="ảnh · một khoảnh khắc ở-yên" aspectRatio="4/5" src="/assets/congdongoyen4.webp" style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "center", maxWidth: "36ch", margin: "3rem auto 0" }}>

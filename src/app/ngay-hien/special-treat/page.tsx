@@ -45,9 +45,9 @@ export default function SpecialTreatPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · special treat 1" aspectRatio="16/12" src="/assets/specialtreat_1.jpg" alt="special-treat" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · special treat 2" aspectRatio="16/12" src="/assets/specialtreat_2.jpg" alt="special-treat" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · special treat 3" aspectRatio="16/12" src="/assets/specialtreat_3.jpg" alt="special-treat" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · special treat 1" aspectRatio="16/12" src="/assets/specialtreat_1.webp" alt="special-treat" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · special treat 2" aspectRatio="16/12" src="/assets/specialtreat_2.webp" alt="special-treat" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · special treat 3" aspectRatio="16/12" src="/assets/specialtreat_3.webp" alt="special-treat" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div style={{ height: "2rem" }}></div>

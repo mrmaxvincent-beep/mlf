@@ -80,7 +80,7 @@ export default function NgayHienPage() {
 
       <div style={{ marginTop: "2.5rem", height: "60vh", minHeight: 360, maxHeight: 580, position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ position: "relative", width: "100%", height: "100%" }}>
-          <Image src="/assets/ngayhien_01.jpg" alt="nhà mộc giữa sương Măng Đen" fill style={{ objectFit: "contain" }} />
+          <Image src="/assets/ngayhien_01.webp" alt="nhà mộc giữa sương Măng Đen" fill style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -113,7 +113,7 @@ export default function NgayHienPage() {
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/home_rem.png" alt="home_rem" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_rem.webp" alt="home_rem" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 

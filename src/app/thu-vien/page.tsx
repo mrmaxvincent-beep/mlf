@@ -26,9 +26,9 @@ export default function ThuVienPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 1" aspectRatio="16/12" src="/assets/thuvienoyen01.jpg" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 2" aspectRatio="16/12" src="/assets/thuvienoyen02.jpg" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 3" aspectRatio="16/12" src="/assets/thuvienoyen03.jpg" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 1" aspectRatio="16/12" src="/assets/thuvienoyen01.webp" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 2" aspectRatio="16/12" src="/assets/thuvienoyen02.webp" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 3" aspectRatio="16/12" src="/assets/thuvienoyen03.webp" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="lib-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>

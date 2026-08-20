@@ -157,7 +157,7 @@ export default function SoTayKhachPage() {
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <div style={{ border: "1px solid var(--color-mist)", padding: "1.25rem 1.5rem", display: "flex", alignItems: "center", gap: "1.1rem" }}>
           <div style={{ flex: "none", width: "4.5rem", height: "4.5rem" }}>
-            <ImagePlaceholder label="zalo mlf" aspectRatio="1" src="/assets/zalomoc.jpg" style={{ width: "100%", height: "100%" }} />
+            <ImagePlaceholder label="zalo mlf" aspectRatio="1" src="/assets/zalomoc.webp" style={{ width: "100%", height: "100%" }} />
           </div>
           <div>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.3rem" }}>zalo</span>
@@ -341,7 +341,7 @@ export default function SoTayKhachPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <ImagePlaceholder label="bản đồ mlf" aspectRatio="4/3" src="/assets/sodonha.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="bản đồ mlf" aspectRatio="4/3" src="/assets/sodonha.webp" style={{ width: "100%", height: "auto" }} />
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "0.6rem" }}>

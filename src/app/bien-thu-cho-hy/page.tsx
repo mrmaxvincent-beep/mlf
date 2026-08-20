@@ -26,9 +26,9 @@ export default function BienThuChoHyPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen 1" aspectRatio="16/12" src="/assets/bienthu1.jpg" alt="bien-thu-cho-hy" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen 2" aspectRatio="16/12" src="/assets/bienthu02.jpg" alt="bien-thu-cho-hy" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen 3" aspectRatio="16/12" src="/assets/bienthu3.jpg" alt="bien-thu-cho-hy" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen 1" aspectRatio="16/12" src="/assets/bienthu1.webp" alt="bien-thu-cho-hy" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen 2" aspectRatio="16/12" src="/assets/bienthu02.webp" alt="bien-thu-cho-hy" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · bàn viết, ánh đèn, đêm Măng Đen 3" aspectRatio="16/12" src="/assets/bienthu3.webp" alt="bien-thu-cho-hy" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "3rem", maxWidth: "60ch" }}>

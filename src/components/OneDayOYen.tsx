@@ -197,7 +197,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "270px", height: "210px" }}>
-          <Image src="/assets/home_lohoa.png" alt="home_lohoa" fill sizes="270px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_lohoa.webp" alt="home_lohoa" fill sizes="270px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 

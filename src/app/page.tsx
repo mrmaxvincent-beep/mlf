@@ -82,7 +82,7 @@ export default function HomePage() {
               }}
             >
               <Image
-                src="/assets/logo-moc.png"
+                src="/assets/logo-moc.webp"
                 alt="mộc little farm"
                 fill
                 sizes="152px"
@@ -205,7 +205,7 @@ export default function HomePage() {
       {/* về mlf — journey stop */}
       <div className="wrap" style={{ padding: "2.5rem 1.5rem 3rem", position: "relative" }}>
         <span className="home-bantra-img home-bantra-desktop" style={{ position: "absolute", bottom: "3rem", right: "-5rem", width: 405, height: 324, display: "block" }}>
-          <Image src="/assets/home_bantra1.png" alt="home_bantra" fill sizes="405px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_bantra1.webp" alt="home_bantra" fill sizes="405px" style={{ objectFit: "contain" }} />
         </span>
         <div style={{ maxWidth: "42rem", margin: "0 auto", position: "relative" }}>
           <Reveal className="section-number">
@@ -214,7 +214,7 @@ export default function HomePage() {
           <Prose paragraphs={veMlfIntro} leadDash />
         </div>
         <div className="home-bantra-mobile" style={{ width: 280, height: 224, margin: "2rem auto 0", display: "none", position: "relative" }}>
-          <Image src="/assets/home_bantra1.png" alt="home_bantra" fill sizes="280px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_bantra1.webp" alt="home_bantra" fill sizes="280px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -261,7 +261,7 @@ export default function HomePage() {
 
         <div style={{ padding: "2rem 0", display: "flex", justifyContent: "center" }}>
           <div style={{ position: "relative", width: "101px", height: "78px" }}>
-            <Image src="/assets/home_la.png" alt="home_la" fill sizes="101px" style={{ objectFit: "contain" }} />
+            <Image src="/assets/home_la.webp" alt="home_la" fill sizes="101px" style={{ objectFit: "contain" }} />
           </div>
         </div>
 
@@ -269,7 +269,7 @@ export default function HomePage() {
           {/* Row 1 - Column 1: Chữ nhật ngang - Uống trà */}
           <div style={{ display: "flex", flexDirection: "column", marginTop: "2rem" }}>
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
-              <Image src="/assets/home_phatra.jpg" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
+              <Image src="/assets/home_phatra.webp" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", display: "block", lineHeight: 1.7 }}>
               &ldquo;Vũ nhấc ấm, chuyền từ tay nọ sang tay kia, rót nước vào bình trà. Nước chảy mềm, thành một dòng, không xoắn, không xòe. Như thể mỗi giọt nước, đều biết chỗ của mình.&rdquo;
@@ -281,7 +281,7 @@ export default function HomePage() {
           {/* Row 1 - Column 2: Vuông - Bữa ăn */}
           <div style={{ display: "flex", flexDirection: "column", marginTop: "2rem" }}>
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
-              <Image src="/assets/home_anhchieu.jpg" alt="bàn ăn nhà mộc" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
+              <Image src="/assets/home_anhchieu.webp" alt="bàn ăn nhà mộc" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
               Trong cái bầu không khí ấy, một buổi chiều nắng vàng ươm rọi xuống khung cửa, trong tiếng nhạc dịu êm, trong sự tĩnh lặng và dịu dàng đó, có ai đó thả mình mà nghe tiếng lòng chảy thành từng giọt.
@@ -291,7 +291,7 @@ export default function HomePage() {
           {/* Row 2 - Column 1: Vuông - Cô gái */}
           <div style={{ display: "flex", flexDirection: "column", marginTop: "2rem" }}>
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
-              <Image src="/assets/home_cogai.jpg" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
+              <Image src="/assets/home_cogai.webp" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
             <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7, margin: 0 }}>
               một cô gái từng lên đây hai lần, nhắn lúc tối muộn: &ldquo;nhớ nhà mình ghê gớm. em chuẩn bị lên đây.&rdquo;
@@ -303,7 +303,7 @@ export default function HomePage() {
           {/* Row 2 - Column 2: Chữ nhật ngang - Vibes */}
           <div style={{ display: "flex", flexDirection: "column", marginTop: "2rem" }}>
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
-              <Image src="/assets/home_buaan.jpg" alt="hiên nhà" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
+              <Image src="/assets/home_buaan.webp" alt="hiên nhà" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
               ở đây luôn có đủ thời gian để nấu ba bữa một ngày · trên bàn ăn bao giờ cũng có vài bông hoa nhỏ hái ngoài vườn.
@@ -330,7 +330,7 @@ export default function HomePage() {
 
         <div style={{ marginTop: "2.5rem", marginBottom: "2rem", display: "flex", justifyContent: "center" }}>
           <span style={{ position: "relative", width: 120, height: 140, display: "block" }}>
-            <Image src="/assets/motif-dep.png" alt="đôi dép" fill sizes="120px" style={{ objectFit: "contain" }} />
+            <Image src="/assets/motif-dep.webp" alt="đôi dép" fill sizes="120px" style={{ objectFit: "contain" }} />
           </span>
         </div>
 
@@ -357,7 +357,7 @@ export default function HomePage() {
       </div>
 
       <div style={{ aspectRatio: "21/9", minHeight: 340, position: "relative" }}>
-        <Image src="/assets/home_split.jpg" alt="khoảnh khắc ở-yên" fill sizes="100vw" style={{ objectFit: "cover" }} />
+        <Image src="/assets/home_split.webp" alt="khoảnh khắc ở-yên" fill sizes="100vw" style={{ objectFit: "cover" }} />
       </div>
 
       <Reveal
@@ -394,7 +394,7 @@ export default function HomePage() {
 
       <div className="wrap" style={{ padding: "0 1.5rem" }}>
         <div style={{ position: "relative", width: "100%", maxWidth: 180, aspectRatio: "5/4", margin: "0 auto" }}>
-          <Image src="/assets/home_meo.png" alt="home_meo" fill sizes="(max-width: 180px) 100vw, 180px" style={{ objectFit: "cover" }} />
+          <Image src="/assets/home_meo.webp" alt="home_meo" fill sizes="(max-width: 180px) 100vw, 180px" style={{ objectFit: "cover" }} />
         </div>
       </div>
 

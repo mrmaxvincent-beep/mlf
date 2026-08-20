@@ -78,9 +78,9 @@ export default function RetreatOYenPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · retreat ở-yên 1" aspectRatio="16/12" src="/assets/ngayhien_oyen_01.jpg" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · retreat ở-yên 2" aspectRatio="16/12" src="/assets/ngayhien_oyen_02.jpg" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · retreat ở-yên 3" aspectRatio="16/12" src="/assets/ngayhien_oyen_03.jpg" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat ở-yên 1" aspectRatio="16/12" src="/assets/ngayhien_oyen_01.webp" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat ở-yên 2" aspectRatio="16/12" src="/assets/ngayhien_oyen_02.webp" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat ở-yên 3" aspectRatio="16/12" src="/assets/ngayhien_oyen_03.webp" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginTop: "2.5rem", marginBottom: "0.5rem", textAlign: "center" }}>
@@ -107,7 +107,7 @@ export default function RetreatOYenPage() {
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/caibat.png" alt="caibat" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/caibat.webp" alt="caibat" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -214,7 +214,7 @@ export default function RetreatOYenPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "126ch", width: "100%" }}>
-          <ImagePlaceholder label="ảnh · retreat ở-yên" aspectRatio="16/9" src="/assets/ngayhien_oyen04.jpg" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · retreat ở-yên" aspectRatio="16/9" src="/assets/ngayhien_oyen04.webp" style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
 

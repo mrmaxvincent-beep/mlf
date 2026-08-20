@@ -54,9 +54,9 @@ export default function GiuaPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · giữa 1" aspectRatio="16/12" src="/assets/giua1.jpg" alt="giua" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · giữa 2" aspectRatio="16/12" src="/assets/giua2.jpg" alt="giua" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · giữa 3" aspectRatio="16/12" src="/assets/giua3.jpg" alt="giua" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · giữa 1" aspectRatio="16/12" src="/assets/giua1.webp" alt="giua" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · giữa 2" aspectRatio="16/12" src="/assets/giua2.webp" alt="giua" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · giữa 3" aspectRatio="16/12" src="/assets/giua3.webp" alt="giua" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginTop: "4rem", marginBottom: "2rem", textAlign: "center" }}>
@@ -83,7 +83,7 @@ export default function GiuaPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ width: "634px" }}>
-          <ImagePlaceholder label="ảnh · giữa" aspectRatio="1.76" src="/assets/giua.jpg" style={{ width: "100%" }} />
+          <ImagePlaceholder label="ảnh · giữa" aspectRatio="1.76" src="/assets/giua.webp" style={{ width: "100%" }} />
         </div>
       </div>
 

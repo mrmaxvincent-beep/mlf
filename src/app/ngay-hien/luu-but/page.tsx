@@ -28,9 +28,9 @@ export default function LuuButPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · trang lưu bút viết tay" aspectRatio="16/12" src="/assets/ngayhien_luubut1.jpg" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · lưu bút 2" aspectRatio="16/12" src="/assets/ngayhien_luubut2.jpg" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · lưu bút 3" aspectRatio="16/12" src="/assets/ngayhien_luubut3.jpg" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · trang lưu bút viết tay" aspectRatio="16/12" src="/assets/ngayhien_luubut1.webp" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · lưu bút 2" aspectRatio="16/12" src="/assets/ngayhien_luubut2.webp" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · lưu bút 3" aspectRatio="16/12" src="/assets/ngayhien_luubut3.webp" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>

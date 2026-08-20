@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 
 const images = [
-  { label: "ảnh · trang nhật ký 1", src: "/assets/bestill_khaitam1.jpg" },
-  { label: "ảnh · trang nhật ký 2", src: "/assets/bestill_khaitam2.jpg" },
-  { label: "ảnh · trang nhật ký 3", src: "/assets/bestill_khaitam3.jpg" },
-  { label: "ảnh · trang nhật ký 4", src: "/assets/bestill_khaitam4.jpg" },
+  { label: "ảnh · trang nhật ký 1", src: "/assets/bestill_khaitam1.webp" },
+  { label: "ảnh · trang nhật ký 2", src: "/assets/bestill_khaitam2.webp" },
+  { label: "ảnh · trang nhật ký 3", src: "/assets/bestill_khaitam3.webp" },
+  { label: "ảnh · trang nhật ký 4", src: "/assets/bestill_khaitam4.webp" },
 ];
 
 export function DiaryCarousel() {

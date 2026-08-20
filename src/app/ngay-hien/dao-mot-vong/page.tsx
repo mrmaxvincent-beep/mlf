@@ -41,9 +41,9 @@ export default function DaoMotVongPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · toàn cảnh nhà mộc 1" aspectRatio="16/12" src="/assets/ngayhien_daomotvong01.jpg" alt="dao-mot-vong" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · toàn cảnh nhà mộc 2" aspectRatio="16/12" src="/assets/ngayhien_daomotvong02.jpg" alt="dao-mot-vong" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · toàn cảnh nhà mộc 3" aspectRatio="16/12" src="/assets/ngayhien_daomotvong03.jpg" alt="dao-mot-vong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · toàn cảnh nhà mộc 1" aspectRatio="16/12" src="/assets/ngayhien_daomotvong01.webp" alt="dao-mot-vong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · toàn cảnh nhà mộc 2" aspectRatio="16/12" src="/assets/ngayhien_daomotvong02.webp" alt="dao-mot-vong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · toàn cảnh nhà mộc 3" aspectRatio="16/12" src="/assets/ngayhien_daomotvong03.webp" alt="dao-mot-vong" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ margin: "5rem 0", textAlign: "center" }}>
@@ -71,7 +71,7 @@ export default function DaoMotVongPage() {
 
       <div className="wrap" style={{ marginBottom: "2.5rem", textAlign: "center" }}>
         <div style={{ position: "relative", width: "180px", height: "140px", margin: "0 auto" }}>
-          <Image src="/assets/home_meo2.png" alt="home_meo2" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_meo2.webp" alt="home_meo2" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -94,7 +94,7 @@ export default function DaoMotVongPage() {
         <span className="eyebrow" style={{ color: "var(--color-ink)" }}>sơ đồ không gian</span>
       </div>
       <div className="sodo-grid" style={{ maxWidth: 1080, margin: "0 auto 5rem", padding: "0 1.5rem", display: "grid", gridTemplateColumns: "7fr 5fr", gap: "3rem", alignItems: "start" }}>
-        <ImagePlaceholder label="ảnh · sơ đồ không gian mộc little farm" src="/assets/sodonha.jpg" aspectRatio="16/10" style={{ width: "100%" }} />
+        <ImagePlaceholder label="ảnh · sơ đồ không gian mộc little farm" src="/assets/sodonha.webp" aspectRatio="16/10" style={{ width: "100%" }} />
         <ul style={{ listStyle: "none", padding: 0, margin: "0.3rem 0 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
           {spots.map((s, i) => (
             <li key={s.id} style={{ display: "flex", alignItems: "baseline", gap: "0.8rem" }}>

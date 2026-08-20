@@ -37,7 +37,7 @@ export default function ConDuongMlfPage() {
 
       <div className="wrap" style={{ marginTop: "3rem" }}>
         <div style={{ width: "100%", aspectRatio: "16/8", minHeight: 280, maxHeight: 460 }}>
-          <ImagePlaceholder label="ảnh · con đường mlf" aspectRatio="auto" src="/assets/conduongmlf.jpg" style={{ width: "100%", height: "100%" }} />
+          <ImagePlaceholder label="ảnh · con đường mlf" aspectRatio="auto" src="/assets/conduongmlf.webp" style={{ width: "100%", height: "100%" }} />
         </div>
       </div>
 

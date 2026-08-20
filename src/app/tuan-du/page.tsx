@@ -68,9 +68,9 @@ export default function TuanDuPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · một chuyến tuần-du 1" aspectRatio="16/12" src="/assets/tuandu01.jpg" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · một chuyến tuần-du 2" aspectRatio="16/12" src="/assets/tuandu02.jpg" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · một chuyến tuần-du 3" aspectRatio="16/12" src="/assets/tuandu03.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · một chuyến tuần-du 1" aspectRatio="16/12" src="/assets/tuandu01.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · một chuyến tuần-du 2" aspectRatio="16/12" src="/assets/tuandu02.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · một chuyến tuần-du 3" aspectRatio="16/12" src="/assets/tuandu03.webp" style={{ width: "100%", height: "auto" }} />
       </div>
       <div className="wrap" style={{ paddingTop: "1.2rem", display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.75rem" }}>
         <span style={{ flex: 1, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
@@ -94,7 +94,7 @@ export default function TuanDuPage() {
 
       <div style={{ marginBottom: "3rem", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/motif-loi-mon.png" alt="motif-loi-mon" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/motif-loi-mon.webp" alt="motif-loi-mon" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -185,16 +185,16 @@ export default function TuanDuPage() {
       <div className="wrap" style={{ marginBottom: "3.5rem", height: "70vh", width: "52.5vh", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 3.5rem" }}>
         <ImageCarousel
           images={[
-            { label: "ảnh · tuần-du 01", aspectRatio: "3/4", src: "/assets/tuandu_slide1.jpg" },
-            { label: "ảnh · tuần-du 02", aspectRatio: "3/4", src: "/assets/tuandu_slide2.jpg" },
-            { label: "ảnh · tuần-du 03", aspectRatio: "3/4", src: "/assets/tuandu_slide3.jpg" },
-            { label: "ảnh · tuần-du 04", aspectRatio: "3/4", src: "/assets/tuandu_slide4.jpg" },
-            { label: "ảnh · tuần-du 05", aspectRatio: "3/4", src: "/assets/tuandu_slide5.jpg" },
-            { label: "ảnh · tuần-du 06", aspectRatio: "3/4", src: "/assets/tuandu_slide6.jpg" },
-            { label: "ảnh · tuần-du 07", aspectRatio: "3/4", src: "/assets/tuandu_slide7.jpg" },
-            { label: "ảnh · tuần-du 08", aspectRatio: "3/4", src: "/assets/tuandu_slide8.jpg" },
-            { label: "ảnh · tuần-du 09", aspectRatio: "3/4", src: "/assets/tuandu_slide9.jpg" },
-            { label: "ảnh · tuần-du 10", aspectRatio: "3/4", src: "/assets/tuandu_slide10.jpg" },
+            { label: "ảnh · tuần-du 01", aspectRatio: "3/4", src: "/assets/tuandu_slide1.webp" },
+            { label: "ảnh · tuần-du 02", aspectRatio: "3/4", src: "/assets/tuandu_slide2.webp" },
+            { label: "ảnh · tuần-du 03", aspectRatio: "3/4", src: "/assets/tuandu_slide3.webp" },
+            { label: "ảnh · tuần-du 04", aspectRatio: "3/4", src: "/assets/tuandu_slide4.webp" },
+            { label: "ảnh · tuần-du 05", aspectRatio: "3/4", src: "/assets/tuandu_slide5.webp" },
+            { label: "ảnh · tuần-du 06", aspectRatio: "3/4", src: "/assets/tuandu_slide6.webp" },
+            { label: "ảnh · tuần-du 07", aspectRatio: "3/4", src: "/assets/tuandu_slide7.webp" },
+            { label: "ảnh · tuần-du 08", aspectRatio: "3/4", src: "/assets/tuandu_slide8.webp" },
+            { label: "ảnh · tuần-du 09", aspectRatio: "3/4", src: "/assets/tuandu_slide9.webp" },
+            { label: "ảnh · tuần-du 10", aspectRatio: "3/4", src: "/assets/tuandu_slide10.webp" },
           ]}
           showCounter={false}
           showDots={false}
@@ -293,13 +293,13 @@ export default function TuanDuPage() {
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", display: "grid", gridTemplateColumns: "5fr 7fr", gap: "2.5rem", alignItems: "center" }}>
         <div>
-          <ImagePlaceholder label="ảnh · tuần-du ký" aspectRatio="4/5" src="/assets/tuanduky_03.jpg" />
+          <ImagePlaceholder label="ảnh · tuần-du ký" aspectRatio="4/5" src="/assets/tuanduky_03.webp" />
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0.9rem 0 0" }}>
             tuần-du ký là cẩm nang ghi lại toàn bộ câu chuyện lịch sử, văn hoá của từng điểm đến — gợi mở để suy gẫm, ghi chép, trắc nghiệm. một &ldquo;tấm bản đồ&rdquo; tinh thần của chuyến đi.
           </p>
         </div>
         <div>
-          <ImagePlaceholder label="ảnh · travel-book" aspectRatio="3/4" src="/assets/travel_book_tuandu_03.jpg" />
+          <ImagePlaceholder label="ảnh · travel-book" aspectRatio="3/4" src="/assets/travel_book_tuandu_03.webp" />
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0.9rem 0 0" }}>
             travel-book hướng dẫn toàn bộ lịch trình, phân chia phòng, phương tiện, trang phục, thời tiết, tâm thế, phương án dự phòng — cái nhìn tổng thể nhất về chuyến đi.
           </p>

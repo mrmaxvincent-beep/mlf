@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const works = [
-  { label: "ảnh · Chawan wabi", title: "Chawan wabi", src: "/assets/gom1.jpg" },
-  { label: "ảnh · Chawan Shigaraki", title: "Chawan Shigaraki", src: "/assets/gom2.jpg" },
-  { label: "ảnh · Chawan grey", title: "Chawan grey", src: "/assets/gom3.jpg" },
-  { label: "ảnh · Chawan Cánh Anh Đào", title: "Chawan Cánh Anh Đào", src: "/assets/gom4.jpg" },
+  { label: "ảnh · Chawan wabi", title: "Chawan wabi", src: "/assets/gom1.webp" },
+  { label: "ảnh · Chawan Shigaraki", title: "Chawan Shigaraki", src: "/assets/gom2.webp" },
+  { label: "ảnh · Chawan grey", title: "Chawan grey", src: "/assets/gom3.webp" },
+  { label: "ảnh · Chawan Cánh Anh Đào", title: "Chawan Cánh Anh Đào", src: "/assets/gom4.webp" },
 ];
 
 export default function TeaMindGomPage() {

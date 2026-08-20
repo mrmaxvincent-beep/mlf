@@ -39,7 +39,7 @@ export default function VeMlfPage() {
 
       <div className="wrap" style={{ marginTop: "3rem" }}>
         <div style={{ width: "100%", aspectRatio: "16/8", minHeight: 280, maxHeight: 460 }}>
-          <ImagePlaceholder label="ảnh · toàn cảnh mlf qua các năm" aspectRatio="auto" src="/assets/vemlf.jpg" style={{ width: "100%", height: "100%" }} />
+          <ImagePlaceholder label="ảnh · toàn cảnh mlf qua các năm" aspectRatio="auto" src="/assets/vemlf.webp" style={{ width: "100%", height: "100%" }} />
         </div>
       </div>
 
@@ -129,7 +129,7 @@ export default function VeMlfPage() {
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "140px", height: "140px" }}>
-          <Image src="/assets/home_ghe.png" alt="home_ghe" fill sizes="140px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_ghe.webp" alt="home_ghe" fill sizes="140px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 

@@ -39,7 +39,7 @@ export default function ThinhKhongPage() {
         </h1>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>
-            <ImagePlaceholder label="ảnh chân dung · Thuận" src="/assets/thuan.png" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
+            <ImagePlaceholder label="ảnh chân dung · Thuận" src="/assets/thuan.webp" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>
@@ -51,9 +51,9 @@ export default function ThinhKhongPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 1" aspectRatio="16/12" src="/assets/thinhkhong01.jpg" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 2" aspectRatio="16/12" src="/assets/thinhkhong02.jpg" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 3" aspectRatio="16/12" src="/assets/thinhkhong03.jpg" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 1" aspectRatio="16/12" src="/assets/thinhkhong01.webp" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 2" aspectRatio="16/12" src="/assets/thinhkhong02.webp" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 3" aspectRatio="16/12" src="/assets/thinhkhong03.webp" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginTop: "4rem", marginBottom: "1.2rem" }}>

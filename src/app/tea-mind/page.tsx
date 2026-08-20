@@ -35,7 +35,7 @@ export default function TeaMindPage() {
         </h1>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>
-            <ImagePlaceholder label="ảnh chân dung · Vũ" src="/assets/vu.png" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
+            <ImagePlaceholder label="ảnh chân dung · Vũ" src="/assets/vu.webp" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>
@@ -47,9 +47,9 @@ export default function TeaMindPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · góc trà, gốm, tranh của vũ 1" aspectRatio="16/12" src="/assets/teamind_1.jpg" alt="tea-mind" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · góc trà, gốm, tranh của vũ 2" aspectRatio="16/12" src="/assets/teamind_2.jpg" alt="tea-mind" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · góc trà, gốm, tranh của vũ 3" aspectRatio="16/12" src="/assets/teamind_3.jpg" alt="tea-mind" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · góc trà, gốm, tranh của vũ 1" aspectRatio="16/12" src="/assets/teamind_1.webp" alt="tea-mind" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · góc trà, gốm, tranh của vũ 2" aspectRatio="16/12" src="/assets/teamind_2.webp" alt="tea-mind" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · góc trà, gốm, tranh của vũ 3" aspectRatio="16/12" src="/assets/teamind_3.webp" alt="tea-mind" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginTop: "4rem", marginBottom: "1.2rem" }}>

@@ -67,9 +67,9 @@ export default function StayTalkPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · stay+talk 1" aspectRatio="16/12" src="/assets/staytalk1.jpg" alt="stay+talk" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · stay+talk 2" aspectRatio="16/12" src="/assets/staytalk2.jpg" alt="stay+talk" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · stay+talk 3" aspectRatio="16/12" src="/assets/staytalk3.jpg" alt="stay+talk" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · stay+talk 1" aspectRatio="16/12" src="/assets/staytalk1.webp" alt="stay+talk" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · stay+talk 2" aspectRatio="16/12" src="/assets/staytalk2.webp" alt="stay+talk" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · stay+talk 3" aspectRatio="16/12" src="/assets/staytalk3.webp" alt="stay+talk" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "12rem", marginBottom: "5rem", maxWidth: "42ch", margin: "0 auto 5rem" }}>
@@ -123,7 +123,7 @@ export default function StayTalkPage() {
       </Reveal>
 
       <div style={{ marginBottom: "4.5rem", maxWidth: "126ch", margin: "0 auto 4.5rem", width: "100%" }}>
-        <ImagePlaceholder label="ảnh · stay+talk" aspectRatio="16/9" src="/assets/ngayhien_staytalk05.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · stay+talk" aspectRatio="16/9" src="/assets/ngayhien_staytalk05.webp" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem", textAlign: "center" }}>
@@ -168,7 +168,7 @@ export default function StayTalkPage() {
 
       <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/home_ghe.png" alt="home_ghe" fill sizes="180px" style={{ objectFit: "contain" }} />
+          <Image src="/assets/home_ghe.webp" alt="home_ghe" fill sizes="180px" style={{ objectFit: "contain" }} />
         </div>
       </div>
 

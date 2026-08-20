@@ -39,7 +39,7 @@ export default function NhatHienPage() {
       </div>
 
       <div className="wrap" style={{ margin: "5rem auto", maxWidth: 420 }}>
-        <ImagePlaceholder label="ảnh · cộng đồng thực tập nhất-hiện" aspectRatio="4/5" src="/assets/nhat_hien.jpg" />
+        <ImagePlaceholder label="ảnh · cộng đồng thực tập nhất-hiện" aspectRatio="4/5" src="/assets/nhat_hien.webp" />
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "44ch", textAlign: "center" }}>

@@ -12,7 +12,7 @@ export function Button({
   variant?: "outline" | "solid";
 }) {
   const isExternal = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
-  const className = variant === "solid" ? "cta-btn cta-btn--solid" : "cta-btn";
+  const className = variant === "outline" ? "cta-btn cta-btn--outline" : "cta-btn";
 
   if (isExternal) {
     return (

@@ -3,6 +3,7 @@ import Image from "next/image";
 const motifs = {
   "am-tra": "motif-am-tra.png",
   "chen-tra": "motif-chen-tra.svg",
+  "dep": "motif-dep.png",
   "dom-muc": "motif-dom-muc.png",
   "gon-nuoc": "motif-gon-nuoc.svg",
   "hien-nha": "motif-hien-nha.png",
@@ -22,15 +23,17 @@ export function Motif({
   name,
   size = 30,
   className,
+  opacity = 0.4,
 }: {
   name: keyof typeof motifs;
   size?: number;
   className?: string;
+  opacity?: number;
 }) {
   return (
     <span
       className={className}
-      style={{ position: "relative", width: size, height: size, display: "inline-block", opacity: 0.4 }}
+      style={{ position: "relative", width: size, height: size, display: "inline-block", opacity }}
     >
       <Image src={`/assets/${motifs[name]}`} alt="" fill sizes={`${size}px`} style={{ objectFit: "contain" }} />
     </span>

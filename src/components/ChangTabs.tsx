@@ -30,11 +30,12 @@ export function ChangTabs({ chang }: { chang: Chang[] }) {
                 textTransform: "uppercase",
                 background: "none",
                 border: "none",
-                borderBottom: `2px solid ${isActive ? "var(--color-moss)" : "transparent"}`,
+                borderBottom: `2px solid ${isActive ? "var(--color-cham-dem)" : "transparent"}`,
                 cursor: "pointer",
                 padding: "0.7rem 1.1rem 0.6rem",
                 textAlign: "left",
                 color: isActive ? "var(--color-ink)" : "var(--color-stone)",
+                flex: 1,
               }}
             >
               chặng {c.num}
@@ -48,12 +49,12 @@ export function ChangTabs({ chang }: { chang: Chang[] }) {
         <div>
           <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginBottom: "1.5rem" }}>tuần {current.range}</span>
           {current.weeks.map((w) => (
-            <div key={w.n} className="tuan-row">
-              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.6rem" }}>
+            <div key={w.n} className="tuan-row" style={{ marginBottom: "0.6rem" }}>
+              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.15rem" }}>
                 tuần {w.n} — {w.title}
               </span>
               {w.points.map((p) => (
-                <div key={p} className="li-item" style={{ padding: "0.35rem 0" }}>
+                <div key={p} className="li-item" style={{ padding: "0.05rem 0", lineHeight: 1.45 }}>
                   <span className="li-mark">·</span>
                   <span>{p}</span>
                 </div>

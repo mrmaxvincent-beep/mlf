@@ -25,14 +25,14 @@ export function GuestWhyRotator({ quotes }: { quotes: string[] }) {
   return (
     <div
       className="wrap"
-      style={{ marginBottom: "5rem", maxWidth: "58ch", textAlign: "center", minHeight: "9rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem" }}
+      style={{ marginBottom: "5rem", maxWidth: "58ch", textAlign: "center", minHeight: "11rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem" }}
     >
       <p
         style={{
           fontFamily: "var(--font-serif)",
           fontStyle: "italic",
-          fontSize: "1.05rem",
-          lineHeight: 1.85,
+          fontSize: "1.35rem",
+          lineHeight: 1.7,
           color: "var(--color-ink)",
           margin: 0,
           transition: "opacity .8s var(--ease-standard), filter .8s var(--ease-standard)",

@@ -33,7 +33,7 @@ export default function TuanDuToiPage() {
           <span>/</span>
           <span style={{ color: "var(--color-ink)" }}>tuần-du tới</span>
         </div>
-        <span className="eyebrow">tuần-du 05 · 18 – 21.03.2027 · sắp diễn ra</span>
+        <span className="eyebrow">tuần-du 05 · 18 – 21.03.2027 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           mây nằm ngủ
         </h1>
@@ -59,7 +59,7 @@ export default function TuanDuToiPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
         {loiNgo.map((p) => (
-          <p key={p} style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
+          <p key={p} style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
             {p}
           </p>
         ))}
@@ -76,10 +76,10 @@ export default function TuanDuToiPage() {
         <span className="eyebrow">dành cho ai</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "1.75rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem" }}>
           Bạn không cần có nền tảng tín ngưỡng, không cần hiểu về đạo Phật hay Thiền phái Trúc Lâm hay Trần Nhân Tông.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>Chỉ cần một điều thôi:</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>Chỉ cần một điều thôi:</p>
       </Reveal>
       <div className="wrap" style={{ marginBottom: "1.75rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-moss)", padding: "2rem" }}>
@@ -102,7 +102,7 @@ export default function TuanDuToiPage() {
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>Tuần-du sẽ có không gian, có con người để làm nảy nở những điều đó.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>Tuần-du sẽ có không gian, có con người để làm nảy nở những điều đó.</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
@@ -112,7 +112,7 @@ export default function TuanDuToiPage() {
         <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
           Ngọa Vân nghĩa là <em style={{ fontStyle: "italic" }}>mây nằm ngủ</em>
         </h2>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
           Ở độ cao này, sương không đến rồi đi như những nơi khác. Một dãy núi phía Bắc chặn hơi ẩm từ biển lại, ngưng thành mây — và mây ở lại đây, ngày này qua ngày khác.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>Có lẽ Ngọa Vân là nơi bầu trời chọn để ở-yên.</p>
@@ -122,10 +122,10 @@ export default function TuanDuToiPage() {
         <span className="eyebrow">một hành trình có lớp lang</span>
       </div>
       <div className="wrap" style={{ maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
           Bốn ngày ở Ngọa Vân có một nhịp đơn giản: mỗi sáng là một buổi cảm tâm — chia sẻ, thơ, dẫn dắt. Mỗi tối, một vòng-trà để những gì đã nổi lên có chỗ được ngồi lại.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
           Cái khó không nằm ở lịch trình. Cái khó, và cũng là cái thú, là ở lại đủ lâu với một điều, thay vì lướt qua nhiều điều.
         </p>
       </div>

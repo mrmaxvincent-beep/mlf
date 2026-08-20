@@ -25,14 +25,16 @@ export default function ThuVienPage() {
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>ghi chép về ở-yên</span>
       </div>
 
-      <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 560 }}>
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ" aspectRatio="auto" style={{ height: "100%" }} />
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 1" aspectRatio="16/12" src="/assets/thuvienoyen01.jpg" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 2" aspectRatio="16/12" src="/assets/thuvienoyen02.jpg" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 3" aspectRatio="16/12" src="/assets/thuvienoyen03.jpg" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="lib-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>
         <div />
         <Reveal>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "left", margin: 0, maxWidth: "60ch" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "left", margin: 0, maxWidth: "60ch" }}>
             Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình. Gõ từ khoá để tìm, hoặc chọn một số bên trái.
           </p>
         </Reveal>

@@ -23,14 +23,14 @@ export const methods = [
 ];
 
 export const faqs = [
-  { q: "Tôi chưa từng thực hành thiền hoặc làm retreat trước đây, liệu có tham gia được không?", a: "Được. Yêu cầu duy nhất là bạn muốn nhìn thấy mình." },
-  { q: "Tôi đang tham gia trị liệu tâm lý hoặc đang dùng thuốc tâm thần – có thể tham gia chương trình không?", a: "Được, nhưng nếu đang giai đoạn khủng hoảng nặng hoặc dùng thuốc tâm thần, nên tham khảo bác sĩ trước. Chương trình này không thay thế trị liệu." },
-  { q: "Là chương trình online 1-1 – tôi cần chuẩn bị những gì?", a: "Không gian yên, internet ổn, camera/micro. Và sẵn sàng nhìn sâu." },
-  { q: "Thời lượng & lịch trình cụ thể như thế nào?", a: "Chương trình gồm 10 buổi 1-1 (thường mỗi buổi ~90 phút) và 30 đề mục quán chiếu mỗi ngày trong 30 ngày. Lịch chính xác sẽ được trao đổi khi đăng ký." },
-  { q: "Nếu tôi không hoàn thành đủ 30 ngày hoặc bỏ lỡ buổi 1-1 thì sao?", a: "Nếu bạn bỏ lỡ buổi 1-1, nên thông báo trước để được sắp lịch lại. Nếu bạn cần nghỉ giữa chừng, chúng ta có thể điều chỉnh tiến độ hoặc tìm giải pháp hỗ trợ bạn quay lại." },
-  { q: "Kết quả tôi có thể mong đợi là gì?", a: "Thấy rõ hơn về mình. Nhẹ hơn. Biết đường đi tiếp." },
-  { q: "Phương pháp của chương trình rất trầm lắng, không có công cụ hỗ trợ trực quan. Liệu tôi có đủ khả năng làm việc với các đề mục và tự mình chiêm nghiệm không?", a: "Xin hãy hiểu rằng, việc dạy cho tâm trí không phải là cách tiếp cận gốc rễ. Bạn sẽ phải luôn đọc nhiều hơn, học nhiều hơn, tham gia nhiều khóa học hơn… Phát triển khả năng tự chiêm nghiệm và làm việc với tầng sâu bên trong mình là điều cần thiết để thật sự khám phá nội tâm sâu sắc." },
-  { q: "Sau 30 ngày, liệu tôi có giữ được những gì mình học được hay mọi thứ sẽ tan biến khi quay lại cuộc sống thường nhật?", a: "Vì vậy, tôi không dạy bạn kiến thức để nhớ hoặc phương pháp để thực hành. Tôi chỉ cho bạn đường trở về với trạng thái tự nhiên của mình, để đi tiếp. Dù có vấp ngã, dù có khó khăn… nhưng bạn biết đường và không bị lạc lối lần nữa." },
+  { q: "tôi chưa từng thực hành thiền hoặc làm retreat trước đây, liệu có tham gia được không?", a: "Được. Yêu cầu duy nhất là bạn muốn nhìn thấy mình." },
+  { q: "tôi đang tham gia trị liệu tâm lý hoặc đang dùng thuốc tâm thần – có thể tham gia chương trình không?", a: "Được, nhưng nếu đang giai đoạn khủng hoảng nặng hoặc dùng thuốc tâm thần, nên tham khảo bác sĩ trước. Chương trình này không thay thế trị liệu." },
+  { q: "là chương trình online 1-1 – tôi cần chuẩn bị những gì?", a: "Không gian yên, internet ổn, camera/micro. Và sẵn sàng nhìn sâu." },
+  { q: "thời lượng & lịch trình cụ thể như thế nào?", a: "Chương trình gồm 10 buổi 1-1 (thường mỗi buổi ~90 phút) và 30 đề mục quán chiếu mỗi ngày trong 30 ngày. Lịch chính xác sẽ được trao đổi khi đăng ký." },
+  { q: "nếu tôi không hoàn thành đủ 30 ngày hoặc bỏ lỡ buổi 1-1 thì sao?", a: "Nếu bạn bỏ lỡ buổi 1-1, nên thông báo trước để được sắp lịch lại. Nếu bạn cần nghỉ giữa chừng, chúng ta có thể điều chỉnh tiến độ hoặc tìm giải pháp hỗ trợ bạn quay lại." },
+  { q: "kết quả tôi có thể mong đợi là gì?", a: "Thấy rõ hơn về mình. Nhẹ hơn. Biết đường đi tiếp." },
+  { q: "phương pháp của chương trình rất trầm lắng, không có công cụ hỗ trợ trực quan. liệu tôi có đủ khả năng làm việc với các đề mục và tự mình chiêm nghiệm không?", a: "Xin hãy hiểu rằng, việc dạy cho tâm trí không phải là cách tiếp cận gốc rễ. Bạn sẽ phải luôn đọc nhiều hơn, học nhiều hơn, tham gia nhiều khóa học hơn… Phát triển khả năng tự chiêm nghiệm và làm việc với tầng sâu bên trong mình là điều cần thiết để thật sự khám phá nội tâm sâu sắc." },
+  { q: "sau 30 ngày, liệu tôi có giữ được những gì mình học được hay mọi thứ sẽ tan biến khi quay lại cuộc sống thường nhật?", a: "Vì vậy, tôi không dạy bạn kiến thức để nhớ hoặc phương pháp để thực hành. Tôi chỉ cho bạn đường trở về với trạng thái tự nhiên của mình, để đi tiếp. Dù có vấp ngã, dù có khó khăn… nhưng bạn biết đường và không bị lạc lối lần nữa." },
 ];
 
 export const writeups = [

@@ -36,14 +36,16 @@ export default function TuanDuBlogPage() {
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>ghi chép &amp; chia sẻ từ những chuyến tuần-du</span>
       </div>
 
-      <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 560 }}>
-        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du" aspectRatio="auto" style={{ height: "100%" }} />
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 1" aspectRatio="16/12" src="/assets/blogtuandu01.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 2" aspectRatio="16/12" src="/assets/blogtuandu2.jpg" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người đi qua trên đường tuần-du 3" aspectRatio="16/12" src="/assets/blogtuandu3.jpg" style={{ width: "100%", height: "auto" }} />
       </div>
 
-      <div style={{ maxWidth: 1080, margin: "3.5rem auto 3rem", padding: "0 1.5rem", display: "grid", gridTemplateColumns: "17rem 1fr", gap: "3rem" }}>
+      <div className="cv-shell" style={{ margin: "3.5rem auto 3rem" }}>
         <div />
         <Reveal>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "60ch" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "60ch" }}>
             Sau mỗi chuyến tuần-du, luôn còn lại những dòng chữ — ghi chép của người đồng hành, nhật ký của người đi qua từng vùng đất. Chọn một bài ở khung bên trái để đọc.
           </p>
         </Reveal>

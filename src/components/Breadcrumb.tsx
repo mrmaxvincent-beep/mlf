@@ -27,7 +27,7 @@ export function Breadcrumb({ label, trail }: { label?: string; trail?: Crumb[] }
       </Link>
       {items.map((item, i) => (
         <span key={item.label} style={{ display: "flex", alignItems: "baseline", gap: "0.5rem" }}>
-          <span>/</span>
+          <span style={{ color: "var(--color-ink)" }}>/</span>
           {item.href ? (
             <Link href={item.href} style={{ color: "var(--color-stone)" }}>
               {item.label}

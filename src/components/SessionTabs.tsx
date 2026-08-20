@@ -37,7 +37,7 @@ export function SessionTabs({ sessions, total }: { sessions: Session[]; total?: 
       </div>
       {current ? (
         <div className="session-block">
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-moss)", marginBottom: "0.4rem" }}>
+          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-cham-dem)", marginBottom: "0.4rem" }}>
             buổi {current.n} / {total ?? sessions.length}
           </span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.9rem" }}>

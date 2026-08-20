@@ -10,21 +10,23 @@ export function FaqShowMore({ items, initialCount = 6 }: { items: { q: string; a
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)", padding: "0.9rem 0", marginBottom: "1.6rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", padding: "0.9rem 0", marginBottom: "1.6rem" }}>
         <span className="eyebrow" style={{ marginBottom: 0 }}>
           câu hỏi thường gặp
         </span>
       </div>
       {shown.map((item) => (
-        <Disclosure key={item.q} trigger={<span style={{ fontFamily: "var(--font-sans)", fontWeight: 400, fontSize: "0.9rem", color: "var(--color-ink)" }}>{item.q}</span>}>
-          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{item.a}</p>
-        </Disclosure>
+        <div key={item.q} style={{ paddingLeft: "1.5rem" }}>
+          <Disclosure trigger={<span style={{ fontFamily: "var(--font-sans)", fontWeight: 400, fontSize: "0.9rem", color: "var(--color-ink)" }}>{item.q}</span>}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{item.a}</p>
+          </Disclosure>
+        </div>
       ))}
       {!expanded && items.length > initialCount ? (
         <button
           onClick={() => setExpanded(true)}
-          className="mono-link"
-          style={{ display: "block", marginTop: "1.4rem", background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+          className="mono-link faq-show-more"
+          style={{ display: "block", marginTop: "1.4rem", background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", transition: "color 0.2s ease" }}
         >
           xem thêm câu hỏi <span className="ar">→</span>
         </button>

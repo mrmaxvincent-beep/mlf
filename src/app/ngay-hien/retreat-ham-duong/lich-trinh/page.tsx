@@ -27,22 +27,21 @@ export default function RetreatHamDuongLichTrinhPage() {
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginBottom: "1.4rem" }}>
           hành trình 5 ngày — lịch trình tham khảo
         </span>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "42ch", margin: 0 }}>mộc little farm, măng đen.</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "4rem" }}>
         <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", padding: "1.4rem 0", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)" }}>
           {journeyNav.map((d) => (
             <a key={d.anchor} href={d.anchor} style={{ textAlign: "center" }}>
-              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-moss)", marginBottom: "0.3rem" }}>{d.num}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-cham-dem)", marginBottom: "0.3rem" }}>{d.num}</span>
               <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>{d.short}</span>
             </a>
           ))}
         </div>
       </div>
 
-      <Reveal className="wrap" style={{ marginBottom: "3rem" }}>
-        <ItinerarySchedule days={days} detailed />
+      <Reveal className="wrap itin-ink" style={{ marginBottom: "3rem" }}>
+        <ItinerarySchedule days={days} detailed cottonPerDay />
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>

@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import type { Entry } from "@/data/luuBut";
 
 const pStyle: React.CSSProperties = {
   fontFamily: "var(--font-sans)",
-  fontSize: "0.92rem",
+  fontSize: "1.05rem",
   lineHeight: 1.9,
   color: "var(--color-ink)",
   textAlign: "justify",
@@ -16,6 +16,7 @@ const pStyle: React.CSSProperties = {
 export function LuuButReader({ entries }: { entries: Entry[] }) {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
+  const dateRef = useRef<HTMLDivElement>(null);
 
   function select(i: number) {
     if (i === active) return;
@@ -23,6 +24,12 @@ export function LuuButReader({ entries }: { entries: Entry[] }) {
     setTimeout(() => {
       setActive(i);
       setFading(false);
+      // Scroll to align with bottom of header image
+      if (dateRef.current) {
+        const rect = dateRef.current.getBoundingClientRect();
+        const offset = window.scrollY + rect.top - 200; // Adjust 200px based on image height + margin
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      }
     }, 180);
   }
 
@@ -41,7 +48,7 @@ export function LuuButReader({ entries }: { entries: Entry[] }) {
       </div>
 
       <div style={{ opacity: fading ? 0 : 1, transition: "opacity .18s ease" }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.5rem" }}>
+        <div ref={dateRef} style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.5rem" }}>
           <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>{current.date}</span>
         </div>

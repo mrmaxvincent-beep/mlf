@@ -5,6 +5,7 @@ export type Issue = {
   title: string;
   pullQuote: string;
   coverPlaceholder: string;
+  coverImageSrc?: string;
   ebookHref: string;
   published: boolean;
 };
@@ -17,16 +18,18 @@ export const issues: Issue[] = [
     title: "muôn nẻo về nhà",
     pullQuote: "đi qua nhiều nhà, nhiều người, nhiều vùng đất — nhưng rốt cuộc là đi sâu vào mình.",
     coverPlaceholder: "ảnh bìa · quyển 01 — muôn nẻo về nhà",
-    ebookHref: "https://www.moclittlefarm.com/ấn-phẩm/mlf-journal/mlf-journal-01",
+    coverImageSrc: "/assets/mlf_journal_2026.jpg",
+    ebookHref: "https://drive.google.com/drive/folders/1ylKJak4PLy9dOmXDKED8WWnhsdPUEGeX?usp=sharing",
     published: true,
   },
   {
     num: "02",
     label: "quyển 02",
-    folioNum: "số 02 · quyển 02",
-    title: "khoảng lặng giữa mùa",
-    pullQuote: "có những mùa không cần gọi tên — chỉ cần được ở lại cho hết một nhịp thở dài.",
-    coverPlaceholder: "ảnh bìa · quyển 02 — khoảng lặng giữa mùa",
+    folioNum: "QUYỂN 02",
+    title: "xanh lại",
+    pullQuote: "gieo lại những mầm xanh bên trong mỗi người",
+    coverPlaceholder: "ảnh bìa · quyển 02 — xanh lại",
+    coverImageSrc: "/assets/mlfjournal_demo0.png",
     ebookHref: "https://www.moclittlefarm.com/ấn-phẩm/mlf-journal/mlf-journal-02",
     published: false,
   },
@@ -42,8 +45,8 @@ export const columns = [
 ];
 
 export const pageSpreads = [
-  { placeholder: "trang đôi — mở đầu quyển", aspectRatio: "4/3", pages: "tr. 04–05" },
-  { placeholder: "trang ảnh full-bleed", aspectRatio: "3/4", pages: "tr. 12" },
-  { placeholder: "trang chân dung", aspectRatio: "3/4", pages: "tr. 27" },
-  { placeholder: "trang đôi — khép lại quyển", aspectRatio: "4/3", pages: "tr. 40–41" },
+  { placeholder: "trang đôi — mở đầu quyển", aspectRatio: "4/3", pages: "tr. 07–08", imageSrc: "/assets/mlfjournal_demo1.jpg" },
+  { placeholder: "trang ảnh full-bleed", aspectRatio: "3/4", pages: "tr. 34", imageSrc: "/assets/mlfjournal_demo2.jpg" },
+  { placeholder: "trang chân dung", aspectRatio: "3/4", pages: "tr. 68", imageSrc: "/assets/mlfjournal_demo3.jpg" },
+  { placeholder: "trang đôi — khép lại quyển", aspectRatio: "4/3", pages: "tr. 49–50", imageSrc: "/assets/mlfjournal_demo4.jpg" },
 ];

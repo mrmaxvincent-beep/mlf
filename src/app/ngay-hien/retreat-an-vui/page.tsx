@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { Reveal, RevealStagger } from "@/components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
-import { Schedule } from "@/components/Schedule";
+import { DayCard } from "@/components/DayCard";
 import { PricingPanel } from "@/components/PricingPanel";
 import { FaqShowMore } from "@/components/FaqShowMore";
 import { Disclosure } from "@/components/Disclosure";
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
 
 const proseP: React.CSSProperties = {
   fontFamily: "var(--font-sans)",
-  fontSize: "0.9rem",
-  lineHeight: 1.85,
+  fontSize: "1.05rem",
+  lineHeight: 1.9,
   color: "var(--color-ink)",
   textAlign: "justify",
   margin: "0 0 1.1rem",
@@ -57,12 +58,12 @@ export default function RetreatAnVuiPage() {
           retreat an-vui
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 0 0.75rem" }}>
-          có những năm tháng ta sống cho con, cho cháu, cho cả gia đình — đến mức quên rằng thời gian của riêng mình cũng đang trôi. an-vui là những ngày để dừng lại — để thả lỏng gánh nặng đã mang theo lâu, chăm lại sức khỏe và đời sống tinh thần của chính mình, và tìm lại niềm vui, niềm cảm hứng đã có lúc bị gác sang một bên.
+          buông · thả lỏng · vui lại
         </p>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: "0.9rem", marginTop: "1.6rem", flexWrap: "wrap" }}>
           {journeySubnav.map((item, i) => (
             <span key={item.href} style={{ display: "flex", alignItems: "baseline", gap: "0.9rem" }}>
-              {i > 0 ? <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-mist)" }}>/</span> : null}
+              {i > 0 ? <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)" }}>/</span> : null}
               {item.href === routes.retreatAnVui ? (
                 <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)", borderBottom: "1px solid var(--color-ink)", paddingBottom: "0.1rem" }}>
                   {item.label}
@@ -77,76 +78,137 @@ export default function RetreatAnVuiPage() {
         </div>
       </div>
 
-      <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>
-        <ImagePlaceholder label="ảnh · buổi trò chuyện an-vui giữa thiên nhiên" aspectRatio="auto" style={{ height: "100%" }} />
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · retreat an-vui 1" aspectRatio="16/12" src="/assets/ngayhien_anvui_01.jpg" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat an-vui 2" aspectRatio="16/12" src="/assets/ngayhien_anvui_02.jpg" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · retreat an-vui 3" aspectRatio="16/12" src="/assets/ngayhien_anvui_03.jpg" alt="retreat an-vui" style={{ width: "100%", height: "auto" }} />
       </div>
 
-      <div className="wrap" style={{ marginTop: "4rem", marginBottom: "1.2rem" }}>
-        <span className="eyebrow">an-vui là</span>
+      <div style={{ height: "2rem" }}></div>
+
+      <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1rem" }}>
+          ta từng sống cho con cháu, cho gia đình đến mức quên rằng thời gian của riêng mình cũng đang trôi.
+        </p>
+
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
+          an-vui là những ngày dừng-lại. để thả lỏng gánh nặng đã mang, chăm lại sức khỏe và đời sống tinh thần, tìm lại niềm vui và cảm hứng.
+        </p>
       </div>
-      <RevealStagger className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+
+      <div className="wrap" style={{ marginTop: "4rem", marginBottom: "5rem", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+        <span className="eyebrow" style={{ marginBottom: "0.6rem", color: "var(--color-cham-dem)" }}>an-vui là</span>
         {anVuiLa.map((item) => (
-          <div key={item} className="who-item">
-            <span className="who-mark">——</span>
+          <div key={item} className="who-item" style={{ opacity: 1, transform: "none", padding: "0.1rem 0", justifyContent: "center" }}>
+            <span className="who-mark">⸺</span>
             <span>{item}</span>
           </div>
         ))}
-      </RevealStagger>
-
-      <div className="wrap" style={{ marginBottom: "0.6rem" }}>
-        <span className="eyebrow" style={{ marginBottom: "0.3rem" }}>
-          03 không gian
-        </span>
       </div>
-      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
-        {threeSpaces.map((s) => (
-          <div key={s.title} className="space-card">
-            <span className="space-title">{s.title}</span>
-            <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", color: "var(--color-ink)" }}>{s.desc}</span>
-          </div>
-        ))}
+
+      <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ position: "relative", width: "180px", height: "140px" }}>
+          <Image src="/assets/nauan.png" alt="nauan" fill sizes="180px" style={{ objectFit: "contain" }} />
+        </div>
+      </div>
+
+      <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1rem" }}>
+          <strong>retreat tại mlf không bó buộc theo lịch trình nặng nề</strong>
+        </p>
+        <ul style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1.2rem", paddingLeft: "1.5rem" }}>
+          <li style={{ marginBottom: "0.8rem" }}>chỉ đơn giản là thuận theo dòng chảy, để mọi thứ xảy đến</li>
+          <li style={{ marginBottom: 0 }}>tập hồn nhiên như cây cỏ, linh hoạt như nước, bao dung như đất, thấu tỏ như ánh sáng.</li>
+        </ul>
       </Reveal>
 
-      <RevealStagger className="wrap" style={{ marginBottom: "5rem" }}>
-        {rhythmBlocks.map((b) => (
-          <div key={b.title} className="rhythm-block">
-            <span className="rhythm-title">{b.title}</span>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>{b.body}</p>
-          </div>
-        ))}
-      </RevealStagger>
-
-      <div style={{ marginBottom: "4.5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · làm bánh quê cùng cô chú" aspectRatio="auto" style={{ height: "100%" }} />
+      <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "760px", width: "100%" }}>
+        <span className="eyebrow" style={{ marginBottom: "2rem", color: "var(--color-cham-dem)", textAlign: "center", display: "block" }}>
+          03 không gian
+        </span>
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          {threeSpaces.map((s, idx) => (
+            <Reveal key={s.title} style={{ flex: "1 1 200px", maxWidth: "240px", padding: "0 1.6rem", textAlign: "center", borderLeft: idx > 0 ? "1px solid var(--color-mist)" : "none" }}>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "0.8rem" }}>
+                0{idx + 1}
+              </span>
+              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", color: "var(--color-ink)", marginBottom: "0.7rem" }}>
+                {s.title}
+              </span>
+              <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)" }}>
+                {s.desc}
+              </span>
+            </Reveal>
+          ))}
+        </div>
       </div>
 
+      <div className="wrap" style={{ marginBottom: "1.5rem" }}>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>nhịp của một chuyến đi</span>
+      </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>đây là không gian để 4 người cùng tuổi, cùng một đoạn đời — gặp nhau để chia sẻ và thấu hiểu.</p>
+        {rhythmBlocks.map((b, idx) => (
+          <Reveal key={b.title} style={{ display: "flex", gap: "1.4rem", padding: "1.5rem 0", borderBottom: idx < rhythmBlocks.length - 1 ? "1px solid var(--color-mist)" : "none" }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)", flexShrink: 0, paddingTop: "0.2rem" }}>
+              0{idx + 1}
+            </span>
+            <div>
+              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.1rem", color: "var(--color-ink)", marginBottom: "0.5rem" }}>
+                {b.title}
+              </span>
+              <div>
+                {Array.isArray(b.body) ? (
+                  b.body.map((para, i) => (
+                    <p key={i} style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: i > 0 ? "1rem 0 0" : 0 }}>
+                      {para}
+                    </p>
+                  ))
+                ) : (
+                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{b.body}</p>
+                )}
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
+        <div style={{ maxWidth: "126ch", width: "100%" }}>
+          <ImagePlaceholder label="ảnh · làm bánh quê cùng cô chú" aspectRatio="16/9" src="/assets/ngayhienanvui44.jpg" style={{ width: "100%", height: "auto" }} />
+        </div>
+      </div>
+
+      <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: "48ch", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.2rem, 3vw, 1.5rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
+          đây là không gian để 4 người cùng tuổi, cùng một đoạn đời — gặp nhau để chia sẻ và thấu hiểu.
+        </p>
+      </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ ...proseP, margin: 0 }}>
           toàn bộ hành trình là ăn chay thanh nhẹ — các bữa ăn, bánh, thức uống đều tự tay làm bởi mlf. tại mlf, không sử dụng các gia vị công nghiệp trong chế biến, chú trọng hài hòa nguyên tắc ăn uống âm-dương.
         </p>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">lịch trình</span>
+      <div className="wrap" style={{ marginBottom: "1.2rem", textAlign: "center" }}>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>lịch trình</span>
       </div>
-      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
+      <div className="wrap" style={{ marginBottom: "5rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem" }}>
         {days.map((d) => (
-          <div key={d.n} className="day-block">
-            <span className="day-num">ngày {d.n}</span>
-            <span className="day-title">{d.title}</span>
-            <Schedule rows={d.rows} />
-            {d.note ? (
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0.8rem 0 0" }}>{d.note}</p>
-            ) : null}
-          </div>
+          <Reveal key={d.n} style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+            <div style={{ backgroundColor: "#faf8f3", padding: "2.5rem", borderRadius: "0.5rem", maxWidth: "83ch", width: "100%" }}>
+              <div style={{ marginBottom: "-3.5rem" }}>
+                <DayCard dayNum={d.n} title={d.title} note={d.note} rows={d.rows} />
+              </div>
+            </div>
+          </Reveal>
         ))}
-      </Reveal>
+      </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">thông tin chương trình</span>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>thông tin chương trình</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "2rem" }}>
+      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "500px" }}>
         {programInfo.map((item) => (
           <div key={item.label} className="info-row">
             <span className="info-label">{item.label}</span>
@@ -172,26 +234,31 @@ export default function RetreatAnVuiPage() {
         <p style={{ ...proseP, margin: 0 }}>mlf là nơi đủ an toàn, dịu dàng để bố mẹ được là chính mình một chút.</p>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">lịch retreat trong năm 2026</span>
+      <div className="wrap" style={{ marginBottom: "2rem", textAlign: "center" }}>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>lịch retreat trong năm 2026</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem" }}>
-        {schedule2026.map((s) => (
-          <div key={s} className="info-row">
-            <span className="info-label">retreat an vui</span>
-            <span className="info-val">{s}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-          <a href="https://forms.gle/EFyZNdUjt4zFo7fR9" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
-            đăng ký <span className="ar">→</span>
-          </a>
-          <Link href={routes.soTayKhach} className="cta-btn">
-            đọc guest guide <span className="ar">→</span>
-          </Link>
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "560px" }}>
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          {schedule2026.map((s, idx) => {
+            const match = s.match(/^(\d+)\s*–\s*(\d+)\.(\d+)\.(\d+)\s*\((.+)\)$/);
+            const [, dayFrom, dayTo, month, year, weekday] = match ?? ["", "", "", "", "", s];
+            return (
+              <Reveal key={s} style={{ flex: "1 1 220px", maxWidth: "260px", padding: "0 2rem", textAlign: "center", borderLeft: idx > 0 ? "1px solid var(--color-mist)" : "none" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "1rem" }}>
+                  chuyến 0{idx + 1}
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2.4rem", lineHeight: 1, color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
+                  {dayFrom}–{dayTo}
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.8rem" }}>
+                  tháng {month} · {year}
+                </span>
+                <span style={{ display: "inline-block", fontFamily: "var(--font-sans)", fontSize: "0.78rem", color: "var(--color-stone-alt)", padding: "0.3rem 0.8rem", border: "1px solid var(--color-mist)", borderRadius: "999px" }}>
+                  {weekday}
+                </span>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
 
@@ -200,7 +267,7 @@ export default function RetreatAnVuiPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
-        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.6rem, 10vw, 5.5rem)", lineHeight: 0.85, color: "var(--color-moss)", marginBottom: "0.5rem" }}>+80</span>
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.6rem, 10vw, 5.5rem)", lineHeight: 0.85, color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>+80</span>
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.4rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>chuyến retreat</span>
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.6rem" }}>trong 3 năm qua</span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
@@ -209,19 +276,21 @@ export default function RetreatAnVuiPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0.8rem 0 0" }}>
           mỗi chuyến retreat đều có một chủ đề riêng, tạo nên bầu không khí và trải nghiệm riêng — dựa trên sự tham gia của cô chú, nhà mộc sẽ thiết kế lịch trình để thật sự xuôi dòng.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0.8rem 0 0" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: "0.8rem 0 0" }}>
           lưu ý: lịch trình chi tiết sẽ được gửi vào từng ngày diễn ra retreat, để giữ tính thong thả, uyển chuyển.
         </p>
       </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem", maxWidth: "56ch" }}>
-        <span className="eyebrow">các vấn đề về y tế — an toàn</span>
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>các vấn đề về y tế — an toàn</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <div className="wrap" style={{ marginBottom: "5rem" }}>
         {medicalFaqs.map((item) => (
-          <Disclosure key={item.q} trigger={<span style={{ fontFamily: "var(--font-sans)", fontWeight: 400, fontSize: "0.9rem", color: "var(--color-ink)" }}>{item.q}</span>}>
-            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{item.a}</p>
-          </Disclosure>
+          <div key={item.q} style={{ paddingLeft: "1.5rem" }}>
+            <Disclosure trigger={<span style={{ fontFamily: "var(--font-sans)", fontWeight: 400, fontSize: "0.9rem", color: "var(--color-ink)" }}>{item.q}</span>}>
+              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{item.a}</p>
+            </Disclosure>
+          </div>
         ))}
       </div>
 
@@ -229,8 +298,8 @@ export default function RetreatAnVuiPage() {
         <FaqShowMore items={faqs} />
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1rem", maxWidth: "56ch" }}>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", color: "var(--color-ink)" }}>chính sách trợ duyên</span>}>
+      <div className="wrap" style={{ marginBottom: "1rem" }}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH TRỢ DUYÊN</span>}>
           <div>
             <p style={proseP}>
               Chúng tôi mong rằng các chương trình của mộc little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng, ở-yên, an-vui &amp; online retreat khai tâm.
@@ -249,7 +318,7 @@ export default function RetreatAnVuiPage() {
             </p>
           </div>
         </Disclosure>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", color: "var(--color-ink)" }}>chính sách hủy / hoàn</span>}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH HỦY / HOÀN</span>}>
           <div>
             {policyLines.map((line) => (
               <p key={line} style={proseP}>
@@ -258,7 +327,7 @@ export default function RetreatAnVuiPage() {
             ))}
           </div>
         </Disclosure>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", color: "var(--color-ink)" }}>cách di chuyển tới măng đen</span>}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CÁCH DI CHUYỂN TỚI MĂNG ĐEN</span>}>
           <div>
             {travelGroups.map((group) => (
               <div key={group.title} style={{ marginBottom: "1.4rem" }}>
@@ -274,10 +343,22 @@ export default function RetreatAnVuiPage() {
             ))}
           </div>
         </Disclosure>
+        <Link href={routes.specialTreat} style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)", textDecoration: "none", marginTop: "0.8rem", paddingBottom: "0.8rem", borderBottom: "1px solid var(--color-mist)" }} className="mono-link">
+          special treat: dành cho khách quen <span className="ar">→</span>
+        </Link>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "2.5rem", marginTop: "4rem", textAlign: "center" }}>
-        <span className="eyebrow" style={{ display: "block", marginBottom: "0.9rem" }}>
+      <div className="wrap" style={{ marginBottom: "5rem", marginTop: "4rem", textAlign: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap", marginBottom: "3rem" }}>
+          <a href="https://forms.gle/EFyZNdUjt4zFo7fR9" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+            đăng ký <span className="ar">→</span>
+          </a>
+          <Link href={routes.soTayKhach} className="cta-btn cta-btn--outline">
+            đọc guest guide <span className="ar">→</span>
+          </Link>
+        </div>
+
+        <span className="eyebrow" style={{ display: "block", marginBottom: "0.9rem", color: "var(--color-ink)" }}>
           tham khảo thêm hành trình khác
         </span>
         <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0.6rem 1rem" }}>

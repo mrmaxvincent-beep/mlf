@@ -8,7 +8,17 @@ import { pageSpreads } from "@/data/journal";
 /** Issue cover spread + "kho tạp chí" picker + "trích trang" preview — all share the active-issue state. */
 export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaultIndex: number }) {
   const [active, setActive] = useState(defaultIndex);
+  const [fading, setFading] = useState(false);
   const issue = issues[active];
+
+  function selectIssue(i: number) {
+    if (i === active) return;
+    setFading(true);
+    setTimeout(() => {
+      setActive(i);
+      setFading(false);
+    }, 260);
+  }
 
   return (
     <>
@@ -25,16 +35,29 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
         </p>
       </div>
 
-      <div className="wrap-wide cover-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.1fr)", gap: 0, padding: 0, alignItems: "stretch", borderBottom: "1px solid var(--color-mist)" }}>
-        <div style={{ width: "100%", height: "100%", position: "relative", minWidth: 0 }}>
-          <ImagePlaceholder label={issue.coverPlaceholder} aspectRatio="auto" style={{ width: "100%", height: "100%" }} />
+      <div
+        className="wrap-wide cover-grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.1fr)",
+          gap: 0,
+          padding: 0,
+          alignItems: "start",
+          borderBottom: "1px solid var(--color-mist)",
+          opacity: fading ? 0 : 1,
+          transform: fading ? "translateY(10px)" : "translateY(0)",
+          transition: "opacity 0.26s var(--ease-standard), transform 0.26s var(--ease-standard)",
+        }}
+      >
+        <div style={{ width: "70%", position: "relative", minWidth: 0, aspectRatio: "3/4", margin: "0 auto" }}>
+          <ImagePlaceholder label={issue.coverPlaceholder} aspectRatio="3/4" src={issue.coverImageSrc} style={{ width: "100%", height: "100%" }} />
         </div>
         <div style={{ padding: "2.5rem 0 2.5rem 3rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <span className="folio" style={{ marginBottom: "1rem" }}>
             bìa · {issue.label}
           </span>
           <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 6vw, 3.6rem)", lineHeight: 1.05, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>{issue.title}</h2>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.65, color: "var(--color-stone-alt)", maxWidth: "34ch", margin: "0 0 2rem" }}>{issue.pullQuote}</p>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.65, color: "var(--color-ink)", maxWidth: "34ch", margin: "0 0 2rem" }}>{issue.pullQuote}</p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a className="cta-btn cta-btn--solid" href={issue.published ? issue.ebookHref : undefined} aria-disabled={!issue.published}>
               {issue.published ? "tải ebook" : "sắp ra mắt"}
@@ -45,17 +68,17 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
 
       <div className="wrap-wide" style={{ marginTop: "1.5rem", paddingBottom: "1.5rem", borderBottom: "1px solid var(--color-mist)" }}>
         <span className="folio" style={{ display: "block", marginBottom: "1rem" }}>
-          kho tạp chí //
+          kho tạp chí
         </span>
         <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
           {issues.map((iss, i) => (
             <button
               key={iss.num}
-              onClick={() => setActive(i)}
+              onClick={() => selectIssue(i)}
               style={{ display: "flex", gap: "0.75rem", alignItems: "center", background: "none", border: "none", padding: "0.4rem", cursor: "pointer", textAlign: "left", opacity: i === active ? 1 : 0.55 }}
             >
               <div style={{ width: "5rem", aspectRatio: "3/4", position: "relative", flex: "none" }}>
-                <ImagePlaceholder label={iss.coverPlaceholder} aspectRatio="3/4" style={{ width: "100%", height: "100%" }} />
+                <ImagePlaceholder label={iss.coverPlaceholder} aspectRatio="3/4" src={iss.coverImageSrc} style={{ width: "100%", height: "100%" }} />
               </div>
               <span style={{ textAlign: "left" }}>
                 <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}>{iss.label}</span>
@@ -67,14 +90,15 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
       </div>
 
       <div className="wrap-wide" data-reveal style={{ marginBottom: "4.5rem" }}>
+        <div style={{ borderTop: "1px solid var(--color-mist)", marginBottom: "1.5rem" }}></div>
         <span className="folio" style={{ display: "block", marginBottom: "1.5rem" }}>
-          trích trang · {issue.label} //
+          trích trang · quyển 01
         </span>
         <div className="journal-spread-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "1.5rem", marginBottom: "1.5rem" }}>
           {pageSpreads.slice(0, 2).map((s) => (
             <div key={s.pages}>
               <div style={{ aspectRatio: s.aspectRatio, position: "relative", marginBottom: "0.75rem" }}>
-                <ImagePlaceholder label={s.placeholder} aspectRatio={s.aspectRatio} style={{ width: "100%", height: "100%" }} />
+                <ImagePlaceholder label={s.placeholder} aspectRatio={s.aspectRatio} src={s.imageSrc} style={{ width: "100%", height: "100%" }} />
               </div>
               <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>{s.pages}</span>
             </div>
@@ -84,7 +108,7 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
           {pageSpreads.slice(2, 4).map((s) => (
             <div key={s.pages}>
               <div style={{ aspectRatio: s.aspectRatio, position: "relative", marginBottom: "0.75rem" }}>
-                <ImagePlaceholder label={s.placeholder} aspectRatio={s.aspectRatio} style={{ width: "100%", height: "100%" }} />
+                <ImagePlaceholder label={s.placeholder} aspectRatio={s.aspectRatio} src={s.imageSrc} style={{ width: "100%", height: "100%" }} />
               </div>
               <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>{s.pages}</span>
             </div>

@@ -31,19 +31,41 @@ export default function PhiaSangPage() {
       </div>
 
       <div className="wrap" style={{ margin: "4rem auto", maxWidth: 440 }}>
-        <ImagePlaceholder label="ảnh · buổi trò chuyện phía sáng" aspectRatio="4/5" />
+        <ImagePlaceholder label="ảnh · buổi trò chuyện phía sáng" aspectRatio="4/5" src="/assets/phiasang.jpg" />
       </div>
 
-      <Reveal className="wrap letter" style={{ marginTop: "1rem", marginBottom: "3.5rem", maxWidth: "52ch" }}>
+      <Reveal className="wrap letter" style={{ marginTop: "1rem", marginBottom: "2.5rem", maxWidth: "58ch" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--color-ink)", marginBottom: "2rem" }}>gửi bạn,</p>
-        <p>
+        <p className="drop-cap">
           hồi năm ngoái, một người thân trong gia đình tôi ra đi và mãi tới khi ấy tôi mới nhận ra mình chưa từng thực sự chuẩn bị cho điều này. cái chết, dù là điều ai cũng biết rồi sẽ tới, nhưng người ta thường cho rằng nó ở một tương lai nào đó và hiếm khi dám nhìn thẳng vào nó.
         </p>
-        <p style={{ fontStyle: "italic", fontFamily: "var(--font-serif)" }}>vì sợ.</p>
+      </Reveal>
+
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "40ch", textAlign: "center" }}>
+        <span aria-hidden style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "2rem", lineHeight: 1, color: "var(--color-cham)", marginBottom: "0.4rem" }}>
+          &ldquo;
+        </span>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
+          vì sợ.
+        </p>
+      </Reveal>
+
+      <Reveal className="wrap letter" style={{ marginBottom: "2.5rem", maxWidth: "58ch" }}>
         <p>
           tuy nhiên phần lớn nỗi sợ lại không hẳn đến từ cái chết, sợ vì những khoảng trống mơ hồ. thân này sẽ trải qua điều gì trong những giờ phút cuối? còn tâm thức thì sao? y học ngày nay đã quan sát khá kỹ những gì xảy ra nơi thân và não lúc lâm chung. đặc biệt, những nghiên cứu về trải nghiệm cận tử trong vài thập kỷ qua cũng đã hé lộ nhiều điều bất ngờ về ý thức con người trong thời khắc cuối đời. từ hàng ngàn năm trước, đạo Phật cũng đã có những ghi chép chi tiết hướng dẫn cho các tiến trình này. không có gì thực sự sinh ra, cũng không có gì thực sự mất đi, chỉ có sự tiếp nối không ngừng. thiền sư Thích Nhật Hạnh từng dạy rằng: đám mây không bao giờ chết, nó chỉ trở thành mưa, thành dòng suối, thành một hình tướng khác.
         </p>
-        <p style={{ fontStyle: "italic", fontFamily: "var(--font-serif)", color: "var(--color-ink)" }}>khi đối diện với cái chết bằng sự hiểu biết và tình thương, nỗi sợ từ đó sẽ dần tan.</p>
+      </Reveal>
+
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "40ch", textAlign: "center" }}>
+        <span aria-hidden style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "2rem", lineHeight: 1, color: "var(--color-cham)", marginBottom: "0.4rem" }}>
+          &ldquo;
+        </span>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
+          khi đối diện với cái chết bằng sự hiểu biết và tình thương, nỗi sợ từ đó sẽ dần tan.
+        </p>
+      </Reveal>
+
+      <Reveal className="wrap letter" style={{ marginBottom: "3.5rem", maxWidth: "58ch" }}>
         <p>
           buổi trò chuyện cùng tôi, sẽ đi qua những hiểu biết — từ góc độ khoa học về những gì xảy ra với thân tâm lúc lâm chung, từ góc nhìn tâm lý về những gì còn vướng víu trong tâm, và từ chiều tâm linh về nghiệp lực và trạng thái tâm.
         </p>
@@ -68,12 +90,12 @@ export default function PhiaSangPage() {
         <Motif name="dom-muc" size={35} />
       </div>
 
-      <Reveal className="wrap letter" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--color-stone)", marginBottom: "1.2rem" }}>tái bút —</p>
-        <p style={{ fontSize: "0.88rem", color: "var(--color-stone)" }}>
+      <Reveal className="wrap letter" style={{ marginBottom: "5rem", maxWidth: "58ch" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--color-ink)", marginBottom: "1.2rem" }}>tái bút —</p>
+        <p style={{ fontSize: "0.88rem", color: "var(--color-ink)" }}>
           buổi trò chuyện diễn ra online qua Zoom, khoảng 120 phút. dành cho những ai đang ở gần cái chết theo một cách nào đó — đang mang bệnh, vừa tiễn người thân, đang ngồi bên một người sắp đi, hoặc muốn chuẩn bị khi tâm còn an.
         </p>
-        <p style={{ fontSize: "0.88rem", color: "var(--color-stone)" }}>
+        <p style={{ fontSize: "0.88rem", color: "var(--color-ink)" }}>
           một điều tiên quyết quan trọng: người tham gia cần thật sự mở lòng đón nhận và biết mình cần sự giúp đỡ này. phí tùy tâm — nếu lúc này chưa thuận về tài chính, xin đừng bận tâm. vui lòng điền thông tin vào phiếu đăng ký, tôi sẽ hẹn lịch lại qua email.
         </p>
       </Reveal>

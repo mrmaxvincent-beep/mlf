@@ -39,18 +39,18 @@ export default function NhatHienPage() {
       </div>
 
       <div className="wrap" style={{ margin: "5rem auto", maxWidth: 420 }}>
-        <ImagePlaceholder label="ảnh · cộng đồng thực tập nhất-hiện" aspectRatio="4/5" />
+        <ImagePlaceholder label="ảnh · cộng đồng thực tập nhất-hiện" aspectRatio="4/5" src="/assets/nhat_hien.jpg" />
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "44ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.95rem", lineHeight: 2, color: "var(--color-ink)", margin: 0 }}>nhất-hiện là nơi để mỗi người lặng về tu sửa mình.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: 0 }}>nhất-hiện là nơi để mỗi người lặng về tu sửa mình.</p>
       </Reveal>
 
       <RevealStagger className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch" }}>
         {qualities.map((q) => (
           <div key={q.name} style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.9rem" }}>{q.name}</span>
-            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.88rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>{q.desc}</p>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{q.desc}</p>
           </div>
         ))}
       </RevealStagger>
@@ -81,7 +81,7 @@ export default function NhatHienPage() {
         <a className="go mono-link" href="https://www.bestill.life/p/phap.html" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
           tìm hiểu thêm về nhất-hiện <span className="ar">→</span>
         </a>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-mist)", marginTop: "0.7rem" }}>nhathien.com</span>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-ink)", marginTop: "0.7rem" }}>nhathien.com</span>
       </div>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>
@@ -108,7 +108,7 @@ export default function NhatHienPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", color: "var(--color-mist)" }}>
+        <Link className="go" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", color: "var(--color-ink)" }}>
           về trang be-still
         </Link>
       </div>

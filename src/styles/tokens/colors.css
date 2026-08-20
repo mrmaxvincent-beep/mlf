@@ -17,6 +17,8 @@
   --color-before:#F0997B;
   --color-after:#5DCAA5;
   --color-photo-placeholder:#C9C3B8;
+  /* emotional accent — the 2% in the 70/20/8/2 color climate. ≤1 use per page. */
+  --color-ember:#B5714A;
 
   /* semantic */
   --surface-page:var(--color-cotton);

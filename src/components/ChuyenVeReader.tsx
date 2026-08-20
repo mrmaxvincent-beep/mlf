@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Episode } from "@/data/chuyenVe";
 
 /** cv-shell episode picker + Q&A reading pane, with a brief fade on switch — chuyện-về interview series. */
 export function ChuyenVeReader({ episodes }: { episodes: Episode[] }) {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
+
+  const prevActive = useRef<number | null>(null);
+  useEffect(() => {
+    if (prevActive.current !== null && prevActive.current !== active) {
+      const anchor = document.getElementById("cv-motif");
+      if (anchor) {
+        const top = window.scrollY + anchor.getBoundingClientRect().top - 80;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+    prevActive.current = active;
+  }, [active]);
 
   function select(i: number) {
     if (i === active) return;
@@ -56,7 +68,7 @@ export function ChuyenVeReader({ episodes }: { episodes: Episode[] }) {
           if (b.type === "q")
             return (
               <div key={i} className="qa-q">
-                <span className="qa-mark">——</span>
+                <span className="qa-mark">⸺</span>
                 <span className="qa-q-text">{b.text}</span>
               </div>
             );
@@ -80,7 +92,7 @@ export function ChuyenVeReader({ episodes }: { episodes: Episode[] }) {
         })}
 
         {current.outro.map((p, i) => (
-          <p key={i} style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: i === 0 ? "2rem 0 0" : "1rem 0 0" }}>
+          <p key={i} style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: i === 0 ? "2rem 0 0" : "1rem 0 0" }}>
             {p}
           </p>
         ))}

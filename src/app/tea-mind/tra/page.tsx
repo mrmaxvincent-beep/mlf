@@ -35,18 +35,20 @@ export default function TeaMindTraPage() {
         </p>
       </div>
 
-      <div style={{ height: "48vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · pha trà" aspectRatio="auto" style={{ height: "100%" }} />
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "48vh", minHeight: 300, maxHeight: 460 }}>
+        <div style={{ height: "100%", aspectRatio: "16/9" }}>
+          <ImagePlaceholder label="ảnh · pha trà" aspectRatio="16/9" src="/assets/teamind_tra.jpg" style={{ width: "100%", height: "100%" }} />
+        </div>
       </div>
 
       <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "1.2rem" }}>
         <span className="eyebrow">về buổi trà</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Không phải một lớp học pha trà đúng cách — mà là một khoảng lặng để nhìn lại nhịp tay mình đang vội vã đến đâu.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Vũ sẽ đồng hành cùng bạn qua từng bước — chọn trà, đun nước, rót và mời — không có gì đúng-sai, chỉ có việc ở lại trọn vẹn trong từng cử chỉ.
         </p>
       </Reveal>
@@ -59,7 +61,7 @@ export default function TeaMindTraPage() {
           <div key={s.num} className="step-row">
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-moss)", flex: "none", width: "2rem" }}>{s.num}</span>
             <div>
-              <span style={{ display: "block", fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "0.95rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>{s.title}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1.05rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>{s.title}</span>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone-alt)", margin: 0 }}>{s.desc}</p>
             </div>
           </div>

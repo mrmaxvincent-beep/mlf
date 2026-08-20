@@ -2,26 +2,36 @@
 
 import { useState } from "react";
 
-export function Testimonials({ items }: { items: { text: string; attribution: string }[] }) {
+export function Testimonials({
+  items,
+  showDots = true,
+  fontSize = "0.945rem",
+}: {
+  items: { text: string; attribution: string }[];
+  showDots?: boolean;
+  fontSize?: string;
+}) {
   const [active, setActive] = useState(0);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2.5rem", textAlign: "center" }}>
-      <div style={{ display: "flex", gap: "0.4rem" }}>
-        {[0, 1, 2].map((i) => (
-          <span
-            key={i}
-            style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--color-moss)", display: "inline-block", opacity: 0.3 }}
-          />
-        ))}
-      </div>
+      {showDots && (
+        <div style={{ display: "flex", gap: "0.4rem" }}>
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--color-moss)", display: "inline-block", opacity: 0.3 }}
+            />
+          ))}
+        </div>
+      )}
 
       <p
         style={{
           fontFamily: "var(--font-serif)",
           fontStyle: "italic",
           fontWeight: 300,
-          fontSize: "0.945rem",
+          fontSize,
           lineHeight: 1.45,
           color: "var(--color-ink)",
           maxWidth: "52ch",

@@ -18,7 +18,7 @@ export default function DeMucChiTietPage() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: 0 }}>
         <Breadcrumb trail={[{ label: "cộng đồng ở-yên", href: routes.congDongOYen }, { label: "đề mục" }]} />
-        <span className="eyebrow">ba cửa vào</span>
+        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>ba cửa vào</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 2rem" }}>
           đề mục
         </h1>

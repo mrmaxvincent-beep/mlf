@@ -1,8 +1,11 @@
 :root{
   /* MLF has almost no motion — mist drifting slow, gentle fades only. never bounce, never fast. */
   --ease-standard:ease; /* @kind other */
-  --duration-hover:0.2s; /* @kind other */
+  --duration-hover:0.15s; /* @kind other */
   --duration-fade:0.6s; /* @kind other */
+  --duration-panel:0.9s; /* @kind other — open/close of large panels (mobile menu, programs drawer) */
+  --duration-sweep:2s; /* @kind other — light-sweep hover on link primitives */
   --duration-breath:2.4s; /* @kind other */
+  --duration-zoom:3.5s; /* @kind other — very slow hover zoom on photos inside links */
 }
 @media (prefers-reduced-motion:reduce){ *{ animation:none !important; transition:none !important; } }

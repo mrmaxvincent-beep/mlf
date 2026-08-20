@@ -10,18 +10,19 @@ export const includesList = [
   { label: "tùy chọn", val: "workshop thủ công / talk — diện tướng / sức khỏe / tinh thần" },
 ];
 
+export const stayTalkLa = ["một chỗ trú lại", "một chỗ chuyện trò"];
+
 export const whoList = [
-  "người muốn một kỳ nghỉ ngắn, không cầu kỳ.",
-  "người cần một nơi để chuyện trò trong sự dịu dàng.",
-  "người muốn sống một nhịp chậm lại vài ngày, rồi quay về.",
+  "muốn một khoảng nghỉ ngắn.",
+  "cần một nơi để nói chuyện.",
+  "và chậm lại trong vài ngày",
 ];
 
 export const days = [
   {
     n: "1",
     rows: [
-      { time: "7:00", activity: "xe tới Măng Đen" },
-      { time: "—", activity: "tự túc ăn sáng — ghé một quán cà phê ở Măng Đen" },
+      { time: "7:00", activity: "xe tới Măng Đen. tự túc ăn sáng — ghé một quán cà phê ở Măng Đen" },
       { time: "9:00", activity: "xe mlf đón bạn tại thị trấn" },
       { time: "10:00", activity: "dạo quanh nhà mộc" },
       { time: "11:30", activity: "ăn trưa cùng nhau tại mlf" },
@@ -52,9 +53,11 @@ export const days = [
   },
 ];
 
-export const pricingItems = ["đưa đón · thị trấn Măng Đen", "lưu trú 2 đêm", "2 bữa ăn / ngày (trưa tự túc)", "xe máy tự do khám phá", "picnic bên suối · tea ceremony · xem phim", "ngâm chân thảo mộc"];
+export const pricingItems = [];
 
 export const poemLines = [
+  "",
+  "",
   "stay+talk vốn không có lịch trình",
   "để có một khoảng-thở đủ rộng",
   "có chỗ này… suối chảy chậm hơn,",
@@ -76,20 +79,20 @@ export const policyLines = [
 export const faqs = [
   { q: "đây có phải kiểu slow travel / slow stay không?", a: `Đúng. Ở mlf không có lịch trình dày — một ngày thường có nhiều khoảng trống. Bạn ở lại vài ngày tại một nơi, ăn cùng một bếp, gặp lại cùng những người, thay vì di chuyển liên tục. ở mlf, "chậm" không phải một dịch vụ được thiết kế, mà là cách cả nơi này vẫn đang vận hành từ 10 năm nay.` },
   { q: "stay+talk có phải là một chương trình retreat không?", a: "Không. stay+talk không phải là retreat hay mini-retreat. Đây là một khoảng dừng nhỏ – một ngày sống chậm tại mộc little farm, không có lịch trình cố định hay hoạt động hướng dẫn. Chỉ đơn giản là một không gian để bạn lắng nghe thiên nhiên và để nơi này nhẹ nhàng nuôi dưỡng mình." },
-  { q: "Có giới hạn số lượng khách không?", a: "Có. mộc little farm chỉ nhận tối đa 06 khách mỗi lần để đảm bảo không gian yên tĩnh và riêng tư cho mỗi người." },
-  { q: "Tôi có thể mang theo thức ăn riêng không?", a: "Xin bạn không mang thức ăn mặn vào mộc little farm để giữ gìn đồng bộ trong không gian chung." },
-  { q: "Tôi có thể đến vào ngày nào?", a: "Bạn có thể chọn bất kỳ ngày nào trong tuần, miễn là nhà mộc còn phòng trống. Vui lòng nhắn cho nhà mộc trước để kiểm tra lịch và giữ chỗ." },
-  { q: "Tôi đi một mình có được không?", a: "Được chứ. Rất nhiều người đã đến mộc little farm một mình – để nghỉ ngơi, để lắng nghe mình, hoặc chỉ đơn giản là muốn được yên. mộc luôn có chỗ cho bạn, dù bạn đến một mình hay cùng ai đó." },
-  { q: "Có lịch trình cụ thể không?", a: "Không. Mộc không sắp đặt thời gian biểu cho bạn. Các trải nghiệm như picnic, buổi trà hay xem phim sẽ được sắp xếp linh hoạt theo nhịp nghỉ ngơi của bạn – nhẹ nhàng và không gò bó. Đối với chương trình retreat ngày-hiền, sẽ có lịch trình hoạt động theo từng ngày." },
-  { q: "Nếu tôi không tham gia đủ các hoạt động thì sao?", a: "Không sao cả. Nhà mộc tôn trọng nhịp riêng của từng người. Nếu bạn chỉ muốn nằm đọc sách hay ngồi im bên vườn, đó cũng là một phần của dưỡng tâm." },
-  { q: "Ăn uống tại mộc little farm thế nào? Có hợp người ăn chay không?", a: "Nhà mộc phục vụ ba bữa chay mỗi ngày, nấu từ rau vườn và nguyên liệu tự nhiên. Không sử dụng gia vị công nghiệp. Món ăn cân bằng, đầy đủ dinh dưỡng. Chúng tôi đã từng tiếp đón rất nhiều vị khách (từ người già đến trẻ em) chưa từng ăn chay trong hơn 80 chuyến retreat (trong 05 ngày 04 đêm)." },
-  { q: "Tôi có thể mang theo điện thoại/laptop không?", a: "Bạn có thể mang theo, nhưng nhà mộc khuyến khích bạn dùng thật ít – để thật sự có mặt cho bản thân mình." },
-  { q: "Tôi chưa từng uống trà theo nghi thức, có cần chuẩn bị gì không?", a: "Không cần chuẩn bị gì cả. Tất cả đều được hướng dẫn nhẹ nhàng, và bạn chỉ cần có mặt với sự cởi mở. Không ai đánh giá bạn, không có đúng – sai. Mỗi người có cách thưởng trà và lắng nghe riêng của mình." },
-  { q: "Chi phí đã bao gồm tất cả chưa? Có phát sinh gì thêm không?", a: "Chi phí trọn gói đã bao gồm: đưa đón, 2 đêm nghỉ, 2-3 bữa chay/ngày, xe máy, picnic bên suối, buổi xem phim, hoạt động tùy chọn và buổi trà. Bạn chỉ cần chuẩn bị tâm thế nghỉ ngơi." },
-  { q: "Tôi cần chuẩn bị gì trước khi đến?", a: "Bạn không cần chuẩn bị gì đặc biệt. Chỉ cần mang theo những vật dụng cá nhân cần thiết và một tâm hồn sẵn sàng lắng nghe và thư giãn." },
-  { q: "Vì sao tôi không được trang bị khăn tắm, bàn chải đánh răng?", a: "Nhà mộc không cung cấp đồ dùng một lần để giảm gánh nặng rác thải cho môi trường - đây là một phần trong cách nhà mộc chọn sống và vận hành không gian này." },
-  { q: "Tôi có thể mời bạn bè đến chơi trong thời gian lưu trú không?", a: "mộc là một không gian riêng tư và tĩnh lặng, vì vậy rất mong bạn không mời thêm người ngoài danh sách đăng ký. Điều này giúp giữ sự yên tĩnh và đồng đều trong năng lượng chung, để mỗi người đều có thể được nuôi dưỡng một cách sâu sắc." },
-  { q: "Tôi có thể tổ chức ca hát, BBQ hay hoạt động nhóm tại mộc không?", a: "Tại mộc, mọi hoạt động đều hướng về sự lắng dịu, tĩnh tại. Vì vậy, chúng tôi không tổ chức hay khuyến khích các hoạt động náo nhiệt như ca hát, BBQ hoặc tiệc nhóm. Mong bạn xem đây là một dịp để trở về với sự đơn sơ, vắng lặng." },
+  { q: "có giới hạn số lượng khách không?", a: "Có. mộc little farm chỉ nhận tối đa 06 khách mỗi lần để đảm bảo không gian yên tĩnh và riêng tư cho mỗi người." },
+  { q: "tôi có thể mang theo thức ăn riêng không?", a: "Xin bạn không mang thức ăn mặn vào mộc little farm để giữ gìn đồng bộ trong không gian chung." },
+  { q: "tôi có thể đến vào ngày nào?", a: "Bạn có thể chọn bất kỳ ngày nào trong tuần, miễn là nhà mộc còn phòng trống. Vui lòng nhắn cho nhà mộc trước để kiểm tra lịch và giữ chỗ." },
+  { q: "tôi đi một mình có được không?", a: "Được chứ. Rất nhiều người đã đến mộc little farm một mình – để nghỉ ngơi, để lắng nghe mình, hoặc chỉ đơn giản là muốn được yên. mộc luôn có chỗ cho bạn, dù bạn đến một mình hay cùng ai đó." },
+  { q: "có lịch trình cụ thể không?", a: "Không. Mộc không sắp đặt thời gian biểu cho bạn. Các trải nghiệm như picnic, buổi trà hay xem phim sẽ được sắp xếp linh hoạt theo nhịp nghỉ ngơi của bạn – nhẹ nhàng và không gò bó. Đối với chương trình retreat ngày-hiền, sẽ có lịch trình hoạt động theo từng ngày." },
+  { q: "nếu tôi không tham gia đủ các hoạt động thì sao?", a: "Không sao cả. Nhà mộc tôn trọng nhịp riêng của từng người. Nếu bạn chỉ muốn nằm đọc sách hay ngồi im bên vườn, đó cũng là một phần của dưỡng tâm." },
+  { q: "ăn uống tại mộc little farm thế nào? có hợp người ăn chay không?", a: "Nhà mộc phục vụ ba bữa chay mỗi ngày, nấu từ rau vườn và nguyên liệu tự nhiên. Không sử dụng gia vị công nghiệp. Món ăn cân bằng, đầy đủ dinh dưỡng. Chúng tôi đã từng tiếp đón rất nhiều vị khách (từ người già đến trẻ em) chưa từng ăn chay trong hơn 80 chuyến retreat (trong 05 ngày 04 đêm)." },
+  { q: "tôi có thể mang theo điện thoại/laptop không?", a: "Bạn có thể mang theo, nhưng nhà mộc khuyến khích bạn dùng thật ít – để thật sự có mặt cho bản thân mình." },
+  { q: "tôi chưa từng uống trà theo nghi thức, có cần chuẩn bị gì không?", a: "Không cần chuẩn bị gì cả. Tất cả đều được hướng dẫn nhẹ nhàng, và bạn chỉ cần có mặt với sự cởi mở. Không ai đánh giá bạn, không có đúng – sai. Mỗi người có cách thưởng trà và lắng nghe riêng của mình." },
+  { q: "chi phí đã bao gồm tất cả chưa? có phát sinh gì thêm không?", a: "Chi phí trọn gói đã bao gồm: đưa đón, 2 đêm nghỉ, 2-3 bữa chay/ngày, xe máy, picnic bên suối, buổi xem phim, hoạt động tùy chọn và buổi trà. Bạn chỉ cần chuẩn bị tâm thế nghỉ ngơi." },
+  { q: "tôi cần chuẩn bị gì trước khi đến?", a: "Bạn không cần chuẩn bị gì đặc biệt. Chỉ cần mang theo những vật dụng cá nhân cần thiết và một tâm hồn sẵn sàng lắng nghe và thư giãn." },
+  { q: "vì sao tôi không được trang bị khăn tắm, bàn chải đánh răng?", a: "Nhà mộc không cung cấp đồ dùng một lần để giảm gánh nặng rác thải cho môi trường - đây là một phần trong cách nhà mộc chọn sống và vận hành không gian này." },
+  { q: "tôi có thể mời bạn bè đến chơi trong thời gian lưu trú không?", a: "mộc là một không gian riêng tư và tĩnh lặng, vì vậy rất mong bạn không mời thêm người ngoài danh sách đăng ký. Điều này giúp giữ sự yên tĩnh và đồng đều trong năng lượng chung, để mỗi người đều có thể được nuôi dưỡng một cách sâu sắc." },
+  { q: "tôi có thể tổ chức ca hát, bbq hay hoạt động nhóm tại mộc không?", a: "Tại mộc, mọi hoạt động đều hướng về sự lắng dịu, tĩnh tại. Vì vậy, chúng tôi không tổ chức hay khuyến khích các hoạt động náo nhiệt như ca hát, BBQ hoặc tiệc nhóm. Mong bạn xem đây là một dịp để trở về với sự đơn sơ, vắng lặng." },
 ];
 
 export const travelGroups = [

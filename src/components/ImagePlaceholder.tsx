@@ -12,17 +12,21 @@ export function ImagePlaceholder({
   src,
   alt = "",
   style,
+  objectFit = "cover",
+  scale = 1,
 }: {
   label: string;
   aspectRatio?: string;
   src?: string;
   alt?: string;
   style?: CSSProperties;
+  objectFit?: "cover" | "contain" | "fill" | "scale-down";
+  scale?: number;
 }) {
   if (src) {
     return (
       <div style={{ position: "relative", width: "100%", aspectRatio, ...style }}>
-        <Image src={src} alt={alt} fill sizes="(max-width: 640px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+        <Image src={src} alt={alt} fill sizes="(max-width: 640px) 100vw, 50vw" style={{ objectFit, objectPosition: "center", transform: `scale(${scale})` }} />
       </div>
     );
   }

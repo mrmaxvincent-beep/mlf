@@ -1,10 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { routes, hoatDongMenu, congDongMenu, mlfMenu, programsPanel, mobileMenuSections } from "@/lib/nav";
 
 type DropdownKey = "hoatDong" | "congDong" | "mlf" | null;
+
+const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled])';
+
+/** Esc-to-close + focus trap for a slide-in panel: moves focus in on open, cycles Tab within it, restores focus to the trigger on close. */
+function usePanelA11y(open: boolean, onClose: () => void) {
+  const panelRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    triggerRef.current = document.activeElement as HTMLElement;
+
+    const panel = panelRef.current;
+    const focusable = panel ? Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)) : [];
+    focusable[0]?.focus();
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (e.key !== "Tab" || !panel) return;
+      const items = Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR));
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      triggerRef.current?.focus();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  return panelRef;
+}
 
 /**
  * Site header. `overlay` pages start with a transparent bar + light text over
@@ -16,6 +61,15 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 680px)");
+    const onChange = () => setIsMobile(mq.matches);
+    onChange();
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
 
   useEffect(() => {
     if (!overlay) return;
@@ -52,30 +106,61 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         mộc little farm
       </Link>
 
-      <button
-        className="mobile-toggle"
-        aria-label="menu"
-        onClick={() => setMobileOpen((v) => !v)}
-        style={{
-          display: "none",
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-          padding: "16px 12px",
-          margin: "-16px -12px",
-          flexDirection: "column",
-          justifyContent: "center",
-          gap: 5,
-          color: navTextColor,
-        }}
-      >
-        <span style={{ width: 20, height: 1, background: "currentColor", display: "block" }} />
-        <span style={{ width: 20, height: 1, background: "currentColor", display: "block" }} />
-        <span style={{ width: 20, height: 1, background: "currentColor", display: "block" }} />
-      </button>
+      <div className="mobile-toggle-group" style={{ alignItems: "center", gap: "0.75rem" }}>
+        <button
+          className="mobile-toggle"
+          aria-label="menu"
+          onClick={() => {
+            setProgramsOpen(false);
+            setMobileOpen((v) => !v);
+          }}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            padding: "16px 12px",
+            margin: "-16px -12px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: 5,
+            color: navTextColor,
+          }}
+        >
+          <span style={{ width: 20, height: 1, background: "currentColor", display: "block" }} />
+          <span style={{ width: 20, height: 1, background: "currentColor", display: "block" }} />
+          <span style={{ width: 20, height: 1, background: "currentColor", display: "block" }} />
+        </button>
 
-      <div className="nav-links" style={{ display: "flex", gap: "2rem", alignItems: "baseline", flexWrap: "wrap" }}>
-        <Link href={routes.home} aria-label="trang chủ" style={{ display: "inline-flex", alignItems: "center", alignSelf: "center", color: navTextColor }}>
+        <button
+          aria-label="chương trình"
+          title="Truy cập nhanh chương trình"
+          onClick={() => {
+            setMobileOpen(false);
+            setProgramsOpen((v) => !v);
+          }}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            padding: "16px 6px",
+            margin: "-16px 0",
+            display: "inline-flex",
+            alignItems: "center",
+            color: navTextColor,
+          }}
+        >
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <rect x="2" y="2" width="6" height="6" stroke="currentColor" strokeWidth="1" />
+            <rect x="12" y="2" width="6" height="6" stroke="currentColor" strokeWidth="1" />
+            <rect x="2" y="12" width="6" height="6" stroke="currentColor" strokeWidth="1" />
+            <rect x="12" y="12" width="6" height="6" stroke="currentColor" strokeWidth="1" />
+          </svg>
+        </button>
+      </div>
+
+      <div className="nav-links" style={{ gap: "2rem", alignItems: "baseline", flexWrap: "wrap" }}>
+        <Link href={routes.home} aria-label="trang chủ" className="link-sweep" style={{ display: "inline-flex", alignItems: "center", alignSelf: "center", color: navTextColor }}>
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
             <path d="M2 7L7.5 2.2L13 7" stroke="currentColor" strokeWidth="1" />
             <path d="M3.4 6V12.4H11.6V6" stroke="currentColor" strokeWidth="1" />
@@ -117,7 +202,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
         <button
           onClick={() => setProgramsOpen(true)}
-          title="Điều hướng chương trình"
+          title="Truy cập nhanh chương trình"
           style={{
             background: "none",
             border: "none",
@@ -139,8 +224,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         </button>
       </div>
 
-      {programsOpen ? <ProgramsPanel onClose={() => setProgramsOpen(false)} /> : null}
-      {mobileOpen ? <MobileMenu onClose={() => setMobileOpen(false)} /> : null}
+      <ProgramsPanel open={programsOpen} onClose={() => setProgramsOpen(false)} isMobile={isMobile} />
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </div>
   );
 }
@@ -228,40 +313,71 @@ function NavDropdown({
   );
 }
 
-function ProgramsPanel({ onClose }: { onClose: () => void }) {
+function ProgramsPanel({ open, onClose, isMobile }: { open: boolean; onClose: () => void; isMobile: boolean }) {
+  const panelRef = usePanelA11y(open, onClose);
+  const panelStyle: React.CSSProperties = isMobile
+    ? {
+        position: "fixed",
+        top: 56,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: "auto",
+        background: "var(--color-cham-dem)",
+        zIndex: 300,
+        display: "flex",
+        flexDirection: "column",
+        padding: "1.5rem",
+        overflowY: "auto",
+        opacity: open ? 1 : 0,
+        transform: open ? "translateY(0)" : "translateY(-12px)",
+        pointerEvents: open ? "auto" : "none",
+        transition: "opacity var(--duration-panel) var(--ease-standard), transform var(--duration-panel) var(--ease-standard)",
+      }
+    : {
+        position: "fixed",
+        right: 0,
+        top: 0,
+        bottom: 0,
+        width: "min(33.33%, 427px)",
+        background: "var(--color-cham-dem)",
+        zIndex: 300,
+        display: "flex",
+        flexDirection: "column",
+        padding: "1.5rem",
+        overflowY: "auto",
+        opacity: open ? 1 : 0,
+        transform: open ? "translateX(0)" : "translateX(100%)",
+        pointerEvents: open ? "auto" : "none",
+        transition: "opacity var(--duration-panel) var(--ease-standard), transform var(--duration-panel) var(--ease-standard)",
+      };
+
   return (
     <>
       <div
         onClick={onClose}
-        style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.3)", zIndex: 299, backdropFilter: "blur(2px)" }}
-      />
-      <div
         style={{
           position: "fixed",
-          right: 0,
-          top: 0,
-          bottom: 0,
-          width: "min(50%, 640px)",
-          background: "rgba(20,20,20,0.98)",
-          zIndex: 300,
-          display: "flex",
-          flexDirection: "column",
-          padding: "1.5rem",
-          overflowY: "auto",
+          inset: 0,
+          background: "rgba(0,0,0,0.3)",
+          zIndex: 299,
+          backdropFilter: "blur(2px)",
+          opacity: open ? 1 : 0,
+          pointerEvents: open ? "auto" : "none",
+          transition: "opacity var(--duration-panel) var(--ease-standard)",
         }}
-      >
+      />
+      <div ref={panelRef} role="dialog" aria-modal="true" aria-label="Truy cập nhanh chương trình" style={panelStyle}>
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             marginBottom: "2rem",
-            paddingBottom: "1rem",
-            borderBottom: "1px solid rgba(255,255,255,0.1)",
           }}
         >
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "#fff" }}>
-            chương trình
+            lối tắt tới chương trình
           </span>
           <button
             onClick={onClose}
@@ -274,7 +390,7 @@ function ProgramsPanel({ onClose }: { onClose: () => void }) {
               fontSize: "0.55rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "var(--color-mist)",
+              color: "#fff",
             }}
           >
             ✕
@@ -290,14 +406,14 @@ function ProgramsPanel({ onClose }: { onClose: () => void }) {
                   fontSize: "0.5rem",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "var(--color-moss)",
+                  color: "var(--text-on-night-secondary)",
                   marginBottom: "0.6rem",
                   fontWeight: 600,
                 }}
               >
                 {section.group}
               </span>
-              <div style={{ borderLeft: "1px solid rgba(255,255,255,0.2)", paddingLeft: "0.8rem" }}>
+              <div>
                 {section.items.map((item) => (
                   <Link
                     key={item.href}
@@ -306,9 +422,8 @@ function ProgramsPanel({ onClose }: { onClose: () => void }) {
                     style={{
                       display: "block",
                       color: "#fff",
-                      padding: "0.3rem 0",
+                      padding: "0.45rem 0",
                       fontSize: "0.75rem",
-                      borderBottom: "1px solid rgba(255,255,255,0.05)",
                     }}
                   >
                     {item.label}
@@ -323,53 +438,85 @@ function ProgramsPanel({ onClose }: { onClose: () => void }) {
   );
 }
 
-function MobileMenu({ onClose }: { onClose: () => void }) {
+function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const panelRef = usePanelA11y(open, onClose);
   return (
     <div
+      ref={panelRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menu điều hướng"
       style={{
         position: "fixed",
         top: 56,
         left: 0,
         right: 0,
         bottom: 0,
-        background: "var(--color-paper)",
+        background: "var(--color-cham-suong)",
         zIndex: 250,
         overflowY: "auto",
         padding: "1.5rem",
+        opacity: open ? 1 : 0,
+        transform: open ? "translateY(0)" : "translateY(-12px)",
+        pointerEvents: open ? "auto" : "none",
+        transition: "opacity var(--duration-panel) var(--ease-standard), transform var(--duration-panel) var(--ease-standard)",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+        <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)" }}>
+          menu
+        </span>
+        <button
+          onClick={onClose}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            padding: 0,
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.55rem",
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            color: "var(--color-ink)",
+          }}
+        >
+          ✕
+        </button>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem 2.5rem", fontSize: "0.75rem" }}>
         {mobileMenuSections.map((section) => (
           <div key={section.heading}>
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.14em",
+                fontSize: "0.5rem",
+                letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "var(--color-moss)",
-                margin: "0.6rem 0 0.3rem",
+                color: "var(--color-cham-dem)",
+                marginBottom: "0.6rem",
+                fontWeight: 600,
                 display: "block",
               }}
             >
               {section.heading}
             </span>
-            {section.items.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={onClose}
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: "0.95rem",
-                  color: "var(--color-ink)",
-                  padding: "0.5rem 0",
-                  display: "block",
-                }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <div>
+              {section.items.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={onClose}
+                  style={{
+                    color: "var(--color-ink)",
+                    padding: "0.45rem 0",
+                    fontSize: "0.75rem",
+                    display: "block",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         ))}
       </div>

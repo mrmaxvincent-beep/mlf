@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ImagePlaceholder } from "./ImagePlaceholder";
 
 /** Auto-advancing hero image story with caption overlay, prev/next arrows, pause-on-hover. */
-export function ImageStoryCarousel({ stories }: { stories: { label: string; caption: string }[] }) {
+export function ImageStoryCarousel({ stories, showCounter = true }: { stories: { label: string; src?: string; caption: string }[]; showCounter?: boolean }) {
   const [index, setIndex] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -30,7 +30,7 @@ export function ImageStoryCarousel({ stories }: { stories: { label: string; capt
 
   return (
     <div style={{ position: "relative", aspectRatio: "16/9" }} onMouseEnter={() => timerRef.current && clearInterval(timerRef.current)} onMouseLeave={start}>
-      <ImagePlaceholder label={current.label} aspectRatio="16/9" style={{ height: "100%" }} />
+      <ImagePlaceholder label={current.label} src={current.src} aspectRatio="16/9" style={{ height: "100%" }} />
       <button
         onClick={() => go(index - 1)}
         aria-label="trước"
@@ -79,25 +79,29 @@ export function ImageStoryCarousel({ stories }: { stories: { label: string; capt
       >
         →
       </button>
-      <span
-        style={{
-          position: "absolute",
-          top: "0.9rem",
-          right: "0.9rem",
-          fontFamily: "var(--font-mono)",
-          fontSize: "0.58rem",
-          letterSpacing: "0.08em",
-          color: "#E9E4D8",
-          background: "rgba(35,46,63,.35)",
-          padding: "0.25rem 0.55rem",
-          borderRadius: 2,
-        }}
-      >
-        {index + 1} / {stories.length}
-      </span>
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, background: "rgba(35,46,63,.55)", padding: "1rem 1.5rem" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.98rem", lineHeight: 1.6, color: "#E9E4D8", textAlign: "center", margin: 0 }}>{current.caption}</p>
-      </div>
+      {showCounter && (
+        <span
+          style={{
+            position: "absolute",
+            top: "0.9rem",
+            right: "0.9rem",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.58rem",
+            letterSpacing: "0.08em",
+            color: "#E9E4D8",
+            background: "rgba(35,46,63,.35)",
+            padding: "0.25rem 0.55rem",
+            borderRadius: 2,
+          }}
+        >
+          {index + 1} / {stories.length}
+        </span>
+      )}
+      {current.caption && (
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, background: "rgba(35,46,63,.55)", padding: "1rem 1.5rem" }}>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.98rem", lineHeight: 1.6, color: "#E9E4D8", textAlign: "center", margin: 0 }}>{current.caption}</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -4,9 +4,9 @@ import { Disclosure } from "./Disclosure";
  * across be-still program pages, referencing retreat hàm-dưỡng and the online retreats. */
 export function TroDuyen() {
   return (
-    <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "58ch" }}>
-      <div className="wrap" style={{ marginBottom: "1.2rem", padding: 0 }}>
-        <span className="eyebrow-serif">trợ duyên cho người hữu duyên</span>
+    <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "72ch" }}>
+      <div style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow" style={{ marginBottom: 0 }}>trợ duyên cho người hữu duyên</span>
       </div>
       <div style={{ marginBottom: "2rem" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1rem" }}>

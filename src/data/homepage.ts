@@ -3,13 +3,13 @@ import { routes } from "@/lib/nav";
 export const entries = [
   {
     href: routes.ngayHien,
-    quote: "trú lại giữa rừng và đất trời Măng Đen",
+    quote: "trú lại Măng Đen",
     name: "ngày-hiền",
     icon: "motif-mai-nha.png",
   },
   {
     href: routes.giua,
-    quote: "gieo mlf ở Huế",
+    quote: "khoảng-dừng ở Huế",
     name: "giữa · middle",
     icon: "motif-to-my.png",
   },
@@ -21,13 +21,13 @@ export const entries = [
   },
   {
     href: routes.beStill,
-    quote: "làm việc sâu với tâm",
+    quote: "làm việc với tâm",
     name: "be-still",
     icon: "motif-gon-nuoc.png",
   },
   {
     href: routes.teaMind,
-    quote: "trà, gốm, cái đẹp thường ngày",
+    quote: "cái đẹp thường ngày",
     name: "tea · mind",
     icon: "motif-chen-tra.png",
   },
@@ -69,23 +69,21 @@ export const veMlfIntro = [
 ];
 
 export const veMlfVanHanh = [
-  "như một mảnh vườn, nương theo mùa mà sống.",
-  "mlf cũng chọn sống theo lẽ ở-yên.",
-  "Không gieo nhu cầu, không vẽ ra hứa hẹn.",
-  "Một chuyến đi, một điều mlf làm… khi lòng mình thấy thuận.",
-  "Ở nhà, có Tâm, có Vũ, có Thuận — nương nhau mà làm, việc này rồi việc khác.",
-  "Con đường này đi chậm. Nhưng nhà mộc chọn nó, vì chẳng biết cách nào khác để lời mình nói ra và việc mình đang làm, là một.",
+  "Tựa một mảnh vườn, mlf cũng nương theo mùa của đất, của trời.",
+  "Một chuyến đi, một điều mlf làm… khi thấy lòng mình thuận. Chúng tôi không gieo nhu cầu, cũng không hứa hẹn kết quả.",
+  "Ở mlf, chỉ có 3 người: Tâm ·  Thuận · Vũ, việc gì cũng đụng tay, nương đỡ nhau mà thành.",
+  "Con đường này chậm, nhưng nhà mộc chọn nó, để lời mình nói ra và việc mình đang làm, là một.",
 ];
 
 export const veOYenIntroA = [
-  "ở-yên là một cách ở lại, ngay giữa những điều không chọn được.",
-  "Khác với ngồi yên một chỗ, ở-yên là những ngày vẫn đi làm, chiều vẫn vội đón con, có hôm còn kẹt giữa dòng xe giờ tan tầm, những tối một mình cặm cụi với deadline chưa xong. ở-yên nằm ngay trong điều thân quen ấy - chỉ khác, người ta không chạy trốn khỏi nó, mà an trú được, ngay ở đó.",
-  "ở-yên không cần ta bỏ phố lên rừng để tìm một điều kiện lý tưởng hơn.",
-  "ở-yên khi ta dám ngồi lại với mình, để cho mối rối đã âm ỉ trong lòng mấy hôm nay, được yên, không khuấy thêm nữa. Rồi tự nó, như bùn trong vại nước để qua đêm, chìm xuống đáy.",
+  "ở-yên là một cách ở lại, ngay giữa những quay cuồng.",
+  "Chiều, vội chạy đón con, đầu còn loạng choạng những việc. Tối, một mình cặm cụi với deadline. Khác với việc ngồi yên lặng lẽ, những lúc như thế... người ta không trốn, chỉ an trú ở đó.",
+  "ở-yên khi ta dám ngồi lại với mình, để cho những mối rối đã âm ỉ trong lòng, được yên, không khuấy thêm nữa. Rồi tự nó, như bùn trong vại nước để qua đêm, chìm xuống đáy.",
   "Và giữa khoảng yên hiếm hoi ấy, người ta chợt nhận ra điều nọ điều kia, mà lâu lắm rồi, chẳng ai cho mình đủ tĩnh để nhớ lại.",
 ];
 
 export const veMlfExits = [
+  { href: routes.conDuongMlf, name: "con đường mlf", desc: "cách mlf bước đi" },
   { href: routes.veMlf, name: "về mlf", desc: "hành trình & cấu trúc của mlf" },
   { href: routes.bienThuChoHy, name: "biên-thư-cho-Hy", desc: "những lá thư riêng từ mlf" },
   { href: routes.chuyenVe, name: "chuyện về", desc: "những người bạn của mlf" },
@@ -102,23 +100,30 @@ export const testimonials = [
     attribution: "M.C · trong hành trình khai tâm",
   },
   {
-    text: "Tôi đã tham gia 3 chuyến retreat ở Măng Đen và 3 chuyến tuần-du đó đây của mlf. Mỗi chuyến đều khác biệt, đều mới mẻ, không chuyến nào giống chuyến nào. Đó là vì từng thời điểm khác nhau, trạng thái tâm bạn đã khác, ngày hôm nay đã không còn như hôm trước và hôm sau đã tiến bộ hơn hôm nay. Đó chính là nét riêng biệt, không lẫn vào đâu được của mlf.",
+    text: "Tôi đã tham gia 3 chuyến retreat ở Măng Đen và 3 chuyến tuần-du đó đây của mlf. Mỗi chuyến đều khác biệt, đều mới mẻ, không chuyến nào giống chuyến nào. Đó là vì từng thời điểm khác nhau, trạng thái tâm bạn đã khác, ngày hôm nay đã không còn như hôm trước và hôm sau đã tiến bộ hơn hôm nay.\n\nĐó chính là nét riêng biệt, không lẫn vào đâu được của mlf. Điều đó không phải tự nhiên mà có được, đó là năng lực tu tập và sự gìn giữ kỷ luật ở chính những con người nơi đây.",
     attribution: "Q.N · Sài Gòn · sau 3 chuyến retreat và 3 chuyến tuần-du",
   },
   {
-    text: "Có những ngày ở nhà mộc, nước mắt con đã suýt rơi vì cảm giác được đón nhận và thấu cảm, thậm chí hơn cả bản thân con hiểu mình.",
+    text: "Có những ngày ở nhà mộc, nước mắt con đã suýt rơi vì cảm giác được đón nhận và thấu cảm, thậm chí hơn cả bản thân con hiểu mình. Và cả những khi đọc những dòng nhận xét của anh Tâm trong nhật ký chữ nghĩa, con cảm giác anh đã nhìn thấy con thực sự, nhưng không hề phán xét. Con biết ơn Người đã dẫn dắt con, đưa con vào trạng thái đêm đen của tâm hồn, để được gặp nhà mộc. Nếu không, con đã là một con rất khác ở hiện tại.",
     attribution: "K.T · lớp viết im lặng chữ nghĩa",
   },
 ];
 
+export const bannerImages = [
+  { id: "banner-01", type: "image" as const, src: "home_4p_01.jpg", label: "ảnh · góc nhà mộc" },
+  { id: "banner-02", type: "image" as const, src: "home_4p_02.jpg", label: "ảnh · trang sổ tay" },
+  { id: "banner-03", type: "video" as const, src: "home_sach.mp4", label: "video · home_sach" },
+  { id: "banner-04", type: "image" as const, src: "home_4p_03.jpg", label: "ảnh · buổi sáng" },
+];
+
 export const vibeImages = [
-  { id: "vibe-01", type: "image" as const, src: "vibe-01.webp", label: "ảnh · góc nhà mộc" },
-  { id: "vibe-02", type: "image" as const, src: "vibe-02.webp", label: "ảnh · trang sổ tay" },
-  { id: "vibe-03", type: "video" as const, label: "video · mặt nước gợn sóng" },
-  { id: "vibe-04", type: "image" as const, src: "vibe-04.webp", label: "ảnh · buổi sáng" },
-  { id: "vibe-05", type: "video" as const, label: "video · mặt nước gợn sóng" },
-  { id: "vibe-06", type: "image" as const, src: "vibe-06.webp", label: "ảnh · hiên nhà" },
-  { id: "vibe-07", type: "image" as const, src: "vibe-07.webp", label: "ảnh · góc nghỉ" },
-  { id: "vibe-08", type: "image" as const, src: "vibe-08.webp", label: "ảnh · đọc sách" },
-  { id: "vibe-09", type: "video" as const, label: "video · mặt nước gợn sóng" },
+  { id: "vibe-01", type: "image" as const, src: "home_vibe01.jpg", label: "ảnh · góc nhà mộc" },
+  { id: "vibe-02", type: "image" as const, src: "home_vibe02.jpg", label: "ảnh · trang sổ tay" },
+  { id: "vibe-03", type: "video" as const, src: "home_moss.mp4", label: "video · home_moss" },
+  { id: "vibe-04", type: "image" as const, src: "home_vibe04.jpg", label: "ảnh · buổi sáng" },
+  { id: "vibe-05", type: "video" as const, src: "home_mua.mp4", label: "video · mặt nước gợn sóng" },
+  { id: "vibe-06", type: "image" as const, src: "vibe06.jpg", label: "ảnh · hiên nhà" },
+  { id: "vibe-07", type: "video" as const, src: "home_troi.mp4", label: "ảnh · góc nghỉ" },
+  { id: "vibe-09", type: "image" as const, src: "vibe08.jpg", label: "ảnh · vibe" },
+  { id: "vibe-08", type: "image" as const, src: "vibe09.jpg", label: "ảnh · vibe" },
 ];

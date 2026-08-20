@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 import { Reveal } from "@/components/Reveal";
@@ -21,6 +22,7 @@ function shuffled<T>(arr: T[]): T[] {
  * note form, and an auto-rotating reader of past notes — backed by Supabase with a static fallback. */
 export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { hints: string[]; notesFallback: Note[]; dayPoem: { tam: string; lines: string[]; attribution: string }; startingTotal: number }) {
   const [greet, setGreet] = useState("chào bạn");
+  const [period, setPeriod] = useState(0);
   const [hintOrder, setHintOrder] = useState(() => hints.map((_, i) => i));
   const [hintPos, setHintPos] = useState(0);
 
@@ -43,6 +45,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
   useEffect(() => {
     const h = new Date().getHours();
     setGreet(h < 11 ? "chào buổi sáng" : h < 14 ? "chào buổi trưa" : h < 18 ? "chào buổi chiều" : "chào buổi tối");
+    setPeriod(h < 11 ? 0 : h < 14 ? 1 : h < 18 ? 2 : 3);
 
     setHintOrder(shuffled(hints.map((_, i) => i)));
     setOrder(shuffled(notesFallback.map((_, i) => i)));
@@ -167,14 +170,40 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
   return (
     <>
       <header style={{ padding: "3rem 0 7rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "2rem" }}>{greet}</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "2rem" }}>{greet}</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.6rem, 9vw, 3.6rem)", color: "var(--color-ink)", margin: "0 0 1.6rem", lineHeight: 1.15 }}>một ngày ở-yên</h1>
         <p style={{ color: "var(--color-stone)", fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "30ch", margin: "0 auto" }}>cùng những người bạn khác, sống chậm lại một ngày — ai ở đâu cứ ở đó.</p>
+
+        <div style={{ position: "relative", maxWidth: "260px", margin: "2.6rem auto 0" }}>
+          <div style={{ position: "absolute", top: "5px", left: 0, right: 0, height: "1px", background: "var(--color-mist)" }} />
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            {["sáng", "trưa", "chiều", "tối"].map((label, i) => (
+              <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
+                <span
+                  style={{
+                    width: i === period ? 11 : 6,
+                    height: i === period ? 11 : 6,
+                    borderRadius: "50%",
+                    background: i === period ? "var(--color-cham-dem)" : "var(--color-mist)",
+                    transition: "all 0.3s ease",
+                  }}
+                />
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.52rem", letterSpacing: "0.06em", color: i === period ? "var(--color-cham-dem)" : "var(--color-stone)" }}>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </header>
 
+      <div style={{ padding: "3rem 0", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ position: "relative", width: "270px", height: "210px" }}>
+          <Image src="/assets/home_lohoa.png" alt="home_lohoa" fill sizes="270px" style={{ objectFit: "contain" }} />
+        </div>
+      </div>
+
       {/* GỢI Ý */}
-      <Reveal style={{ margin: "0 -1.5rem 7rem", padding: "4rem 2.8rem 3.4rem", background: "var(--color-cotton)", borderRadius: 3 }}>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "0.9rem", textAlign: "center" }}>
+      <Reveal style={{ padding: "3.4rem 0", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)", marginBottom: "7rem" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "0.9rem", textAlign: "center" }}>
           có thể bắt đầu từ đây
         </span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.4, color: "var(--color-ink)", textAlign: "center", margin: "0 0 3.2rem" }}>ba gợi ý của ngày-hôm-nay</p>
@@ -188,12 +217,12 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
                   fontWeight: 300,
                   fontSize: "1.15rem",
                   lineHeight: 1,
-                  color: "var(--color-moss)",
+                  color: "var(--color-cham-dem)",
                   flexShrink: 0,
                   width: "2.2rem",
                   height: "2.2rem",
                   borderRadius: "50%",
-                  border: "1px solid var(--color-moss)",
+                  border: "1px solid var(--color-cham-dem)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -206,7 +235,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
           ))}
         </div>
         <div style={{ textAlign: "center", marginTop: "3.4rem" }}>
-          <button onClick={moreHints} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", background: "none", border: "none", color: "var(--color-stone)", cursor: "pointer", padding: 0 }}>
+          <button onClick={moreHints} className="one-day-btn" style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", background: "none", border: "none", color: "var(--color-stone)", cursor: "pointer", padding: 0 }}>
             gợi ý khác →
           </button>
         </div>
@@ -214,7 +243,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
 
       {/* DAY POEM */}
       <Reveal style={{ paddingBottom: "7rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "1rem" }}>{dayPoem.tam}</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "1rem" }}>{dayPoem.tam}</span>
         {dayPoem.lines.map((line) => (
           <p key={line} style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
             {line}
@@ -225,11 +254,24 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
 
       {/* GÓP MỘT NGÀY */}
       <Reveal style={{ padding: "0 0 7rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "2.6rem" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "2.6rem" }}>
           sự hiện-diện của bạn
         </span>
-        <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.4rem, 12vw, 4.6rem)", lineHeight: 1, color: "var(--color-ink)", display: "block", marginBottom: "1.1rem" }}>
-          {fmt(totalDays)}
+        <span
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "clamp(7.5rem, 24vw, 9.5rem)",
+            height: "clamp(7.5rem, 24vw, 9.5rem)",
+            borderRadius: "50%",
+            border: "1px solid var(--color-mist)",
+            marginBottom: "1.6rem",
+          }}
+        >
+          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 9vw, 3.2rem)", lineHeight: 1, color: "var(--color-ink)" }}>
+            {fmt(totalDays)}
+          </span>
         </span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--color-stone)", margin: "0 0 3rem" }}>ngày ở-yên đã được góp vào</p>
         <button
@@ -237,36 +279,38 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
           disabled={contributed}
           style={
             contributed
-              ? { fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-moss)", background: "transparent", border: "none", padding: "0.4rem 0", cursor: "default", whiteSpace: "nowrap" }
-              : { fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", color: "#ffffff", background: "var(--color-ink)", border: "none", padding: "1.05rem 2.8rem", borderRadius: 2, cursor: "pointer", whiteSpace: "nowrap" }
+              ? { fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-cham-dem)", background: "transparent", border: "none", padding: "0.4rem 0", cursor: "default", whiteSpace: "nowrap" }
+              : { fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", color: "#ffffff", background: "var(--color-ink)", border: "none", padding: "1.05rem 2.8rem", borderRadius: "0.6rem", cursor: "pointer", whiteSpace: "nowrap" }
           }
         >
           {contributed ? "hôm nay bạn đã ở-yên" : "tôi góp một ngày"}
         </button>
         {contributed && justContributed ? (
           <div style={{ marginTop: "2.4rem" }}>
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", color: "var(--color-moss)", margin: 0 }}>bạn vừa góp ngày thứ {fmt(mineDayNum)}.</p>
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", color: "var(--color-cham-dem)", margin: 0 }}>bạn vừa góp ngày thứ {fmt(mineDayNum)}.</p>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.9, color: "var(--color-stone)", margin: "0.7rem 0 0" }}>hôm nay là của bạn.</p>
           </div>
         ) : null}
       </Reveal>
 
       {/* VIẾT LỜI NHẮN */}
-      <Reveal style={{ margin: "0 -1.5rem 7rem", position: "relative" }}>
-        <div style={{ position: "relative", background: "var(--color-cham-dem)", padding: "5rem 1.8rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "7rem" }}>
+        <div style={{ position: "relative", border: "1px solid var(--color-cham-dem)", padding: "4.2rem 1.8rem", borderRadius: "1.6rem" }}>
           <div style={{ position: "relative", maxWidth: 440, margin: "0 auto" }}>
-            <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "#ffffff", opacity: 0.85, display: "block", marginBottom: "2.2rem", textAlign: "center" }}>
+            <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)", opacity: 0.9, display: "block", marginBottom: "2.2rem", textAlign: "center" }}>
               để lại một dòng cho người sau
             </span>
 
             {!contributed && !noteSent ? (
-              <p style={{ textAlign: "center", fontFamily: "var(--font-serif)", fontStyle: "italic", color: "#ffffff", opacity: 0.9, fontSize: "1.05rem", lineHeight: 1.9, margin: 0 }}>
-                phần này mở ra sau khi bạn góp một ngày ở-yên.
-              </p>
+              <div style={{ border: "1px solid var(--color-cham-dem)", borderRadius: "0.8rem", padding: "2.2rem 1.8rem", textAlign: "center" }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--color-ink)", opacity: 0.92, fontSize: "1.05rem", lineHeight: 1.9, margin: 0 }}>
+                  phần này mở ra sau khi bạn góp một ngày ở-yên.
+                </p>
+              </div>
             ) : null}
 
             {contributed && !noteSent ? (
-              <div style={{ background: "#ffffff", borderRadius: 6, padding: "2.2rem 1.8rem" }}>
+              <div style={{ background: "var(--color-cotton)", borderRadius: 12, padding: "2.2rem 1.8rem" }}>
                 <p style={{ fontSize: "0.92rem", lineHeight: 1.95, color: "var(--color-stone)", margin: "0 0 1.8rem", textAlign: "center" }}>bạn đang để lại một dòng cho một người lạ sẽ đọc nó vào một ngày nào đó.</p>
                 <textarea
                   value={noteValue}
@@ -284,7 +328,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.4rem" }}>
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: noteValue.length > 170 ? "#b5715c" : "var(--color-stone)" }}>{noteValue.length} / 200</span>
-                  <button onClick={sendNote} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", background: "none", border: "none", color: "var(--color-stone)", padding: 0, cursor: "pointer", whiteSpace: "nowrap" }}>
+                  <button onClick={sendNote} className="one-day-btn" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", background: "none", border: "none", color: "var(--color-stone)", padding: 0, cursor: "pointer", whiteSpace: "nowrap" }}>
                     gửi đi →
                   </button>
                 </div>
@@ -298,8 +342,8 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             ) : null}
 
             {noteSent ? (
-              <div style={{ textAlign: "center", background: "#ffffff", borderRadius: 6, padding: "2.2rem 1.8rem" }}>
-                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", color: "var(--color-moss)", margin: 0 }}>đã nhận.</p>
+              <div style={{ textAlign: "center", background: "var(--color-cotton)", borderRadius: 12, padding: "2.2rem 1.8rem" }}>
+                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", color: "var(--color-cham-dem)", margin: 0 }}>đã nhận.</p>
                 <p style={{ fontSize: "0.85rem", lineHeight: 1.9, color: "var(--color-stone)", margin: "0.8rem auto 0", maxWidth: "38ch" }}>dòng của bạn sẽ hiện ra cho một người lạ nào đó — có thể là sáng mai, có thể là tháng sau.</p>
               </div>
             ) : null}
@@ -309,26 +353,26 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
 
       {/* ĐỌC LỜI NHẮN */}
       <Reveal style={{ padding: "0 0 6rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "0.7rem" }}>
+        <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "0.7rem" }}>
           những người đã ở-yên trước đó
         </span>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-stone)", display: "block", marginBottom: "2.6rem" }}>{fmt(notes.length)} lời nhắn</span>
-        <div style={{ position: "relative", borderRadius: 8, border: "1px solid var(--color-mist)", maxWidth: "44ch", margin: "0 auto" }}>
-          <div style={{ position: "relative", background: "#ffffff", borderRadius: 7, padding: "2.4rem 2rem", minHeight: "9rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <div style={{ transition: "opacity .7s var(--ease-standard), transform .7s var(--ease-standard)", opacity: fading ? 0 : 1, transform: fading ? "translateY(-8px)" : "translateY(0)" }}>
-              <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.25rem", lineHeight: 1.85, color: "var(--color-ink)", display: "block", maxWidth: "40ch", margin: "0 auto" }}>&ldquo;{currentNote?.body}&rdquo;</span>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginTop: "1.6rem", display: "block" }}>— {currentNote?.from}</span>
-            </div>
+        <div style={{ position: "relative", maxWidth: "44ch", margin: "0 auto", minHeight: "9rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <div style={{ transition: "opacity .7s var(--ease-standard), transform .7s var(--ease-standard)", opacity: fading ? 0 : 1, transform: fading ? "translateY(-8px)" : "translateY(0)" }}>
+            <span aria-hidden style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "2.2rem", lineHeight: 1, color: "var(--color-cham)", marginBottom: "0.3rem" }}>&ldquo;</span>
+            <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", display: "block", maxWidth: "40ch", margin: "0 auto" }}>{currentNote?.body}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginTop: "1.6rem", display: "block" }}>— {currentNote?.from}</span>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", marginTop: "2.6rem" }}>
           <div style={{ display: "flex", gap: "0.4rem" }}>
             {Array.from({ length: dotCount }, (_, i) => (
-              <span key={i} style={{ width: 4, height: 4, borderRadius: "50%", display: "inline-block", background: i === activeDot ? "var(--color-moss)" : "var(--color-mist)", transition: "background .3s ease" }} />
+              <span key={i} style={{ width: 4, height: 4, borderRadius: "50%", display: "inline-block", background: i === activeDot ? "var(--color-cham-dem)" : "var(--color-mist)", transition: "background .3s ease" }} />
             ))}
           </div>
           <button
             onClick={() => nextNote(true)}
+            className="one-day-btn"
             style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", background: "none", border: "1px solid var(--color-ink)", color: "var(--color-ink)", cursor: "pointer", padding: "0.7rem 1.4rem", borderRadius: 2 }}
           >
             một lời nhắn khác →

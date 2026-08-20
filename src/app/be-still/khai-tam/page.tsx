@@ -4,18 +4,19 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { Reveal, RevealStagger } from "@/components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import { FaqList } from "@/components/FaqList";
 import { TroDuyen } from "@/components/TroDuyen";
 import { routes } from "@/lib/nav";
 import { notList, requireList, specialList, methods, faqs, writeups } from "@/data/khaiTam";
+import { DiaryCarousel } from "@/components/DiaryCarousel";
 
 export const metadata: Metadata = {
   title: "khai tâm · một không gian để hiểu rõ tâm mình",
   description: "khai tâm là chương trình thực hành nội tâm dựa trên các phương pháp từ thiền học Phật giáo (Vipassana, công án Thiền tông) và triết lý Đông phương. 10 buổi 1-1, 30 ngày.",
 };
 
-const li: React.CSSProperties = { display: "flex", gap: "0.7rem", padding: "0.5rem 0", fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)" };
+const li: React.CSSProperties = { display: "flex", gap: "0.7rem", padding: "0.5rem 0", fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)" };
 
 export default function KhaiTamPage() {
   return (
@@ -24,7 +25,7 @@ export default function KhaiTamPage() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem" }}>
         <Breadcrumb trail={[{ label: "be-still", href: routes.beStill }, { label: "khai tâm" }]} />
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-mist)", display: "block", marginBottom: "1.2rem" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink)", display: "block", marginBottom: "1.2rem" }}>
           chương trình online retreat (1-1) trong 30 ngày
         </span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
@@ -33,54 +34,72 @@ export default function KhaiTamPage() {
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", lineHeight: 1.8, color: "var(--color-stone)", maxWidth: "42ch", margin: "0 0 1.75rem" }}>
           là một không gian để hiểu rõ tâm mình
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 0 2.5rem" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 0 2.5rem" }}>
           khai tâm là chương trình thực hành nội tâm dựa trên các phương pháp từ thiền học Phật giáo (Vipassana, công án Thiền tông) và triết lý Đông phương.
         </p>
       </div>
 
-      <div style={{ height: "44vh", minHeight: 280, maxHeight: 420 }}>
-        <ImagePlaceholder label="ảnh · nhật ký khai tâm" aspectRatio="auto" style={{ height: "100%" }} />
+      <div className="wrap" style={{ margin: "5rem auto", maxWidth: 420 }}>
+        <ImagePlaceholder label="ảnh · nhật ký khai tâm" aspectRatio="4/5" src="/assets/khaitam.jpg" alt="khai-tam" />
       </div>
 
       <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "3.5rem", maxWidth: "56ch", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.06em", color: "var(--color-stone)" }}>10 buổi 1-1 (90 phút/buổi) · 30 đề mục phản chiếu trong 30 ngày</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}>10 buổi 1-1 (90 phút/buổi) · 30 đề mục phản chiếu trong 30 ngày</span>
       </div>
 
-      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
-        <div>
-          <span className="eyebrow-serif">đây không phải</span>
-          {notList.map((item) => (
-            <div key={item} style={li}>
-              <span className="li-mark">·</span>
-              <span style={{ color: "var(--color-stone)" }}>{item}</span>
-            </div>
-          ))}
-        </div>
-        <div>
-          <span className="eyebrow-serif">mà là một thực hành đòi hỏi</span>
-          {requireList.map((item) => (
-            <div key={item} style={li}>
-              <span className="li-mark">·</span>
-              <span>{item}</span>
-            </div>
-          ))}
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ flex: "1 1 200px" }}>
+            <span className="eyebrow-serif" style={{ color: "var(--color-ink)" }}>đây không phải</span>
+            {notList.map((item) => (
+              <div key={item} style={li}>
+                <span className="li-mark">·</span>
+                <span style={{ color: "var(--color-stone)", textDecoration: "line-through", textDecorationColor: "var(--color-mist)" }}>{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-cham-dem)", padding: "0 1.6rem", flexShrink: 0 }}>→</span>
+
+          <div style={{ flex: "1 1 200px" }}>
+            <span className="eyebrow-serif" style={{ color: "var(--color-ink)" }}>mà là một thực hành đòi hỏi</span>
+            {requireList.map((item) => (
+              <div key={item} style={li}>
+                <span className="li-mark">·</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow-serif">điều đặc biệt trong khai tâm</span>
+        <span className="eyebrow" style={{ marginBottom: 0 }}>điều đặc biệt trong khai tâm</span>
       </div>
-      <RevealStagger className="wrap" style={{ marginBottom: "4rem", maxWidth: "56ch" }}>
-        {specialList.map((item) => (
-          <div key={item} style={li}>
-            <span className="li-mark">——</span>
-            <span>{item}</span>
-          </div>
-        ))}
-      </RevealStagger>
+      <div className="wrap" style={{ marginBottom: "4rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", rowGap: "2.5rem" }}>
+          {specialList.map((item, i) => {
+            const [title, ...rest] = item.split(": ");
+            const body = rest.join(": ");
+            return (
+              <Reveal key={item} style={{ flex: "1 1 200px", maxWidth: "240px", padding: "0 1.6rem", borderLeft: i > 0 ? "1px solid var(--color-mist)" : "none" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "0.8rem" }}>
+                  0{i + 1}
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.7rem" }}>
+                  {title}
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)" }}>
+                  {body}
+                </span>
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
 
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
-        <span className="eyebrow-serif">phương pháp làm việc</span>
+        <span className="eyebrow" style={{ marginBottom: 0 }}>phương pháp làm việc</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <div style={{ position: "relative", paddingLeft: "1.8rem" }}>
@@ -96,13 +115,13 @@ export default function KhaiTamPage() {
                     width: "1.4rem",
                     height: "1.4rem",
                     borderRadius: "50%",
-                    border: "1px solid var(--color-moss)",
+                    border: "1px solid var(--color-cham-dem)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     fontFamily: "var(--font-mono)",
                     fontSize: "0.58rem",
-                    color: "var(--color-moss)",
+                    color: "var(--color-cham-dem)",
                   }}
                 >
                   {m.n}
@@ -111,7 +130,7 @@ export default function KhaiTamPage() {
               {m.title ? (
                 <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.02rem", color: "var(--color-ink)", marginBottom: "0.6rem" }}>{m.title}</span>
               ) : null}
-              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.9rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{m.body}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{m.body}</p>
               {m.points ? (
                 <div style={{ marginTop: "0.75rem" }}>
                   {m.points.map((p) => (
@@ -127,26 +146,27 @@ export default function KhaiTamPage() {
         </div>
       </Reveal>
 
-      <div className="wrap" style={{ padding: "2rem 1.5rem 5rem", textAlign: "center" }}>
-        <p style={{ maxWidth: "52ch", margin: "0 auto", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.35rem", lineHeight: 1.5, color: "var(--color-ink)", fontWeight: 300 }}>
-          /&nbsp;&nbsp;bên trong mỗi người vốn có một dòng chảy của sự sáng tỏ — chỉ là có những &ldquo;tảng đá&rdquo; đang chặn nó lại.&nbsp;&nbsp;/
+      <Reveal className="wrap" style={{ padding: "2rem 1.5rem 5rem", textAlign: "center" }}>
+        <span aria-hidden style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "2.2rem", lineHeight: 1, color: "var(--color-cham)", marginBottom: "0.4rem" }}>
+          &ldquo;
+        </span>
+        <p style={{ maxWidth: "52ch", margin: "0 auto", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", lineHeight: 1.55, color: "var(--color-ink)", fontWeight: 300 }}>
+          bên trong mỗi người vốn có một dòng chảy của sự sáng tỏ — chỉ là có những tảng đá đang chặn nó lại.
         </p>
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow-serif">nhật ký khai tâm</span>
+        <span className="eyebrow" style={{ marginBottom: 0 }}>nhật ký khai tâm</span>
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>với những hướng dẫn cụ thể để tương tác và làm việc trong 30 ngày</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>với những hướng dẫn cụ thể để tương tác và làm việc trong 30 ngày</p>
       </div>
 
-      <div style={{ marginBottom: "2.5rem", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 2 }}>
-        {[1, 2, 3, 4].map((i) => (
-          <ImagePlaceholder key={i} label={`ảnh · trang nhật ký ${i}`} aspectRatio="3/4" />
-        ))}
+      <div style={{ marginBottom: "2.5rem" }}>
+        <DiaryCarousel />
       </div>
 
-      <div className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+      <div className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch", textAlign: "center" }}>
         <a
           className="go mono-link"
           href="https://docs.google.com/presentation/d/e/2PACX-1vTSUJQnuXngdmcoKqpqr8_4HjOdcrWWIwslJt8aemivIfPYCmCiGdfcUOem6VvFc7MBgn4Jrji0FgrI/pub?start=false&loop=false&delayms=3000"
@@ -158,12 +178,12 @@ export default function KhaiTamPage() {
         </a>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow-serif">những ghi chép về khai tâm</span>
+      <div className="wrap" style={{ marginBottom: "1.2rem", textAlign: "center" }}>
+        <span className="eyebrow" style={{ marginBottom: 0 }}>những ghi chép về khai tâm</span>
       </div>
       <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
         {writeups.map((w) => (
-          <div key={w.href} style={li}>
+          <div key={w.href} style={{ ...li, justifyContent: "center" }}>
             <span className="li-mark">—</span>
             <a className="go mono-link" href={w.href} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-sans)", color: "var(--color-ink)" }}>
               {w.title} <span className="ar">→</span>
@@ -179,7 +199,7 @@ export default function KhaiTamPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "58ch", borderTop: "1px solid var(--color-mist)", paddingTop: "2rem" }}>
-        <span className="eyebrow-serif">! một điều cần biết trước khi bước vào hành trình</span>
+        <span className="eyebrow-serif" style={{ color: "var(--color-ink)" }}>! một điều cần biết trước khi bước vào hành trình</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-stone-alt)", textAlign: "justify", margin: "0 0 1rem" }}>
           Khai tâm là một không gian sâu, không phải trị liệu tâm lý, và người đồng hành không phải là nhà trị liệu. Những gì được viết trong nhật ký khai tâm và chia sẻ trong các buổi 1-1 được giữ kín, trong phạm vi cho phép của pháp luật.
         </p>
@@ -188,10 +208,10 @@ export default function KhaiTamPage() {
         </p>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow-serif">câu hỏi thường gặp</span>
+      <div className="wrap" style={{ marginBottom: "1.2rem", maxWidth: "72ch" }}>
+        <span className="eyebrow" style={{ marginBottom: 0 }}>câu hỏi thường gặp</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "58ch" }}>
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "72ch" }}>
         <FaqList items={faqs} />
       </div>
 

@@ -39,35 +39,25 @@ export function UpcomingEvents({ fallback }: { fallback: Event[] }) {
   return (
     <div
       className="upcoming-grid wrap"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        backgroundImage: "linear-gradient(var(--color-mist), var(--color-mist))",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "1px 50%",
-        backgroundPosition: "center left",
-      }}
+      style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}
     >
-      {events.map((u) => (
+      {events.map((u, i) => (
         <Link
           key={u.href}
           href={u.href}
           className="go"
           style={{
             display: "block",
-            padding: "2rem 1.5rem",
-            backgroundImage: "linear-gradient(var(--color-mist), var(--color-mist))",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "1px 50%",
-            backgroundPosition: "center right",
+            padding: "1.5rem 1.5rem",
             minWidth: 0,
             overflowWrap: "break-word",
+            borderRight: i < 2 ? "1px solid var(--color-mist)" : "none",
           }}
         >
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", color: "var(--color-stone)", display: "block", marginBottom: "1rem" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", color: "var(--color-stone)", display: "block", marginBottom: "0.75rem" }}>
             {u.when}
           </span>
-          <span style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.6rem" }}>
+          <span style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.5rem" }}>
             <span className="nm" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-ink)" }}>
               {u.name}
             </span>

@@ -40,7 +40,7 @@ export function KhoLoiNhan({ notesFallback }: { notesFallback: Note[] }) {
   return (
     <>
       <header style={{ padding: "2rem 0 5rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--color-moss)", display: "block", marginBottom: "2rem" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "2rem" }}>
           {fmt(notes.length)} lời nhắn đã được gửi
         </span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 7vw, 2.8rem)", color: "var(--color-ink)", margin: 0, lineHeight: 1.15 }}>kho lời nhắn ở-yên</h1>

@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const works = [
-  { label: "ảnh · chén gốm men lam", title: "chén — men lam" },
-  { label: "ảnh · bình gốm mộc", title: "bình — mộc" },
-  { label: "ảnh · đĩa gốm hoa văn", title: "đĩa — hoa văn khắc tay" },
-  { label: "ảnh · ấm trà gốm", title: "ấm — dáng tròn" },
+  { label: "ảnh · Chawan wabi", title: "Chawan wabi", src: "/assets/gom1.jpg" },
+  { label: "ảnh · Chawan Shigaraki", title: "Chawan Shigaraki", src: "/assets/gom2.jpg" },
+  { label: "ảnh · Chawan grey", title: "Chawan grey", src: "/assets/gom3.jpg" },
+  { label: "ảnh · Chawan Cánh Anh Đào", title: "Chawan Cánh Anh Đào", src: "/assets/gom4.jpg" },
 ];
 
 export default function TeaMindGomPage() {
@@ -40,7 +40,7 @@ export default function TeaMindGomPage() {
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>

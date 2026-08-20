@@ -52,7 +52,7 @@ export const hints = [
   "chờ nước sôi mà không rút điện thoại ra.",
   "đứng chờ thang máy, đếm hơi thở thay vì mở màn hình.",
   "dừng đèn đỏ, nhìn thẳng, không với tay lấy điện thoại.",
-  "xếp hàng mà không làm gì khác ngoài xếp hàng.",
+  "khi xếp hàng hay đợi tới lượt, mà không làm gì khác ngoài xếp hàng hay đợi tới lượt.",
   "ngồi hết một cơn mưa, không chạy đi đâu.",
   "nằm nhìn trần nhà một lúc trước khi ngủ.",
   "ngồi trong phòng tối, cho đến khi mắt thích nghi được với bóng tối, chưa bật đèn vội.",

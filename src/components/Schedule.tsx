@@ -12,12 +12,12 @@ export function Schedule({ rows }: { rows: ScheduleRow[] }) {
             display: "grid",
             gridTemplateColumns: "9rem 1fr",
             gap: "1rem",
-            padding: "0.9rem 1.1rem",
+            padding: "0.6rem 1.1rem",
             borderBottom: i < rows.length - 1 ? "1px solid var(--color-mist)" : "none",
             background: r.highlight ? "var(--color-cotton)" : "transparent",
           }}
         >
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.04em", color: "var(--color-stone)" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.04em", color: "var(--color-ink)" }}>
             {r.time}
           </span>
           <span

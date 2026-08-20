@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const works = [
-  { label: "ảnh · tranh màu nước", title: "chiều mưa mộc thất" },
-  { label: "ảnh · tranh phong cảnh", title: "măng mô, mùa hạ vàng" },
-  { label: "ảnh · tranh tĩnh vật trà", title: "tĩnh vật — chén trà" },
-  { label: "ảnh · tranh chân dung", title: "một dáng ngồi yên" },
+  { label: "ảnh · tranh màu nước", title: "", src: "/assets/teamind_tranh1.jpg" },
+  { label: "ảnh · tranh phong cảnh", title: "", src: "/assets/teamind_tranh2.jpg" },
+  { label: "ảnh · tranh tĩnh vật trà", title: "", src: "/assets/teamind_tranh03.jpg" },
+  { label: "ảnh · tranh chân dung", title: "", src: "/assets/teamind_tranh4.jpg" },
 ];
 
 export default function TeaMindTranhPage() {
@@ -40,7 +40,7 @@ export default function TeaMindTranhPage() {
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>

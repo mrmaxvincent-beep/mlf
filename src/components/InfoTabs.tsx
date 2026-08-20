@@ -8,7 +8,7 @@ export function InfoTabs({ tabs }: { tabs: { label: string; content: ReactNode }
 
   return (
     <div>
-      <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "58ch" }}>
+      <div className="wrap-wide" style={{ marginBottom: "2rem", maxWidth: "672px" }}>
         <div style={{ display: "flex", gap: "2rem", borderBottom: "1px solid var(--color-mist)" }}>
           {tabs.map((t, i) => (
             <button
@@ -22,7 +22,7 @@ export function InfoTabs({ tabs }: { tabs: { label: string; content: ReactNode }
                 textTransform: "uppercase",
                 background: "none",
                 border: "none",
-                borderBottom: `2px solid ${active === i ? "var(--color-moss)" : "transparent"}`,
+                borderBottom: `2px solid ${active === i ? "var(--color-cham-dem)" : "transparent"}`,
                 cursor: "pointer",
                 padding: "0.7rem 0",
                 color: active === i ? "var(--color-ink)" : "var(--color-stone)",
@@ -33,7 +33,7 @@ export function InfoTabs({ tabs }: { tabs: { label: string; content: ReactNode }
           ))}
         </div>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <div className="wrap-wide" style={{ marginBottom: "5rem", maxWidth: "672px" }}>
         {tabs[active].content}
       </div>
     </div>

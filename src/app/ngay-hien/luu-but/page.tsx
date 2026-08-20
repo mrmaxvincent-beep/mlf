@@ -27,8 +27,10 @@ export default function LuuButPage() {
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>những lời thì thầm của người đã đến ở nhà mộc</span>
       </div>
 
-      <div style={{ marginTop: "2.5rem", height: "50vh", minHeight: 320, maxHeight: 500 }}>
-        <ImagePlaceholder label="ảnh · trang lưu bút viết tay" aspectRatio="auto" style={{ height: "100%" }} />
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · trang lưu bút viết tay" aspectRatio="16/12" src="/assets/ngayhien_luubut1.jpg" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · lưu bút 2" aspectRatio="16/12" src="/assets/ngayhien_luubut2.jpg" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · lưu bút 3" aspectRatio="16/12" src="/assets/ngayhien_luubut3.jpg" alt="lưu bút" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>

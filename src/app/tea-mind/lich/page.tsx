@@ -32,15 +32,16 @@ export default function TeaMindLichPage() {
         </span>
       </div>
 
-      <div style={{ height: "48vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm" aspectRatio="auto" style={{ height: "100%" }} />
+      <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", height: "auto" }}>
+        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm 1" aspectRatio="3/4" src="/assets/teamind_lich01.jpg" />
+        <ImagePlaceholder label="ảnh · bộ lịch chén trà tâm 2" aspectRatio="3/4" src="/assets/teamind_lich02.jpg" />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Mỗi tháng là một chén trà, một mùa trong tâm, một lời nhắc rất khẽ để quay về với hơi thở và sự sống đang có mặt.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Mỗi khi ánh mắt chạm vào chiếc chén trà, tự nhiên có một khoảng dừng nhẹ trong ngày — mười hai mùa tâm, mười hai nhịp thở, để năm mới đi qua một cách hiền hòa, tĩnh lặng và tròn đầy.
         </p>
       </Reveal>

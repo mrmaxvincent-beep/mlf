@@ -32,24 +32,24 @@ export default function ClariTeaPage() {
       </div>
 
       <div className="wrap" style={{ margin: "4rem auto", maxWidth: 420 }}>
-        <ImagePlaceholder label="ảnh · chén trà, clari-tea" aspectRatio="4/5" />
+        <ImagePlaceholder label="ảnh · chén trà, clari-tea" aspectRatio="4/5" src="/assets/claritea.jpg" alt="clari-tea" />
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "42ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.95rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
           clari-tea là những buổi gặp 1-1, ngồi xuống - chuyện trò bên chén trà, để mọi thứ tỏ tường dưới sự bén nhạy của một cái tâm chân thật.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.9rem", lineHeight: 2, color: "var(--color-stone)", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-stone)", margin: 0 }}>
           dành cho những ai đang mất phương hướng, trong trạng thái rối ren và cần nhìn lại mọi thứ một cách thấu đáo.
         </p>
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "38ch", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "1.5rem" }}>
-          một buổi trà gồm //
+          một buổi trà gồm
         </span>
         {teaSteps.map((item) => (
-          <p key={item} style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.9rem", lineHeight: 2.2, color: "var(--color-ink)", margin: 0 }}>
+          <p key={item} style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2.2, color: "var(--color-ink)", margin: 0 }}>
             {item}
           </p>
         ))}
@@ -57,10 +57,10 @@ export default function ClariTeaPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "38ch", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "1.5rem" }}>
-          ngôn ngữ của buổi gặp //
+          ngôn ngữ của buổi gặp
         </span>
         {tone.map((item) => (
-          <p key={item} style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.9rem", lineHeight: 2.2, color: "var(--color-ink)", margin: 0 }}>
+          <p key={item} style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2.2, color: "var(--color-ink)", margin: 0 }}>
             {item}
           </p>
         ))}

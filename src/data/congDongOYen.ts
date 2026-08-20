@@ -23,27 +23,27 @@ export const reasons = [
   {
     en: "lived experience",
     title: "đọc sâu — từ trải nghiệm thật",
-    desc: "Giữa quá nhiều điều được viết về sống chậm, ăn chay, thiền tập — không phải tất cả đều đến từ chỗ đã sống qua. Những gì viết trong ở-yên không phải lý thuyết nhặt lại từ sách hay từ người khác, mà là điều mlf đã thực hành, đã sai, đã sửa qua nhiều năm cùng trải nghiệm của bản thân mình. Bạn không cần tự sàng lọc giữa hàng trăm nguồn nữa.",
+    desc: "Những gì viết trong ở-yên không phải lý thuyết nhặt lại từ sách hay từ người khác, mà là điều mlf đã thực hành, đã sai, đã sửa qua nhiều năm. Bạn không cần tự sàng lọc giữa hàng trăm nguồn nữa.",
     motif: "am-tra",
   },
   {
     en: "wholeness",
     title: "toàn diện — nối liền các mảnh đời sống",
-    desc: "Đời sống không chia thành từng ô riêng — chuyện ăn, chuyện ngủ, chuyện làm việc, chuyện ở bên người thân, tất cả vốn là một dòng chảy chung. Ở-yên nối chúng lại: không gian sống, không gian cơ thể, không gian nội tâm, không gian kết nối — để khi một chỗ trong bạn rối, bạn nhận ra đó không phải chuyện riêng lẻ, mà là một mắt xích trong toàn bộ.",
+    desc: "Đời sống không chia thành từng ô riêng: chuyện ăn, chuyện ngủ, chuyện làm việc, chuyện ở bên người thân, tất cả vốn là một dòng chảy chung. ở-yên nối chúng lại: không gian sống, không gian cơ thể, không gian nội tâm, không gian kết nối. Để khi tới một chỗ rối, bạn nhận ra đó không phải chuyện riêng lẻ, mà là một mắt xích trong toàn bộ.",
     motif: "nui-suong",
   },
   {
     en: "safe space",
     title: "cộng đồng riêng tư — an toàn để nói thật",
-    desc: "Có những điều khó nói giữa đời thường: mệt với gia đình mà không biết ngỏ cùng ai, ăn chay chưa trọn mà ngại nói ra, thiền mà tâm vẫn loạn mà sợ bị xem là chưa đủ cố gắng. Ở-yên là một nhóm nhỏ, riêng tư, gồm những người đang đi trên một nhịp gần giống nhau — nơi những điều ấy có thể được nói ra mà không bị khuyên dạy, không bị đánh giá, chỉ được lắng nghe.",
+    desc: "Có những điều khó nói, không biết ngỏ cùng ai. ở-yên là một nhóm nhỏ, riêng tư, gồm những người đang đi trên một nhịp gần giống nhau. Nơi có thể nói ra mà không bị khuyên dạy hay đánh giá.",
     motif: "mam-la",
   },
 ];
 
 export const keepers = [
-  { role: "ẩm thực & tổ ấm", name: "Vũ", label: "ảnh · Vũ", desc: "người bảo vệ cái đẹp, đầu bếp chay, đưa ta thật sự trở về với căn bếp và ngôi nhà." },
-  { role: "cơ thể & dưỡng sinh", name: "Thuận", label: "ảnh · Thuận", desc: "người chăm sóc thân thể bằng yoga và dưỡng sinh, để lắng nghe cơ thể theo nhịp thuận tự nhiên." },
-  { role: "nội tâm & thiền tập", name: "Tâm", label: "ảnh · Tâm", desc: "người đồng hành tinh thần, dẫn dắt những buổi thiền và quán chiếu, nhận ra khoảng sáng tối nơi nội tâm." },
+  { role: "ẩm thực & tổ ấm", name: "Vũ", label: "ảnh · Vũ", src: "/assets/vu.png", desc: "người bảo vệ cái đẹp, đầu bếp chay, đưa ta thật sự trở về với căn bếp và ngôi nhà." },
+  { role: "cơ thể & dưỡng sinh", name: "Thuận", label: "ảnh · Thuận", src: "/assets/thuan.png", desc: "người chăm sóc thân thể bằng yoga và dưỡng sinh, để lắng nghe cơ thể theo nhịp thuận tự nhiên." },
+  { role: "nội tâm & thiền tập", name: "Tâm", label: "ảnh · Tâm", src: "/assets/tam.png", desc: "người đồng hành tinh thần, dẫn dắt những buổi thiền và quán chiếu, nhận ra khoảng sáng tối nơi nội tâm." },
 ];
 
 export const voices = [
@@ -58,5 +58,5 @@ export const faqs = [
   { q: `"cộng đồng này có thật không hay chỉ là admin đăng bài?"`, a: "Ở-yên được thiết kế như một tổ ấm — có người ở trong đó. Ngoài nội dung được cập nhật định kỳ, group có các buổi thực hành online cùng nhau. Tiếng nói của bạn là một phần của ở-yên, không chỉ là người đọc." },
   { q: `"tôi có thể tham gia bất cứ lúc nào không?"`, a: "Có — mức phí thành viên hiện tại là 990.000đ cho quyền truy cập trọn đời. Nhắn cho mlf nếu bạn muốn biết thêm chi tiết." },
   { q: `"tôi sẽ nhận được gì cụ thể?"`, a: "Ở-yên không hứa một kết quả đo được. Nhưng người ở trong đó thường bắt đầu nhận ra: họ biết cách dừng lại hơn, biết nghe cơ thể hơn, và ít cô đơn hơn trong hành trình này — vì có người đang đi cùng." },
-  { q: `"200 bài viết có sẵn hết ngay không?"`, a: "Nội dung đang được phát triển và hoàn thiện dần — như một khu vườn đang lớn lên. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian." },
+  { q: `"200 bài viết có sẵn hết ngay không?"`, a: "Nội dung đang được phát triển và hoàn thiện dần. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian." },
 ];

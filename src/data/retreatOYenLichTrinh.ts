@@ -2,6 +2,7 @@ import type { ItineraryDay } from "@/components/ItinerarySchedule";
 
 export const days: ItineraryDay[] = [
   {
+    id: "day1",
     label: "ngày 01 · ngày đầu",
     theme: "nhìn lại những gì đang làm mình nặng nề",
     rows: [
@@ -16,6 +17,7 @@ export const days: ItineraryDay[] = [
     ],
   },
   {
+    id: "day2",
     label: "ngày 02 · ngày thứ hai",
     theme: "học cách buông bớt",
     rows: [
@@ -29,6 +31,7 @@ export const days: ItineraryDay[] = [
     ],
   },
   {
+    id: "day3",
     label: "ngày 03 · ngày giữa",
     theme: "tìm khoảng yên trong lòng",
     rows: [
@@ -43,6 +46,7 @@ export const days: ItineraryDay[] = [
     ],
   },
   {
+    id: "day4",
     label: "ngày 04 · ngày thứ tư",
     theme: "mở rộng, thở nhẹ hơn",
     rows: [
@@ -56,6 +60,7 @@ export const days: ItineraryDay[] = [
     ],
   },
   {
+    id: "day5",
     label: "ngày 05 · ngày cuối",
     theme: "sống nhẹ nhàng",
     rows: [
@@ -69,3 +74,11 @@ export const days: ItineraryDay[] = [
     ],
   },
 ];
+
+const navLabels = ["nhìn lại", "buông bớt", "ở-yên", "mở lòng", "thảnh thơi"];
+
+export const journeyNav = days.map((d, i) => ({
+  anchor: `#${d.id}`,
+  num: String(i + 1).padStart(2, "0"),
+  short: navLabels[i] ?? d.theme,
+}));

@@ -8,6 +8,7 @@ import { ChangTabs } from "@/components/ChangTabs";
 import { InfoTabs } from "@/components/InfoTabs";
 import { Disclosure } from "@/components/Disclosure";
 import { DayCard } from "@/components/DayCard";
+import { LazyYoutubeEmbed } from "@/components/LazyYoutubeEmbed";
 import { routes } from "@/lib/nav";
 import { needPairs, yogaList, therapyList, gth, changList, scheduleRows, newcomerList, safetyGroups, gearList, ptIssues, testimonials } from "@/data/thinhKhong";
 
@@ -171,18 +172,12 @@ export default function ThinhKhongPage() {
         <span className="eyebrow" style={{ color: "var(--color-ink)" }}>một buổi tập online trông như thế nào</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: 640 }}>
-        <div style={{ position: "relative", aspectRatio: "16/9", overflow: "hidden", borderRadius: "0.4rem" }}>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/W2LE7gGvdhg"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-          />
-        </div>
+        <LazyYoutubeEmbed
+          videoId="W2LE7gGvdhg"
+          thumbnailSrc="/assets/thinhkhong02.webp"
+          thumbnailLabel="một buổi tập online thinh-không"
+          aspectRatio="16/9"
+        />
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.7, color: "var(--color-stone)", margin: "0.8rem 0 0", textAlign: "center" }}>
           một trích đoạn buổi tập online cùng Thuận — để bạn hình dung nhịp lớp trước khi tham gia.
         </p>

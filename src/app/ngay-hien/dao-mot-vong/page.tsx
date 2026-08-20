@@ -10,6 +10,7 @@ import { Motif } from "@/components/Motif";
 import { ImageStoryCarousel } from "@/components/ImageStoryCarousel";
 import { GuestWhyRotator } from "@/components/GuestWhyRotator";
 import { AmenityTabs } from "@/components/AmenityTabs";
+import { LazyYoutubeEmbed } from "@/components/LazyYoutubeEmbed";
 import { routes } from "@/lib/nav";
 import { stories, spots, rooms, sharedSpaces, privateSpaces, vehicles, amenities, foodPoints, foodGallery, guestWhys } from "@/data/daoMotVong";
 
@@ -250,17 +251,12 @@ export default function DaoMotVongPage() {
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>một thước phim ngắn, để bạn hình dung nhịp sống ở đây trước khi ghé qua.</p>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: 800 }}>
-        <div style={{ position: "relative", aspectRatio: "16/9" }}>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/rXQopzfv3vw?controls=0&modestbranding=1&rel=0&showinfo=0&fs=0"
-            title="một vòng quanh nhà mộc"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            style={{ position: "absolute", top: 0, left: 0 }}
-          />
-        </div>
+        <LazyYoutubeEmbed
+          videoId="rXQopzfv3vw"
+          thumbnailSrc="/assets/ngayhien_daomotvong02.webp"
+          thumbnailLabel="một vòng quanh nhà mộc"
+          aspectRatio="16/9"
+        />
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>

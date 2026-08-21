@@ -41,6 +41,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "vi_VN",
     url: "https://moclittlefarm.com",
+    images: [
+      {
+        url: "https://moclittlefarm.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "mộc little farm — slow stay & retreat ở-yên, Măng Đen",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "mộc little farm — slow stay & retreat ở-yên, Măng Đen",
+    description: "Retreat farm giữa Măng Đen, theo triết lý ở-yên — cho ai muốn một chuyến đi chậm (slow stay), không lịch trình dày.",
+    images: ["https://moclittlefarm.com/og-image.jpg"],
   },
   robots: "index, follow",
   alternates: {

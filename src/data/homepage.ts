@@ -5,37 +5,37 @@ export const entries = [
     href: routes.ngayHien,
     quote: "trú lại Măng Đen",
     name: "ngày-hiền",
-    icon: "motif-mai-nha.png",
+    icon: "motif-mai-nha.webp",
   },
   {
     href: routes.giua,
     quote: "khoảng-dừng ở Huế",
     name: "giữa · middle",
-    icon: "motif-to-my.png",
+    icon: "motif-to-my.webp",
   },
   {
     href: routes.tuanDu,
     quote: "du ngoạn đó đây",
     name: "tuần-du",
-    icon: "motif-loi-mon.png",
+    icon: "motif-loi-mon.webp",
   },
   {
     href: routes.beStill,
     quote: "làm việc với tâm",
     name: "be-still",
-    icon: "motif-gon-nuoc.png",
+    icon: "motif-gon-nuoc.webp",
   },
   {
     href: routes.teaMind,
     quote: "cái đẹp thường ngày",
     name: "tea · mind",
-    icon: "motif-chen-tra.png",
+    icon: "motif-chen-tra.webp",
   },
   {
     href: routes.thinhKhong,
     quote: "thực hành yoga",
     name: "thinh · không",
-    icon: "motif-thien-toa.png",
+    icon: "motif-thien-toa.webp",
   },
 ];
 
@@ -110,20 +110,20 @@ export const testimonials = [
 ];
 
 export const bannerImages = [
-  { id: "banner-01", type: "image" as const, src: "home_4p_01.jpg", label: "ảnh · góc nhà mộc" },
-  { id: "banner-02", type: "image" as const, src: "home_4p_02.jpg", label: "ảnh · trang sổ tay" },
+  { id: "banner-01", type: "image" as const, src: "home_4p_01.webp", label: "ảnh · góc nhà mộc" },
+  { id: "banner-02", type: "image" as const, src: "home_4p_02.webp", label: "ảnh · trang sổ tay" },
   { id: "banner-03", type: "video" as const, src: "home_sach.mp4", label: "video · home_sach" },
-  { id: "banner-04", type: "image" as const, src: "home_4p_03.jpg", label: "ảnh · buổi sáng" },
+  { id: "banner-04", type: "image" as const, src: "home_4p_03.webp", label: "ảnh · buổi sáng" },
 ];
 
 export const vibeImages = [
-  { id: "vibe-01", type: "image" as const, src: "home_vibe01.jpg", label: "ảnh · góc nhà mộc" },
-  { id: "vibe-02", type: "image" as const, src: "home_vibe02.jpg", label: "ảnh · trang sổ tay" },
+  { id: "vibe-01", type: "image" as const, src: "home_vibe01.webp", label: "ảnh · góc nhà mộc" },
+  { id: "vibe-02", type: "image" as const, src: "home_vibe02.webp", label: "ảnh · trang sổ tay" },
   { id: "vibe-03", type: "video" as const, src: "home_moss.mp4", label: "video · home_moss" },
-  { id: "vibe-04", type: "image" as const, src: "home_vibe04.jpg", label: "ảnh · buổi sáng" },
+  { id: "vibe-04", type: "image" as const, src: "home_vibe04.webp", label: "ảnh · buổi sáng" },
   { id: "vibe-05", type: "video" as const, src: "home_mua.mp4", label: "video · mặt nước gợn sóng" },
-  { id: "vibe-06", type: "image" as const, src: "vibe06.jpg", label: "ảnh · hiên nhà" },
+  { id: "vibe-06", type: "image" as const, src: "vibe06.webp", label: "ảnh · hiên nhà" },
   { id: "vibe-07", type: "video" as const, src: "home_troi.mp4", label: "ảnh · góc nghỉ" },
-  { id: "vibe-09", type: "image" as const, src: "vibe08.jpg", label: "ảnh · vibe" },
-  { id: "vibe-08", type: "image" as const, src: "vibe09.jpg", label: "ảnh · vibe" },
+  { id: "vibe-09", type: "image" as const, src: "vibe08.webp", label: "ảnh · vibe" },
+  { id: "vibe-08", type: "image" as const, src: "vibe09.webp", label: "ảnh · vibe" },
 ];

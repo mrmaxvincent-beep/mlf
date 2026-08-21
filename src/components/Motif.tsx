@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 const motifs = {
-  "am-tra": "motif-am-tra.png",
+  "am-tra": "motif-am-tra.webp",
   "chen-tra": "motif-chen-tra.svg",
-  "dep": "motif-dep.png",
-  "dom-muc": "motif-dom-muc.png",
+  "dep": "motif-dep.webp",
+  "dom-muc": "motif-dom-muc.webp",
   "gon-nuoc": "motif-gon-nuoc.svg",
-  "hien-nha": "motif-hien-nha.png",
+  "hien-nha": "motif-hien-nha.webp",
   "loi-mon": "motif-loi-mon.svg",
   "mai-nha": "motif-mai-nha.svg",
-  "mam-la": "motif-mam-la.png",
-  "nui-suong": "motif-nui-suong.png",
-  "song-nuoc": "motif-song-nuoc.png",
+  "mam-la": "motif-mam-la.webp",
+  "nui-suong": "motif-nui-suong.webp",
+  "song-nuoc": "motif-song-nuoc.webp",
   "thien-toa": "motif-thien-toa.svg",
   "to-my": "motif-to-my.svg",
 } as const;

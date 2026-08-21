@@ -32,7 +32,6 @@ export function LetterReader({ letters }: { letters: Letter[] }) {
     <div className="letters-shell">
       <div className="idx-rail">
         <div style={{ position: "relative" }}>
-          <div style={{ position: "absolute", left: "0.3rem", top: "0.85rem", bottom: "0.85rem", width: "1px", background: "var(--color-mist)" }} />
           {letters.map((l, i) => {
             const isActive = i === active;
             return (

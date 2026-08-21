@@ -3,6 +3,7 @@
 // URLs readable and portable. Update here once a page.tsx lands at that route.
 export const routes = {
   home: "/",
+  en: "/en",
   ngayHien: "/ngay-hien",
   giua: "/giua",
   tuanDu: "/tuan-du",

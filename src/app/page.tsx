@@ -108,7 +108,9 @@ export default function HomePage() {
                 <span style={{ position: "absolute", left: "50%", bottom: 0, transform: "translateX(-50%)", width: 3, height: 3, borderRadius: "50%", background: "var(--color-paper-dem)", display: "block" }} />
               </span>
               <span style={{ color: "var(--color-cham-suong)" }}>|</span>
-              <span style={{ color: "var(--color-paper-dem)" }}>english</span>
+              <Link href={routes.en} style={{ color: "var(--color-paper-dem)" }}>
+                english
+              </Link>
             </div>
           </div>
           <div style={{ textAlign: "right" }}>

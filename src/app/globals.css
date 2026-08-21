@@ -166,6 +166,16 @@ a:hover .ar {
   -webkit-background-clip: unset;
 }
 
+/* Multi-line link rows (title + description) — the shimmer sweep above reads
+   well on short single-line links, but washes out longer body text, so these
+   just shift the row's border color on hover instead. */
+.link-row {
+  transition: border-color var(--duration-hover) var(--ease-standard);
+}
+.link-row:hover {
+  border-color: var(--color-cham-dem);
+}
+
 /* Photo hover-zoom — any image inside a link or button breathes in very
    slightly, very slowly. Site-wide via one rule rather than touching every
    photo card. */

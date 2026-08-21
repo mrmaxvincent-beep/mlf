@@ -137,7 +137,7 @@ export default function HomePage() {
         <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem 1.25rem", padding: "0.5rem 1.5rem 0" }}>
           {entries.map((e) => (
             <div key={e.href} style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              <Link href={e.href} className="link-sweep" style={{ display: "block", position: "relative", width: "5.6rem", height: "5.6rem", flex: "none" }}>
+              <Link href={e.href} className="link-sweep" aria-label={e.name} style={{ display: "block", position: "relative", width: "5.6rem", height: "5.6rem", flex: "none" }}>
                 <span
                   aria-hidden
                   style={{
@@ -342,7 +342,7 @@ export default function HomePage() {
         <div style={{ marginTop: "1.5rem" }}>
           {veMlfExits.map((x) => (
             <div key={x.href} style={{ display: "flex", gap: "0.9rem", alignItems: "flex-start", padding: "0.7rem 0" }}>
-              <Link href={x.href} className="link-sweep" style={{ display: "block" }}>
+              <Link href={x.href} className="link-sweep" aria-label={x.name} style={{ display: "block" }}>
                 <DotIcon />
               </Link>
               <Link href={x.href} className="link-sweep" style={{ display: "block" }}>
@@ -483,7 +483,7 @@ function DotIcon() {
 function IconLink({ href, eyebrow, title, description }: { href: string; eyebrow?: string; title: string; description?: string }) {
   return (
     <div style={{ display: "flex", gap: "0.9rem", alignItems: "flex-start", padding: "0.7rem 0" }}>
-      <Link href={href} className="link-sweep" style={{ display: "block" }}>
+      <Link href={href} className="link-sweep" aria-label={title} style={{ display: "block" }}>
         <DotIcon />
       </Link>
       <Link href={href} className="link-sweep" style={{ display: "block" }}>

@@ -26,7 +26,7 @@ export const programs = [
   {
     tagline: "retreat 4-mùa-hàm-dưỡng · dành cho người quan tâm sâu tới đời sống nội tâm của mình",
     name: "retreat hàm-dưỡng",
-    duration: "chỉ 4 chuyến / năm · 5 ngày 4 đêm · nhịp trình nhàng",
+    duration: "chỉ 4 chuyến / năm · 5 ngày 4 đêm · sâu lắng",
     desc: "đi tìm lời giải cho điều mình còn băn khoăn, chưa nói thành lời — qua những ngày chậm lại, lắng nghe mình, và trò chuyện sâu.",
     href: routes.retreatHamDuong,
     imgLabel: "ảnh · retreat hàm-dưỡng",

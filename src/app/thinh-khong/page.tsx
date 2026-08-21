@@ -173,7 +173,7 @@ export default function ThinhKhongPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: 640 }}>
         <LazyYoutubeEmbed
-          videoId="W2LE7gGvdhg"
+          videoId="9aFVfyt4GUk"
           thumbnailSrc="/assets/thinhkhong02.webp"
           thumbnailLabel="một buổi tập online thinh-không"
           aspectRatio="16/9"

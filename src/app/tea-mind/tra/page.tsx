@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const steps = [
   { num: "01", title: "ngồi xuống, thở chậm", desc: "buông những gì vừa mang theo, để cơ thể thật sự có mặt." },
-  { num: "02", title: "chọn trà, đun nước", desc: "không vội — quan sát nước sôi, nghe tiếng lửa reo." },
+  { num: "02", title: "chọn trà, đun nước", desc: "quan sát nước sôi, nghe tiếng lửa reo." },
   { num: "03", title: "rót và mời", desc: "một cử chỉ nhỏ, được làm chậm và trọn vẹn." },
   { num: "04", title: "ngồi lại cùng nhau", desc: "uống trong im lặng, hoặc chia sẻ nếu lòng muốn." },
 ];
@@ -46,10 +46,10 @@ export default function TeaMindTraPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
-          Không phải một lớp học pha trà đúng cách — mà là một khoảng lặng để nhìn lại nhịp tay mình đang vội vã đến đâu.
+          Buổi trà này là một khoảng lặng để nhìn lại nhịp tay mình đang vội vã đến đâu.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          Vũ sẽ đồng hành cùng bạn qua từng bước — chọn trà, đun nước, rót và mời — không có gì đúng-sai, chỉ có việc ở lại trọn vẹn trong từng cử chỉ.
+          Vũ sẽ đồng hành cùng bạn qua từng bước — chọn trà, đun nước, rót và mời — để học cách ở lại trọn vẹn trong từng cử chỉ.
         </p>
       </Reveal>
 
@@ -66,6 +66,16 @@ export default function TeaMindTraPage() {
             </div>
           </div>
         ))}
+      </Reveal>
+
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "44ch", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
+          Tìm hiểu thêm về buổi trà và booking trên trang ig{" "}
+          <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" style={{ color: "var(--color-ink)", borderBottom: "1px solid var(--color-mist)" }}>
+            tea.mind
+          </a>
+          .
+        </p>
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>

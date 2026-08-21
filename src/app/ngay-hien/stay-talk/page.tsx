@@ -123,7 +123,7 @@ export default function StayTalkPage() {
       </Reveal>
 
       <div style={{ marginBottom: "4.5rem", maxWidth: "126ch", margin: "0 auto 4.5rem", width: "100%" }}>
-        <ImagePlaceholder label="ảnh · stay+talk" aspectRatio="16/9" src="/assets/ngayhien_staytalk05.webp" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · stay+talk" aspectRatio="32/9" src="/assets/ngayhien_staytalk05.webp" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem", textAlign: "center" }}>

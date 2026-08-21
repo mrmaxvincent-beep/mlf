@@ -174,7 +174,7 @@ export default function RetreatAnVuiPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "126ch", width: "100%" }}>
-          <ImagePlaceholder label="ảnh · làm bánh quê cùng cô chú" aspectRatio="16/9" src="/assets/ngayhienanvui44.webp" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · làm bánh quê cùng cô chú" aspectRatio="32/9" src="/assets/ngayhienanvui44.webp" objectPosition="center bottom" style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
 

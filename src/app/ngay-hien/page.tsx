@@ -207,7 +207,15 @@ export default function NgayHienPage() {
                     <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
                       {num} / 09
                     </span>
-                    <ImagePlaceholder label={m.imgLabel} aspectRatio="4/5" src={m.src} />
+                    {i === 1 ? (
+                      <div style={{ position: "relative", width: "100%", aspectRatio: "4/5", overflow: "hidden" }}>
+                        <div style={{ position: "absolute", top: "50%", left: "50%", width: "125%", height: "80%", transform: "translate(-50%, -50%) rotate(-90deg)" }}>
+                          <ImagePlaceholder label={m.imgLabel} aspectRatio="5/4" src={m.src} style={{ width: "100%", height: "100%" }} />
+                        </div>
+                      </div>
+                    ) : (
+                      <ImagePlaceholder label={m.imgLabel} aspectRatio="4/5" src={m.src} />
+                    )}
                   </div>
                   <div style={variant === 1 ? { paddingRight: "1.5rem" } : { order: 1, paddingLeft: "1.5rem", textAlign: "right" }}>
                     <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>

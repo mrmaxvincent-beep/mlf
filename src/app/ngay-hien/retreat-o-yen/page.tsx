@@ -214,7 +214,7 @@ export default function RetreatOYenPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "126ch", width: "100%" }}>
-          <ImagePlaceholder label="ảnh · retreat ở-yên" aspectRatio="16/9" src="/assets/ngayhien_oyen04.webp" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · retreat ở-yên" aspectRatio="32/9" src="/assets/ngayhien_oyen04.webp" objectPosition="center 70%" style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
 

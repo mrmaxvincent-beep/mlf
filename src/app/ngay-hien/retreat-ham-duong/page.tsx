@@ -288,7 +288,7 @@ export default function RetreatHamDuongPage() {
 
       <div style={{ marginBottom: "4.5rem", display: "flex", justifyContent: "center" }}>
         <div style={{ maxWidth: "126ch", width: "100%" }}>
-          <ImagePlaceholder label="ảnh · đêm kết nối tại mlf" aspectRatio="16/9" src="/assets/ngayhien_hamduong_44.webp" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · đêm kết nối tại mlf" aspectRatio="32/9" src="/assets/ngayhien_hamduong_44.webp" objectPosition="center 70%" style={{ width: "100%", height: "auto" }} />
         </div>
       </div>
 

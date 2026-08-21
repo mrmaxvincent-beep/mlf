@@ -40,7 +40,7 @@ export default function ThinhKhongPage() {
         </h1>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>
-            <ImagePlaceholder label="ảnh chân dung · Thuận" src="/assets/thuan.webp" aspectRatio="1/1" style={{ borderRadius: "50%", overflow: "hidden" }} />
+            <ImagePlaceholder label="ảnh chân dung · Thuận" src="/assets/thuan.webp" aspectRatio="1/1" objectPosition="center top" style={{ borderRadius: "50%", overflow: "hidden" }} />
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>

@@ -101,7 +101,7 @@ export const programInfo = [
 
 export const pricingItems = [];
 
-export const schedule2026 = ["21 – 25.09.2026 (thứ 2 – thứ 6)", "23 – 27.11.2026 (thứ 2 – thứ 6)"];
+export const schedule2026 = ["23 – 27.11.2026 (thứ 2 – thứ 6)"];
 
 export const medicalFaqs = [
   { q: "bố/mẹ tôi có bệnh nền (cao huyết áp, tiểu đường, khớp...) thì có tham gia được không?", a: "Có. Tùy tình trạng sức khỏe, chúng tôi sẽ điều chỉnh lịch trình, cách di chuyển và bữa ăn cho phù hợp. Xin khai báo đầy đủ tình trạng sức khỏe và thuốc đang dùng khi đăng ký, mang đủ thuốc cho cả chuyến kèm một phần dự phòng. Vì mlf không có nhân viên y tế thường trực, chúng tôi xin phép không nhận khách đang điều trị tích cực (vừa phẫu thuật lớn, đang hóa trị, mới đột quỵ/nhồi máu trong vòng 6 tháng) hoặc cần thiết bị y tế hỗ trợ liên tục." },

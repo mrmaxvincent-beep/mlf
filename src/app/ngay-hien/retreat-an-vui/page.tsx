@@ -244,9 +244,6 @@ export default function RetreatAnVuiPage() {
             const [, dayFrom, dayTo, month, year, weekday] = match ?? ["", "", "", "", "", s];
             return (
               <Reveal key={s} style={{ flex: "1 1 220px", maxWidth: "260px", padding: "0 2rem", textAlign: "center", borderLeft: idx > 0 ? "1px solid var(--color-mist)" : "none" }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "1rem" }}>
-                  chuyến 0{idx + 1}
-                </span>
                 <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2.4rem", lineHeight: 1, color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
                   {dayFrom}–{dayTo}
                 </span>

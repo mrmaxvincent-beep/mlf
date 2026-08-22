@@ -38,7 +38,7 @@ const services = [
     href: routes.ngayHien,
     name: "ngày-hiền",
     tagline: "slow stays · Măng Đen",
-    desc: "Retreats and slow stays tucked into the pine forest of Măng Đen — stay+talk, retreat ở-yên, retreat hàm-dưỡng, and retreat an-vui for guests 50+.",
+    desc: "Retreats and slow stays tucked into the pine forest of Măng Đen -  stay+talk, retreat ở-yên, retreat hàm-dưỡng, and retreat an-vui for guests 50+.",
   },
   {
     href: routes.tuanDu,

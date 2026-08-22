@@ -115,7 +115,7 @@ export default function ThinhKhongPage() {
           </div>
         </div>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone)", textAlign: "center", margin: "1.5rem 0 0" }}>
-          hai trục cùng hướng về một tổng hoà: giãn — thông — hòa.
+          hai trục cùng hướng về một tổng hoà: giãn - thông - hòa.
         </p>
       </Reveal>
 

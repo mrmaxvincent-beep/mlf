@@ -34,7 +34,7 @@ export default function KhoLoiNhanOYenPage() {
         <KhoLoiNhan notesFallback={notesFallback} />
 
         <div style={{ textAlign: "center", marginTop: "4rem" }}>
-          <Link className="mono-link" href={routes.motNgayOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", color: "var(--color-stone)", borderBottom: "1px solid var(--color-mist)", paddingBottom: "0.15rem" }}>
+          <Link className="mono-link" href={routes.motNgayOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", color: "var(--color-ink)", borderBottom: "1px solid var(--color-mist)", paddingBottom: "0.15rem" }}>
             để lại lời nhắn của riêng bạn →
           </Link>
         </div>

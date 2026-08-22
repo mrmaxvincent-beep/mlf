@@ -46,7 +46,7 @@ export default function RetreatOYenLichTrinhPage() {
 
       <div className="wrap" style={{ marginBottom: "4rem", maxWidth: "44ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>
-          lưu ý: đây là lịch trình tham khảo cho một chủ đề cụ thể. mỗi chuyến retreat ở-yên đều được thiết kế riêng theo nhóm khách — lịch trình chi tiết sẽ được gửi vào từng ngày diễn ra retreat, để giữ tính thong thả, uyển chuyển.
+          lưu ý: đây là lịch trình tham khảo cho một chủ đề cụ thể. mỗi chuyến retreat ở-yên đều được thiết kế riêng theo nhóm khách - lịch trình chi tiết sẽ được gửi vào từng ngày diễn ra retreat, để giữ tính thong thả, uyển chuyển.
         </p>
       </div>
 

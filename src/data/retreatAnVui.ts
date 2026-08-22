@@ -129,12 +129,12 @@ export const faqs = [
 
 export const policyLines = [
   "Mỗi chuyến retreat đều được chúng tôi đong đếm và căn chỉnh cho từng vị khách, trong trường hợp có lí do bất khả kháng chưa thể tham gia, vui lòng báo cho nhà mộc ít nhất 2 tuần trước khi diễn ra chương trình để được hoàn lại 100% chi phí.",
-  "Bạn cũng có thể dời lịch retreat đến thời điểm phù hợp — nhà mộc có chính sách bảo lưu đặt chỗ trong vòng 6 tháng hoặc tặng lại chuyến trải nghiệm cho một người bạn của mình.",
+  "Bạn cũng có thể dời lịch retreat đến thời điểm phù hợp - nhà mộc có chính sách bảo lưu đặt chỗ trong vòng 6 tháng hoặc tặng lại chuyến trải nghiệm cho một người bạn của mình.",
   "Trường hợp hủy vì lý do y tế bất ngờ (có giấy xác nhận), nhà mộc hoàn lại 100% chi phí, bất kể thời điểm báo hủy. Với các trường hợp khác, chính sách hủy/hoãn áp dụng theo quy định chung của mlf (báo trước ít nhất 2 tuần để hoàn 100%, trong vòng 15 ngày trước chương trình hoàn 80%).",
 ];
 
 export const travelGroups = [
-  { title: "từ sài gòn", lines: ["Xe khách giường nằm Phượng Thu, Phong Phú (12 tiếng, 18h00 – 06h00) — giá vé từ 350.000đ – 650.000đ tùy loại xe.", "Máy bay Sài Gòn – Pleiku (1 tiếng) — giá vé khứ hồi từ 1,5 triệu đồng/người tùy thời điểm và hãng bay."] },
-  { title: "từ hà nội", lines: ["Máy bay Hà Nội – Pleiku (1 tiếng 45 phút) — giá vé khứ hồi từ 2 triệu đồng/người tùy thời điểm và hãng bay."] },
+  { title: "từ sài gòn", lines: ["Xe khách giường nằm Phượng Thu, Phong Phú (12 tiếng, 18h00 – 06h00) - giá vé từ 350.000đ – 650.000đ tùy loại xe.", "Máy bay Sài Gòn – Pleiku (1 tiếng) - giá vé khứ hồi từ 1,5 triệu đồng/người tùy thời điểm và hãng bay."] },
+  { title: "từ hà nội", lines: ["Máy bay Hà Nội – Pleiku (1 tiếng 45 phút) - giá vé khứ hồi từ 2 triệu đồng/người tùy thời điểm và hãng bay."] },
   { title: "từ sân bay pleiku đến măng đen", lines: ["Hành trình 2 tiếng: taxi 800.000đ · xe 16 chỗ 100.000đ/người/lượt (chiều Pleiku–Măng Đen 7:30 và 9:30, chiều về 13:15 và 14:30) · hoặc limousine 250.000đ/người/lượt (chiều Pleiku–Măng Đen 9:00–9:30, chiều về 12:45).", "Di chuyển từ các tỉnh thành khác, vui lòng liên hệ nhà mộc để được giải đáp. Xe của nhà mộc sẽ đón bạn tại trung tâm thị trấn Măng Đen để đến mlf."] },
 ];

@@ -88,7 +88,7 @@ export default function TeaMindLichPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
-          bộ lịch 2026 đã kết thúc đặt hàng — để lại lời nhắn, mộc sẽ báo khi 2027 mở đặt trước.
+          bộ lịch 2026 đã kết thúc đặt hàng - để lại lời nhắn, mộc sẽ báo khi 2027 mở đặt trước.
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
           <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">

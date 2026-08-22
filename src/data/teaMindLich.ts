@@ -16,7 +16,7 @@ export const seasons = [
 export const specs = [
   { k: "kích thước", v: "A6" },
   { k: "chất liệu", v: "giấy Ivory 300gsm" },
-  { k: "số lượng", v: "12 tờ — 12 tháng, 12 mùa tâm" },
+  { k: "số lượng", v: "12 tờ - 12 tháng, 12 mùa tâm" },
   { k: "mặt sau", v: "có không gian ghi chú, mỗi tháng một lời nhắn" },
   { k: "túi đựng", v: "giấy kraft thân thiện môi trường" },
   { k: "chân đế", v: "gỗ, thiết kế tối giản" },

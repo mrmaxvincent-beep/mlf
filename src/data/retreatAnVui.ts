@@ -104,7 +104,7 @@ export const schedule2026 = ["23 – 27.11.2026 (thứ 2 – thứ 6)"];
 
 export const medicalFaqs = [
   { q: "bố/mẹ tôi có bệnh nền (cao huyết áp, tiểu đường, khớp...) thì có tham gia được không?", a: "Có. Tùy tình trạng sức khỏe, chúng tôi sẽ điều chỉnh lịch trình, cách di chuyển và bữa ăn cho phù hợp. Xin khai báo đầy đủ tình trạng sức khỏe và thuốc đang dùng khi đăng ký, mang đủ thuốc cho cả chuyến kèm một phần dự phòng. Vì mlf không có nhân viên y tế thường trực, chúng tôi xin phép không nhận khách đang điều trị tích cực (vừa phẫu thuật lớn, đang hóa trị, mới đột quỵ/nhồi máu trong vòng 6 tháng) hoặc cần thiết bị y tế hỗ trợ liên tục." },
-  { q: "các buổi đi rừng có an toàn cho người lớn tuổi không?", a: "Có. Toàn bộ địa điểm trong 5 ngày đều dễ đi — đường bằng, gần, không leo dốc hay vượt địa hình khó. Ai cần đi chậm hơn hoặc nghỉ giữa đường, nhà mộc luôn đi cùng và sẵn sàng điều chỉnh." },
+  { q: "các buổi đi rừng có an toàn cho người lớn tuổi không?", a: "Có. Toàn bộ địa điểm trong 5 ngày đều dễ đi: đường bằng, gần, không leo dốc hay vượt địa hình khó. Ai cần đi chậm hơn hoặc nghỉ giữa đường, nhà mộc luôn đi cùng và sẵn sàng điều chỉnh." },
   { q: "nếu có vấn đề sức khỏe xảy ra trong lúc retreat thì sao?", a: "Khi đăng ký, chúng tôi xin số điện thoại người thân để liên hệ khi cần. Mỗi khách được mua bảo hiểm du lịch trong suốt 5 ngày. Cơ sở y tế gần nhất cách mlf khoảng 8km (thị trấn Măng Đen), bệnh viện quốc tế gần nhất khoảng 50km (TP.Kontum). Nhà mộc cũng có sẵn các bài thuốc cơ bản cho cảm lạnh, cảm nắng, đau bụng thông thường." },
   { q: "con cái có thể đăng ký giúp, hoặc đi theo cùng bố mẹ không?", a: "Có. Bạn có thể đăng ký giúp bố mẹ mình. Nếu muốn đi cùng, người nhà đi kèm được tính phí như một khách tham gia bình thường." },
 ];

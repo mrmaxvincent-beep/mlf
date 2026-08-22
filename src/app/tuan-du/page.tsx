@@ -102,7 +102,7 @@ export default function TuanDuPage() {
         <p style={{ ...proseP, fontSize: "1.05rem", lineHeight: 1.9 }}>tuần-du không là chuyến hành hương. tuần-du là: ngồi bên nhau, uống một tách trà trong tĩnh lặng, đi qua con đường đầy lá rụng, và để lòng mình mềm ra theo nhịp đất trời.</p>
         <p style={{ ...proseP, fontSize: "1.05rem", lineHeight: 1.9 }}>rời khỏi không gian quen thuộc của bản thân, chúng tôi chỉ mong được cùng mọi người nhìn đời sống từ những góc khác: nhẹ hơn, chậm hơn.</p>
         <p style={{ ...proseP, fontSize: "1.05rem", lineHeight: 1.9 }}>để thấy rằng, sống giữa đời sống này cần cả sự sôi động lẫn tĩnh lặng. Để còn biết, mỗi chiếc lá có một hình hài riêng, mỗi dòng sông có một khúc lượn, và trong lòng mình cũng có lắm những ỉ oi.</p>
-        <p style={{ ...proseP, fontSize: "1.05rem", lineHeight: 1.9 }}>nếu tỉnh quá, ta thấy hiện thực trần trụi mà tim khô lại. Nếu mộng quá, ta quên mất kỳ diệu trong từng bước chân trên đất. tuần-du là con đường thong dong giữa hai bờ ấy — giữa mộng và thực, giữa tĩnh và động.</p>
+        <p style={{ ...proseP, fontSize: "1.05rem", lineHeight: 1.9 }}>nếu tỉnh quá, ta thấy hiện thực trần trụi mà tim khô lại. Nếu mộng quá, ta quên mất kỳ diệu trong từng bước chân trên đất. tuần-du là con đường thong dong giữa hai bờ ấy - giữa mộng và thực, giữa tĩnh và động.</p>
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>

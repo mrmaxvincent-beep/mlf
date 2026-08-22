@@ -57,7 +57,7 @@ export default function NhatHienPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "7rem", maxWidth: "38ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>
-          một con đường trung dung —
+          một con đường trung dung
           <br />
           nơi tâm được đặt trong thuần tịnh,
           <br />

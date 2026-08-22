@@ -49,7 +49,6 @@ export const houseRulesLine = [
   "Tắt chuông, bật im lặng trong các hoạt động chung",
   "Giữ yên sau 22 giờ",
   "Giữ sạch và gọn không gian dùng chung",
-  "Nếu cần gì — cứ hỏi nhà mộc.",
 ].join(" · ");
 
 export const roomCells = [

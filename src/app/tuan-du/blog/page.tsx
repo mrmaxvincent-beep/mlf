@@ -46,7 +46,7 @@ export default function TuanDuBlogPage() {
         <div />
         <Reveal>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "60ch" }}>
-            Sau mỗi chuyến tuần-du, luôn còn lại những dòng chữ — ghi chép của người đồng hành, nhật ký của người đi qua từng vùng đất. Chọn một bài ở khung bên trái để đọc.
+            Sau mỗi chuyến tuần-du, luôn còn lại những dòng chữ - ghi chép của người đồng hành, nhật ký của người đi qua từng vùng đất. Chọn một bài ở khung bên trái để đọc.
           </p>
         </Reveal>
       </div>

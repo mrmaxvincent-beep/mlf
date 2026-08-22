@@ -108,6 +108,9 @@ export default function EnglishPage() {
         <p style={proseP}>
           We believe there is a way of living that is simple without being careless, still without giving up, present in the middle of life without losing yourself. We call mộc little farm a small farm - a place where everything is left to grow.
         </p>
+        <p style={proseP}>
+          ở-yên combines two Vietnamese words: <em style={{ fontStyle: "italic" }}>ở</em> - to stay, to dwell - and <em style={{ fontStyle: "italic" }}>yên</em> - to be calm, to be still. It isn&rsquo;t a retreat from life, and it isn&rsquo;t the pursuit of permanent calm either. It&rsquo;s the practice of staying present exactly where you are, steady enough to meet whatever the moment holds, without needing to escape it or control it. At mộc little farm, ở-yên shows up as slowness without idleness, openness without losing your center, and the willingness to sit with both the ease and the discomfort of being fully here.
+        </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
           Everything here grows from one root — ở-yên — and branches out in different directions, depending on where you are standing in your own life.
         </p>

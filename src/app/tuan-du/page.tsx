@@ -301,7 +301,7 @@ export default function TuanDuPage() {
         <div>
           <ImagePlaceholder label="ảnh · travel-book" aspectRatio="3/4" src="/assets/travel_book_tuandu_03.webp" />
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0.9rem 0 0" }}>
-            travel-book hướng dẫn toàn bộ lịch trình, phân chia phòng, phương tiện, trang phục, thời tiết, tâm thế, phương án dự phòng — cái nhìn tổng thể nhất về chuyến đi.
+            travel-book hướng dẫn toàn bộ lịch trình, phân chia phòng, phương tiện, trang phục, thời tiết, tâm thế, phương án dự phòng - cái nhìn tổng thể nhất về chuyến đi.
           </p>
         </div>
       </div>

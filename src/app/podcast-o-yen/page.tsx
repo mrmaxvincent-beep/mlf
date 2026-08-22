@@ -67,19 +67,14 @@ export default function PodcastOYenPage() {
             style={{
               height: "152px",
               borderRadius: "0.75rem",
-              background: "var(--color-photo-placeholder)",
+              background: "var(--color-cham-dem)",
               display: "flex",
-              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              gap: "0.4rem",
             }}
           >
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)" }}>
-              spotify player
-            </span>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.06em", color: "var(--color-stone)", opacity: 0.75 }}>
-              sẽ hiển thị ở đây khi tập đầu tiên phát hành
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
+              ĐANG CẬP NHẬT
             </span>
           </div>
         </div>

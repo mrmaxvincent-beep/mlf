@@ -7,7 +7,7 @@ export const includesList = [
   { label: "buổi chiều", val: "tea ceremony" },
   { label: "buổi tối", val: "xem phim" },
   { label: "thêm", val: "ngâm chân thảo mộc" },
-  { label: "tùy chọn", val: "workshop thủ công / talk — diện tướng / sức khỏe / tinh thần" },
+  { label: "tùy chọn", val: "workshop thủ công / talk - diện tướng / sức khỏe / tinh thần" },
 ];
 
 export const stayTalkLa = ["một chỗ trú lại", "một chỗ chuyện trò"];
@@ -22,7 +22,7 @@ export const days = [
   {
     n: "1",
     rows: [
-      { time: "7:00", activity: "xe tới Măng Đen. tự túc ăn sáng — ghé một quán cà phê ở Măng Đen" },
+      { time: "7:00", activity: "xe tới Măng Đen. tự túc ăn sáng, ghé một quán cà phê ở Măng Đen" },
       { time: "9:00", activity: "xe mlf đón bạn tại thị trấn" },
       { time: "10:00", activity: "dạo quanh nhà mộc" },
       { time: "11:30", activity: "ăn trưa cùng nhau tại mlf" },
@@ -77,7 +77,7 @@ export const policyLines = [
 ];
 
 export const faqs = [
-  { q: "đây có phải kiểu slow travel / slow stay không?", a: `Đúng. Ở mlf không có lịch trình dày — một ngày thường có nhiều khoảng trống. Bạn ở lại vài ngày tại một nơi, ăn cùng một bếp, gặp lại cùng những người, thay vì di chuyển liên tục. ở mlf, "chậm" không phải một dịch vụ được thiết kế, mà là cách cả nơi này vẫn đang vận hành từ 10 năm nay.` },
+  { q: "đây có phải kiểu slow travel / slow stay không?", a: `Đúng. Ở mlf không có lịch trình dày, một ngày thường có nhiều khoảng trống. Bạn ở lại vài ngày tại một nơi, ăn cùng một bếp, gặp lại cùng những người, thay vì di chuyển liên tục. ở mlf, "chậm" không phải một dịch vụ được thiết kế, mà là cách cả nơi này vẫn đang vận hành từ 10 năm nay.` },
   { q: "stay+talk có phải là một chương trình retreat không?", a: "Không. stay+talk không phải là retreat hay mini-retreat. Đây là một khoảng dừng nhỏ – một ngày sống chậm tại mộc little farm, không có lịch trình cố định hay hoạt động hướng dẫn. Chỉ đơn giản là một không gian để bạn lắng nghe thiên nhiên và để nơi này nhẹ nhàng nuôi dưỡng mình." },
   { q: "có giới hạn số lượng khách không?", a: "Có. mộc little farm chỉ nhận tối đa 06 khách mỗi lần để đảm bảo không gian yên tĩnh và riêng tư cho mỗi người." },
   { q: "tôi có thể mang theo thức ăn riêng không?", a: "Xin bạn không mang thức ăn mặn vào mộc little farm để giữ gìn đồng bộ trong không gian chung." },

@@ -69,7 +69,7 @@ export default function TeaMindPage() {
           Cái-đẹp không ồn ào. Nó ẩn mình trong dáng ngồi yên, ánh sáng rơi qua kẽ lá, trong vệt men chảy tự nhiên như nước mắt, trong một chén trà nóng đặt lặng lẽ giữa ngày.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          tea·mind là nơi để lắng nghe bản thân qua bốn mạch: trà, gốm, tranh, lịch — và từ đó, hiểu rằng: cái-đẹp không phải để giữ, mà để cảm.
+          tea·mind là nơi để lắng nghe bản thân qua 4 mạch: trà, gốm, tranh, lịch và từ đó, hiểu rằng: cái-đẹp không phải để giữ, mà để cảm.
         </p>
       </Reveal>
 

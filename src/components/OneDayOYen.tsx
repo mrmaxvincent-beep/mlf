@@ -172,7 +172,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
       <header style={{ padding: "3rem 0 7rem", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "2rem" }}>{greet}</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.6rem, 9vw, 3.6rem)", color: "var(--color-ink)", margin: "0 0 1.6rem", lineHeight: 1.15 }}>một ngày ở-yên</h1>
-        <p style={{ color: "var(--color-ink)", fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "30ch", margin: "0 auto" }}>cùng những người bạn khác, sống chậm lại một ngày — ai ở đâu cứ ở đó.</p>
+        <p style={{ color: "var(--color-ink)", fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "30ch", margin: "0 auto" }}>cùng những người bạn khác, sống chậm lại một ngày... ai ở đâu cứ ở đó.</p>
 
         <div style={{ position: "relative", maxWidth: "260px", margin: "2.6rem auto 0" }}>
           <div style={{ position: "absolute", top: "5px", left: 0, right: 0, height: "1px", background: "var(--color-mist)" }} />

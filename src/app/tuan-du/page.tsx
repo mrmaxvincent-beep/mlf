@@ -206,7 +206,7 @@ export default function TuanDuPage() {
           đi để hiểu thế giới, và hiểu mình
         </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 auto", maxWidth: "70ch" }}>
-          mỗi chuyến đi qua một vùng đất — lịch sử, văn hoá, không khí, con người của nơi đó — nhưng mục đích sâu hơn là dùng tất cả những điều đó như chất liệu để cảm tâm mình: cảm mình đang ở đâu, đang vướng gì, đang cần gì và bằng cảm nhận thật sự chứ không phải bằng suy nghĩ.
+          mỗi chuyến đi qua một vùng đất: lịch sử, văn hoá, không khí, con người của nơi đó. nhưng mục đích sâu hơn là dùng tất cả những điều đó như chất liệu để cảm tâm mình: cảm mình đang ở đâu, đang vướng gì, đang cần gì và bằng cảm nhận thật sự chứ không phải bằng suy nghĩ.
         </p>
       </Reveal>
 

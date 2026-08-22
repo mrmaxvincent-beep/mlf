@@ -103,7 +103,7 @@ export default function EnglishPage() {
 
       <Reveal className="wrap" style={{ marginTop: "5rem", marginBottom: "5rem", maxWidth: "60ch" }}>
         <p style={proseP}>
-          mộc little farm began in 2016 as a small home bakery in Saigon. It grew into a quiet retreat café tucked into the city, and in 2023 moved to the highlands of Măng Đen — becoming a retreat farm surrounded by pine forest, mist, and the slow rhythm of mountain weather.
+          mộc little farm began in 2016 as a small home bakery in Saigon. It grew into a quiet retreat café tucked into the city, and in 2023 moved to the highlands of Măng Đen - becoming a retreat farm surrounded by pine forest, mist, and the slow rhythm of mountain weather.
         </p>
         <p style={proseP}>
           We believe there is a way of living that is simple without being careless, still without giving up, present in the middle of life without losing yourself. We call mộc little farm a small farm — a place where everything is left to grow.

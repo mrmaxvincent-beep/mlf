@@ -96,7 +96,10 @@ a:hover .ar {
   transform: translateX(3px);
 }
 
-.go,
+.go {
+  position: relative;
+  display: inline-block;
+}
 .link-sweep {
   position: relative;
   display: inline-block;
@@ -131,11 +134,14 @@ a:hover .ar {
    on the site: .mono-link, .cta-btn, .go, .link-sweep. */
 .mono-link,
 .cta-btn,
-.go,
 .link-sweep {
   position: relative;
   display: inline-block;
   overflow: hidden;
+}
+.go {
+  position: relative;
+  display: inline-block;
 }
 
 .mono-link:hover:not(.faq-show-more),

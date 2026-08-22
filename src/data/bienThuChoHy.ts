@@ -95,7 +95,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày dài, tháng rộng… năm 2024",
+    date: "ngày 03 tháng 01 năm 2024",
     paragraphs: [
       "Măng Đen, ngày 03 tháng 01 năm 2024",
       "Hôm nay, khi viết những dòng chữ này, tớ đã ở một dòng thời gian khác - năm 2024. Còn cậu, vẫn đâu đó trong vô lượng những đợt sóng trập trùng. Hôm nay, một ngày sau khi khách trọ đã về, tớ ngồi yên được một lát và nhớ ra mình cần viết thư cho cậu.",

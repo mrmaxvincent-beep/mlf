@@ -142,9 +142,9 @@ export default function EnglishPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={proseP}>
-          For guests who don&rsquo;t read Vietnamese, mlf also runs dedicated retreat programs — guided, hosted, and explained in English from arrival to departure.
+          For guests who don&rsquo;t read Vietnamese, mlf also runs dedicated retreat programs - guided, hosted, and explained in English from arrival to departure.
         </p>
-        <p style={{ ...proseP, margin: 0 }}>Please reach out to us to learn more — dates, group size, and what a stay looks like for you.</p>
+        <p style={{ ...proseP, margin: 0 }}>Please reach out to us to learn more - dates, group size, and what a stay looks like for you.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>

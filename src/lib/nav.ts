@@ -61,6 +61,7 @@ export const thuVienMenu = [
   { label: "thư viện ở-yên", href: routes.thuVien },
   { label: "podcast ở-yên", href: routes.podcastOYen },
   { label: "sách ở-yên", href: routes.sachOYen },
+  { label: "mlf journal", href: routes.journal },
 ];
 
 export const congDongMenu = [
@@ -73,7 +74,6 @@ export const mlfMenu = [
   { label: "về mlf", href: routes.veMlf },
   { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
   { label: "chuyện-về", href: routes.chuyenVe },
-  { label: "mlf journal", href: routes.journal },
 ];
 
 export const programsPanel = [
@@ -133,6 +133,7 @@ export const mobileMenuSections = [
       { label: "thư viện ở-yên", href: routes.thuVien },
       { label: "podcast ở-yên", href: routes.podcastOYen },
       { label: "sách ở-yên", href: routes.sachOYen },
+      { label: "mlf journal", href: routes.journal },
     ],
   },
   {
@@ -149,7 +150,6 @@ export const mobileMenuSections = [
       { label: "về mlf", href: routes.veMlf },
       { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
       { label: "chuyện-về", href: routes.chuyenVe },
-      { label: "mlf journal", href: routes.journal },
     ],
   },
 ];

@@ -87,7 +87,6 @@ export const veMlfExits = [
   { href: routes.veMlf, name: "về mlf", desc: "hành trình & cấu trúc của mlf" },
   { href: routes.bienThuChoHy, name: "biên-thư-cho-Hy", desc: "những lá thư riêng từ mlf" },
   { href: routes.chuyenVe, name: "chuyện về", desc: "những người bạn của mlf" },
-  { href: routes.journal, name: "mlf journal", desc: "một tạp chí nhỏ đêm giao thừa" },
 ];
 
 export const testimonials = [

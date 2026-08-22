@@ -16,7 +16,7 @@ export const programs = [
     tagline: "private retreat · dành cho nhóm bạn hoặc gia đình để kết nối và hiểu nhau hơn",
     name: "retreat ở-yên",
     duration: "từ 2 khách · 4N3Đ hoặc 5N4Đ · lịch linh hoạt",
-    desc: "private retreat cho nhóm từ 2 người, lịch linh hoạt. một không gian dịu-dàng để nghỉ ngơi và nhìn lại về đời sống, với lịch trình được thiết kế riêng.",
+    desc: "private retreat cho nhóm từ 2 người. một không gian dịu-dàng để nghỉ ngơi và nhìn lại về đời sống, với lịch trình được thiết kế riêng.",
     href: routes.retreatOYen,
     imgLabel: "ảnh · retreat ở-yên",
     imgSrc: "/assets/ngayhien_oyen.webp",

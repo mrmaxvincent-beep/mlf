@@ -186,7 +186,7 @@ export default function RetreatAnVuiPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ ...proseP, margin: 0 }}>
-          toàn bộ hành trình là ăn chay thanh nhẹ — các bữa ăn, bánh, thức uống đều tự tay làm bởi mlf. tại mlf, không sử dụng các gia vị công nghiệp trong chế biến, chú trọng hài hòa nguyên tắc ăn uống âm-dương.
+          toàn bộ hành trình là ăn chay thanh nhẹ: các bữa ăn, bánh, thức uống đều tự tay làm bởi mlf. tại mlf, không sử dụng các gia vị công nghiệp trong chế biến, chú trọng hài hòa nguyên tắc ăn uống âm-dương.
         </p>
       </div>
 

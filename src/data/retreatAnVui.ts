@@ -7,11 +7,11 @@ export const threeSpaces = [
 ];
 
 export const rhythmBlocks = [
-  { title: "04 buổi sáng", body: ["vận động nhẹ cùng Thuận — người chăm sóc sức khỏe thuận tự nhiên của nhà mộc thông qua các bài hướng dẫn thở, dưỡng sinh, mát-xa."] },
-  { title: "02 buổi tìm hiểu", body: ["hiểu về cơ thể cùng Thuận — cách chăm sóc sức khỏe của người lớn tuổi, thiết thực, không hàn lâm theo góc nhìn dưỡng sinh từ yoga & Đông Y.", "hiểu về thế hệ con cháu cùng Tâm — thế giới mới đang vận hành ra sao, để nhẹ lòng hơn trước một thế giới đang thay đổi quá nhanh."] },
-  { title: "02 buổi trà", body: ["thiền trà cùng Vũ — thư thả uống một chén trà, và chia sẻ cùng nhau.", "chén trà tỏ tường 1-1 cùng Tâm — một buổi trò chuyện riêng, về những khuất mắc trong lòng."] },
+  { title: "04 buổi sáng", body: ["vận động nhẹ cùng Thuận - người chăm sóc sức khỏe thuận tự nhiên của nhà mộc thông qua các bài hướng dẫn thở, dưỡng sinh, mát-xa."] },
+  { title: "02 buổi tìm hiểu", body: ["hiểu về cơ thể cùng Thuận - cách chăm sóc sức khỏe của người lớn tuổi, thiết thực, không hàn lâm theo góc nhìn dưỡng sinh từ yoga & Đông Y.", "hiểu về thế hệ con cháu cùng Tâm - thế giới mới đang vận hành ra sao, để nhẹ lòng hơn trước một thế giới đang thay đổi quá nhanh."] },
+  { title: "02 buổi trà", body: ["thiền trà cùng Vũ - thư thả uống một chén trà, và chia sẻ cùng nhau.", "chén trà tỏ tường 1-1 cùng Tâm - một buổi trò chuyện riêng, về những khuất mắc trong lòng."] },
   { title: "những việc quen tay", body: ["cùng làm bánh quê: các cô chú vào bếp hướng dẫn theo công thức gia truyền, gợi nhớ ký ức.", "cùng vẽ tranh thiền: nuôi dưỡng sự bình an nội tâm.", "các bộ môn thủ công đánh thức khả năng vận động chính xác: thêu, móc len, luyện chữ."] },
-  { title: "trò chuyện sâu giữa thiên nhiên", body: ["rất nhiều buổi để được lắng nghe và chia sẻ — trong không gian trong lành, khi ngồi bên suối, khi trong rừng. các địa điểm đều dễ đi, an toàn cho người lớn tuổi."] },
+  { title: "trò chuyện sâu giữa thiên nhiên", body: ["rất nhiều buổi để được lắng nghe và chia sẻ trong không gian trong lành, khi ngồi bên suối, khi trong rừng. các địa điểm đều dễ đi, an toàn cho người lớn tuổi."] },
 ];
 
 export const days = [
@@ -58,7 +58,6 @@ export const days = [
       { time: "19:30 – 20:30", activity: "đêm viết cho con cháu (dưới nến)" },
       { time: "20:30", activity: "nghỉ ngơi, đi ngủ sớm" },
     ],
-    note: "ngồi dưới ánh nến, viết một lá thư cho con, cho cháu — một điều muốn nhắn, một điều muốn họ biết, hoặc một điều mình chưa từng nói ra. nhà mộc giữ giúp hoặc gửi lại sau retreat.",
   },
   {
     n: "04",

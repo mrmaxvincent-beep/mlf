@@ -290,7 +290,7 @@ export default function ThinhKhongPage() {
         <div style={{ border: "1px solid var(--color-mist)", padding: "2.5rem 2rem" }}>
           <span className="eyebrow" style={{ color: "var(--color-ink)" }}>tập luyện cá nhân (PT)</span>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 2rem" }}>
-            Lớp PT được thiết kế riêng dựa trên mục tiêu, thể trạng và nhu cầu cá nhân của từng học viên — đảm bảo hiệu quả cao hơn so với các lớp cộng đồng có chương trình chung cho nhiều người. Thời gian tập: 03 buổi/tuần, mỗi buổi 1 tiếng 15 phút, linh hoạt theo thời gian của người tập, trong 01 đến 03 tháng.
+            Lớp PT được thiết kế riêng dựa trên mục tiêu, thể trạng và nhu cầu cá nhân của từng học viên - đảm bảo hiệu quả cao hơn so với các lớp cộng đồng có chương trình chung cho nhiều người. Thời gian tập: 03 buổi/tuần, mỗi buổi 1 tiếng 15 phút, linh hoạt theo thời gian của người tập, trong 01 đến 03 tháng.
           </p>
           <span className="eyebrow" style={{ color: "var(--color-ink)" }}>tập trung giải quyết</span>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 1.5rem", marginBottom: "2rem" }}>

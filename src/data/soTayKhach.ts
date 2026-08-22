@@ -85,7 +85,7 @@ export const homemadeFoodLine = [
   "Rau củ ngâm thảo mộc · Mứt dâu · Mứt cà chua",
   "Kim chi · Cải chua và các loại lên men khác",
   "Tương ớt · Dấm ăn",
-  "Nước sấu · Nước mơ · Chanh muối · Tắc muối · Kombucha · Chanh đào · Rượu sấu",
+  "Nước sấu · Nước mơ · Chanh muối · Tắc muối · Kombucha · Chanh đào",
 ].join(" · ");
 
 export const heartLines = ["Ngủ sớm đêm trước ngày đến.", "Nương theo mọi thứ và để nó xảy ra.", "Vẻ đẹp của mọi thứ đến từ sự bất toàn.", "Cho mình thời gian thật sự.", "Nơi đây ta đủ."];

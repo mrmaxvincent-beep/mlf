@@ -56,7 +56,7 @@ const services = [
     href: routes.teaMind,
     name: "tea.mind",
     tagline: "everyday beauty",
-    desc: "Staying with the quiet beauty of what your hands touch each day — tea, ceramics, painting.",
+    desc: "Staying with the quiet beauty of what your hands touch each day - tea, ceramics, painting.",
   },
   {
     href: routes.thinhKhong,

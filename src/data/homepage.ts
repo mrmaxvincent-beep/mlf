@@ -101,7 +101,7 @@ export const testimonials = [
   },
   {
     text: "Tôi đã tham gia 3 chuyến retreat ở Măng Đen và 3 chuyến tuần-du đó đây của mlf. Mỗi chuyến đều khác biệt, đều mới mẻ, không chuyến nào giống chuyến nào. Đó là vì từng thời điểm khác nhau, trạng thái tâm bạn đã khác, ngày hôm nay đã không còn như hôm trước và hôm sau đã tiến bộ hơn hôm nay.\n\nĐó chính là nét riêng biệt, không lẫn vào đâu được của mlf. Điều đó không phải tự nhiên mà có được, đó là năng lực tu tập và sự gìn giữ kỷ luật ở chính những con người nơi đây.",
-    attribution: "Q.N · Sài Gòn · sau 3 chuyến retreat và 3 chuyến tuần-du",
+    attribution: "Q.N · Sài Gòn · sau 3 chuyến retreat & 3 chuyến tuần-du",
   },
   {
     text: "Có những ngày ở nhà mộc, nước mắt con đã suýt rơi vì cảm giác được đón nhận và thấu cảm, thậm chí hơn cả bản thân con hiểu mình. Và cả những khi đọc những dòng nhận xét của anh Tâm trong nhật ký chữ nghĩa, con cảm giác anh đã nhìn thấy con thực sự, nhưng không hề phán xét. Con biết ơn Người đã dẫn dắt con, đưa con vào trạng thái đêm đen của tâm hồn, để được gặp nhà mộc. Nếu không, con đã là một con rất khác ở hiện tại.",

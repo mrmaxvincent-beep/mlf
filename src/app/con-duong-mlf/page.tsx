@@ -160,7 +160,7 @@ export default function ConDuongMlfPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={proseP}>
-          khi một mô hình được dựng lên, ai cũng có một vai để đóng. rồi người ta bắt đầu diễn — vai người hiểu biết, người bình an, người tử tế… một nơi mà ai cũng phải diễn, thì không còn là nơi để trở về.
+          khi một mô hình được dựng lên, ai cũng có một vai để đóng. rồi người ta bắt đầu diễn - vai người hiểu biết, người bình an, người tử tế… một nơi mà ai cũng phải diễn, thì không còn là nơi để trở về.
         </p>
         <p style={proseP}>
           ở mlf, bếp đỏ lửa mỗi ngày, vì tới giờ cơm.
@@ -173,7 +173,7 @@ export default function ConDuongMlfPage() {
           nơi này, trước hết là một nơi để sống.
         </p>
         <p style={proseP}>
-          và người ta ghé qua, để trở về — thành thật với chính mình.
+          và người ta ghé qua, để trở về - thành thật với chính mình.
         </p>
         <p style={proseP}>
           mlf ngồi bên, lắng nghe cùng. nhưng đường đi, vẫn là của người lữ hành. vì bước chân mượn của người khác, sẽ không đưa ai về đến nhà mình.

@@ -209,7 +209,7 @@ export default function ThinhKhongPage() {
             </div>
           </div>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-            + 1 buổi tập PT 1-1 với từng học viên/trong tháng — để giải quyết những vấn đề riêng mà buổi tập chung chưa giải quyết hết được, và để trao đổi về sức khỏe, tinh thần, giấc ngủ, chế độ ăn uống và các phương pháp dưỡng sinh.
+            + 1 buổi tập PT 1-1 với từng học viên/trong tháng - để giải quyết những vấn đề riêng mà buổi tập chung chưa giải quyết hết được, và để trao đổi về sức khỏe, tinh thần, giấc ngủ, chế độ ăn uống và các phương pháp dưỡng sinh.
           </p>
         </div>
         <div style={{ marginBottom: "2.2rem" }}>

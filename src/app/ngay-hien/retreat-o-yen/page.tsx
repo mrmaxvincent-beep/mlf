@@ -302,6 +302,19 @@ export default function RetreatOYenPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "1rem 0 0" }}>
           lưu ý: lịch trình chi tiết sẽ được gửi vào từng ngày diễn ra retreat, để giữ tính thong thả, uyển chuyển.
         </p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0.6rem 0 0" }}>
+          Hãy dành chút thời gian tham khảo{" "}
+          <a
+            className="mono-link"
+            href="https://drive.google.com/drive/folders/1-7MjR-JgDzeJun3yySYNlU4GnXwwxJmq?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            style={{ fontFamily: "var(--font-sans)", display: "inline", overflow: "visible" }}
+          >
+            nếp nhà mộc little farm
+          </a>{" "}
+          để hiểu hơn về nếp sống nơi này.
+        </p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", marginTop: "3rem" }}>

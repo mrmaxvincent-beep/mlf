@@ -47,7 +47,7 @@ export default function TuanDuPage() {
           tuần-du
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 0 0.75rem" }}>
-          tuần-du là hành trình cảm tâm — lấy chất liệu của từng vùng đất để học cách cảm nhận thế giới bên trong mình.
+          tuần-du là hành trình cảm tâm, lấy chất liệu của từng vùng đất để học cách cảm nhận thế giới bên trong mình.
         </p>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: "0.9rem", marginTop: "1.6rem", flexWrap: "wrap" }}>
           {tuanDuSubnav.map((item, i) => (

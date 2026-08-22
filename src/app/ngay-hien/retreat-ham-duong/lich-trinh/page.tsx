@@ -55,7 +55,7 @@ export default function RetreatHamDuongLichTrinhPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-          &ldquo;không cần chuẩn bị gì — chỉ cần một tâm thế rộng mở và để mọi thứ tự nhiên xảy đến, dẫn dắt và mở ra... từng chút, từng chút một.&rdquo;
+          &ldquo;chỉ cần một tâm thế rộng mở và để mọi thứ tự nhiên xảy đến, dẫn dắt và mở ra... từng chút, từng chút một.&rdquo;
         </p>
       </div>
 

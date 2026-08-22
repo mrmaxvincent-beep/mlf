@@ -118,7 +118,6 @@ export default function JournalPage() {
       <Reveal className="wrap" style={{ marginBottom: "0", maxWidth: "60ch" }}>
         <ExpandableContent
           title="Hướng dẫn quyền tác giả đối với CTV"
-          subtitle="Về quyền nội dung & sự tôn trọng sáng tạo"
           content={`1. QUYỀN NỘI DUNG THUỘC VỀ AI?
 Mọi bài viết và hình ảnh bạn gửi cho MLF Journal vẫn thuộc quyền sở hữu của chính bạn.
 

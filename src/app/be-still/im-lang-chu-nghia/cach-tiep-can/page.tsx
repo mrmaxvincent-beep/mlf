@@ -200,7 +200,7 @@ export default function CachTiepCanPage() {
 
         <div style={{ marginBottom: "3rem", textAlign: "center" }}>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 2rem", maxWidth: "50ch", marginLeft: "auto", marginRight: "auto" }}>
-            không phải <strong>viết hay</strong> — mà <strong>viết thật</strong>
+            không phải <strong>viết hay</strong>, mà <strong>viết thật</strong>
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", maxWidth: "60ch", margin: "0 auto 2.5rem" }}>

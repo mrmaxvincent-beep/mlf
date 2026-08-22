@@ -73,13 +73,13 @@ export default function ConDuongMlfPage() {
           ở-yên, nào phải chuyện lên non tìm chốn thanh vắng, cũng không hẳn là mười ngày giữ im lặng.
         </p>
         <p style={proseP}>
-          bình thường, giữa hơi thở này và hơi thở kia, có một khe rất mỏng mà mình ít khi để ý tới. ở-yên, là trở về, đứng lại nơi cái quãng ấy — một cõi rất nhỏ, nhưng đủ chỗ cho một người.
+          bình thường, giữa hơi thở này và hơi thở kia, có một khe rất mỏng mà mình ít khi để ý tới. ở-yên, là trở về, đứng lại nơi cái quãng ấy - một cõi rất nhỏ, nhưng đủ chỗ cho một người.
         </p>
         <p style={proseP}>
           tại mlf, cõi ấy hiện ra qua những việc rất bình thường: nấu một bữa cơm, rót một tách trà, rửa một cái bát. khi nấu cơm, mình chỉ nấu cơm. khi rót trà, mình chỉ rót trà. khi rửa bát, mình chỉ rửa bát.
         </p>
         <p style={proseP}>
-          đó đã là một con đường — con đường này chẳng cần chuông mõ, chẳng cần kinh kệ, bởi đây là một cách sống.
+          đó đã là một con đường - con đường này chẳng cần chuông mõ, chẳng cần kinh kệ, bởi đây là một cách sống.
         </p>
       </Reveal>
 

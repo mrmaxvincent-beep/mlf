@@ -281,7 +281,7 @@ export default function RetreatOYenPage() {
           </div>
           <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.5rem" }}>mỗi người</span>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 1.5rem" }}>
-            trẻ em đi cùng bố mẹ ⸺ dưới 5 tuổi: 50% phí · dưới 10 tuổi: 80% phí
+            trẻ em đi cùng bố mẹ - dưới 5 tuổi: 50% phí · dưới 10 tuổi: 80% phí
           </p>
           <a href="https://forms.gle/Ra77c8s5cH6WeL5e7" target="_blank" rel="noopener" className="cta-btn">
             đăng ký retreat ở-yên <span className="ar">→</span>

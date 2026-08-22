@@ -14,7 +14,7 @@ export const whoList = [
 ];
 
 export const formatList = [
-  { label: "nhóm khách", val: "từ 02 người — gia đình hoặc bạn bè" },
+  { label: "nhóm khách", val: "từ 02 người, gia đình hoặc bạn bè" },
   { label: "lịch trình", val: "4N3Đ hoặc 5N4Đ" },
   { label: "thời gian", val: "linh hoạt theo lịch của bạn" },
   { label: "chương trình", val: "trọn gói" },

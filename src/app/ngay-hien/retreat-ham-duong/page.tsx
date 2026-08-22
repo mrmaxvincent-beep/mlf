@@ -316,7 +316,7 @@ export default function RetreatHamDuongPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem", marginBottom: "1.2rem" }}>
           <div style={{ display: "flex", gap: "0.8rem" }}>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "var(--color-stone)", minWidth: "fit-content" }}>•</span>
-            <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)" }}>khi ngồi bên suối, lắng tiếng nước,</span>
+            <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)" }}>khi ngồi bên suối, lắng nghe tiếng nước,</span>
           </div>
           <div style={{ display: "flex", gap: "0.8rem" }}>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "var(--color-stone)", minWidth: "fit-content" }}>•</span>

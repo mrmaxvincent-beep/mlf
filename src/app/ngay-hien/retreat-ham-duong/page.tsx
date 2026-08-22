@@ -205,11 +205,11 @@ export default function RetreatHamDuongPage() {
               { time: "5:00", activity: "thức dậy" },
               { time: "5:30–6:30", activity: "cùng nấu bữa sáng" },
               { time: "6:30–7:30", activity: "ăn sáng & nhận thông điệp đầu ngày" },
-              { time: "8:00–11:00", activity: "đi ra để đi vào — rừng, bản làng, suối" },
-              { time: "11:30–12:30", activity: "ăn trưa trong chánh niệm — một mình, im lặng" },
+              { time: "8:00–11:00", activity: "đi ra để đi vào - rừng, bản làng, suối" },
+              { time: "11:30–12:30", activity: "ăn trưa trong chánh niệm - một mình, im lặng" },
               { time: "12:30–17:00", activity: "thực tập ngồi với mình & thời gian tự do" },
               { time: "17:00–19:30", activity: `đạo của bếp & tiệc tối "đêm thương mình"` },
-              { time: "19:30–21:00", activity: "kết nối — xem phim / đọc sách / hát ca" },
+              { time: "19:30–21:00", activity: "kết nối - xem phim / đọc sách / hát ca" },
               { time: "21:00–21:30", activity: "soi chiếu, ngồi lại và chia sẻ" },
               { time: "21:30", activity: "đi ngủ" },
             ]}
@@ -282,7 +282,7 @@ export default function RetreatHamDuongPage() {
           bộ công án
         </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
-          mỗi chuyến retreat có một bộ 5 công án thiết kế riêng — mạch dẫn xuyên suốt 5 ngày tại mlf.
+          mỗi chuyến retreat có một bộ 5 công án thiết kế riêng - mạch dẫn xuyên suốt 5 ngày tại mlf.
         </p>
       </div>
 

@@ -80,8 +80,11 @@ export default function UngHoMlfPage() {
         ))}
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 0.5rem" }}>
           không có hạn sử dụng. có thể chuyển nhượng.
+        </p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
+          thời gian sử dụng dịch vụ áp dụng sau 30 ngày kể từ ngày đăng ký mua trước thành công.
         </p>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>

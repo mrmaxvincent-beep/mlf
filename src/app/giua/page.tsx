@@ -151,8 +151,8 @@ export default function GiuaPage() {
         ))}
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
-          không có hạn sử dụng. có thể chuyển nhượng.
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
+          thời hạn hiệu lực: credit sẽ được kích hoạt sau 45 ngày kể từ khi giao dịch mua trước thành công. credit không có thời gian hết hạn.
         </p>
       </div>
 

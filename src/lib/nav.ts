@@ -32,6 +32,7 @@ export const routes = {
   veMlf: "/ve-mlf",
   bienThuChoHy: "/bien-thu-cho-hy",
   chuyenVe: "/chuyen-ve",
+  ungHoMlf: "/ung-ho-mlf",
   journal: "/journal",
   khoLoiNhanOYen: "/mot-ngay-o-yen/kho-loi-nhan-o-yen",
   soTayKhach: "/so-tay-khach",
@@ -74,6 +75,7 @@ export const mlfMenu = [
   { label: "về mlf", href: routes.veMlf },
   { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
   { label: "chuyện-về", href: routes.chuyenVe },
+  { label: "ủng hộ mlf", href: routes.ungHoMlf },
 ];
 
 export const programsPanel = [
@@ -150,6 +152,7 @@ export const mobileMenuSections = [
       { label: "về mlf", href: routes.veMlf },
       { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
       { label: "chuyện-về", href: routes.chuyenVe },
+      { label: "ủng hộ mlf", href: routes.ungHoMlf },
     ],
   },
 ];

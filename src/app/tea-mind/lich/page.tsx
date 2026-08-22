@@ -25,7 +25,7 @@ export default function TeaMindLichPage() {
           chén trà tâm
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 1.5rem" }}>
-          bước tới 365 ngày bằng sự có mặt — 12 mùa tâm được vẽ nên như những điểm dừng nhỏ giữa nhịp sống nhiều chuyển động.
+          bước tới 365 ngày bằng sự có mặt - 12 mùa tâm được vẽ nên như những điểm dừng nhỏ giữa nhịp sống nhiều chuyển động.
         </p>
         <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem", marginBottom: "2.5rem" }}>
           hiện bộ lịch 2026 đã kết thúc đặt hàng — hẹn gặp lại 2027

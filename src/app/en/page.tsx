@@ -68,7 +68,7 @@ const services = [
     href: routes.giua,
     name: "giữa · middle",
     tagline: "opening in Huế, 2027",
-    desc: "A small café and retreat corner in the middle of daily life — where stillness meets everyday culture.",
+    desc: "A small café and retreat corner in the middle of daily life - where stillness meets everyday culture.",
   },
   {
     href: routes.congDongOYen,

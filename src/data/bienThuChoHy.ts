@@ -5,7 +5,7 @@ export type Letter = {
 
 export const letters: Letter[] = [
   {
-    date: "ngày 03 tháng 06 năm 2023",
+    date: "ngày 03.06.2023",
     paragraphs: [
       "Măng Đen, ngày 03 tháng 06 năm 2023",
       "Hy ạ, chỉ cách đây mấy ngày thôi, chúng tôi còn cuống cuồng làm làm… hàng trăm công việc không tên, để mọi thứ được vào vị trí của nó, để mọi thứ tinh tươm chuẩn bị đón những cô gái nhà Mộc ghé thăm.",
@@ -21,7 +21,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 10 tháng 07 năm 2023",
+    date: "ngày 10.07.2023",
     paragraphs: [
       "Măng Đen, ngày 10 tháng 07 năm 2023",
       "Chào Hy!",
@@ -36,7 +36,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 29 tháng 07 năm 2023",
+    date: "ngày 29.07.2023",
     paragraphs: [
       "Măng Đen, ngày 29 tháng 07 năm 2023",
       "Hy! Khi đang viết lá thư này cho cậu, mình đang nghe ca khúc \"Vờ Như\" của Lê Cát Trọng Lý. Trong lời bài hát có một đoạn như thế này:",
@@ -51,7 +51,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 30 tháng 08 năm 2023",
+    date: "ngày 30.08.2023",
     paragraphs: [
       "Măng Đen, ngày 30 tháng 08 năm 2023",
       "Hy, thế là mộc đã đón đoàn retreat thứ 7, còn con số chính xác thì nhiều hơn nữa. Hôm qua khi tiễn các bạn trong chuyến retreat 07 - Suối reo vang reo ra về, nhìn các bạn bật khóc mà lòng mình cũng bồi hồi dữ lắm.",
@@ -67,7 +67,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 19 tháng 10 năm 2023",
+    date: "ngày 19.10.2023",
     paragraphs: [
       "Măng Đen, ngày 19 tháng 10 năm 2023",
       "Chào người bạn đã lâu không nhắn gửi!",
@@ -80,7 +80,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 17 tháng 11 năm 2023",
+    date: "ngày 17.11.2023",
     paragraphs: [
       "Măng Đen, ngày 17 tháng 11 năm 2023",
       "Hy! Dạo này tớ khá bận.",
@@ -95,7 +95,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 03 tháng 01 năm 2024",
+    date: "ngày 03.01.2024",
     paragraphs: [
       "Măng Đen, ngày 03 tháng 01 năm 2024",
       "Hôm nay, khi viết những dòng chữ này, tớ đã ở một dòng thời gian khác - năm 2024. Còn cậu, vẫn đâu đó trong vô lượng những đợt sóng trập trùng. Hôm nay, một ngày sau khi khách trọ đã về, tớ ngồi yên được một lát và nhớ ra mình cần viết thư cho cậu.",
@@ -111,7 +111,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 27 tháng 02 năm 2024",
+    date: "ngày 27.02.2024",
     paragraphs: [
       "Măng Đen, ngày 27 tháng 02 năm 2024",
       "Gửi Hy,",
@@ -127,7 +127,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 20 tháng 06 năm 2024",
+    date: "ngày 20.06.2024",
     paragraphs: [
       "Măng Đen, ngày 20 tháng 06 năm 2024",
       "Trời đương hè, tớ nhớ da diết cái tiết trời ảm đạm của mùa đông. Từng nhành cây trơ lá, sắc mây xám, bầu không khí quạnh quẽ như thể ai đó đã rút bớt đi màu sắc chỉ còn để lại những gam màu nhàn nhạt, khiến lòng người cũng man mác, bảng lảng.",
@@ -142,7 +142,7 @@ export const letters: Letter[] = [
     ],
   },
   {
-    date: "ngày 24 tháng 09 năm 2024",
+    date: "ngày 24.09.2024",
     paragraphs: [
       "Măng Đen, ngày 24 tháng 09 năm 2024",
       "Hy, đã lâu không nhắc tên cậu, dù chỉ là trong thoáng chốc. Tớ và mọi người ở nhà mộc, thật sự đã trải qua mấy tháng cực kỳ bận rộn. Công việc nhiều đến nỗi tớ không đủ thời gian để viết gì chỉnh chu trên page này, cũng không đủ sức để viết những lời nhắn lúc 5 giờ mỗi ngày như hơn 180 ngày qua tớ đã viết. Tớ và mọi người chỉ biết dành hết tâm sức của mình cho những người đang ở mộc little farm. Từ 2 chuyến retreat trong tháng rồi mọi thứ cứ phát sinh, có tháng đến tận 4 rồi 5 chuyến.",

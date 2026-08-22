@@ -9,7 +9,7 @@ import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "trà · workshop tea·mind",
-  description: "một buổi ngồi lại bên chén trà — chậm tay, chậm lời, để tâm mình lắng theo từng ngụm nước.",
+  description: "một buổi ngồi lại bên chén trà - chậm tay, chậm lời, để tâm mình lắng theo từng ngụm nước.",
 };
 
 const steps = [
@@ -31,7 +31,7 @@ export default function TeaMindTraPage() {
           trà
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 2.5rem" }}>
-          một buổi ngồi lại bên chén trà — chậm tay, chậm lời, để tâm mình lắng theo từng ngụm nước.
+          một buổi ngồi lại bên chén trà - chậm tay, chậm lời, để tâm mình lắng theo từng ngụm nước.
         </p>
       </div>
 

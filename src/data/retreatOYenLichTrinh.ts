@@ -13,7 +13,7 @@ export const days: ItineraryDay[] = [
       { time: "12:30–14:00", title: "workshop: chén trà tháng năm", details: ["một buổi chiều bên chén trà nhẹ nhàng để quay về với bản thân."] },
       { time: "14:00–16:00", title: "đi dạo bộ thong dong ngắm hoàng hôn" },
       { time: "17:30–19:30", title: "cùng chuẩn bị & thưởng thức bữa tối", details: ["nui đút lò & soup.", "dùng bữa thật khẽ khàng trong ánh nến dịu dàng."] },
-      { time: "20:30–21:30", title: "đêm thương mình", details: ["ngồi yên dưới ánh nến — chạm vào những gì đang vướng trong lòng.", "trò chuyện về những gì đang làm ta bận tâm.", "hướng dẫn cách ngủ ngon trong kén nhỏ."] },
+      { time: "20:30–21:30", title: "đêm thương mình", details: ["ngồi yên dưới ánh nến, chạm vào những gì đang vướng trong lòng.", "trò chuyện về những gì đang làm ta bận tâm.", "hướng dẫn cách ngủ ngon trong kén nhỏ."] },
     ],
   },
   {

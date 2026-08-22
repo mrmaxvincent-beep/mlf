@@ -284,7 +284,7 @@ export default function TuanDuPage() {
           &ldquo;
         </span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
-          tuần-du bắt đầu bằng một câu hỏi trong mỗi người — hãy xem khi tuần-du khép lại, điều gì đã âm thầm nở ra bên trong ta?
+          tuần-du bắt đầu bằng một câu hỏi trong mỗi người — hãy xem khi tuần-du khép lại, điều gì đã âm thầm mở ra bên trong ta?
         </p>
       </Reveal>
 

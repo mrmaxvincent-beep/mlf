@@ -93,10 +93,10 @@ export default function PhiaSangPage() {
       <Reveal className="wrap letter" style={{ marginBottom: "5rem", maxWidth: "58ch" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", color: "var(--color-ink)", marginBottom: "1.2rem" }}>tái bút —</p>
         <p style={{ fontSize: "0.88rem", color: "var(--color-ink)" }}>
-          buổi trò chuyện diễn ra online qua Zoom, khoảng 120 phút. dành cho những ai đang ở gần cái chết theo một cách nào đó — đang mang bệnh, vừa tiễn người thân, đang ngồi bên một người sắp đi, hoặc muốn chuẩn bị khi tâm còn an.
+          buổi trò chuyện diễn ra online qua Zoom, khoảng 120 phút. dành cho những ai đang ở gần cái chết theo một cách nào đó - đang mang bệnh, vừa tiễn người thân, đang ngồi bên một người sắp đi, hoặc muốn chuẩn bị khi tâm còn an.
         </p>
         <p style={{ fontSize: "0.88rem", color: "var(--color-ink)" }}>
-          một điều tiên quyết quan trọng: người tham gia cần thật sự mở lòng đón nhận và biết mình cần sự giúp đỡ này. phí tùy tâm — nếu lúc này chưa thuận về tài chính, xin đừng bận tâm. vui lòng điền thông tin vào phiếu đăng ký, tôi sẽ hẹn lịch lại qua email.
+          một điều tiên quyết quan trọng: người tham gia cần thật sự mở lòng đón nhận và biết mình cần sự giúp đỡ này. phí tùy tâm - nếu lúc này chưa thuận về tài chính, xin đừng bận tâm. vui lòng điền thông tin vào phiếu đăng ký, tôi sẽ hẹn lịch lại qua email.
         </p>
       </Reveal>
 

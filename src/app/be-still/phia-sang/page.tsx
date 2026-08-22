@@ -73,7 +73,7 @@ export default function PhiaSangPage() {
           ở những thời khắc cuối cùng của cuộc đời, con người cũng cần đối diện với một điều quan trọng khác: tâm mình. liệu mình đã nhẹ lòng chưa? những yêu thương chưa từng bày tỏ, những nặng lòng chưa thể nói ra, những điều chưa thể tha thứ được cho người và cho chính mình? buổi trò chuyện này cũng để nhìn nhận lại những điều chưa thể buông, xoa dịu và làm thấu tỏ những chất chứa bấy lâu.
         </p>
         <p>
-          buổi ngồi lại cũng dành không gian cho những điều rất thực tế: những lưu ý khi lo hậu sự, những giai đoạn quan trọng mà người ra đi sẽ đi qua và cách những người ở lại có thể đồng hành trong từng giai đoạn ấy — để khi việc đến, lòng đã có chuẩn bị, tay chân đỡ luống cuống.
+          buổi ngồi lại cũng dành không gian cho những điều rất thực tế: những lưu ý khi lo hậu sự, những giai đoạn quan trọng mà người ra đi sẽ đi qua và cách những người ở lại có thể đồng hành trong từng giai đoạn ấy - để khi việc đến, lòng đã có chuẩn bị, tay chân đỡ luống cuống.
         </p>
         <p>
           đây không hẳn là một cuộc trò chuyện mang màu sắc tôn giáo hay tâm linh, cũng không hẳn là khoa học thuần túy. có lẽ khi đứng trước cái chết thì tất cả sự phân định, khái niệm vốn không còn quan trọng nữa. tôi mong bằng một cách rất con người, bằng sự hiểu biết, thấu cảm và sự an tĩnh của bản thân sẽ giúp ai đó đi qua một đoạn đường trong sự bình an và rõ biết.

@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
-import { Schedule } from "@/components/Schedule";
+import { DayCard } from "@/components/DayCard";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { day1, day2, priceTiers } from "@/data/tuanDu04";
@@ -53,7 +53,7 @@ export default function TuanDu04Page() {
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>
-        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" style={{ height: "100%" }} />
+        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" src="/assets/tuandu_04.webp" alt="a pause in Saigon" style={{ height: "100%" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "4.5rem", marginBottom: "2.5rem", maxWidth: "56ch" }}>
@@ -114,20 +114,22 @@ export default function TuanDu04Page() {
         </div>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">lịch trình</span>
+      <div className="wrap" style={{ marginBottom: "1.2rem", textAlign: "center" }}>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>lịch trình</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "3.5rem" }}>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
-          ngày 01 · thứ 7
-        </span>
-        <Schedule rows={day1} />
-      </div>
-      <div className="wrap" style={{ marginBottom: "1rem" }}>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
-          ngày 02 · chủ nhật
-        </span>
-        <Schedule rows={day2} />
+      <div className="wrap" style={{ marginBottom: "1rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem" }}>
+        {[
+          { n: "01", title: "thứ 7", rows: day1 },
+          { n: "02", title: "chủ nhật", rows: day2 },
+        ].map((d) => (
+          <Reveal key={d.n} style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+            <div style={{ backgroundColor: "#faf8f3", padding: "2.5rem", borderRadius: "0.5rem", maxWidth: "83ch", width: "100%" }}>
+              <div style={{ marginBottom: "-3.5rem" }}>
+                <DayCard dayNum={d.n} title={d.title} rows={d.rows} />
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </div>
       <div className="wrap" style={{ marginBottom: "5rem" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.7, color: "var(--color-stone-alt)", margin: "1rem 0 0" }}>

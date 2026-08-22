@@ -85,16 +85,6 @@ export default function PodcastOYenPage() {
         </div>
       </Reveal>
 
-      {/* about */}
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow" style={{ marginBottom: 0, color: "var(--color-ink)" }}>về podcast</span>
-      </div>
-      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          mỗi tập, mộc little farm ngồi lại cùng một người khách, một người bạn, hoặc chính những người đang sống ở nhà mộc - để trò chuyện chậm rãi về một đời sống ở-yên: cách người ta dừng lại, cách người ta lắng nghe mình, và những khoảng lặng giữa đời thường.
-        </p>
-      </Reveal>
-
       <Footer />
     </>
   );

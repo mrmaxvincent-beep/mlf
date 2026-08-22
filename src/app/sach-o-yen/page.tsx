@@ -25,7 +25,7 @@ export default function SachOYenPage() {
           sách ở-yên
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          những cuốn sách nhỏ của mộc little farm — đọc, tải về và mang theo bên mình.
+          những cuốn sách nhỏ của mộc little farm.
         </p>
       </div>
 

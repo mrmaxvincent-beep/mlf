@@ -229,7 +229,7 @@ export default function RetreatAnVuiPage() {
       </Reveal>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1rem" }}>
-          nếu bạn đang đọc trang này cho bố mẹ mình — an-vui chỉ 4 khách mỗi chuyến, thong dong và luôn có người ở cạnh: Thuận, Tâm, Vũ — là người đồng hành theo sát suốt hành trình. 3 người đã đi dẫn dắt hơn 80 chuyến retreat, trong đó có rất nhiều người lớn tuổi.
+          nếu bạn đang đọc trang này cho bố mẹ mình! an-vui chỉ 4 khách mỗi chuyến, thong dong và luôn có người ở cạnh: Thuận, Tâm, Vũ - là người đồng hành theo sát suốt hành trình. 3 người đã đi dẫn dắt hơn 80 chuyến retreat, trong đó có rất nhiều người lớn tuổi.
         </p>
         <p style={{ ...proseP, margin: 0 }}>mlf là nơi đủ an toàn, dịu dàng để bố mẹ được là chính mình một chút.</p>
       </div>

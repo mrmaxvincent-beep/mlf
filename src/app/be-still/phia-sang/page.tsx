@@ -80,7 +80,7 @@ export default function PhiaSangPage() {
         </p>
         <p>tôi đã ấp ủ điều này khá lâu, và rằng mình cần một định lực đủ lớn để thực hiện công việc khó khăn này. may thay, giờ tôi đã sẵn sàng.</p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", marginTop: "2.5rem" }}>
-          thương,
+          lành thay,
           <br />
           tâm
         </p>

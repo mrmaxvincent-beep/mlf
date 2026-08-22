@@ -40,7 +40,7 @@ export default function TeaMindGomPage() {
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-stone-alt)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>còn nhiều tác phẩm khác được cập nhật thường xuyên tại Instagram.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>

@@ -93,7 +93,7 @@ export default function ClariTeaPage() {
           clari-tea không phải là buổi trị liệu tâm lý hay tư vấn y khoa, và không thay thế cho điều đó khi cần. những gì chia sẻ trong buổi gặp được giữ kín, trong phạm vi cho phép của pháp luật.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.8rem", lineHeight: 1.9, color: "var(--color-stone-alt)", margin: 0 }}>
-          nếu bạn đang trong một khủng hoảng tâm lý cấp tính — có ý nghĩ muốn tự làm hại bản thân, hoặc cảm thấy không an toàn với chính mình — xin hãy liên hệ ngay với đường dây hỗ trợ khẩn cấp hoặc người có chuyên môn gần bạn nhất, trước khi đặt lịch ở đây.
+          nếu bạn đang trong một khủng hoảng tâm lý cấp tính - cảm thấy không an toàn với chính mình - xin hãy liên hệ ngay với đường dây hỗ trợ khẩn cấp hoặc người có chuyên môn gần bạn nhất, trước khi đặt lịch ở đây.
         </p>
       </div>
 

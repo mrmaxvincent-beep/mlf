@@ -70,7 +70,7 @@ export default function BeStillPage() {
           be-still là một không gian an tĩnh để bạn tự thấy rõ, tự quyết định, tự chịu trách nhiệm cho con đường của mình.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
-          Người hướng dẫn không phải chuyên gia, không phải guru — chỉ là người đã đi được một đoạn, và vẫn đang sống giữa đời thường.
+          Người hướng dẫn không phải chuyên gia, không phải guru - chỉ là người đã đi được một đoạn, và vẫn đang sống giữa đời thường.
         </p>
       </Reveal>
 

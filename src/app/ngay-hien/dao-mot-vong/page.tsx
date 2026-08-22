@@ -114,12 +114,12 @@ export default function DaoMotVongPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: 900, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
         <div style={{ display: "flex", gap: "0.4rem 0.6rem", flexWrap: "wrap", alignItems: "baseline" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>chung ·</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>chung ·</span>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-ink)", lineHeight: 1.6 }}>{sharedSpaces.join(" · ")}</span>
         </div>
         <div style={{ display: "flex", gap: "0.4rem 0.6rem", flexWrap: "wrap", alignItems: "baseline" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>riêng ·</span>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-stone-alt)", lineHeight: 1.6 }}>{privateSpaces.join(" · ")}</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>riêng ·</span>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-ink)", lineHeight: 1.6 }}>{privateSpaces.join(" · ")}</span>
         </div>
       </Reveal>
 

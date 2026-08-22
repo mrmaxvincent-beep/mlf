@@ -81,7 +81,7 @@ export default function JournalPage() {
           &ldquo;mỗi con người đều mang trong mình một ngọn lửa nhỏ — đủ để thắp sáng những điều tốt lành quanh mình.&rdquo;
         </p>
         <p className="drop-cap" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
-          Nếu bạn cũng đang sống, đang quan sát, đang lắng nghe cuộc đời bằng một trái tim mở — hãy cùng chúng tôi góp một tiếng nói, một góc nhìn, một mảnh cảm xúc cho mlf journal quyển 02, phát hành Tết 2027 (29 tháng Chạp).
+          Nếu bạn cũng đang sống, đang quan sát, đang lắng nghe cuộc đời bằng một trái tim mở - hãy cùng chúng tôi góp một tiếng nói, một góc nhìn, một mảnh cảm xúc cho mlf journal quyển 02, phát hành Tết 2027 (29 tháng Chạp).
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           gửi những người sắp viết cùng số báo này,

@@ -39,7 +39,7 @@ export default function TeaMindPage() {
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>
-              Tôi là Vũ, người hướng dẫn trà — gốm — tranh tại mộc little farm. tea·mind là không gian mà tôi &ldquo;chưng cất&rdquo; từ những trải nghiệm của mình.
+              Tôi là Vũ, người hướng dẫn trà · gốm · tranh tại mộc little farm. tea·mind là không gian từ cái cảm về vẻ đẹp.
             </p>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone)" }}>— Vũ</span>
           </div>

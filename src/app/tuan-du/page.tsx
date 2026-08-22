@@ -128,7 +128,7 @@ export default function TuanDuPage() {
           một chuyến đi thong dong
         </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-          tuần-du mang tinh thần của một mystery trip — vì tin rằng khi ta buông bớt sự kiểm soát, ta mới thực sự bắt đầu đi.
+          tuần-du mang tinh thần của một mystery trip vì tin rằng khi ta buông bớt sự kiểm soát, ta mới thực sự bắt đầu đi.
         </p>
       </Reveal>
 

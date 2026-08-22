@@ -92,10 +92,10 @@ export default function ConDuongMlfPage() {
           mộc little farm bắt đầu từ những người rời phố lên núi, trồng rau, nấu cơm, để nhìn thấy mình.
         </p>
         <p style={proseP}>
-          ở núi, một ngày trôi chậm. trong cái giãn ra từ từ ấy, khoảng trống dần hiển lộ. đây là miền đất màu mỡ để người ta đối diện với những điều lạ: một đêm sâu không đáy, một cơn mưa rừng không hẹn ngày tạnh, một sự im lặng chưa từng dung. và cũng từ những khoảng ấy, bên trong họ, một điều gì đó cũng dần dày lên — một chiều sâu, một cái thấy — được bồi đắp.
+          ở núi, một ngày trôi chậm. trong cái giãn ra từ từ ấy, khoảng trống dần hiển lộ. đây là miền đất màu mỡ để người ta đối diện với những điều lạ: một đêm sâu không đáy, một cơn mưa rừng không hẹn ngày tạnh, một sự im lặng chưa từng dung. và cũng từ những khoảng ấy, bên trong họ, một điều gì đó cũng dần dày lên - một chiều sâu, một cái thấy - được bồi đắp.
         </p>
         <p style={proseP}>
-          những đêm ngồi một mình, mà kỳ thực không một mình. có ta và thiên nhiên — một người thầy không tôn xưng, mà tự khắc khả kính. người thầy đã ở đó, lặng lẽ đổi thay, không buông một lời mà thâm sâu diệu vợi. nhìn một cội cây qua bốn mùa, nghe một cơn gió đổi hướng, người ta dần thấy, cái thấy về chính mình.
+          những đêm ngồi một mình, mà kỳ thực không một mình. có ta và thiên nhiên - một người thầy không tôn xưng, mà tự khắc khả kính. người thầy đã ở đó, lặng lẽ đổi thay, không buông một lời mà thâm sâu diệu vợi. nhìn một cội cây qua bốn mùa, nghe một cơn gió đổi hướng, người ta dần thấy, cái thấy về chính mình.
         </p>
         <p style={proseP}>
           và cái rõ ra ấy, chẳng phải điều học được, mà là điều đã từng sống qua.
@@ -138,7 +138,7 @@ export default function ConDuongMlfPage() {
           trong mỗi người, đều có sẵn khả năng trở-về, như hạt giống vẫn nằm sẵn trong đất, chờ đúng mùa. có khi mình chỉ quên mất đường về, vì bận rộn cứ phủ lên như cỏ dại, lâu ngày che khuất lối đi.
         </p>
         <p style={proseP}>
-          để tìm lại lối đi ấy, có thể bắt đầu từ một điều nhỏ: khi đang làm việc gì đó, dừng lại vài giây, nhìn thật kỹ, cảm thật rõ. nếu trong giây phút ấy, lòng mình dịu lại — thì đó chính là ở-yên. phần còn lại, chỉ là để sự dịu ấy được tiếp nối, ngày này qua ngày khác, như nước thấm vào đất.
+          để tìm lại lối đi ấy, có thể bắt đầu từ một điều nhỏ: khi đang làm việc gì đó, dừng lại vài giây, nhìn thật kỹ, cảm thật rõ. nếu trong giây phút ấy, lòng mình dịu lại - thì đó chính là ở-yên. phần còn lại, chỉ là để sự dịu ấy được tiếp nối, ngày này qua ngày khác, như nước thấm vào đất.
         </p>
         <p style={proseP}>
           không ai giục được một hạt giống nảy mầm. việc của người làm vườn, chỉ là giữ cho đất tốt, rồi lùi lại, để yên và tin.

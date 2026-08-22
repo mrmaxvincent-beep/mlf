@@ -185,7 +185,7 @@ export default function CongDongOYenPage() {
       <div className="wrap" style={{ marginBottom: "4rem", paddingBottom: "3rem", paddingTop: "3rem" }}>
         <span className="sec-label" style={{ textAlign: "center" }}>những người giữ lửa cho ở-yên</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "center", maxWidth: "48ch", margin: "0 auto 3.5rem" }}>
-          ở-yên có ba người bạn đồng hành — mỗi người một vai, một sắc thái, cùng hoà thành một dòng chảy chung.
+          ở-yên có ba người bạn đồng hành - mỗi người một vai, một sắc thái, cùng hoà thành một dòng chảy chung.
         </p>
 
         <div style={{ position: "relative", maxWidth: "900px", margin: "0 auto" }}>
@@ -208,7 +208,7 @@ export default function CongDongOYenPage() {
         </div>
 
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", maxWidth: "58ch", margin: "3.5rem auto 0" }}>
-          Cùng nhau, ba người giữ cho ở-yên không chỉ là một group online, mà thật sự là một tổ ấm chung — nơi họ chia sẻ những gì mình đang học được: về cách sống với tâm yên hơn, về cách dừng lại giữa sự vội vã, về cách ở lại với chính mình. Cả ba đều đang sống tại mộc little farm, thực hành đời sống chánh niệm, và sống thong dong giữa một cuộc đời đầy những biến chuyển.
+          Cùng nhau, ba người giữ cho ở-yên không chỉ là một group online, mà thật sự là một tổ ấm chung - nơi họ chia sẻ những gì mình đang học được: về cách sống với tâm yên hơn, về cách dừng lại giữa sự vội vã, về cách ở lại với chính mình. Cả ba đều đang sống tại mộc little farm, thực hành đời sống chánh niệm, và sống thong dong giữa một cuộc đời đầy những biến chuyển.
         </p>
       </div>
 

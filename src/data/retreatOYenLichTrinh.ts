@@ -27,7 +27,7 @@ export const days: ItineraryDay[] = [
       { time: "11:15–12:00", title: "bữa trưa,  ăn tĩnh lặng", details: ["miến trộn. dùng bữa trong im lặng."] },
       { time: "13:00–15:30", title: "workshop: thương thân - chăm sóc cơ thể", details: ["học cách hiểu và chăm sóc cơ thể của mình."] },
       { time: "16:30–19:30", title: "cùng nhau nấu bữa & thưởng thức tiệc tối", details: ["lẩu lá giang."] },
-      { time: "19:30–21:30", title: "rạp chiếu phim là mộng", details: ["“song of the sea” — bước vào thế giới là mộng, để những cảm xúc được định nghĩa thành lời."] },
+      { time: "19:30–21:30", title: "rạp chiếu phim là mộng", details: ["“song of the sea” - bước vào thế giới là mộng, để những cảm xúc được định nghĩa thành lời."] },
     ],
   },
   {

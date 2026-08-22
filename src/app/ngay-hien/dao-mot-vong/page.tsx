@@ -235,7 +235,7 @@ export default function DaoMotVongPage() {
           tự tay làm
         </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
-          nước mắm chay từ nấm và dứa · đậu hũ · bánh mỳ sourdough lên men tự nhiên · sữa hạt · rau củ ngâm thảo mộc · mứt dâu, mứt cà chua · thực phẩm lên men (kim chi, cải chua) · tương ớt · nước sấu, nước mơ, chanh muối, tắc muối, kombucha, chanh đào, rượu sấu · dấm ăn
+          nước mắm chay từ nấm và dứa · đậu hũ · bánh mỳ sourdough lên men tự nhiên · sữa hạt · rau củ ngâm thảo mộc · mứt dâu, mứt cà chua · thực phẩm lên men (kim chi, cải chua) · tương ớt · nước sấu, nước mơ, chanh muối, tắc muối, kombucha, chanh đào · dấm ăn
         </p>
       </div>
 

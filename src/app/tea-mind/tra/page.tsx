@@ -49,7 +49,7 @@ export default function TeaMindTraPage() {
           Buổi trà này là một khoảng lặng để nhìn lại nhịp tay mình đang vội vã đến đâu.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          Vũ sẽ đồng hành cùng bạn qua từng bước — chọn trà, đun nước, rót và mời — để học cách ở lại trọn vẹn trong từng cử chỉ.
+          Vũ sẽ đồng hành cùng bạn qua từng bước: chọn trà, đun nước, rót và mời để học cách ở lại trọn vẹn trong từng cử chỉ.
         </p>
       </Reveal>
 

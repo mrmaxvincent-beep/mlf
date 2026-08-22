@@ -1,47 +1,21 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
-/** Auto-rotating quote ("những vị khách tới mlf để làm gì?") with a fade/blur transition and clickable progress dots. */
+/** Quote picker ("những vị khách tới mlf để làm gì?") with a fade/blur transition and clickable progress dots. */
 export function GuestWhyRotator({ quotes }: { quotes: string[] }) {
   const [shown, setShown] = useState(0);
   const [fading, setFading] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  function goTo(next: number) {
-    if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
-    setFading(true);
-    fadeTimeoutRef.current = setTimeout(() => {
-      setShown(next);
-      setFading(false);
-    }, 800);
-  }
-
-  function start() {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setFading(true);
-      fadeTimeoutRef.current = setTimeout(() => {
-        setShown((s) => (s + 1) % quotes.length);
-        setFading(false);
-      }, 800);
-    }, 4200);
-  }
-
-  useEffect(() => {
-    start();
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [quotes.length]);
 
   function handleSelect(i: number) {
     if (i === shown) return;
-    goTo(i);
-    start();
+    if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+    setFading(true);
+    fadeTimeoutRef.current = setTimeout(() => {
+      setShown(i);
+      setFading(false);
+    }, 800);
   }
 
   return (

@@ -24,6 +24,7 @@ export const routes = {
   teaMindLich: "/tea-mind/lich",
   thinhKhong: "/thinh-khong",
   thuVien: "/thu-vien",
+  podcastOYen: "/podcast-o-yen",
   motNgayOYen: "/mot-ngay-o-yen",
   congDongOYen: "/cong-dong-o-yen",
   conDuongMlf: "/con-duong-mlf",
@@ -53,6 +54,11 @@ export const hoatDongMenu = [
   { label: "be-still", href: routes.beStill },
   { label: "tea · mind", href: routes.teaMind },
   { label: "thinh · không", href: routes.thinhKhong },
+];
+
+export const thuVienMenu = [
+  { label: "thư viện ở-yên", href: routes.thuVien },
+  { label: "podcast ở-yên", href: routes.podcastOYen },
 ];
 
 export const congDongMenu = [
@@ -119,7 +125,13 @@ export const mobileMenuSections = [
       { label: "thinh · không", href: routes.thinhKhong },
     ],
   },
-  { heading: "thư viện", items: [{ label: "thư viện ở-yên", href: routes.thuVien }] },
+  {
+    heading: "thư viện",
+    items: [
+      { label: "thư viện ở-yên", href: routes.thuVien },
+      { label: "podcast ở-yên", href: routes.podcastOYen },
+    ],
+  },
   {
     heading: "cộng đồng",
     items: [

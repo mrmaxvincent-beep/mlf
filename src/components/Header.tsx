@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { routes, hoatDongMenu, congDongMenu, mlfMenu, programsPanel, mobileMenuSections } from "@/lib/nav";
+import { routes, hoatDongMenu, thuVienMenu, congDongMenu, mlfMenu, programsPanel, mobileMenuSections } from "@/lib/nav";
 
-type DropdownKey = "hoatDong" | "congDong" | "mlf" | null;
+type DropdownKey = "hoatDong" | "thuVien" | "congDong" | "mlf" | null;
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled])';
 
@@ -176,9 +176,14 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           onClose={() => setOpenDropdown(null)}
         />
 
-        <Link className="mono-link" href={routes.thuVien} style={navLabelStyle(navTextColor)}>
-          thư viện
-        </Link>
+        <NavDropdown
+          label="thư viện"
+          items={thuVienMenu}
+          color={navTextColor}
+          open={openDropdown === "thuVien"}
+          onOpen={() => setOpenDropdown("thuVien")}
+          onClose={() => setOpenDropdown(null)}
+        />
 
         <NavDropdown
           label="cộng đồng"

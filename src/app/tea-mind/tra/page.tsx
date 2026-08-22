@@ -69,7 +69,7 @@ export default function TeaMindTraPage() {
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>tham khảo thêm chương trình và booking tại Instagram.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>tham khảo thêm chương trình và booking tại Instagram.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>

@@ -48,7 +48,7 @@ export function GuestWhyRotator({ quotes }: { quotes: string[] }) {
             onClick={() => handleSelect(i)}
             style={{ background: "none", border: "none", padding: "0.4rem", margin: "-0.4rem", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
           >
-            <span style={{ width: 4, height: 4, borderRadius: "50%", background: i === shown ? "var(--color-moss)" : "var(--color-mist)", transition: "background .5s var(--ease-standard)" }} />
+            <span style={{ width: 4, height: 4, borderRadius: "50%", background: i === shown ? "var(--color-cham-dem)" : "var(--color-mist)", transition: "background .5s var(--ease-standard)" }} />
           </button>
         ))}
       </div>

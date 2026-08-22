@@ -79,12 +79,6 @@ export default function ClariTeaPage() {
         ))}
       </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "38ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
-          nếu đã tới lúc thì ta cùng ngồi lại — hãy đặt lịch.
-        </p>
-      </div>
-
       <div className="wrap" style={{ marginBottom: "6rem", textAlign: "center" }}>
         <a href="https://calendar.app.google/peGShtZA8AVwe17w6" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
           đặt lịch <span className="ar">→</span>

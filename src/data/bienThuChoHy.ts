@@ -97,7 +97,7 @@ export const letters: Letter[] = [
   {
     date: "ngày dài, tháng rộng… năm 2024",
     paragraphs: [
-      "Măng Đen, ngày dài, tháng rộng… mãi còn vấn vương",
+      "Măng Đen, ngày 03 tháng 01 năm 2024",
       "Hôm nay, khi viết những dòng chữ này, tớ đã ở một dòng thời gian khác - năm 2024. Còn cậu, vẫn đâu đó trong vô lượng những đợt sóng trập trùng. Hôm nay, một ngày sau khi khách trọ đã về, tớ ngồi yên được một lát và nhớ ra mình cần viết thư cho cậu.",
       "Măng Đen, những ngày này vẫn biến hóa khôn lường, sáng nắng dịu miên man rồi trưa bỗng hóa cơn mưa vội vàng, thoắt nhiên cầu vồng hiển hiện, chiều mây sà sà bên sườn núi, tối đến từng hồi gió lạnh rét run,… sự biến hóa đó luôn làm tớ không thôi thổn thức về những điều diệu kỳ này.",
       "Ngay ở những con người ở mộc cũng vậy, đi qua những con nắng ngày hè, rồi ngắm nhìn những chiếc lá cuối cùng trên nhành mai anh đào trước sân từ từ rụng xuống, rồi khi gió mùa Đông Bắc ùa về, ai cũng khoác vội mấy tấm áo chần bông… cũng không còn như ngày trước nữa.",

@@ -113,8 +113,15 @@ export default function UngHoMlfPage() {
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
               tài trợ tùy duyên — bạn có thể trợ duyên cho các chương trình retreat, giúp mlf mở rộng vòng tay đến nhiều người cần sự bình an và chuyển hóa hơn.
             </p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>
-              mọi đóng góp, dù lớn dù nhỏ, đều có ý nghĩa rất lớn đối với chúng tôi. Xin hoan hỷ ghi rõ nội dung đóng góp &ldquo;trợ duyên mlf&rdquo; khi chuyển khoản tới: Ngân hàng Vietcombank · STK: 7945672381 · Chủ TK: Hồ Thành Tâm.
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.7rem" }}>
+              mọi đóng góp, dù lớn dù nhỏ, đều có ý nghĩa rất lớn đối với chúng tôi. Xin hoan hỷ ghi rõ nội dung đóng góp &ldquo;trợ duyên mlf&rdquo; khi chuyển khoản.
+            </p>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
+              Ngân hàng Vietcombank
+              <br />
+              STK: 7945672381
+              <br />
+              Chủ TK: Hồ Thành Tâm
             </p>
           </div>
           <div style={{ padding: "1.5rem", border: "1px solid var(--color-mist)" }}>
@@ -124,7 +131,7 @@ export default function UngHoMlfPage() {
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
               nhận hỗ trợ — những ai thật sự cần đến retreat có thể nhận trợ duyên để tham gia các chương trình của mlf.
             </p>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>
               khi đăng ký chương trình retreat, bạn có thể cân nhắc lựa chọn các mức hỗ trợ (10% – 20%) phù hợp với nhu cầu của bản thân. Chúng tôi sẽ xác nhận việc hỗ trợ dựa trên mức sẵn có của quỹ trợ duyên.
             </p>
           </div>
@@ -132,6 +139,9 @@ export default function UngHoMlfPage() {
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+        <span className="eyebrow" style={{ display: "block", marginBottom: "0.9rem", color: "var(--color-ink)" }}>
+          tham khảo thêm các chương trình được trợ duyên
+        </span>
         <div style={{ display: "flex", justifyContent: "center", gap: "0.6rem 1rem", flexWrap: "wrap" }}>
           <Link className="mono-link" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat ở-yên

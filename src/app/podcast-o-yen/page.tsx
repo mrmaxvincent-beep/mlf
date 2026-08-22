@@ -55,13 +55,6 @@ export default function PodcastOYenPage() {
             <span style={pill}>sắp ra mắt</span>
           </div>
 
-          <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.4rem", color: "var(--color-ink)", margin: "0 0 0.7rem" }}>
-            {first.title}
-          </h2>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 1.6rem", maxWidth: "48ch" }}>
-            {first.desc}
-          </p>
-
           {/* spotify embed placeholder — swap for a real <iframe src="https://open.spotify.com/embed/episode/..."> once the first episode is live */}
           <div
             style={{

@@ -2,25 +2,47 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/** Auto-rotating quote ("những vị khách tới mlf để làm gì?") with a fade/blur transition and progress dots. */
+/** Auto-rotating quote ("những vị khách tới mlf để làm gì?") with a fade/blur transition and clickable progress dots. */
 export function GuestWhyRotator({ quotes }: { quotes: string[] }) {
   const [shown, setShown] = useState(0);
   const [fading, setFading] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
+  function goTo(next: number) {
+    if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+    setFading(true);
+    fadeTimeoutRef.current = setTimeout(() => {
+      setShown(next);
+      setFading(false);
+    }, 800);
+  }
+
+  function start() {
+    if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setFading(true);
-      setTimeout(() => {
+      fadeTimeoutRef.current = setTimeout(() => {
         setShown((s) => (s + 1) % quotes.length);
         setFading(false);
       }, 800);
     }, 4200);
+  }
+
+  useEffect(() => {
+    start();
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
+      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [quotes.length]);
+
+  function handleSelect(i: number) {
+    if (i === shown) return;
+    goTo(i);
+    start();
+  }
 
   return (
     <div
@@ -42,9 +64,18 @@ export function GuestWhyRotator({ quotes }: { quotes: string[] }) {
       >
         &ldquo;{quotes[shown]}&rdquo;
       </p>
-      <div style={{ display: "flex", gap: "0.4rem" }}>
+      <div style={{ display: "flex", gap: "0.6rem" }}>
         {quotes.map((_, i) => (
-          <span key={i} style={{ width: 4, height: 4, borderRadius: "50%", background: i === shown ? "var(--color-moss)" : "var(--color-mist)", transition: "background .5s var(--ease-standard)" }} />
+          <button
+            key={i}
+            type="button"
+            aria-label={`xem câu ${i + 1}`}
+            aria-current={i === shown}
+            onClick={() => handleSelect(i)}
+            style={{ background: "none", border: "none", padding: "0.4rem", margin: "-0.4rem", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+          >
+            <span style={{ width: 4, height: 4, borderRadius: "50%", background: i === shown ? "var(--color-moss)" : "var(--color-mist)", transition: "background .5s var(--ease-standard)" }} />
+          </button>
         ))}
       </div>
     </div>

@@ -108,7 +108,7 @@ export default function JournalPage() {
           bbt mlf journal
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 1.5rem" }}>
-          Chúng tôi không tìm kiếm những cây bút chuyên nghiệp, chỉ mong được lắng nghe những câu chuyện chân thành. Đây là hoạt động cộng đồng, không có nhuận bút — quyền tác giả vẫn thuộc về bạn.
+          Chúng tôi không tìm kiếm những cây bút chuyên nghiệp, chỉ mong được lắng nghe những câu chuyện chân thành. Đây là hoạt động cộng đồng, không có nhuận bút - quyền tác giả vẫn thuộc về bạn.
         </p>
         <a className="cta-btn" href="mailto:hello@moclittlefarm.com">
           gửi bài / ý tưởng cộng tác

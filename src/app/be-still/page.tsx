@@ -124,7 +124,7 @@ export default function BeStillPage() {
           đọc tâm quán <span className="ar">→</span>
         </a>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0.6rem 0 0" }}>
-          tâm quán là blog cá nhân của tôi — nơi tôi ghi lại những điều mình thấy trên đường.
+          tâm quán là blog cá nhân của tôi, nơi tôi ghi lại những điều mình thấy trên đường.
         </p>
       </div>
 

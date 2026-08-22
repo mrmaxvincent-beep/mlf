@@ -68,16 +68,6 @@ export default function TeaMindTraPage() {
         ))}
       </Reveal>
 
-      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "44ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
-          Tìm hiểu thêm về buổi trà và booking trên trang ig{" "}
-          <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" style={{ color: "var(--color-ink)", borderBottom: "1px solid var(--color-mist)" }}>
-            tea.mind
-          </a>
-          .
-        </p>
-      </Reveal>
-
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>&ldquo;cái-đẹp không phải để giữ, mà để cảm.&rdquo;</p>
       </Reveal>

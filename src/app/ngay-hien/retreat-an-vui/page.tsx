@@ -219,7 +219,7 @@ export default function RetreatAnVuiPage() {
       <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "26rem" }}>
         <PricingPanel
           label="retreat an-vui"
-          subtitle="5 ngày 4 đêm · tối đa 4 khách / chuyến"
+          subtitle="5 ngày 4 đêm · tối đa 4 khách"
           price="8.000.000đ / người"
           items={pricingItems}
           note="Phù hợp với người có thể tự đi lại, ăn uống, sinh hoạt cá nhân - không cần hỗ trợ thường xuyên."

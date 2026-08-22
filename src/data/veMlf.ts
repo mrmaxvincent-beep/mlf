@@ -26,7 +26,7 @@ export const branches = [
     lead: "Có người cần một nơi để dừng chân, dù chỉ là một lát.",
     programs: [
       { href: "/ngay-hien", name: "ngày-hiền", place: "Măng Đen", desc: "Trú lại giữa rừng và đất trời vài ngày.", subs: ["stay + talk — entry-level", "retreat ở-yên — thong thả, sâu lắng", "retreat hàm-dưỡng — làm việc sâu", "retreat an-vui — dành cho người 50+"] },
-      { href: "/giua", name: "giữa.middle", place: "Huế", desc: "Một góc giữa đời thường, trung đạo — có bánh, trà, đồ chay — để ai cũng có thể tiếp cận ở-yên, dù chỉ trong một buổi chiều rẽ qua.", subs: null },
+      { href: "/giua", name: "giữa.middle", place: "Huế", desc: "Một góc giữa đời thường, trung đạo - có bánh, trà, đồ chay - để ai cũng có thể tiếp cận ở-yên, dù chỉ trong một buổi chiều rẽ qua.", subs: null },
     ],
   },
   {

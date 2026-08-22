@@ -10,7 +10,7 @@ export function ImageStoryCarousel({ stories, showCounter = true }: { stories: {
 
   function start() {
     if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => setIndex((i) => (i + 1) % stories.length), 6000);
+    timerRef.current = setInterval(() => setIndex((i) => (i + 1) % stories.length), 10000);
   }
 
   useEffect(() => {

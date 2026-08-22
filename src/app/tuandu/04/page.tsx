@@ -69,11 +69,7 @@ export default function TuanDu04Page() {
         </div>
       </div>
 
-      <div style={{ marginBottom: "3.5rem", height: "44vh", minHeight: 260, maxHeight: 420 }}>
-        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" style={{ height: "100%" }} />
-      </div>
-
-      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "2.5rem", maxWidth: "56ch" }}>
         <p style={proseP}>bạn có nhận ra rằng phần lớn thời gian, ta chỉ đóng vai một con người: vai công việc, vai người hiểu biết, vai người đang cố gắng trở nên tốt hơn…</p>
         <p style={proseP}>nhiều khi ta nói chuyện, nhưng không thật sự nói điều mình nghĩ.</p>
         <p style={proseP}>cười, nhưng không biết mình có đang vui không.</p>
@@ -110,11 +106,7 @@ export default function TuanDu04Page() {
         </p>
       </Reveal>
 
-      <div style={{ marginBottom: "3.5rem", height: "40vh", minHeight: 240, maxHeight: 380 }}>
-        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" style={{ height: "100%" }} />
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "5rem" }}>
+      <div className="wrap" style={{ marginBottom: "5rem", marginTop: "3.5rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.75rem 2rem" }}>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
             &ldquo;một cuối tuần không cố gắng để &lsquo;trở thành ai khác&rsquo;. chỉ chậm lại, ăn cùng nhau, và ở cạnh những con người rất thật.&rdquo;
@@ -143,11 +135,7 @@ export default function TuanDu04Page() {
         </p>
       </div>
 
-      <div style={{ marginBottom: "3.5rem", height: "40vh", minHeight: 240, maxHeight: 380 }}>
-        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" style={{ height: "100%" }} />
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+      <div className="wrap" style={{ marginBottom: "1.2rem", marginTop: "3.5rem" }}>
         <span className="eyebrow">thông tin và đăng ký</span>
       </div>
       <div className="wrap" style={{ marginBottom: "1.5rem", maxWidth: "56ch" }}>
@@ -185,7 +173,7 @@ export default function TuanDu04Page() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 2rem" }}>
-          nếu bạn cảm thấy mình cần một khoảng dừng — đây có thể là nơi để bắt đầu.
+          nếu bạn cảm thấy mình cần một khoảng dừng, đây có thể là nơi để bắt đầu.
         </p>
         <RegistrationLink href="https://forms.gle/fBbYr3dUDHqZkh9bA" programName="tuần-du 04 · a pause in Saigon" className="cta-btn cta-btn--solid">
           đăng ký <span className="ar">→</span>

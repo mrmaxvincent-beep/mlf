@@ -42,7 +42,7 @@ export const days: ItineraryDay[] = [
       { time: "14:00–15:30", title: "workshop: thương nhà - chăm lại không gian sống", details: ["cách chăm sóc không gian sống của mình."] },
       { time: "16:00–18:00", title: "mời trà tỏ tường", details: ["nhà mộc mời bạn tham gia một buổi uống trà giúp làm sáng tỏ những điều bên trong lòng. an toàn, cởi mở và chân thật."] },
       { time: "16:30–19:30", title: "cùng chuẩn bị & thưởng thức", details: ["mẹt bún đậu."] },
-      { time: "19:30–21:30", title: "đêm thư thái", details: ["cùng ngồi bên bếp lửa — đọc sách, đan len.", "xem diện tướng để hiểu mình.", "ngâm chân thảo mộc."] },
+      { time: "19:30–21:30", title: "đêm thư thái", details: ["cùng ngồi bên bếp lửa - đọc sách, đan len.", "xem diện tướng để hiểu mình.", "ngâm chân thảo mộc."] },
     ],
   },
   {

@@ -38,7 +38,7 @@ export const programs = [
     tagline: "dành cho người lớn tuổi đang học cách buông thư và tìm lại cảm hứng",
     name: "retreat an-vui",
     duration: "5 ngày · 4 đêm · nhịp chậm, ấm áp",
-    desc: "cùng nấu ăn, gói bánh, thêu tay, vẽ tranh thiền, đi bộ thong thả. chia sẻ về chăm sóc sức khỏe, giải tỏa tinh thần — không cần bắt nhịp hay đổi mình để vừa với một thế giới đang đi quá nhanh.",
+    desc: "cùng nấu ăn, gói bánh, thêu tay, vẽ tranh thiền, đi bộ thong thả. chia sẻ về chăm sóc sức khỏe, giải tỏa tinh thần — không cần đổi mình để vừa với một thế giới đang đi quá nhanh.",
     href: routes.retreatAnVui,
     imgLabel: "ảnh · retreat an-vui",
     imgSrc: "/assets/ngayhien_anvui.webp",

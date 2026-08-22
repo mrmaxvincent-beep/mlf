@@ -140,7 +140,7 @@ export default function VeMlfPage() {
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "60ch" }}>
         <p style={proseP}>mlf có một gốc — gọi là ở-yên: một cách sống hiện diện, thong dong, thấy rõ. Và có nhiều cách khác nhau để chạm vào gốc đó, tùy vào nơi bạn đang đứng trong đời sống mình.</p>
         <p style={proseP}>
-          Trước khi đi vào bất cứ nhánh nào — có{" "}
+          Trước khi đi vào bất cứ nhánh nào - có{" "}
           <Link href={routes.congDongOYen} style={{ fontFamily: "var(--font-sans)", color: "var(--color-ink)" }}>
             cộng đồng ở-yên
           </Link>

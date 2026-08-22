@@ -150,7 +150,7 @@ export default function ThinhKhongPage() {
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink)", textAlign: "center", margin: 0 }}>
-          giãn mở đường cho thông, thông dẫn tới hòa — ba bước của cùng một dòng chảy, không tách rời.
+          giãn mở đường cho thông, thông dẫn tới hòa - ba bước của cùng một dòng chảy, không tách rời.
         </p>
       </div>
 
@@ -188,7 +188,7 @@ export default function ThinhKhongPage() {
       </div>
       <div className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
-          Lớp vận hành theo chu kỳ lặp 12 tuần, đi sâu vào một chủ đề cụ thể mỗi tuần. Học viên có thể bắt đầu ở bất kỳ tuần nào — sau 12 tuần, chu kỳ quay lại từ đầu nhưng đi sâu hơn.
+          Lớp vận hành theo chu kỳ lặp 12 tuần, đi sâu vào một chủ đề cụ thể mỗi tuần. Học viên có thể bắt đầu ở bất kỳ tuần nào - sau 12 tuần, chu kỳ quay lại từ đầu nhưng đi sâu hơn.
         </p>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem" }}>

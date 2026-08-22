@@ -359,7 +359,7 @@ export default function TuanDuPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "48ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
-          không kích hoạt cảm xúc tập thể — không nhảy múa, hô gọi, nắm tay, ôm để tạo cao trào, không dẫn dắt hoặc thúc đẩy cảm xúc.
+          không kích hoạt cảm xúc tập thể, không nhảy múa, hô gọi, nắm tay, ôm để tạo cao trào, không dẫn dắt hoặc thúc đẩy cảm xúc.
           <br />
           <br />
           mà mọi điều chậm rãi, có ý thức và rất giản đơn. mỗi người được ở yên với nhịp cảm của riêng mình.

@@ -47,7 +47,7 @@ export default function PodcastOYenPage() {
 
       {/* featured episode / player */}
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "4.5rem", maxWidth: "620px" }}>
-        <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "2rem", background: "var(--color-cotton)" }}>
+        <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "2rem" }}>
           <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "1rem", marginBottom: "1.4rem" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
               tập {first.n}

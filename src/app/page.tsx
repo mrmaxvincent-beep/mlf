@@ -411,6 +411,7 @@ export default function HomePage() {
 
         <div style={{ marginTop: "2rem" }}>
           <IconLink href={routes.thuVien} eyebrow="tự đọc & ngẫm" title="thư viện ở-yên" />
+          <IconLink href={routes.podcastOYen} eyebrow="nghe & cảm" title="podcast ở-yên" />
         </div>
         <div>
           <IconLink href={routes.motNgayOYen} eyebrow="thử ở-yên một ngày" title="một ngày ở-yên" />

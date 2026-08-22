@@ -63,7 +63,7 @@ export default function TeaMindPage() {
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>Ở đây, có mùi đất, mùi lửa, mùi lá trà khẽ bay trong chiều tĩnh.</p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
-          tea·mind kể chuyện — bằng màu, bằng men gốm, bằng tiếng nước sôi. Những mẩu chuyện nhặt nhạnh từ hành trình tìm cái-đẹp.
+          tea·mind kể chuyện bằng màu, bằng men gốm, bằng tiếng nước sôi. Những mẩu chuyện nhặt nhạnh từ hành trình tìm cái-đẹp.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>
           Cái-đẹp không ồn ào. Nó ẩn mình trong dáng ngồi yên, ánh sáng rơi qua kẽ lá, trong vệt men chảy tự nhiên như nước mắt, trong một chén trà nóng đặt lặng lẽ giữa ngày.

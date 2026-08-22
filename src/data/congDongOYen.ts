@@ -9,7 +9,7 @@ export const spaces = [
   { num: "01", en: "living space", vi: "không gian sống", desc: "công thức nấu ăn chay lành, cách sắp đặt tổ ấm, chăm chút từng góc nhỏ để ngôi nhà có hồn." },
   { num: "02", en: "body space", vi: "không gian cơ thể", desc: "yoga & dưỡng sinh nhẹ nhàng, thực hành đơn giản đưa ta trở lại cân bằng tự nhiên." },
   { num: "03", en: "inner space", vi: "không gian nội tâm", desc: "thiền, quán chiếu, và những hướng dẫn chăm sóc đời sống bên trong." },
-  { num: "04", en: "connection space", vi: "không gian kết nối", desc: `gặp gỡ những tâm hồn đồng điệu — một cộng đồng nhỏ, tinh tế, vừa đủ gần gũi.` },
+  { num: "04", en: "connection space", vi: "không gian kết nối", desc: `gặp gỡ những tâm hồn đồng điệu - một cộng đồng nhỏ, tinh tế, vừa đủ gần gũi.` },
 ];
 
 export const unitGroups = [

@@ -97,10 +97,10 @@ export default function HomePage() {
               />
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.735rem", lineHeight: 1.4, color: "var(--color-paper-dem)", margin: "0 0 0.2rem", maxWidth: "22ch" }}>
-              một không gian tinh thần dựa trên triết lý ở yên.
+              nơi mọi thứ nảy mầm
             </p>
             <span style={{ fontFamily: "var(--font-sans)", color: "var(--color-paper-dem)", fontSize: "0.56rem", lineHeight: 1.4 }}>
-              nơi mọi thứ nảy mầm
+              một không gian tinh thần dựa trên triết lý ở yên.
             </span>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: "2.4rem", marginBottom: "1.4rem" }}>
               <span style={{ color: "var(--color-paper-dem)", position: "relative", paddingBottom: "0.5rem" }}>

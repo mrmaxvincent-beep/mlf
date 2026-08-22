@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
-import { routes } from "@/lib/nav";
 import { books } from "@/data/sachOYen";
 
 export const metadata: Metadata = {
@@ -81,12 +79,6 @@ export default function SachOYenPage() {
             </div>
           </Reveal>
         ))}
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.thuVien} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-          về thư viện ở-yên <span className="ar">→</span>
-        </Link>
       </div>
 
       <Footer />

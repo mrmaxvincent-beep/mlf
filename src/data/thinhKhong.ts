@@ -11,8 +11,8 @@ export const yogaList = ["Chuyển động chậm", "Biên độ vừa phải", 
 export const therapyList = ["Xoa bóp cơ bản", "Matxa phục hồi", "Diện chẩn", "Tự chăm sóc không dùng thuốc"];
 
 export const gth = [
-  { n: 1, title: "giãn", intro: `Khi căng thẳng, cơ thể có xu hướng co rút. Vai nhô lên. Hàm siết lại. Hơi thở nông và ngắn. "Giãn" không phải kéo căng tối đa — giãn là làm mềm.`, points: ["Làm mềm cơ và khớp", "Làm dịu hệ thần kinh", "Giảm tích tụ căng thẳng", "Đưa cơ thể về trạng thái an toàn"], close: "Giãn là điều kiện đầu tiên để phục hồi." },
-  { n: 2, title: "thông", intro: `Khi cơ thể ít vận động hoặc chịu áp lực kéo dài, tuần hoàn và nhịp thở dễ bị trì trệ. "Thông" không phải tạo ra chuyển động mạnh — thông là khơi lại dòng chảy tự nhiên.`, points: ["Tăng lưu thông máu và bạch huyết", "Điều hòa nhịp thở", "Hỗ trợ hệ tiêu hóa và bài tiết", "Giải phóng vùng tắc nghẽn như cổ vai gáy, hông, lưng dưới"], close: "Thông giúp cơ thể tự điều chỉnh thay vì phụ thuộc vào can thiệp bên ngoài." },
+  { n: 1, title: "giãn", intro: `Khi căng thẳng, cơ thể có xu hướng co rút. Vai nhô lên. Hàm siết lại. Hơi thở nông và ngắn. "Giãn" không phải kéo căng tối đa - giãn là làm mềm.`, points: ["Làm mềm cơ và khớp", "Làm dịu hệ thần kinh", "Giảm tích tụ căng thẳng", "Đưa cơ thể về trạng thái an toàn"], close: "Giãn là điều kiện đầu tiên để phục hồi." },
+  { n: 2, title: "thông", intro: `Khi cơ thể ít vận động hoặc chịu áp lực kéo dài, tuần hoàn và nhịp thở dễ bị trì trệ. "Thông" không phải tạo ra chuyển động mạnh - thông là khơi lại dòng chảy tự nhiên.`, points: ["Tăng lưu thông máu và bạch huyết", "Điều hòa nhịp thở", "Hỗ trợ hệ tiêu hóa và bài tiết", "Giải phóng vùng tắc nghẽn như cổ vai gáy, hông, lưng dưới"], close: "Thông giúp cơ thể tự điều chỉnh thay vì phụ thuộc vào can thiệp bên ngoài." },
   { n: 3, title: "hòa", intro: "Khi thân đã giãn, khí huyết đã lưu thông, cơ thể bắt đầu tự cân bằng.", points: ["Hơi thở và chuyển động không còn tách rời", "Cơ thể và tâm trí không còn đối kháng", "Bên trong và bên ngoài không còn xung đột"], close: "Đó là trạng thái tự nhiên xuất hiện khi không còn ép buộc." },
 ];
 

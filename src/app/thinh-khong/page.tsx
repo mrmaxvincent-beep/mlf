@@ -232,7 +232,7 @@ export default function ThinhKhongPage() {
         </div>
         <div>
           <span style={{ display: "block", fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", color: "var(--color-ink)", marginBottom: "0.9rem" }}>4 · học phí</span>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap", padding: "0.9rem 0", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap", maxWidth: "500px", padding: "0.9rem 0", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}>lớp cộng đồng</span>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)" }}>1.000.000 đ / tháng</span>
           </div>

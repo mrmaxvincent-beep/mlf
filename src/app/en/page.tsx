@@ -44,13 +44,13 @@ const services = [
     href: routes.tuanDu,
     name: "tuần-du",
     tagline: "mystery journeys",
-    desc: "Slow journeys across Vietnam's land, history and culture — used as material to look inward, not to sightsee.",
+    desc: "Slow journeys across Vietnam's land, history and culture - used as material to look inward, not to sightsee.",
   },
   {
     href: routes.beStill,
     name: "be-still",
     tagline: "online · sitting with the mind",
-    desc: "Online programs to sit with your own mind — khai tâm, writing from the heart, clari-tea conversations, the nhất-hiện practice community, and phía sáng, a companion for end-of-life conversations.",
+    desc: "Online programs to sit with your own mind - khai tâm, writing from the heart, clari-tea conversations, the nhất-hiện practice community, and phía sáng, a companion for end-of-life conversations.",
   },
   {
     href: routes.teaMind,

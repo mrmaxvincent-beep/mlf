@@ -36,7 +36,7 @@ export default function ChuyenVePage() {
         <div />
         <Reveal style={{ maxWidth: "60ch" }}>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-            Mỗi kỳ, mlf ngồi lại cùng một người bạn thân quen — người đã ghé mlf nhiều lần, mang theo một câu chuyện riêng. Chọn một kỳ ở khung bên trái để đọc.
+            Mỗi kỳ, mlf ngồi lại cùng một người bạn thân quen - người đã ghé mlf nhiều lần, mang theo một câu chuyện riêng. Chọn một kỳ ở khung bên trái để đọc.
           </p>
           <div id="cv-motif" style={{ textAlign: "center", marginTop: "1.5rem" }}>
             <Motif name="dom-muc" size={32} />

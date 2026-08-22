@@ -67,7 +67,7 @@ export default function BeStillPage() {
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>be-still không phải nơi chữa lành, cũng không phải nơi tu học.</p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
-          be-still là một không gian đủ an tĩnh — để bạn tự thấy rõ, tự quyết định, tự chịu trách nhiệm cho con đường của mình.
+          be-still là một không gian an tĩnh để bạn tự thấy rõ, tự quyết định, tự chịu trách nhiệm cho con đường của mình.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
           Người hướng dẫn không phải chuyên gia, không phải guru — chỉ là người đã đi được một đoạn, và vẫn đang sống giữa đời thường.

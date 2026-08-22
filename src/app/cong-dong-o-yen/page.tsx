@@ -239,7 +239,6 @@ export default function CongDongOYenPage() {
       {/* MEMBERSHIP */}
       <Reveal className="wrap" style={{ marginBottom: "4rem" }}>
         <span className="sec-label">lifetime membership</span>
-        <p style={{ fontFamily: "var(--font-sans)", fontStyle: "normal", fontSize: "1.15rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>một lần bước vào, bất cứ khi nào cũng có chỗ để trở về.</p>
         <div className="mem-box">
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "2.2rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>990.000đ</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>quyền truy cập trọn đời · private facebook group</span>

@@ -206,7 +206,7 @@ export default function VeMlfPage() {
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem", maxWidth: "56ch" }}>{b.lead}</p>
             {b.programs.map((p) => (
               <div key={p.name}>
-                <Link href={p.href} className="mlf-prog-row go">
+                <Link href={p.href} className="mlf-prog-row">
                   <span style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", flexWrap: "wrap", marginBottom: "0.2rem" }}>
                     <span className="nm" style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1.05rem", color: "var(--color-ink)" }}>
                       {p.name}

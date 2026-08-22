@@ -1687,6 +1687,10 @@ details[open] > summary .acc-icon {
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: bottom left;
+  transition: background-image var(--duration-hover) var(--ease-standard);
+}
+.mlf-prog-row:hover {
+  background-image: linear-gradient(var(--color-cham-dem), var(--color-cham-dem));
 }
 
 /* Alternating editorial image/text rows ("moments" sections) */

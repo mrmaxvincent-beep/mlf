@@ -29,7 +29,7 @@ export default function JournalPage() {
         </span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>một ghi chép để ở yên.</p>
         <p className="drop-cap" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          Đi qua nhiều nhà, nhiều người, nhiều vùng đất — nhưng rốt cuộc là đi sâu vào mình.
+          Đi qua nhiều nhà, nhiều người, nhiều vùng đất nhưng rốt cuộc là đi sâu vào mình.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "1.25rem 0 0" }}>
           Một quyển tạp chí có 03 chuyên mục, như một hành trình để cảm và hiểu về ở-yên.

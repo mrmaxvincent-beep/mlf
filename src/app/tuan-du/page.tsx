@@ -295,7 +295,7 @@ export default function TuanDuPage() {
         <div>
           <ImagePlaceholder label="ảnh · tuần-du ký" aspectRatio="4/5" src="/assets/tuanduky_03.webp" />
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0.9rem 0 0" }}>
-            tuần-du ký là cẩm nang ghi lại toàn bộ câu chuyện lịch sử, văn hoá của từng điểm đến — gợi mở để suy gẫm, ghi chép, trắc nghiệm. một &ldquo;tấm bản đồ&rdquo; tinh thần của chuyến đi.
+            tuần-du ký là cẩm nang ghi lại toàn bộ câu chuyện lịch sử, văn hoá của từng điểm đến - gợi mở để suy gẫm, ghi chép, trắc nghiệm. một &ldquo;tấm bản đồ&rdquo; tinh thần của chuyến đi.
           </p>
         </div>
         <div>

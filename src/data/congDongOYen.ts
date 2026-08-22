@@ -22,19 +22,19 @@ export const unitGroups = [
 export const reasons = [
   {
     en: "lived experience",
-    title: "đọc sâu — từ trải nghiệm thật",
+    title: "đọc sâu, từ trải nghiệm thật",
     desc: "Những gì viết trong ở-yên không phải lý thuyết nhặt lại từ sách hay từ người khác, mà là điều mlf đã thực hành, đã sai, đã sửa qua nhiều năm. Bạn không cần tự sàng lọc giữa hàng trăm nguồn nữa.",
     motif: "am-tra",
   },
   {
     en: "wholeness",
-    title: "toàn diện — nối liền các mảnh đời sống",
+    title: "toàn diện, nối liền các mảnh đời sống",
     desc: "Đời sống không chia thành từng ô riêng: chuyện ăn, chuyện ngủ, chuyện làm việc, chuyện ở bên người thân, tất cả vốn là một dòng chảy chung. ở-yên nối chúng lại: không gian sống, không gian cơ thể, không gian nội tâm, không gian kết nối. Để khi tới một chỗ rối, bạn nhận ra đó không phải chuyện riêng lẻ, mà là một mắt xích trong toàn bộ.",
     motif: "nui-suong",
   },
   {
     en: "safe space",
-    title: "cộng đồng riêng tư — an toàn để nói thật",
+    title: "cộng đồng riêng tư, an toàn để nói thật",
     desc: "Có những điều khó nói, không biết ngỏ cùng ai. ở-yên là một nhóm nhỏ, riêng tư, gồm những người đang đi trên một nhịp gần giống nhau. Nơi có thể nói ra mà không bị khuyên dạy hay đánh giá.",
     motif: "mam-la",
   },

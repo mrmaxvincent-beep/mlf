@@ -104,7 +104,7 @@ export default function UngHoMlfPage() {
         </p>
       </Reveal>
 
-      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap-wide" style={{ marginBottom: "2.5rem" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }} className="info-grid">
           <div style={{ padding: "1.5rem", border: "1px solid var(--color-mist)" }}>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>

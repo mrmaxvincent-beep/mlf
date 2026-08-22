@@ -243,7 +243,7 @@ export default function NgayHienPage() {
           <Testimonials items={testimonials} showDots={false} fontSize="1.2rem" />
         </div>
         <div style={{ textAlign: "center", marginTop: "2rem" }}>
-          <Link className="go mono-link" href={routes.luuBut} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="go mono-link" href={routes.luuBut} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
             đọc thêm lưu bút <span className="ar">→</span>
           </Link>
         </div>

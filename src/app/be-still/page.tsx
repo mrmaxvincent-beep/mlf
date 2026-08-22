@@ -51,7 +51,7 @@ export default function BeStillPage() {
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 0.9rem" }}>
-              Giữa thời đại AI, con người được trao nhiều tự do sáng tạo hơn bao giờ hết — nhưng cũng rất dễ đánh mất trụ nội tâm của mình. Thêm kiến thức, thêm kỹ năng là cần thiết, nhưng chạy mải mê theo những điều biến chuyển vô chừng dễ khiến ta lạc mình, quên mất cách ta đang sống, đang hiện diện.
+              Giữa thời đại AI, con người được trao nhiều tự do sáng tạo hơn bao giờ hết - nhưng cũng rất dễ đánh mất trụ nội tâm của mình. Thêm kiến thức, thêm kỹ năng là cần thiết, nhưng chạy mải mê theo những điều biến chuyển vô chừng dễ khiến ta lạc mình, quên mất cách ta đang sống, đang hiện diện.
             </p>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone-alt)" }}>— Tâm</span>
           </div>

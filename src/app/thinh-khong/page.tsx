@@ -241,7 +241,7 @@ export default function ThinhKhongPage() {
 
       <div className="wrap" style={{ marginBottom: "2.5rem", textAlign: "center", maxWidth: "44ch", marginLeft: "auto", marginRight: "auto" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.4rem" }}>
-          Nếu bạn cần một nơi để cơ thể mình được lắng nghe — tôi ở đây, sẵn lòng đồng hành.
+          Nếu bạn cần một nơi để cơ thể mình được lắng nghe - tôi ở đây, sẵn lòng đồng hành.
         </p>
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone)" }}>— Thuận</span>
       </div>

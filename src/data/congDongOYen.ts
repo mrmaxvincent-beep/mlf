@@ -1,8 +1,8 @@
 export const pillars = [
   { vi: "giản dị", desc: "ít mà tinh, bớt phức tạp, trở về cốt lõi.", mark: "◈" },
   { vi: "tự nhiên", desc: "hòa hợp với nhịp tự nhiên của đời sống.", mark: "⬡" },
-  { vi: "tỉnh giác", desc: "làm gì cũng có mặt — thật sự có mặt.", mark: "◎" },
-  { vi: "hài hòa", desc: "sống không cực đoan — biết buông, biết giữ.", mark: "◇" },
+  { vi: "tỉnh giác", desc: "làm gì cũng có mặt, thật sự có mặt.", mark: "◎" },
+  { vi: "hài hòa", desc: "sống không cực đoan - biết buông, biết giữ.", mark: "◇" },
 ];
 
 export const spaces = [

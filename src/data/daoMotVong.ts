@@ -23,10 +23,10 @@ export const spots = [
 ];
 
 export const rooms = [
-  { name: "xuân", glyph: "春", label: "ảnh · phòng xuân", src: "/assets/ngayhien_room_xuan.webp", aspect: "hướng ra vườn", mood: "Cửa sổ mở ra vườn, đón nắng sớm và tiếng chim đầu ngày." },
-  { name: "hạ", glyph: "夏", label: "ảnh · phòng hạ", src: "/assets/ngayhien_room_muaha.webp", aspect: "hướng ra vườn", mood: "Gió lùa qua khe cửa những chiều nắng dài, mát rượi và trong." },
-  { name: "thu", glyph: "秋", label: "ảnh · phòng thu", src: "/assets/ngayhien_room_muathu.webp", aspect: "hướng ra hành lang", mood: "Yên tĩnh hơn, ánh sáng dịu hắt vào từ hành lang chung." },
-  { name: "đông", glyph: "冬", label: "ảnh · phòng đông", src: "/assets/ngayhien_room_muadong.webp", aspect: "hướng ra hành lang", mood: "Kín gió, ấm áp — nơi để cuộn mình lại trong những đêm se lạnh." },
+  { name: "xuân", label: "ảnh · phòng xuân", src: "/assets/ngayhien_room_xuan.webp", aspect: "hướng ra vườn", mood: "Cửa sổ mở ra vườn, đón nắng sớm và tiếng chim đầu ngày." },
+  { name: "hạ", label: "ảnh · phòng hạ", src: "/assets/ngayhien_room_muaha.webp", aspect: "hướng ra vườn", mood: "Gió lùa qua khe cửa những chiều nắng dài, mát rượi và trong." },
+  { name: "thu", label: "ảnh · phòng thu", src: "/assets/ngayhien_room_muathu.webp", aspect: "hướng ra hành lang", mood: "Yên tĩnh hơn, ánh sáng dịu hắt vào từ hành lang chung." },
+  { name: "đông", label: "ảnh · phòng đông", src: "/assets/ngayhien_room_muadong.webp", aspect: "hướng ra hành lang", mood: "Kín gió, ấm áp — nơi để cuộn mình lại trong những đêm se lạnh." },
 ];
 
 export const sharedSpaces = ["Phòng workshop", "Phòng trà", "Nhà bếp", "Phòng giặt", "4 phòng ngủ (xuân-hạ-thu-đông)", "2 toilet riêng cho khách", "Phòng đọc sách (tầng trên) với hơn 300 đầu sách", "Phòng chiếu phim/tập yoga (nhà bên)"];

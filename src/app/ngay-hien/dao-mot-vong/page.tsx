@@ -97,11 +97,9 @@ export default function DaoMotVongPage() {
       <div className="sodo-grid" style={{ maxWidth: 1080, margin: "0 auto 5rem", padding: "0 1.5rem", display: "grid", gridTemplateColumns: "7fr 5fr", gap: "3rem", alignItems: "start" }}>
         <ImagePlaceholder label="ảnh · sơ đồ không gian mộc little farm" src="/assets/sodonha.webp" aspectRatio="16/10" style={{ width: "100%" }} />
         <ul style={{ listStyle: "none", padding: 0, margin: "0.3rem 0 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {spots.map((s, i) => (
+          {spots.map((s) => (
             <li key={s.id} style={{ display: "flex", alignItems: "baseline", gap: "0.8rem" }}>
-              <span style={{ flex: "none", width: "1.5rem", height: "1.5rem", borderRadius: "50%", background: "var(--color-cham-dem)", color: "var(--color-paper-dem)", fontFamily: "var(--font-mono)", fontSize: "0.65rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              <span style={{ flex: "none", width: "0.6rem", height: "0.6rem", borderRadius: "50%", background: "var(--color-cham-dem)" }} />
               <a
                 className="mono-link"
                 href={`#tour-${s.id}`}
@@ -164,8 +162,7 @@ export default function DaoMotVongPage() {
             <div style={{ width: "100%", aspectRatio: "3/4", marginBottom: "1rem" }}>
               <ImagePlaceholder label={r.label} src={r.src} aspectRatio="3/4" style={{ width: "100%", height: "100%" }} />
             </div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.4rem" }}>
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-stone-alt)" }}>{r.glyph}</span>
+            <div style={{ marginBottom: "0.4rem" }}>
               <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.2rem", color: "var(--color-ink)", margin: 0 }}>phòng {r.name}</h3>
             </div>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{r.aspect}</span>

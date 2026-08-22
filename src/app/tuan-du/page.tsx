@@ -72,6 +72,41 @@ export default function TuanDuPage() {
         <ImagePlaceholder label="ảnh · một chuyến tuần-du 2" aspectRatio="16/12" src="/assets/tuandu02.webp" style={{ width: "100%", height: "auto" }} />
         <ImagePlaceholder label="ảnh · một chuyến tuần-du 3" aspectRatio="16/12" src="/assets/tuandu03.webp" style={{ width: "100%", height: "auto" }} />
       </div>
+
+      <div className="wrap" style={{ paddingTop: "2.5rem" }}>
+        <div style={{ position: "relative", display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: "560px", margin: "0 auto" }}>
+          <div style={{ position: "absolute", left: 0, right: 0, top: "50%", height: 1, background: "var(--color-mist)" }} />
+          {[
+            { n: "01" },
+            { n: "02" },
+            { n: "03" },
+            { n: "04", href: routes.tuanDu04, bold: true },
+            { n: "05", boldest: true },
+          ].map((t) => {
+            const style: React.CSSProperties = {
+              position: "relative",
+              zIndex: 1,
+              background: "var(--color-paper)",
+              padding: "0 0.6rem",
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.68rem",
+              letterSpacing: "0.06em",
+              color: t.boldest ? "var(--color-ink)" : t.bold ? "var(--color-cham-dem)" : "var(--color-stone)",
+              fontWeight: t.boldest ? 700 : t.bold ? 600 : 400,
+            };
+            return t.href ? (
+              <Link key={t.n} href={t.href} style={style}>
+                tuần-du {t.n}
+              </Link>
+            ) : (
+              <span key={t.n} style={style}>
+                tuần-du {t.n}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="wrap" style={{ paddingTop: "1.2rem", display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.75rem" }}>
         <span style={{ flex: 1, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
           kỳ 05 · ĐANG MỞ ĐĂNG KÝ

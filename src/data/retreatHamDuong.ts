@@ -90,7 +90,7 @@ export const policyLines = [
 ];
 
 export const travelGroups = [
-  { title: "từ sài gòn", lines: ["Xe khách giường nằm Phượng Thu, Phong Phú (12 tiếng, 18h00 – 06h00) — giá vé từ 350.000đ – 650.000đ tùy loại xe.", "Máy bay Sài Gòn – Pleiku (1 tiếng) — giá vé khứ hồi từ 1,5 triệu đồng/người tùy thời điểm và hãng bay."] },
-  { title: "từ hà nội", lines: ["Máy bay Hà Nội – Pleiku (1 tiếng 45 phút) — giá vé khứ hồi từ 2 triệu đồng/người tùy thời điểm và hãng bay."] },
+  { title: "từ sài gòn", lines: ["Xe khách giường nằm Phượng Thu, Phong Phú (12 tiếng, 18h00 – 06h00): giá vé từ 350.000đ – 650.000đ tùy loại xe.", "Máy bay Sài Gòn – Pleiku (1 tiếng): giá vé khứ hồi từ 1,5 triệu đồng/người tùy thời điểm và hãng bay."] },
+  { title: "từ hà nội", lines: ["Máy bay Hà Nội – Pleiku (1 tiếng 45 phút): giá vé khứ hồi từ 2 triệu đồng/người tùy thời điểm và hãng bay."] },
   { title: "từ sân bay pleiku đến măng đen", lines: ["Hành trình 2 tiếng: taxi 800.000đ · xe 16 chỗ 100.000đ/người/lượt (chiều Pleiku–Măng Đen 7:30 và 9:30, chiều về 13:15 và 14:30) · hoặc limousine 250.000đ/người/lượt (chiều Pleiku–Măng Đen 9:00–9:30, chiều về 12:45).", "Di chuyển từ các tỉnh thành khác, vui lòng liên hệ nhà mộc để được giải đáp. Xe của nhà mộc sẽ đón bạn tại trung tâm thị trấn Măng Đen để đến mlf."] },
 ];

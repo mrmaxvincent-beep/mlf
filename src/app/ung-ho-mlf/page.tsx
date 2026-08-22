@@ -44,7 +44,7 @@ export default function UngHoMlfPage() {
           để về Huế, chúng tôi cần khá nhiều nguồn lực để xây dựng lại một nơi mới. bạn có thể góp sức cùng mlf bằng cách mua trước các sản phẩm và dịch vụ của mộc little farm.
         </p>
         <p style={proseP}>
-          số tiền bạn đặt trước sẽ trở thành credit, dùng được cho tất cả chương trình và dịch vụ của chúng tôi — trong hiện tại và tương lai. không có thời hạn. và được giảm 20%.
+          số tiền bạn đặt trước sẽ trở thành credit, dùng được cho tất cả chương trình và dịch vụ của chúng tôi trong hiện tại và tương lai. không có thời hạn. và được giảm 20%.
         </p>
         <p style={{ ...proseP, margin: 0 }}>bạn mua trước những gì bạn sẽ dùng, mà từ đó giúp chúng tôi có nguồn lực để xây dựng nên mlf ở Huế.</p>
       </Reveal>
@@ -111,7 +111,7 @@ export default function UngHoMlfPage() {
               muốn tài trợ
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
-              tài trợ tùy duyên — bạn có thể trợ duyên cho các chương trình retreat, giúp mlf mở rộng vòng tay đến nhiều người cần sự bình an và chuyển hóa hơn.
+              tài trợ tùy duyên - bạn có thể trợ duyên cho các chương trình retreat, giúp mlf mở rộng vòng tay đến nhiều người cần sự bình an và chuyển hóa hơn.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.7rem" }}>
               mọi đóng góp, dù lớn dù nhỏ, đều có ý nghĩa rất lớn đối với chúng tôi. Xin hoan hỷ ghi rõ nội dung đóng góp &ldquo;trợ duyên mlf&rdquo; khi chuyển khoản.
@@ -129,7 +129,7 @@ export default function UngHoMlfPage() {
               muốn nhận hỗ trợ
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
-              nhận hỗ trợ — những ai thật sự cần đến retreat có thể nhận trợ duyên để tham gia các chương trình của mlf.
+              nhận hỗ trợ - những ai thật sự cần đến retreat có thể nhận trợ duyên để tham gia các chương trình của mlf.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>
               khi đăng ký chương trình retreat, bạn có thể cân nhắc lựa chọn các mức hỗ trợ (10% – 20%) phù hợp với nhu cầu của bản thân. Chúng tôi sẽ xác nhận việc hỗ trợ dựa trên mức sẵn có của quỹ trợ duyên.

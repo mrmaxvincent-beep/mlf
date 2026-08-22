@@ -110,7 +110,7 @@ export const medicalFaqs = [
 ];
 
 export const faqs = [
-  { q: "đây có phải kiểu slow travel / slow stay không?", a: `Đúng. Ở mlf không có lịch trình dày — một ngày thường có nhiều khoảng trống. Bạn ở lại vài ngày tại một nơi, ăn cùng một bếp, gặp lại cùng những người, thay vì di chuyển liên tục. ở mlf, "chậm" không phải một dịch vụ được thiết kế, mà là cách cả nơi này vẫn đang vận hành từ 10 năm nay.` },
+  { q: "đây có phải kiểu slow travel / slow stay không?", a: `Đúng. Ở mlf không có lịch trình dày, một ngày thường có nhiều khoảng trống. Bạn ở lại vài ngày tại một nơi, ăn cùng một bếp, gặp lại cùng những người, thay vì di chuyển liên tục. ở mlf, "chậm" không phải một dịch vụ được thiết kế, mà là cách cả nơi này vẫn đang vận hành từ 10 năm nay.` },
   { q: "tại sao phải là 5 ngày 4 đêm, nếu 3 ngày thì sẽ thuận tiện hơn?", a: "Thời gian này đã được chúng tôi tính toán kỹ lưỡng để bạn có thể hòa mình vào nhịp sống ở đây, và có độ tĩnh nhất định. Việc theo lịch trình ngắn sẽ o ép, thúc đẩy mọi người chạy theo kịp lịch trình. Chúng ta hãy dành cho bản thân mình một thời gian có chất lượng." },
   { q: "phòng ngủ nhỏ quá có thoải mái không?", a: "Phòng ngủ có diện tích 7,4m2, được thiết kế như một chiếc kén để giúp bạn có cảm giác an trú, và chỉ dùng đúng cho công năng để ngủ nghỉ. Chúng tôi mong muốn bạn xem mlf là nhà, có thể thoải mái trú mình vào từng góc nhỏ trong nhà, ngoài vườn." },
   { q: "tôi mang sữa tắm, dầu gội riêng của mình được không? Vì làn da và mái tóc tôi nhạy cảm.", a: "Bạn được mang và sử dụng, tuy nhiên chúng tôi cũng khuyến khích bạn hãy thử trải nghiệm dầu gội và xà phòng thảo mộc." },

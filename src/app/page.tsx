@@ -386,7 +386,7 @@ export default function HomePage() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
             <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-              và họ cũng đang cố trả lời một câu hỏi rất khó: làm thế nào để sống thong dong, giữa một thế giới đang chạy rất nhanh? câu trả lời này khó lòng thấy được nếu ta xem đó là một sản phẩm. đó có thể là: không gian, thực hành, chữ nghĩa, trà, cộng đồng, những chuyến đi... tất cả đều từ cùng một gốc rễ.
+              và họ cũng đang cố trả lời một câu hỏi rất khó: làm thế nào để sống thong dong, giữa một thế giới đang chạy rất nhanh? câu trả lời này khó lòng thấy được nếu ta xem đó là một sản phẩm. đó có thể là: không gian, thực hành, chữ nghĩa, trà, cộng đồng, những chuyến đi... tất cả đều từ cùng một gốc rễ."
             </p>
           </div>
         </div>

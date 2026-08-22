@@ -727,7 +727,7 @@ details[open] > summary .acc-icon {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 0.85rem;
-  color: var(--color-stone-alt);
+  color: var(--color-ink);
 }
 .pp-grid {
   display: grid;

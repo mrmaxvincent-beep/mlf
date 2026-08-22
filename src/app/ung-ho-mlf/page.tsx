@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal, RevealStagger } from "@/components/Reveal";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { tiers, creditUses } from "@/data/giua";
 
@@ -85,9 +86,9 @@ export default function UngHoMlfPage() {
         </p>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <a href="https://forms.gle/JWwJoysTiyxGh2XL6" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/JWwJoysTiyxGh2XL6" programName="ủng hộ mlf" className="cta-btn cta-btn--solid">
           tham gia gieo mlf ở Huế <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
         <div style={{ marginTop: "1rem" }}>
           <Link className="go mono-link" href={routes.giua} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             đọc thêm về giữa · Huế <span className="ar">→</span>

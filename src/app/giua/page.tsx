@@ -5,6 +5,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { tiers, creditUses, spaceCriteria } from "@/data/giua";
 
 export const metadata: Metadata = {
@@ -157,9 +158,9 @@ export default function GiuaPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <a href="https://forms.gle/JWwJoysTiyxGh2XL6" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/JWwJoysTiyxGh2XL6" programName="giữa · middle" className="cta-btn cta-btn--solid">
           tham gia gieo mlf ở Huế <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>

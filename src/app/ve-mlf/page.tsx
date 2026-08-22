@@ -64,7 +64,7 @@ export default function VeMlfPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "5.5rem", maxWidth: "60ch" }}>
         <p style={proseP}>
-          chúng tôi tin rằng, có một cách sống giản dị mà không sơ sài, yên mà không buông xuôi, ở giữa đời mà không lạc mất mình. Một cách sống mà mỗi bước chân đều là trở về, mỗi việc làm đều là một nghi lễ nhỏ — để gần hơn với chính mình.
+          chúng tôi tin rằng, có một cách sống giản dị mà không sơ sài, yên mà không buông xuôi, ở giữa đời mà không lạc mất mình. Một cách sống mà mỗi bước chân đều là trở về, mỗi việc làm đều là một nghi lễ nhỏ để gần hơn với chính mình.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>chúng tôi gọi mộc little farm là một nông trại nhỏ, nơi mọi thứ nảy mầm.</p>
       </Reveal>

@@ -159,9 +159,15 @@ export default function StayTalkPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>Trẻ em đi cùng bố mẹ: dưới 5 tuổi — phí 50% · dưới 10 tuổi — phí 80%.</p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0.6rem 0 0" }}>
           Nếu muốn ở thêm dài ngày hơn, sau stay+talk bạn có thể chọn hình thức homestay (nhà mộc cung cấp bữa ăn, phòng ngủ, xe máy). Hãy dành chút thời gian tham khảo{" "}
-          <Link className="mono-link" href={routes.daoMotVong} style={{ fontFamily: "var(--font-sans)", display: "inline", overflow: "visible" }}>
+          <a
+            className="mono-link"
+            href="https://drive.google.com/drive/folders/1-7MjR-JgDzeJun3yySYNlU4GnXwwxJmq?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            style={{ fontFamily: "var(--font-sans)", display: "inline", overflow: "visible" }}
+          >
             nếp nhà mộc little farm
-          </Link>{" "}
+          </a>{" "}
           để hiểu hơn về nếp sống nơi này.
         </p>
       </div>

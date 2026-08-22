@@ -97,7 +97,7 @@ export default function EnglishPage() {
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
         <ImagePlaceholder label="photo · ngày-hiền, Măng Đen" aspectRatio="16/12" src="/assets/ngayhien_daomotvong01.webp" alt="mộc little farm" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="photo · tuần-du" aspectRatio="16/12" src="/assets/tuandu01.webp" alt="mộc little farm" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="photo · tuần-du" aspectRatio="16/12" src="/assets/en1.webp" alt="mộc little farm" style={{ width: "100%", height: "auto" }} />
         <ImagePlaceholder label="photo · thinh-không" aspectRatio="16/12" src="/assets/thinhkhong02.webp" alt="mộc little farm" style={{ width: "100%", height: "auto" }} />
       </div>
 

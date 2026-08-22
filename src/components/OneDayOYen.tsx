@@ -172,7 +172,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
       <header style={{ padding: "3rem 0 7rem", textAlign: "center" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.26em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "2rem" }}>{greet}</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.6rem, 9vw, 3.6rem)", color: "var(--color-ink)", margin: "0 0 1.6rem", lineHeight: 1.15 }}>một ngày ở-yên</h1>
-        <p style={{ color: "var(--color-stone)", fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "30ch", margin: "0 auto" }}>cùng những người bạn khác, sống chậm lại một ngày — ai ở đâu cứ ở đó.</p>
+        <p style={{ color: "var(--color-ink)", fontSize: "0.95rem", lineHeight: 1.9, maxWidth: "30ch", margin: "0 auto" }}>cùng những người bạn khác, sống chậm lại một ngày — ai ở đâu cứ ở đó.</p>
 
         <div style={{ position: "relative", maxWidth: "260px", margin: "2.6rem auto 0" }}>
           <div style={{ position: "absolute", top: "5px", left: 0, right: 0, height: "1px", background: "var(--color-mist)" }} />
@@ -314,8 +314,8 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
                 <p style={{ fontSize: "0.92rem", lineHeight: 1.95, color: "var(--color-stone)", margin: "0 0 1.8rem", textAlign: "center" }}>bạn đang để lại một dòng cho một người lạ sẽ đọc nó vào một ngày nào đó.</p>
                 <textarea
                   value={noteValue}
-                  onChange={(e) => setNoteValue(e.target.value.slice(0, 200))}
-                  maxLength={200}
+                  onChange={(e) => setNoteValue(e.target.value.slice(0, 300))}
+                  maxLength={300}
                   placeholder="hôm nay của bạn thế nào…"
                   style={{ width: "100%", minHeight: 120, resize: "vertical", fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.95rem", color: "var(--color-ink)", background: "transparent", border: "none", borderBottom: "1px solid var(--color-mist)", padding: "0.4rem 0 0.9rem", lineHeight: 1.95 }}
                 />
@@ -327,7 +327,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
                   style={{ width: "100%", fontFamily: "var(--font-sans)", fontStyle: "italic", fontWeight: 300, fontSize: "0.95rem", color: "var(--color-ink)", background: "transparent", border: "none", borderBottom: "1px solid var(--color-mist)", padding: "0.5rem 0", marginTop: "0.9rem" }}
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.4rem" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: noteValue.length > 170 ? "#b5715c" : "var(--color-stone)" }}>{noteValue.length} / 200</span>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: noteValue.length > 255 ? "#b5715c" : "var(--color-stone)" }}>{noteValue.length} / 300</span>
                   <button onClick={sendNote} className="one-day-btn" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", background: "none", border: "none", color: "var(--color-stone)", padding: 0, cursor: "pointer", whiteSpace: "nowrap" }}>
                     gửi đi →
                   </button>

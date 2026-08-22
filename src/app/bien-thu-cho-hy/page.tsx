@@ -33,7 +33,7 @@ export default function BienThuChoHyPage() {
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "3rem", maxWidth: "60ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          Từ 2023, cứ mỗi độ ở mlf có điều gì lắng lại đủ sâu, người sáng lập mlf lại ngồi xuống viết một lá thư gửi Hy — một người bạn trong tâm tưởng, để mà kể lại những gì đang diễn ra ở nhà mộc. Những lá thư dưới đây được xếp theo dòng thời gian, mới nhất ở trên. Chọn một ngày ở khung bên trái để đọc.
+          Từ 2023, cứ mỗi độ ở mlf có điều gì lắng lại đủ sâu, người sáng lập mlf lại ngồi xuống viết một lá thư gửi Hy - một người bạn trong tâm tưởng, để mà kể lại những gì đang diễn ra ở nhà mộc. Những lá thư dưới đây được xếp theo dòng thời gian, mới nhất ở trên. Chọn một ngày ở khung bên trái để đọc.
         </p>
       </Reveal>
 

@@ -5,6 +5,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { JournalIssue } from "@/components/JournalIssue";
 import { ExpandableContent } from "@/components/ExpandableContent";
+import { RevealEmailButton } from "@/components/RevealEmailButton";
 import { issues, defaultIssueIndex, columns } from "@/data/journal";
 
 export const metadata: Metadata = {
@@ -110,9 +111,7 @@ export default function JournalPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 1.5rem" }}>
           Chúng tôi không tìm kiếm những cây bút chuyên nghiệp, chỉ mong được lắng nghe những câu chuyện chân thành. Đây là hoạt động cộng đồng, không có nhuận bút - quyền tác giả vẫn thuộc về bạn.
         </p>
-        <a className="cta-btn" href="mailto:hello@moclittlefarm.com">
-          gửi bài / ý tưởng cộng tác
-        </a>
+        <RevealEmailButton email="hello@moclittlefarm.com" label="gửi bài / ý tưởng cộng tác" />
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "0", maxWidth: "60ch" }}>

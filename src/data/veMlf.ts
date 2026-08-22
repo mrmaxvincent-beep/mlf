@@ -14,8 +14,8 @@ export const poemLines = [
 
 export const milestones = [
   { year: "2016", title: "Khi Mộc chào đời", desc: "Mộc Little Farm ra đời, giản dị như một hạt mầm bé nhỏ trong lòng đất. Đó là một tiệm bánh online, nơi những chiếc bánh không chỉ đơn thuần là món ăn mà còn mang theo sự sáng tạo và an lành, như một lời nhắn nhủ dịu dàng giữa cuộc sống vội vã." },
-  { year: "2019", title: "Một ốc đảo giữa lòng phố thị", desc: "Mộc lớn lên, vươn mình giữa nhịp sống Sài Gòn tấp nập. Một cửa tiệm nhỏ ra đời tại Tân Định — quận 1, không chỉ để bán bánh mà còn là một retreat café, nơi những tâm hồn mỏi mệt có thể tạm dừng, hít một hơi sâu, nhấp một ngụm trà và tìm về khoảng lặng bên trong chính mình." },
-  { year: "2023", title: "Trở về với thiên nhiên", desc: "Mộc lại bước thêm một chặng đường mới, rời khỏi đô thị để tìm về với núi rừng. Giữa không gian tĩnh lặng của Măng Đen — Kon Tum, mộc little farm trở thành một retreat farm, một vùng đất để ta sống chậm, lắng nghe hơi thở của đất trời và trở về với sự an yên vốn có trong mình." },
+  { year: "2019", title: "Một ốc đảo giữa lòng phố thị", desc: "Mộc lớn lên, vươn mình giữa nhịp sống Sài Gòn tấp nập. Một cửa tiệm nhỏ ra đời tại Tân Định - quận 1, một retreat café, nơi những tâm hồn mỏi mệt có thể tạm dừng, hít một hơi sâu, nhấp một ngụm trà và tìm về khoảng lặng bên trong chính mình." },
+  { year: "2023", title: "Trở về với thiên nhiên", desc: "Mộc lại bước thêm một chặng đường mới, rời khỏi đô thị để tìm về với núi rừng. Giữa không gian tĩnh lặng của Măng Đen - Kon Tum, mộc little farm trở thành một retreat farm, một vùng đất để ta sống chậm, lắng nghe hơi thở của đất trời và trở về với sự an yên vốn có trong mình." },
   { year: "2027", title: "sắp về Huế", desc: null, tag: "sắp diễn ra" },
 ];
 

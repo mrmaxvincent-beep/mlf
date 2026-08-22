@@ -32,7 +32,7 @@ export default function UngHoMlfPage() {
           ủng hộ mlf
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          có hai cách bạn có thể đồng hành cùng mlf — mua trước dịch vụ, hoặc trợ duyên cho người hữu duyên.
+          có hai cách bạn có thể đồng hành cùng mlf: mua trước dịch vụ, hoặc trợ duyên cho người hữu duyên.
         </p>
       </div>
 

@@ -249,7 +249,7 @@ export default function VeMlfPage() {
             Có người chỉ cần đọc vài dòng trong cộng đồng ở-yên. Có người cần dừng lại 5 ngày ở Măng Đen. Có người cần một chuyến đi xa để thấy lại mình. Có người chỉ cần ở lại với cơ thể mình 60 phút mỗi sáng.
           </p>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
-            Không có một con đường nào là duy nhất. Chúng tôi giữ những cửa khác nhau — dừng, đi, ở lại — để khi bạn cần, sẽ có một cửa vừa với bạn.
+            Không có một con đường nào là duy nhất. Chúng tôi giữ những cửa khác nhau - dừng, đi, ở lại - để khi bạn cần, sẽ có một cửa vừa với bạn.
           </p>
         </div>
       </div>

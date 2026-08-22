@@ -51,7 +51,7 @@ export function ChuyenVeReader({ episodes }: { episodes: Episode[] }) {
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.5rem" }}>
           <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
-            kỳ {current.num} — {current.date}
+            kỳ {current.num} - {current.date}
           </span>
         </div>
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 4vw, 2.2rem)", lineHeight: 1.3, color: "var(--color-ink)", margin: "0 0 1.75rem" }}>

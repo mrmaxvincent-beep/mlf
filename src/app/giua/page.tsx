@@ -46,7 +46,7 @@ export default function GiuaPage() {
           chúng tôi sắp về Huế.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 0 0.8rem" }}>
-          mộc little farm sẽ có một không gian ở đó. một nơi để thỉnh thoảng tổ chức các chương trình ngày-hiền — retreat, ngày-dưỡng-tâm như hồi ở Măng Đen.
+          mộc little farm sẽ có một không gian ở đó. một nơi để thỉnh thoảng tổ chức các chương trình ngày-hiền như retreat, stay+talk như hồi ở Măng Đen.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: 0 }}>
           khi về Huế, đường đi lại sẽ thuận tiện hơn để mọi người đến với mlf.

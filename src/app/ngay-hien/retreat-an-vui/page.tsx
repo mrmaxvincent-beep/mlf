@@ -11,6 +11,7 @@ import { DayCard } from "@/components/DayCard";
 import { PricingPanel } from "@/components/PricingPanel";
 import { FaqShowMore } from "@/components/FaqShowMore";
 import { Disclosure } from "@/components/Disclosure";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import {
   anVuiLa,
@@ -360,9 +361,9 @@ export default function RetreatAnVuiPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", marginTop: "4rem", textAlign: "center" }}>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap", marginBottom: "3rem" }}>
-          <a href="https://forms.gle/EFyZNdUjt4zFo7fR9" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+          <RegistrationLink href="https://forms.gle/EFyZNdUjt4zFo7fR9" programName="retreat an-vui" className="cta-btn cta-btn--solid">
             đăng ký <span className="ar">→</span>
-          </a>
+          </RegistrationLink>
           <Link href={routes.soTayKhach} className="cta-btn cta-btn--outline">
             đọc guest guide <span className="ar">→</span>
           </Link>

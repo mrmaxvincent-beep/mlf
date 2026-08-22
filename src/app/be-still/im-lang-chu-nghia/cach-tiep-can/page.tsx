@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { Disclosure } from "@/components/Disclosure";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
@@ -463,9 +464,9 @@ export default function CachTiepCanPage() {
           VỀ TRANG IM LẶNG CHỮ NGHĨA
         </Link>
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-mist)" }}>/</span>
-        <a href="https://forms.gle/9GBHwSoY1Xu7vA9LA" target="_blank" rel="noopener noreferrer" className="register-button" style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "#fff", display: "inline-block", padding: "0.45rem 0.9rem", background: "var(--color-cham-dem)", border: "1px solid var(--color-cham-dem)", borderRadius: "999px", textDecoration: "none", transition: "all 0.2s ease" }}>
+        <RegistrationLink href="https://forms.gle/9GBHwSoY1Xu7vA9LA" programName="im lặng, chữ nghĩa" className="register-button" style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "#fff", display: "inline-block", padding: "0.45rem 0.9rem", background: "var(--color-cham-dem)", border: "1px solid var(--color-cham-dem)", borderRadius: "999px", textDecoration: "none", transition: "all 0.2s ease" }}>
           ĐĂNG KÝ THAM GIA
-        </a>
+        </RegistrationLink>
       </div>
 
       <Footer />

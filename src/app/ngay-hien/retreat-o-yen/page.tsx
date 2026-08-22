@@ -11,6 +11,7 @@ import { PricingPanel } from "@/components/PricingPanel";
 import { FaqShowMore } from "@/components/FaqShowMore";
 import { Disclosure } from "@/components/Disclosure";
 import { ActivityPicker } from "@/components/ActivityPicker";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import {
   introLines,
@@ -283,9 +284,9 @@ export default function RetreatOYenPage() {
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 1.5rem" }}>
             trẻ em đi cùng bố mẹ , &lt;5 tuổi: 50% phí · &lt; 10 tuổi: 80% phí
           </p>
-          <a href="https://forms.gle/Ra77c8s5cH6WeL5e7" target="_blank" rel="noopener" className="cta-btn">
+          <RegistrationLink href="https://forms.gle/Ra77c8s5cH6WeL5e7" programName="retreat ở-yên" className="cta-btn">
             đăng ký retreat ở-yên <span className="ar">→</span>
-          </a>
+          </RegistrationLink>
         </div>
       </Reveal>
 
@@ -373,9 +374,9 @@ export default function RetreatOYenPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", marginTop: "4rem", textAlign: "center" }}>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-          <a href="https://forms.gle/Ra77c8s5cH6WeL5e7" target="_blank" rel="noopener" className="cta-btn">
+          <RegistrationLink href="https://forms.gle/Ra77c8s5cH6WeL5e7" programName="retreat ở-yên" className="cta-btn">
             đăng ký retreat ở-yên <span className="ar">→</span>
-          </a>
+          </RegistrationLink>
           <Link href={routes.soTayKhach} className="cta-btn cta-btn--outline">
             đọc guest guide <span className="ar">→</span>
           </Link>

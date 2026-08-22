@@ -9,6 +9,7 @@ import { InfoTabs } from "@/components/InfoTabs";
 import { Disclosure } from "@/components/Disclosure";
 import { DayCard } from "@/components/DayCard";
 import { LazyYoutubeEmbed } from "@/components/LazyYoutubeEmbed";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { needPairs, yogaList, therapyList, gth, changList, scheduleRows, newcomerList, safetyGroups, gearList, ptIssues, testimonials } from "@/data/thinhKhong";
 
@@ -246,9 +247,9 @@ export default function ThinhKhongPage() {
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone)" }}>— Thuận</span>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <a href="https://forms.gle/7NwcxWbmcCBrdc11A" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/7NwcxWbmcCBrdc11A" programName="thịnh không" className="cta-btn cta-btn--solid">
           đăng ký lớp <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
       </div>
 
       <InfoTabs

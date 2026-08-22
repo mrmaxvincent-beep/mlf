@@ -7,6 +7,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
 import { SessionTabs } from "@/components/SessionTabs";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { essayParas, essayParas2, forList, methods, journey, sessions, overview, after30, afterClassList } from "@/data/imLangChuNghia";
 
@@ -343,9 +344,9 @@ export default function ImLangChuNghiaPage() {
 
       <div className="wrap" style={{ marginBottom: "1.5rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)", margin: "0 0 2rem" }}>tìm lại mạch chữ của chính mình?</p>
-        <a href="https://forms.gle/9GBHwSoY1Xu7vA9LA" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/9GBHwSoY1Xu7vA9LA" programName="im lặng, chữ nghĩa" className="cta-btn cta-btn--solid">
           đăng ký <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
       </div>
 
       <div className="wrap" style={{ marginTop: "4rem", marginBottom: "1.2rem" }}>

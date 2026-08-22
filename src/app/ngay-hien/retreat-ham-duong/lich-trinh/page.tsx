@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { ItinerarySchedule } from "@/components/ItinerarySchedule";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { days, journeyNav } from "@/data/retreatHamDuongLichTrinh";
 
@@ -48,9 +49,9 @@ export default function RetreatHamDuongLichTrinhPage() {
         <Link href={routes.retreatHamDuong} className="go mono-link" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: 2, padding: "0.85rem 1.4rem" }}>
           ← xem lại retreat hàm-dưỡng
         </Link>
-        <a href="https://forms.gle/RL8yW96QMBZm7UxD9" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/RL8yW96QMBZm7UxD9" programName="retreat hàm-dưỡng" className="cta-btn cta-btn--solid">
           đăng ký <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch", textAlign: "center" }}>

@@ -11,6 +11,7 @@ import { DayCard } from "@/components/DayCard";
 import { PricingPanel } from "@/components/PricingPanel";
 import { FaqShowMore } from "@/components/FaqShowMore";
 import { Disclosure } from "@/components/Disclosure";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import {
   introLines,
@@ -524,9 +525,9 @@ export default function RetreatHamDuongPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", marginTop: "4rem", textAlign: "center" }}>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-          <a href="https://forms.gle/RL8yW96QMBZm7UxD9" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+          <RegistrationLink href="https://forms.gle/RL8yW96QMBZm7UxD9" programName="retreat hàm-dưỡng" className="cta-btn cta-btn--solid">
             đăng ký retreat hàm-dưỡng <span className="ar">→</span>
-          </a>
+          </RegistrationLink>
           <Link href={routes.soTayKhach} className="cta-btn cta-btn--outline">
             đọc guest guide <span className="ar">→</span>
           </Link>

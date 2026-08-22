@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
@@ -101,9 +102,9 @@ export default function PhiaSangPage() {
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <a href="https://forms.gle/5kFVB5EKRXNioKC89" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/5kFVB5EKRXNioKC89" programName="phía sáng" className="cta-btn cta-btn--solid">
           đăng ký <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
       </div>
 
       <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>

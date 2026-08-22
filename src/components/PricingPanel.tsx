@@ -1,3 +1,5 @@
+import { RegistrationLink } from "./RegistrationLink";
+
 /** The one bordered panel in the design system (README: pricing panel gets a ≤4px-radius border). */
 export function PricingPanel({
   label,
@@ -29,9 +31,9 @@ export function PricingPanel({
           </div>
         ))}
       </div>
-      <a href={ctaHref} target="_blank" rel="noopener" className="cta-btn" style={{ justifyContent: "center" }}>
+      <RegistrationLink href={ctaHref} programName={label} className="cta-btn" style={{ justifyContent: "center" }}>
         {ctaLabel} <span className="ar">→</span>
-      </a>
+      </RegistrationLink>
       {note ? (
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.72rem", lineHeight: 1.7, color: "var(--color-stone-alt)", margin: "1.1rem 0 0" }}>{note}</p>
       ) : null}

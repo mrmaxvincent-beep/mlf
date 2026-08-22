@@ -7,6 +7,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { FaqList } from "@/components/FaqList";
 import { TroDuyen } from "@/components/TroDuyen";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { notList, requireList, specialList, methods, faqs, writeups } from "@/data/khaiTam";
 import { DiaryCarousel } from "@/components/DiaryCarousel";
@@ -193,9 +194,9 @@ export default function KhaiTamPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <a href="https://forms.gle/n5QQHnsqcjHWRVKy9" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/n5QQHnsqcjHWRVKy9" programName="khai tâm" className="cta-btn cta-btn--solid">
           đăng ký <span className="ar">→</span>
-        </a>
+        </RegistrationLink>
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "58ch", borderTop: "1px solid var(--color-mist)", paddingTop: "2rem" }}>

@@ -62,7 +62,7 @@ const services = [
     href: routes.thinhKhong,
     name: "thinh.không",
     tagline: "online yoga",
-    desc: "Online yoga to come home to your own body — breath as the center, posture only as the vehicle.",
+    desc: "Online yoga to come home to your own body - breath as the center, posture only as the vehicle.",
   },
   {
     href: routes.giua,

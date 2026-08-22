@@ -67,7 +67,7 @@ export default function PhiaSangPage() {
 
       <Reveal className="wrap letter" style={{ marginBottom: "3.5rem", maxWidth: "58ch" }}>
         <p>
-          buổi trò chuyện cùng tôi, sẽ đi qua những hiểu biết — từ góc độ khoa học về những gì xảy ra với thân tâm lúc lâm chung, từ góc nhìn tâm lý về những gì còn vướng víu trong tâm, và từ chiều tâm linh về nghiệp lực và trạng thái tâm.
+          buổi trò chuyện cùng tôi, sẽ đi qua những hiểu biết - từ góc độ khoa học về những gì xảy ra với thân tâm lúc lâm chung, từ góc nhìn tâm lý về những gì còn vướng víu trong tâm, và từ chiều tâm linh về nghiệp lực và trạng thái tâm.
         </p>
         <p>
           ở những thời khắc cuối cùng của cuộc đời, con người cũng cần đối diện với một điều quan trọng khác: tâm mình. liệu mình đã nhẹ lòng chưa? những yêu thương chưa từng bày tỏ, những nặng lòng chưa thể nói ra, những điều chưa thể tha thứ được cho người và cho chính mình? buổi trò chuyện này cũng để nhìn nhận lại những điều chưa thể buông, xoa dịu và làm thấu tỏ những chất chứa bấy lâu.

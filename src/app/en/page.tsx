@@ -106,7 +106,7 @@ export default function EnglishPage() {
           mộc little farm began in 2016 as a small home bakery in Saigon. It grew into a quiet retreat café tucked into the city, and in 2023 moved to the highlands of Măng Đen - becoming a retreat farm surrounded by pine forest, mist, and the slow rhythm of mountain weather.
         </p>
         <p style={proseP}>
-          We believe there is a way of living that is simple without being careless, still without giving up, present in the middle of life without losing yourself. We call mộc little farm a small farm — a place where everything is left to grow.
+          We believe there is a way of living that is simple without being careless, still without giving up, present in the middle of life without losing yourself. We call mộc little farm a small farm - a place where everything is left to grow.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
           Everything here grows from one root — ở-yên — and branches out in different directions, depending on where you are standing in your own life.

@@ -241,7 +241,7 @@ export default function CongDongOYenPage() {
         <span className="sec-label">lifetime membership</span>
         <div className="mem-box">
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "2.2rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>990.000đ</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>quyền truy cập trọn đời · private facebook group</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>quyền truy cập private facebook group</span>
           <div style={{ marginBottom: "1.5rem" }}>
             <p className="mem-item">hơn 200 bài viết được hệ thống theo 4 không gian</p>
             <p className="mem-item">thực hành định kỳ</p>

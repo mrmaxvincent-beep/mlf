@@ -38,7 +38,7 @@ export default function PodcastOYenPage() {
           podcast ở-yên
         </h1>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.1rem", lineHeight: 1.7, color: "var(--color-stone)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>
-          những cuộc trò chuyện chậm, về một đời sống ở-yên.
+          những cuộc trò chuyện về đời sống ở-yên.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
           phát hành vào ngày 1 hàng tháng, trên Spotify.

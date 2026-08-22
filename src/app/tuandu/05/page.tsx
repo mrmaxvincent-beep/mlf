@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "tuần-du 05 · Ngọa Vân Am, 18–21.03.2027 · 4 ngày 3 đêm, tối đa 10 người.",
 };
 
-export default function TuanDuBackupPage() {
+export default function TuanDu05Page() {
   return (
     <>
       <Header />

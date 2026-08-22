@@ -8,7 +8,7 @@ export const routes = {
   giua: "/giua",
   tuanDu: "/tuan-du",
   tuanDuToi: "/tuan-du/toi",
-  tuanDuBackup: "/tuan-du/backup",
+  tuanDu05: "/tuandu/05",
   chuoiTuanDu: "/tuan-du/chuoi",
   tuanDuBlog: "/tuan-du/blog",
   beStill: "/be-still",

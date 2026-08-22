@@ -222,7 +222,7 @@ export default function RetreatAnVuiPage() {
           subtitle="5 ngày 4 đêm · tối đa 4 khách / chuyến"
           price="8.000.000đ / người"
           items={pricingItems}
-          note="Phù hợp với người có thể tự đi lại, ăn uống, sinh hoạt cá nhân — không cần hỗ trợ thường xuyên. *có chính sách trợ duyên cho người cần hỗ trợ về tài chính."
+          note="Phù hợp với người có thể tự đi lại, ăn uống, sinh hoạt cá nhân - không cần hỗ trợ thường xuyên."
           ctaLabel="đăng ký"
           ctaHref="https://forms.gle/EFyZNdUjt4zFo7fR9"
         />

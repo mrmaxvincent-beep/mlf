@@ -161,6 +161,12 @@ export default function UngHoMlfPage() {
         </div>
       </div>
 
+      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", margin: 0 }}>
+          Xin chân thành cám ơn sự ủng hộ dành cho mlf!
+        </p>
+      </div>
+
       <Footer />
     </>
   );

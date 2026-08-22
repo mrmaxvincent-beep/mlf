@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Reveal, RevealStagger } from "@/components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import { episodes } from "@/data/podcastOYen";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ const pill: React.CSSProperties = {
 };
 
 export default function PodcastOYenPage() {
-  const [first, ...rest] = episodes;
+  const [first] = episodes;
 
   return (
     <>
@@ -84,32 +84,6 @@ export default function PodcastOYenPage() {
           </div>
         </div>
       </Reveal>
-
-      {/* upcoming episodes */}
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow" style={{ marginBottom: 0, color: "var(--color-ink)" }}>các tập tiếp theo</span>
-      </div>
-      <RevealStagger className="wrap" style={{ marginBottom: "5rem", maxWidth: "620px" }}>
-        {rest.map((ep) => (
-          <div
-            key={ep.n}
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              justifyContent: "space-between",
-              gap: "1rem",
-              padding: "1rem 0",
-              borderBottom: "1px solid var(--color-mist)",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "baseline", gap: "1rem" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--color-stone)" }}>{ep.n}</span>
-              <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", color: "var(--color-ink)" }}>{ep.title}</span>
-            </div>
-            <span style={{ ...pill, height: "1.9rem", fontSize: "0.56rem" }}>sắp ra mắt</span>
-          </div>
-        ))}
-      </RevealStagger>
 
       {/* about */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>

@@ -72,7 +72,7 @@ export const poemLines = [
 
 export const policyLines = [
   "Trong trường hợp có lí do bất khả kháng chưa thể tham gia, vui lòng báo cho nhà mộc ít nhất 2 tuần trước khi diễn ra chương trình để được hoàn lại 100% chi phí.",
-  "Bạn cũng có thể dời lịch tham gia chương trình đến thời điểm phù hợp — nhà mộc có chính sách bảo lưu đặt chỗ trong vòng 6 tháng hoặc tặng lại cho người khác.",
+  "Bạn cũng có thể dời lịch tham gia chương trình đến thời điểm phù hợp - nhà mộc có chính sách bảo lưu đặt chỗ trong vòng 6 tháng hoặc tặng lại cho người khác.",
   "Trong trường hợp bạn hủy đặt chỗ trong vòng 15 ngày trước khi chương trình diễn ra, nhà mộc xin phép hoàn lại 80% chi phí của chương trình.",
 ];
 

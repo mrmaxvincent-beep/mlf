@@ -115,7 +115,7 @@ export default function GiuaPage() {
           để về Huế, chúng tôi cần khá nhiều nguồn lực để xây dựng lại một nơi mới. bạn có thể góp sức cùng mlf bằng cách mua trước các sản phẩm và dịch vụ của mộc little farm.
         </p>
         <p style={bodyText}>
-          số tiền bạn đặt trước sẽ trở thành credit, dùng được cho tất cả chương trình và dịch vụ của chúng tôi — trong hiện tại và tương lai. không có thời hạn. và được giảm 20%.
+          số tiền bạn đặt trước sẽ trở thành credit, dùng được cho tất cả chương trình và dịch vụ của chúng tôi trong hiện tại và tương lai. không có thời hạn, và được giảm 20%.
         </p>
         <p style={{ ...bodyText, margin: 0 }}>bạn mua trước những gì bạn sẽ dùng, mà từ đó giúp chúng tôi có nguồn lực để xây dựng nên mlf ở Huế.</p>
       </div>

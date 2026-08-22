@@ -380,7 +380,7 @@ export default function HomePage() {
               ở đây, cách họ nấu bữa cơm, ngồi uống trà, và dẫn dắt mỗi người trong từng chuyến đi là cách họ đang sống, cách họ đang tu dưỡng.
             </p>
             <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-              không phải homestay, không phải trung tâm thiền. chỉ biết rằng có điều gì đó khiến tôi dừng lại, sau khi đọc qua từng trang, từng lời người đã đến."
+              không phải homestay, không phải trung tâm thiền. chỉ biết rằng có điều gì đó khiến tôi dừng lại, sau khi đọc qua từng trang, từng lời người đã đến.
             </p>
           </div>
 

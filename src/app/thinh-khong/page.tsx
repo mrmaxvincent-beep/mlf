@@ -149,7 +149,7 @@ export default function ThinhKhongPage() {
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 700, fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink)", textAlign: "center", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink)", textAlign: "center", margin: 0 }}>
           giãn mở đường cho thông, thông dẫn tới hòa — ba bước của cùng một dòng chảy, không tách rời.
         </p>
       </div>

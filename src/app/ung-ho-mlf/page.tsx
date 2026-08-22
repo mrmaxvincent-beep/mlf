@@ -100,45 +100,40 @@ export default function UngHoMlfPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
         <p style={proseP}>
-          Nhà mộc mong rằng các chương trình của mlf little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng &amp; online retreat khai tâm, im lặng-chữ nghĩa.
+          Nhà mộc mong rằng các chương trình của mlf little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng, ở-yên, an-vui &amp; online retreat khai tâm.
         </p>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
-          trợ duyên cho người hữu duyên
-        </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
-          <b>tài trợ tùy duyên</b> — bạn có thể trợ duyên cho các chương trình retreat hàm-dưỡng &amp; online retreat khai tâm, im lặng-chữ nghĩa, giúp mlf mở rộng vòng tay đến nhiều người cần sự bình an và chuyển hóa hơn.
+          <b>tài trợ tùy duyên</b> — bạn có thể trợ duyên cho các chương trình retreat giúp mlf mở rộng vòng tay đến nhiều người cần sự bình an và chuyển hóa hơn.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
-          <b>nhận hỗ trợ</b> — những ai thật sự cần đến retreat ngày-hiền &amp; online retreat khai tâm có thể nhận trợ duyên để tham gia các chương trình của mlf.
+          <b>nhận hỗ trợ</b> — những ai thật sự cần đến retreat có thể nhận trợ duyên để tham gia các chương trình của mlf.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 0.6rem" }}>
           Để tài trợ: mọi đóng góp, dù lớn dù nhỏ, đều có ý nghĩa rất lớn đối với chúng tôi. Xin hoan hỷ ghi rõ nội dung đóng góp &ldquo;trợ duyên mlf&rdquo; khi chuyển khoản tới: Ngân hàng Vietcombank · STK: 7945672381 · Chủ TK: Hồ Thành Tâm.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
-          Để nhận hỗ trợ: khi đăng ký chương trình retreat hàm-dưỡng &amp; online retreat khai tâm, im lặng-chữ nghĩa, bạn có thể cân nhắc lựa chọn các mức hỗ trợ (10% – 20%) phù hợp với nhu cầu của bản thân. Chúng tôi sẽ xác nhận việc hỗ trợ dựa trên mức sẵn có của quỹ trợ duyên.
+          Để nhận hỗ trợ: khi đăng ký chương trình retreat, bạn có thể cân nhắc lựa chọn các mức hỗ trợ (10% – 20%) phù hợp với nhu cầu của bản thân. Chúng tôi sẽ xác nhận việc hỗ trợ dựa trên mức sẵn có của quỹ trợ duyên.
         </p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <div style={{ display: "flex", justifyContent: "center", gap: "0.6rem 1rem", flexWrap: "wrap" }}>
+          <Link className="mono-link" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+            retreat ở-yên
+          </Link>
+          <span style={{ color: "var(--color-mist)" }}>·</span>
           <Link className="mono-link" href={routes.retreatHamDuong} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat hàm-dưỡng
+          </Link>
+          <span style={{ color: "var(--color-mist)" }}>·</span>
+          <Link className="mono-link" href={routes.retreatAnVui} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+            retreat an-vui
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
           <Link className="mono-link" href={routes.khaiTam} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             khai tâm
           </Link>
-          <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.imLangChuNghia} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            im lặng, chữ nghĩa
-          </Link>
         </div>
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.veMlf} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-          về trang mlf <span className="ar">→</span>
-        </Link>
       </div>
 
       <Footer />

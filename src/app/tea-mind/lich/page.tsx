@@ -42,7 +42,7 @@ export default function TeaMindLichPage() {
           Mỗi tháng là một chén trà, một mùa trong tâm, một lời nhắc rất khẽ để quay về với hơi thở và sự sống đang có mặt.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
-          Mỗi khi ánh mắt chạm vào chiếc chén trà, tự nhiên có một khoảng dừng nhẹ trong ngày — mười hai mùa tâm, mười hai nhịp thở, để năm mới đi qua một cách hiền hòa, tĩnh lặng và tròn đầy.
+          Mỗi khi ánh mắt chạm vào chiếc chén trà, tự nhiên có một khoảng dừng nhẹ trong ngày - mười hai mùa tâm, mười hai nhịp thở, để năm mới đi qua một cách hiền hòa, tĩnh lặng và tròn đầy.
         </p>
       </Reveal>
 

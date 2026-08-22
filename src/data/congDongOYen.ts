@@ -54,7 +54,7 @@ export const voices = [
 ];
 
 export const faqs = [
-  { q: `"nội dung ở đây khác gì những gì tôi tự tìm được?"`, a: "Ngoài kia có rất nhiều thông tin về slow living, mindfulness. Ở-yên khác ở chỗ: mọi nội dung đều được đúc kết từ thực hành thật — từ chính nếp sống của mlf và từ những gì mlf quan sát qua nhiều năm làm việc với khách trú tại Măng Đen. Không phải lý thuyết. Là những gì đã sống qua." },
+  { q: `"nội dung ở đây khác gì những gì tôi tự tìm được?"`, a: "Ngoài kia có rất nhiều thông tin về slow living, mindfulness. ở-yên khác ở chỗ: mọi nội dung đều được đúc kết từ thực hành thật, từ chính nếp sống của mlf và từ những gì mlf quan sát qua nhiều năm làm việc với khách trú tại Măng Đen. Không phải lý thuyết mà là những gì đã sống qua." },
   { q: `"cộng đồng này có thật không hay chỉ là admin đăng bài?"`, a: "Ở-yên được thiết kế như một tổ ấm — có người ở trong đó. Ngoài nội dung được cập nhật định kỳ, group có các buổi thực hành online cùng nhau. Tiếng nói của bạn là một phần của ở-yên, không chỉ là người đọc." },
   { q: `"tôi có thể tham gia bất cứ lúc nào không?"`, a: "Có — mức phí thành viên hiện tại là 990.000đ cho quyền truy cập trọn đời. Nhắn cho mlf nếu bạn muốn biết thêm chi tiết." },
   { q: `"tôi sẽ nhận được gì cụ thể?"`, a: "Ở-yên không hứa một kết quả đo được. Nhưng người ở trong đó thường bắt đầu nhận ra: họ biết cách dừng lại hơn, biết nghe cơ thể hơn, và ít cô đơn hơn trong hành trình này — vì có người đang đi cùng." },

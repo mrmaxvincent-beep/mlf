@@ -24,7 +24,7 @@ export const scheduleRows = [
 export const kyList = [
   { num: "01", title: "bến chờ, bến đợi", places: "Hà Nội · Bắc Ninh · Phú Thọ · Ninh Bình", status: "đã đi qua", statusColor: "var(--color-stone)" },
   { num: "02", title: "qua miền tư lự", places: "Huế", status: "đã đi qua", statusColor: "var(--color-stone)" },
-  { num: "03", title: "một nẻo Trúc Lâm", places: "Quảng Ninh · Bắc Giang · Hải Dương · Hưng Yên", status: "đã đi qua", statusColor: "var(--color-stone)" },
+  { num: "03", title: "một nẻo Trúc Lâm", places: "Quảng Ninh · Bắc Giang · Hải Dương · Hưng Yên  ·  Bắc Ninh", status: "đã đi qua", statusColor: "var(--color-stone)" },
   { num: "04", title: "a pause in Saigon", places: "Sài Gòn", status: "ĐÃ HẾT CHỖ", statusColor: "var(--color-cham-dem)" },
 ];
 

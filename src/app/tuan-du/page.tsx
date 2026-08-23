@@ -9,6 +9,7 @@ import { Reveal, RevealStagger } from "@/components/Reveal";
 import { DayCard } from "@/components/DayCard";
 import { Testimonials } from "@/components/Testimonials";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { RevealStatusButton } from "@/components/RevealStatusButton";
 import { routes } from "@/lib/nav";
 import { ngoLines, scheduleRows, kyList, testimonials, tuanDuSubnav } from "@/data/tuanDu";
 
@@ -384,9 +385,7 @@ export default function TuanDuPage() {
           mỗi chuyến tuần-du chỉ có một ít chỗ, vì một nhóm nhỏ mới đủ để mỗi người thực sự được nghe thấy.
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-          <Link href={routes.tuanDu05} className="cta-btn cta-btn--solid">
-            xem tuần-du 05 <span className="ar">→</span>
-          </Link>
+          <RevealStatusButton label="xem tuần-du 05" revealText="chưa mở đăng ký" className="cta-btn cta-btn--solid" />
         </div>
       </div>
 

@@ -128,6 +128,41 @@ export default function BeStillPage() {
         </p>
       </div>
 
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", flexWrap: "wrap", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
+          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-stone-alt)", flexShrink: 0 }}>
+            tìm Tâm ở
+          </span>
+          <a
+            href="https://www.instagram.com/tamthanh.ho"
+            target="_blank"
+            rel="noopener"
+            className="mono-link"
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />
+              <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.4" />
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+            </svg>
+            instagram
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61586840221190"
+            target="_blank"
+            rel="noopener"
+            className="mono-link"
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.4" />
+              <path d="M14 8.5h-1.5c-.8 0-1.5.7-1.5 1.5V12h3l-.4 2.5H11V19h-2.5v-4.5H7V12h1.5v-2.2c0-1.8 1.3-3.3 3.3-3.3H14v1.9Z" fill="currentColor" />
+            </svg>
+            facebook
+          </a>
+        </div>
+      </div>
+
       <Footer />
     </>
   );

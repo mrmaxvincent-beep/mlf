@@ -1711,6 +1711,17 @@ details[open] > summary .acc-icon {
   }
 }
 
+/* Horizontally-scrolling strip with the scrollbar hidden (still swipeable/
+   draggable) — used for chip/step rows that grow over time, e.g. the
+   tuần-du trip index, without needing a layout redesign per new item. */
+.hscroll-clean {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hscroll-clean::-webkit-scrollbar {
+  display: none;
+}
+
 /* biên-thư-cho-Hy: letter index rail + reading pane */
 .letters-shell {
   display: grid;

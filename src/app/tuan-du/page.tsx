@@ -76,7 +76,7 @@ export default function TuanDuPage() {
         </div>
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem", background: "rgba(20, 18, 15, 0.32)", padding: "1.5rem" }}>
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: "#fff", textAlign: "center" }}>
-            tuần-du tới: mây nằm ngủ
+            tuần-du tới · 05 · mây nằm ngủ
           </span>
           <RevealStatusButton label="khám phá" revealText="chưa mở đăng ký" className="cta-btn cta-btn--solid" />
         </div>

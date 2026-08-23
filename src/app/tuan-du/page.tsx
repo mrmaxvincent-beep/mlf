@@ -127,16 +127,6 @@ export default function TuanDuPage() {
         </div>
       </div>
 
-      <div className="wrap" style={{ paddingTop: "1.2rem", display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.75rem" }}>
-        <span style={{ flex: 1, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
-          TUẦN-DU SẮP TỚI
-        </span>
-        <span style={{ flex: 1, textAlign: "center", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)" }}>mây nằm ngủ</span>
-        <Link className="mono-link" href={routes.tuanDu05} style={{ flex: 1, textAlign: "right", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
-          xem tuần-du 05 →
-        </Link>
-      </div>
-
       <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "4rem" }}>
         <div style={{ textAlign: "center", maxWidth: "34ch", margin: "0 auto" }}>
           {ngoLines.map((line) => (

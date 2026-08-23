@@ -68,10 +68,18 @@ export default function TuanDuPage() {
         </div>
       </div>
 
-      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · một chuyến tuần-du 1" aspectRatio="16/12" src="/assets/tuandu01.webp" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · một chuyến tuần-du 2" aspectRatio="16/12" src="/assets/tuandu02.webp" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · một chuyến tuần-du 3" aspectRatio="16/12" src="/assets/tuandu03.webp" style={{ width: "100%", height: "auto" }} />
+      <div style={{ position: "relative", marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+          <ImagePlaceholder label="ảnh · một chuyến tuần-du 1" aspectRatio="16/12" src="/assets/tuandu01.webp" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · một chuyến tuần-du 2" aspectRatio="16/12" src="/assets/tuandu02.webp" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · một chuyến tuần-du 3" aspectRatio="16/12" src="/assets/tuandu03.webp" style={{ width: "100%", height: "auto" }} />
+        </div>
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem", background: "rgba(20, 18, 15, 0.32)", padding: "1.5rem" }}>
+          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: "#fff", textAlign: "center" }}>
+            tuần-du tới: mây nằm ngủ
+          </span>
+          <RevealStatusButton label="khám phá" revealText="chưa mở đăng ký" className="cta-btn cta-btn--solid" />
+        </div>
       </div>
 
       <div className="wrap" style={{ paddingTop: "2.75rem" }}>

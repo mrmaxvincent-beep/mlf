@@ -120,15 +120,6 @@ export default function BeStillPage() {
         </span>
       </Reveal>
       <div className="wrap" style={{ marginBottom: "2rem", maxWidth: "52ch" }}>
-        <a className="go mono-link" href="https://www.bestill.life/" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
-          đọc tâm quán <span className="ar">→</span>
-        </a>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0.6rem 0 0" }}>
-          tâm quán là blog cá nhân của tôi, nơi tôi ghi lại những điều mình thấy trên đường.
-        </p>
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", flexWrap: "wrap", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-stone-alt)", flexShrink: 0 }}>
             tìm Tâm ở
@@ -161,6 +152,15 @@ export default function BeStillPage() {
             facebook
           </a>
         </div>
+      </div>
+
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
+        <a className="go mono-link" href="https://www.bestill.life/" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+          đọc tâm quán <span className="ar">→</span>
+        </a>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0.6rem 0 0" }}>
+          tâm quán là blog cá nhân của tôi, nơi tôi ghi lại những điều mình thấy trên đường.
+        </p>
       </div>
 
       <Footer />

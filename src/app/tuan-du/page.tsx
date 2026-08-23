@@ -79,8 +79,8 @@ export default function TuanDuPage() {
             { n: "01", tier: "past" as const },
             { n: "02", tier: "past" as const },
             { n: "03", tier: "past" as const },
-            { n: "04", tier: "current" as const, href: routes.tuanDu04 },
-            { n: "05", tier: "next" as const },
+            { n: "04", tier: "current" as const, href: routes.tuanDu04, status: "đã hết chỗ" },
+            { n: "05", tier: "next" as const, status: "chưa mở đăng ký" },
           ].map((t) => {
             const dotSize = t.tier === "next" ? 10 : t.tier === "current" ? 8 : 6;
             const dotColor = t.tier === "next" ? "var(--color-ink)" : t.tier === "current" ? "var(--color-cham-dem)" : "var(--color-mist)";
@@ -91,6 +91,9 @@ export default function TuanDuPage() {
                 <span style={{ display: "block", width: dotSize, height: dotSize, borderRadius: "50%", background: dotColor, margin: "0 auto 0.65rem" }} />
                 <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", whiteSpace: "nowrap", color: labelColor, fontWeight: labelWeight }}>
                   tuần-du {t.n}
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.08em", textTransform: "uppercase", whiteSpace: "nowrap", color: "var(--color-stone-alt)", marginTop: "0.35rem", minHeight: "0.7rem" }}>
+                  {t.status ?? ""}
                 </span>
               </>
             );

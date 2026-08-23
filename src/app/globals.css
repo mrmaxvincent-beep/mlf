@@ -1722,6 +1722,23 @@ details[open] > summary .acc-icon {
   display: none;
 }
 
+/* tuần-du timeline step: linked items swap their status caption for
+   "xem chi tiết" on hover, without shifting layout. */
+.tuandu-step-link .step-caption-hover {
+  opacity: 0;
+  transition: opacity var(--duration-hover) var(--ease-standard);
+}
+.tuandu-step-link .step-caption-status {
+  opacity: 1;
+  transition: opacity var(--duration-hover) var(--ease-standard);
+}
+.tuandu-step-link:hover .step-caption-hover {
+  opacity: 1;
+}
+.tuandu-step-link:hover .step-caption-status {
+  opacity: 0;
+}
+
 /* biên-thư-cho-Hy: letter index rail + reading pane */
 .letters-shell {
   display: grid;

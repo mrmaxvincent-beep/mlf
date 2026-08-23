@@ -86,19 +86,36 @@ export default function TuanDuPage() {
             const dotColor = t.tier === "next" ? "var(--color-ink)" : t.tier === "current" ? "var(--color-cham-dem)" : "var(--color-mist)";
             const labelColor = t.tier === "next" ? "var(--color-ink)" : t.tier === "current" ? "var(--color-cham-dem)" : "var(--color-stone)";
             const labelWeight = t.tier === "next" ? 700 : t.tier === "current" ? 600 : 400;
+            const captionStyle: React.CSSProperties = {
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.56rem",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              whiteSpace: "nowrap",
+              color: "var(--color-stone-alt)",
+            };
             const inner = (
               <>
                 <span style={{ display: "block", width: dotSize, height: dotSize, borderRadius: "50%", background: dotColor, margin: "0 auto 0.65rem" }} />
                 <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", whiteSpace: "nowrap", color: labelColor, fontWeight: labelWeight }}>
                   tuần-du {t.n}
                 </span>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.08em", textTransform: "uppercase", whiteSpace: "nowrap", color: "var(--color-stone-alt)", marginTop: "0.35rem", minHeight: "0.7rem" }}>
-                  {t.status ?? ""}
-                </span>
+                {t.href ? (
+                  <span style={{ position: "relative", display: "block", marginTop: "0.35rem", height: "0.7rem" }}>
+                    <span className="step-caption-status" style={{ ...captionStyle, position: "absolute", left: "50%", top: 0, transform: "translateX(-50%)" }}>
+                      {t.status ?? ""}
+                    </span>
+                    <span className="step-caption-hover" style={{ ...captionStyle, position: "absolute", left: "50%", top: 0, transform: "translateX(-50%)", color: "var(--color-cham-dem)" }}>
+                      xem chi tiết
+                    </span>
+                  </span>
+                ) : (
+                  <span style={{ display: "block", marginTop: "0.35rem", minHeight: "0.7rem", ...captionStyle }}>{t.status ?? ""}</span>
+                )}
               </>
             );
             return t.href ? (
-              <Link key={t.n} href={t.href} style={{ flexShrink: 0, textAlign: "center" }}>
+              <Link key={t.n} href={t.href} className="tuandu-step-link" style={{ flexShrink: 0, textAlign: "center" }}>
                 {inner}
               </Link>
             ) : (

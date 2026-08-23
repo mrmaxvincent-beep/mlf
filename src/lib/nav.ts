@@ -7,7 +7,6 @@ export const routes = {
   ngayHien: "/ngay-hien",
   giua: "/giua",
   tuanDu: "/tuan-du",
-  tuanDuToi: "/tuan-du/toi",
   tuanDu04: "/tuandu/04",
   tuanDu05: "/tuandu/05",
   chuoiTuanDu: "/tuan-du/chuoi",
@@ -91,7 +90,7 @@ export const programsPanel = [
   },
   {
     group: "tuần-du",
-    items: [{ label: "tuần-du tới", href: routes.tuanDuToi }],
+    items: [{ label: "tuần-du 05", href: routes.tuanDu05 }],
   },
   {
     group: "be-still",

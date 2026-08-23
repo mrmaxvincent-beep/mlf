@@ -90,7 +90,7 @@ export const programsPanel = [
   },
   {
     group: "tuần-du",
-    items: [{ label: "tuần-du 05", href: routes.tuanDu05 }],
+    items: [{ label: "tuần-du tới", href: routes.tuanDu }],
   },
   {
     group: "be-still",

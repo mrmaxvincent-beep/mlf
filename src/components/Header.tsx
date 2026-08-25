@@ -84,6 +84,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
   return (
     <div
+      className="site-header"
       style={{
         position: "fixed",
         top: 0,

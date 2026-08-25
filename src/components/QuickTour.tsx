@@ -69,6 +69,11 @@ export function QuickTour() {
     setSlide(0);
   }
 
+  useEffect(() => {
+    document.documentElement.classList.toggle("qt-open", open);
+    return () => document.documentElement.classList.remove("qt-open");
+  }, [open]);
+
   return (
     <>
       <button
@@ -130,7 +135,7 @@ export function QuickTour() {
         <button
           onClick={close}
           aria-label="đóng"
-          style={{ position: "absolute", top: "1.2rem", right: "1.2rem", background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+          style={{ position: "absolute", top: "0.6rem", right: "0.6rem", minWidth: 44, minHeight: 44, display: "flex", alignItems: "center", justifyContent: "center", background: "none", border: "none", cursor: "pointer", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
         >
           đóng ✕
         </button>

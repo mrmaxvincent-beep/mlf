@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { notes } from "@/data/thuVien";
 
 export const metadata: Metadata = {
-  title: "thư viện ở-yên",
+  title: "ghi chép ở-yên",
   description: "ghi chép về ở-yên. Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình.",
 };
 
@@ -18,9 +18,9 @@ export default function ThuVienPage() {
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
-        <Breadcrumb label="thư viện ở-yên" />
+        <Breadcrumb label="ghi chép ở-yên" />
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
-          thư viện ở-yên
+          ghi chép ở-yên
         </h1>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>ghi chép về ở-yên</span>
       </div>

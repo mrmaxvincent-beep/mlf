@@ -11,6 +11,7 @@ import { Disclosure } from "@/components/Disclosure";
 import { DayCard } from "@/components/DayCard";
 import { LazyYoutubeEmbed } from "@/components/LazyYoutubeEmbed";
 import { RegistrationLink } from "@/components/RegistrationLink";
+import { Motif } from "@/components/Motif";
 import { routes } from "@/lib/nav";
 import { needPairs, yogaList, therapyList, gth, changList, scheduleRows, newcomerList, safetyGroups, gearList, ptIssues, testimonials } from "@/data/thinhKhong";
 
@@ -70,6 +71,9 @@ export default function ThuanDuongPage() {
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>thở</span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>asana</span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>tâm</span>
+        </div>
+        <div style={{ textAlign: "center", marginTop: "1.6rem" }}>
+          <Motif name="thien-toa" size={30} />
         </div>
       </Reveal>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>

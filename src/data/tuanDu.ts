@@ -15,7 +15,7 @@ export const ngoLines = [
 export const scheduleRows = [
   { time: "05:00 – 06:30", activity: "thời gian rỗng rang của bản thân · thiền, đi bộ, uống trà, tĩnh lặng" },
   { time: "06:30 – 07:30", activity: "ăn sáng" },
-  { time: "07:30 – 17:00", activity: "ghé thăm các địa điểm văn hoá, kể chuyện & trà đàm", highlight: true },
+  { time: "07:30 – 17:00", activity: "ghé thăm các địa điểm văn hoá, kể chuyện & vòng-trà-tâm", highlight: true },
   { time: "11:00 – 14:00", activity: "ăn trưa & nghỉ trưa" },
   { time: "17:00 – 19:00", activity: "ăn tối & về nơi nghỉ" },
   { time: "19:00", activity: "thời gian tự do · nghỉ ngơi, tự khám phá" },

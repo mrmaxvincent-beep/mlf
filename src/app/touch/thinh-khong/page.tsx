@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -344,6 +345,12 @@ export default function ThinhKhongPage() {
           </Disclosure>
         ))}
       </RevealStagger>
+
+      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+        <Link className="mono-link" href={routes.touch} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          ← xem lại touch
+        </Link>
+      </div>
 
       <Footer />
     </>

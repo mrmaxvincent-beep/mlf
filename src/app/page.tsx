@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 import { HeroClock } from "@/components/HeroClock";
 import { DropRipple } from "@/components/DropRipple";
+import { QuickTour } from "@/components/QuickTour";
 import { routes } from "@/lib/nav";
 import {
   entries,
@@ -112,6 +113,7 @@ export default function HomePage() {
                 english
               </Link>
             </div>
+            <QuickTour />
           </div>
           <div style={{ textAlign: "right" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-paper-dem)", display: "block", marginBottom: "0.4rem" }}>

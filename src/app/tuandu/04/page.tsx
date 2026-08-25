@@ -53,7 +53,7 @@ export default function TuanDu04Page() {
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>
-        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" src="/assets/tuandu4.jpg" alt="a pause in Saigon" style={{ height: "100%" }} />
+        <ImagePlaceholder label="ảnh · a pause in Saigon" aspectRatio="auto" src="/assets/tuandu4.webp" alt="a pause in Saigon" style={{ height: "100%" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "4.5rem", marginBottom: "2.5rem", maxWidth: "56ch" }}>

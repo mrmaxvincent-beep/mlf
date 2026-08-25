@@ -87,35 +87,41 @@ export default function TouchPage() {
       </RevealStagger>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", flexWrap: "wrap", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
-          <a
-            href="https://www.instagram.com/thuan.upcycle/"
-            target="_blank"
-            rel="noopener"
-            className="mono-link"
-            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
-          >
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />
-              <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.4" />
-              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
-            </svg>
-            instagram
-          </a>
-          <a
-            href="tel:0988039296"
-            className="mono-link"
-            style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
-          >
-            098 803 92 96
-          </a>
-          <a
-            href="mailto:thinhkhong.hub@gmail.com"
-            className="mono-link"
-            style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
-          >
-            thinhkhong.hub@gmail.com
-          </a>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thuần upcycle</span>
+            <a
+              href="https://www.instagram.com/thuan.upcycle/"
+              target="_blank"
+              rel="noopener"
+              className="mono-link"
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.4" />
+                <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+              </svg>
+              instagram
+            </a>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thinh không</span>
+            <a
+              href="tel:0988039296"
+              className="mono-link"
+              style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
+            >
+              098 803 92 96
+            </a>
+            <a
+              href="mailto:thinhkhong.hub@gmail.com"
+              className="mono-link"
+              style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
+            >
+              thinhkhong.hub@gmail.com
+            </a>
+          </div>
         </div>
       </div>
 

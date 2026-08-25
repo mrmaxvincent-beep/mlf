@@ -8,11 +8,11 @@ import { Reveal, RevealStagger } from "@/components/Reveal";
 import { doors } from "@/data/teaMind";
 
 export const metadata: Metadata = {
-  title: "tea · mind",
+  title: "tea · mind · không gian của Vũ",
   description: "một góc nhỏ nơi hơi thở chậm lại, tâm mình lắng lại, qua các hành động giản dị: pha trà, nặn gốm, vẽ tranh.",
   keywords: "tea, mind, trà, gốm, tranh, mindfulness, workshop",
   openGraph: {
-    title: "tea · mind · mộc little farm",
+    title: "tea · mind · không gian của Vũ · mộc little farm",
     description: "một góc nhỏ nơi hơi thở chậm lại, tâm mình lắng lại, qua các hành động giản dị: pha trà, nặn gốm, vẽ tranh.",
     type: "website",
     url: "https://moclittlefarm.com/tea-mind",

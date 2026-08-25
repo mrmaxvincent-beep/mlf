@@ -49,15 +49,6 @@ export default function ThuanUpcyclePage() {
         </a>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "3.5rem", textAlign: "center" }}>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1.4rem" }}>
-          tham khảo thêm
-        </span>
-        <Link className="mono-link" href={routes.touchThinhKhong} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-          thinh không
-        </Link>
-      </div>
-
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <Link className="mono-link" href={routes.touch} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           ← xem lại touch

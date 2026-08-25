@@ -39,7 +39,7 @@ export const entries: DictEntry[] = [
     variants: [
       { word: "khoảng-dừng", desc: "khoảng thời gian giữa hai việc, tự nó đã chứa đựng điều gì đó" },
       { word: "ngày-hiền", desc: "dừng được đặt tên, một ngày mang phẩm chất hiền lành, có địa chỉ tại Măng Đen" },
-      { word: "giữa · middle", desc: "chốn dừng giữa hành trình, không gian đang hình thành tại Huế" },
+      { word: "giữa · middle", desc: "chốn dừng ở giữa mọi điều của mlf: giữa đời và đạo, giữa ngày và đêm, giữa mưa và nắng, giữa bận rộn và thảnh thơi..." },
       { word: "ở-yên", desc: "dừng đã thấm vào cách sống, tự nhiên như thở, tự nhiên như suối biết tìm đường" },
     ],
   },

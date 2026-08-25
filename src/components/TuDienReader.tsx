@@ -196,13 +196,14 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
               ) : null}
 
               {current.variants ? (
-                <div style={sectionStyle}>
-                  <SectionLabel num="04" title="trong hệ từ ở-yên" />
+                <div style={{ marginTop: "1rem", padding: "1.4rem 1.6rem", background: "var(--color-cotton)", borderRadius: "4px" }}>
+                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+                    xem thêm · trong hệ từ ở-yên
+                  </span>
                   {current.variants.map((v) => (
-                    <div key={v.word} style={{ display: "flex", gap: "1rem", alignItems: "baseline", marginBottom: "0.9rem" }}>
-                      <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-ink)", minWidth: "9rem" }}>{v.word}</span>
-                      <span style={{ width: "1rem", height: "1px", background: "var(--color-mist)", alignSelf: "center", flexShrink: 0 }} />
-                      <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", color: "var(--color-stone-alt)", lineHeight: 1.65 }}>{v.desc}</span>
+                    <div key={v.word} style={{ display: "flex", gap: "0.9rem", alignItems: "baseline", marginBottom: "0.7rem" }}>
+                      <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.88rem", color: "var(--color-stone-alt)", minWidth: "8rem" }}>{v.word}</span>
+                      <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.74rem", color: "var(--color-stone-alt)", lineHeight: 1.6 }}>{v.desc}</span>
                     </div>
                   ))}
                 </div>

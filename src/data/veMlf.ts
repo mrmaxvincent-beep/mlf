@@ -60,7 +60,7 @@ export const branches = [
         href: "/touch",
         name: "touch",
         place: "",
-        desc: "chạm vào điều thuần nhất.",
+        desc: "Chạm vào điều thuần nhất.",
         subs: ["thinh không — yoga dưỡng sinh & phục hồi", "thuần upcycle — đồ cũ kể chuyện mới"],
       },
     ],

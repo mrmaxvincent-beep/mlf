@@ -73,7 +73,7 @@ export default function ThuanDuongPage() {
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>tâm</span>
         </div>
         <div style={{ textAlign: "center", marginTop: "1.6rem" }}>
-          <Motif name="thien-toa" size={30} />
+          <Motif name="thien-toa" size={90} />
         </div>
       </Reveal>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch", textAlign: "center" }}>

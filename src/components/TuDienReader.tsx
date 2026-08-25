@@ -10,7 +10,7 @@ function firstLetter(word: string) {
 }
 
 function renderParts(parts: Part[], keyPrefix: string) {
-  return parts.map((p, i) => (typeof p === "string" ? <span key={`${keyPrefix}-${i}`}>{p}</span> : <em key={`${keyPrefix}-${i}`}>{p.em}</em>));
+  return parts.map((p, i) => (typeof p === "string" ? <span key={`${keyPrefix}-${i}`}>{p}</span> : <em key={`${keyPrefix}-${i}`} style={{ fontStyle: "normal" }}>{p.em}</em>));
 }
 
 function SectionLabel({ num, title }: { num: string; title: string }) {

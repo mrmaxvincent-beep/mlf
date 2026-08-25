@@ -4,7 +4,7 @@ export type DictEntry = {
   word: string;
   origin: string;
   group: string;
-  definition: Part[];
+  definition: Part[][];
   story?: Part[][];
   insight?: Part[][];
   insightClose?: string[];
@@ -17,12 +17,18 @@ export const entries: DictEntry[] = [
     origin: "Thuần Việt",
     group: "Thời gian · Khoảng nghỉ · Hiện diện",
     definition: [
-      "Trạng thái ngưng chuyển động, được chọn có ý thức. Khác với ",
-      { em: "nghỉ" },
-      " là phục hồi để tiếp tục, và ",
-      { em: "bỏ" },
-      " là rời đi, dừng là khoảnh khắc một người biết mình đang ở đâu và cho phép điều đó là đủ. Tại MLF, dừng còn là tên của một trục lớn: toàn bộ không gian vật lý tại Măng Đen và Huế được tạo ra để ",
-      { em: "một người có thể dừng thật sự." },
+      ["khoảng giữa hai hành động"],
+      [
+        "Trạng thái ngưng chuyển động, được chọn có ý thức. Khác với ",
+        { em: "nghỉ" },
+        " là phục hồi để tiếp tục, và ",
+        { em: "bỏ" },
+        " là rời đi, dừng là khoảnh khắc một người biết mình đang ở đâu và cho phép điều đó.",
+      ],
+      [
+        "Tại MLF, dừng còn là tên của một trục lớn: toàn bộ không gian vật lý tại mlf được tạo ra để ",
+        { em: "một người có thể dừng thật sự." },
+      ],
     ],
     story: [
       ["Có một con suối chảy qua vách núi, ngày nào cũng chảy. Mùa khô nước nhỏ hơn, mùa mưa nước lớn hơn, nhưng chưa bao giờ ngưng."],

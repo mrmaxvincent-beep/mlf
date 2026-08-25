@@ -146,7 +146,11 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-stone-alt)", letterSpacing: "0.02em" }}>{current.group}</div>
                   </div>
                 </div>
-                <p style={{ ...bodyTextStyle, margin: 0 }}>{renderParts(current.definition, "def")}</p>
+                {current.definition.map((p, i) => (
+                  <p key={i} style={i === current.definition.length - 1 ? { ...bodyTextStyle, margin: 0 } : bodyTextStyle}>
+                    {renderParts(p, `def-${i}`)}
+                  </p>
+                ))}
               </div>
 
               {current.story ? (

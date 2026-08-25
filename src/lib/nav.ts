@@ -56,7 +56,7 @@ export const hoatDongMenu = [
   { divider: true as const },
   { label: "be-still", href: routes.beStill },
   { label: "tea · mind", href: routes.teaMind },
-  { label: "thinh · không", href: routes.thinhKhong },
+  { label: "touch", href: routes.thinhKhong },
 ];
 
 export const thuVienMenu = [
@@ -114,8 +114,8 @@ export const programsPanel = [
     ],
   },
   {
-    group: "thinh · không",
-    items: [{ label: "thinh · không", href: routes.thinhKhong }],
+    group: "touch",
+    items: [{ label: "touch", href: routes.thinhKhong }],
   },
 ];
 
@@ -128,7 +128,7 @@ export const mobileMenuSections = [
       { label: "tuần-du", href: routes.tuanDu },
       { label: "be-still", href: routes.beStill },
       { label: "tea · mind", href: routes.teaMind },
-      { label: "thinh · không", href: routes.thinhKhong },
+      { label: "touch", href: routes.thinhKhong },
     ],
   },
   {

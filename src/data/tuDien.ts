@@ -27,7 +27,7 @@ export const entries: DictEntry[] = [
         " là rời đi, dừng là khoảnh khắc một người biết mình đang ở đâu và cho phép điều đó.",
       ],
       [
-        "Tại MLF, dừng còn là tên của một trục lớn: toàn bộ không gian vật lý tại mlf được tạo ra để ",
+        "Tại MLF, dừng còn là tên của một trục lớn (đi-dừng-ở): toàn bộ không gian vật lý tại mlf được tạo ra để ",
         { em: "một người có thể dừng thật sự." },
       ],
     ],

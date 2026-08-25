@@ -23,6 +23,8 @@ export const routes = {
   teaMindTranh: "/tea-mind/tranh",
   teaMindLich: "/tea-mind/lich",
   touch: "/touch",
+  touchThinhKhong: "/touch/thinh-khong",
+  touchThuanUpcycle: "/touch/thuan-upcycle",
   thuVien: "/thu-vien",
   tuDienOYen: "/tu-dien-o-yen",
   podcastOYen: "/podcast-o-yen",
@@ -115,7 +117,10 @@ export const programsPanel = [
   },
   {
     group: "touch",
-    items: [{ label: "touch", href: routes.touch }],
+    items: [
+      { label: "thinh không", href: routes.touchThinhKhong },
+      { label: "thuần upcycle", href: routes.touchThuanUpcycle },
+    ],
   },
 ];
 

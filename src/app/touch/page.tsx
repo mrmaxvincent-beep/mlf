@@ -33,7 +33,7 @@ export default function TouchPage() {
           touch
         </h1>
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginBottom: "2.5rem" }}>
-          không gian riêng của Thuận
+          chạm vào thuần nhất
         </span>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>

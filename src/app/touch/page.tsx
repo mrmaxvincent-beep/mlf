@@ -70,10 +70,7 @@ export default function TouchPage() {
         </p>
       </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>chạm tới các không gian</span>
-      </div>
-      <RevealStagger className="wrap" style={{ marginBottom: "5rem" }}>
+      <RevealStagger className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>
         {practices.map((p) => (
           <div key={p.name} style={{ paddingBottom: "1.5rem", marginBottom: "1.5rem", borderBottom: "1px solid var(--color-mist)" }}>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>

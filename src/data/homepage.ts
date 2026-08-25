@@ -33,7 +33,7 @@ export const entries = [
   },
   {
     href: routes.touch,
-    quote: "thực hành yoga",
+    quote: "chạm vào thuần nhất",
     name: "touch",
     icon: "motif-thien-toa.webp",
   },

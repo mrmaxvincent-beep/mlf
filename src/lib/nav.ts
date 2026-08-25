@@ -24,6 +24,7 @@ export const routes = {
   teaMindLich: "/tea-mind/lich",
   thinhKhong: "/thinh-khong",
   thuVien: "/thu-vien",
+  tuDienOYen: "/tu-dien-o-yen",
   podcastOYen: "/podcast-o-yen",
   sachOYen: "/sach-o-yen",
   motNgayOYen: "/mot-ngay-o-yen",
@@ -60,6 +61,7 @@ export const hoatDongMenu = [
 
 export const thuVienMenu = [
   { label: "ghi chép ở-yên", href: routes.thuVien },
+  { label: "từ điển ở-yên", href: routes.tuDienOYen },
   { label: "podcast", href: routes.podcastOYen },
   { label: "sách", href: routes.sachOYen },
   { label: "mlf journal", href: routes.journal },
@@ -133,6 +135,7 @@ export const mobileMenuSections = [
     heading: "thư viện",
     items: [
       { label: "ghi chép ở-yên", href: routes.thuVien },
+      { label: "từ điển ở-yên", href: routes.tuDienOYen },
       { label: "podcast", href: routes.podcastOYen },
       { label: "sách", href: routes.sachOYen },
       { label: "mlf journal", href: routes.journal },

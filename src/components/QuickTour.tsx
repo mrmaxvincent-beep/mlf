@@ -10,7 +10,7 @@ const branches = [
   { tagline: "du ngoạn đó đây", name: "tuần-du", href: routes.tuanDu },
   { tagline: "làm việc với tâm", name: "be-still", href: routes.beStill },
   { tagline: "cái đẹp thường ngày", name: "tea · mind", href: routes.teaMind },
-  { tagline: "thực hành yoga", name: "touch", href: routes.touch },
+  { tagline: "chạm vào thuần nhất", name: "touch", href: routes.touch },
 ];
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled])';

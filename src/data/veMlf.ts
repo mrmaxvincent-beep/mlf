@@ -53,7 +53,7 @@ export const branches = [
         href: "/tea-mind",
         name: "tea.mind",
         place: "",
-        desc: "Ở lại với cái đẹp giản dị trong những gì tay chạm vào hàng ngày: trà, gốm, tranh.",
+        desc: "Ở lại với cái đẹp giản dị, trong những gì tay chạm vào hàng ngày.",
         subs: ["trà", "gốm", "tranh", "lịch"],
       },
       {

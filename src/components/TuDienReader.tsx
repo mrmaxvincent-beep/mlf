@@ -196,9 +196,9 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
               ) : null}
 
               {current.variants ? (
-                <div style={{ marginTop: "1rem", padding: "1.4rem 1.6rem", background: "var(--color-cotton)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "1rem", padding: "1.4rem 1.6rem", background: "var(--color-paper)", border: "1px solid var(--color-ink)", borderRadius: "4px" }}>
                   <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
-                    xem thêm · trong hệ từ ở-yên
+                    diễn giải trong hệ từ ở-yên
                   </span>
                   {current.variants.map((v) => (
                     <div key={v.word} style={{ display: "flex", gap: "0.9rem", alignItems: "baseline", marginBottom: "0.7rem" }}>

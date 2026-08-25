@@ -36,7 +36,7 @@ export const entries: DictEntry[] = [
       ["Rồi một năm, phía thượng nguồn có tảng đá lớn lăn xuống, chặn dòng lại. Nước đọng thành vũng. Im lặng hoàn toàn."],
       ["Dân làng lo, tưởng suối chết rồi."],
       ["Chỉ vài tuần sau, bên dưới tảng đá, nước bắt đầu tìm ra lối mới. ", { em: "Sâu hơn, rộng hơn, mát hơn mùa trước." }],
-      ["Con suối đã dừng lại đủ lâu để tìm được đường đi của mình."],
+      ["Con suối đã dừng lại một quãng để tìm được đường đi của mình."],
     ],
     insight: [
       ["Khi dừng, những tiếng ồn bên ngoài lặng xuống. Và những thứ bên trong, vốn bị tiếng ồn che lấp, bắt đầu nổi lên rõ hơn. Ta tưởng dừng là nguồn cơn của khó chịu."],

@@ -35,7 +35,7 @@ export const entries = [
     href: routes.touch,
     quote: "chạm vào thuần nhất",
     name: "touch",
-    icon: "motif-thien-toa.webp",
+    icon: "touch.png",
   },
 ];
 

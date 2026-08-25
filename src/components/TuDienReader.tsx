@@ -82,7 +82,7 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
                 style={{
                   width: "1.55rem",
                   height: "1.55rem",
-                  color: isActive ? "var(--color-paper)" : has ? "var(--color-ink)" : "var(--color-mist)",
+                  color: isActive ? "var(--color-paper)" : has ? "var(--color-ink)" : "var(--color-stone)",
                   background: isActive ? "var(--color-cham-dem)" : "transparent",
                   cursor: has ? "pointer" : "default",
                 }}

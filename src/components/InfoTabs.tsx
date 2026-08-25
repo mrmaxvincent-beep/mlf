@@ -2,7 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 
-/** Two-button tab switcher (phục hồi / an toàn & giới hạn) — thinh-không page. */
+/** Two-button tab switcher (phục hồi / an toàn & giới hạn) — thuận dưỡng page. */
 export function InfoTabs({ tabs }: { tabs: { label: string; content: ReactNode }[] }) {
   const [active, setActive] = useState(0);
 

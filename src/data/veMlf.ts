@@ -61,7 +61,7 @@ export const branches = [
         name: "touch",
         place: "",
         desc: "Chạm vào điều thuần nhất.",
-        subs: ["thinh không — yoga dưỡng sinh & phục hồi", "thuần upcycle — đồ cũ kể chuyện mới"],
+        subs: ["thuận dưỡng — yoga dưỡng sinh & phục hồi", "thuần upcycle — đồ cũ kể chuyện mới"],
       },
     ],
   },

@@ -15,30 +15,30 @@ import { routes } from "@/lib/nav";
 import { needPairs, yogaList, therapyList, gth, changList, scheduleRows, newcomerList, safetyGroups, gearList, ptIssues, testimonials } from "@/data/thinhKhong";
 
 export const metadata: Metadata = {
-  title: "thinh không · yoga dưỡng sinh & phục hồi",
+  title: "thuận dưỡng · yoga dưỡng sinh & phục hồi",
   description: "gốc rễ vẫn là Hatha Yoga cổ điển — nơi hơi thở là trung tâm, tư thế chỉ là phương tiện, và tâm mới là đích đến. Kết hợp yoga dưỡng sinh và phục hồi trị liệu tự nhiên.",
-  keywords: "yoga, touch, thinh không, Hatha Yoga, wellness, retreat, phục hồi",
+  keywords: "yoga, touch, thuận dưỡng, Hatha Yoga, wellness, retreat, phục hồi",
   openGraph: {
-    title: "thinh không · yoga dưỡng sinh & phục hồi · mộc little farm",
+    title: "thuận dưỡng · yoga dưỡng sinh & phục hồi · mộc little farm",
     description: "gốc rễ vẫn là Hatha Yoga cổ điển — nơi hơi thở là trung tâm, tư thế chỉ là phương tiện, và tâm mới là đích đến.",
     type: "website",
-    url: "https://moclittlefarm.com/touch/thinh-khong",
+    url: "https://moclittlefarm.com/touch/thuan-duong",
   },
   alternates: {
-    canonical: "https://moclittlefarm.com/touch/thinh-khong",
+    canonical: "https://moclittlefarm.com/touch/thuan-duong",
   },
 };
 
-export default function ThinhKhongPage() {
+export default function ThuanDuongPage() {
   return (
     <>
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
-        <Breadcrumb trail={[{ label: "touch", href: routes.touch }, { label: "thinh · không" }]} />
+        <Breadcrumb trail={[{ label: "touch", href: routes.touch }, { label: "thuận dưỡng" }]} />
         <span className="eyebrow">con đường bằng an</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 2rem" }}>
-          thinh không
+          thuận dưỡng
         </h1>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>
@@ -46,7 +46,7 @@ export default function ThinhKhongPage() {
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>
-              Tôi là Thuận, người hướng dẫn yoga tại mộc little farm. thinh-không là con đường được tôi &ldquo;chưng cất&rdquo; từ chính những trải nghiệm của mình.
+              Tôi là Thuận, người hướng dẫn yoga tại mộc little farm. thuận dưỡng là con đường được tôi &ldquo;chưng cất&rdquo; từ chính những trải nghiệm của mình.
             </p>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone)" }}>— Thuận</span>
           </div>
@@ -54,9 +54,9 @@ export default function ThinhKhongPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 1" aspectRatio="16/12" src="/assets/thinhkhong01.webp" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 2" aspectRatio="16/12" src="/assets/thinhkhong02.webp" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thinh-không 3" aspectRatio="16/12" src="/assets/thinhkhong03.webp" alt="thinh-khong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thuận dưỡng 1" aspectRatio="16/12" src="/assets/thinhkhong01.webp" alt="thuan-duong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thuận dưỡng 2" aspectRatio="16/12" src="/assets/thinhkhong02.webp" alt="thuan-duong" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · thầy Thuận hướng dẫn lớp yoga thuận dưỡng 3" aspectRatio="16/12" src="/assets/thinhkhong03.webp" alt="thuan-duong" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="wrap" style={{ marginTop: "4rem", marginBottom: "1.2rem" }}>
@@ -161,7 +161,7 @@ export default function ThinhKhongPage() {
           tinh thần của lớp
         </span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1rem" }}>&ldquo;lắng nghe rõ hơn&rdquo;</p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>yoga thinh-không không tạo ra một hình mẫu cơ thể, mà tạo ra một không gian để cơ thể tự hồi phục.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>yoga thuận dưỡng không tạo ra một hình mẫu cơ thể, mà tạo ra một không gian để cơ thể tự hồi phục.</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem" }}>
@@ -177,7 +177,7 @@ export default function ThinhKhongPage() {
         <LazyYoutubeEmbed
           videoId="9aFVfyt4GUk"
           thumbnailSrc="/assets/thinhkhong02.webp"
-          thumbnailLabel="một buổi tập online thinh-không"
+          thumbnailLabel="một buổi tập online thuận dưỡng"
           aspectRatio="16/9"
         />
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", lineHeight: 1.7, color: "var(--color-stone)", margin: "0.8rem 0 0", textAlign: "center" }}>
@@ -248,7 +248,7 @@ export default function ThinhKhongPage() {
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone)" }}>— Thuận</span>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <RegistrationLink href="https://forms.gle/7NwcxWbmcCBrdc11A" programName="thịnh không" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/7NwcxWbmcCBrdc11A" programName="thuận dưỡng" className="cta-btn cta-btn--solid">
           đăng ký lớp <span className="ar">→</span>
         </RegistrationLink>
       </div>
@@ -325,7 +325,7 @@ export default function ThinhKhongPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>học viên — nói về trải nghiệm cùng thinh-không</span>
+        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>học viên — nói về trải nghiệm cùng thuận dưỡng</span>
       </div>
       <RevealStagger className="wrap" style={{ marginBottom: "5rem" }}>
         {testimonials.map((t) => (

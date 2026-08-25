@@ -43,7 +43,7 @@ export default function ConDuongMlfPage() {
 
       <Reveal className="wrap" style={{ marginTop: "2.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={proseP}>
-          qua các hoạt động như ngày-hiền, tuần-du, be-still, tea · mind, thinh · không, giữa · middle, và cộng đồng ở-yên, mlf gieo những hạt mầm <strong>hiện diện</strong>, <strong>thong dong</strong>, và <strong>thấy rõ</strong> — để sống giản dị giữa đời thường.
+          qua các hoạt động như ngày-hiền, tuần-du, be-still, tea · mind, thuận dưỡng, giữa · middle, và cộng đồng ở-yên, mlf gieo những hạt mầm <strong>hiện diện</strong>, <strong>thong dong</strong>, và <strong>thấy rõ</strong> — để sống giản dị giữa đời thường.
         </p>
       </Reveal>
 

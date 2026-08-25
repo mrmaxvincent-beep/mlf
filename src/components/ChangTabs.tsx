@@ -9,7 +9,7 @@ export type Chang = {
   weeks: { n: number; title: string; points: string[] }[];
 };
 
-/** 4-tab "chặng" (stage) selector for the thinh-không 12-week curriculum. */
+/** 4-tab "chặng" (stage) selector for the thuận dưỡng 12-week curriculum. */
 export function ChangTabs({ chang }: { chang: Chang[] }) {
   const [active, setActive] = useState(chang[0]?.num);
   const current = chang.find((c) => c.num === active) ?? chang[0];

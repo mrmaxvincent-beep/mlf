@@ -10,7 +10,7 @@ import { quickJumps, practices } from "@/data/touch";
 export const metadata: Metadata = {
   title: "touch · không gian của Thuận",
   description: "touch là không gian riêng của Thuận tại mộc little farm — nơi ở lại với cơ thể mình qua yoga, và ở lại với những vật cũ quanh mình qua upcycle.",
-  keywords: "touch, thinh không, yoga, thuần upcycle, mộc little farm",
+  keywords: "touch, thuận dưỡng, yoga, thuần upcycle, mộc little farm",
   openGraph: {
     title: "touch · không gian của Thuận · mộc little farm",
     description: "touch là không gian riêng của Thuận tại mộc little farm — nơi ở lại với cơ thể mình qua yoga, và ở lại với những vật cũ quanh mình qua upcycle.",
@@ -66,7 +66,7 @@ export default function TouchPage() {
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
-          chạm vào, chậm lại, và để mọi thứ trở về thuần nhất.
+          chậm lại, chạm vào, và để mọi thứ trở về thuần nhất.
         </p>
       </Reveal>
 
@@ -106,20 +106,13 @@ export default function TouchPage() {
             </a>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thinh không</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thuận dưỡng</span>
             <a
               href="tel:0988039296"
               className="mono-link"
               style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
             >
               098 803 92 96
-            </a>
-            <a
-              href="mailto:thinhkhong.hub@gmail.com"
-              className="mono-link"
-              style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
-            >
-              thinhkhong.hub@gmail.com
             </a>
           </div>
         </div>

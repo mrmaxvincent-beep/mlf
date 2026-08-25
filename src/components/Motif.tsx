@@ -12,7 +12,7 @@ const motifs = {
   "mam-la": "motif-mam-la.webp",
   "nui-suong": "motif-nui-suong.webp",
   "song-nuoc": "motif-song-nuoc.webp",
-  "thien-toa": "motif-thien-toa.svg",
+  "thien-toa": "motif-thien-toa.webp",
   "to-my": "motif-to-my.svg",
 } as const;
 

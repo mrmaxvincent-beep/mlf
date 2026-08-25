@@ -35,7 +35,7 @@ export default function TouchPage() {
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginBottom: "1.6rem" }}>
           chạm vào thuần nhất
         </span>
-        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "0.9rem", marginBottom: "2.5rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", justifyContent: "center", gap: "0.9rem", marginBottom: "2.5rem" }}>
           {quickJumps.map((q, i) => (
             <span key={q.href} style={{ display: "flex", alignItems: "baseline", gap: "0.9rem" }}>
               <Link href={q.href} className="mono-link" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-stone)" }}>

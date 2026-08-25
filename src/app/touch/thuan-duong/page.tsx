@@ -317,9 +317,6 @@ export default function ThuanDuongPage() {
             <a className="mono-link" href="tel:0988039296" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}>
               098 803 92 96 · zalo/sms/call
             </a>
-            <a className="mono-link" href="mailto:thinhkhong.hub@gmail.com" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}>
-              thinhkhong.hub@gmail.com
-            </a>
           </div>
         </div>
       </div>

@@ -58,10 +58,9 @@ export default function TouchPage() {
         </div>
       </div>
 
-      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · không gian touch 1" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · không gian touch 2" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · không gian touch 3" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · không gian touch 1" aspectRatio="16/12" src="/assets/cham1.webp" alt="touch" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · không gian touch 2" aspectRatio="16/12" src="/assets/cham2.webp" alt="touch" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>

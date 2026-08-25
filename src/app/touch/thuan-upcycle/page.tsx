@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const works = [
-  { label: "ảnh · sản phẩm upcycle 1", title: "sản phẩm 1" },
-  { label: "ảnh · sản phẩm upcycle 2", title: "sản phẩm 2" },
-  { label: "ảnh · sản phẩm upcycle 3", title: "sản phẩm 3" },
-  { label: "ảnh · sản phẩm upcycle 4", title: "sản phẩm 4" },
+  { label: "ảnh · sản phẩm upcycle 1", title: "sản phẩm 1", src: "/assets/thuan1.jpg" },
+  { label: "ảnh · sản phẩm upcycle 2", title: "sản phẩm 2", src: "/assets/thuan2.jpg" },
+  { label: "ảnh · sản phẩm upcycle 3", title: "sản phẩm 3", src: "/assets/thuan3.jpg" },
+  { label: "ảnh · sản phẩm upcycle 4", title: "sản phẩm 4", src: "/assets/thuan4.jpg" },
 ];
 
 export default function ThuanUpcyclePage() {

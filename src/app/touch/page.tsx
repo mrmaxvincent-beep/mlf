@@ -51,7 +51,7 @@ export default function TouchPage() {
           </div>
           <div>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 0.9rem" }}>
-              Touch là cách thuận thực hành ở lại với chính mình — với cơ thể qua yoga, và với những vật cũ quanh mình qua upcycle.
+              Touch là cách Thuận thực hành ở lại với chính mình — với cơ thể qua yoga, và với những vật cũ quanh mình qua upcycle.
             </p>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-stone-alt)" }}>— Thuận</span>
           </div>

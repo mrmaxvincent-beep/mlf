@@ -59,7 +59,7 @@ export const hoatDongMenu = [
 ];
 
 export const thuVienMenu = [
-  { label: "thư viện ở-yên", href: routes.thuVien },
+  { label: "ghi chép ở-yên", href: routes.thuVien },
   { label: "podcast", href: routes.podcastOYen },
   { label: "sách", href: routes.sachOYen },
   { label: "mlf journal", href: routes.journal },
@@ -132,7 +132,7 @@ export const mobileMenuSections = [
   {
     heading: "thư viện",
     items: [
-      { label: "thư viện ở-yên", href: routes.thuVien },
+      { label: "ghi chép ở-yên", href: routes.thuVien },
       { label: "podcast", href: routes.podcastOYen },
       { label: "sách", href: routes.sachOYen },
       { label: "mlf journal", href: routes.journal },

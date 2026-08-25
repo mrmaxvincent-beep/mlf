@@ -88,9 +88,6 @@ export default function TouchPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", flexWrap: "wrap", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
-          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-stone-alt)", flexShrink: 0 }}>
-            tìm Thuận ở
-          </span>
           <a
             href="https://www.instagram.com/thuan.upcycle/"
             target="_blank"

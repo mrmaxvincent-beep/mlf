@@ -126,13 +126,23 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
         <div>
           {current ? (
             <div>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.6rem" }}>
-                từ điển ở-yên · mộc little farm
-              </span>
+              <div style={{ textAlign: "center", padding: "0.5rem 0 2.6rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.8rem" }}>
+                  từ điển ở-yên · mộc little farm
+                </span>
 
-              <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 6vw, 3.2rem)", lineHeight: 1, color: "var(--color-ink)", margin: "0 0 0" }}>
-                {current.word}
-              </h2>
+                <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "normal", fontWeight: 600, fontSize: "clamp(2.8rem, 7vw, 4.2rem)", lineHeight: 1, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
+                  {current.word}
+                </h2>
+
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.04em", color: "var(--color-stone)", marginBottom: "1.8rem" }}>
+                  [{current.word}] · {current.origin}
+                </div>
+
+                <div style={{ width: "5rem", height: "1px", background: "var(--color-mist)", margin: "0 auto 1.8rem" }} />
+
+                <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", maxWidth: "34ch", margin: "0 auto" }}>{current.gloss}</p>
+              </div>
 
               <div style={sectionStyle}>
                 <SectionLabel num="01" title="định nghĩa" />

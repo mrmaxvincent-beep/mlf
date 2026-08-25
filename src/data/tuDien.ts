@@ -4,6 +4,7 @@ export type DictEntry = {
   word: string;
   origin: string;
   group: string;
+  gloss: string;
   definition: Part[][];
   story?: Part[][];
   insight?: Part[][];
@@ -16,8 +17,8 @@ export const entries: DictEntry[] = [
     word: "dừng",
     origin: "Thuần Việt",
     group: "Thời gian · Khoảng nghỉ · Hiện diện",
+    gloss: "khoảng giữa hai hành động",
     definition: [
-      ["khoảng giữa hai hành động"],
       [
         "Trạng thái ngưng chuyển động, được chọn có ý thức. Khác với ",
         { em: "nghỉ" },

@@ -59,8 +59,8 @@ const services = [
     desc: "Staying with the quiet beauty of what your hands touch each day - tea, ceramics, painting.",
   },
   {
-    href: routes.thinhKhong,
-    name: "thinh.không",
+    href: routes.touch,
+    name: "touch",
     tagline: "online yoga",
     desc: "Online yoga to come home to your own body - breath as the center, posture only as the vehicle.",
   },

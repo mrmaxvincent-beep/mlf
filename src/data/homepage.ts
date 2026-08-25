@@ -32,9 +32,9 @@ export const entries = [
     icon: "motif-chen-tra.webp",
   },
   {
-    href: routes.thinhKhong,
+    href: routes.touch,
     quote: "thực hành yoga",
-    name: "thinh · không",
+    name: "touch",
     icon: "motif-thien-toa.webp",
   },
 ];

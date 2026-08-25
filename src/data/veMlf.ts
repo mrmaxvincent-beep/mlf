@@ -50,7 +50,7 @@ export const branches = [
         subs: ["khai tâm — online retreat, hành trình thấy rõ", "từ im lặng đến chữ nghĩa — khóa học viết từ tâm", "clari-tea — buổi trà, chuyện trò để thấy rõ hơn điều còn rối ren", "nhất-hiện — cộng đồng thực tập trở về ba phẩm chất: bình phàm, thuần tịnh, rõ biết", "phía sáng — đồng hành cùng những giai đoạn cuối đời"],
       },
       { href: "/tea-mind", name: "tea.mind", place: "", desc: "Ở lại với cái đẹp giản dị trong những gì tay chạm vào hàng ngày: trà, gốm, tranh.", subs: null },
-      { href: "/thinh-khong", name: "thinh.không", place: "", desc: "Ở lại với cơ thể mình, qua lớp yoga online.", subs: null },
+      { href: "/touch", name: "touch", place: "", desc: "Ở lại với cơ thể mình, qua lớp yoga online.", subs: null },
     ],
   },
 ];

@@ -14,30 +14,30 @@ import { routes } from "@/lib/nav";
 import { needPairs, yogaList, therapyList, gth, changList, scheduleRows, newcomerList, safetyGroups, gearList, ptIssues, testimonials } from "@/data/thinhKhong";
 
 export const metadata: Metadata = {
-  title: "thinh không · yoga dưỡng sinh & phục hồi",
+  title: "touch · yoga dưỡng sinh & phục hồi",
   description: "gốc rễ vẫn là Hatha Yoga cổ điển — nơi hơi thở là trung tâm, tư thế chỉ là phương tiện, và tâm mới là đích đến. Kết hợp yoga dưỡng sinh và phục hồi trị liệu tự nhiên.",
-  keywords: "yoga, thinh không, Hatha Yoga, wellness, retreat, phục hồi",
+  keywords: "yoga, touch, thinh không, Hatha Yoga, wellness, retreat, phục hồi",
   openGraph: {
-    title: "thinh không · yoga dưỡng sinh & phục hồi · mộc little farm",
+    title: "touch · yoga dưỡng sinh & phục hồi · mộc little farm",
     description: "gốc rễ vẫn là Hatha Yoga cổ điển — nơi hơi thở là trung tâm, tư thế chỉ là phương tiện, và tâm mới là đích đến.",
     type: "website",
-    url: "https://moclittlefarm.com/thinh-khong",
+    url: "https://moclittlefarm.com/touch",
   },
   alternates: {
-    canonical: "https://moclittlefarm.com/thinh-khong",
+    canonical: "https://moclittlefarm.com/touch",
   },
 };
 
-export default function ThinhKhongPage() {
+export default function TouchPage() {
   return (
     <>
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
-        <Breadcrumb label="thinh · không" />
+        <Breadcrumb label="touch" />
         <span className="eyebrow">con đường bằng an</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 2rem" }}>
-          thinh không
+          touch
         </h1>
         <div className="hero-personal" style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "2.5rem", alignItems: "center" }}>
           <div className="hero-portrait" style={{ width: "9.5rem", flexShrink: 0 }}>

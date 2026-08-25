@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Reveal } from "@/components/Reveal";
 import { TuDienReader } from "@/components/TuDienReader";
 import { entries } from "@/data/tuDien";
 
@@ -24,16 +23,7 @@ export default function TuDienOYenPage() {
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>tra từ theo thứ tự A, B, C</span>
       </div>
 
-      <div className="lib-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>
-        <div />
-        <Reveal>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "left", margin: 0, maxWidth: "60ch" }}>
-            mỗi từ trong hệ ngôn ngữ ở-yên mang một cách hiểu riêng. chọn một chữ cái, gõ từ khoá để tìm, hoặc chọn một từ bên trái.
-          </p>
-        </Reveal>
-      </div>
-
-      <div style={{ marginBottom: "5rem" }}>
+      <div style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>
         <TuDienReader entries={entries} />
       </div>
 

@@ -221,7 +221,7 @@ export default function TuanDuPage() {
           {[
             { label: "ẩm thực", text: "chay trong xuyên suốt hành trình, để nuôi dưỡng sự nhẹ nhàng, thanh tịnh" },
             { label: "kể chuyện", text: "văn hoá & lịch sử, để lắng nghe từng lớp trầm tích của thời gian" },
-            { label: "trà đàm", text: "khi cùng nâng tách trà nóng, chuyện trò trong an tĩnh" },
+            { label: "vòng-trà-tâm", text: "khi cùng nâng tách trà nóng, chuyện trò trong an tĩnh" },
           ].map((item, idx) => (
             <Reveal key={item.label} style={{ flex: "1 1 180px", maxWidth: "220px", padding: "0 1.5rem", textAlign: "center", borderLeft: idx > 0 ? "1px solid var(--color-mist)" : "none" }}>
               <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "0.7rem" }}>

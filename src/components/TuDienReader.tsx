@@ -27,6 +27,15 @@ const sectionStyle: React.CSSProperties = {
   borderTop: "1px solid var(--color-mist)",
 };
 
+const bodyTextStyle: React.CSSProperties = {
+  fontFamily: "var(--font-serif)",
+  fontSize: "1.08rem",
+  fontWeight: 300,
+  lineHeight: 1.85,
+  color: "var(--color-ink)",
+  margin: "0 0 1.1rem",
+};
+
 /** A-Z browsable lookup for "từ điển ở-yên" — letter strip + search rail, reading pane on a white card, grouped into 4 sections: định nghĩa / câu chuyện / góc nhìn / trong hệ từ ở-yên. */
 export function TuDienReader({ entries }: { entries: DictEntry[] }) {
   const sorted = useMemo(() => [...entries].sort((a, b) => a.word.localeCompare(b.word, "vi")), [entries]);
@@ -137,14 +146,14 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-stone-alt)", letterSpacing: "0.02em" }}>{current.group}</div>
                   </div>
                 </div>
-                <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.08rem", fontWeight: 300, lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>{renderParts(current.definition, "def")}</p>
+                <p style={{ ...bodyTextStyle, margin: 0 }}>{renderParts(current.definition, "def")}</p>
               </div>
 
               {current.story ? (
                 <div style={sectionStyle}>
                   <SectionLabel num="02" title="câu chuyện" />
                   {current.story.map((p, i) => (
-                    <p key={i} style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", fontWeight: 300, lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1.1rem" }}>
+                    <p key={i} style={bodyTextStyle}>
                       {renderParts(p, `story-${i}`)}
                     </p>
                   ))}
@@ -155,12 +164,12 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
                 <div style={sectionStyle}>
                   <SectionLabel num="03" title="góc nhìn" />
                   {current.insight.map((p, i) => (
-                    <p key={i} style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", fontWeight: 300, lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.1rem" }}>
+                    <p key={i} style={bodyTextStyle}>
                       {renderParts(p, `insight-${i}`)}
                     </p>
                   ))}
                   {current.insightClose ? (
-                    <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", fontWeight: 300, lineHeight: 1.7, color: "var(--color-ink)", margin: "1.2rem 0 0" }}>
+                    <p style={{ ...bodyTextStyle, margin: "1.2rem 0 0" }}>
                       {current.insightClose.map((line, i) => (
                         <span key={i}>
                           {line}

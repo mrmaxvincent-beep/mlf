@@ -27,6 +27,12 @@ export default function SachOYenPage() {
         </p>
       </div>
 
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · sách ở-yên 1" aspectRatio="16/12" src="/assets/sach01.webp" alt="sách ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · sách ở-yên 2" aspectRatio="16/12" src="/assets/sach02.webp" alt="sách ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · sách ở-yên 3" aspectRatio="16/12" src="/assets/sach03.webp" alt="sách ở-yên" style={{ width: "100%", height: "auto" }} />
+      </div>
+
       <div className="wrap" style={{ marginTop: "4rem", marginBottom: "5rem", display: "flex", flexDirection: "column", gap: "4rem" }}>
         {books.map((book) => (
           <Reveal

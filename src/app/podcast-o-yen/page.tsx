@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { episodes } from "@/data/podcastOYen";
 
@@ -43,6 +44,12 @@ export default function PodcastOYenPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
           phát hành vào ngày 1 hàng tháng, trên Spotify.
         </p>
+      </div>
+
+      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+        <ImagePlaceholder label="ảnh · podcast ở-yên 1" aspectRatio="16/12" src="/assets/podcast1.webp" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · podcast ở-yên 2" aspectRatio="16/12" src="/assets/podcast_2.jpg" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · podcast ở-yên 3" aspectRatio="16/12" src="/assets/podcast3.webp" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
       </div>
 
       {/* featured episode / player */}

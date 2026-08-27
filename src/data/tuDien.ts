@@ -138,4 +138,53 @@ export const entries: DictEntry[] = [
       { word: "touch", desc: "chạm vào điều thuần nhất, cách hiền được thực hành qua bàn tay" },
     ],
   },
+  {
+    word: "chậm",
+    origin: "Thuần Việt",
+    group: "Thời gian · Nhịp · Chuyển động",
+    gloss: "nhịp của riêng một thứ",
+    definition: [
+      ["Đi hết một quãng đường hay một việc trong khoảng thời gian dài hơn mức người ta vẫn quen."],
+      [
+        "Điều đáng để ý ở chữ này là nó luôn phải so với một cái gì đó. Chậm hơn tàu, chậm hơn hẹn, chậm hơn bạn cùng lớp. Tự thân chữ chậm chẳng có mức nào cả, và mỗi lần dùng nó là một lần mình mượn tạm nhịp của người khác làm thước.",
+      ],
+      [
+        "Tiếng Việt xếp chữ này về phía thiếu khá nhiều, chậm chạp, chậm hiểu, chậm tiến. Có lẽ vì vậy mà nghe ai bảo mình chậm, phản ứng đầu tiên thường là muốn phân trần.",
+      ],
+      [
+        "Tại mlf, chuyện tốc độ được thay bằng chuyện nhịp. Một ngày ở đây dài ngắn tùy người, và điều duy nhất được giữ là để mỗi người đi theo nhịp của mình.",
+      ],
+    ],
+    story: [
+      [
+        "Người làm đàn kể rằng gỗ tốt nhất nằm trên những sườn núi cao và lạnh, chỗ mà cây phải mất nhiều năm mới lớn thêm được một chút. Thân cây ở đó nhỏ, nhìn qua thì thua xa cây dưới thấp.",
+      ],
+      [
+        "Cây dưới thấp đủ nắng đủ nước, năm nào cũng vươn nhanh, vài mùa đã cao lớn hơn hẳn. Đến khi xẻ ra thì thớ gỗ thưa, thân xốp, đóng bàn ghế thì được, làm đàn thì tiếng đục.",
+      ],
+      [
+        "Còn cây trên núi, mỗi năm thêm một vòng mỏng, vòng nọ sát vòng kia. Gỗ ấy nặng tay, gõ vào nghe trong, người làm đàn phải đợi hàng chục năm mới có một cây vừa ý.",
+      ],
+      ["Cùng một khoảng thời gian, hai cây nhận được hai thứ khác nhau. Cây kia đạt chiều cao, cây này nhận mật độ."],
+    ],
+    insight: [
+      [
+        "Sống chậm mấy năm nay thành một lời khuyên quen thuộc, nghe ở đâu cũng gặp. Nghe mãi rồi thì chậm hóa ra lại thành một chuẩn mới, ai chưa chậm được thì thấy mình còn thiếu, và câu chuyện quay về đúng chỗ cũ.",
+      ],
+      [
+        "Cây trên núi mọc đúng theo những gì đất và khí hậu ở đó cho phép, và cái nhịp ấy chính là nhịp của nó. Người ta đứng từ dưới thấp nhìn lên rồi gọi là chậm.",
+      ],
+      [
+        "Ai tìm được nhịp của mình thì chữ chậm cũng nhẹ đi. Có việc cần làm nhanh thì làm nhanh, có việc cần một quãng dài thì cứ để nó dài, và trong lòng thôi phải hỏi mình đang đứng ở đâu so với người khác.",
+      ],
+    ],
+    insightClose: ["Chậm là chữ người ngoài dùng, nhịp là chữ của mình."],
+    variants: [
+      { word: "nhịp", desc: "chữ mlf dùng thay cho tốc độ, vì mỗi người mỗi việc có một nhịp riêng" },
+      { word: "thong dong", desc: "đi theo nhịp của mình, làm nhiều hay ít vẫn thấy trong lòng rộng" },
+      { word: "hàm-dưỡng", desc: "nuôi bên trong theo lối thầm lặng, thứ chỉ dày lên qua nhiều mùa" },
+      { word: "ngày-hiền", desc: "một ngày dài ngắn tùy người, chỗ mà nhịp của mỗi khách được để nguyên" },
+      { word: "để chín", desc: "đợi một thứ đủ ngày của nó, việc mà thời gian làm thay cho mình" },
+    ],
+  },
 ];

@@ -19,24 +19,21 @@ export const entries: DictEntry[] = [
     group: "Thời gian · Khoảng nghỉ · Hiện diện",
     gloss: "khoảng giữa hai hành động",
     definition: [
+      ["Ngưng chuyển động, trong một khoảng thời gian nào đó, giữa việc vừa xong và việc sắp tới."],
       [
-        "Trạng thái ngưng chuyển động, được chọn có ý thức. Khác với ",
-        { em: "nghỉ" },
-        " là phục hồi để tiếp tục, và ",
-        { em: "bỏ" },
-        " là rời đi, dừng là khoảnh khắc một người biết mình đang ở đâu và cho phép điều đó.",
+        "Tiếng Việt có nhiều từ gần với nhau mà mỗi từ mang một sắc thái riêng. Nghỉ thì bao giờ cũng ngầm hiểu là sẽ tiếp tục, bỏ thì đã có ý rời đi, còn dừng để ngỏ cả hai đường. Người dừng vẫn đứng đó, chưa quyết gì cả, và có lẽ chính chỗ chưa quyết ấy mới là điều đáng nói của chữ này.",
       ],
       [
-        "Tại MLF, dừng còn là tên của một trục lớn (đi-dừng-ở): toàn bộ không gian vật lý tại mlf được tạo ra để ",
-        { em: "một người có thể dừng thật sự." },
+        "Tại mlf, dừng là một trong ba trục: đi · dừng · ở. Cả không gian nơi đây được giữ theo cách để một người có thể dừng thật.",
       ],
     ],
     story: [
-      ["Có một con suối chảy qua vách núi, ngày nào cũng chảy. Mùa khô nước nhỏ hơn, mùa mưa nước lớn hơn, nhưng chưa bao giờ ngưng."],
-      ["Rồi một năm, phía thượng nguồn có tảng đá lớn lăn xuống, chặn dòng lại. Nước đọng thành vũng. Im lặng hoàn toàn."],
-      ["Dân làng lo, tưởng suối chết rồi."],
-      ["Chỉ vài tuần sau, bên dưới tảng đá, nước bắt đầu tìm ra lối mới. ", { em: "Sâu hơn, rộng hơn, mát hơn mùa trước." }],
-      ["Con suối đã dừng lại một quãng để tìm được đường đi của mình."],
+      ["Người ta kể ở một vùng núi nọ có con suối chảy qua vách đá, năm này sang năm khác. Mùa khô nước rút xuống, mùa mưa nước dâng lên, nhưng dòng thì chưa bao giờ đổi."],
+      ["Rồi một hôm tảng đá trên cao lăn xuống chắn ngang dòng, nước đọng lại thành vũng và cả khúc suối lặng đi. Người trong làng đi ngang thấy vậy, bỡ ngỡ một lát rồi thôi, không tài nào làm gì được."],
+      ["Trong những ngày ấy, dưới lớp nước phẳng lì, cát và sỏi cứ chậm rãi tìm chỗ nằm của mình, một việc chẳng ai nhìn thấy và cũng chẳng ai cần nhìn thấy."],
+      [
+        "Vài tuần sau, bên dưới tảng đá, nước tìm ra một lối khác, sâu hơn, rộng hơn và mát hơn cả mùa trước. Con suối đã nằm yên đủ một quãng để lòng đất mở cho nó con đường mới.",
+      ],
     ],
     insight: [
       ["Khi dừng, những tiếng ồn bên ngoài lặng xuống. Và những thứ bên trong, vốn bị tiếng ồn che lấp, bắt đầu nổi lên rõ hơn. Ta tưởng dừng là nguồn cơn của khó chịu."],

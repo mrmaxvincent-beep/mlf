@@ -36,10 +36,15 @@ export const entries: DictEntry[] = [
       ],
     ],
     insight: [
-      ["Khi dừng, những tiếng ồn bên ngoài lặng xuống. Và những thứ bên trong, vốn bị tiếng ồn che lấp, bắt đầu nổi lên rõ hơn. Ta tưởng dừng là nguồn cơn của khó chịu."],
-      ["Thực ra dừng chỉ là tấm gương. ", { em: "Nó cho ta thấy những thứ đã ở đó từ trước, chỉ là chưa có lúc nào đủ yên để nhìn thấy." }],
+      [
+        "Việc dừng thường mang lại cảm giác khó chịu ngay trong những phút đầu tiên. Khi tiếng bên ngoài lắng xuống rồi thì những gì lâu nay nằm phía dưới bắt đầu hiện ra, một nỗi buồn, một cơn giận, một câu hỏi đã lâu chưa dám hỏi, hoặc một cảm giác trống trải mà mình chưa quen.",
+      ],
+      ["Cho nên phần lớn chúng ta quay lại với nhịp cũ khá nhanh, và mang theo cái ý nghĩ rằng chính khoảng dừng ấy đã làm sinh ra những điều này."],
+      [
+        "Kỳ thực chúng vẫn ở đó từ lâu rồi. Chuyển động che chúng đi, còn khoảng lặng thì trả chúng về đúng chỗ của chúng. Ai dừng đủ lâu, qua được mấy phút khó chịu ban đầu, sẽ nhận ra rằng những gì hiện lên trong khoảng yên ấy thật ra là những gì đang chờ mình chăm sóc.",
+      ],
     ],
-    insightClose: ["Dừng là khi ta trở về", "với chính mình đang ở đây."],
+    insightClose: ["Dừng là lúc ta gặp lại chính mình đang ở đây."],
     variants: [
       { word: "khoảng-dừng", desc: "khoảng thời gian giữa hai việc, tự nó đã chứa đựng điều gì đó" },
       { word: "ngày-hiền", desc: "dừng được đặt tên, một ngày mang phẩm chất hiền lành, làm hòa mình-mình, làm hòa mình-người, làm hòa mình-thiên nhiên." },

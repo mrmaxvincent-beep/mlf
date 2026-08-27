@@ -130,7 +130,6 @@ export const entries: DictEntry[] = [
         "Hiền hóa ra là dấu hiệu của một người đã yên với chính mình. Trong lòng chẳng còn gì thúc phải chứng minh, nên với ai cũng nhẹ được, mà đến lúc cần giữ điều gì thì vẫn giữ nguyên, chẳng cần lớn tiếng.",
       ],
     ],
-    insightClose: ["Hiền là sức mạnh của người đã thôi phải chứng minh."],
     variants: [
       { word: "ngày-hiền", desc: "một ngày mang phẩm chất ấy, để làm hòa với mình, với người, với thiên nhiên" },
       { word: "ở-yên", desc: "hiền đã thành cách sống, thuận với mình và thuận với nơi mình đang ở" },

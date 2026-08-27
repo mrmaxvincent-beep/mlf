@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { JournalIssue } from "@/components/JournalIssue";
 import { ExpandableContent } from "@/components/ExpandableContent";
@@ -21,6 +22,16 @@ export default function JournalPage() {
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "0.5rem" }}>
         <Breadcrumb label="mlf journal" />
       </div>
+
+      <div style={{ marginTop: "1rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw" }}>
+        <ImagePlaceholder label="ảnh · mlf journal" aspectRatio="21/6" src="/assets/mlfjournal.webp" alt="mlf journal" style={{ width: "100%", height: "auto" }} />
+      </div>
+
+      <Reveal className="wrap" style={{ marginTop: "2.5rem", marginBottom: "3.5rem", maxWidth: "60ch" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+          một quyển tạp chí được ươm mầm bởi mlf, những ghi chép về ở-yên. Viết ra từ mong ước giữ lại một nhịp sống ở-yên giữa những tất bật thường ngày — ở lại, ngay trong đời sống đang diễn ra.
+        </p>
+      </Reveal>
 
       <JournalIssue issues={issues} defaultIndex={defaultIssueIndex} />
 

@@ -48,7 +48,7 @@ export default function PodcastOYenPage() {
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
         <ImagePlaceholder label="ảnh · podcast ở-yên 1" aspectRatio="16/12" src="/assets/podcast1.webp" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · podcast ở-yên 2" aspectRatio="16/12" src="/assets/podcast_2.jpg" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · podcast ở-yên 2" aspectRatio="16/12" src="/assets/podcast_2.webp" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
         <ImagePlaceholder label="ảnh · podcast ở-yên 3" aspectRatio="16/12" src="/assets/podcast3.webp" alt="podcast ở-yên" style={{ width: "100%", height: "auto" }} />
       </div>
 

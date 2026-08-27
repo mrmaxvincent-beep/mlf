@@ -86,7 +86,6 @@ export const entries: DictEntry[] = [
         "Yên hóa ra là chuyện của bàn tay mình nhiều hơn là chuyện của hoàn cảnh. Ai buông được cái tay đang khuấy thì cũng vừa lúc thấy mọi thứ trong ra, kể cả gương mặt mình trong đó.",
       ],
     ],
-    insightClose: ["Yên là thôi khuấy, và mọi thứ tự tìm về chỗ của nó."],
     variants: [
       { word: "ở-yên", desc: "ở lại trong trạng thái yên đủ lâu để nó thành cách sống, không còn là một lúc nghỉ ngơi" },
       { word: "mặt hồ phẳng", desc: "hình ảnh của yên, mặt nước lặng thì soi rõ, cũng như tâm lặng thì thấy được mình" },

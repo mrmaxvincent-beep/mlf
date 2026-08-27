@@ -94,4 +94,49 @@ export const entries: DictEntry[] = [
       { word: "khoảng-dừng", desc: "quãng thời gian không ai đụng vào, đủ để mọi thứ lắng về chỗ của nó" },
     ],
   },
+  {
+    word: "hiền",
+    origin: "Thuần Việt và Hán Việt",
+    group: "Tính cách · Quan hệ · Tâm thế",
+    gloss: "phẩm chất của người đã đủ bên trong",
+    definition: [
+      ["Tính nết thuận hòa, dễ chịu với người và với việc, ít khi làm ai phải đề phòng."],
+      [
+        "Chữ này có hai gốc và hai gốc ấy khác nhau khá xa. Trong tiếng Hán, hiền là bậc hiền tài, người có đức có tài mà xưa nay vẫn được coi là nguyên khí của một xứ. Sang tiếng Việt đời thường, hiền lại nhẹ đi nhiều, thành ra tính nết dễ bảo, thành lời khen dành cho đứa trẻ ngoan hoặc con vật quen người.",
+      ],
+      [
+        "Có lẽ vì cách dùng ấy mà bây giờ nghe ai được khen hiền, người ta hay nghĩ tới một người mềm yếu, thiếu phần sắc bén. Gốc chữ vốn nói điều ngược lại, và trong tiếng Việt vẫn còn giữ dấu vết, nhìn vào những chỗ như hiền tài hay hiền nhân thì thấy.",
+      ],
+      [
+        "Tại mlf, hiền là chữ đặt cho một ngày. Ngày-hiền là ngày mà mọi thứ được để nguyên như nó vốn có, một ngày để làm hòa với mình, với người và với thiên nhiên.",
+      ],
+    ],
+    story: [
+      [
+        "Trong làng có người đàn ông ai cũng gọi là hiền. Ông ít nói, gặp ai cũng cười, con nít trong xóm hay chạy vào vườn ông hái ổi mà chưa lần nào bị đuổi. Người ta quen với sự dễ dãi ấy đến mức có lúc nghĩ chuyện gì ông cũng xuôi theo.",
+      ],
+      ["Rồi có người trong họ tính bán mảnh đất hương hỏa. Giấy tờ chuẩn bị xong xuôi, ai cũng đoán ông sẽ ký cho êm chuyện."],
+      ["Ông ngồi nghe hết, rót thêm nước cho khách, rồi nói rằng đất này ông giữ. Nói xong ông vẫn rót nước, vẫn cười như mọi khi, mà câu chuyện thì dừng lại ở đó."],
+      ["Về sau người trong làng hay nhắc chuyện này. Ông hiền thật, có điều cái hiền của ông nằm ở chỗ khác với người ta vẫn tưởng."],
+    ],
+    insight: [
+      [
+        "Người ta hay xếp hiền vào phía thiếu, thiếu tham vọng, thiếu cá tính, thiếu sức chống đỡ với đời. Xếp như vậy cũng dễ hiểu, vì người hiền thường ít tranh, mà trong mắt số đông thì ai không tranh nghĩa là người ấy đuối.",
+      ],
+      [
+        "Nhìn kỹ thì thấy điều khác. Người còn thiếu bên trong mới phải giành lấy phần hơn, phải nói to hơn một chút, phải cho người khác biết mình là ai. Ai đã đủ rồi thì thôi những việc ấy, và cái thôi đó nhìn từ ngoài vào trông giống như hiền lành.",
+      ],
+      [
+        "Hiền hóa ra là dấu hiệu của một người đã yên với chính mình. Trong lòng chẳng còn gì thúc phải chứng minh, nên với ai cũng nhẹ được, mà đến lúc cần giữ điều gì thì vẫn giữ nguyên, chẳng cần lớn tiếng.",
+      ],
+    ],
+    insightClose: ["Hiền là sức mạnh của người đã thôi phải chứng minh."],
+    variants: [
+      { word: "ngày-hiền", desc: "một ngày mang phẩm chất ấy, để làm hòa với mình, với người, với thiên nhiên" },
+      { word: "ở-yên", desc: "hiền đã thành cách sống, thuận với mình và thuận với nơi mình đang ở" },
+      { word: "không gian của sự không đòi hỏi", desc: "chỗ mà người ta được hiền, vì chẳng ai yêu cầu mình phải khác đi" },
+      { word: "vừa-vặn", desc: "mức đủ của một người, chỗ mà lòng thôi đòi thêm" },
+      { word: "touch", desc: "chạm vào điều thuần nhất, cách hiền được thực hành qua bàn tay" },
+    ],
+  },
 ];

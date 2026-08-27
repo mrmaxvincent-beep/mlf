@@ -66,7 +66,7 @@ export const entries: DictEntry[] = [
         "Chữ này còn nằm trong nhiều lời chúc quen thuộc, bình yên, an yên, yên ổn, thứ người ta mong cho nhau trước cả sức khỏe và tiền bạc. Kỳ thực yên là thứ khó tìm, mà lại dễ nhận ra. Một buổi sáng nào đó ngồi uống trà thấy trong người nhẹ đi, mình biết nó đang có mặt.",
       ],
       [
-        "Tại mlf, yên là chữ nằm trong tên của cả triết lý. Ở-yên nghĩa là ở lại trong trạng thái ấy, không phải một lát rồi đi, mà đủ lâu để nó thành cách sống.",
+        "Tại mlf, yên là chữ nằm trong tên của cả triết lý. Ở-yên nghĩa là ở lại trong trạng thái ấy, đủ lâu để nó trở thành cách sống.",
       ],
     ],
     story: [

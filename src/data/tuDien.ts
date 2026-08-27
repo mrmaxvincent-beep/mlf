@@ -52,4 +52,47 @@ export const entries: DictEntry[] = [
       { word: "ở-yên", desc: "dừng đã thấm vào cách sống, tự nhiên như thở, tự nhiên như suối biết tìm đường" },
     ],
   },
+  {
+    word: "yên",
+    origin: "Thuần Việt",
+    group: "Trạng thái · Tâm · Nơi chốn",
+    gloss: "trạng thái mọi thứ tự nó đủ",
+    definition: [
+      ["Trạng thái không có gì xáo động, mọi thứ giữ nguyên chỗ của nó và tự thế đã đủ."],
+      [
+        "Chữ yên trong tiếng Việt đi được cả hai đường, ra ngoài và vào trong, mà người mình dùng lẫn nhau đến mức chẳng còn thấy đó là hai chuyện khác. Một buổi chiều yên là chuyện của cảnh vật, một người ngồi yên là chuyện của thân, lòng yên lại là chuyện của tâm. Ba thứ ấy tiếng Việt gọi chung một chữ, và có lẽ người xưa đã thấy trước rằng chúng nương nhau mà có, cảnh lặng xuống thì thân dễ ngồi yên, thân yên rồi thì lòng mới lắng theo.",
+      ],
+      [
+        "Chữ này còn nằm trong nhiều lời chúc quen thuộc, bình yên, an yên, yên ổn, thứ người ta mong cho nhau trước cả sức khỏe và tiền bạc. Kỳ thực yên là thứ khó tìm, mà lại dễ nhận ra. Một buổi sáng nào đó ngồi uống trà thấy trong người nhẹ đi, mình biết nó đang có mặt.",
+      ],
+      [
+        "Tại mlf, yên là chữ nằm trong tên của cả triết lý. Ở-yên nghĩa là ở lại trong trạng thái ấy, không phải một lát rồi đi, mà đủ lâu để nó thành cách sống.",
+      ],
+    ],
+    story: [
+      ["Người ta kể có ông thầy dạy trò cách nhìn xuống đáy giếng. Trò múc nước lên thấy đục, bèn khuấy mạnh cho cặn tan ra, càng khuấy nước càng đục thêm."],
+      ["Ông thầy bảo cứ để đó."],
+      ["Trò đặt gàu nước bên bậc thềm rồi đi làm việc khác. Buổi chiều quay lại thì cặn đã lắng xuống hết, nước trong đến mức nhìn thấy cả đáy gàu, thấy luôn cả mặt mình soi trên đó."],
+      ["Cặn đã lắng lại trong gàu, nằm yên đáy nước. Điều làm nước trong lại là khoảng thời gian không ai đụng vào."],
+    ],
+    insight: [
+      [
+        "Nhiều người tìm yên bằng cách sắp xếp cho xong mọi chuyện trước đã. Trả hết việc, giải quyết hết những gì còn dở, rồi mới ngồi xuống. Nghĩ vậy thì hợp lý, có điều đời sống hiếm khi cho ai một ngày mà mọi thứ đều xong.",
+      ],
+      [
+        "Yên vẫn đến được trong lúc việc còn đó và lo lắng còn đó, vào lúc mình thôi cầm chúng lên xem đi xem lại. Giống gàu nước ban chiều, cặn ở nguyên trong gàu mà nước vẫn trong, vì đã có một quãng không ai chạm tới.",
+      ],
+      [
+        "Yên hóa ra là chuyện của bàn tay mình nhiều hơn là chuyện của hoàn cảnh. Ai buông được cái tay đang khuấy thì cũng vừa lúc thấy mọi thứ trong ra, kể cả gương mặt mình trong đó.",
+      ],
+    ],
+    insightClose: ["Yên là thôi khuấy, và mọi thứ tự tìm về chỗ của nó."],
+    variants: [
+      { word: "ở-yên", desc: "ở lại trong trạng thái yên đủ lâu để nó thành cách sống, không còn là một lúc nghỉ ngơi" },
+      { word: "mặt hồ phẳng", desc: "hình ảnh của yên, mặt nước lặng thì soi rõ, cũng như tâm lặng thì thấy được mình" },
+      { word: "một-ngày-ở-yên", desc: "một ngày dành riêng cho yên, có mặt cùng nhau mà chẳng ai đòi hỏi gì ở ai" },
+      { word: "be-still", desc: "không gian làm việc với tâm, nơi yên được thực hành như một việc mỗi ngày" },
+      { word: "khoảng-dừng", desc: "quãng thời gian không ai đụng vào, đủ để mọi thứ lắng về chỗ của nó" },
+    ],
+  },
 ];

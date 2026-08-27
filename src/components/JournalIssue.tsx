@@ -35,6 +35,10 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
         </p>
       </div>
 
+      <div style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", marginBottom: "3.5rem" }}>
+        <ImagePlaceholder label="ảnh · mlf journal" aspectRatio="21/6" src="/assets/mlfjournal.webp" alt="mlf journal" style={{ width: "100%", height: "auto" }} />
+      </div>
+
       <div
         className="wrap-wide cover-grid"
         style={{

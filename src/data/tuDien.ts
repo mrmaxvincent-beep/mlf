@@ -230,4 +230,50 @@ export const entries: DictEntry[] = [
       { word: "vết nứt được trám lại", desc: "hình ảnh quen của mlf, chỗ hỏng vẫn còn đó mà vật thì lành lại" },
     ],
   },
+  {
+    word: "đủ",
+    origin: "Thuần Việt",
+    group: "Mức độ · Tâm · Đời sống",
+    gloss: "chỗ mà không cần thêm",
+    definition: [
+      ["Có tới mức cần có, thêm vào nữa cũng chẳng để làm gì."],
+      [
+        "Chữ này nghe qua tưởng là chuyện của số lượng, mà dùng thì lại thấy nó nghiêng về phía trong lòng nhiều hơn. Hai người cùng có một mảnh vườn như nhau, người này thấy đủ, người kia thấy còn thiếu vài sào nữa.",
+      ],
+      [
+        "Tiếng Việt còn dùng chữ này cho những thứ chẳng đo được. Đủ duyên, đủ ngày, đủ nắng. Cách nói ấy hàm ý rằng có một mức nào đó tự nó tới, và việc của mình là nhận ra lúc nó đã tới.",
+      ],
+      [
+        "Tại mlf, đủ là chỗ không đòi hỏi ai phải hay hơn, và một người bước vào đây được xem là đã đủ ngay từ lúc bước vào.",
+      ],
+    ],
+    story: [
+      [
+        "Có người đàn ông đi làm xa quê nhiều năm, năm nào cũng tính làm thêm một mùa nữa rồi về. Ban đầu ông tính đủ tiền cất cái nhà thì về, cất xong lại thấy nên có mảnh vườn, có vườn rồi thì nghĩ tới việc lo cho con ăn học tới nơi.",
+      ],
+      [
+        "Một mùa mưa nọ ông về thăm nhà mấy hôm. Buổi chiều ngồi ngoài hiên uống nước với mẹ, bà kể chuyện trong xóm, chuyện con mèo mới đẻ, chuyện cây khế năm nay sai quả.",
+      ],
+      ["Ông ngồi nghe, nhìn ra sân, thấy mấy con gà bới đất dưới gốc khế. Bấy giờ ông mới nhớ ra rằng đã lâu lắm rồi ông chẳng ngồi như vậy."],
+      ["Ông ở lại quê từ mùa đó. Nhà thì vẫn là cái nhà cũ, vườn cũng chưa có, mà buổi chiều nào ông cũng ngồi ngoài hiên."],
+    ],
+    insight: [
+      [
+        "Đủ hay bị hiểu là một cột mốc nằm ở phía trước, tới đó thì dừng. Hiểu vậy thì mình sống trong tâm thế đang trên đường, và cái mốc kia cứ lùi ra xa mỗi khi mình lại gần.",
+      ],
+      [
+        "Người đàn ông ngoài hiên hôm ấy chẳng có thêm được gì so với buổi sáng. Ông vẫn ngần ấy tiền, ngần ấy đất. Thứ thay đổi là ông nhìn thấy cái đang có, thay vì nhìn cái còn thiếu.",
+      ],
+      [
+        "Đủ vốn là một cái thấy hơn là một con số. Có người có rất nhiều mà cả đời chưa thấy đủ, cũng có người ngồi bên hiên nhà một buổi chiều thì thấy. Cái thấy ấy thì tới bất cứ lúc nào.",
+      ],
+    ],
+    variants: [
+      { word: "vừa-vặn", desc: "mức hợp với mình, chỗ mà thêm vào cũng chẳng làm mình dễ chịu hơn" },
+      { word: "không gian của sự không đòi hỏi", desc: "chỗ mà một người được xem là đã đủ ngay từ lúc bước vào" },
+      { word: "đủ duyên", desc: "lúc mọi thứ vừa tới chỗ của nó, việc mà mình chờ chứ chẳng sắp đặt được" },
+      { word: "dù chỉ là, cũng đủ", desc: "lối nói quen của mlf, một điều nhỏ nhưng đủ cho ngày dài" },
+      { word: "ở-yên", desc: "sống lâu trong cái thấy ấy, tới lúc nó thành nếp chứ chẳng còn là một buổi chiều" },
+    ],
+  },
 ];

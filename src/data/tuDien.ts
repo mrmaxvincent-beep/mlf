@@ -276,4 +276,57 @@ export const entries: DictEntry[] = [
       { word: "ở-yên", desc: "sống lâu trong cái thấy ấy, tới lúc nó thành nếp chứ chẳng còn là một buổi chiều" },
     ],
   },
+  {
+    word: "về",
+    origin: "Thuần Việt",
+    group: "Chuyển động · Nơi chốn · Thuộc về",
+    gloss: "đi tới chỗ vốn thuộc về mình",
+    definition: [
+      ["Đi tới một nơi mà mình đã từng ở, hoặc một nơi thân thuộc với mình."],
+      [
+        "Tiếng Việt phân biệt đi và về khá rõ. Đi thì tới đâu cũng đi được, còn về thì chỉ về được những chỗ nhất định. Người ta đi Sài Gòn mà về quê, đi làm mà về nhà. Chữ về mang sẵn trong nó một mối ràng buộc có từ trước, và cũng vì vậy mà nghe nhẹ hơn chữ đi.",
+      ],
+      [
+        "Chữ này còn được dùng cho chuyến đi cuối cùng của một đời người. Người mình nói cụ đã về với ông bà, cách nói ấy đặt cái chết vào cùng một chỗ với việc về nhà, về lại nơi mình đã bắt đầu.",
+      ],
+      [
+        "Tại mlf, khách tới đây được gọi là về: về với thiên nhiên, về với mình, về với bữa cơm nhà, về với những gì gần gũi thân quen.",
+      ],
+    ],
+    story: [
+      [
+        "Bếp nhà quê ngày trước hiếm khi tắt hẳn. Nấu xong bữa tối, người ta cời than lại thành một đống nhỏ, phủ tro lên trên, thế là lửa nằm đó tới sáng.",
+      ],
+      [
+        "Sáng ra vạch tro, thổi vài hơi, bếp đỏ lại. Nhà nào để nguội hẳn thì phải cầm cái đóm chạy sang hàng xóm xin lửa. Chuyện thấy nhỏ, mà người ta biết ý cũng ngại chuyện xin lửa.",
+      ],
+      [
+        "Một người con đi làm xa, mấy năm mới về một lần. Xe đò tới bến thường đã khuya, đi bộ thêm quãng nữa mới tới nhà. Vào tới bếp thì thấy tro còn ấm, mẹ đã ủ từ chiều, nồi cơm để bên cạnh đậy cái rá.",
+      ],
+      ["Anh hỏi sao mẹ biết hôm nay con về mà ủ than."],
+      ["Bà nói hôm nào bà cũng ủ."],
+    ],
+    insight: [
+      [
+        "Chỗ nào cũng vào được, miễn mình xứng với chỗ đó. Xin việc thì phải qua vòng tuyển, vào hội nhóm thì phải hợp với người ta. Sống lâu trong nếp ấy rồi thì đi đâu người ta cũng mang theo cái ý nghĩ rằng để có một chỗ thì mình phải bỏ ra một thứ để đổi lấy.",
+      ],
+      [
+        "Bà mẹ ủ than mỗi chiều dù con ở xa hay gần. Bà ủ vì tối nào bà cũng ủ. Nếu đêm ấy anh về thì có lửa, nếu anh không về thì sáng mai bà vẫn vạch tro nhóm bếp như thường.",
+      ],
+      [
+        "Chỗ dành cho anh có sẵn từ trước khi anh bước vào, và nó không dựa vào việc anh mấy năm mới ghé, làm ăn ra sao, về tay không hay mang quà. Anh về là ngồi xuống ăn cơm.",
+      ],
+      [
+        "Đó là chỗ khác nhau giữa đi và về. Đi thì tới đâu cũng phải xem người ta có nhận mình hay không. Về thì chỗ ấy giữ cho mình rồi, chỉ là bước vào.",
+      ],
+    ],
+    insightClose: ["Về là trở lại nơi luôn có chỗ cho mình."],
+    variants: [
+      { word: "chốn về", desc: "chữ mlf dùng thay cho điểm đến, nơi mà người ta về chứ chẳng phải nơi để tới" },
+      { word: "trở về", desc: "việc quay lại điểm gốc, có thể làm bất cứ lúc nào trong ngày" },
+      { word: "vườn-tâm", desc: "chốn về nằm bên trong, chỗ mà một người chăm mỗi ngày một chút" },
+      { word: "gốc", desc: "điểm mà mọi chuyến đi tính từ đó, thứ mình mang theo chứ chẳng để lại" },
+      { word: "ở-yên", desc: "về rồi ở lại, tới lúc chẳng còn thấy mình đang đi hay đang về nữa" },
+    ],
+  },
 ];

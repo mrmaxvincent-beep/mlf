@@ -317,7 +317,7 @@ export const entries: DictEntry[] = [
         "Chỗ dành cho anh có sẵn từ trước khi anh bước vào, và nó không dựa vào việc anh mấy năm mới ghé, làm ăn ra sao, về tay không hay mang quà. Anh về là ngồi xuống ăn cơm.",
       ],
       [
-        "Đó là chỗ khác nhau giữa đi và về. Đi thì tới đâu cũng phải xem người ta có nhận mình hay không. Về thì chỗ ấy giữ cho mình rồi, chỉ là bước vào.",
+        "Đó là chỗ khác nhau giữa đi và về. Đi thì tới đâu cũng phải xem người ta có nhận mình hay không. Về thì chỗ ấy giữ cho mình rồi, chỉ bước vào.",
       ],
     ],
     insightClose: ["Về là trở lại nơi luôn có chỗ cho mình."],

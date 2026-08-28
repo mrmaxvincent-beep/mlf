@@ -308,7 +308,7 @@ export const entries: DictEntry[] = [
     ],
     insight: [
       [
-        "Chỗ nào cũng vào được, miễn mình xứng với chỗ đó. Xin việc thì phải qua vòng tuyển, vào hội nhóm thì phải hợp với người ta. Sống lâu trong nếp ấy rồi thì đi đâu người ta cũng mang theo cái ý nghĩ rằng để có một chỗ thì mình phải bỏ ra một thứ để đổi lấy.",
+        "Khi đi xin việc thì phải qua vòng tuyển, vào hội nhóm thì phải hợp với người ta. Sống lâu trong nếp ấy rồi thì đi đâu người ta cũng mang theo cái ý nghĩ rằng để có một chỗ thì mình phải bỏ ra một thứ tương xứng.",
       ],
       [
         "Bà mẹ ủ than mỗi chiều dù con ở xa hay gần. Bà ủ vì tối nào bà cũng ủ. Nếu đêm ấy anh về thì có lửa, nếu anh không về thì sáng mai bà vẫn vạch tro nhóm bếp như thường.",

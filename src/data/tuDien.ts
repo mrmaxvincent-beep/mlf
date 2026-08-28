@@ -298,7 +298,7 @@ export const entries: DictEntry[] = [
         "Bếp nhà quê ngày trước hiếm khi tắt hẳn. Nấu xong bữa tối, người ta cời than lại thành một đống nhỏ, phủ tro lên trên, thế là lửa nằm đó tới sáng.",
       ],
       [
-        "Sáng ra vạch tro, thổi vài hơi, bếp đỏ lại. Nhà nào để nguội hẳn thì phải cầm cái đóm chạy sang hàng xóm xin lửa. Chuyện thấy nhỏ, mà người ta biết ý cũng ngại chuyện xin lửa.",
+        "Sáng ra vạch tro, thổi vài hơi, bếp đỏ lại. Nhà nào để nguội hẳn thì phải cầm cái đóm chạy sang hàng xóm xin lửa. Chuyện thấy nhỏ, mà người biết ý cũng ngại việc xin lửa.",
       ],
       [
         "Một người con đi làm xa, mấy năm mới về một lần. Xe đò tới bến thường đã khuya, đi bộ thêm quãng nữa mới tới nhà. Vào tới bếp thì thấy tro còn ấm, mẹ đã ủ từ chiều, nồi cơm để bên cạnh đậy cái rá.",

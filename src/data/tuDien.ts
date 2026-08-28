@@ -187,4 +187,48 @@ export const entries: DictEntry[] = [
       { word: "để chín", desc: "đợi một thứ đủ ngày của nó, việc mà thời gian làm thay cho mình" },
     ],
   },
+  {
+    word: "thương",
+    origin: "Thuần Việt",
+    group: "Tình cảm · Quan hệ · Cách nhìn",
+    gloss: "cái nhìn giữ một thứ lại như nó vốn có",
+    definition: [
+      ["Lòng nghiêng về phía một người hay một vật, muốn giữ gìn và muốn điều lành đến với nó."],
+      [
+        "Chữ này đi được rất xa trong tiếng Việt. Thương con, thương người dưng, thương cái áo mặc đã sờn, thương một buổi chiều đã qua. Cùng một chữ mà dùng cho người thân, cho người lạ, cho vật vô tri, và trong lời ru còn dùng cho cả những thứ chẳng thuộc về ai.",
+      ],
+      [
+        "Người Việt nói thương nhiều hơn nói yêu. Yêu thường có đối tượng rõ, có phần muốn giữ cho riêng mình. Thương thì rộng hơn, nhẹ hơn, thương ai là thấy người ấy đáng được che chở, thế thôi.",
+      ],
+      [
+        "Tại mlf, thương nằm trong cách người ta đối với đồ đạc và cây cối quanh mình. Một cái ghế gãy chân được chữa lại, một chiếc áo cũ thành tấm giẻ lau, những việc nhỏ mà ngày nào cũng có.",
+      ],
+    ],
+    story: [
+      [
+        "Ở nhà quê ngày trước, cái nồi đất nứt thì người ta không bỏ đi ngay. Có ông thợ đi rong qua làng, mang theo cái đục nhỏ và mấy sợi dây đồng, khoan hai bên vết nứt rồi buộc lại cho khít.",
+      ],
+      ["Nồi vá xong nhìn xấu hơn nồi mới, trên thân có hàng đinh đồng chạy dọc như một đường khâu. Người trong nhà vẫn dùng nó nấu cơm thêm nhiều năm nữa."],
+      ["Đứa cháu lớn lên thấy cái nồi ấy trong bếp, hỏi bà sao chẳng mua nồi mới. Bà nói nồi này nấu quen tay rồi."],
+      ["Về sau đứa cháu mới hiểu ra rằng bà giữ cái nồi cũng như bà giữ nhiều thứ khác trong nhà. Cái nào còn dùng được thì bà để nó ở lại thêm một quãng."],
+    ],
+    insight: [
+      [
+        "Người ta hay nghĩ thương là một thứ tình cảm dâng lên trong lòng, có lúc mạnh có lúc nhạt, tùy theo đối tượng có đáng thương hay không. Nghĩ vậy thì thương thành ra phụ thuộc vào người kia, và mình chỉ việc chờ xem lòng mình phản ứng thế nào.",
+      ],
+      [
+        "Bà giữ cái nồi nứt vì bà nhìn nó theo một cách khác. Trong mắt bà cái nồi vẫn còn phần dùng được, và phần ấy đủ để nó ở lại. Cách nhìn ấy bà dùng cho cả cái nồi lẫn người trong nhà.",
+      ],
+      [
+        "Thương gần với một cách nhìn hơn là một cảm xúc. Ai quen nhìn ra chỗ còn lành trong một vật cũ thì cũng quen nhìn ra chỗ còn lành trong một người, kể cả trong chính mình những hôm thấy mình chẳng ra gì.",
+      ],
+    ],
+    variants: [
+      { word: "thuần upcycle", desc: "hồi sinh vật cũ, giữ lại phần còn dùng được để nó kể một chuyện mới" },
+      { word: "chăm chút", desc: "cách bàn tay chạm vào mọi việc khi trong lòng có thương" },
+      { word: "không gian của sự không đòi hỏi", desc: "chỗ mà một người được nhìn theo lối ấy, chẳng cần hay hơn mới được ở lại" },
+      { word: "nương đỡ", desc: "việc mlf làm với khách, đứng bên cạnh chứ chẳng đứng phía trước" },
+      { word: "vết nứt được trám lại", desc: "hình ảnh quen của mlf, chỗ hỏng vẫn còn đó mà vật thì lành lại" },
+    ],
+  },
 ];

@@ -178,7 +178,6 @@ export const entries: DictEntry[] = [
         "Ai tìm được nhịp của mình thì chữ chậm cũng nhẹ đi. Có việc cần làm nhanh thì làm nhanh, có việc cần một quãng dài thì cứ để nó dài, và trong lòng thôi phải hỏi mình đang đứng ở đâu so với người khác.",
       ],
     ],
-    insightClose: ["Chậm là chữ người ngoài dùng, nhịp là chữ của mình."],
     variants: [
       { word: "nhịp", desc: "chữ mlf dùng thay cho tốc độ, vì mỗi người mỗi việc có một nhịp riêng" },
       { word: "thong dong", desc: "đi theo nhịp của mình, làm nhiều hay ít vẫn thấy trong lòng rộng" },

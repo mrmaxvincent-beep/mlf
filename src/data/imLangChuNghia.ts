@@ -70,7 +70,7 @@ export const sessions = [
   { n: "05", title: "Chữ nhạt và cách chữa", desc: "Sau buổi này bạn biết vì sao chữ mình nhạt, và chữa được.", items: ["Năm hình thái chữ nhạt: rơm khô, nước loãng, nặng nề, trôi nổi, phô trương", "Vì sao khí cạn", "Năm nguyên tắc chuyển hóa: rút gọn, chuyển nhịp, tìm hạt nhân, thay máu, đặt tâm", "Chữ như đất, nước, lửa, gió"] },
   { n: "06", title: "Tinh luyện chữ", desc: "Sau buổi này bạn cắt được chữ thừa mà không cắt mất linh hồn câu.", items: ["Trọng lượng chữ: câu đứng được hay trôi đi", "Độ vang: viết như gõ chuông", "Độ nén: chưng cất chữ", "Độ bén: động từ là lưỡi kiếm của câu", "Quy tắc vàng: ba được, ba giữ, ba bỏ", "Haiku, chữ như hơi thở"] },
   { n: "07", title: "Chữ và tâm cảnh", desc: "Sau buổi này khi nghẽn, bạn biết mình đang đứng nhầm chỗ ở đâu.", items: ["Đám mây và bầu trời: mình không phải cảm xúc của mình", "Vì sao người viết nghẽn, và cách trụ lại trong mình", "Nghệ thuật đặt tâm: viết cùng một cảnh bằng 5 tâm khác nhau", "Bốn cách viết từ tâm: soi gương, tìm điểm lặng, viết để rỗng, viết để chuyển hóa"] },
-  { n: "08", title: "Khai phóng chữ nghĩa", items: ["Chữ vượt ra khỏi trang giấy", "Chữ như khí, nối người với người", "Viết như một pháp tu", "Chữ & đời sống thường nhật"] },
+  { n: "08", title: "Hành khí và ứng dụng", desc: "Sau buổi này bạn có một bài viết trọn vẹn.", items: ["Năm yếu tố của khí: tinh lực, cảm xúc thật, hiện diện, tập trung, dòng sống", "Tụ khí, giữ khí, dẫn khí", "Bầu khí viết: giữ một tông xuyên suốt bài", "5 lực trói và 6 con đường khai phóng, rà soát nhanh", "Thực chiến: viết một bài của chính bạn, soi khí và chữa khí tại chỗ", "Đặt bài ngày 1 cạnh bài ngày 30"] },
 ];
 
 export const overview = [

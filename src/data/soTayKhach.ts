@@ -23,7 +23,7 @@ export const steps = [
   { title: "Bắt đầu ngày-hiền", desc: "Thở. Ngồi xuống. Uống một tách trà. Bạn đã đến rồi." },
 ];
 
-export const busLines = ["Phượng Thu", "Phong Phú", "Từ Phầu", "Việt Tân Phát", "Minh Quốc"];
+export const busLines = ["Phượng Thu", "Phong Phú", "Từ Phầu", "Minh Quốc"];
 
 export const personalItemsLine = "Bàn chải đánh răng, dao cạo, đồ cá nhân quen thuộc · Khăn tắm, khăn mặt · Thuốc cá nhân nếu có dùng thường xuyên · Bình nước cá nhân · Tai nghe, nếu thích nghe nhạc khi đi dạo một mình";
 export const clothingLine = "Mũ nón · Dép, giày thể thao, ủng đi suối · Áo khoác, khăn choàng (ngay cả mùa hè) · Áo mưa nhỏ gọn · Đồ ngủ thoải mái";

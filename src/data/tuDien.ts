@@ -377,4 +377,50 @@ export const entries: DictEntry[] = [
       { word: "cộng đồng ở-yên", desc: "những người ở lại cùng nhau đủ lâu để thành người quen" },
     ],
   },
+  {
+    word: "mở",
+    origin: "Thuần Việt",
+    group: "Hành động · Tâm · Chuyển hóa",
+    gloss: "việc xảy ra khi đã đủ điều kiện",
+    definition: [
+      ["Làm cho thông, cho thấy được phần bên trong, cho ra vào được."],
+      [
+        "Tiếng Việt dùng chữ này cho tay chân lẫn cho lòng. Mở cửa, mở nắp, mở gói. Rồi mở lòng, mở mắt, mở mang. Hai loại ấy trông giống nhau mà làm thì khác hẳn, cửa thì đẩy là được, còn lòng thì đẩy càng mạnh càng khép.",
+      ],
+      [
+        "Chữ này còn dùng cho những thứ chẳng có ai tác động. Trời mở, hoa mở, con đường mở ra sau khúc quanh. Lối nói ấy hàm ý rằng có những cái mở tự tới, việc của mình là ở đó lúc nó tới.",
+      ],
+      [
+        "Tại mlf, mở là việc người ta làm với chính mình chứ chẳng phải việc mlf làm cho ai. chén-trà-tâm, trò-chuyện-tâm-thức, khai-tâm… đều là chỗ ngồi xuống nói chuyện, còn mở tới đâu thì tùy người.",
+      ],
+    ],
+    story: [
+      ["Hạt sen để lâu năm trong bùn vẫn nảy được. Người ta tìm thấy hạt sen cổ trong đầm cạn, đem gieo thì vẫn lên cây."],
+      [
+        "Vỏ hạt sen cứng, kín, nước không vào được. Có người muốn cho nhanh thì mài vỏ, khía một đường cho nước thấm. Cách ấy được, mà cũng hay hỏng, khía sâu quá thì mầm chết trong hạt.",
+      ],
+      ["Người trồng lâu năm làm cách khác. Ngâm hạt trong nước ấm, thay nước mỗi ngày, để đó. Ngày thứ ba thứ tư vỏ tự nứt một đường nhỏ, mầm trắng lú ra."],
+      ["Cái vỏ ấy giữ cho hạt sống được mấy trăm năm dưới bùn. Tới lúc nó nứt là lúc bên trong đã sẵn sàng."],
+    ],
+    insight: [
+      [
+        "Người ta hay giục nhau mở lòng ra, cứ như đó là việc chỉ cần quyết là làm được. Ai chưa mở được thì thấy mình có lỗi, thấy mình đóng kín, khó gần.",
+      ],
+      [
+        "Chỗ nào khép lại đều có lý do của chỗ ấy. Cái vỏ cứng kia là thứ giữ cho hạt sống qua mấy trăm mùa nước. Đòi nó mở sớm hơn thì cũng chẳng khác gì lấy dao khía vào.",
+      ],
+      ["Việc làm được là ngâm nước ấm và thay nước mỗi ngày. Ngồi với người ta, hỏi han vài câu, để đó. Ngày nào cũng vậy. Rồi tới lúc nào đó tự nó nứt."],
+      [
+        "Với mình cũng thế thôi. Có những chuyện năm nay chưa nói ra được, sang năm ngồi kể lại thấy nhẹ tênh. Ở giữa hai lúc ấy chẳng có gì to tát xảy ra, chỉ có thời gian và một chỗ ấm áp.",
+      ],
+      ["Mở là việc tự tới, khi bên trong đã đủ ngày."],
+    ],
+    variants: [
+      { word: "khai tâm", desc: "ngồi xuống nói chuyện cùng nhau, mở tới đâu thì tùy người" },
+      { word: "phía sáng", desc: "chỗ ánh sáng lọt vào sau khi một điều gì đó vừa hé ra" },
+      { word: "nương đỡ", desc: "việc mlf làm, ở bên cạnh và thay nước mỗi ngày" },
+      { word: "để chín", desc: "đợi một thứ đủ ngày của nó, việc mà thời gian làm thay cho mình" },
+      { word: "đủ duyên", desc: "lúc mọi thứ vừa tới chỗ của nó, thứ chờ được mà sắp đặt thì khó" },
+    ],
+  },
 ];

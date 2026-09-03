@@ -60,8 +60,9 @@ export function NewsletterForm() {
           style={{
             width: "13rem",
             maxWidth: "50vw",
-            fontFamily: "var(--font-sans)",
-            fontSize: "0.85rem",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.6rem",
+            letterSpacing: "0.04em",
             color: "var(--color-ink)",
             background: "transparent",
             border: "none",
@@ -75,8 +76,8 @@ export function NewsletterForm() {
           className="newsletter-submit"
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.62rem",
-            letterSpacing: "0.1em",
+            fontSize: "0.6rem",
+            letterSpacing: "0.12em",
             textTransform: "uppercase",
             color: "var(--color-ink)",
             background: "none",

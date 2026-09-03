@@ -80,8 +80,8 @@ export default function ClariTeaPage() {
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "6rem", textAlign: "center" }}>
-        <a href="https://calendar.app.google/peGShtZA8AVwe17w6" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
-          đặt lịch <span className="ar">→</span>
+        <a href="https://forms.gle/8HtUxsobHzgq5wn89" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
+          đăng ký <span className="ar">→</span>
         </a>
       </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export type Session = { n: string; title: string; items: string[] };
+export type Session = { n: string; title: string; desc?: string; items: string[] };
 
 /** Round number-pill tab selector + content pane — course session breakdowns. */
 export function SessionTabs({ sessions, total }: { sessions: Session[]; total?: number }) {
@@ -43,6 +43,11 @@ export function SessionTabs({ sessions, total }: { sessions: Session[]; total?: 
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.9rem" }}>
             {current.title}
           </span>
+          {current.desc ? (
+            <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone)", marginBottom: "1.1rem" }}>
+              {current.desc}
+            </span>
+          ) : null}
           {current.items.map((it) => (
             <div key={it} className="li-item">
               <span className="li-mark">·</span>

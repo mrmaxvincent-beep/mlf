@@ -63,7 +63,7 @@ export const journey = [
 ];
 
 export const sessions = [
-  { n: "01", title: "Khơi nguồn khí lực: Chữ đến từ im lặng", items: ["Hơi thở là ngòi bút đầu tiên", "Nghi thức khởi động khí", "Luyện tâm trước khi luyện chữ", "Nghe chữ trong tâm", "Viết như thở, không như nghĩ", "Cảm nhận khí trong từng chữ đơn"] },
+  { n: "01", title: "Khí là gì, và nó đến từ đâu", desc: "Sau buổi này bạn có một bản đồ để định hướng trong 30 ngày.", items: ["Khí trong chữ: độ thông, độ vang, độ sống", "Khí không phải là văn hay, không phải cảm xúc mạnh", "Chuỗi tâm, hơi thở, thân, chữ", "Không có nhịp thở nào sai, chỉ có nhịp thở không được ý thức", "Cây chữ: gốc, thân, cành, lá", "6 vùng vấn đề, và bản đồ 8 buổi"] },
   { n: "02", title: "Nhịp và khoảng: Làm mềm dòng chảy", items: ["Câu chữ là dòng chảy: có nhịp, có điểm ngắt, có khoảng vang", "Âm thanh trong chữ - lắng nghe chữ bằng tai", `Kỹ năng: "nghe" khoảng trống giữa chữ`, "Nhịp ngoài chữ - nhịp nội tại và nhịp ngoại tại", "Sự đàn hồi của câu chữ"] },
   { n: "03", title: "Khí yếu, chữ nhạt: Nhận diện và chuyển hóa", items: ["Dấu hiệu chữ không có lực: rườm rà, thiếu vang, lạc tâm", "Nguyên nhân chữ yếu và cách phục hồi khí trong chữ", "Kỹ thuật chuyển hóa chữ nhạt thành chữ mạnh", "Nghệ thuật đặt tâm", "Chữ như đất (nuôi dưỡng), nước (gột rửa), lửa (hun đúc), gió (lay động)"] },
   { n: "04", title: "Từ cơ thể đến chữ: Viết bằng tạng phủ", items: ["Kết nối tạng phủ – cảm xúc – âm thanh chữ", "Viết bằng tim: nồng ấm", "Viết bằng bụng: vững chãi", "Viết bằng gan: dũng mãnh", "Viết bằng phổi: nhẹ tênh"] },

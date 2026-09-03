@@ -47,7 +47,7 @@ export function NewsletterForm() {
         htmlFor="newsletter-email"
         style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}
       >
-        nhận thư từ mlf
+        nhận thư hàng tháng từ mlf
       </label>
       <div style={{ display: "flex", alignItems: "flex-end", gap: "0.75rem" }}>
         <input
@@ -73,7 +73,7 @@ export function NewsletterForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="mono-link"
+          className="newsletter-submit"
           style={{
             fontFamily: "var(--font-mono)",
             fontSize: "0.62rem",

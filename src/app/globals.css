@@ -182,6 +182,21 @@ a:hover .ar {
   border-color: var(--color-cham-dem);
 }
 
+/* Newsletter submit — plain color/border shift, no shimmer (the background-clip
+   shimmer trick washes out on a button this small/tight, reading as text
+   disappearing on hover). */
+.newsletter-submit {
+  transition: color var(--duration-hover) var(--ease-standard), border-color var(--duration-hover) var(--ease-standard);
+}
+.newsletter-submit:hover:not(:disabled) {
+  color: var(--color-cham-dem);
+  border-color: var(--color-cham-dem);
+}
+.newsletter-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
 /* Photo hover-zoom — any image inside a link or button breathes in very
    slightly, very slowly. Site-wide via one rule rather than touching every
    photo card. */

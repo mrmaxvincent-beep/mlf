@@ -42,14 +42,14 @@ export function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "1.75rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.6rem" }}>
-      <label
-        htmlFor="newsletter-email"
-        style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}
-      >
-        nhận thư hàng tháng từ mlf
-      </label>
-      <div style={{ display: "flex", alignItems: "flex-end", gap: "0.75rem" }}>
+    <form onSubmit={handleSubmit} style={{ marginBottom: "1.75rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", justifyContent: "center" }}>
+        <label
+          htmlFor="newsletter-email"
+          style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)", whiteSpace: "nowrap" }}
+        >
+          nhận thư hàng tháng từ mlf
+        </label>
         <input
           id="newsletter-email"
           type="email"
@@ -58,16 +58,15 @@ export function NewsletterForm() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="email của bạn"
           style={{
-            width: "16rem",
-            maxWidth: "60vw",
+            width: "13rem",
+            maxWidth: "50vw",
             fontFamily: "var(--font-sans)",
             fontSize: "0.85rem",
             color: "var(--color-ink)",
             background: "transparent",
             border: "none",
             borderBottom: "1px solid var(--color-mist)",
-            padding: "0.4rem 0",
-            textAlign: "center",
+            padding: "0.2rem 0",
           }}
         />
         <button
@@ -83,7 +82,7 @@ export function NewsletterForm() {
             background: "none",
             border: "none",
             borderBottom: "1px solid var(--color-ink)",
-            padding: "0 0 0.4rem",
+            padding: "0.2rem 0",
             cursor: "pointer",
             whiteSpace: "nowrap",
           }}

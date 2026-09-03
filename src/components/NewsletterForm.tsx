@@ -46,7 +46,7 @@ export function NewsletterForm() {
       <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", justifyContent: "center" }}>
         <label
           htmlFor="newsletter-email"
-          style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)", whiteSpace: "nowrap" }}
+          style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.04em", color: "var(--color-stone)", whiteSpace: "nowrap" }}
         >
           nhận thư hàng tháng từ mlf
         </label>
@@ -77,8 +77,7 @@ export function NewsletterForm() {
           style={{
             fontFamily: "var(--font-mono)",
             fontSize: "0.6rem",
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
+            letterSpacing: "0.04em",
             color: "var(--color-ink)",
             background: "none",
             border: "none",

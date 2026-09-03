@@ -329,4 +329,52 @@ export const entries: DictEntry[] = [
       { word: "ở-yên", desc: "về rồi ở lại, tới lúc chẳng còn thấy mình đang đi hay đang về nữa" },
     ],
   },
+  {
+    word: "quen",
+    origin: "Thuần Việt",
+    group: "Thời gian · Quan hệ · Nếp sống",
+    gloss: "thứ có được sau khi ở lại đủ lâu",
+    definition: [
+      ["Biết rõ tới mức làm mà chẳng phải nghĩ, gặp mà chẳng phải dè."],
+      [
+        "Chữ này dùng cho tay, cho chỗ, cho người. Quen tay, quen chỗ, quen đường, người quen. Cái gì cũng phải qua một quãng thời gian mới quen được, và tiếng Việt gói cả quãng thời gian ấy vào một chữ.",
+      ],
+      [
+        "Người mình cũng dùng chữ này theo nghĩa xấu. Quen thói, quen mui, ăn quen thì hết ngon. Nghe vậy thì quen thành thứ làm mòn đi cái ban đầu.",
+      ],
+      [
+        "Tại mlf, quen là thứ chỉ có được khi ở lại. Khách về nhiều lần thì biết chỗ ngồi hợp với mình, biết giờ nào vườn có nắng.",
+      ],
+    ],
+    story: [
+      ["Cái cuốc dùng lâu thì cán mòn theo tay người cầm. Chỗ ngón cái tì vào lõm xuống một chút, chỗ lòng bàn tay bóng lên."],
+      [
+        "Người trong nhà ai cũng có cái cuốc của mình. Cầm nhầm cái của người khác thì cuốc vẫn cuốc được, chỉ là tay thấy vướng, làm một buổi về mỏi hơn thường.",
+      ],
+      [
+        "Ông cụ trong xóm có cái cuốc dùng ba mươi năm. Cán gãy hai lần, thay cán mới, lưỡi mòn đi quá nửa. Con cháu bảo mua cái mới cho nhẹ, ông nói cái này quen tay rồi.",
+      ],
+      ["Cái cuốc ấy hình như chẳng còn bộ phận nào của ba mươi năm trước. Mà tay ông thì vẫn nhận ra nó."],
+    ],
+    insight: [
+      [
+        "Thời nay người ta sợ quen. Sợ quen việc thì chai đi, quen người thì hết mặn, quen chỗ thì cùn. Nên cứ đổi, đổi việc đổi chỗ đổi cả cách sống, để giữ lấy cái cảm giác mới mẻ ban đầu.",
+      ],
+      [
+        "Cảm giác mới mẻ ấy đúng là chỉ có một lần. Có điều lần đầu tới một chỗ thì mình còn đang dò, còn để ý xem nên đứng đâu, nên nói gì. Phải vài lần sau mới thôi để ý những thứ đó, và bấy giờ mới nhìn ra chỗ ấy có gì.",
+      ],
+      ["Cán cuốc lõm xuống vì ba mươi năm bàn tay tì vào một chỗ. Không cách nào có được cái lõm ấy nhanh hơn."],
+      [
+        "Những thứ đáng nhất trong đời hầu như đều nằm phía sau chữ quen. Một người hiểu mình, một nghề làm tới nơi, một chỗ mà mình bước vào là biết ngồi đâu.",
+      ],
+      ["Quen là thứ chỉ thời gian cho được."],
+    ],
+    variants: [
+      { word: "ở lại", desc: "trục thứ ba của mlf, chỗ mà mọi thứ quen dần theo năm tháng" },
+      { word: "hàm-dưỡng", desc: "nuôi bên trong theo lối thầm lặng, thứ dày lên qua nhiều mùa" },
+      { word: "bén rễ", desc: "lúc một thứ thôi là khách, bắt đầu thuộc về chỗ nó đang đứng" },
+      { word: "nhịp", desc: "cái quen của một ngày, tay chân biết trước việc mình sắp làm" },
+      { word: "cộng đồng ở-yên", desc: "những người ở lại cùng nhau đủ lâu để thành người quen" },
+    ],
+  },
 ];

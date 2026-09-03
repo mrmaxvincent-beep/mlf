@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ScrollExtras } from "@/components/ScrollExtras";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -19,6 +20,9 @@ export function Footer() {
           fanpage
         </a>
       </div>
+
+      <NewsletterForm />
+
       <span style={{ position: "relative", width: 52.5, height: 66, display: "block", margin: "0 auto 1rem", opacity: 0.8 }}>
         <Image src="/assets/wordmark-o-yen.webp" alt="ở-yên" fill sizes="53px" style={{ objectFit: "contain" }} />
       </span>

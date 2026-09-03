@@ -69,7 +69,7 @@ export const sessions = [
   { n: "04", title: "Thân và tạng phủ", desc: "Sau buổi này bạn viết được bốn loại chữ khác nhau, tùy điều mình cần nói.", items: ["Tư thế viết: vai, cổ tay, hơi thở xuống bụng", "Viết bằng tim: nồng ấm", "Viết bằng bụng: vững chãi", "Viết bằng gan: dũng mãnh", "Viết bằng phổi: nhẹ tênh", "Nhịp nội tại và nhịp ngoại tại"] },
   { n: "05", title: "Chữ nhạt và cách chữa", desc: "Sau buổi này bạn biết vì sao chữ mình nhạt, và chữa được.", items: ["Năm hình thái chữ nhạt: rơm khô, nước loãng, nặng nề, trôi nổi, phô trương", "Vì sao khí cạn", "Năm nguyên tắc chuyển hóa: rút gọn, chuyển nhịp, tìm hạt nhân, thay máu, đặt tâm", "Chữ như đất, nước, lửa, gió"] },
   { n: "06", title: "Tinh luyện chữ", desc: "Sau buổi này bạn cắt được chữ thừa mà không cắt mất linh hồn câu.", items: ["Trọng lượng chữ: câu đứng được hay trôi đi", "Độ vang: viết như gõ chuông", "Độ nén: chưng cất chữ", "Độ bén: động từ là lưỡi kiếm của câu", "Quy tắc vàng: ba được, ba giữ, ba bỏ", "Haiku, chữ như hơi thở"] },
-  { n: "07", title: "Tự soi mình qua dòng chữ", items: ["Viết như soi gương", "Tâm đổi, chữ đổi", "Viết để tìm điểm lặng giữa hỗn loạn", `Viết để "rỗng"`, "Viết để chuyển hóa tâm cảnh"] },
+  { n: "07", title: "Chữ và tâm cảnh", desc: "Sau buổi này khi nghẽn, bạn biết mình đang đứng nhầm chỗ ở đâu.", items: ["Đám mây và bầu trời: mình không phải cảm xúc của mình", "Vì sao người viết nghẽn, và cách trụ lại trong mình", "Nghệ thuật đặt tâm: viết cùng một cảnh bằng 5 tâm khác nhau", "Bốn cách viết từ tâm: soi gương, tìm điểm lặng, viết để rỗng, viết để chuyển hóa"] },
   { n: "08", title: "Khai phóng chữ nghĩa", items: ["Chữ vượt ra khỏi trang giấy", "Chữ như khí, nối người với người", "Viết như một pháp tu", "Chữ & đời sống thường nhật"] },
 ];
 

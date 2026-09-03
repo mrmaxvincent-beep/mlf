@@ -423,4 +423,52 @@ export const entries: DictEntry[] = [
       { word: "đủ duyên", desc: "lúc mọi thứ vừa tới chỗ của nó, thứ chờ được mà sắp đặt thì khó" },
     ],
   },
+  {
+    word: "giữa",
+    origin: "Thuần Việt",
+    group: "Nơi chốn · Thời gian · Khoảng",
+    gloss: "quãng chưa xong, và cũng là quãng đang sống",
+    definition: [
+      ["Khoảng nằm ở phần trong của hai đầu, cách đều hoặc gần đều cả hai."],
+      [
+        "Chữ này dùng cho cả chỉ nơi chốn lẫn thời gian. Giữa nhà, giữa đồng, giữa hai hàng cây. Rồi giữa trưa, giữa mùa, giữa chừng câu chuyện. Chỗ nào lúc nào cũng có một cái giữa, mà người mình ít khi để ý tới nó, vì mắt thường nhìn vào hai đầu.",
+      ],
+      [
+        "Trong lối nói hằng ngày, giữa hay đi với những chuyện dở dang. Bỏ giữa chừng, đứng giữa đường, mắc kẹt ở giữa. Nghe những cụm ấy thì thấy giữa là chỗ người ta muốn qua cho nhanh.",
+      ],
+      [
+        "Tại mlf, giữa là tên đặt cho một chốn dừng ở Huế. Giữa đời và đạo, giữa ngày và đêm, giữa mưa và nắng, giữa bận rộn và thảnh thơi.",
+      ],
+    ],
+    story: [
+      ["Đường lên rẫy ngày trước xa, đi bộ mất nửa buổi. Quãng giữa có một cây đa, gốc to mấy người ôm, dưới gốc kê mấy hòn đá phẳng."],
+      [
+        "Ai đi ngang cũng ngồi. Người lên rẫy ngồi nghỉ chân trước khi leo dốc, người từ rẫy về ngồi cho ráo mồ hôi rồi mới vào làng. Có bà bán nước chè đặt gánh ở đó, chỉ một nồi nước với mấy cái bát.",
+      ],
+      [
+        "Chỗ ấy chẳng phải làng, cũng chẳng phải rẫy. Không ai ở đó, không ai làm gì ở đó. Vậy mà chuyện trong xã hầu như đều đi qua gốc đa, ai muốn biết tin gì cứ ra đó ngồi một lát.",
+      ],
+      ["Sau này người ta làm đường bê tông, chạy xe máy lên rẫy mười lăm phút. Cây đa vẫn còn, gánh nước chè thì thôi."],
+    ],
+    insight: [
+      [
+        "Đời người tính bằng hai đầu. Tốt nghiệp, cưới xin, lên chức, mua được nhà. Người ta nhớ những mốc ấy, kể lại cũng kể những mốc ấy. Còn quãng ở giữa thì gọi chung là đang cố gắng.",
+      ],
+      [
+        "Mà ngồi tính lại thì phần lớn một đời nằm ở quãng giữa. Những buổi sáng lặp đi lặp lại, những chiều đi làm về, những năm chưa tới đâu cả. Cộng hết lại thì các cái mốc chỉ được vài ngày.",
+      ],
+      [
+        "Gốc đa ngày trước không dẫn đi đâu. Nó nằm ở quãng giữa, và vì nằm ở đó nên nó thành chỗ người ta gặp nhau. Bỏ nó đi thì đường vẫn thông, chỉ là hết chỗ ngồi.",
+      ],
+      ["Ai coi quãng giữa là đoạn phải vượt qua thì cả đời sống như chưa tới. Ai chịu ngồi xuống ở giữa thì mới nhận ra đó là chỗ mình đang sống."],
+      ["Giữa là chỗ đời mình nằm hầu hết ở đó."],
+    ],
+    variants: [
+      { word: "giữa · middle", desc: "chốn dừng ở Huế, chỗ ngồi lại giữa hai đầu của một ngày" },
+      { word: "khoảng-dừng", desc: "quãng giữa hai việc, tự nó đã chứa điều gì đó" },
+      { word: "khoảng giữa hai hơi thở", desc: "cái giữa nhỏ nhất, có sẵn trong người, lúc nào cũng dùng được" },
+      { word: "giữa đời thường", desc: "lối nói quen của mlf, chỗ mà ở-yên được thực hành" },
+      { word: "trạm dừng chân", desc: "chỗ nghỉ trên đường, ngồi một lát rồi lại đi" },
+    ],
+  },
 ];

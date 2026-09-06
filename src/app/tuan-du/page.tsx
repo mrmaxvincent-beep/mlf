@@ -91,7 +91,7 @@ export default function TuanDuPage() {
               { n: "01", tier: "past" as const },
               { n: "02", tier: "past" as const },
               { n: "03", tier: "past" as const },
-              { n: "04", tier: "current" as const, href: routes.tuanDu04, status: "đã hết chỗ", hoverText: "còn 1 chỗ" },
+              { n: "04", tier: "current" as const, href: routes.tuanDu04, status: "còn 1 chỗ" },
               { n: "05", tier: "next" as const, status: "chưa mở đăng ký" },
             ] as { n: string; tier: "past" | "current" | "next"; href?: string; status?: string; hoverText?: string }[]
           ).map((t) => {

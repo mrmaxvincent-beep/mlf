@@ -76,21 +76,25 @@ export default function TuanDuPage() {
         </div>
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem", background: "rgba(20, 18, 15, 0.32)", padding: "1.5rem" }}>
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: "#fff", textAlign: "center" }}>
-            tuần-du tới · 05 · mây nằm ngủ
+            tuần-du tới · 04 · a pause in Saigon
           </span>
-          <RevealStatusButton label="khám phá" revealText="chưa mở đăng ký" className="cta-btn cta-btn--solid" />
+          <Link href={routes.tuanDu04} className="cta-btn cta-btn--solid">
+            khám phá <span className="ar">→</span>
+          </Link>
         </div>
       </div>
 
       <div className="wrap" style={{ paddingTop: "2.75rem" }}>
         <div className="hscroll-clean" style={{ display: "flex", gap: "2.5rem", overflowX: "auto", justifyContent: "center", paddingBottom: "1.1rem", borderBottom: "1px solid var(--color-mist)" }}>
-          {[
-            { n: "01", tier: "past" as const },
-            { n: "02", tier: "past" as const },
-            { n: "03", tier: "past" as const },
-            { n: "04", tier: "current" as const, href: routes.tuanDu04, status: "đã hết chỗ" },
-            { n: "05", tier: "next" as const, status: "chưa mở đăng ký" },
-          ].map((t) => {
+          {(
+            [
+              { n: "01", tier: "past" as const },
+              { n: "02", tier: "past" as const },
+              { n: "03", tier: "past" as const },
+              { n: "04", tier: "current" as const, href: routes.tuanDu04, status: "đã hết chỗ", hoverText: "còn 1 chỗ" },
+              { n: "05", tier: "next" as const, status: "chưa mở đăng ký" },
+            ] as { n: string; tier: "past" | "current" | "next"; href?: string; status?: string; hoverText?: string }[]
+          ).map((t) => {
             const dotSize = t.tier === "next" ? 10 : t.tier === "current" ? 8 : 6;
             const dotColor = t.tier === "next" ? "var(--color-ink)" : t.tier === "current" ? "var(--color-cham-dem)" : "var(--color-mist)";
             const labelColor = t.tier === "next" ? "var(--color-ink)" : t.tier === "current" ? "var(--color-cham-dem)" : "var(--color-stone)";
@@ -115,7 +119,7 @@ export default function TuanDuPage() {
                       {t.status ?? ""}
                     </span>
                     <span className="step-caption-hover" style={{ ...captionStyle, position: "absolute", left: "50%", top: 0, transform: "translateX(-50%)", color: "var(--color-cham-dem)" }}>
-                      xem chi tiết
+                      {t.hoverText ?? "xem chi tiết"}
                     </span>
                   </span>
                 ) : (

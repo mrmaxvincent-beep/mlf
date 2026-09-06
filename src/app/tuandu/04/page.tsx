@@ -7,8 +7,9 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { DayCard } from "@/components/DayCard";
 import { RegistrationLink } from "@/components/RegistrationLink";
+import { FaqAccordion } from "@/components/FaqAccordion";
 import { routes } from "@/lib/nav";
-import { day1, day2, priceTiers } from "@/data/tuanDu04";
+import { day1, day2, priceTiers, faqs } from "@/data/tuanDu04";
 
 export const metadata: Metadata = {
   title: "tuần-du 04 · a pause in Saigon",
@@ -180,6 +181,10 @@ export default function TuanDu04Page() {
         <RegistrationLink href="https://forms.gle/fBbYr3dUDHqZkh9bA" programName="tuần-du 04 · a pause in Saigon" className="cta-btn cta-btn--solid">
           đăng ký <span className="ar">→</span>
         </RegistrationLink>
+      </div>
+
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+        <FaqAccordion items={faqs} />
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>

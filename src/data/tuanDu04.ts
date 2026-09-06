@@ -26,3 +26,42 @@ export const priceTiers = [
   { label: "standard", price: "3.800.000đ" },
   { label: "last spots (từ tháng 10/2026)", price: "4.200.000đ" },
 ];
+
+export const faqs = [
+  {
+    q: "Tôi đi một mình có được không?",
+    a: "Được — và khá nhiều người đến một mình. Bạn sẽ được ghép phòng với một người khác trong nhóm. Nếu bạn muốn ghép với ai cụ thể, hãy ghi chú khi đăng ký.",
+  },
+  {
+    q: "Phòng ngủ được sắp xếp như thế nào?",
+    a: "Mỗi phòng 2 người. Nhà mộc sẽ ghép phòng dựa trên thông tin đăng ký. Nếu bạn đến cùng bạn bè và muốn ở cùng phòng, ghi chú khi đăng ký nhé.",
+  },
+  {
+    q: "Ăn uống tại tuần-du 04 thế nào?",
+    a: "Toàn bộ bữa ăn trong 2 ngày đều là chay — được nấu bởi Tâm, Thuận và Vũ từ nguyên liệu tự nhiên, không gia vị công nghiệp. Nếu bạn có dị ứng thực phẩm, vui lòng ghi chú khi đăng ký.",
+  },
+  {
+    q: "Xe đón ở đâu, tôi cần chuẩn bị gì cho việc di chuyển?",
+    a: "Xe sẽ đón tại một điểm cố định ở trung tâm TP.HCM vào sáng ngày 10.10. Địa điểm đón cụ thể sẽ được gửi sau khi bạn đăng ký. Chi phí xe đi-về đã bao gồm trong học phí.",
+  },
+  {
+    q: "Có giới hạn độ tuổi không?",
+    a: "Chương trình dành cho người từ 15 tuổi trở lên.",
+  },
+  {
+    q: "Early circle là gì? Tôi có còn kịp không?",
+    a: "5 người đăng ký đầu tiên được mức phí ưu đãi 3.500.000đ. Sau đó mức chuẩn là 3.800.000đ. Từ tháng 10/2026, các suất cuối sẽ là 4.200.000đ. Vui lòng liên hệ để biết còn suất early circle không.",
+  },
+  {
+    q: "Nếu tôi phải hủy, có được hoàn tiền không?",
+    a: "Có. Nếu bạn báo trước ít nhất 30 ngày, nhà mộc hoàn lại 100%. Nếu hủy trong vòng 30 ngày trước chương trình, hoàn lại 80%.",
+  },
+  {
+    q: `"Ngồi chung im ắng" vào buổi sáng là gì?`,
+    a: "Không phải thiền có hướng dẫn, cũng không phải nghi thức. Chỉ là cùng nhau ngồi im — mỗi người theo nhịp riêng của mình — trong một khoảng không gian yên. Bạn không cần làm gì đúng hay sai.",
+  },
+  {
+    q: "Tuần-du 04 có khác gì so với một buổi retreat thông thường không?",
+    a: "Tuần-du 04 không có lịch trình dày đặc, không dẫn dắt cảm xúc tập thể, không hứa hẹn kết quả. Chỉ là 2 ngày sống chậm lại — ăn cùng nhau, nói chuyện thật, và được im lặng mà không phải giải thích.",
+  },
+];

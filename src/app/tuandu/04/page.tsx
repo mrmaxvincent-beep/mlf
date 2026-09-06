@@ -184,7 +184,7 @@ export default function TuanDu04Page() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <FaqAccordion items={faqs} />
+        <FaqAccordion items={faqs} collapsible={false} />
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>

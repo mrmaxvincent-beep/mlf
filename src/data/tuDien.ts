@@ -471,4 +471,52 @@ export const entries: DictEntry[] = [
       { word: "trạm dừng chân", desc: "chỗ nghỉ trên đường, ngồi một lát rồi lại đi" },
     ],
   },
+  {
+    word: "nhìn",
+    origin: "Thuần Việt",
+    group: "Giác quan · Chú ý · Nhận biết",
+    gloss: "việc mình làm trước khi thấy được gì",
+    definition: [
+      ["Hướng mắt về một phía và giữ ở đó."],
+      [
+        "Tiếng Việt tách nhìn với thấy ra hai chữ, và hai việc ấy quả là khác nhau. Nhìn là việc mình chủ động làm, thấy thì tới lúc nào không biết trước. Người ta nói nhìn mãi mới thấy, câu ấy hàm ý rằng ở giữa hai việc có một quãng.",
+      ],
+      [
+        "Chữ này còn dùng cho những chuyện chẳng liên quan tới mắt. Nhìn nhận, nhìn xa, nhìn ra vấn đề. Rồi cả cách nói nhìn một người bằng con mắt nào, chỗ ấy thì nhìn thành ra chuyện của lòng nhiều hơn.",
+      ],
+      [
+        "Tại mlf, việc được làm nhiều nhất là nhìn. Ngồi ngoài hiên nhìn mưa, nhìn vườn, nhìn lại mấy năm vừa qua. Chẳng ai bảo phải thấy ra điều gì.",
+      ],
+    ],
+    story: [
+      [
+        "Người đi rừng lâu năm nhìn tán lá là biết dưới đất có gì. Chỗ nào tán thưa thì bên dưới có lối mòn, thú hay đi qua. Chỗ nào lá đổi màu sớm hơn xung quanh thì gốc cây đang mục.",
+      ],
+      ["Người mới vào rừng cũng nhìn tán lá, thấy xanh, hết."],
+      [
+        "Ông kể hồi mới theo cha đi rừng, cha chỉ chỗ này chỗ kia, ông nhìn theo mà chẳng thấy gì khác. Đi mấy năm rồi tự nhiên một hôm nhận ra được. Cha ông lúc đó chẳng nói gì thêm, chỉ đi tiếp.",
+      ],
+      ["Cái rừng thì vẫn cái rừng ấy suốt mấy năm."],
+    ],
+    insight: [
+      [
+        "Người ta hay sốt ruột ở quãng giữa nhìn và thấy. Ngồi thiền mấy hôm chưa thấy gì thì nghĩ mình làm sai. Đi retreat về chưa đổi khác thì nghĩ chỗ đó chẳng hợp.",
+      ],
+      [
+        "Ông đi rừng mấy năm mới nhận ra được, mà trong mấy năm đó ông có làm gì đâu ngoài việc đi và nhìn. Cái thấy tới vào một hôm nào đó, chẳng phải hôm ông cố nhất.",
+      ],
+      [
+        "Việc mình làm được là nhìn, và nhìn lâu. Còn thấy thì tùy nó. Người trồng cây tưới nước mỗi ngày, hôm nào hạt nứt là chuyện của hạt.",
+      ],
+      ["Vì vậy mà ngồi nhìn mưa cả buổi chẳng phải là phí. Đó là phần việc của mình trong một chuyện mà mình chỉ làm được một nửa."],
+      ["Nhìn là phần mình làm được, thấy là phần còn lại."],
+    ],
+    variants: [
+      { word: "thấy rõ", desc: "cái tới sau một quãng nhìn, việc mà quan sát làm được còn phân tích thì khó" },
+      { word: "nhìn lại", desc: "quay mắt về phía sau, chuyện thường làm ở những ngày chậm" },
+      { word: "phía sáng", desc: "hướng mà mắt tìm về khi đã quen nhìn" },
+      { word: "mặt hồ phẳng", desc: "mặt nước lặng thì soi rõ, cũng như mắt yên thì nhìn ra" },
+      { word: "hiện diện", desc: "có mặt ở đó với cái mình đang nhìn, việc khó hơn nghe qua" },
+    ],
+  },
 ];

@@ -519,4 +519,52 @@ export const entries: DictEntry[] = [
       { word: "hiện diện", desc: "có mặt ở đó với cái mình đang nhìn, việc khó hơn nghe qua" },
     ],
   },
+  {
+    word: "ăn",
+    origin: "Thuần Việt",
+    group: "Đời sống · Quan hệ · Nếp",
+    gloss: "việc người ta làm cùng nhau mỗi ngày",
+    definition: [
+      ["Đưa thức ăn vào miệng, nhai và nuốt."],
+      [
+        "Chữ này đi xa hơn cái miệng rất nhiều. Ăn nói, ăn ở, ăn mặc, ăn năn, ăn Tết, ăn hỏi. Người mình lấy chuyện ăn để nói chuyện sống, cứ như hễ việc gì thuộc về một đời người thì cũng thuộc về bữa cơm.",
+      ],
+      [
+        "Cách hỏi thăm cũng vậy. Gặp nhau ngoài đường thì hỏi ăn cơm chưa, hỏi thế thay cho hỏi dạo này thế nào. Người được hỏi trả lời rồi thì coi như đã kể xong tình hình của mình.",
+      ],
+      [
+        "Tại mlf, bữa cơm là việc chung, dọn ra rồi ngồi xuống với nhau. Khách và người trong nhà cùng một mâm.",
+      ],
+    ],
+    story: [
+      ["Nhà đông người thì mâm cơm có luật của nó. Mâm dọn giữa nhà, ai ngồi chỗ nấy. Cơm xới cho người lớn tuổi trước."],
+      [
+        "Có món ngon thì đứa nhỏ được gắp cho, mà cũng chỉ được gắp một hai lần rồi thôi, còn phần người khác. Đứa nào gắp lấy liên tục thì bị nhắc.",
+      ],
+      [
+        "Ăn xong ngồi lại uống nước, chuyện trong xóm chuyện ngoài đồng nói ở đó. Ai có gì trong bụng thì bữa cơm là lúc lộ ra, ăn ít hơn thường một chút là người trong nhà biết.",
+      ],
+      ["Bây giờ mỗi người ăn một giờ, có khi cầm bát về phòng. Cơm thì vẫn cơm ấy."],
+    ],
+    insight: [
+      [
+        "Bữa ăn bị coi là việc phải xong cho nhanh. Mười lăm phút, vừa ăn vừa xem điện thoại, xong rồi quay lại việc. Tính theo hiệu quả thì đúng là chẳng nên ngồi lâu làm gì.",
+      ],
+      [
+        "Có điều mâm cơm ngày trước làm nhiều việc hơn là cho no. Đó là lúc trong ngày mà cả nhà cùng có mặt, cùng dừng tay, cùng nhìn thấy nhau. Bỏ nó đi thì vẫn no, mà mất cái lúc người ta biết được nhau đang thế nào.",
+      ],
+      [
+        "Nhiều thứ trong nhà chỉ nói được ở mâm cơm. Không phải vì chỗ đó thiêng liêng gì, mà vì lúc ấy tay ai cũng bận cầm đũa, mắt nhìn xuống bát, nên nói ra dễ hơn.",
+      ],
+      ["Cho nên ngồi lại thêm mười phút sau bữa cũng là một việc. Chẳng làm gì cả, chỉ ngồi."],
+      ["Ăn là lúc trong ngày người ta cùng dừng tay."],
+    ],
+    variants: [
+      { word: "một bữa cơm chung", desc: "hình ảnh quen của mlf, khách và người trong nhà cùng một mâm" },
+      { word: "có mặt", desc: "việc khó nhất trong bữa cơm, và cũng là việc duy nhất cần làm" },
+      { word: "khoảng-dừng", desc: "bữa ăn là một khoảng dừng có sẵn trong ngày, ai cũng có ba lần" },
+      { word: "ngày-hiền", desc: "một ngày mà bữa cơm được để dài ra bao lâu cũng được" },
+      { word: "chăm chút", desc: "cách bàn tay làm ra một bữa, từ nhặt rau tới bày mâm" },
+    ],
+  },
 ];

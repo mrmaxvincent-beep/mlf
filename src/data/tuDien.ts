@@ -717,4 +717,52 @@ export const entries: DictEntry[] = [
       { word: "im lặng chữ nghĩa", desc: "nghe chính mình qua trang viết, lúc chẳng có ai ngồi cạnh" },
     ],
   },
+  {
+    word: "cũ",
+    origin: "Thuần Việt",
+    group: "Thời gian · Đồ vật · Quan hệ",
+    gloss: "dấu của một thứ đã ở lại đủ lâu",
+    definition: [
+      ["Đã có từ lâu, đã qua nhiều lần dùng."],
+      [
+        "Chữ này dùng cho vật, cho chỗ, cho người, cho chuyện. Áo cũ, nhà cũ, người cũ, chuyện cũ. Mỗi lần dùng là một lần nhắc rằng thứ đó đã ở với mình một quãng.",
+      ],
+      [
+        "Trong lối nói hằng ngày, cũ hay đứng về phía hết giá trị. Đồ cũ thì bán rẻ, tin cũ thì thôi đọc, cách làm cũ thì nên bỏ. Nghe vậy thì cũ thành một lỗi cần sửa.",
+      ],
+      [
+        "Tại mlf, đồ cũ được giữ lại và làm cho dùng được tiếp. Thuần upcycle là việc ấy, sửa lại rồi để nó kể tiếp một câu chuyện khác.",
+      ],
+    ],
+    story: [
+      ["Cái cối đá giã lâu năm thì lòng cối mòn xuống. Chày nện mấy chục năm vào một chỗ, đá lõm dần thành cái lòng sâu hơn ban đầu."],
+      [
+        "Cối mới thì lòng nông, giã vừng giã lạc hay bắn ra ngoài, phải lấy tay hứng. Cối cũ lòng sâu, giã bao nhiêu cũng nằm gọn trong đó.",
+      ],
+      [
+        "Trong bếp nhà bà có cả hai. Cối mới để giã mấy thứ khô, cối cũ để làm muối vừng. Đứa cháu về chơi bảo cái cối cũ trông cũ quá, bà nói cái đó giã quen rồi.",
+      ],
+      ["Cái lòng sâu ấy là dấu của mấy chục năm bữa cơm trong nhà. Không có cách nào làm ra nó ngoài việc giã mỗi ngày."],
+    ],
+    insight: [
+      [
+        "Thứ gì cũ đi cũng mất một phần. Áo bạc màu, dao cùn lưỡi, cối mòn lòng. Nhìn theo lối ấy thì thời gian chỉ lấy đi, và giữ đồ cũ là tiếc của.",
+      ],
+      [
+        "Mà chỗ lõm trong lòng cối vừa là phần đá đã mất vừa là chỗ giữ vừng lại. Cùng một vết, tùy mình nhìn nó là hao hụt hay là công dụng.",
+      ],
+      [
+        "Người cũng vậy. Ai sống một quãng rồi cũng mang vài vết, một chuyện chưa qua hẳn, một chỗ hơi lõm xuống. Những vết ấy làm mình chậm hơn ở vài chỗ, và cũng làm mình hiểu được những người mang vết giống thế.",
+      ],
+      ["Cho nên trong bếp cần cả cối mới lẫn cối cũ. Việc nào cối nấy."],
+      ["Cũ là dấu cho thấy một thứ đã được dùng thật."],
+    ],
+    variants: [
+      { word: "thuần upcycle", desc: "giữ lại phần còn dùng được, để đồ cũ kể tiếp một chuyện khác" },
+      { word: "vết nứt được trám lại", desc: "chỗ hỏng vẫn còn đó mà vật thì lành lại" },
+      { word: "quen", desc: "thứ chỉ thời gian cho được, và cũng là thứ làm một vật thành của mình" },
+      { word: "thương", desc: "nhìn thấy phần còn lành, và để nó ở lại" },
+      { word: "hàm-dưỡng", desc: "thứ dày lên qua nhiều mùa, chỉ thấy được khi nhìn lại" },
+    ],
+  },
 ];

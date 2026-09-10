@@ -567,4 +567,54 @@ export const entries: DictEntry[] = [
       { word: "chăm chút", desc: "cách bàn tay làm ra một bữa, từ nhặt rau tới bày mâm" },
     ],
   },
+  {
+    word: "mùa",
+    origin: "Thuần Việt",
+    group: "Thời gian · Nhịp · Đất trời",
+    gloss: "nhịp lớn hơn nhịp của một người",
+    definition: [
+      ["Quãng thời gian trong năm có thời tiết riêng, và có việc riêng phải làm trong quãng ấy."],
+      [
+        "Người mình đếm thời gian bằng mùa nhiều hơn bằng tháng. Mùa mưa, mùa gặt, mùa giáp hạt, mùa cưới. Hỏi chuyện gì xảy ra khi nào thì hay được trả lời là hồi mùa mưa năm kia.",
+      ],
+      [
+        "Chữ này cũng dùng cho việc của người. Mùa thi, mùa làm ăn, mùa khách. Lối nói ấy hàm ý rằng việc gì cũng có thời của nó, và thời ấy tới rồi đi mà chẳng hỏi ý ai.",
+      ],
+      [
+        "Tại mlf, mùa quyết định nhiều thứ. Măng Đen mưa dài, mùa mưa thì khách ít, vườn thì lại tốt. Tuần-du cũng đi theo mùa, chỗ nào tới lúc thì mới tới.",
+      ],
+    ],
+    story: [
+      [
+        "Nhà nông có mùa giáp hạt, quãng lúa cũ đã hết mà lúa mới chưa gặt. Đó là quãng đói nhất trong năm, ai cũng biết trước là nó sẽ tới.",
+      ],
+      ["Biết trước nên người ta để dành. Cuối vụ gặt thì cất riêng một phần thóc, không đụng tới. Khoai để gác bếp, mắm muối làm sẵn từ mùa trước."],
+      [
+        "Đến giáp hạt thì cả làng cùng ăn dè. Bữa cơm độn khoai độn sắn, ai cũng vậy nên chẳng ai thấy khổ riêng mình. Chuyện trong xóm dạo ấy cũng ít đi, người ta ngủ sớm cho đỡ đói.",
+      ],
+      ["Rồi lúa chín. Gặt xong thì nhà nào cũng nấu một nồi cơm mới, ăn với muối vừng cũng thấy ngon."],
+    ],
+    insight: [
+      [
+        "Bây giờ chuyện gì cũng có quanh năm. Trái cây mùa nào cũng bán, trong nhà lúc nào cũng đủ ấm đủ mát. Sống như vậy tiện, mà cũng làm người ta quên rằng có những quãng vốn để chờ.",
+      ],
+      [
+        "Nên khi trong người có một quãng chậm lại, nhiều người hoảng lên. Làm gì cũng thấy nhạt, việc gì cũng thấy nặng, và câu hỏi đầu tiên là mình bị làm sao.",
+      ],
+      [
+        "Nhà nông không hỏi giáp hạt bị làm sao. Họ biết nó tới, họ để dành từ trước, và họ đi qua nó bằng cách ăn dè, ngủ sớm, đợi lúa chín.",
+      ],
+      [
+        "Trong một đời cũng có những mùa như vậy. Quãng chẳng ra được cái gì, chẳng đi tới đâu. Việc làm được là giữ mình cho tới ngày gặt, và biết rằng ngày ấy có tới.",
+      ],
+      ["Mùa nào cũng qua, kể cả mùa đang ở trong mình."],
+    ],
+    variants: [
+      { word: "nhịp của đất trời", desc: "thứ lớn hơn ý mình, việc của mình là thuận theo" },
+      { word: "để chín", desc: "đợi đủ ngày của một thứ, việc mà thời gian làm thay cho mình" },
+      { word: "tuần-du", desc: "đi theo mùa, chỗ nào tới lúc thì mới tới" },
+      { word: "hàm-dưỡng", desc: "phần để dành từ mùa trước, thứ giữ mình qua những quãng cạn" },
+      { word: "cơn mưa Măng Đen", desc: "mùa dài nhất ở đây, khách thì ít mà vườn thì tốt" },
+    ],
+  },
 ];

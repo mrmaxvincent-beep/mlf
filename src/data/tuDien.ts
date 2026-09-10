@@ -669,4 +669,52 @@ export const entries: DictEntry[] = [
       { word: "hơi ấm trong tay", desc: "lúc cầm chén trà, chỗ mà tĩnh lặng trong lòng bắt đầu" },
     ],
   },
+  {
+    word: "nghe",
+    origin: "Thuần Việt",
+    group: "Giác quan · Quan hệ · Thuận theo",
+    gloss: "việc làm được mà chẳng cần nói gì",
+    definition: [
+      ["Nhận lấy âm thanh bằng tai."],
+      [
+        "Tai khác mắt ở chỗ mắt nhắm được còn tai thì mở suốt. Ngủ cũng nghe, quay lưng đi cũng nghe. Trong các giác quan thì đây là chỗ mình ít quyền nhất.",
+      ],
+      [
+        "Tiếng Việt còn dùng chữ này cho việc thuận theo. Nghe lời, nghe theo, nghe ra. Ai chịu nghe người khác thì cũng là chịu để người ta có chỗ trong mình, cho nên nghe với thương hay đi gần nhau.",
+      ],
+      [
+        "Tại mlf, nghe là phần lớn việc của những buổi ngồi cùng nhau. Khai tâm hay clari-tea đều là chỗ một người nói và một người nghe.",
+      ],
+    ],
+    story: [
+      [
+        "Người chỉnh đàn dây làm việc bằng tai. Vặn trục một chút, gảy thử, nghe. Vặn thêm, gảy, nghe. Có khi ngồi cả buổi với một cây đàn.",
+      ],
+      [
+        "Chỗ khó là hai dây gần đúng nhau. Sai nhiều thì ai cũng nghe ra, còn sai ít thì phải im lặng lắm mới bắt được. Trong tiệm ồn thì ông chịu, phải đợi trưa vắng khách.",
+      ],
+      ["Có người mang đàn tới, ngồi bên cạnh nói chuyện suốt. Ông vẫn vặn vẫn gảy, mà lát sau bỏ xuống, bảo để hôm khác."],
+      ["Cây đàn thì vẫn cây đàn ấy, tai ông cũng vậy. Thiếu mỗi cái yên trong tiệm."],
+    ],
+    insight: [
+      [
+        "Ai cũng nghĩ mình biết nghe. Ngồi im, gật đầu, người kia nói xong thì mình nói tiếp. Có điều phần lớn cái gọi là nghe ấy là đang chờ tới lượt.",
+      ],
+      [
+        "Người vừa nghe vừa nghĩ câu trả lời thì cũng như ông thợ chỉnh đàn trong tiệm đông khách. Vẫn nghe được tiếng, mà cái sai nhỏ thì mất.",
+      ],
+      ["Nghe được một người nói cần yên ở hai chỗ. Yên bên ngoài, và yên trong đầu mình. Chỗ thứ hai khó hơn nhiều."],
+      [
+        "Người nào từng được nghe kiểu ấy một lần thì nhớ lâu. Chẳng ai khuyên gì, chẳng ai chữa gì, mà kể xong thì trong người nhẹ đi.",
+      ],
+      ["Nghe là để yên cho một người nói hết."],
+    ],
+    variants: [
+      { word: "ngồi với", desc: "có mặt bên cạnh mà chẳng xử lý gì, việc chính của những buổi ngồi cùng nhau" },
+      { word: "khai tâm", desc: "một người nói và một người nghe, mở tới đâu thì tùy người" },
+      { word: "lặng", desc: "điều kiện của nghe, cả bên ngoài lẫn trong đầu mình" },
+      { word: "nương đỡ", desc: "việc mlf làm, ở bên cạnh chứ chẳng đứng phía trước" },
+      { word: "im lặng chữ nghĩa", desc: "nghe chính mình qua trang viết, lúc chẳng có ai ngồi cạnh" },
+    ],
+  },
 ];

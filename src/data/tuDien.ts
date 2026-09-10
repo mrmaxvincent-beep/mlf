@@ -617,4 +617,56 @@ export const entries: DictEntry[] = [
       { word: "cơn mưa Măng Đen", desc: "mùa dài nhất ở đây, khách thì ít mà vườn thì tốt" },
     ],
   },
+  {
+    word: "tay",
+    origin: "Thuần Việt",
+    group: "Thân thể · Nghề · Nếp",
+    gloss: "một chỗ mà hiểu biết nằm ở đó",
+    definition: [
+      ["Phần chi trên của người, từ vai xuống tới các ngón."],
+      [
+        "Tiếng Việt lấy chữ này để đo một người. Tay nghề cao, tay ngang, tay không, trắng tay, mát tay. Hỏi ai làm nghề gì thì cũng hỏi bằng chữ tay, cứ như những gì một người biết đều hiện ra ở đôi tay họ.",
+      ],
+      [
+        "Chữ này còn dùng cho những việc thuộc về lòng. Buông tay, xuống tay, nhẹ tay, ra tay. Ai làm chuyện gì cũng phải qua tay, nên tay thành ra chỗ ý định biến thành việc thật.",
+      ],
+      [
+        "Tại mlf, ba nhánh trong trục ở lại đều là việc của tay. Pha trà, sửa lại đồ cũ, đưa thân mình vào từng thế tập.",
+      ],
+    ],
+    story: [
+      [
+        "Người làm bánh lâu năm nhồi bột chẳng cần cân. Đổ bột ra, rót nước, nhồi một lúc rồi biết thiếu hay đủ. Hỏi thiếu bao nhiêu thì bà chịu, chỉ nói tay nó biết.",
+      ],
+      [
+        "Đứa cháu học nghề, mang theo cân với cả cái đồng hồ bấm giờ. Cân đúng từng gam, nhồi đúng số phút. Bánh ra lò ăn được, mà bà nếm xong bảo bột chưa tới.",
+      ],
+      [
+        "Nó hỏi tới là thế nào. Bà nắm một nắm bột đưa cho nó, bảo bóp thử. Rồi bà nhồi tiếp một lúc, lại đưa cho nó bóp. Nó bóp hai lần, thấy khác nhau, mà tả ra thì không tả được.",
+      ],
+      ["Bà nói cứ nhồi vài trăm mẻ rồi tay khắc biết."],
+    ],
+    insight: [
+      [
+        "Thời nay cái gì cũng học được qua chữ. Muốn biết pha trà thì có bài viết, muốn tập yoga thì có video, đọc xong xem xong thấy như mình đã hiểu.",
+      ],
+      [
+        "Hiểu bằng đầu thì nhanh, mà nó dừng ở chỗ biết phải làm gì. Còn cái biết nằm trong tay bà làm bánh thì phải qua vài trăm mẻ. Không có đường tắt nào, vì đó là cái biết chỉ hình thành qua việc làm đi làm lại.",
+      ],
+      [
+        "Đôi tay cũng là chỗ ít nói dối nhất. Trong lòng đang vội thì rót nước cũng vội, đang cáu thì đặt cái chén xuống mạnh hơn thường. Người ngồi cạnh chẳng cần hỏi cũng biết.",
+      ],
+      [
+        "Cho nên tập lại đôi tay là một lối tập tâm. Rót chậm một chút, đặt nhẹ một chút. Làm vài trăm lần thì trong lòng cũng đổi theo.",
+      ],
+      ["Tay biết những thứ đầu chưa kịp biết."],
+    ],
+    variants: [
+      { word: "touch", desc: "chạm vào điều thuần nhất, không gian của Thuận, nơi tay làm việc của nó" },
+      { word: "nhẹ tay", desc: "cách chạm vào mọi việc ở mlf, từ pha trà tới đặt một cái chén xuống" },
+      { word: "chăm chút", desc: "việc tay làm khi trong lòng có thương" },
+      { word: "buông", desc: "việc của tay trước khi thành việc của lòng" },
+      { word: "hơi ấm trong tay", desc: "lúc cầm chén trà, chỗ mà tĩnh lặng trong lòng bắt đầu" },
+    ],
+  },
 ];

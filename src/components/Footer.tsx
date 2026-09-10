@@ -16,7 +16,7 @@ export function Footer() {
         <a className="mono-link" href="https://www.instagram.com/moclittlefarm/" target="_blank" rel="noopener" style={footerLinkStyle}>
           instagram
         </a>
-        <a className="mono-link" href="https://www.facebook.com/MLFMangden/" target="_blank" rel="noopener" style={footerLinkStyle}>
+        <a className="mono-link" href="https://www.facebook.com/moc.community" target="_blank" rel="noopener" style={footerLinkStyle}>
           fanpage
         </a>
       </div>

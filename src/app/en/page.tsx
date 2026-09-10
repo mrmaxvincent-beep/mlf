@@ -161,7 +161,7 @@ export default function EnglishPage() {
           <a href="https://www.instagram.com/moclittlefarm/" target="_blank" rel="noopener" className="cta-btn cta-btn--outline">
             instagram <span className="ar">→</span>
           </a>
-          <a href="https://www.facebook.com/MLFMangden/" target="_blank" rel="noopener" className="cta-btn cta-btn--outline">
+          <a href="https://www.facebook.com/moc.community" target="_blank" rel="noopener" className="cta-btn cta-btn--outline">
             facebook <span className="ar">→</span>
           </a>
         </div>

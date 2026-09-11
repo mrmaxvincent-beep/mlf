@@ -281,10 +281,6 @@ export const faqs = [
     a: "Giày đi bộ bám tốt (bắt buộc cho ngày 4), một chai nước lớn, áo khoác mỏng cho buổi sáng trên núi, đồ kín đáo để vào chùa và nhà thờ, áo mưa mỏng. Gậy leo núi nếu gối bạn yếu. Không cần mang gì cho các buổi cảm tâm — chỉ cần đến.",
   },
   {
-    q: "Đi vào mùa nào?",
-    a: "Hành trình này tránh mùa hội chùa Hương (tháng Giêng đến tháng Ba âm lịch) vì khi đó quá đông để tĩnh. Mùa đẹp nhất là cuối thu và đầu đông — trời khô, sương nhiều trên núi, và nếu may thì rừng phong Thanh Mai đang chuyển lá.",
-  },
-  {
     q: "Vé máy bay nên đặt giờ nào?",
     a: "Chiều đi: có mặt tại Nội Bài trước 08:00 ngày đầu tiên. Chiều về: đoàn tới sân bay khoảng 19:00 ngày cuối cùng, nên đặt chuyến từ 21:00 trở đi để trừ hao giờ cao điểm trên đường từ Bắc Ninh về.",
   },

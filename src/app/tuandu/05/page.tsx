@@ -136,12 +136,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">một hành trình có lớp lang</span>
       </div>
-      <div className="wrap" style={{ maxWidth: "56ch" }}>
-        <p style={bodyP}>
-          Mỗi ngày là một mái nhà khác. Ba buổi cảm tâm, mỗi tối một vòng-trà để những gì đã nổi lên có chỗ được ngồi lại. Và ở giữa, 36 tiếng không ai nói với ai.
-        </p>
-      </div>
-      <Reveal className="wrap feat-grid" style={{ marginTop: "2.5rem", marginBottom: "5rem" }}>
+      <Reveal className="wrap feat-grid" style={{ marginTop: "1.5rem", marginBottom: "5rem" }}>
         {features.map((f) => (
           <div key={f.title}>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.6rem", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>{f.icon}</span>

@@ -2,7 +2,7 @@ import type { Day } from "@/components/DayItinerary";
 
 export const heroMeta = [
   { label: "hành trình", value: "5 ngày · 4 đêm" },
-  { label: "đi qua", value: "Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh" },
+  { label: "đi qua", value: "Hà Nội · Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh" },
   { label: "số lượng", value: "tối đa 10 người" },
   { label: "ăn uống", value: "chay suốt hành trình" },
 ];
@@ -15,13 +15,27 @@ export const loiNgo = [
   "Hai nơi ấy không có gì chung. Khác mái, khác tượng, khác kinh, khác cả cách gọi tên điều mình đang hướng về. Người bên này quỳ, người bên kia ngồi kiết già. Nhưng cái thứ đọng lại sau khi âm thanh tắt đi thì — nghe kể — giống nhau đến lạ.",
 ];
 
+export const loiNgoAfterTitle = "chuông vọng hai bờ";
+
 export const loiNgoAfter = [
   "Có lẽ nó vốn đã ở đó, và mỗi đạo chỉ dựng lên một mái nhà theo cách của mình để che nó lại, giữ nó khỏi bị gió thổi bay.",
   "Tuần-du lần này đi để thử điều đó.",
-  "Năm ngày, đi qua những mái nhà rất khác nhau. Một ngôi chùa giữa núi đá nơi hàng vạn người mỗi năm về cầu xin. Một đan viện gạch đỏ nơi các đan sĩ giữ thinh lặng suốt đời. Một gác chuông gỗ bốn trăm tuổi giữa đồng bằng. Một nhà thờ vươn lên giữa ruộng lúa ven biển. Và cuối cùng, một cái am nhỏ trên núi, nơi một ông vua bỏ ngai vàng đã nằm xuống.",
-  "Chúng ta không đi để so sánh. Không đi để tìm xem bên nào đúng hơn.",
-  "Chỉ đi để nghe — xem sau mỗi tiếng chuông, cái còn lại có giống nhau không.",
+  "một tiếng chuông chùa, một tiếng chuông nhà thờ.",
+  "chuông nào cũng ngân trong lòng người.",
+  "người về giữa tâm thì không còn phân biệt tôn giáo hay hình thức, chỉ cần đọng lại ở tâm người.",
+  "chuyến đi này đi qua nhiều nơi — để đối cảnh và từ cảnh, nhận ra cùng một sự thật nơi tâm mình.",
+  "chúng ta sẽ đi qua —",
 ];
+
+export const loiNgoStops = [
+  { place: "chùa Hương", location: "Hà Nội", desc: "một ngôi chùa giữa núi đá, nơi hàng vạn người mỗi năm về cầu xin." },
+  { place: "Đan viện Châu Sơn", location: "Ninh Bình", desc: "một đan viện gạch đỏ, nơi các đan sĩ giữ thinh lặng suốt đời." },
+  { place: "chùa Keo", location: "Thái Bình", desc: "một gác chuông gỗ bốn trăm năm tuổi đứng giữa đồng bằng." },
+  { place: "nhà thờ Bác Trạch", location: "Thái Bình", desc: "một thánh đường vươn lên giữa ruộng lúa ven biển." },
+  { place: "am Ngọa Vân", location: "Quảng Ninh", desc: "một cái am nhỏ trên núi, nơi ẩn tu của vua Trần Nhân Tông, rồi nằm lại nơi này." },
+];
+
+export const loiNgoClose = ["ta đi để nghe.", "xem sau mỗi tiếng chuông, cái còn lại có giống nhau không."];
 
 export const forWhom = [
   "Nếu bạn là người Công giáo, sẽ có những buổi bạn đứng trong một ngôi chùa mà không biết phải làm gì với tay mình. Nếu bạn là Phật tử, sẽ có buổi bạn ngồi trong một đan viện và nghe một thứ kinh hoàn toàn xa lạ. Nếu bạn không thuộc về đâu cả, bạn sẽ đi qua cả hai như một người khách — và có khi đó lại là chỗ đứng thuận lợi nhất.",
@@ -37,7 +51,7 @@ export const features = [
 
 export const routeStats = [
   { label: "cả hành trình", value: "~680 km" },
-  { label: "tỉnh thành", value: "6" },
+  { label: "tỉnh thành", value: "7" },
   { label: "nơi lưu trú", value: "3" },
 ];
 

@@ -12,8 +12,10 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { routes } from "@/lib/nav";
 import {
   heroMeta,
-  loiNgo,
+  loiNgoAfterTitle,
   loiNgoAfter,
+  loiNgoStops,
+  loiNgoClose,
   forWhom,
   features,
   routeStats,
@@ -85,22 +87,25 @@ export default function TuanDu05Page() {
         <span className="eyebrow">lời ngỏ</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
-        {loiNgo.map((p) => (
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
+          {loiNgoAfterTitle}
+        </p>
+        {loiNgoAfter.map((p) => (
           <p key={p} style={bodyP}>
             {p}
           </p>
         ))}
       </Reveal>
-      <div className="wrap" style={{ marginBottom: "2rem" }}>
-        <div style={{ borderLeft: "2px solid var(--color-cham-dem)", padding: "1.75rem 2rem" }}>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
-            Có lẽ cái lặng không thuộc về đạo nào cả.
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+        {loiNgoStops.map((s) => (
+          <p key={s.place} style={{ ...bodyP, margin: "0 0 0.9rem" }}>
+            <strong style={{ fontWeight: 500, color: "var(--color-ink)" }}>{s.place}</strong>, {s.location} — {s.desc}
           </p>
-        </div>
-      </div>
+        ))}
+      </Reveal>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        {loiNgoAfter.map((p, i) => (
-          <p key={p} style={{ ...bodyP, margin: i === loiNgoAfter.length - 1 ? 0 : "0 0 1.15rem" }}>
+        {loiNgoClose.map((p, i) => (
+          <p key={p} style={{ ...bodyP, margin: i === loiNgoClose.length - 1 ? 0 : "0 0 1.15rem" }}>
             {p}
           </p>
         ))}

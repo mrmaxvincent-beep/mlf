@@ -266,7 +266,7 @@ export const faqs = [
   },
   {
     q: "Tôi không quen leo núi. Ngày 4 có leo nổi không?",
-    a: "Đường lên am dài chừng 3–4km, dốc vừa, đoạn cuối là bậc đá và rễ cây. Nhóm đi chậm mất 2,5–3 tiếng, có nhiều điểm dừng, không ai bị giục. Nếu bạn đi bộ được một tiếng liên tục trên đường bằng thì bạn leo được đoạn này. Chiều xuống có cáp treo cho ai mỏi gối — chuyện này bình thường và không cần ngại. Nếu bạn có vấn đề về tim mạch, huyết áp hay khớp gối, hãy nói với chúng tôi trước khi đăng ký để cùng tính phương án.",
+    a: "Đường lên am dài chừng 3–4km, dốc vừa, đoạn cuối là bậc đá và rễ cây. Nhóm đi chậm mất 2,5–3 tiếng, có nhiều điểm dừng. Nếu bạn đi bộ được một tiếng liên tục trên đường bằng thì bạn leo được đoạn này. Chiều xuống có cáp treo. Nếu bạn có vấn đề về tim mạch, huyết áp hay khớp gối, hãy nói với chúng tôi trước khi đăng ký để cùng tính phương án.",
   },
   {
     q: "Ăn uống thế nào?",

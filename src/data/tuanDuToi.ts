@@ -54,7 +54,7 @@ export const destinations = [
   { place: "chùa Hương", location: "Mỹ Đức, Hà Nội", desc: "Đò gỗ trên suối Yến, động Hương Tích. Nơi đông nhất của cả hành trình, và điều đó là cố ý.", src: "/assets/chuahuong.webp" },
   { place: "đầm Vân Long", location: "Gia Viễn, Ninh Bình", desc: "Khu bảo tồn ngập nước dưới chân núi đá vôi. Chiều xuống, mặt nước phẳng như không có gì từng xảy ra.", src: "/assets/damvanlong.webp" },
   { place: "Đan viện Châu Sơn", location: "Nho Quan, Ninh Bình", desc: "Tu viện Xitô bằng gạch đỏ trần, không trát vữa. Các đan sĩ ở đây giữ thinh lặng cả đời.", src: "/assets/danvienchauson.webp" },
-  { place: "nhà thờ Bác Trạch", location: "Tiền Hải, Thái Bình", desc: "Thánh đường vươn lên giữa đồng lúa ven biển, dựng bằng tiền và công của cả một xứ đạo." },
+  { place: "nhà thờ Bác Trạch", location: "Tiền Hải, Thái Bình", desc: "Thánh đường vươn lên giữa đồng lúa ven biển, dựng bằng tiền và công của cả một xứ đạo.", src: "/assets/nhathobactrach.webp" },
   { place: "chùa Keo", location: "Vũ Thư, Thái Bình", desc: "Gác chuông gỗ ba tầng dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không một cái đinh sắt." },
   { place: "am Ngọa Vân", location: "Đông Triều, Quảng Ninh", desc: "Cái am nhỏ trên núi, nơi Trần Nhân Tông nằm xuống năm 1308. Mây đến đây thì nằm lại." },
   { place: "chùa Thanh Mai", location: "Chí Linh, Hải Dương", desc: "Dưới rừng phong, nơi Pháp Loa viên tịch. Chỗ tĩnh khẩu kết thúc và tiếng nói trở lại." },

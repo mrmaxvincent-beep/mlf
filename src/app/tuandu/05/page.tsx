@@ -326,7 +326,7 @@ export default function TuanDu05Page() {
         <div>
           <span style={label}>số lượng tối đa</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>10 người</span>
-          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>nhỏ là chủ ý, không phải giới hạn kỹ thuật</span>
+          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>nhóm nhỏ, tương tác sâu</span>
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "1rem" }}>

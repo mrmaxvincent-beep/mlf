@@ -192,7 +192,7 @@ export const days: Day[] = [
 ];
 
 export const stays: { place: string; meta: string; desc: string; src?: string; roomSrc?: string }[] = [
-  { place: "Toki Vân Long", meta: "đêm 1 · Gia Viễn, Ninh Bình", desc: "Ngay bên đầm Vân Long, dưới chân núi đá vôi.", src: "/assets/tokivanlong.webp", roomSrc: "/assets/toki_room.webp" },
+  { place: "Toki Vân Long", meta: "đêm 1 · Gia Viễn, Ninh Bình", desc: "Giường King · Nhà truyền thống Bắc Bộ bên đầm Vân Long.", src: "/assets/tokivanlong.webp", roomSrc: "/assets/toki_room.webp" },
   { place: "Tru by Hilton Thái Bình", meta: "đêm 2 · TP Thái Bình", desc: "Giường đôi · Một đêm tiện nghi giữa hành trình, ngay trung tâm thành phố.", src: "/assets/trubyhilton.webp", roomSrc: "/assets/tru_room.webp" },
   { place: "Ngọa Vân Zen Village", meta: "đêm 3 & 4 · Đông Triều, Quảng Ninh", desc: "Phòng dorm · Đời sống làng thiền. Hai đêm ở đây là phần tĩnh nhất của cả hành trình.", src: "/assets/langthien.webp", roomSrc: "/assets/ngoavanroom.webp" },
 ];

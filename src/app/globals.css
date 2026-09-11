@@ -209,6 +209,37 @@ button:hover img {
   transform: scale(1.04);
 }
 
+/* Flip-on-hover photo card — front face flips to reveal a second photo
+   (e.g. exterior -> room) behind it. Markup: .flip-card > .flip-card-inner
+   > .flip-face (front) + .flip-face.flip-face-back (back). */
+.flip-card {
+  perspective: 1400px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s var(--ease-standard);
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-face-back {
+  transform: rotateY(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner {
+    transition: none;
+  }
+}
+
 /* Scroll-reveal (see src/components/Reveal.tsx) — IntersectionObserver-driven,
    not the manual scroll-poll the original prototype used (README explicitly
    calls that a prototyping workaround, not a spec to port). */

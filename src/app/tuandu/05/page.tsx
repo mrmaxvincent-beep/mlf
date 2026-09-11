@@ -213,7 +213,7 @@ export default function TuanDu05Page() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2.5rem" }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: 0 }}>
-          Những mái nhà trên đường đi
+          nơi chạm tâm
         </h2>
       </Reveal>
       <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.25rem 1.75rem", marginBottom: "5rem" }}>

@@ -22,7 +22,7 @@ export const loiNgoAfter = [
   "chuông nào cũng ngân trong lòng người.",
   "người về giữa tâm thì không còn phân biệt tôn giáo hay hình thức, chỉ cần đọng lại ở tâm người.",
   "chuyến đi này đi qua nhiều nơi — để đối cảnh và từ cảnh, nhận ra cùng một sự thật nơi tâm mình.",
-  "chúng ta sẽ đi qua —",
+  "chúng ta sẽ đi qua:",
 ];
 
 export const loiNgoStops = [

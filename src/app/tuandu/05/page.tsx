@@ -250,7 +250,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">nơi lưu trú</span>
       </div>
-      <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))", gap: "2.5rem", marginBottom: "5rem" }}>
+      <RevealStagger className="wrap stays-grid" style={{ marginBottom: "5rem" }}>
         {stays.map((s) => (
           <div key={s.place}>
             <div className="flip-card" style={{ aspectRatio: "4/3", marginBottom: "1rem" }}>

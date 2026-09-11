@@ -484,6 +484,21 @@ details[open] > summary .acc-icon {
   grid-template-columns: 1fr 1fr;
   gap: 2.25rem;
 }
+.stays-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+@media (max-width: 860px) {
+  .stays-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .stays-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .tl-row {
   display: grid;
   grid-template-columns: 9rem 1fr;

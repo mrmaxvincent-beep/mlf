@@ -98,9 +98,12 @@ export default function TuanDu05Page() {
       </Reveal>
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
         {loiNgoStops.map((s) => (
-          <p key={s.place} style={{ ...bodyP, margin: "0 0 0.9rem" }}>
-            <strong style={{ fontWeight: 500, color: "var(--color-ink)" }}>{s.place}</strong>, {s.location} — {s.desc}
-          </p>
+          <div key={s.place} style={{ display: "flex", gap: "0.8rem", padding: "0.55rem 0" }}>
+            <span style={{ color: "var(--color-stone)", flexShrink: 0 }}>·</span>
+            <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.8, color: "var(--color-ink)" }}>
+              <strong style={{ fontWeight: 600, color: "var(--color-ink)" }}>{s.place}</strong>, {s.location} — {s.desc}
+            </span>
+          </div>
         ))}
       </Reveal>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>

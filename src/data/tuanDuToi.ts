@@ -67,7 +67,7 @@ export const destinations = [
   { place: "nhà thờ Bác Trạch", location: "Tiền Hải, Thái Bình", desc: "Thánh đường vươn lên giữa đồng lúa ven biển, dựng bằng tiền và công của cả một xứ đạo.", src: "/assets/nhathobactrach.webp" },
   { place: "chùa Keo", location: "Vũ Thư, Thái Bình", desc: "Gác chuông gỗ ba tầng dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không một cái đinh sắt.", src: "/assets/chuakeo.webp" },
   { place: "am Ngọa Vân", location: "Đông Triều, Quảng Ninh", desc: "Cái am nhỏ trên núi, nơi Trần Nhân Tông nằm xuống năm 1308. Mây đến đây thì nằm lại.", src: "/assets/ngoavanam.webp" },
-  { place: "chùa Thanh Mai", location: "Chí Linh, Hải Dương", desc: "Dưới rừng phong, nơi Pháp Loa viên tịch. Chỗ tĩnh khẩu kết thúc và tiếng nói trở lại.", src: "/assets/chuathanhmai.webp" },
+  { place: "chùa Thanh Mai", location: "Chí Linh, Hải Dương", desc: "Dưới rừng phong, nơi Pháp Loa viên tịch.", src: "/assets/chuathanhmai.webp" },
   { place: "làng gốm Phù Lãng", location: "Quế Võ, Bắc Ninh", desc: "Men da lươn, lò củi. Một buổi trưa giữa đất, lửa và bàn tay người.", src: "/assets/gomphulang.webp" },
 ];
 
@@ -126,7 +126,6 @@ export const days: Day[] = [
       "Sáng sớm, chùa Keo ở Vũ Thư. Gác chuông gỗ ba tầng, dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không dùng một cái đinh sắt nào. Gần bốn trăm năm đứng giữa đồng bằng gió bão.",
       "Hôm qua là gạch đỏ và mái vòm. Hôm nay là gỗ lim và mái cong. Hai cách con người dựng nhà cho cái thiêng — một cái vươn thẳng lên trời, một cái nằm ngang ôm lấy đất.",
       "Ngày này không có buổi cảm tâm. Chỉ đi, chỉ nhìn, chỉ để mọi thứ ba ngày qua tự lắng xuống. Đến Ngọa Vân lúc đầu giờ chiều, còn cả một buổi để đi bộ, để ngồi, để không làm gì.",
-      "Và tối nay, sau vòng-trà, cả đoàn bắt đầu tĩnh khẩu. Từ đây đến sáng ngày thứ năm, không ai nói với ai. Không phải vì lời nói là xấu. Chỉ vì trong ba ngày qua chúng ta đã nghe quá nhiều tiếng — tiếng khấn, tiếng kinh, tiếng chuông, tiếng đàn — và giờ là lúc để tất cả những tiếng đó lắng xuống đáy.",
     ],
     rows: [
       { time: "06:30", activity: "Ăn sáng, trả phòng" },
@@ -135,7 +134,7 @@ export const days: Day[] = [
       { time: "11:15", activity: "Cơm trưa tại thành phố Hải Phòng" },
       { time: "12:45", activity: "Lên đường đi Đông Triều" },
       { time: "14:45", activity: "Nhận phòng Ngọa Vân Zen Village — chiều để trống, không chương trình" },
-      { time: "18:30", activity: "Cơm chay · vòng-trà · bắt đầu tĩnh khẩu", highlight: true },
+      { time: "18:30", activity: "Cơm chay · vòng-trà" },
     ],
   },
   {
@@ -165,7 +164,7 @@ export const days: Day[] = [
   {
     n: "05",
     tam: "tiếng nói trở lại dưới rừng phong",
-    title: "sau tĩnh khẩu",
+    title: "dưới rừng phong",
     desc: [
       "Năm giờ sáng, cáp treo trong im lặng đón bình minh. Hôm qua bạn tự leo lên. Hôm nay bạn được đưa lên, không phải làm gì cả.",
       "Không có buổi nào. Không ai nói gì. Chỉ ngồi, và nhìn mặt trời lên trên một ngọn núi mà mây đã chọn nằm lại.",
@@ -178,7 +177,7 @@ export const days: Day[] = [
       { time: "05:00", activity: "Cáp treo trong im lặng đón bình minh — không buổi nào, chỉ ngồi", highlight: true },
       { time: "08:00", activity: "Xuống núi, ăn sáng, trả phòng" },
       { time: "09:15", activity: "Rời Ngọa Vân" },
-      { time: "10:15", activity: "Chùa Thanh Mai, Chí Linh — buổi tổng kết dưới rừng phong · tĩnh khẩu kết thúc tại đây", highlight: true },
+      { time: "10:15", activity: "Chùa Thanh Mai, Chí Linh — buổi tổng kết dưới rừng phong", highlight: true },
       { time: "11:45", activity: "Lên đường" },
       { time: "13:00", activity: "Làng gốm Phù Lãng, Quế Võ — cơm trưa chay tại làng, xem lò" },
       { time: "15:00", activity: "Lên đường đi Song Tháp" },
@@ -199,7 +198,6 @@ export const practical = [
   { label: "số người", value: "tối đa 10", note: "" },
   { label: "ăn", value: "chay suốt hành trình", note: "" },
   { label: "đi bộ", value: "ngày 4 lên am", note: "~3–4km đường dốc, 2,5–3 tiếng · xuống bằng cáp treo" },
-  { label: "tĩnh khẩu", value: "khoảng 36 tiếng", note: "từ tối ngày 3 đến sáng ngày 5 · không bắt buộc tuyệt đối" },
   { label: "di chuyển", value: "một xe suốt hành trình", note: "ngày dài nhất khoảng 200km, không có đèo" },
   { label: "thời tiết", value: "lạnh hơn vài độ trên núi", note: "sương nhiều vào sáng sớm" },
 ];
@@ -265,10 +263,6 @@ export const faqs = [
   {
     q: "Tôi không theo đạo nào cả. Chuyến này có hợp với tôi không?",
     a: "Có, và có khi còn hợp hơn. Người không thuộc về đâu cả sẽ đi qua cả hai bờ như một người khách — không có gì phải bảo vệ, không có gì phải so sánh. Chuyến này không truyền đạo và không nhằm đưa ai về đâu. Nó chỉ hỏi một câu: cái lặng bạn cảm được ở những nơi rất khác nhau kia, có phải là một thứ không?",
-  },
-  {
-    q: "Tĩnh khẩu 36 tiếng có bắt buộc không?",
-    a: "Không tuyệt đối. Nếu cần nói điều gì cần thiết — về sức khoẻ, an toàn, việc gấp ở nhà — thì cứ nói. Nhưng phần lớn mọi người, sau vài giờ đầu thấy ngượng, sẽ nhận ra im dễ hơn nói. Tĩnh khẩu bắt đầu sau vòng-trà tối ngày 3 và kết thúc dưới rừng phong Thanh Mai sáng ngày 5.",
   },
   {
     q: "Tôi không quen leo núi. Ngày 4 có leo nổi không?",

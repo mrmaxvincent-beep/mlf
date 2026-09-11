@@ -58,7 +58,7 @@ export const destinations = [
   { place: "chùa Keo", location: "Vũ Thư, Thái Bình", desc: "Gác chuông gỗ ba tầng dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không một cái đinh sắt.", src: "/assets/chuakeo.webp" },
   { place: "am Ngọa Vân", location: "Đông Triều, Quảng Ninh", desc: "Cái am nhỏ trên núi, nơi Trần Nhân Tông nằm xuống năm 1308. Mây đến đây thì nằm lại.", src: "/assets/ngoavanam.webp" },
   { place: "chùa Thanh Mai", location: "Chí Linh, Hải Dương", desc: "Dưới rừng phong, nơi Pháp Loa viên tịch. Chỗ tĩnh khẩu kết thúc và tiếng nói trở lại.", src: "/assets/chuathanhmai.webp" },
-  { place: "làng gốm Phù Lãng", location: "Quế Võ, Bắc Ninh", desc: "Men da lươn, lò củi. Một buổi trưa giữa đất, lửa và bàn tay người." },
+  { place: "làng gốm Phù Lãng", location: "Quế Võ, Bắc Ninh", desc: "Men da lươn, lò củi. Một buổi trưa giữa đất, lửa và bàn tay người.", src: "/assets/langgomphulang.webp" },
 ];
 
 export const days: Day[] = [

@@ -220,14 +220,6 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">nơi lưu trú</span>
       </div>
-      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
-          Bốn đêm, ba chỗ nằm
-        </h2>
-        <p style={{ ...bodyP, margin: 0 }}>
-          Ba nơi rất khác nhau, và sự khác nhau đó cũng là một phần của hành trình: từ mép nước, qua thành phố, lên chân núi.
-        </p>
-      </Reveal>
       <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))", gap: "2.5rem", marginBottom: "5rem" }}>
         {stays.map((s) => (
           <div key={s.place}>

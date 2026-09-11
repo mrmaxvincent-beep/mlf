@@ -18,8 +18,6 @@ export const loiNgo = [
 export const loiNgoAfterTitle = "chuông vọng hai bờ";
 
 export const loiNgoAfter = [
-  "Có lẽ nó vốn đã ở đó, và mỗi đạo chỉ dựng lên một mái nhà theo cách của mình để che nó lại, giữ nó khỏi bị gió thổi bay.",
-  "Tuần-du lần này đi để thử điều đó.",
   "một tiếng chuông chùa, một tiếng chuông nhà thờ.",
   "chuông nào cũng ngân trong lòng người.",
   "người về giữa tâm thì không còn phân biệt tôn giáo hay hình thức, chỉ cần đọng lại ở tâm người.",

@@ -43,7 +43,7 @@ export const forWhom = [
 export const features = [
   { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại để cảm tâm mình." },
   { icon: "mỗi tối", title: "vòng-trà", desc: "Ngồi lại cuối ngày để xem điều gì ở lại." },
-  { icon: "5", title: "không gian linh thiêng", desc: "Chùa, đan viện, nhà thờ, gác chuông, am trên núi — năm mái nhà rất khác nhau trên cùng một hành trình." },
+  { icon: "5", title: "không gian linh thiêng", desc: "Chùa, đan viện, nhà thờ, gác chuông, am trên núi." },
 ];
 
 export const routeStats = [

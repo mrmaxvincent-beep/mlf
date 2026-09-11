@@ -64,7 +64,7 @@ export default function TuanDu05Page() {
           chuông vọng hai bờ
         </h1>
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-stone-alt)", marginBottom: "2rem" }}>
-          Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.
+          chuông ngân giữa cõi, người về giữa tâm.
         </span>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem" }}>
           {heroMeta.map((m) => (

@@ -66,7 +66,7 @@ export const destinations = [
   { place: "Đan viện Châu Sơn", location: "Nho Quan, Ninh Bình", desc: "Tu viện Xitô bằng gạch đỏ trần, không trát vữa. Các đan sĩ ở đây giữ thinh lặng cả đời.", src: "/assets/danvienchauson.webp" },
   { place: "nhà thờ Bác Trạch", location: "Tiền Hải, Thái Bình", desc: "Thánh đường vươn lên giữa đồng lúa ven biển.", src: "/assets/nhathobactrach.webp" },
   { place: "chùa Keo", location: "Vũ Thư, Thái Bình", desc: "Gác chuông gỗ ba tầng dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng.", src: "/assets/chuakeo.webp" },
-  { place: "am Ngọa Vân", location: "Đông Triều, Quảng Ninh", desc: "Cái am nhỏ trên núi, nơi vua Trần Nhân Tông nằm xuống năm 1308. Mây đến đây thì nằm lại.", src: "/assets/ngoavanam.webp" },
+  { place: "am Ngọa Vân", location: "Đông Triều, Quảng Ninh", desc: "Am nhỏ trên núi, nơi vua Trần Nhân Tông nằm xuống năm 1308. Mây đến đây thì nằm lại.", src: "/assets/ngoavanam.webp" },
   { place: "chùa Thanh Mai", location: "Chí Linh, Hải Dương", desc: "Dưới rừng phong, nơi Pháp Loa - nhị Tổ Trúc Lâm - viên tịch.", src: "/assets/chuathanhmai.webp" },
   { place: "làng gốm Phù Lãng", location: "Quế Võ, Bắc Ninh", desc: "Men da lươn, lò củi. Một buổi trưa giữa đất, lửa và bàn tay người.", src: "/assets/gomphulang.webp" },
 ];

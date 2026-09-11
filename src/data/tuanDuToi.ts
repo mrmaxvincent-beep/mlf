@@ -270,7 +270,7 @@ export const faqs = [
   },
   {
     q: "Ăn uống thế nào?",
-    a: "Chay suốt năm ngày. Các bữa được đặt trước tại chùa, tại nhà hàng chay hoặc do người nhà nấu. Bữa trưa ngày cuối ở làng gốm Phù Lãng và bữa chiều tại nhà anh Thuận ở Song Tháp đều là cơm nhà, không phải cơm hàng. Nếu bạn có dị ứng thực phẩm hoặc chế độ ăn đặc biệt, báo trước để chúng tôi thu xếp.",
+    a: "Chay suốt năm ngày. Các bữa được đặt trước tại chùa, tại nhà hàng chay hoặc do người nhà nấu. Nếu bạn có dị ứng thực phẩm hoặc chế độ ăn đặc biệt, báo trước để chúng tôi thu xếp.",
   },
   {
     q: "Ở Đan viện Châu Sơn có gì cần lưu ý?",

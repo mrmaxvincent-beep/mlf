@@ -41,7 +41,7 @@ export const forWhom = [
 ];
 
 export const features = [
-  { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại để cảm tâm mình." },
+  { icon: "4", title: "buổi cảm tâm", desc: "Bốn buổi ngồi lại để cảm tâm mình." },
   { icon: "mỗi tối", title: "vòng-trà", desc: "Ngồi lại cuối ngày để xem điều gì ở lại." },
   { icon: "5", title: "không gian linh thiêng", desc: "Chùa, đan viện, nhà thờ, gác chuông, am trên núi." },
 ];
@@ -125,11 +125,14 @@ export const days: Day[] = [
     desc: [
       "Sáng sớm, chùa Keo ở Vũ Thư. Gác chuông gỗ ba tầng, dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không dùng một cái đinh sắt nào. Gần bốn trăm năm đứng giữa đồng bằng gió bão.",
       "Hôm qua là gạch đỏ và mái vòm. Hôm nay là gỗ lim và mái cong. Hai cách con người dựng nhà cho cái thiêng — một cái vươn thẳng lên trời, một cái nằm ngang ôm lấy đất.",
-      "Ngày này không có buổi cảm tâm. Chỉ đi, chỉ nhìn, chỉ để mọi thứ ba ngày qua tự lắng xuống. Đến Ngọa Vân lúc đầu giờ chiều, còn cả một buổi để đi bộ, để ngồi, để không làm gì.",
+      "Bốn trăm năm không một cái đinh. Không phải vì người xưa thiếu đinh, mà vì mộng ghép đúng thì gỗ tự ôm lấy nhau, qua bao mùa gió bão chẳng cần thêm gì giữ chặt.",
+      "Có những thứ trong mình cũng đang được giữ bằng đinh — ràng buộc, quy tắc, lời hứa đóng chặt cho khỏi lung lay. Còn những thứ tự nó vừa khít, chẳng cần đóng đinh gì cả. Cái nào bền hơn qua bốn trăm năm?",
+      "Buổi cảm tâm hôm nay chỉ có một, ngay lúc sáng sớm. Chiều thì để trống — chỉ đi, chỉ nhìn, chỉ để mọi thứ ba ngày qua tự lắng xuống. Đến Ngọa Vân lúc đầu giờ chiều, còn cả một buổi để đi bộ, để ngồi, để không làm gì.",
     ],
     rows: [
       { time: "06:30", activity: "Ăn sáng, trả phòng" },
       { time: "07:00", activity: "Chùa Keo, Vũ Thư — gác chuông gỗ ba tầng, thế kỷ 17" },
+      { time: "07:45", activity: "buổi cảm tâm 3 — sáng tại chùa Keo", highlight: true },
       { time: "09:00", activity: "Lên đường, qua cầu Nghìn" },
       { time: "11:15", activity: "Cơm trưa tại thành phố Hải Phòng" },
       { time: "12:45", activity: "Lên đường đi Đông Triều" },
@@ -155,7 +158,7 @@ export const days: Day[] = [
     rows: [
       { time: "05:30", activity: "Điểm tâm nhẹ" },
       { time: "06:00", activity: "Xuất phát đi bộ theo đường hành hương cổ — Đô Kiệu → rừng thông Thông Đàn → dốc đá" },
-      { time: "09:00", activity: "Tới am Ngọa Vân — buổi cảm tâm 3 · trên am", highlight: true },
+      { time: "09:00", activity: "Tới am Ngọa Vân — buổi cảm tâm 4 · trên am", highlight: true },
       { time: "12:00", activity: "Cơm chay" },
       { time: "chiều", activity: "Xuống núi — đi bộ hoặc cáp treo, tùy sức" },
       { time: "19:00", activity: "Vòng-trà trong im lặng" },

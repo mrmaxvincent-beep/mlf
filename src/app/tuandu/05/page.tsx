@@ -4,17 +4,52 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { Reveal } from "@/components/Reveal";
+import { Reveal, RevealStagger } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
 import { DayItinerary } from "@/components/DayItinerary";
 import { Accordion } from "@/components/Accordion";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { routes } from "@/lib/nav";
-import { heroMeta, loiNgo, features, days, practical, includes, milestones, notes, refunds, faqs } from "@/data/tuanDuToi";
+import {
+  heroMeta,
+  loiNgo,
+  loiNgoAfter,
+  forWhom,
+  features,
+  routeStats,
+  routeDays,
+  destinations,
+  days,
+  stays,
+  practical,
+  includes,
+  milestones,
+  notes,
+  refunds,
+  faqs,
+} from "@/data/tuanDuToi";
 
 export const metadata: Metadata = {
-  title: "tuần-du tới · mây nằm ngủ",
-  description: "tuần-du 05 · Ngọa Vân Am, 18–21.03.2027 · 4 ngày 3 đêm, tối đa 10 người.",
+  title: "tuần-du tới · chuông vọng hai bờ",
+  description: "tuần-du 05 · chuông vọng hai bờ — 5 ngày 4 đêm qua Hà Nội, Ninh Bình, Thái Bình, Hải Phòng, Quảng Ninh, Hải Dương, Bắc Ninh. Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.",
+};
+
+const bodyP: React.CSSProperties = {
+  fontFamily: "var(--font-sans)",
+  fontSize: "1.05rem",
+  lineHeight: 1.95,
+  color: "var(--color-ink)",
+  margin: "0 0 1.15rem",
+  textAlign: "justify",
+};
+
+const label: React.CSSProperties = {
+  display: "block",
+  fontFamily: "var(--font-mono)",
+  fontSize: "0.58rem",
+  letterSpacing: "0.16em",
+  textTransform: "uppercase",
+  color: "var(--color-stone)",
 };
 
 export default function TuanDu05Page() {
@@ -24,129 +59,187 @@ export default function TuanDu05Page() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
         <Breadcrumb trail={[{ label: "tuần-du", href: routes.tuanDu }, { label: "tuần-du tới" }]} />
-        <span className="eyebrow">tuần-du 05 · 18 – 21.03.2027 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
+        <span className="eyebrow">tuần-du 05 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
-          mây nằm ngủ
+          chuông vọng hai bờ
         </h1>
-        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--color-stone-alt)", marginBottom: "2rem" }}>
-          lên nơi mây ở, tan vào trời không
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-stone-alt)", marginBottom: "2rem" }}>
+          Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.
         </span>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem" }}>
           {heroMeta.map((m) => (
             <div key={m.label} style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-stone)" }}>{m.label}</span>
-              <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", color: "var(--color-ink)" }}>{m.value}</span>
+              <span style={label}>{m.label}</span>
+              <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", lineHeight: 1.4, color: "var(--color-ink)" }}>{m.value}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>
-        <ImagePlaceholder label="ảnh · Ngọa Vân Am trong sương" aspectRatio="auto" style={{ height: "100%" }} />
+        <ImagePlaceholder label="ảnh · suối Yến, chùa Hương" aspectRatio="auto" style={{ height: "100%" }} />
       </div>
 
+      {/* ============ LỜI NGỎ ============ */}
       <div className="wrap" style={{ marginTop: "4.5rem", marginBottom: "1.2rem" }}>
         <span className="eyebrow">lời ngỏ</span>
       </div>
-      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+      <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {loiNgo.map((p) => (
-          <p key={p} style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
+          <p key={p} style={bodyP}>
             {p}
           </p>
         ))}
       </Reveal>
-      <div className="wrap" style={{ marginBottom: "5rem" }}>
+      <div className="wrap" style={{ marginBottom: "2rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-cham-dem)", padding: "1.75rem 2rem" }}>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", lineHeight: 1.6, color: "var(--color-ink)", margin: 0 }}>
-            Thế nên lần tuần-du này, chúng tôi trở lại Ngọa Vân Am cùng một lịch trình dài hơn: 4 ngày 3 đêm.
+            Có lẽ cái lặng không thuộc về đạo nào cả.
           </p>
         </div>
       </div>
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+        {loiNgoAfter.map((p, i) => (
+          <p key={p} style={{ ...bodyP, margin: i === loiNgoAfter.length - 1 ? 0 : "0 0 1.15rem" }}>
+            {p}
+          </p>
+        ))}
+      </Reveal>
 
+      {/* ============ DÀNH CHO AI ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">dành cho ai</span>
       </div>
-      <Reveal className="wrap" style={{ marginBottom: "1.75rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem" }}>
-          Bạn không cần có nền tảng tín ngưỡng, không cần hiểu về đạo Phật hay Thiền phái Trúc Lâm hay Trần Nhân Tông.
-        </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>Chỉ cần một điều thôi:</p>
-      </Reveal>
-      <div className="wrap" style={{ marginBottom: "1.75rem" }}>
-        <div style={{ borderLeft: "2px solid var(--color-cham-dem)", padding: "2rem" }}>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>Có một khoảnh khắc mà ta nhận ra —</p>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>
-            Mình đã đọc, đã học, đã thực hành, đã tìm kiếm. Không phải ít. Có thể là rất nhiều. Nhưng dường như, mọi thứ vẫn mãi ở đó.
-          </p>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>
-            Không phải vì ta chưa đủ chăm chỉ. Mà có lẽ vì ta đang dùng sai cửa. Toàn bộ hành trình tìm kiếm ấy — nếu đến từ phần đầu, thì cũng chỉ nuôi thêm phần đầu. Ta hiểu nhiều hơn về tâm. Nhưng hiểu về tâm và ở trong tâm, là hai điều rất khác nhau.
-          </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 1.5rem" }}>
-            &ldquo;Tôi đã hiểu điều này từ lâu.&rdquo; — Và đó chính xác là chỗ ta bị kẹt lại.
-          </p>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.08em", color: "var(--color-cham-dem)", marginBottom: "1.5rem" }}>
-            Con đường đi vào bên trong, không bằng sự hiểu.
-          </span>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
-            Tuần-du 05 — bốn ngày trong một vùng đất đủ tĩnh, đủ lặng, để những lớp bên ngoài bắt đầu lắng xuống một cách tự nhiên. Cái cảm được chạm tới. Cái biết tự nhiên hiển lộ.
-          </p>
-        </div>
-      </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>Tuần-du sẽ có không gian, có con người để làm nảy nở những điều đó.</p>
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">vì sao là Ngọa Vân</span>
-      </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
-          Ngọa Vân nghĩa là <em style={{ fontStyle: "italic" }}>mây nằm ngủ</em>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.3, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
+          Không đòi bạn theo đạo nào, cũng không đòi bạn không theo đạo nào.
         </h2>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
-          Ở độ cao này, sương không đến rồi đi như những nơi khác. Một dãy núi phía Bắc chặn hơi ẩm từ biển lại, ngưng thành mây — và mây ở lại đây, ngày này qua ngày khác.
+        {forWhom.map((p) => (
+          <p key={p} style={bodyP}>
+            {p}
+          </p>
+        ))}
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
+          Cái động đậy đó chính là bài.
         </p>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>Có lẽ Ngọa Vân là nơi bầu trời chọn để ở-yên.</p>
       </Reveal>
 
+      {/* ============ MỘT HÀNH TRÌNH CÓ LỚP LANG ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">một hành trình có lớp lang</span>
       </div>
       <div className="wrap" style={{ maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: "0 0 1.15rem", textAlign: "justify" }}>
-          Bốn ngày ở Ngọa Vân có một nhịp đơn giản: mỗi sáng là một buổi cảm tâm — chia sẻ, thơ, dẫn dắt. Mỗi tối, một vòng-trà để những gì đã nổi lên có chỗ được ngồi lại.
-        </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-          Cái khó không nằm ở lịch trình. Cái khó, và cũng là cái thú, là ở lại đủ lâu với một điều, thay vì lướt qua nhiều điều.
+        <p style={bodyP}>
+          Mỗi ngày là một mái nhà khác. Ba buổi cảm tâm, mỗi tối một vòng-trà để những gì đã nổi lên có chỗ được ngồi lại. Và ở giữa, 36 tiếng không ai nói với ai.
         </p>
       </div>
       <Reveal className="wrap feat-grid" style={{ marginTop: "2.5rem", marginBottom: "5rem" }}>
         {features.map((f) => (
           <div key={f.title}>
-            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.9rem", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>{f.icon}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.6rem", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>{f.icon}</span>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.5rem" }}>{f.title}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{f.desc}</p>
           </div>
         ))}
       </Reveal>
 
-      <div style={{ marginBottom: "4.5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · đường lên am Ngọa Vân" aspectRatio="auto" style={{ height: "100%" }} />
+      {/* ============ CUNG ĐƯỜNG ============ */}
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow">cung đường</span>
+      </div>
+      <Reveal className="wrap" style={{ maxWidth: "56ch", marginBottom: "2.5rem" }}>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
+          Từ nhiều mái, đến không mái
+        </h2>
+        <p style={{ ...bodyP, margin: 0 }}>
+          Cung đường này không phải một chuỗi điểm đến đẹp xếp cạnh nhau. Nó có một trục. Ba ngày đầu đi qua đồng bằng — nơi con người dựng nhà cho cái thiêng: chùa gỗ, nhà thờ gạch, đan viện, tháp chuông. Hai ngày cuối đi lên núi — nơi cái thiêng không cần nhà. Không ai xây được sương mù.
+        </p>
+      </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "2.5rem" }}>
+        {routeDays.map((d) => (
+          <div key={d.n} className="tl-row">
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", lineHeight: 1.6 }}>{d.n}</span>
+            <span style={{ display: "flex", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
+              <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.7, color: "var(--color-ink)" }}>{d.route}</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-stone)", whiteSpace: "nowrap" }}>{d.km}</span>
+            </span>
+          </div>
+        ))}
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">hành trình 4 ngày</span>
+      <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem", marginBottom: "5rem" }}>
+        {routeStats.map((s) => (
+          <div key={s.label} style={{ textAlign: "center" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "1.9rem", color: "var(--color-ink)", lineHeight: 1.1 }}>{s.value}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginTop: "0.5rem" }}>{s.label}</span>
+          </div>
+        ))}
       </div>
+
+      {/* ============ NƠI ĐẾN ============ */}
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow">nơi đến</span>
+      </div>
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem" }}>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: 0 }}>
+          Những mái nhà trên đường đi
+        </h2>
+      </Reveal>
+      <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.25rem 1.75rem", marginBottom: "5rem" }}>
+        {destinations.map((d) => (
+          <div key={d.place}>
+            <ImagePlaceholder label={`ảnh · ${d.place}`} aspectRatio="4/3" style={{ marginBottom: "1rem" }} />
+            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-ink)", marginBottom: "0.2rem" }}>{d.place}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{d.location}</span>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{d.desc}</p>
+          </div>
+        ))}
+      </RevealStagger>
+
+      <div style={{ marginBottom: "5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
+        <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" style={{ height: "100%" }} />
+      </div>
+
+      {/* ============ NĂM NGÀY, NĂM LỚP ============ */}
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow">năm ngày, năm lớp</span>
+      </div>
+      <Reveal className="wrap" style={{ marginBottom: "3rem" }}>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: 0 }}>
+          Câu chuyện của mỗi ngày
+        </h2>
+      </Reveal>
       <div className="wrap" style={{ marginBottom: "5rem" }}>
         {days.map((d, i) => (
           <DayItinerary key={d.n} day={d} first={i === 0} />
         ))}
       </div>
 
-      <div style={{ marginBottom: "4.5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · biển mây từ đỉnh Bàn Cờ" aspectRatio="auto" style={{ height: "100%" }} />
+      {/* ============ LƯU TRÚ ============ */}
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow">nơi lưu trú</span>
       </div>
+      <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
+          Bốn đêm, ba chỗ nằm
+        </h2>
+        <p style={{ ...bodyP, margin: 0 }}>
+          Ba nơi rất khác nhau, và sự khác nhau đó cũng là một phần của hành trình: từ mép nước, qua thành phố, lên chân núi.
+        </p>
+      </Reveal>
+      <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))", gap: "2.5rem", marginBottom: "5rem" }}>
+        {stays.map((s) => (
+          <div key={s.place}>
+            <ImagePlaceholder label={`ảnh · ${s.place}`} aspectRatio="4/3" style={{ marginBottom: "1rem" }} />
+            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.3rem", marginBottom: "0.3rem" }}>{s.place}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.7rem" }}>{s.meta}</span>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{s.desc}</p>
+          </div>
+        ))}
+      </RevealStagger>
 
+      {/* ============ VÀI ĐIỀU THỰC TẾ ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">vài điều thực tế</span>
       </div>
@@ -172,11 +265,12 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "3rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
-            Người tham gia tự sắp xếp vé máy bay đến và rời Hà Nội theo lịch trình. Điểm đón đoàn tại sân bay Nội Bài lúc 08:00 ngày 18.03.2027 · trả đoàn lúc 19:00 ngày 21.03.2027.
+            Người tham gia tự sắp xếp vé máy bay đến và rời Hà Nội theo lịch trình. Điểm đón đoàn tại sân bay Nội Bài vào 08:00 sáng ngày đầu tiên · trả đoàn tại sân bay Nội Bài lúc 19:00 tối ngày cuối cùng. Lịch cụ thể sẽ được gửi sau khi xác nhận đủ số lượng.
           </p>
         </div>
       </div>
 
+      {/* ============ ĐIỀU LÀM NÊN HÀNH TRÌNH NÀY ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">điều làm nên hành trình này</span>
       </div>
@@ -190,40 +284,25 @@ export default function TuanDu05Page() {
         <div>
           <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>tuần-du ký</span>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Một quyển sách nhỏ được biên soạn riêng cho chuyến đi — giới thiệu câu chuyện văn hóa và lịch sử của Ngọa Vân Am, Thiền phái Trúc Lâm và Trần Nhân Tông. Bên trong cũng có những gợi ý để cảm nhận, thực hành và ghi chép trong từng ngày của hành trình.
+            Một quyển sách nhỏ được biên soạn riêng cho chuyến đi — giới thiệu câu chuyện văn hóa và lịch sử của những nơi đi qua, từ chùa Hương, Châu Sơn, chùa Keo, đến am Ngọa Vân và Thiền phái Trúc Lâm. Bên trong cũng có những gợi ý để cảm nhận, thực hành và ghi chép trong từng ngày của hành trình.
           </p>
         </div>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">không gian nghỉ</span>
-      </div>
-      <Reveal className="wrap" style={{ marginBottom: "1rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-          <div style={{ gridColumn: "1 / -1" }}>
-            <ImagePlaceholder label="ảnh · Ngọa Vân Zen Village" aspectRatio="16/9" />
-          </div>
-          <ImagePlaceholder label="ảnh · phòng nghỉ" aspectRatio="4/3" />
-          <ImagePlaceholder label="ảnh · sân trong, hiên" aspectRatio="4/3" />
-        </div>
-      </Reveal>
-      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}>Ngọa Vân Zen Village · chỗ nghỉ suốt 3 đêm của hành trình</span>
-      </div>
-
+      {/* ============ THÔNG TIN VÀ ĐĂNG KÝ ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">thông tin và đăng ký</span>
       </div>
       <div className="wrap info-grid" style={{ marginBottom: "2.5rem" }}>
         <div>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>chi phí</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)" }}>12.000.000 đ / người</span>
-          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>phòng dorm 4 người</span>
+          <span style={label}>chi phí</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>đang cập nhật</span>
+          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>sẽ công bố cùng lịch trình chính thức</span>
         </div>
         <div>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>số lượng tối đa</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)" }}>10 người</span>
-          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>nhận trẻ từ 10 tuổi, đi cùng người lớn</span>
+          <span style={label}>số lượng tối đa</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>10 người</span>
+          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>nhỏ là chủ ý, không phải giới hạn kỹ thuật</span>
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "1rem" }}>
@@ -245,6 +324,7 @@ export default function TuanDu05Page() {
         </div>
       </div>
 
+      {/* ============ CHÚ Ý ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow" style={{ color: "var(--color-stone)" }}>
           chú ý
@@ -321,19 +401,21 @@ export default function TuanDu05Page() {
         <FaqAccordion items={faqs} />
       </div>
 
+      {/* ============ CTA ============ */}
       <div className="wrap" style={{ marginBottom: "0.5rem", textAlign: "center" }}>
         <Motif name="dom-muc" size={38} />
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
-        <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.7rem, 4vw, 2.4rem)", lineHeight: 1.3, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
-          Hẹn tại Ngọa Vân — nơi mây nằm ngủ
+        <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.5, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
+          Đi giữa hai tiếng chuông,<br />để nghe cái lặng ở sau cả hai.
         </h2>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>18 – 21.03.2027 · tối đa 10 người</p>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>5 ngày · 4 đêm · tối đa 10 người</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
           <span className="cta-btn cta-btn--solid">
-            đăng ký tham gia <span className="ar">→</span>
+            đăng ký tuần-du 05 <span className="ar">→</span>
           </span>
         </div>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "1.25rem" }}>nhận đăng ký đến khi đủ chỗ</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>

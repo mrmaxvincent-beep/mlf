@@ -41,7 +41,7 @@ export const forWhom = [
 ];
 
 export const features = [
-  { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại, mỗi buổi ở một mái nhà khác — bên đầm, trong đan viện, và trên am giữa mây." },
+  { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại để cảm tâm mình." },
   { icon: "mỗi tối", title: "vòng-trà", desc: "Ngồi lại với một ngày vừa qua, để những gì vừa chạm tới có chỗ được ở lại." },
   { icon: "5", title: "không gian linh thiêng", desc: "Chùa, đan viện, nhà thờ, gác chuông, am trên núi — năm mái nhà rất khác nhau trên cùng một hành trình." },
 ];

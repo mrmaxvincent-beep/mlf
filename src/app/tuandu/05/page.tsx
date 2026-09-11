@@ -198,7 +198,7 @@ export default function TuanDu05Page() {
       </RevealStagger>
 
       <div style={{ marginBottom: "5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" style={{ height: "100%" }} />
+        <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" src="/assets/ngoavanam.webp" alt="am Ngọa Vân trong sương" style={{ height: "100%" }} />
       </div>
 
       {/* ============ NĂM NGÀY, NĂM LỚP ============ */}

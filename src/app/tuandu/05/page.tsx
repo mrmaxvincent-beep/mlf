@@ -151,11 +151,8 @@ export default function TuanDu05Page() {
         <span className="eyebrow">cung đường</span>
       </div>
       <Reveal className="wrap" style={{ maxWidth: "56ch", marginBottom: "2.5rem" }}>
-        <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
-          Từ nhiều mái, đến không mái
-        </h2>
         <p style={{ ...bodyP, margin: 0 }}>
-          Cung đường này không phải một chuỗi điểm đến đẹp xếp cạnh nhau. Nó có một trục. Ba ngày đầu đi qua đồng bằng — nơi con người dựng nhà cho cái thiêng: chùa gỗ, nhà thờ gạch, đan viện, tháp chuông. Hai ngày cuối đi lên núi — nơi cái thiêng không cần nhà. Không ai xây được sương mù.
+          Ba ngày đầu đi qua đồng bằng — nơi con người dựng nhà cho cái thiêng: chùa gỗ, nhà thờ gạch, đan viện, tháp chuông. Hai ngày cuối đi lên núi — nơi cái thiêng ẩn hiện trong sương mù.
         </p>
       </Reveal>
 

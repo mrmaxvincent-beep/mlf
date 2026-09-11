@@ -42,11 +42,11 @@ export const routeStats = [
 ];
 
 export const routeDays = [
-  { n: "ngày 1", route: "Nội Bài → chùa Hương → đầm Vân Long", km: "~180km" },
-  { n: "ngày 2", route: "Châu Sơn → Bác Trạch → Thái Bình", km: "~135km" },
-  { n: "ngày 3", route: "chùa Keo → Hải Phòng → Ngọa Vân", km: "~165km" },
-  { n: "ngày 4", route: "ở yên trên núi", km: "0km" },
-  { n: "ngày 5", route: "Thanh Mai → Phù Lãng → Nội Bài", km: "~200km" },
+  { n: "01", route: "Nội Bài → chùa Hương → đầm Vân Long", km: "~180km" },
+  { n: "02", route: "Châu Sơn → Bác Trạch → Thái Bình", km: "~135km" },
+  { n: "03", route: "chùa Keo → Hải Phòng → Ngọa Vân", km: "~165km" },
+  { n: "04", route: "ở yên trên núi", km: "0km", pause: true },
+  { n: "05", route: "Thanh Mai → Phù Lãng → Nội Bài", km: "~200km" },
 ];
 
 export const destinations = [

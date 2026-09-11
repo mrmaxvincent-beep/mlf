@@ -156,17 +156,47 @@ export default function TuanDu05Page() {
         </p>
       </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "2.5rem" }}>
+      <Reveal className="wrap" style={{ position: "relative", paddingLeft: "2.4rem", marginBottom: "3.5rem" }}>
+        <div style={{ position: "absolute", left: "1.05rem", top: "0.6rem", bottom: "2.4rem", width: 1, background: "var(--color-mist)" }} />
         {routeDays.map((d) => (
-          <div key={d.n} className="tl-row">
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", lineHeight: 1.6 }}>{d.n}</span>
-            <span style={{ display: "flex", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.7, color: "var(--color-ink)" }}>{d.route}</span>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-stone)", whiteSpace: "nowrap" }}>{d.km}</span>
+          <div key={d.n} style={{ position: "relative", paddingBottom: "2rem" }}>
+            <span
+              style={{
+                position: "absolute",
+                left: "-2.4rem",
+                top: "0.05rem",
+                width: "2.1rem",
+                height: "2.1rem",
+                borderRadius: "50%",
+                border: `1px solid ${d.pause ? "var(--color-cham-dem)" : "var(--color-stone)"}`,
+                background: d.pause ? "var(--color-cham-dem)" : "var(--color-paper)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.62rem",
+                color: d.pause ? "var(--color-paper)" : "var(--color-stone)",
+              }}
+            >
+              {d.n}
             </span>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap", paddingTop: "0.3rem" }}>
+              <span
+                style={{
+                  fontFamily: d.pause ? "var(--font-serif)" : "var(--font-sans)",
+                  fontStyle: d.pause ? "italic" : "normal",
+                  fontSize: d.pause ? "1.05rem" : "0.95rem",
+                  lineHeight: 1.7,
+                  color: "var(--color-ink)",
+                }}
+              >
+                {d.route}
+              </span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "var(--color-stone)", whiteSpace: "nowrap" }}>{d.km}</span>
+            </div>
           </div>
         ))}
-      </div>
+      </Reveal>
 
       <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem", marginBottom: "5rem" }}>
         {routeStats.map((s) => (

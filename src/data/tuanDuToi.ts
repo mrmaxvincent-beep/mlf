@@ -274,7 +274,7 @@ export const faqs = [
   },
   {
     q: "Ở Đan viện Châu Sơn có gì cần lưu ý?",
-    a: "Đây là nơi các đan sĩ đang sống đời chiêm niệm thật, không phải điểm tham quan. Chúng ta vào với tư cách khách: đi nhẹ, nói khẽ hoặc không nói, không chụp ảnh trong khu vực riêng của nhà dòng, mặc kín đáo. Buổi cảm tâm ở đây được thu xếp trước với nhà dòng.",
+    a: "Đây là nơi các đan sĩ đang sống đời chiêm niệm. Chúng ta vào với tư cách khách: đi nhẹ, nói khẽ hoặc không nói, không chụp ảnh trong khu vực riêng của nhà dòng, mặc kín đáo. Buổi cảm tâm ở đây được thu xếp trước với nhà dòng.",
   },
   {
     q: "Đoàn bao nhiêu người?",

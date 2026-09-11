@@ -278,7 +278,7 @@ export const faqs = [
   },
   {
     q: "Cần mang theo gì?",
-    a: "Giày đi bộ bám tốt (bắt buộc cho ngày 4), một chai nước lớn, áo khoác mỏng cho buổi sáng trên núi, đồ kín đáo để vào chùa và nhà thờ, áo mưa mỏng. Gậy leo núi nếu gối bạn yếu. Không cần mang gì cho các buổi cảm tâm — chỉ cần đến.",
+    a: "Giày đi bộ bám tốt (bắt buộc cho ngày 4), một chai nước lớn, áo khoác mỏng cho buổi sáng trên núi, đồ kín đáo để vào chùa và nhà thờ, áo mưa mỏng. Gậy leo núi nếu gối bạn yếu.",
   },
   {
     q: "Vé máy bay nên đặt giờ nào?",

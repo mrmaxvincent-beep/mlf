@@ -39,7 +39,6 @@ export const routeStats = [
   { label: "cả hành trình", value: "~680 km" },
   { label: "tỉnh thành", value: "6" },
   { label: "nơi lưu trú", value: "3" },
-  { label: "giờ tĩnh khẩu", value: "36" },
 ];
 
 export const routeDays = [

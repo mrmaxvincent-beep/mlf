@@ -407,7 +407,7 @@ export default function TuanDu05Page() {
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.5, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
-          Đi giữa hai tiếng chuông,<br />để nghe cái lặng ở sau cả hai.
+          chuông ngân giữa cõi, người về giữa tâm.
         </h2>
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>5 ngày · 4 đêm · tối đa 10 người</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
@@ -415,7 +415,6 @@ export default function TuanDu05Page() {
             đăng ký tuần-du 05 <span className="ar">→</span>
           </span>
         </div>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "1.25rem" }}>nhận đăng ký đến khi đủ chỗ</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>

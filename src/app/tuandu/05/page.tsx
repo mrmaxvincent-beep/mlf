@@ -77,7 +77,7 @@ export default function TuanDu05Page() {
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>
-        <ImagePlaceholder label="ảnh · suối Yến, chùa Hương" aspectRatio="auto" style={{ height: "100%" }} />
+        <ImagePlaceholder label="ảnh · suối Yến, chùa Hương" aspectRatio="auto" src="/assets/suoiyen.webp" alt="suối Yến, chùa Hương" style={{ height: "100%" }} />
       </div>
 
       {/* ============ LỜI NGỎ ============ */}

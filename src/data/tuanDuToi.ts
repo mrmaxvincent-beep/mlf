@@ -52,7 +52,7 @@ export const routeDays = [
 
 export const destinations = [
   { place: "chùa Hương", location: "Mỹ Đức, Hà Nội", desc: "Đò gỗ trên suối Yến, động Hương Tích. Nơi đông nhất của cả hành trình, và điều đó là cố ý.", src: "/assets/chuahuong.webp" },
-  { place: "đầm Vân Long", location: "Gia Viễn, Ninh Bình", desc: "Khu bảo tồn ngập nước dưới chân núi đá vôi. Chiều xuống, mặt nước phẳng như không có gì từng xảy ra." },
+  { place: "đầm Vân Long", location: "Gia Viễn, Ninh Bình", desc: "Khu bảo tồn ngập nước dưới chân núi đá vôi. Chiều xuống, mặt nước phẳng như không có gì từng xảy ra.", src: "/assets/damvanlong.webp" },
   { place: "Đan viện Châu Sơn", location: "Nho Quan, Ninh Bình", desc: "Tu viện Xitô bằng gạch đỏ trần, không trát vữa. Các đan sĩ ở đây giữ thinh lặng cả đời." },
   { place: "nhà thờ Bác Trạch", location: "Tiền Hải, Thái Bình", desc: "Thánh đường vươn lên giữa đồng lúa ven biển, dựng bằng tiền và công của cả một xứ đạo." },
   { place: "chùa Keo", location: "Vũ Thư, Thái Bình", desc: "Gác chuông gỗ ba tầng dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không một cái đinh sắt." },

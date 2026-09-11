@@ -231,7 +231,7 @@ export default function TuanDu05Page() {
       <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))", gap: "2.5rem", marginBottom: "5rem" }}>
         {stays.map((s) => (
           <div key={s.place}>
-            <ImagePlaceholder label={`ảnh · ${s.place}`} aspectRatio="4/3" style={{ marginBottom: "1rem" }} />
+            <ImagePlaceholder label={`ảnh · ${s.place}`} aspectRatio="4/3" src={s.src} alt={s.place} style={{ marginBottom: "1rem" }} />
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.3rem", marginBottom: "0.3rem" }}>{s.place}</span>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.7rem" }}>{s.meta}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{s.desc}</p>

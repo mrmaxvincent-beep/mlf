@@ -196,8 +196,8 @@ export const stays = [
 ];
 
 export const practical = [
-  { label: "số người", value: "tối đa 10", note: "nhỏ là chủ ý" },
-  { label: "ăn", value: "chay suốt hành trình", note: "phần lớn là cơm nhà và cơm chùa" },
+  { label: "số người", value: "tối đa 10", note: "" },
+  { label: "ăn", value: "chay suốt hành trình", note: "" },
   { label: "đi bộ", value: "ngày 4 lên am", note: "~3–4km đường dốc, 2,5–3 tiếng · xuống có thể đi cáp treo" },
   { label: "tĩnh khẩu", value: "khoảng 36 tiếng", note: "từ tối ngày 3 đến sáng ngày 5 · không bắt buộc tuyệt đối" },
   { label: "di chuyển", value: "một xe suốt hành trình", note: "ngày dài nhất khoảng 200km, không có đèo" },

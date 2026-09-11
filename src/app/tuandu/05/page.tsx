@@ -270,7 +270,9 @@ export default function TuanDu05Page() {
           <div key={p.label}>
             <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>{p.label}</span>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.15rem", color: "var(--color-ink)", lineHeight: 1.4 }}>{p.value}</span>
-            <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>{p.note}</span>
+            {p.note ? (
+              <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>{p.note}</span>
+            ) : null}
           </div>
         ))}
       </div>

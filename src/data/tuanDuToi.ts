@@ -2,7 +2,7 @@ import type { Day } from "@/components/DayItinerary";
 
 export const heroMeta = [
   { label: "hành trình", value: "5 ngày · 4 đêm" },
-  { label: "đi qua", value: "Hà Nội · Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh" },
+  { label: "đi qua", value: "Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh" },
   { label: "số lượng", value: "tối đa 10 người" },
   { label: "ăn uống", value: "chay suốt hành trình" },
 ];

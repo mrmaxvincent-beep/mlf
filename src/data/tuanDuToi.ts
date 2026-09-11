@@ -277,10 +277,6 @@ export const faqs = [
     a: "Đây là nơi các đan sĩ đang sống đời chiêm niệm. Chúng ta vào với tư cách khách: đi nhẹ, nói khẽ hoặc không nói, không chụp ảnh trong khu vực riêng của nhà dòng, mặc kín đáo. Buổi cảm tâm ở đây được thu xếp trước với nhà dòng.",
   },
   {
-    q: "Đoàn bao nhiêu người?",
-    a: "Tối đa 10. Nhỏ là chủ ý chứ không phải giới hạn kỹ thuật — một vòng-trà mười người còn nghe được nhau, mười lăm người thì không.",
-  },
-  {
     q: "Cần mang theo gì?",
     a: "Giày đi bộ bám tốt (bắt buộc cho ngày 4), một chai nước lớn, áo khoác mỏng cho buổi sáng trên núi, đồ kín đáo để vào chùa và nhà thờ, áo mưa mỏng. Gậy leo núi nếu gối bạn yếu. Không cần mang gì cho các buổi cảm tâm — chỉ cần đến.",
   },

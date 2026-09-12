@@ -447,7 +447,7 @@ export default function TuanDu05Page() {
           </div>
         ))}
       </div>
-      <p className="wrap" style={{ maxWidth: 900, fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.4rem, 3.6vw, 2.1rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 auto 5rem", textAlign: "center" }}>
+      <p className="wrap" style={{ maxWidth: 450, fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.4rem, 3.6vw, 2.1rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 auto 5rem", textAlign: "center" }}>
         &ldquo;Khi cùng nhau đi, cùng nhau dừng, cùng nhau cảm, tuần-du mới thực sự trở thành một dòng chảy. Và trong dòng chảy ấy, mỗi người đều được nâng đỡ một cách rất tự nhiên.&rdquo;
       </p>
 
@@ -510,7 +510,7 @@ export default function TuanDu05Page() {
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.5, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
-          chuông ngân giữa cõi, người về giữa tâm.
+          chuông vọng hai bờ
         </h2>
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>26.03 – 30.03.2027 · tối đa 10 người</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>

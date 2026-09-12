@@ -41,7 +41,7 @@ export const forWhom = [
 ];
 
 export const features = [
-  { icon: "4", title: "buổi cảm tâm", desc: "Bốn buổi ngồi lại để cảm tâm mình." },
+  { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại để cảm tâm mình." },
   { icon: "mỗi tối", title: "vòng-trà", desc: "Ngồi lại cuối ngày để xem điều gì ở lại." },
   { icon: "5", title: "không gian linh thiêng", desc: "Chùa, đan viện, nhà thờ, gác chuông, am trên núi." },
 ];
@@ -74,7 +74,6 @@ export const destinations = [
 export const days: Day[] = [
   {
     n: "01",
-    tam: "cái mình đến để xin",
     title: "giữa dòng người",
     desc: [
       "Buổi sáng ở chùa Hương. Đây là nơi đông nhất trong cả hành trình. Suối Yến, đò gỗ, dòng người, khói nhang, tiếng rao, tiếng khấn. Hàng vạn người mỗi năm về đây mang theo một điều muốn xin.",
@@ -89,14 +88,12 @@ export const days: Day[] = [
       { time: "13:00", activity: "Cơm chay tại chùa" },
       { time: "14:30", activity: "Lên đường về Ninh Bình" },
       { time: "16:30", activity: "Nhận phòng Toki Vân Long, đầm Vân Long" },
-      { time: "17:30", activity: "buổi cảm tâm 1 — biết & cảm", highlight: true },
-      { time: "19:00", activity: "Cơm chiều" },
-      { time: "20:30", activity: "vòng-trà" },
+      { time: "18:30", activity: "Cơm chiều" },
+      { time: "20:00", activity: "vòng-trà" },
     ],
   },
   {
     n: "02",
-    tam: "thinh lặng của người khác",
     title: "hai gương mặt",
     desc: [
       "Sáng, Đan viện Châu Sơn ở Nho Quan. Một tu viện Xitô bằng gạch đỏ trần, đứng giữa cánh đồng. Các đan sĩ ở đây sống đời chiêm niệm và giữ thinh lặng — không phải vài ngày, mà cả đời. Họ dậy từ rất sớm, hát kinh, lao động, rồi lại im.",
@@ -109,7 +106,8 @@ export const days: Day[] = [
     rows: [
       { time: "06:30", activity: "Đò đầm Vân Long lúc sương chưa tan" },
       { time: "08:30", activity: "Ăn sáng, trả phòng" },
-      { time: "09:30", activity: "Đan viện Châu Sơn, Nho Quan — buổi cảm tâm 2 · trong khuôn viên đan viện", highlight: true },
+      { time: "09:30", activity: "Đan viện Châu Sơn, Nho Quan" },
+      { time: "10:00", activity: "buổi cảm tâm 1 · biết & cảm", highlight: true },
       { time: "12:00", activity: "Cơm trưa tại Ninh Bình" },
       { time: "13:15", activity: "Lên đường đi Tiền Hải, qua Nam Định" },
       { time: "15:30", activity: "Nhà thờ Bác Trạch, Vân Trường" },
@@ -120,7 +118,6 @@ export const days: Day[] = [
   },
   {
     n: "03",
-    tam: "bốn trăm năm không một cái đinh",
     title: "trước khi lặng",
     desc: [
       "Sáng sớm, chùa Keo ở Vũ Thư. Gác chuông gỗ ba tầng, dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng, không dùng một cái đinh sắt nào. Gần bốn trăm năm đứng giữa đồng bằng gió bão.",
@@ -132,7 +129,7 @@ export const days: Day[] = [
     rows: [
       { time: "06:30", activity: "Ăn sáng, trả phòng" },
       { time: "07:00", activity: "Chùa Keo, Vũ Thư — gác chuông gỗ ba tầng, thế kỷ 17" },
-      { time: "07:45", activity: "buổi cảm tâm 3 — sáng tại chùa Keo", highlight: true },
+      { time: "07:45", activity: "buổi cảm tâm 2 — sáng tại chùa Keo", highlight: true },
       { time: "09:00", activity: "Lên đường, qua cầu Nghìn" },
       { time: "11:15", activity: "Cơm trưa tại thành phố Hải Phòng" },
       { time: "12:45", activity: "Lên đường đi Đông Triều" },
@@ -142,7 +139,6 @@ export const days: Day[] = [
   },
   {
     n: "04",
-    tam: "leo lên bằng chân mình",
     title: "cư trần lạc đạo",
     desc: [
       "Sáu giờ sáng, cả đoàn bắt đầu đi bộ lên am Ngọa Vân. Có cáp treo. Chúng ta không đi cáp treo hôm nay.",
@@ -158,7 +154,7 @@ export const days: Day[] = [
     rows: [
       { time: "05:30", activity: "Điểm tâm nhẹ" },
       { time: "06:00", activity: "Xuất phát đi bộ theo đường hành hương cổ — Đô Kiệu → rừng thông Thông Đàn → dốc đá" },
-      { time: "09:00", activity: "Tới am Ngọa Vân — buổi cảm tâm 4 · trên am", highlight: true },
+      { time: "09:00", activity: "Tới am Ngọa Vân — buổi cảm tâm 3 · trên am", highlight: true },
       { time: "12:00", activity: "Cơm chay" },
       { time: "chiều", activity: "Xuống núi — đi bộ hoặc cáp treo, tùy sức" },
       { time: "19:00", activity: "Vòng-trà trong im lặng" },
@@ -166,7 +162,6 @@ export const days: Day[] = [
   },
   {
     n: "05",
-    tam: "tiếng nói trở lại dưới rừng phong",
     title: "dưới rừng phong",
     desc: [
       "Năm giờ sáng, cáp treo trong im lặng đón bình minh. Hôm qua bạn tự leo lên. Hôm nay bạn được đưa lên, không phải làm gì cả.",

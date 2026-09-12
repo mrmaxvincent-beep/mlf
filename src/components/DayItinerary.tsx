@@ -3,7 +3,7 @@ import { Schedule, type ScheduleRow } from "./Schedule";
 
 export type Day = {
   n: string;
-  tam: string;
+  tam?: string;
   title: string;
   desc: string[];
   poem?: string[];
@@ -19,7 +19,9 @@ export function DayItinerary({ day, first }: { day: Day; first?: boolean }) {
       <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.55rem" }}>
         ngày {day.n}
       </span>
-      <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-cham-dem)", marginBottom: "0.4rem" }}>{day.tam}</span>
+      {day.tam ? (
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-cham-dem)", marginBottom: "0.4rem" }}>{day.tam}</span>
+      ) : null}
       <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.9rem, 5vw, 2.8rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 1.75rem" }}>{day.title}</h3>
       <div style={{ maxWidth: "56ch", marginBottom: "2rem" }}>
         {day.desc.map((p) => (

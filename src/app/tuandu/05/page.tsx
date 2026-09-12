@@ -128,7 +128,7 @@ export default function TuanDu05Page() {
           </p>
         ))}
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
-          Cái động đậy đó chính là bài.
+          Cái động đậy đó là bài.
         </p>
       </Reveal>
 

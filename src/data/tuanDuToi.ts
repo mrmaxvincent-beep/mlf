@@ -177,7 +177,7 @@ export const days: Day[] = [
       { time: "08:00", activity: "Xuống núi, ăn sáng, trả phòng" },
       { time: "09:15", activity: "Rời Ngọa Vân" },
       { time: "10:15", activity: "Chùa Thanh Mai, Chí Linh — buổi tổng kết dưới rừng phong", highlight: true },
-      { time: "11:45", activity: "Lên đường" },
+      { time: "12:30", activity: "Lên đường" },
       { time: "13:00", activity: "Làng gốm Phù Lãng, Quế Võ — cơm trưa chay tại làng, xem lò" },
       { time: "15:00", activity: "Lên đường đi Song Tháp" },
       { time: "15:45", activity: "Nhà anh Thuận, Song Tháp — cơm chiều làng quê Bắc Bộ" },

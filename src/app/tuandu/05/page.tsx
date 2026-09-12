@@ -101,7 +101,7 @@ export default function TuanDu05Page() {
           <div key={s.place} style={{ display: "flex", gap: "0.8rem", padding: "0.55rem 0" }}>
             <span style={{ color: "var(--color-stone)", flexShrink: 0 }}>·</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.8, color: "var(--color-ink)" }}>
-              <strong style={{ fontWeight: 600, color: "var(--color-ink)" }}>{s.place}</strong>, {s.location} — {s.desc}
+              <strong style={{ fontWeight: 600, color: "var(--color-ink)" }}>{s.place}</strong>, {s.location}: {s.desc}
             </span>
           </div>
         ))}

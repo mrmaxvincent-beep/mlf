@@ -27,11 +27,11 @@ export const loiNgoAfter = [
 ];
 
 export const loiNgoStops = [
-  { place: "chùa Hương", location: "Hà Nội", desc: "một ngôi chùa giữa núi đá, nơi hàng vạn người mỗi năm về cầu xin." },
-  { place: "Đan viện Châu Sơn", location: "Ninh Bình", desc: "một đan viện gạch đỏ, nơi các đan sĩ giữ thinh lặng suốt đời." },
-  { place: "chùa Keo", location: "Thái Bình", desc: "một gác chuông gỗ bốn trăm năm tuổi đứng giữa đồng bằng." },
-  { place: "nhà thờ Bác Trạch", location: "Thái Bình", desc: "một thánh đường vươn lên giữa ruộng lúa ven biển." },
-  { place: "am Ngọa Vân", location: "Quảng Ninh", desc: "một cái am nhỏ trên núi, nơi ẩn tu của vua Trần Nhân Tông, rồi nằm lại nơi này." },
+  { place: "Chùa Hương", location: "Hà Nội", desc: "một ngôi chùa nằm sâu trong núi đá, mỗi năm hàng vạn người lại tìm về lễ bái." },
+  { place: "Đan viện Châu Sơn", location: "Ninh Bình", desc: "một đan viện trầm mặc giữa lòng núi rừng, nơi các đan sĩ giữ thinh lặng trọn đời." },
+  { place: "Chùa Keo", location: "Thái Bình", desc: "một đóa sen gỗ nở giữa đồng quê đã bốn thế kỷ." },
+  { place: "Nhà thờ Bác Trạch", location: "Thái Bình", desc: "một thánh đường vươn lên giữa ruộng lúa." },
+  { place: "Am Ngọa Vân", location: "Quảng Ninh", desc: "một am nhỏ trên núi, nơi vua Trần Nhân Tông về ẩn tu, rồi nằm lại." },
 ];
 
 export const loiNgoClose = ["ta đi để nghe.", "xem sau mỗi tiếng chuông, cái còn lại có giống nhau không."];

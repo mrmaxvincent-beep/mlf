@@ -332,8 +332,11 @@ export default function TuanDu05Page() {
         </div>
         <div style={{ marginBottom: "1.75rem", paddingBottom: "1.75rem", borderBottom: "1px solid var(--color-mist)" }}>
           <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>buổi cảm tâm</span>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.9rem", textAlign: "justify" }}>
+            Hành trình có 3 buổi ngồi lại với nhau, gọi là buổi cảm tâm.
+          </p>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Những buổi trò chuyện để hiểu về tâm mình. Không chỉ là hiểu bằng tâm trí, mà bằng cái cảm trên thân thể.
+            Điều chúng ta đi tìm không phải một hiểu biết mới về tâm. Hiểu biết thì đọc sách cũng có. Cái khó hơn và cũng là cái duy nhất mang về được là cảm được tâm mình đang ở đâu, ngay trong lúc nó đang ở đó: khi chen giữa dòng người lễ bái, khi đứng trong một đức tin không phải của mình, khi chân mỏi trên một con dốc dài.
           </p>
         </div>
         <div>

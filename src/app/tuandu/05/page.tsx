@@ -152,7 +152,7 @@ export default function TuanDu05Page() {
       </div>
       <Reveal className="wrap" style={{ maxWidth: "56ch", marginBottom: "2.5rem" }}>
         <p style={{ ...bodyP, margin: 0 }}>
-          Ba ngày đầu đi qua đồng bằng — nơi con người dựng nhà cho cái thiêng: chùa gỗ, nhà thờ gạch, đan viện, tháp chuông. Hai ngày cuối đi lên núi — nơi cái thiêng ẩn hiện trong sương mù.
+          Ba ngày đầu đi qua đồng bằng, nơi con người dựng nhà cho cái thiêng: chùa gỗ, nhà thờ gạch, đan viện, tháp chuông. Hai ngày cuối đi lên núi, nơi cái thiêng ẩn hiện trong mây ngàn.
         </p>
       </Reveal>
 

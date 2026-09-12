@@ -289,16 +289,18 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">vài điều thực tế</span>
       </div>
-      <div className="wrap info-grid" style={{ marginBottom: "2.25rem" }}>
-        {practical.map((p) => (
-          <div key={p.label}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>{p.label}</span>
-            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.15rem", color: "var(--color-ink)", lineHeight: 1.4 }}>{p.value}</span>
-            {p.note ? (
-              <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>{p.note}</span>
-            ) : null}
-          </div>
-        ))}
+      <div className="wrap" style={{ marginBottom: "2.25rem" }}>
+        <div className="info-grid" style={{ border: "1px solid var(--color-mist)", background: "var(--color-paper)", padding: "1.75rem 2rem" }}>
+          {practical.map((p) => (
+            <div key={p.label}>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>{p.label}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.15rem", color: "var(--color-ink)", lineHeight: 1.4 }}>{p.value}</span>
+              {p.note ? (
+                <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>{p.note}</span>
+              ) : null}
+            </div>
+          ))}
+        </div>
       </div>
       {/* ============ ĐIỀU LÀM NÊN HÀNH TRÌNH NÀY ============ */}
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>

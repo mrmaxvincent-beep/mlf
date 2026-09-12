@@ -239,7 +239,7 @@ export default function TuanDu05Page() {
       </Reveal>
 
       <div style={{ marginBottom: "5rem" }}>
-        <div style={{ height: "46vh", minHeight: 300, maxHeight: 460 }}>
+        <div style={{ height: "68vh", minHeight: 420, maxHeight: 640 }}>
           <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" style={{ height: "100%" }} />
         </div>
         <span className="wrap" style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginTop: "0.7rem" }}>

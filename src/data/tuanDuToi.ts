@@ -94,7 +94,7 @@ export const days: Day[] = [
   },
   {
     n: "02",
-    title: "hai gương mặt",
+    title: "một tiếng ngân",
     desc: [
       "Sáng, Đan viện Châu Sơn ở Nho Quan. Một tu viện Xitô bằng gạch đỏ trần. Các đan sĩ ở đây sống đời chiêm niệm và giữ thinh lặng.",
       "Đây có lẽ là buổi lạ nhất của cả chuyến với phần lớn mọi người — ngồi trong một sự thinh lặng mình không hiểu, một sự im lặng được giữ bởi một đức tin. Bạn không hiểu kinh họ đọc, không biết họ tin gì. Nhưng cái lặng thì bạn cảm được.",

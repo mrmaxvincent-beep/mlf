@@ -429,14 +429,21 @@ export default function TuanDu05Page() {
         </span>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        {notes.map((n) => (
-          <div key={n.title} style={{ paddingBottom: "2.25rem", marginBottom: "2.25rem", borderBottom: "1px solid var(--color-mist)" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>{n.title}</span>
-            {n.body.map((p) => (
-              <p key={p} style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.9rem", textAlign: "justify" }}>
-                {p}
-              </p>
-            ))}
+        {notes.map((n, i) => (
+          <div key={n.title} style={{ borderTop: i === 0 ? "1px solid var(--color-mist)" : "none", borderBottom: "1px solid var(--color-mist)" }}>
+            <details>
+              <summary style={{ cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem", padding: "1.1rem 0" }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>{n.title}</span>
+                <span className="acc-icon" style={{ fontSize: "0.95rem" }}>+</span>
+              </summary>
+              <div style={{ paddingBottom: "1.6rem" }}>
+                {n.body.map((p) => (
+                  <p key={p} style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.9rem", textAlign: "justify" }}>
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </details>
           </div>
         ))}
       </div>

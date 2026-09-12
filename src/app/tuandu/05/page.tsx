@@ -69,7 +69,7 @@ export default function TuanDu05Page() {
           chuông ngân giữa cõi, người về giữa tâm.
         </span>
       </div>
-      <div style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", padding: "1.5rem 1.5rem 1rem" }}>
+      <div style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", padding: "1.5rem 10% 1rem" }}>
         {heroMeta.map((m) => (
           <div key={m.label} style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
             <span style={label}>{m.label}</span>

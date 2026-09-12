@@ -127,8 +127,8 @@ export const days: Day[] = [
     ],
     rows: [
       { time: "06:30", activity: "Ăn sáng, trả phòng" },
-      { time: "07:00", activity: "Chùa Keo, Vũ Thư — gác chuông gỗ ba tầng, thế kỷ 17" },
-      { time: "07:45", activity: "buổi cảm tâm 2 — thân thể là con đường", highlight: true },
+      { time: "08:00", activity: "Chùa Keo, Vũ Thư — gác chuông gỗ ba tầng, thế kỷ 17" },
+      { time: "08:30", activity: "buổi cảm tâm 2 — thân thể là con đường", highlight: true },
       { time: "09:00", activity: "Lên đường, qua cầu Nghìn" },
       { time: "11:15", activity: "Cơm trưa tại thành phố Hải Phòng" },
       { time: "12:45", activity: "Lên đường đi Đông Triều" },

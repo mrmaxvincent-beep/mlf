@@ -471,6 +471,7 @@ details[open] > summary .acc-icon {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border: 1px solid var(--color-mist);
+  background: var(--color-paper);
 }
 .feat-grid > div {
   padding: 1.75rem 1.35rem;

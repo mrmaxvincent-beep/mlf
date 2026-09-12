@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { Schedule, type ScheduleRow } from "./Schedule";
+import { Accordion } from "./Accordion";
 
 export type Day = {
   n: string;
@@ -48,7 +49,9 @@ export function DayItinerary({ day, first }: { day: Day; first?: boolean }) {
           ) : null}
         </div>
       ) : null}
-      <Schedule rows={day.rows} />
+      <Accordion label="giờ giấc chi tiết">
+        <Schedule rows={day.rows} />
+      </Accordion>
     </Reveal>
   );
 }

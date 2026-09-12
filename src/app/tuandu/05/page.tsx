@@ -238,8 +238,13 @@ export default function TuanDu05Page() {
         </div>
       </Reveal>
 
-      <div style={{ marginBottom: "5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
-        <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" style={{ height: "100%" }} />
+      <div style={{ marginBottom: "5rem" }}>
+        <div style={{ height: "46vh", minHeight: 300, maxHeight: 460 }}>
+          <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" style={{ height: "100%" }} />
+        </div>
+        <span className="wrap" style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginTop: "0.7rem" }}>
+          góc nhìn từ Ngọa Vân Am
+        </span>
       </div>
 
       {/* ============ NĂM NGÀY, NĂM LỚP ============ */}
@@ -325,6 +330,12 @@ export default function TuanDu05Page() {
             Mỗi cuối ngày là một vòng-trà. Mọi người cùng ngồi xuống — nghe kể chuyện, nhìn lại một ngày vừa đi qua: đã đến những nơi nào, điều gì đã chạm tới mình, đã thấy ra điều gì. Rồi cùng ở yên trong đó, để cảm nhận rõ hơn những gì tâm mình vừa mở ra.
           </p>
         </div>
+        <div style={{ marginBottom: "1.75rem", paddingBottom: "1.75rem", borderBottom: "1px solid var(--color-mist)" }}>
+          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>buổi cảm tâm</span>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
+            Những buổi trò chuyện để hiểu về tâm mình. Không chỉ là hiểu bằng tâm trí, mà bằng cái cảm trên thân thể.
+          </p>
+        </div>
         <div>
           <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>tuần-du ký</span>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
@@ -385,11 +396,9 @@ export default function TuanDu05Page() {
             ))}
           </div>
         ))}
-        <div style={{ borderLeft: "2px solid var(--color-cham-dem)", padding: "1.6rem 1.9rem" }}>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.65, color: "var(--color-ink)", margin: 0 }}>
-            &ldquo;Khi cùng nhau đi, cùng nhau dừng, cùng nhau cảm, tuần-du mới thực sự trở thành một dòng chảy. Và trong dòng chảy ấy, mỗi người đều được nâng đỡ một cách rất tự nhiên.&rdquo;
-          </p>
-        </div>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.3rem, 3vw, 1.75rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "2.5rem 0", textAlign: "center" }}>
+          &ldquo;Khi cùng nhau đi, cùng nhau dừng, cùng nhau cảm, tuần-du mới thực sự trở thành một dòng chảy. Và trong dòng chảy ấy, mỗi người đều được nâng đỡ một cách rất tự nhiên.&rdquo;
+        </p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3.5rem" }}>

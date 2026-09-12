@@ -111,7 +111,8 @@ export const days: Day[] = [
       { time: "15:30", activity: "Nhà thờ Bác Trạch, Vân Trường" },
       { time: "16:45", activity: "Về thành phố Thái Bình" },
       { time: "17:30", activity: "Nhận phòng Tru by Hilton Thái Bình" },
-      { time: "19:00", activity: "Cơm chiều · vòng-trà" },
+      { time: "19:00", activity: "Cơm chiều" },
+      { time: "21:00", activity: "vòng-trà" },
     ],
   },
   {

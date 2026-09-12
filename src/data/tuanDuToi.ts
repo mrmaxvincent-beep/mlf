@@ -137,6 +137,7 @@ export const days: Day[] = [
       { time: "16:00", activity: "Nhận phòng Ngọa Vân Zen Village — nghỉ ngơi" },
       { time: "18:30", activity: "Cơm chay" },
       { time: "20:00", activity: "vòng-trà" },
+      { time: "22:00", activity: "ngủ" },
     ],
   },
   {
@@ -161,6 +162,7 @@ export const days: Day[] = [
       { time: "chiều", activity: "Xuống núi — cáp treo" },
       { time: "18:30", activity: "Cơm chiều" },
       { time: "20:00", activity: "vòng-trà" },
+      { time: "22:00", activity: "ngủ" },
     ],
   },
   {

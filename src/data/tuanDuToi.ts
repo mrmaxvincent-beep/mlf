@@ -133,7 +133,8 @@ export const days: Day[] = [
       { time: "12:30", activity: "Cơm trưa tại thành phố Hải Phòng" },
       { time: "13:30", activity: "Lên đường đi Đông Triều" },
       { time: "16:00", activity: "Nhận phòng Ngọa Vân Zen Village — nghỉ ngơi" },
-      { time: "18:30", activity: "Cơm chay · vòng-trà" },
+      { time: "18:30", activity: "Cơm chay" },
+      { time: "20:00", activity: "vòng-trà" },
     ],
   },
   {

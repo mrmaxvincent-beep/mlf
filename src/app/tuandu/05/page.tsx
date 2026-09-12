@@ -447,7 +447,7 @@ export default function TuanDu05Page() {
           </div>
         ))}
       </div>
-      <p className="wrap" style={{ maxWidth: 450, fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.4rem, 3.6vw, 2.1rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 auto 5rem", textAlign: "center" }}>
+      <p className="wrap" style={{ maxWidth: 900, fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(0.7rem, 1.8vw, 1.05rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 auto 5rem", textAlign: "center" }}>
         &ldquo;Khi cùng nhau đi, cùng nhau dừng, cùng nhau cảm, tuần-du mới thực sự trở thành một dòng chảy. Và trong dòng chảy ấy, mỗi người đều được nâng đỡ một cách rất tự nhiên.&rdquo;
       </p>
 

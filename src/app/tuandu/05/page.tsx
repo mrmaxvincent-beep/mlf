@@ -239,7 +239,7 @@ export default function TuanDu05Page() {
 
       <div style={{ marginBottom: "5rem" }}>
         <div>
-          <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="2048/1194" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" />
+          <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="2048/1075" objectPosition="top" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" />
         </div>
         <span className="wrap" style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginTop: "0.7rem" }}>
           góc nhìn từ Ngọa Vân Am

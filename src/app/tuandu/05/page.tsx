@@ -395,14 +395,14 @@ export default function TuanDu05Page() {
       </Reveal>
       <div className="wrap" style={{ marginBottom: "1.5rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
             Người tham gia tự sắp xếp vé máy bay đến và rời Hà Nội theo lịch trình. Điểm đón đoàn tại sân bay Nội Bài lúc 08:00 sáng 26.03.2027 (đề xuất chuyến bay Vietjet 05:00, Vietravel Airlines 05:30, Vietnam Airlines 06:00) · trả đoàn tại sân bay Nội Bài lúc 19:00 tối 30.03.2027 (đề xuất bay chuyến từ 20:30).
           </p>
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
             Nếu không nhận đủ tối thiểu 7 người tham gia, BTC sẽ hoãn hoặc hủy chương trình. Chi tiết lịch trình, vật dụng cần chuẩn bị, bảo hiểm và các cập nhật sẽ được gửi trong nhóm chat chung (Zalo) sau khi hoàn tất đăng ký.
           </p>
         </div>

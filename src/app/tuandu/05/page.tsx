@@ -376,7 +376,7 @@ export default function TuanDu05Page() {
         ))}
         <div style={{ borderLeft: "2px solid var(--color-cham-dem)", padding: "1.6rem 1.9rem" }}>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.65, color: "var(--color-ink)", margin: 0 }}>
-            Khi cùng nhau đi, cùng nhau dừng, cùng nhau cảm, tuần-du mới thực sự trở thành một dòng chảy. Và trong dòng chảy ấy, mỗi người đều được nâng đỡ một cách rất tự nhiên.
+            &ldquo;Khi cùng nhau đi, cùng nhau dừng, cùng nhau cảm, tuần-du mới thực sự trở thành một dòng chảy. Và trong dòng chảy ấy, mỗi người đều được nâng đỡ một cách rất tự nhiên.&rdquo;
           </p>
         </div>
       </div>

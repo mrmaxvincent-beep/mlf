@@ -102,7 +102,7 @@ export const days: Day[] = [
     ],
     rows: [
       { time: "06:30", activity: "Đò đầm Vân Long lúc sương chưa tan" },
-      { time: "7:30", activity: "Ăn sáng, trả phòng" },
+      { time: "07:30", activity: "Ăn sáng, trả phòng" },
       { time: "09:00", activity: "Di chuyển" },
       { time: "09:30", activity: "Đan viện Châu Sơn, Nho Quan" },
       { time: "10:00", activity: "buổi cảm tâm 1 · biết & cảm", highlight: true },

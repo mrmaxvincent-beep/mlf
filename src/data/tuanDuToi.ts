@@ -180,7 +180,7 @@ export const days: Day[] = [
       { time: "12:30", activity: "Lên đường" },
       { time: "14:00", activity: "Làng gốm Phù Lãng, Quế Võ" },
       { time: "15:00", activity: "Lên đường đi Song Tháp" },
-      { time: "15:45", activity: "Nhà anh Thuận, Song Tháp — cơm chiều làng quê Bắc Bộ" },
+      { time: "16:00", activity: "Nhà anh Thuận, Song Tháp — cơm chiều làng quê Bắc Bộ" },
       { time: "17:45", activity: "Ra sân bay Nội Bài" },
       { time: "19:00", activity: "Có mặt tại sân bay" },
     ],

@@ -96,12 +96,9 @@ export const days: Day[] = [
     n: "02",
     title: "hai gương mặt",
     desc: [
-      "Sáng, Đan viện Châu Sơn ở Nho Quan. Một tu viện Xitô bằng gạch đỏ trần, đứng giữa cánh đồng. Các đan sĩ ở đây sống đời chiêm niệm và giữ thinh lặng — không phải vài ngày, mà cả đời. Họ dậy từ rất sớm, hát kinh, lao động, rồi lại im.",
-      "Chúng ta là khách. Được phép ngồi trong khuôn viên, nhưng không được phép làm ồn cái im của người khác.",
-      "Đây có lẽ là buổi lạ nhất của cả chuyến với phần lớn mọi người — ngồi trong một sự thinh lặng mình không hiểu, do một tín ngưỡng mình không theo, giữ bởi những người mình không quen.",
-      "Bạn đang ngồi giữa một sự im lặng được giữ bởi một đức tin không phải của bạn. Bạn không hiểu kinh họ đọc, không biết họ tin gì. Nhưng cái lặng thì bạn cảm được.",
-      "Vậy cái bạn đang cảm là gì? Là sự im lặng của họ, hay là sự im lặng của chính bạn — thứ vốn vẫn ở đó, chỉ chờ một nơi đủ tĩnh để lộ ra?",
-      "Chiều, sang nhà thờ Bác Trạch ở Tiền Hải — một thánh đường đồ sộ vươn lên giữa đồng lúa ven biển. Từ sự thinh lặng của vài chục đan sĩ sang niềm tin rực rỡ của cả một làng. Cùng một đạo, hai gương mặt.",
+      "Sáng, Đan viện Châu Sơn ở Nho Quan. Một tu viện Xitô bằng gạch đỏ trần. Các đan sĩ ở đây sống đời chiêm niệm và giữ thinh lặng.",
+      "Đây có lẽ là buổi lạ nhất của cả chuyến với phần lớn mọi người — ngồi trong một sự thinh lặng mình không hiểu, một sự im lặng được giữ bởi một đức tin. Bạn không hiểu kinh họ đọc, không biết họ tin gì. Nhưng cái lặng thì bạn cảm được.",
+      "Chiều, sang nhà thờ Bác Trạch ở Tiền Hải — một thánh đường đồ sộ vươn lên giữa đồng lúa ven biển. Từ sự thinh lặng của người đan sĩ sang niềm tin rực rỡ của cả một làng.",
     ],
     rows: [
       { time: "06:30", activity: "Đò đầm Vân Long lúc sương chưa tan" },

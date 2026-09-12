@@ -323,28 +323,68 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">điều làm nên hành trình này</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <div style={{ marginBottom: "1.75rem", paddingBottom: "1.75rem", borderBottom: "1px solid var(--color-mist)" }}>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>vòng-trà</span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Mỗi cuối ngày là một vòng-trà. Mọi người cùng ngồi xuống — nghe kể chuyện, nhìn lại một ngày vừa đi qua: đã đến những nơi nào, điều gì đã chạm tới mình, đã thấy ra điều gì. Rồi cùng ở yên trong đó, để cảm nhận rõ hơn những gì tâm mình vừa mở ra.
-          </p>
-        </div>
-        <div style={{ marginBottom: "1.75rem", paddingBottom: "1.75rem", borderBottom: "1px solid var(--color-mist)" }}>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>buổi cảm tâm</span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.9rem", textAlign: "justify" }}>
-            Hành trình có 3 buổi ngồi lại với nhau, gọi là buổi cảm tâm.
-          </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Để hiểu hơn tâm mình, và đặc biệt là cảm được tâm mình đang ở đâu, ngay trong lúc nó đang ở đó: khi chen giữa dòng người lễ bái, khi đứng trong một đức tin không phải của mình, khi chân mỏi trên một con dốc dài.
-          </p>
-        </div>
-        <div>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>tuần-du ký</span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Một quyển sách nhỏ được biên soạn riêng cho chuyến đi — giới thiệu câu chuyện văn hóa và lịch sử của những nơi đi qua, từ chùa Hương, Châu Sơn, chùa Keo, đến am Ngọa Vân và Thiền phái Trúc Lâm. Bên trong cũng có những gợi ý để cảm nhận, thực hành và ghi chép trong từng ngày của hành trình.
-          </p>
-        </div>
+      <div className="wrap" style={{ marginBottom: "5rem" }}>
+        {[
+          {
+            n: "01",
+            label: "vòng-trà",
+            body: [
+              "Mỗi cuối ngày là một vòng-trà. Mọi người cùng ngồi xuống — nghe kể chuyện, nhìn lại một ngày vừa đi qua: đã đến những nơi nào, điều gì đã chạm tới mình, đã thấy ra điều gì. Rồi cùng ở yên trong đó, để cảm nhận rõ hơn những gì tâm mình vừa mở ra.",
+            ],
+          },
+          {
+            n: "02",
+            label: "buổi cảm tâm",
+            body: [
+              "Hành trình có 3 buổi ngồi lại với nhau, gọi là buổi cảm tâm.",
+              "Để hiểu hơn tâm mình, và đặc biệt là cảm được tâm mình đang ở đâu, ngay trong lúc nó đang ở đó: khi chen giữa dòng người lễ bái, khi đứng trong một đức tin không phải của mình, khi chân mỏi trên một con dốc dài.",
+            ],
+          },
+          {
+            n: "03",
+            label: "tuần-du ký",
+            body: [
+              "Một quyển sách nhỏ được biên soạn riêng cho chuyến đi — giới thiệu câu chuyện văn hóa và lịch sử của những nơi đi qua, từ chùa Hương, Châu Sơn, chùa Keo, đến am Ngọa Vân và Thiền phái Trúc Lâm. Bên trong cũng có những gợi ý để cảm nhận, thực hành và ghi chép trong từng ngày của hành trình.",
+            ],
+          },
+        ].map((item, i) => (
+          <div
+            key={item.n}
+            style={{
+              display: "flex",
+              gap: "2.25rem",
+              alignItems: "flex-start",
+              flexWrap: "wrap",
+              paddingTop: i === 0 ? 0 : "2.75rem",
+              marginTop: i === 0 ? 0 : "2.75rem",
+              borderTop: i === 0 ? "none" : "1px solid var(--color-mist)",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-serif)",
+                fontStyle: "italic",
+                fontWeight: 300,
+                fontSize: "clamp(2.6rem, 6vw, 3.6rem)",
+                lineHeight: 1,
+                color: "var(--color-mist)",
+                minWidth: "3.5rem",
+              }}
+            >
+              {item.n}
+            </span>
+            <div style={{ flex: "1 1 320px", maxWidth: "52ch" }}>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
+                {item.label}
+              </span>
+              {item.body.map((p) => (
+                <p key={p} style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.9rem", textAlign: "justify" }}>
+                  {p}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* ============ THÔNG TIN VÀ ĐĂNG KÝ ============ */}

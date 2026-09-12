@@ -139,7 +139,7 @@ export const days: Day[] = [
   },
   {
     n: "04",
-    title: "cư trần lạc đạo",
+    title: "mây nằm ngủ",
     desc: [
       "Sáu giờ sáng, cả đoàn bắt đầu đi bộ lên am Ngọa Vân. Có cáp treo. Chúng ta không đi cáp treo hôm nay.",
       "Đường hành hương cổ đi qua Đô Kiệu, qua rừng thông Thông Đàn nơi còn hai ngôi tháp đá, rồi lên dốc đá. Chừng ba tiếng, trong im lặng, không ai nói gì với ai.",

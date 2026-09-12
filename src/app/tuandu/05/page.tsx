@@ -24,7 +24,6 @@ import {
   days,
   stays,
   practical,
-  includes,
   milestones,
   notes,
   refunds,
@@ -300,16 +299,6 @@ export default function TuanDu05Page() {
             ) : null}
           </div>
         ))}
-      </div>
-      <div className="wrap" style={{ marginBottom: "2rem" }}>
-        <div style={{ border: "1px solid var(--color-mist)", padding: "1.75rem 2rem" }}>
-          {includes.map((i) => (
-            <p key={i} style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.45rem", paddingLeft: "1rem", position: "relative" }}>
-              <span style={{ position: "absolute", left: 0, color: "var(--color-stone)" }}>—</span>
-              {i}
-            </p>
-          ))}
-        </div>
       </div>
       <div className="wrap" style={{ marginBottom: "3rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>

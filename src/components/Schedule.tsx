@@ -3,7 +3,7 @@ export type ScheduleRow = { time: string; activity: string; highlight?: boolean 
 /** Daily itinerary table — used on tuần-du and retreat "lịch trình" pages. */
 export function Schedule({ rows }: { rows: ScheduleRow[] }) {
   return (
-    <div style={{ border: "1px solid var(--color-mist)" }}>
+    <div style={{ border: "1px solid var(--color-mist)", background: "var(--color-cotton)" }}>
       {rows.map((r, i) => (
         <div
           key={i}
@@ -14,7 +14,7 @@ export function Schedule({ rows }: { rows: ScheduleRow[] }) {
             gap: "1rem",
             padding: "0.6rem 1.1rem",
             borderBottom: i < rows.length - 1 ? "1px solid var(--color-mist)" : "none",
-            background: r.highlight ? "var(--color-cotton)" : "transparent",
+            background: r.highlight ? "var(--color-paper)" : "transparent",
           }}
         >
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.04em", color: "var(--color-ink)" }}>

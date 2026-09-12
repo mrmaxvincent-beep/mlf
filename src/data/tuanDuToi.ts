@@ -1,6 +1,7 @@
 import type { Day } from "@/components/DayItinerary";
 
 export const heroMeta = [
+  { label: "thời gian", value: "26.03 – 30.03.2027" },
   { label: "hành trình", value: "5 ngày · 4 đêm" },
   { label: "đi qua", value: "Hà Nội · Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh" },
   { label: "số lượng", value: "tối đa 10 người" },
@@ -217,7 +218,7 @@ export const milestones = [
   { when: "sau khi đủ số lượng", what: "BTC xác nhận chuyến đi và gửi hướng dẫn đặt vé đến Nội Bài" },
   { when: "trước 2 tuần", what: "gửi các thông tin cần thiết cho hành trình" },
   { when: "trước 1 tuần", what: "gặp mặt online để làm quen, hướng dẫn chuẩn bị và các phương án dự phòng" },
-  { when: "ngày 0", what: "hội ngộ tại sân bay Nội Bài, 08:00" },
+  { when: "26.03.2027", what: "hội ngộ tại sân bay Nội Bài, 08:00" },
 ];
 
 export const notes = [

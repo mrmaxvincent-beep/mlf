@@ -33,7 +33,7 @@ import {
 
 export const metadata: Metadata = {
   title: "tuần-du tới · chuông vọng hai bờ",
-  description: "tuần-du 05 · chuông vọng hai bờ — 5 ngày 4 đêm qua Hà Nội, Ninh Bình, Thái Bình, Hải Phòng, Quảng Ninh, Hải Dương, Bắc Ninh. Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.",
+  description: "tuần-du 05 · chuông vọng hai bờ — 26.03 – 30.03.2027, 5 ngày 4 đêm qua Hà Nội, Ninh Bình, Thái Bình, Hải Phòng, Quảng Ninh, Hải Dương, Bắc Ninh. Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.",
 };
 
 const bodyP: React.CSSProperties = {
@@ -61,7 +61,7 @@ export default function TuanDu05Page() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
         <Breadcrumb trail={[{ label: "tuần-du", href: routes.tuanDu }, { label: "tuần-du tới" }]} />
-        <span className="eyebrow">tuần-du 05 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
+        <span className="eyebrow">26.03 – 30.03.2027 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           chuông vọng hai bờ
         </h1>
@@ -298,7 +298,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "3rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
-            Người tham gia tự sắp xếp vé máy bay đến và rời Hà Nội theo lịch trình. Điểm đón đoàn tại sân bay Nội Bài vào 08:00 sáng ngày đầu tiên · trả đoàn tại sân bay Nội Bài lúc 19:00 tối ngày cuối cùng. Lịch cụ thể sẽ được gửi sau khi xác nhận đủ số lượng.
+            Người tham gia tự sắp xếp vé máy bay đến và rời Hà Nội theo lịch trình. Điểm đón đoàn tại sân bay Nội Bài lúc 08:00 sáng 26.03.2027 · trả đoàn tại sân bay Nội Bài lúc 19:00 tối 30.03.2027.
           </p>
         </div>
       </div>
@@ -442,7 +442,7 @@ export default function TuanDu05Page() {
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.5, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
           chuông ngân giữa cõi, người về giữa tâm.
         </h2>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>5 ngày · 4 đêm · tối đa 10 người</p>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>26.03 – 30.03.2027 · tối đa 10 người</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
           <span className="cta-btn cta-btn--solid">
             đăng ký tuần-du 05 <span className="ar">→</span>

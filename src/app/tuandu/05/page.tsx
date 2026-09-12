@@ -64,7 +64,7 @@ export default function TuanDu05Page() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           chuông vọng hai bờ
         </h1>
-        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-stone-alt)" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-ink)" }}>
           chuông ngân giữa cõi, người về giữa tâm.
         </span>
       </div>

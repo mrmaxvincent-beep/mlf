@@ -510,15 +510,10 @@ details[open] > summary .acc-icon {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-mist) transparent;
+  scrollbar-width: none;
 }
 .horiz-gallery::-webkit-scrollbar {
-  height: 5px;
-}
-.horiz-gallery::-webkit-scrollbar-thumb {
-  background: var(--color-mist);
-  border-radius: 999px;
+  display: none;
 }
 .horiz-gallery-item {
   flex: 0 0 auto;

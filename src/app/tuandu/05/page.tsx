@@ -498,7 +498,7 @@ export default function TuanDu05Page() {
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.5, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
           chuông vọng hai bờ
         </h2>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>26.03 – 30.03.2027 · tối đa 10 người</p>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>26.03 – 30.03.2027</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
           <span className="cta-btn cta-btn--solid">
             đăng ký tuần-du 05 <span className="ar">→</span>

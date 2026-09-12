@@ -258,7 +258,7 @@ export default function TuanDu05Page() {
       </Reveal>
       <div className="wrap" style={{ marginBottom: "5rem" }}>
         {days.map((d, i) => (
-          <DayItinerary key={d.n} day={d} first={i === 0} />
+          <DayItinerary key={d.n} day={d} first={i === 0} total={days.length} />
         ))}
       </div>
 

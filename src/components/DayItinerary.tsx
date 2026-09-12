@@ -14,12 +14,17 @@ export type Day = {
 };
 
 /** One day of a multi-day itinerary (tuần-du / retreat "lịch trình" pages): number, theme, title, prose, optional poem, schedule. */
-export function DayItinerary({ day, first }: { day: Day; first?: boolean }) {
+export function DayItinerary({ day, first, total }: { day: Day; first?: boolean; total?: number }) {
   return (
-    <Reveal className="day-block" style={{ borderTop: first ? "none" : "1px solid var(--color-mist)", paddingTop: first ? 0 : "3.5rem", paddingBottom: "3.5rem" }}>
-      <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.55rem" }}>
-        ngày {day.n}
-      </span>
+    <Reveal className="day-block" style={{ borderTop: first ? "none" : "2px solid var(--color-ink)", paddingTop: first ? 0 : "4rem", paddingBottom: "3.5rem" }}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: "1.1rem", marginBottom: "1.1rem" }}>
+        <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 6vw, 3.2rem)", lineHeight: 1, color: "var(--color-cham-dem)" }}>
+          {day.n}
+        </span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          ngày {day.n}{total ? ` / ${String(total).padStart(2, "0")}` : ""}
+        </span>
+      </div>
       {day.tam ? (
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", color: "var(--color-cham-dem)", marginBottom: "0.4rem" }}>{day.tam}</span>
       ) : null}

@@ -77,11 +77,10 @@ export const days: Day[] = [
     tam: "cái mình đến để xin",
     title: "giữa dòng người",
     desc: [
-      "Buổi sáng ở chùa Hương. Đây là nơi đông nhất trong cả hành trình, và điều đó là cố ý. Suối Yến, đò gỗ, dòng người, khói nhang, tiếng rao, tiếng khấn. Hàng vạn người mỗi năm về đây mang theo một điều muốn xin.",
-      "Chúng ta cũng đi trong dòng người đó. Không đứng ngoài, không nhìn xuống.",
-      "Chiều, về đầm Vân Long — nơi chiều xuống thì mặt nước phẳng như không có gì từng xảy ra. Từ chỗ hàng vạn tiếng khấn sang chỗ không một tiếng nào, chỉ trong một buổi.",
-      "Sáng nay, giữa dòng người ở chùa Hương, có lúc nào bạn thấy mình đang muốn một điều gì đó không? Điều đó là gì — và nó có phải là điều bạn thiếu thật không?",
-      "Chúng ta thường biết rất rõ mình muốn gì. Rất ít khi biết mình thiếu gì. Hai cái đó không phải lúc nào cũng là một.",
+      "Buổi sáng ở chùa Hương. Đây là nơi đông nhất trong cả hành trình. Suối Yến, đò gỗ, dòng người, khói nhang, tiếng rao, tiếng khấn. Hàng vạn người mỗi năm về đây mang theo một điều muốn xin.",
+      "Chúng ta đi giữa dòng người ấy.",
+      "Chiều, về đầm Vân Long — mặt nước phẳng lại. Từ chỗ hàng vạn tiếng khấn sang chỗ không một tiếng nào.",
+      "Chúng ta thường biết rất rõ mình muốn gì nhưng ít khi biết mình thiếu gì. Hai cái đó không phải lúc nào cũng là một.",
     ],
     rows: [
       { time: "08:00", activity: "Đón tại sân bay Nội Bài" },

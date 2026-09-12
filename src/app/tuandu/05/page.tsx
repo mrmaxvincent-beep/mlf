@@ -59,23 +59,23 @@ export default function TuanDu05Page() {
     <>
       <Header />
 
-      <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
+      <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1.5rem" }}>
         <Breadcrumb trail={[{ label: "tuần-du", href: routes.tuanDu }, { label: "tuần-du tới" }]} />
         <span className="eyebrow">26.03 – 30.03.2027 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           chuông vọng hai bờ
         </h1>
-        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-stone-alt)", marginBottom: "2rem" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-stone-alt)" }}>
           chuông ngân giữa cõi, người về giữa tâm.
         </span>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem" }}>
-          {heroMeta.map((m) => (
-            <div key={m.label} style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-              <span style={label}>{m.label}</span>
-              <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", lineHeight: 1.4, color: "var(--color-ink)" }}>{m.value}</span>
-            </div>
-          ))}
-        </div>
+      </div>
+      <div style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", padding: "1.5rem 1.5rem 1rem" }}>
+        {heroMeta.map((m) => (
+          <div key={m.label} style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+            <span style={label}>{m.label}</span>
+            <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", lineHeight: 1.4, color: "var(--color-ink)" }}>{m.value}</span>
+          </div>
+        ))}
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>

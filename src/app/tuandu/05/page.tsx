@@ -428,7 +428,7 @@ export default function TuanDu05Page() {
           chú ý
         </span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
+      <div className="wrap" style={{ marginBottom: "5rem" }}>
         {notes.map((n, i) => (
           <div key={n.title} style={{ borderTop: i === 0 ? "1px solid var(--color-mist)" : "none", borderBottom: "1px solid var(--color-mist)" }}>
             <details>

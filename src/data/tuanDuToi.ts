@@ -137,7 +137,7 @@ export const days: Day[] = [
       { time: "16:00", activity: "Nhận phòng Ngọa Vân Zen Village — nghỉ ngơi" },
       { time: "18:30", activity: "Cơm chay" },
       { time: "20:00", activity: "vòng-trà" },
-      { time: "22:00", activity: "ngủ" },
+      { time: "22:00", activity: "Ngủ" },
     ],
   },
   {
@@ -162,7 +162,7 @@ export const days: Day[] = [
       { time: "chiều", activity: "Xuống núi — cáp treo" },
       { time: "18:30", activity: "Cơm chiều" },
       { time: "20:00", activity: "vòng-trà" },
-      { time: "22:00", activity: "ngủ" },
+      { time: "22:00", activity: "Ngủ" },
     ],
   },
   {
@@ -171,9 +171,9 @@ export const days: Day[] = [
     desc: [
       "Năm giờ sáng, đi cáp treo lên đỉnh Bàn Cờ đón bình minh. Nhìn mặt trời lên trên một ngọn núi mà mây đã chọn nằm lại.",
       "Rồi xuống núi, và rời đi.",
-      "Đoàn đến chùa Thanh Mai ở Chí Linh — nơi Pháp Loa, vị tổ thứ hai của Thiền phái Trúc Lâm, viên tịch. Hôm qua ta ở chỗ thầy nằm xuống. Nay ta đến chỗ trò nằm xuống.",
+      "Đoàn đến chùa Thanh Mai ở Chí Linh - nơi Pháp Loa, vị tổ thứ hai của Thiền phái Trúc Lâm, viên tịch. Hôm qua ta ở chỗ thầy nằm xuống. Nay ta đến chỗ trò nằm xuống.",
       "Trưa, ghé làng gốm Phù Lãng. Ăn cơm chay giữa làng, xem lò, xem đất được nặn thành hình rồi đưa vào lửa.",
-      "Chiều, về Song Tháp, Bắc Ninh — nhà anh Thuận, một người trong nhà mộc. Cơm chiều làng quê Bắc Bộ, nấu ở bếp nhà.",
+      "Chiều, về Song Tháp, Bắc Ninh - nhà Thuận, một người trong nhà mộc. Cơm chiều làng quê Bắc Bộ, nấu ở bếp nhà.",
       "Rồi ra sân bay.",
     ],
     rows: [

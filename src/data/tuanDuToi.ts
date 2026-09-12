@@ -129,7 +129,7 @@ export const days: Day[] = [
       { time: "06:30", activity: "Ăn sáng, trả phòng" },
       { time: "08:00", activity: "Chùa Keo, Vũ Thư — gác chuông gỗ ba tầng, thế kỷ 17" },
       { time: "08:30", activity: "buổi cảm tâm 2 — thân thể là con đường", highlight: true },
-      { time: "09:00", activity: "Lên đường, qua cầu Nghìn" },
+      { time: "10:30", activity: "Lên đường, qua cầu Nghìn" },
       { time: "11:15", activity: "Cơm trưa tại thành phố Hải Phòng" },
       { time: "12:45", activity: "Lên đường đi Đông Triều" },
       { time: "14:45", activity: "Nhận phòng Ngọa Vân Zen Village — chiều để trống, không chương trình" },

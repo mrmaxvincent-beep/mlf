@@ -279,7 +279,7 @@ export default function TuanDu05Page() {
               </div>
             </div>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.3rem", marginBottom: "0.3rem" }}>{s.place}</span>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.7rem" }}>{s.meta}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.7rem", minHeight: "2.4em", lineHeight: 1.2 }}>{s.meta}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{s.desc}</p>
           </div>
         ))}

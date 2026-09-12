@@ -336,7 +336,7 @@ export default function TuanDu05Page() {
             Hành trình có 3 buổi ngồi lại với nhau, gọi là buổi cảm tâm.
           </p>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Điều chúng ta đi tìm không phải một hiểu biết mới về tâm. Hiểu biết thì đọc sách cũng có. Cái khó hơn và cũng là cái duy nhất mang về được là cảm được tâm mình đang ở đâu, ngay trong lúc nó đang ở đó: khi chen giữa dòng người lễ bái, khi đứng trong một đức tin không phải của mình, khi chân mỏi trên một con dốc dài.
+            Để hiểu hơn tâm mình, và đặc biệt là cảm được tâm mình đang ở đâu, ngay trong lúc nó đang ở đó: khi chen giữa dòng người lễ bái, khi đứng trong một đức tin không phải của mình, khi chân mỏi trên một con dốc dài.
           </p>
         </div>
         <div>

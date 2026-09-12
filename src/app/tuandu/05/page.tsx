@@ -211,21 +211,32 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">nơi đến</span>
       </div>
-      <Reveal className="wrap" style={{ marginBottom: "2.5rem" }}>
+      <Reveal className="wrap" style={{ marginBottom: "0.75rem", display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.75rem" }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: 0 }}>
           nơi chạm tâm
         </h2>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          vuốt để đi tiếp →
+        </span>
       </Reveal>
-      <RevealStagger className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.25rem 1.75rem", marginBottom: "5rem" }}>
-        {destinations.map((d) => (
-          <div key={d.place}>
-            <ImagePlaceholder label={`ảnh · ${d.place}`} aspectRatio="4/3" src={d.src} alt={d.place} style={{ marginBottom: "1rem" }} />
-            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-ink)", marginBottom: "0.2rem" }}>{d.place}</span>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{d.location}</span>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{d.desc}</p>
-          </div>
-        ))}
-      </RevealStagger>
+      <Reveal style={{ marginBottom: "5rem" }}>
+        <div
+          className="horiz-gallery"
+          style={{
+            paddingLeft: "max(1.5rem, calc((100vw - 740px) / 2 + 1.5rem))",
+            paddingRight: "1.5rem",
+          }}
+        >
+          {destinations.map((d) => (
+            <div key={d.place} className="horiz-gallery-item">
+              <ImagePlaceholder label={`ảnh · ${d.place}`} aspectRatio="4/3" src={d.src} alt={d.place} style={{ marginBottom: "1rem" }} />
+              <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-ink)", marginBottom: "0.2rem" }}>{d.place}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{d.location}</span>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{d.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Reveal>
 
       <div style={{ marginBottom: "5rem", height: "46vh", minHeight: 300, maxHeight: 460 }}>
         <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="auto" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" style={{ height: "100%" }} />

@@ -499,6 +499,38 @@ details[open] > summary .acc-icon {
     grid-template-columns: 1fr;
   }
 }
+
+/* Horizontal scroll-snap gallery — a swipeable/draggable filmstrip of
+   cards, CSS-only (no JS pinning). Used for "nơi đến" style destination
+   rows where the reader travels through a sequence of stops. */
+.horiz-gallery {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-mist) transparent;
+}
+.horiz-gallery::-webkit-scrollbar {
+  height: 5px;
+}
+.horiz-gallery::-webkit-scrollbar-thumb {
+  background: var(--color-mist);
+  border-radius: 999px;
+}
+.horiz-gallery-item {
+  flex: 0 0 auto;
+  width: 78vw;
+  max-width: 320px;
+  scroll-snap-align: start;
+}
+@media (min-width: 640px) {
+  .horiz-gallery-item {
+    width: 300px;
+  }
+}
+
 .tl-row {
   display: grid;
   grid-template-columns: 9rem 1fr;

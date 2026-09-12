@@ -15,6 +15,7 @@ export function ImagePlaceholder({
   objectFit = "cover",
   objectPosition = "center",
   scale = 1,
+  imgClassName,
 }: {
   label: string;
   aspectRatio?: string;
@@ -24,11 +25,12 @@ export function ImagePlaceholder({
   objectFit?: "cover" | "contain" | "fill" | "scale-down";
   objectPosition?: string;
   scale?: number;
+  imgClassName?: string;
 }) {
   if (src) {
     return (
-      <div style={{ position: "relative", width: "100%", aspectRatio, ...style }}>
-        <Image src={src} alt={alt} fill sizes="(max-width: 640px) 100vw, 50vw" style={{ objectFit, objectPosition, transform: `scale(${scale})` }} />
+      <div style={{ position: "relative", width: "100%", aspectRatio, overflow: "hidden", ...style }}>
+        <Image src={src} alt={alt} fill sizes="(max-width: 640px) 100vw, 50vw" className={imgClassName} style={{ objectFit, objectPosition, transform: `scale(${scale})` }} />
       </div>
     );
   }

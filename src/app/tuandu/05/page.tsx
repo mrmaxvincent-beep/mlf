@@ -78,7 +78,7 @@ export default function TuanDu05Page() {
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "56vh", minHeight: 340, maxHeight: 540 }}>
-        <ImagePlaceholder label="ảnh · suối Yến, chùa Hương" aspectRatio="auto" src="/assets/suoiyen.webp" alt="suối Yến, chùa Hương" style={{ height: "100%" }} />
+        <ImagePlaceholder label="ảnh · suối Yến, chùa Hương" aspectRatio="auto" src="/assets/suoiyen.webp" alt="suối Yến, chùa Hương" style={{ height: "100%" }} imgClassName="kenburns-zoom" />
       </div>
 
       {/* ============ LỜI NGỎ ============ */}
@@ -231,7 +231,7 @@ export default function TuanDu05Page() {
               <ImagePlaceholder label={`ảnh · ${d.place}`} aspectRatio="4/3" src={d.src} alt={d.place} style={{ marginBottom: "1rem" }} />
               <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.2rem", color: "var(--color-ink)", marginBottom: "0.2rem" }}>{d.place}</span>
               <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{d.location}</span>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{d.desc}</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>{d.desc}</p>
             </div>
           ))}
         </div>

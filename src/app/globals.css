@@ -1098,6 +1098,22 @@ details[open] > summary .acc-icon {
 .itin-day--detailed .time-row .activity .detail {
   font-style: italic;
 }
+.kenburns-zoom {
+  animation: kenburns-zoom 16s ease-in-out infinite alternate;
+}
+@keyframes kenburns-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kenburns-zoom {
+    animation: none;
+  }
+}
 .time-row--highlight {
   background: var(--color-cotton);
   padding: 1.4rem;

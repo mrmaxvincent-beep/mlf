@@ -90,6 +90,7 @@ export const days: Day[] = [
       { time: "16:30", activity: "Nhận phòng Toki Vân Long, đầm Vân Long" },
       { time: "18:30", activity: "Cơm chiều" },
       { time: "20:00", activity: "vòng-trà" },
+      { time: "22:00", activity: "Ngủ" },
     ],
   },
   {

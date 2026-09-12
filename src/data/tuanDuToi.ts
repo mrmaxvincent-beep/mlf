@@ -117,7 +117,7 @@ export const days: Day[] = [
   },
   {
     n: "03",
-    title: "trước khi lặng",
+    title: "đường dưới chân",
     desc: [
       "Sáng sớm, chùa Keo ở Vũ Thư. Gác chuông gỗ ba tầng, dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng. Gần bốn trăm năm đứng giữa đồng bằng gió bão.",
       "Hôm qua là gạch đỏ và mái vòm. Hôm nay là gỗ lim và mái cong. Hai cách con người dựng nhà cho cái thiêng — một cái vươn thẳng lên trời, một cái nằm ngang ôm lấy đất.",

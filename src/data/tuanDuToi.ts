@@ -157,6 +157,7 @@ export const days: Day[] = [
       { time: "10:00", activity: "buổi cảm tâm 3 · hiện hữu không cần hiểu", highlight: true },
       { time: "12:00", activity: "Cơm chay" },
       { time: "chiều", activity: "Xuống núi — cáp treo" },
+      { time: "18:30", activity: "Cơm chiều" },
       { time: "20:00", activity: "vòng-trà" },
     ],
   },

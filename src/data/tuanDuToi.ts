@@ -91,7 +91,8 @@ export const days: Day[] = [
       { time: "14:30", activity: "Lên đường về Ninh Bình" },
       { time: "16:30", activity: "Nhận phòng Toki Vân Long, đầm Vân Long" },
       { time: "17:30", activity: "buổi cảm tâm 1 — biết & cảm", highlight: true },
-      { time: "19:00", activity: "Cơm chiều · vòng-trà" },
+      { time: "19:00", activity: "Cơm chiều" },
+      { time: "20:30", activity: "vòng-trà" },
     ],
   },
   {

@@ -348,7 +348,7 @@ export default function TuanDu05Page() {
                 fontWeight: 300,
                 fontSize: "clamp(2.6rem, 6vw, 3.6rem)",
                 lineHeight: 1,
-                color: "var(--color-mist)",
+                color: "var(--color-cham-dem)",
                 minWidth: "3.5rem",
               }}
             >

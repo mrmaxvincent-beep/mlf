@@ -497,7 +497,7 @@ export default function TuanDu05Page() {
               3. huỷ từ phía BTC do không đủ số lượng
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.25rem", textAlign: "justify" }}>
-              Trong trường hợp không nhận đủ tối thiểu 7 người tham gia, BTC sẽ hoãn hoặc huỷ chương trình. BTC sẽ xác nhận chuyến đi lần cuối trước 30 ngày khởi hành. Sau khi nhận xác nhận, người tham gia có thể sắp xếp đặt vé di chuyển đến Hà Nội.
+              Trong trường hợp không nhận đủ tối thiểu số người tham gia, BTC sẽ hoãn hoặc huỷ chương trình. BTC sẽ xác nhận chuyến đi lần cuối trước 30 ngày khởi hành. Sau khi nhận xác nhận, người tham gia có thể sắp xếp đặt vé di chuyển đến Hà Nội.
             </p>
             <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 0.5rem" }}>Trường hợp huỷ chuyến, toàn bộ chi phí đặt cọc sẽ được BTC trả lại 100% trong vòng 7 ngày sau khi thông báo.</p>

@@ -61,7 +61,7 @@ export default function TuanDu05Page() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1.5rem" }}>
         <Breadcrumb trail={[{ label: "tuần-du", href: routes.tuanDu }, { label: "tuần-du tới" }]} />
-        <span className="eyebrow">26.03 – 30.03.2027 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
+        <span className="eyebrow">26.03 – 30.03.2027</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           chuông vọng đôi bờ
         </h1>

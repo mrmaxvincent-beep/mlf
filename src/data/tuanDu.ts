@@ -26,6 +26,7 @@ export const kyList = [
   { num: "02", title: "qua miền tư lự", places: "Huế", status: "đã đi qua", statusColor: "var(--color-stone)" },
   { num: "03", title: "một nẻo Trúc Lâm", places: "Quảng Ninh · Bắc Giang · Hải Dương · Hưng Yên  ·  Bắc Ninh", status: "đã đi qua", statusColor: "var(--color-stone)" },
   { num: "04", title: "a pause in Saigon", places: "Sài Gòn", status: "ĐÃ HẾT CHỖ", statusColor: "var(--color-cham-dem)" },
+  { num: "05", title: "chuông vọng đôi bờ", places: "Hà Nội · Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh", status: "ĐÃ MỞ ĐĂNG KÝ", statusColor: "var(--color-cham-dem)" },
 ];
 
 export const testimonials = [

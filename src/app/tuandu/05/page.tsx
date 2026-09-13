@@ -474,8 +474,7 @@ export default function TuanDu05Page() {
               </div>
             ))}
             <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem", marginTop: "1.5rem" }}>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 0.5rem" }}>Người tham gia có thể chuyển suất cho người khác (thông báo trước ít nhất 7 ngày).</p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>Có thể bảo lưu chi phí để tham gia chuyến khác — áp dụng cho các trường hợp huỷ từ 30 ngày trở lên.</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>Người tham gia có thể chuyển suất cho người khác (thông báo trước ít nhất 7 ngày).</p>
             </div>
           </div>
           <div style={{ borderTop: "1px solid var(--color-mist)", paddingTop: "2.5rem", marginBottom: "2.5rem" }}>

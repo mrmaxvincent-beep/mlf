@@ -390,7 +390,10 @@ export default function TuanDu05Page() {
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem" }}>
-        <Accordion label="về chi phí">
+        <div style={{ border: "1px solid var(--color-mist)", background: "var(--color-paper)", padding: "1.75rem 2rem" }}>
+          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.9rem" }}>
+            về chi phí
+          </span>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
             Đây là một chuyến đi riêng, không phải tour thương mại có giá cố định, mà là một hành trình nhỏ nơi cả đoàn cùng chia sẻ chi phí tổ chức với nhau. Vì vậy chi phí mỗi người đóng sẽ gắn với số lượng người tham gia thật sự của chuyến, chứ không phải một con số cố định từ đầu — đoàn đông thì phần chi phí chung (xe, đội tổ chức, các khoản vận hành khác) được san sẻ cho nhiều người hơn nên mỗi người nhẹ hơn; đoàn ít người thì phần đó dồn lại trên số người ít hơn.
           </p>
@@ -400,7 +403,7 @@ export default function TuanDu05Page() {
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
             Để bạn có thể đăng ký sớm mà không phải chờ đến sát ngày mới biết chi phí cụ thể, bạn đóng trước ở mức 13.000.000đ khi đăng ký. Đến ngày 05.03.2027, khi số lượng người tham gia được chốt lại, nếu đoàn cuối cùng chỉ đạt 6–8 người thì mình sẽ báo lại và bạn đóng thêm phần chênh lệch trước ngày khởi hành; còn nếu đoàn đủ 9–10 người, mức bạn đã đóng chính là mức cuối cùng, không phát sinh gì thêm.
           </p>
-        </Accordion>
+        </div>
       </div>
       <div className="wrap" style={{ marginBottom: "1rem" }}>
         <span className="eyebrow">các mốc cần lưu ý</span>

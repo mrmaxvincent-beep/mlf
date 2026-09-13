@@ -42,7 +42,7 @@ export const forWhom = [
 ];
 
 export const features = [
-  { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại để cảm tâm mình." },
+  { icon: "3", title: "buổi cảm tâm", desc: "Ba buổi ngồi lại để học cách cảm tâm mình qua những hướng dẫn cụ thể." },
   { icon: "mỗi tối", title: "vòng-trà", desc: "Ngồi lại cuối ngày để xem điều gì ở lại." },
   { icon: "5", title: "không gian linh thiêng", desc: "Chùa, đan viện, nhà thờ, gác chuông, am trên núi." },
 ];

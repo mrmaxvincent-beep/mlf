@@ -150,7 +150,7 @@ export const days: Day[] = [
       "Đường hành hương cổ đi qua Đô Kiệu, qua rừng thông Thông Đàn nơi còn hai ngôi tháp đá, rồi lên dốc đá.",
       "Chân mỏi thì biết là chân mỏi. Thở gấp thì biết là thở gấp. Không có cách nào hiểu con dốc này thay vì leo nó.",
       "Trên đỉnh là một cái am nhỏ. Năm 1308, Trần Nhân Tông — người đã bỏ ngai vàng đi tu — nằm xuống nơi này.",
-      "Chiều xuống núi — mỏi rồi thì cáp treo. Đi lên là chuyện của ý chí, đi xuống là chuyện của đầu gối; không có gì phải chứng minh.",
+      "Chiều xuống núi, mỏi rồi thì cáp treo. Đi lên là chuyện của ý chí, đi xuống là chuyện của đầu gối; không có gì phải chứng minh.",
     ],
     poem: ["Cư trần lạc đạo thả tùy duyên", "Cơ tắc xan hề khốn tắc miên"],
     trans: ["Ở đời vui đạo cứ tùy duyên", "Đói thì ăn, mệt thì ngủ"],

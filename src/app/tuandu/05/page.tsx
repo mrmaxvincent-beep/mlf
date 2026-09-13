@@ -31,8 +31,8 @@ import {
 } from "@/data/tuanDuToi";
 
 export const metadata: Metadata = {
-  title: "tuần-du tới · chuông vọng hai bờ",
-  description: "tuần-du 05 · chuông vọng hai bờ — 26.03 – 30.03.2027, 5 ngày 4 đêm qua Hà Nội, Ninh Bình, Thái Bình, Hải Phòng, Quảng Ninh, Hải Dương, Bắc Ninh. Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.",
+  title: "tuần-du tới · chuông vọng đôi bờ",
+  description: "tuần-du 05 · chuông vọng đôi bờ — 26.03 – 30.03.2027, 5 ngày 4 đêm qua Hà Nội, Ninh Bình, Thái Bình, Hải Phòng, Quảng Ninh, Hải Dương, Bắc Ninh. Đi giữa hai tiếng chuông, để nghe cái lặng ở sau cả hai.",
 };
 
 const bodyP: React.CSSProperties = {
@@ -62,7 +62,7 @@ export default function TuanDu05Page() {
         <Breadcrumb trail={[{ label: "tuần-du", href: routes.tuanDu }, { label: "tuần-du tới" }]} />
         <span className="eyebrow">26.03 – 30.03.2027 · <span style={{ color: "var(--color-cham-dem)" }}>sắp diễn ra</span></span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
-          chuông vọng hai bờ
+          chuông vọng đôi bờ
         </h1>
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.6, color: "var(--color-ink)" }}>
           chuông ngân giữa cõi, người về giữa tâm.
@@ -498,7 +498,7 @@ export default function TuanDu05Page() {
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.6rem, 3.6vw, 2.2rem)", lineHeight: 1.5, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
-          chuông vọng hai bờ
+          chuông vọng đôi bờ
         </h2>
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>26.03 – 30.03.2027</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>

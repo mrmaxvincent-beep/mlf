@@ -16,7 +16,7 @@ export const loiNgo = [
   "Hai nơi ấy không có gì chung. Khác mái, khác tượng, khác kinh, khác cả cách gọi tên điều mình đang hướng về. Người bên này quỳ, người bên kia ngồi kiết già. Nhưng cái thứ đọng lại sau khi âm thanh tắt đi thì — nghe kể — giống nhau đến lạ.",
 ];
 
-export const loiNgoAfterTitle = "chuông vọng hai bờ";
+export const loiNgoAfterTitle = "chuông vọng đôi bờ";
 
 export const loiNgoAfter = [
   "một tiếng chuông chùa. một tiếng chuông nhà thờ.",

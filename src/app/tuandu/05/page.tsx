@@ -374,7 +374,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">thông tin và đăng ký</span>
       </div>
-      <div className="wrap info-grid" style={{ marginBottom: "2.5rem" }}>
+      <div className="wrap info-grid info-grid--3col" style={{ marginBottom: "2.5rem" }}>
         <div>
           <span style={label}>chi phí</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>đang cập nhật</span>

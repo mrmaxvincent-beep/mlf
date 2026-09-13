@@ -485,6 +485,9 @@ details[open] > summary .acc-icon {
   grid-template-columns: 1fr 1fr;
   gap: 2.25rem;
 }
+.info-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
 .stays-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

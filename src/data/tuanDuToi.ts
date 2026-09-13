@@ -179,7 +179,7 @@ export const days: Day[] = [
       "Rồi ra sân bay.",
     ],
     rows: [
-      { time: "05:00", activity: "Cáp treo đón bình minh trên đỉnh Bàn Cờ", highlight: true },
+      { time: "05:00", activity: "Cáp treo đón bình minh trên đỉnh Bàn Cờ, am Ngọa Vân thượng", highlight: true },
       { time: "08:00", activity: "Xuống núi, ăn sáng, trả phòng" },
       { time: "09:15", activity: "Rời Ngọa Vân" },
       { time: "10:15", activity: "Chùa Thanh Mai, Chí Linh — buổi tổng kết dưới rừng phong, ăn cơm tại chùa", highlight: true },

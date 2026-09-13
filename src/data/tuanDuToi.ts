@@ -21,7 +21,7 @@ export const loiNgoAfterTitle = "chuông vọng hai bờ";
 export const loiNgoAfter = [
   "một tiếng chuông chùa. một tiếng chuông nhà thờ.",
   "hai tiếng ấy cất lên từ hai phía, dưới hai mái nhà, gọi bằng hai cái tên. nhưng chuông nào rồi cũng ngân vào trong lòng người và ở đó, chúng thôi khác nhau.",
-  "người về được giữa tâm mình thì không còn phân biệt đạo nào, hình thức nào. chỉ còn lại một điều: cái gì đọng lại nơi tâm.",
+  "người về được giữa tâm mình thì không còn phân biệt đạo nào, hình thức nào. điều được chú ý tới, là cái gì đọng lại nơi tâm.",
   "chuyến đi này đi qua nhiều nơi, để đối cảnh. và từ cảnh, nhận ra cùng một sự thật nơi tâm mình.",
   "chúng ta sẽ đi qua:",
 ];

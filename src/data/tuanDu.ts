@@ -9,7 +9,8 @@ export const ngoLines = [
   "chúng tôi chỉ mong tạo ra",
   "một chuyến đi thật dịu dàng",
   "để thấy mình",
-  "những nhịp điệu biến hoá của đời sống.",
+  "giữa những nhịp điệu biến hoá",
+  "của đời sống.",
 ];
 
 export const scheduleRows = [

@@ -8,7 +8,7 @@ export const ngoLines = [
   "nên khi đặt bút viết ra hai chữ tuần-du,",
   "chúng tôi chỉ mong tạo ra",
   "một chuyến đi thật dịu dàng",
-  "để thấy mình giữa",
+  "để thấy mình",
   "những nhịp điệu biến hoá của đời sống.",
 ];
 

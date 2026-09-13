@@ -76,9 +76,9 @@ export default function TuanDuPage() {
         </div>
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem", background: "rgba(20, 18, 15, 0.32)", padding: "1.5rem" }}>
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 3.5vw, 2.2rem)", color: "#fff", textAlign: "center" }}>
-            tuần-du tới · 04 · a pause in Saigon
+            tuần-du tới · 05 · chuông vọng đôi bờ
           </span>
-          <Link href={routes.tuanDu04} className="cta-btn cta-btn--solid">
+          <Link href={routes.tuanDu05} className="cta-btn cta-btn--solid">
             khám phá <span className="ar">→</span>
           </Link>
         </div>

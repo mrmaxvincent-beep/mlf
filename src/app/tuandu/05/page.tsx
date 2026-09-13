@@ -374,10 +374,11 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">thông tin và đăng ký</span>
       </div>
-      <div className="wrap info-grid info-grid--3col" style={{ marginBottom: "2.5rem" }}>
+      <div className="wrap info-grid info-grid--3col" style={{ marginBottom: "1.5rem" }}>
         <div>
           <span style={label}>chi phí</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>đang cập nhật</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>13.000.000đ</span>
+          <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>mức đóng khi đăng ký</span>
         </div>
         <div>
           <span style={label}>số lượng tối đa</span>
@@ -387,6 +388,19 @@ export default function TuanDu05Page() {
           <span style={label}>số lượng tối thiểu</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>06 người</span>
         </div>
+      </div>
+      <div className="wrap" style={{ marginBottom: "2.5rem" }}>
+        <Accordion label="về chi phí">
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
+            Đây là một chuyến đi riêng, không phải tour thương mại có giá cố định, mà là một hành trình nhỏ nơi cả đoàn cùng chia sẻ chi phí tổ chức với nhau. Vì vậy chi phí mỗi người đóng sẽ gắn với số lượng người tham gia thật sự của chuyến, chứ không phải một con số cố định từ đầu — đoàn đông thì phần chi phí chung (xe, đội tổ chức, các khoản vận hành khác) được san sẻ cho nhiều người hơn nên mỗi người nhẹ hơn; đoàn ít người thì phần đó dồn lại trên số người ít hơn.
+          </p>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
+            Cụ thể, nếu đủ 9–10 người tham gia, mức đóng góp là 13.000.000đ/người; nếu chỉ 6–8 người, mức đóng góp là 15.000.000đ/người.
+          </p>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
+            Để bạn có thể đăng ký sớm mà không phải chờ đến sát ngày mới biết chi phí cụ thể, bạn đóng trước ở mức 13.000.000đ khi đăng ký. Đến ngày 05.03.2027, khi số lượng người tham gia được chốt lại, nếu đoàn cuối cùng chỉ đạt 6–8 người thì mình sẽ báo lại và bạn đóng thêm phần chênh lệch trước ngày khởi hành; còn nếu đoàn đủ 9–10 người, mức bạn đã đóng chính là mức cuối cùng, không phát sinh gì thêm.
+          </p>
+        </Accordion>
       </div>
       <div className="wrap" style={{ marginBottom: "1rem" }}>
         <span className="eyebrow">các mốc cần lưu ý</span>

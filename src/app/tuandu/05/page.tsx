@@ -401,7 +401,7 @@ export default function TuanDu05Page() {
             Cụ thể, nếu đủ 9–10 người tham gia, mức đóng góp là 13.000.000đ/người; nếu chỉ 6–8 người, mức đóng góp là 15.000.000đ/người.
           </p>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
-            Để bạn có thể đăng ký sớm mà không phải chờ đến sát ngày mới biết chi phí cụ thể, bạn đóng trước ở mức 13.000.000đ khi đăng ký. Đến ngày 05.03.2027, khi số lượng người tham gia được chốt lại, nếu đoàn cuối cùng chỉ đạt 6–8 người thì mình sẽ báo lại và bạn đóng thêm phần chênh lệch trước ngày khởi hành; còn nếu đoàn đủ 9–10 người, mức bạn đã đóng chính là mức cuối cùng, không phát sinh gì thêm.
+            Để bạn có thể đăng ký sớm mà không phải chờ đến sát ngày mới biết chi phí cụ thể, bạn đóng trước ở mức 13.000.000đ khi đăng ký. Đến ngày 05.03.2027, khi số lượng người tham gia được chốt lại, nếu đoàn cuối cùng chỉ đạt 6–8 người thì bạn đóng thêm phần chênh lệch trước ngày khởi hành; còn nếu đoàn đủ 9–10 người, mức bạn đã đóng chính là mức cuối cùng.
           </p>
         </div>
       </div>

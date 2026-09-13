@@ -38,7 +38,7 @@ export const loiNgoClose = ["ta đi để nghe.", "xem sau mỗi tiếng chuông
 
 export const forWhom = [
   "Nếu bạn là người Công giáo, sẽ có những buổi bạn đứng trong một ngôi chùa mà không biết phải làm gì với tay mình. Nếu bạn là Phật tử, sẽ có buổi bạn ngồi trong một đan viện và nghe một thứ kinh hoàn toàn xa lạ. Nếu bạn không thuộc về đâu cả, bạn sẽ đi qua cả hai như một người khách và có khi đó lại là chỗ đứng thuận lợi nhất.",
-  "Điều duy nhất được mời gọi là: đứng yên lâu hơn bình thường một chút, ở một nơi không phải của mình, và xem trong người mình có gì động đậy.",
+  "Đứng yên lâu thêm một chút, ở một nơi không phải của mình, và xem trong người mình có gì động đậy.",
 ];
 
 export const features = [

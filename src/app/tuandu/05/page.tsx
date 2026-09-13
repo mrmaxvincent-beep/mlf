@@ -528,6 +528,7 @@ export default function TuanDu05Page() {
             đăng ký tuần-du 05 <span className="ar">→</span>
           </RegistrationLink>
         </div>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", margin: "1rem 0 0" }}>hạn chót đăng ký: 05.03.2027</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>

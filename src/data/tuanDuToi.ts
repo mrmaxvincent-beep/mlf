@@ -125,7 +125,7 @@ export const days: Day[] = [
     desc: [
       "Sáng sớm, chùa Keo ở Vũ Thư. Gác chuông gỗ ba tầng, dựng từ thế kỷ 17, ghép hoàn toàn bằng mộng. Gần bốn trăm năm đứng giữa đồng bằng gió bão.",
       "Hôm qua là gạch đỏ và mái vòm. Hôm nay là gỗ lim và mái cong. Hai cách con người dựng nhà cho cái thiêng — một cái vươn thẳng lên trời, một cái nằm ngang ôm lấy đất.",
-      "Có những thứ trong mình cũng đang được giữ bằng đinh — ràng buộc, quy tắc, lời hứa đóng chặt cho khỏi lung lay. Còn những thứ tự nó vừa khít, chẳng cần đóng đinh gì cả.",
+      "Có những thứ trong mình cũng đang được giữ bằng đinh: ràng buộc, quy tắc, lời hứa đóng chặt cho khỏi lung lay. Còn những thứ tự nó vừa khít, chẳng cần đóng đinh gì cả.",
       "Đến Ngọa Vân lúc chiều xuống, còn cả một buổi để đi bộ, để ngồi, để không làm gì.",
     ],
     rows: [

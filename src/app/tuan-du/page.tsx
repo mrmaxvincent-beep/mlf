@@ -140,7 +140,7 @@ export default function TuanDuPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "4rem" }}>
-        <div style={{ textAlign: "center", maxWidth: "34ch", margin: "0 auto" }}>
+        <div style={{ textAlign: "center", maxWidth: "48ch", margin: "0 auto" }}>
           {ngoLines.map((line) => (
             <p key={line} style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
               {line}

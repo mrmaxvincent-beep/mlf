@@ -158,7 +158,7 @@ export const days: Day[] = [
     rows: [
       { time: "06:30", activity: "Điểm tâm nhẹ" },
       { time: "07:30", activity: "Xuất phát đi bộ theo đường hành hương cổ — Đô Kiệu → rừng thông Thông Đàn → dốc đá" },
-      { time: "09:30", activity: "Tới am Ngọa Vân" },
+      { time: "09:30", activity: "Tới am Ngọa Vân trung" },
       { time: "10:00", activity: "buổi cảm tâm 3 · hiện hữu không cần hiểu", highlight: true },
       { time: "12:00", activity: "Cơm chay" },
       { time: "chiều", activity: "Xuống núi — cáp treo" },

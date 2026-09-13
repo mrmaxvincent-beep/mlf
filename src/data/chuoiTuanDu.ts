@@ -5,6 +5,6 @@ export const chuoiList = [
   { num: "04", title: "a pause", places: "Sài Gòn", duration: "2 ngày 1 đêm", tagline: "một khoảng lặng giữa những bộn bề.", badge: "sắp diễn ra" },
   { num: "05", title: "chuông vọng đôi bờ", places: "Hà Nội · Ninh Bình · Thái Bình · Hải Phòng · Quảng Ninh · Hải Dương · Bắc Ninh", duration: "5 ngày 4 đêm", tagline: "chuông ngân giữa cõi, người về giữa tâm.", badge: "sắp diễn ra" },
   { num: "06", title: "điệu hoà phù sa", places: "An Giang – Thất Sơn", duration: "4 ngày 3 đêm", tagline: "theo con nước, chạm chuyện ngàn xưa.", badge: null },
-  { num: "07", title: "theo Bụt ta đi", places: "Ấn Độ – Nepal", duration: "10 ngày 9 đêm", tagline: "chỗ xưa kia là lời, nay là bước chân.", badge: null },
+  { num: "07", title: "theo Bụt ta đi", places: "Ấn Độ – Nepal", duration: "10 ngày 9 đêm", tagline: "đường xưa còn đó, người đi là mình.", badge: null },
   { num: "08", title: "vòm trời nghiêng nghiêng", places: "Himalaya – Nepal", duration: "10 ngày 9 đêm", tagline: "đứng dưới trời nghiêng, thấy mình vừa đủ.", badge: null },
 ];

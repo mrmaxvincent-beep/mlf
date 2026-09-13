@@ -383,6 +383,10 @@ export default function TuanDu05Page() {
           <span style={label}>số lượng tối đa</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>10 người</span>
         </div>
+        <div>
+          <span style={label}>số lượng tối thiểu</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>06 người</span>
+        </div>
       </div>
       <div className="wrap" style={{ marginBottom: "1rem" }}>
         <span className="eyebrow">các mốc cần lưu ý</span>

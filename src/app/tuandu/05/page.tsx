@@ -9,6 +9,7 @@ import { Motif } from "@/components/Motif";
 import { DayItinerary } from "@/components/DayItinerary";
 import { Accordion } from "@/components/Accordion";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import {
   heroMeta,
@@ -523,9 +524,9 @@ export default function TuanDu05Page() {
         </h2>
         <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--color-stone)", margin: "0 0 2rem" }}>26.03 – 30.03.2027</p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-          <span className="cta-btn cta-btn--solid">
+          <RegistrationLink href="https://forms.gle/fBbYr3dUDHqZkh9bA" programName="tuần-du 05 · chuông vọng đôi bờ" className="cta-btn cta-btn--solid">
             đăng ký tuần-du 05 <span className="ar">→</span>
-          </span>
+          </RegistrationLink>
         </div>
       </div>
 

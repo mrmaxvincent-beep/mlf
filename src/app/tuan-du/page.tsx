@@ -169,7 +169,7 @@ export default function TuanDuPage() {
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.6rem, 8vw, 4rem)", color: "var(--color-ink)" }}>du</span>
         </div>
         <div style={{ display: "flex", justifyContent: "center", gap: "3rem", marginTop: "1.4rem", flexWrap: "wrap" }}>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone)", maxWidth: "20ch" }}>bước đi có nhịp, chậm rãi và liên tục</span>
+          <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone)", maxWidth: "20ch" }}>bước đi có nhịp, thong dong và liên tục</span>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone)", maxWidth: "20ch" }}>sự mở ra, thong dong mà tiếp xúc</span>
         </div>
       </Reveal>

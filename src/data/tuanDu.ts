@@ -2,7 +2,7 @@ import { routes } from "@/lib/nav";
 
 export const ngoLines = [
   "nhiều người nghĩ,",
-  "Măng Đen núi rừng đã là tự do bất tận.",
+  "sống giữa núi rừng Măng Đen đã là tự do bất tận.",
   "nhưng thật ra, có lúc lòng cũng chật.",
   "vì muốn được ở trong đời sống nhiều hơn.",
   "nên khi đặt bút viết ra hai chữ tuần-du,",

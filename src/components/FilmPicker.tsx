@@ -48,22 +48,37 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           transform: fading ? "scale(0.985)" : "scale(1)",
         }}
       >
-        <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "0.75rem", overflow: "hidden", marginBottom: "1.5rem" }}>
-          {film.youtubeId ? (
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${film.youtubeId}?modestbranding=1&rel=0&iv_load_policy=3`}
-              title={`trailer · ${film.title}`}
-              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          ) : (
-            <div style={{ position: "absolute", inset: 0, background: "var(--color-cham-dem)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
-                ĐANG CẬP NHẬT
-              </span>
-            </div>
-          )}
+        <div style={{ position: "relative", marginBottom: "1.5rem" }}>
+          {/* soft warm glow — the page's one use of --color-ember, the design system's emotional accent */}
+          <div
+            aria-hidden
+            style={{
+              position: "absolute",
+              inset: "-10%",
+              background: "radial-gradient(closest-side, var(--color-ember) 0%, transparent 72%)",
+              opacity: 0.22,
+              filter: "blur(28px)",
+              pointerEvents: "none",
+              transition: "opacity 1.1s ease-in-out",
+            }}
+          />
+          <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "0.75rem", overflow: "hidden" }}>
+            {film.youtubeId ? (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${film.youtubeId}?modestbranding=1&rel=0&iv_load_policy=3`}
+                title={`trailer · ${film.title}`}
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : (
+              <div style={{ position: "absolute", inset: 0, background: "var(--color-cham-dem)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
+                  ĐANG CẬP NHẬT
+                </span>
+              </div>
+            )}
+          </div>
         </div>
 
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap", marginBottom: "1rem" }}>
@@ -87,7 +102,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           type="button"
           onClick={pickAnother}
           className="cta-btn cta-btn--outline"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", borderRadius: "var(--radius-sharp)" }}
         >
           thử một bộ phim khác <span className="ar">→</span>
         </button>

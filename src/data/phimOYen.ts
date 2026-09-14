@@ -23,6 +23,7 @@ export const phimList: Phim[] = [
     title: "Departures",
     year: "2008",
     feeling: "Một sự tĩnh lặng nặng mà nhẹ, khiến mình nhìn lại những điều mình chưa kịp nói với người đã đi xa.",
+    youtubeId: "3swP6tdmnJk",
   },
   {
     title: "Kikujiro no Natsu",

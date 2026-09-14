@@ -25,7 +25,7 @@ export const phimList: Phim[] = [
     year: "2018",
     feeling: "Cảm giác như vừa được về nhà — tay còn dính đất, bụng còn ấm vì bữa cơm vừa nấu.",
     quote: "Món ăn chính là tấm gương phản chiếu trái tim mình. Con phải tập trung vào, không là bị thương đấy.",
-    quoteBy: "người mẹ",
+    quoteBy: "mẹ của Ichiko",
     tags: ["xem khi trời mưa", "khi thấy vội", "không có gì xảy ra", "xem một mình"],
     youtubeId: "c7FZlyAeNyI",
   },

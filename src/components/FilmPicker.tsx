@@ -149,16 +149,28 @@ export function FilmPicker({ films }: { films: Phim[] }) {
   }
 
   return (
-    <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "2rem" }}>
-      <div
-        style={{
-          transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",
-          opacity: fading ? 0 : 1,
-          filter: fading ? "blur(4px)" : "blur(0px)",
-          transform: fading ? "scale(0.985)" : "scale(1)",
-        }}
-      >
-        <div style={{ position: "relative", marginBottom: "1.5rem" }}>
+    <div>
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1rem" }}>
+        <button
+          type="button"
+          onClick={pickAnother}
+          className="cta-btn cta-btn--outline"
+          style={{ cursor: "pointer", borderRadius: "999px" }}
+        >
+          thử một bộ phim khác <span className="ar">→</span>
+        </button>
+      </div>
+
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "2rem" }}>
+        <div
+          style={{
+            transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",
+            opacity: fading ? 0 : 1,
+            filter: fading ? "blur(4px)" : "blur(0px)",
+            transform: fading ? "scale(0.985)" : "scale(1)",
+          }}
+        >
+          <div style={{ position: "relative", marginBottom: "1.5rem" }}>
           {/* soft warm glow — the page's one use of --color-ember, the design system's emotional accent */}
           <div
             aria-hidden
@@ -218,16 +230,6 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           ))}
         </div>
       </div>
-
-      <div style={{ marginTop: "2rem", textAlign: "center" }}>
-        <button
-          type="button"
-          onClick={pickAnother}
-          className="cta-btn cta-btn--outline"
-          style={{ cursor: "pointer", borderRadius: "999px" }}
-        >
-          thử một bộ phim khác <span className="ar">→</span>
-        </button>
       </div>
     </div>
   );

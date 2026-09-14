@@ -1,7 +1,117 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Phim } from "@/data/phimOYen";
+
+/**
+ * Facade: shows a static poster + our own play button first, and only mounts the real
+ * YouTube iframe on click — page stays light until someone actually wants to watch.
+ * Also listens for the player's "ended" postMessage (enablejsapi=1) and unmounts the
+ * iframe back to the poster, so the last frame is never YouTube's related-video grid
+ * (rel=0 stopped working cross-channel since 2018 — this sidesteps it entirely).
+ */
+function TrailerFrame({ film }: { film: Phim }) {
+  const [playing, setPlaying] = useState(false);
+
+  // reset to the poster whenever the featured film changes (e.g. "thử một bộ phim khác")
+  useEffect(() => {
+    setPlaying(false);
+  }, [film.youtubeId]);
+
+  useEffect(() => {
+    if (!playing) return;
+    function onMessage(e: MessageEvent) {
+      if (!e.origin.includes("youtube")) return;
+      try {
+        const data = JSON.parse(e.data);
+        if (data.event === "onStateChange" && data.info === 0) setPlaying(false);
+      } catch {
+        // ignore non-JSON postMessages from other embeds/extensions
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [playing]);
+
+  if (!film.youtubeId) {
+    return (
+      <div style={{ position: "absolute", inset: 0, background: "var(--color-cham-dem)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
+          ĐANG CẬP NHẬT
+        </span>
+      </div>
+    );
+  }
+
+  if (playing) {
+    return (
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${film.youtubeId}?autoplay=1&enablejsapi=1&modestbranding=1&rel=0&iv_load_policy=3`}
+        title={`trailer · ${film.title}`}
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    );
+  }
+
+  const poster = film.posterSrc ?? `https://i.ytimg.com/vi/${film.youtubeId}/hqdefault.jpg`;
+
+  return (
+    <button
+      type="button"
+      onClick={() => setPlaying(true)}
+      aria-label={`xem trailer · ${film.title}`}
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        padding: 0,
+        border: "none",
+        cursor: "pointer",
+        backgroundImage: `url(${poster})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <span
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(20, 18, 15, 0.18)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <span
+          style={{
+            width: 56,
+            height: 56,
+            borderRadius: "50%",
+            border: "1.5px solid var(--color-paper)",
+            background: "rgba(20, 18, 15, 0.35)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <span
+            style={{
+              width: 0,
+              height: 0,
+              borderTop: "9px solid transparent",
+              borderBottom: "9px solid transparent",
+              borderLeft: "14px solid var(--color-paper)",
+              marginLeft: "3px",
+            }}
+          />
+        </span>
+      </span>
+    </button>
+  );
+}
 
 const pill: React.CSSProperties = {
   display: "inline-flex",
@@ -63,21 +173,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             }}
           />
           <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "0.75rem", overflow: "hidden" }}>
-            {film.youtubeId ? (
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${film.youtubeId}?modestbranding=1&rel=0&iv_load_policy=3`}
-                title={`trailer · ${film.title}`}
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            ) : (
-              <div style={{ position: "absolute", inset: 0, background: "var(--color-cham-dem)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
-                  ĐANG CẬP NHẬT
-                </span>
-              </div>
-            )}
+            <TrailerFrame film={film} />
           </div>
         </div>
 

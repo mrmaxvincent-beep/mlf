@@ -2,10 +2,11 @@ export type Phim = {
   title: string;
   year: string;
   feeling: string;
-  quote: string;
-  quoteBy: string;
+  quote?: string;
+  quoteBy?: string;
   tags: string[];
   youtubeId?: string; // để trống sẽ hiện khung "đang cập nhật" — điền id trailer YouTube khi sẵn sàng
+  posterSrc?: string; // ảnh nền tĩnh (facade) trước khi bấm play — để trống sẽ dùng thumbnail YouTube mặc định
 };
 
 /** Placeholder — thay bằng danh sách phim thật do mlf tuyển chọn trước khi công bố. */
@@ -23,8 +24,9 @@ export const phimList: Phim[] = [
     title: "Little Forest",
     year: "2018",
     feeling: "Cảm giác như vừa được về nhà — tay còn dính đất, bụng còn ấm vì bữa cơm vừa nấu.",
-    quote: "Khi mọi thứ khó khăn, hãy nhớ mùi nắng, gió và mưa.",
-    quoteBy: "Hye-won",
+    // TODO: chưa có câu thoại — bản trước dùng lời của Hye-won (bản Hàn 2018), không hợp nếu trang muốn
+    // giới thiệu bản gốc Nhật (Mori Junichi, 2014/15, nhân vật Ichiko). Chưa tìm được câu thoại xác thực
+    // từ bản Nhật nên để trống thay vì bịa — điền lại khi có nguồn đáng tin.
     tags: ["xem khi trời mưa", "khi thấy vội", "không có gì xảy ra", "xem một mình"],
     youtubeId: "c7FZlyAeNyI",
   },

@@ -102,7 +102,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           type="button"
           onClick={pickAnother}
           className="cta-btn cta-btn--outline"
-          style={{ cursor: "pointer", borderRadius: "var(--radius-sharp)" }}
+          style={{ cursor: "pointer", borderRadius: "999px" }}
         >
           thử một bộ phim khác <span className="ar">→</span>
         </button>

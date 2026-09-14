@@ -11,6 +11,7 @@ export const phimList: Phim[] = [
     title: "Perfect Days",
     year: "2023",
     feeling: "Xem xong, mình muốn dọn dẹp lại góc làm việc, pha một ấm trà, rồi ngồi yên nhìn nắng đổi màu qua tán lá.",
+    youtubeId: "QzZBbX5A1FA",
   },
   {
     title: "Little Forest",

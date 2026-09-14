@@ -162,7 +162,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             transform: fading ? "scale(0.985)" : "scale(1)",
           }}
         >
-          <div style={{ position: "relative", flex: "1 1 320px", minWidth: 260 }}>
+          <div style={{ position: "relative", flex: "1.3 1 320px", minWidth: 260 }}>
             {/* soft warm glow — the page's one use of --color-ember, the design system's emotional accent */}
             <div
               aria-hidden

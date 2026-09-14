@@ -24,7 +24,7 @@ export default function PhimOYenPage() {
             phim ở-yên
           </h1>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 auto" }}>
-            mlf giới thiệu những bộ phim để ở-yên.
+            mlf giới thiệu cùng bạn
           </p>
         </div>
       </div>

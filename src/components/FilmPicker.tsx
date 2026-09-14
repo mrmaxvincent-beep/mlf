@@ -150,18 +150,18 @@ export function FilmPicker({ films }: { films: Phim[] }) {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "0.6rem" }}>
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "0.85rem" }}>
         <button
           type="button"
           onClick={pickAnother}
           className="cta-btn cta-btn--outline"
-          style={{ cursor: "pointer", borderRadius: "999px", padding: "0.5rem 1rem", fontSize: "0.6rem" }}
+          style={{ cursor: "pointer", borderRadius: "999px" }}
         >
           thử một bộ phim khác <span className="ar">→</span>
         </button>
       </div>
 
-      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "1.1rem" }}>
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "1.75rem" }}>
         <div
           style={{
             display: "flex",
@@ -192,28 +192,28 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             </div>
           </div>
 
-          <div style={{ flex: "1 1 280px", minWidth: 220 }}>
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)" }}>
+          <div style={{ flex: "1 1 300px", minWidth: 240 }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
+              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)" }}>
                 {film.title}
               </span>
               <span style={pill}>{film.year}</span>
             </div>
 
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               {film.feeling}
             </p>
 
             {film.quote ? (
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", lineHeight: 1.5, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.05rem 0 0.05rem 0.75rem", margin: "0 0 0.7rem" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.92rem", lineHeight: 1.6, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.1rem 0 0.1rem 0.9rem", margin: "0 0 0.9rem" }}>
                 &ldquo;{film.quote}&rdquo;
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.55rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.35rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.4rem" }}>
                   — {film.quoteBy}
                 </span>
               </p>
             ) : null}
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
               {film.tags.map((tag) => (
                 <span
                   key={tag}
@@ -221,12 +221,12 @@ export function FilmPicker({ films }: { films: Phim[] }) {
                     flexShrink: 0,
                     whiteSpace: "nowrap",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.53rem",
-                    letterSpacing: "0.05em",
+                    fontSize: "0.56rem",
+                    letterSpacing: "0.06em",
                     color: "var(--color-stone)",
                     border: "1px solid var(--color-mist)",
                     borderRadius: "999px",
-                    padding: "0.25rem 0.55rem",
+                    padding: "0.3rem 0.65rem",
                   }}
                 >
                   {tag}

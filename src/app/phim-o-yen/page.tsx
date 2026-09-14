@@ -16,19 +16,20 @@ export default function PhimOYenPage() {
     <>
       <Header />
 
-      <div className="wrap" style={{ paddingTop: "5.25rem", paddingBottom: "0.25rem" }}>
+      <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
         <Breadcrumb label="phim ở-yên" />
-        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "0.7rem", flexWrap: "wrap" }}>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", lineHeight: 1.15, color: "var(--color-ink)", margin: 0 }}>
+        <div style={{ textAlign: "center" }}>
+          <span className="eyebrow" style={{ color: "var(--color-ink)" }}>xem & lắng</span>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
             phim ở-yên
           </h1>
-          <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "var(--color-stone)" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 auto" }}>
             mlf giới thiệu cùng bạn
-          </span>
+          </p>
         </div>
       </div>
 
-      <Reveal className="wrap" style={{ marginTop: "1.1rem", marginBottom: "2rem", maxWidth: "820px" }}>
+      <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "4rem", maxWidth: "820px" }}>
         <FilmPicker films={phimList} />
       </Reveal>
 

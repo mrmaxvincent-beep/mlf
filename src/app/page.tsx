@@ -56,7 +56,7 @@ export default function HomePage() {
           playsInline
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         >
-          <source src="/video/home-hero.mp4" type="video/mp4" />
+          <source src="/assets/herovideo.mp4" type="video/mp4" />
         </video>
         <div
           className="wrap hero-bottom"

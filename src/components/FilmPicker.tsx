@@ -31,19 +31,21 @@ export function FilmPicker({ films }: { films: Phim[] }) {
     while (next === index) next = Math.floor(Math.random() * films.length);
     if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
     setFading(true);
+    // 1.1s echoes a slow inhale/exhale rather than a snap-cut — matches the site's unhurried pacing
     fadeTimeoutRef.current = setTimeout(() => {
       setIndex(next);
       setFading(false);
-    }, 500);
+    }, 1100);
   }
 
   return (
     <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "2rem" }}>
       <div
         style={{
-          transition: "opacity .5s var(--ease-standard), filter .5s var(--ease-standard)",
+          transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",
           opacity: fading ? 0 : 1,
-          filter: fading ? "blur(3px)" : "blur(0px)",
+          filter: fading ? "blur(4px)" : "blur(0px)",
+          transform: fading ? "scale(0.985)" : "scale(1)",
         }}
       >
         <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "0.75rem", overflow: "hidden", marginBottom: "1.5rem" }}>
@@ -71,9 +73,13 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           <span style={pill}>{film.year}</span>
         </div>
 
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.1rem" }}>
           {film.feeling}
         </p>
+
+        <span style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.86rem", color: "var(--color-stone-alt)" }}>
+          hợp để xem cùng <span style={{ color: "var(--color-ink)" }}>{film.pairWith}</span>
+        </span>
       </div>
 
       <div style={{ marginTop: "2rem", textAlign: "center" }}>

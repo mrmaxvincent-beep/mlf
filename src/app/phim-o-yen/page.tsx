@@ -18,13 +18,15 @@ export default function PhimOYenPage() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
         <Breadcrumb label="phim ở-yên" />
-        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>xem & lắng</span>
-        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
-          phim ở-yên
-        </h1>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          mlf giới thiệu những bộ phim để ở-yên.
-        </p>
+        <div style={{ textAlign: "center" }}>
+          <span className="eyebrow" style={{ color: "var(--color-ink)" }}>xem & lắng</span>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
+            phim ở-yên
+          </h1>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 auto" }}>
+            mlf giới thiệu những bộ phim để ở-yên.
+          </p>
+        </div>
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "620px" }}>

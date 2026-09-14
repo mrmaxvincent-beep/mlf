@@ -29,5 +29,6 @@ export const phimList: Phim[] = [
     title: "Kikujiro no Natsu",
     year: "1999",
     feeling: "Vừa buồn cười, vừa nghẹn ngào — như một chuyến đi chẳng có đích, nhưng lại chạm được điều gì đó rất thật.",
+    youtubeId: "EhUsQvoAeAY",
   },
 ];

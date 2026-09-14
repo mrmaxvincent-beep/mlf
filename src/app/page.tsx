@@ -54,7 +54,8 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          // scale(1.2) from 20% 50% pushes the source's bottom-right watermark (starts ~88% across) out of frame at any viewport ratio
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.2)", transformOrigin: "20% 50%" }}
         >
           <source src="/video/home-hero.mp4" type="video/mp4" />
         </video>

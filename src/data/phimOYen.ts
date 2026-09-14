@@ -45,6 +45,6 @@ export const phimList: Phim[] = [
     quote: "Hỏi tử tế, thì mọi chuyện dễ hơn nhiều.",
     quoteBy: "Masao",
     tags: ["xem sáng chủ nhật", "khi thấy vội", "không có gì xảy ra", "xem cùng một người"],
-    youtubeId: "EhUsQvoAeAY",
+    youtubeId: "EbN3wQc5Y_Q",
   },
 ];

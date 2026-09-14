@@ -762,19 +762,6 @@ details[open] > summary .acc-icon {
   margin: 3.25rem auto;
   max-width: 26ch;
 }
-.mag-chapter-num {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(4rem, 12vw, 7rem);
-  line-height: 0.85;
-  color: var(--color-mist);
-}
-.mag-rule {
-  width: 100%;
-  height: 1px;
-  background: var(--color-mist);
-}
 @media (max-width: 600px) {
   .mag-p {
     font-size: 1.05rem;

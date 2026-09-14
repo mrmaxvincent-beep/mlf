@@ -116,59 +116,82 @@ export default function TamBietMangDenPage() {
         <ImagePlaceholder label="ảnh bìa · mộc little farm, Măng Đen" aspectRatio="16/9" />
       </div>
 
-      <div className="mag-wrap" style={{ marginBottom: "5rem" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0, paddingLeft: "1.1rem", borderLeft: "2px solid var(--color-mist)" }}>
-          {meta.disclaimer}
-        </p>
-      </div>
-
-      {/* ============ CHAPTERS ============ */}
-      {chapters.map((c, ci) => (
-        <section key={c.n} style={{ marginBottom: "5.5rem" }}>
-          <Reveal className="mag-wrap" style={{ marginBottom: "3rem" }}>
-            <div className="mag-rule" style={{ marginBottom: "2rem" }} />
-            <div style={{ display: "flex", alignItems: "baseline", gap: "1.25rem", flexWrap: "wrap" }}>
-              <span className="mag-chapter-num">{c.n}</span>
-              <h2
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontStyle: "italic",
-                  fontWeight: 300,
-                  fontSize: "clamp(1.9rem, 5vw, 2.8rem)",
-                  lineHeight: 1.15,
-                  color: "var(--color-ink)",
-                  margin: 0,
-                }}
-              >
-                {c.title}
-              </h2>
-            </div>
-          </Reveal>
-
-          <Blocks blocks={c.blocks} />
-
-          {ci === chapters.length - 1 ? null : (
-            <div className="mag-wrap" style={{ marginTop: "4rem", textAlign: "center" }}>
-              <Motif name="gon-nuoc" size={30} />
-            </div>
-          )}
-        </section>
-      ))}
-
-      {/* ============ AUTHOR'S NOTE ============ */}
-      <div className="mag-wrap" style={{ marginBottom: "1.5rem", textAlign: "center" }}>
-        <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", letterSpacing: "0.4em", color: "var(--color-stone)", paddingLeft: "0.4em" }}>
-          ..
-        </span>
-      </div>
-      <Reveal className="mag-wrap" style={{ marginBottom: "6rem" }}>
-        <div style={{ border: "1px solid var(--color-mist)", background: "var(--color-paper)", padding: "2.25rem 2rem" }}>
-          <span style={{ ...label, color: "var(--color-cham-dem)", marginBottom: "1rem" }}>{authorNote.label}</span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-            {authorNote.text}
+      {/* ============ WHITE SHEET — toàn bộ phần chữ ============ */}
+      <div style={{ background: "var(--color-paper)", paddingTop: "4rem", paddingBottom: "5rem" }}>
+        <div className="mag-wrap" style={{ marginBottom: "1rem" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0, paddingLeft: "1.1rem", borderLeft: "2px solid var(--color-mist)" }}>
+            {meta.disclaimer}
           </p>
         </div>
-      </Reveal>
+
+        {/* ============ CHAPTERS ============ */}
+        {chapters.map((c, ci) => (
+          <section key={c.n}>
+            <Reveal className="mag-wrap" style={{ margin: ci === 0 ? "4.5rem auto 3.5rem" : "6.5rem auto 3.5rem" }}>
+              <div
+                style={{
+                  border: "1px solid var(--color-mist)",
+                  background: "var(--color-cotton)",
+                  padding: "2.75rem 1.5rem",
+                  textAlign: "center",
+                }}
+              >
+                <span
+                  style={{
+                    display: "block",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.58rem",
+                    letterSpacing: "0.38em",
+                    textTransform: "uppercase",
+                    color: "var(--color-stone)",
+                    paddingLeft: "0.38em",
+                  }}
+                >
+                  phần {c.n.padStart(2, "0")}
+                </span>
+                <div style={{ width: 28, height: 1, background: "var(--color-mist)", margin: "1.2rem auto" }} />
+                <h2
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontWeight: 400,
+                    fontSize: "clamp(0.92rem, 2.6vw, 1.1rem)",
+                    letterSpacing: "0.3em",
+                    lineHeight: 1.6,
+                    color: "var(--color-ink)",
+                    margin: 0,
+                    paddingLeft: "0.3em",
+                  }}
+                >
+                  {c.title}
+                </h2>
+              </div>
+            </Reveal>
+
+            <Blocks blocks={c.blocks} />
+
+            {ci === chapters.length - 1 ? null : (
+              <div className="mag-wrap" style={{ marginTop: "4rem", textAlign: "center" }}>
+                <Motif name="gon-nuoc" size={30} />
+              </div>
+            )}
+          </section>
+        ))}
+
+        {/* ============ AUTHOR'S NOTE ============ */}
+        <div className="mag-wrap" style={{ margin: "4.5rem auto 1.5rem", textAlign: "center" }}>
+          <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", letterSpacing: "0.4em", color: "var(--color-stone)", paddingLeft: "0.4em" }}>
+            ..
+          </span>
+        </div>
+        <Reveal className="mag-wrap">
+          <div style={{ border: "1px solid var(--color-mist)", background: "var(--color-cotton)", padding: "2.25rem 2rem" }}>
+            <span style={{ ...label, color: "var(--color-cham-dem)", marginBottom: "1rem" }}>{authorNote.label}</span>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
+              {authorNote.text}
+            </p>
+          </div>
+        </Reveal>
+      </div>
 
       <Footer />
     </>

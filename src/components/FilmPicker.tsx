@@ -92,9 +92,14 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           {film.feeling}
         </p>
 
-        <span style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.86rem", color: "var(--color-stone-alt)", marginBottom: "1.4rem" }}>
-          hợp để xem cùng <span style={{ color: "var(--color-ink)" }}>{film.pairWith}</span>
-        </span>
+        {film.quote ? (
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.7, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.1rem 0 0.1rem 1rem", margin: "0 0 1.4rem" }}>
+            &ldquo;{film.quote}&rdquo;
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.5rem" }}>
+              — {film.quoteBy}
+            </span>
+          </p>
+        ) : null}
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
           {film.tags.map((tag) => (

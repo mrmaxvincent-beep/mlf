@@ -197,11 +197,13 @@ export function FilmPicker({ films }: { films: Phim[] }) {
           </p>
         ) : null}
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+        <div style={{ display: "flex", flexWrap: "nowrap", gap: "0.5rem", overflowX: "auto", paddingBottom: "0.2rem" }}>
           {film.tags.map((tag) => (
             <span
               key={tag}
               style={{
+                flexShrink: 0,
+                whiteSpace: "nowrap",
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.58rem",
                 letterSpacing: "0.06em",

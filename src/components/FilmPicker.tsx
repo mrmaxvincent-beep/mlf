@@ -172,7 +172,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
               transition: "opacity 1.1s ease-in-out",
             }}
           />
-          <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "0.75rem", overflow: "hidden" }}>
+          <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "1.5rem", overflow: "hidden" }}>
             <TrailerFrame film={film} />
           </div>
         </div>

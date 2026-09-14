@@ -150,11 +150,11 @@ export function FilmPicker({ films }: { films: Phim[] }) {
 
   return (
     <div>
-      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "2.5rem" }}>
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "3.5rem" }}>
         <div
           style={{
             display: "flex",
-            gap: "2.5rem",
+            gap: "3rem",
             flexWrap: "wrap",
             transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",
             opacity: fading ? 0 : 1,
@@ -181,28 +181,28 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             </div>
           </div>
 
-          <div style={{ flex: "1 1 320px", minWidth: 260 }}>
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "0.9rem" }}>
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", color: "var(--color-ink)" }}>
+          <div style={{ flex: "1 1 320px", minWidth: 260, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.3rem" }}>
+              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2rem", color: "var(--color-ink)" }}>
                 {film.title}
               </span>
               <span style={pill}>{film.year}</span>
             </div>
 
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.1rem" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 1.6rem" }}>
               {film.feeling}
             </p>
 
             {film.quote ? (
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.02rem", lineHeight: 1.7, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.1rem 0 0.1rem 1rem", margin: "0 0 1.3rem" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.8, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.2rem 0 0.2rem 1.25rem", margin: "0 0 1.7rem" }}>
                 &ldquo;{film.quote}&rdquo;
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.5rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.6rem" }}>
                   — {film.quoteBy}
                 </span>
               </p>
             ) : null}
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
               {film.tags.map((tag) => (
                 <span
                   key={tag}
@@ -210,12 +210,12 @@ export function FilmPicker({ films }: { films: Phim[] }) {
                     flexShrink: 0,
                     whiteSpace: "nowrap",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.6rem",
+                    fontSize: "0.62rem",
                     letterSpacing: "0.06em",
                     color: "var(--color-stone)",
                     border: "1px solid var(--color-mist)",
                     borderRadius: "999px",
-                    padding: "0.35rem 0.75rem",
+                    padding: "0.4rem 0.85rem",
                   }}
                 >
                   {tag}

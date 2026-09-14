@@ -28,6 +28,7 @@ export const routes = {
   thuVien: "/thu-vien",
   tuDienOYen: "/tu-dien-o-yen",
   podcastOYen: "/podcast-o-yen",
+  phimOYen: "/phim-o-yen",
   sachOYen: "/sach-o-yen",
   motNgayOYen: "/mot-ngay-o-yen",
   congDongOYen: "/cong-dong-o-yen",
@@ -66,6 +67,7 @@ export const thuVienMenu = [
   { label: "ghi chép ở-yên", href: routes.thuVien },
   { label: "từ điển ở-yên", href: routes.tuDienOYen },
   { label: "podcast", href: routes.podcastOYen },
+  { label: "phim", href: routes.phimOYen },
   { label: "sách", href: routes.sachOYen },
   { label: "mlf journal", href: routes.journal },
 ];
@@ -143,6 +145,7 @@ export const mobileMenuSections = [
       { label: "ghi chép ở-yên", href: routes.thuVien },
       { label: "từ điển ở-yên", href: routes.tuDienOYen },
       { label: "podcast", href: routes.podcastOYen },
+      { label: "phim", href: routes.phimOYen },
       { label: "sách", href: routes.sachOYen },
       { label: "mlf journal", href: routes.journal },
     ],

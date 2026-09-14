@@ -24,9 +24,8 @@ export const phimList: Phim[] = [
     title: "Little Forest",
     year: "2018",
     feeling: "Cảm giác như vừa được về nhà — tay còn dính đất, bụng còn ấm vì bữa cơm vừa nấu.",
-    // TODO: chưa có câu thoại — bản trước dùng lời của Hye-won (bản Hàn 2018), không hợp nếu trang muốn
-    // giới thiệu bản gốc Nhật (Mori Junichi, 2014/15, nhân vật Ichiko). Chưa tìm được câu thoại xác thực
-    // từ bản Nhật nên để trống thay vì bịa — điền lại khi có nguồn đáng tin.
+    quote: "Món ăn chính là tấm gương phản chiếu trái tim mình. Con phải tập trung vào, không là bị thương đấy.",
+    quoteBy: "người mẹ",
     tags: ["xem khi trời mưa", "khi thấy vội", "không có gì xảy ra", "xem một mình"],
     youtubeId: "c7FZlyAeNyI",
   },

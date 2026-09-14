@@ -166,8 +166,7 @@ export default function TamBietMangDenPage() {
             <Reveal className="mag-wrap" style={{ margin: ci === 0 ? "4.5rem auto 3.5rem" : "6.5rem auto 3.5rem" }}>
               <div
                 style={{
-                  border: "1px solid var(--color-mist)",
-                  background: "var(--color-cotton)",
+                  background: "var(--color-cham-dem)",
                   padding: "2.75rem 1.5rem",
                   textAlign: "center",
                 }}
@@ -179,13 +178,13 @@ export default function TamBietMangDenPage() {
                     fontSize: "0.58rem",
                     letterSpacing: "0.38em",
                     textTransform: "uppercase",
-                    color: "var(--color-stone)",
+                    color: "var(--text-on-night-secondary)",
                     paddingLeft: "0.38em",
                   }}
                 >
                   phần {c.n.padStart(2, "0")}
                 </span>
-                <div style={{ width: 28, height: 1, background: "var(--color-mist)", margin: "1.2rem auto" }} />
+                <div style={{ width: 28, height: 1, background: "var(--color-cham-vai)", margin: "1.2rem auto" }} />
                 <h2
                   style={{
                     fontFamily: "var(--font-mono)",
@@ -193,7 +192,7 @@ export default function TamBietMangDenPage() {
                     fontSize: "clamp(0.92rem, 2.6vw, 1.1rem)",
                     letterSpacing: "0.3em",
                     lineHeight: 1.6,
-                    color: "var(--color-ink)",
+                    color: "var(--text-on-night)",
                     margin: 0,
                     paddingLeft: "0.3em",
                   }}

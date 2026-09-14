@@ -29,7 +29,7 @@ export default function PhimOYenPage() {
         </div>
       </div>
 
-      <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "620px" }}>
+      <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "820px" }}>
         <FilmPicker films={phimList} />
       </Reveal>
 

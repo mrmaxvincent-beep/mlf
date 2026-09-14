@@ -49,7 +49,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
         <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "0.75rem", overflow: "hidden", marginBottom: "1.5rem" }}>
           {film.youtubeId ? (
             <iframe
-              src={`https://www.youtube.com/embed/${film.youtubeId}`}
+              src={`https://www.youtube-nocookie.com/embed/${film.youtubeId}?modestbranding=1&rel=0&iv_load_policy=3`}
               title={`trailer · ${film.title}`}
               style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

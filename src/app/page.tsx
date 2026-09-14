@@ -54,8 +54,7 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          // zoom from the left edge crops the source's bottom-right watermark (~88% across); at 1.1 it can still peek in on viewports wider than ~1.68:1
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.1)", transformOrigin: "0% 50%" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
         >
           <source src="/video/home-hero.mp4" type="video/mp4" />
         </video>

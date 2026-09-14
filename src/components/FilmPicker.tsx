@@ -150,22 +150,11 @@ export function FilmPicker({ films }: { films: Phim[] }) {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "0.85rem" }}>
-        <button
-          type="button"
-          onClick={pickAnother}
-          className="cta-btn cta-btn--outline"
-          style={{ cursor: "pointer", borderRadius: "999px" }}
-        >
-          thử một bộ phim khác <span className="ar">→</span>
-        </button>
-      </div>
-
-      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1rem", padding: "1.75rem" }}>
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "2.5rem" }}>
         <div
           style={{
             display: "flex",
-            gap: "1.25rem",
+            gap: "2.5rem",
             flexWrap: "wrap",
             transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",
             opacity: fading ? 0 : 1,
@@ -173,7 +162,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             transform: fading ? "scale(0.985)" : "scale(1)",
           }}
         >
-          <div style={{ position: "relative", flex: "1 1 280px", minWidth: 220 }}>
+          <div style={{ position: "relative", flex: "1 1 320px", minWidth: 260 }}>
             {/* soft warm glow — the page's one use of --color-ember, the design system's emotional accent */}
             <div
               aria-hidden
@@ -192,28 +181,28 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             </div>
           </div>
 
-          <div style={{ flex: "1 1 300px", minWidth: 240 }}>
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)" }}>
+          <div style={{ flex: "1 1 320px", minWidth: 260 }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "0.9rem" }}>
+              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", color: "var(--color-ink)" }}>
                 {film.title}
               </span>
               <span style={pill}>{film.year}</span>
             </div>
 
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.1rem" }}>
               {film.feeling}
             </p>
 
             {film.quote ? (
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.92rem", lineHeight: 1.6, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.1rem 0 0.1rem 0.9rem", margin: "0 0 0.9rem" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.02rem", lineHeight: 1.7, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.1rem 0 0.1rem 1rem", margin: "0 0 1.3rem" }}>
                 &ldquo;{film.quote}&rdquo;
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.4rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.5rem" }}>
                   — {film.quoteBy}
                 </span>
               </p>
             ) : null}
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
               {film.tags.map((tag) => (
                 <span
                   key={tag}
@@ -221,12 +210,12 @@ export function FilmPicker({ films }: { films: Phim[] }) {
                     flexShrink: 0,
                     whiteSpace: "nowrap",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.56rem",
+                    fontSize: "0.6rem",
                     letterSpacing: "0.06em",
                     color: "var(--color-stone)",
                     border: "1px solid var(--color-mist)",
                     borderRadius: "999px",
-                    padding: "0.3rem 0.65rem",
+                    padding: "0.35rem 0.75rem",
                   }}
                 >
                   {tag}
@@ -235,6 +224,17 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             </div>
           </div>
         </div>
+      </div>
+
+      <div style={{ marginTop: "2rem", textAlign: "center" }}>
+        <button
+          type="button"
+          onClick={pickAnother}
+          className="cta-btn cta-btn--outline"
+          style={{ cursor: "pointer", borderRadius: "999px" }}
+        >
+          thử một bộ phim khác <span className="ar">→</span>
+        </button>
       </div>
     </div>
   );

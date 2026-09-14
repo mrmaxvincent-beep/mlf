@@ -36,7 +36,7 @@ export const phimList: Phim[] = [
     quote: "Chết không phải là hết. Người ta đi qua nó, để bước tiếp sang một điều khác.",
     quoteBy: "Shokichi",
     tags: ["xem tối muộn", "khi mệt mà không ngủ được", "phim để xem hai lần", "xem cùng một người"],
-    youtubeId: "3swP6tdmnJk",
+    youtubeId: "EIqD2-D6FC0",
   },
   {
     title: "Kikujiro no Natsu",

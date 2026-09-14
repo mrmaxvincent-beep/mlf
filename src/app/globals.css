@@ -1097,7 +1097,7 @@ details[open] > summary .acc-icon {
   font-style: italic;
 }
 .kenburns-zoom {
-  animation: kenburns-zoom 16s ease-in-out infinite alternate;
+  animation: kenburns-zoom 8s ease-in-out infinite alternate;
 }
 @keyframes kenburns-zoom {
   from {

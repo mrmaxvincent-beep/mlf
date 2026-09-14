@@ -17,6 +17,7 @@ export const phimList: Phim[] = [
     title: "Little Forest",
     year: "2018",
     feeling: "Cảm giác như vừa được về nhà — tay còn dính đất, bụng còn ấm vì bữa cơm vừa nấu.",
+    youtubeId: "c7FZlyAeNyI",
   },
   {
     title: "Departures",

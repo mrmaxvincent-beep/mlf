@@ -118,7 +118,7 @@ export default function TamBietMangDenPage() {
           {meta.title}
         </h1>
 
-        <div style={{ width: 56, height: 1, background: "var(--color-mist)", margin: "3.25rem auto 1.75rem" }} />
+        <div style={{ width: 56, height: 1, background: "var(--color-stone)", margin: "3.25rem auto 1.75rem" }} />
 
         <span
           style={{

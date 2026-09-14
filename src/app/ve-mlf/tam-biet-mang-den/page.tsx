@@ -86,33 +86,69 @@ export default function TamBietMangDenPage() {
       {/* ============ MASTHEAD ============ */}
       <div className="mag-wrap" style={{ paddingTop: "6.5rem" }}>
         <Breadcrumb trail={[{ label: "về mlf", href: routes.veMlf }, { label: "tạm biệt Măng Đen" }]} />
-        <span style={{ ...label, color: "var(--color-cham-dem)", marginBottom: "1.4rem" }}>{meta.kicker}</span>
+      </div>
+
+      <Reveal style={{ maxWidth: 900, margin: "0 auto", padding: "4.5rem 1.5rem 7rem", textAlign: "center" }}>
+        <span
+          style={{
+            display: "block",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.6rem",
+            letterSpacing: "0.32em",
+            lineHeight: 1.9,
+            color: "var(--color-stone)",
+            paddingLeft: "0.32em",
+            marginBottom: "3.25rem",
+          }}
+        >
+          {meta.kicker}
+        </span>
+
         <h1
           style={{
             fontFamily: "var(--font-serif)",
-            fontStyle: "italic",
             fontWeight: 300,
-            fontSize: "clamp(2.6rem, 9vw, 4.6rem)",
-            lineHeight: 1.05,
+            fontSize: "clamp(2.9rem, 8.5vw, 5.4rem)",
+            lineHeight: 1.06,
             color: "var(--color-ink)",
-            margin: "0 0 1.25rem",
+            maxWidth: "13ch",
+            margin: "0 auto",
           }}
         >
           {meta.title}
         </h1>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "0.8rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
-          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--color-stone-alt)" }}>
-            {meta.season}
-          </span>
-          <span style={{ color: "var(--color-mist)" }}>·</span>
-          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--color-stone-alt)" }}>
-            {meta.dedication}
-          </span>
-        </div>
-      </div>
+
+        <div style={{ width: 56, height: 1, background: "var(--color-mist)", margin: "3.25rem auto 1.75rem" }} />
+
+        <span
+          style={{
+            display: "block",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.58rem",
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "var(--color-stone-alt)",
+            paddingLeft: "0.22em",
+          }}
+        >
+          {meta.season}
+        </span>
+        <span
+          style={{
+            display: "block",
+            fontFamily: "var(--font-serif)",
+            fontStyle: "italic",
+            fontSize: "1.05rem",
+            color: "var(--color-stone-alt)",
+            marginTop: "0.85rem",
+          }}
+        >
+          {meta.dedication}
+        </span>
+      </Reveal>
 
       {/* ============ COVER IMAGE ============ */}
-      <div style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", marginBottom: "2.5rem" }}>
+      <div style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)" }}>
         <ImagePlaceholder label="ảnh bìa · mộc little farm, Măng Đen" aspectRatio="16/9" />
       </div>
 

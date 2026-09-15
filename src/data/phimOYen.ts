@@ -83,4 +83,13 @@ export const phimList: Phim[] = [
     tags: ["xem chiều thứ 7", "xem khi trời mưa", "xem một mình", "khoảnh khắc chờ đợi"],
     youtubeId: "vxoqVTSsFfo",
   },
+  {
+    title: "Bitter Sweet",
+    year: "2016",
+    feeling: "Một người vốn ghét rau, dần khám phá ra rằng những điều mình từng từ chối có thể lại trở nên ngon lành và đẹp đẽ khi được nhìn bằng một cách khác. Thức ăn, tình bạn, sự khác biệt và cách một bữa cơm có thể làm người ta xích lại gần nhau.",
+    quote: "Cái này cũng làm từ rau sao? Không thể tin được, cứ như phép màu vậy!",
+    quoteBy: "Maki Eda",
+    tags: ["xem tối muộn", "không có gì xảy ra", "xem cùng ai đó", "khi cần được yên"],
+    youtubeId: "2Qc7ytObV5Y",
+  },
 ];

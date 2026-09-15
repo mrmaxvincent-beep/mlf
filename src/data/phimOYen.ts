@@ -110,4 +110,13 @@ export const phimList: Phim[] = [
     tags: ["xem sáng chủ nhật", "không có gì xảy ra", "khi cần được yên", "xem cùng ai đó"],
     youtubeId: "eQrZ26kPSpM",
   },
+  {
+    title: "Sweet Bean",
+    year: "2016",
+    feeling: "Lắng nghe một hạt đậu, một cái cây, một cơn gió và cả câu chuyện của một con người.",
+    quote: "Khi nấu nhân đậu, tôi luôn lắng nghe những câu chuyện mà những hạt đậu kể. Tôi tin rằng mọi thứ trên thế giới này đều có một câu chuyện để kể.",
+    quoteBy: "Tokue Yoshii",
+    tags: ["xem khi trời mưa", "khi cần được yên", "rất ít lời", "xem một mình"],
+    youtubeId: "KcwKPRfTMa4",
+  },
 ];

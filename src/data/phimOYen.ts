@@ -41,7 +41,7 @@ export const phimList: Phim[] = [
   {
     title: "Kikujiro no Natsu",
     year: "1999",
-    feeling: "Vừa buồn cười, vừa nghẹn ngào — như một chuyến đi chẳng có đích, nhưng lại chạm được điều gì đó rất thật.",
+    feeling: "Vừa buồn cười, vừa nghẹn ngào - một chuyến đi chẳng có đích, nhưng rồi lại chạm tới những điều rất thật.",
     quote: "Hỏi tử tế, thì mọi chuyện dễ hơn nhiều.",
     quoteBy: "Masao",
     tags: ["xem sáng chủ nhật", "khi thấy vội", "không có gì xảy ra", "xem cùng một người"],

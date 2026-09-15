@@ -1126,6 +1126,14 @@ details[open] > summary .acc-icon {
 .itin-day--detailed .time-row .activity .detail {
   font-style: italic;
 }
+.phim-shuffle-top {
+  display: none;
+}
+@media (max-width: 680px) {
+  .phim-shuffle-top {
+    display: inline-flex;
+  }
+}
 .contribute-btn {
   transition: background 0.2s var(--ease-standard);
 }

@@ -150,11 +150,11 @@ export function FilmPicker({ films }: { films: Phim[] }) {
 
   return (
     <div>
-      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "3.5rem" }}>
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "clamp(1.25rem, 6vw, 3.5rem)" }}>
         <div
           style={{
             display: "flex",
-            gap: "3rem",
+            gap: "clamp(1.25rem, 6vw, 3rem)",
             flexWrap: "wrap",
             transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",
             opacity: fading ? 0 : 1,
@@ -179,30 +179,40 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "1.25rem", overflow: "hidden" }}>
               <TrailerFrame film={film} />
             </div>
+            {/* mobile-only: keeps the shuffle action right next to the video, so tapping it never
+             * leaves the new trailer scrolled out of view the way the bottom button can on small screens */}
+            <button
+              type="button"
+              onClick={pickAnother}
+              className="phim-shuffle-top cta-btn cta-btn--outline"
+              style={{ cursor: "pointer", borderRadius: "999px", marginTop: "1rem", width: "100%", justifyContent: "center" }}
+            >
+              thử một bộ phim khác <span className="ar">→</span>
+            </button>
           </div>
 
           <div style={{ flex: "1 1 320px", minWidth: 260, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.3rem" }}>
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2rem", color: "var(--color-ink)" }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", marginBottom: "clamp(0.7rem, 3vw, 1.3rem)" }}>
+              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.35rem, 5vw, 2rem)", color: "var(--color-ink)" }}>
                 {film.title}
               </span>
               <span style={pill}>{film.year}</span>
             </div>
 
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 1.6rem" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "clamp(0.88rem, 2.6vw, 1.02rem)", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 clamp(0.9rem, 4vw, 1.6rem)" }}>
               {film.feeling}
             </p>
 
             {film.quote ? (
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.8, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.2rem 0 0.2rem 1.25rem", margin: "0 0 1.7rem" }}>
+              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "clamp(0.9rem, 3vw, 1.15rem)", lineHeight: 1.7, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.2rem 0 0.2rem clamp(0.85rem, 3vw, 1.25rem)", margin: "0 0 clamp(0.9rem, 4vw, 1.7rem)" }}>
                 &ldquo;{film.quote}&rdquo;
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.6rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.5rem" }}>
                   — {film.quoteBy}
                 </span>
               </p>
             ) : null}
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "clamp(0.4rem, 2vw, 0.6rem)" }}>
               {film.tags.map((tag) => (
                 <span
                   key={tag}
@@ -210,12 +220,12 @@ export function FilmPicker({ films }: { films: Phim[] }) {
                     flexShrink: 0,
                     whiteSpace: "nowrap",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.62rem",
+                    fontSize: "clamp(0.55rem, 2vw, 0.62rem)",
                     letterSpacing: "0.06em",
                     color: "var(--color-stone)",
                     border: "1px solid var(--color-mist)",
                     borderRadius: "999px",
-                    padding: "0.4rem 0.85rem",
+                    padding: "clamp(0.3rem, 1.5vw, 0.4rem) clamp(0.6rem, 3vw, 0.85rem)",
                   }}
                 >
                   {tag}

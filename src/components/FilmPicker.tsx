@@ -168,7 +168,7 @@ export function FilmPicker({ films }: { films: Phim[] }) {
 
   return (
     <div>
-      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "clamp(1.25rem, 6vw, 3.5rem)", minHeight: "39rem", display: "flex", alignItems: "center" }}>
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "clamp(1rem, 4vw, 2rem)", minHeight: "24rem", display: "flex", alignItems: "center" }}>
         <div
           style={{
             display: "flex",
@@ -208,13 +208,45 @@ export function FilmPicker({ films }: { films: Phim[] }) {
               <span style={pill}>{film.year}</span>
             </div>
 
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "clamp(0.88rem, 2.6vw, 1.02rem)", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 clamp(0.9rem, 4vw, 1.6rem)" }}>
+            <p
+              style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: "clamp(0.82rem, 2.2vw, 0.92rem)",
+                lineHeight: 1.65,
+                color: "var(--color-ink)",
+                margin: "0 0 clamp(0.7rem, 3vw, 1.1rem)",
+                display: "-webkit-box",
+                WebkitLineClamp: 3,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+              }}
+            >
               {film.feeling}
             </p>
 
             {film.quote ? (
-              <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "clamp(0.9rem, 3vw, 1.15rem)", lineHeight: 1.7, color: "var(--color-cham-dem)", borderLeft: "2px solid var(--color-mist)", padding: "0.2rem 0 0.2rem clamp(0.85rem, 3vw, 1.25rem)", margin: "0 0 clamp(0.9rem, 4vw, 1.7rem)" }}>
-                &ldquo;{film.quote}&rdquo;
+              <p
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontStyle: "italic",
+                  fontSize: "clamp(0.85rem, 2.6vw, 1rem)",
+                  lineHeight: 1.55,
+                  color: "var(--color-cham-dem)",
+                  borderLeft: "2px solid var(--color-mist)",
+                  padding: "0.2rem 0 0.2rem clamp(0.8rem, 3vw, 1.1rem)",
+                  margin: "0 0 clamp(0.7rem, 3vw, 1.2rem)",
+                }}
+              >
+                <span
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
+                  &ldquo;{film.quote}&rdquo;
+                </span>
                 <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", fontStyle: "normal", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.5rem" }}>
                   — {film.quoteBy}
                 </span>

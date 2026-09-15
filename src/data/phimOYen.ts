@@ -92,4 +92,13 @@ export const phimList: Phim[] = [
     tags: ["xem tối muộn", "không có gì xảy ra", "xem cùng ai đó", "khi cần được yên"],
     youtubeId: "2Qc7ytObV5Y",
   },
+  {
+    title: "Big Fish & Begonia",
+    year: "2016",
+    feeling: "Xuân sống trong một thế giới nằm bên kia biển cả. Sau một lần bước vào thế giới loài người, cô mang về một linh hồn nhỏ bé và từ đó bắt đầu hành trình vượt qua những luật lệ của tự nhiên, giữa tình yêu, sự hy sinh và những điều không thể níu giữ.",
+    quote: "Chỉ cần lòng cháu lương thiện, chuyện đúng sai của người khác chẳng còn quan trọng. Hãy cứ đi theo điều trái tim mình mách bảo.",
+    quoteBy: "Ông nội của Xuân",
+    tags: ["xem tối muộn", "phim để xem nhiều lần", "khi cần được yên", "xem cùng ai đó"],
+    youtubeId: "k5eUasNF4AU",
+  },
 ];

@@ -101,4 +101,13 @@ export const phimList: Phim[] = [
     tags: ["xem tối muộn", "phim để xem nhiều lần", "khi cần được yên", "xem cùng ai đó"],
     youtubeId: "k5eUasNF4AU",
   },
+  {
+    title: "Heidi",
+    year: "2015",
+    feeling: "Giữa những ngọn núi, đàn dê, gió và bầu trời, Heidi tìm thấy điều mà cô bé chưa từng có, một nơi để thuộc về.",
+    quote: "Cháu phải tự quyết định nên tin vào những gì mắt mình thấy, tai mình nghe, hay những điều người khác nói.",
+    quoteBy: "ông của Heidi",
+    tags: ["xem sáng chủ nhật", "không có gì xảy ra", "khi cần được yên", "xem cùng ai đó"],
+    youtubeId: "eQrZ26kPSpM",
+  },
 ];

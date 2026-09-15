@@ -104,6 +104,18 @@ export default function TouchPage() {
               </svg>
               instagram
             </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61591759233963"
+              target="_blank"
+              rel="noopener"
+              className="mono-link"
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M15.5 8.5h-2a1 1 0 0 0-1 1V12h3l-.4 3h-2.6v7h-3v-7H8v-3h2.5V9.2C10.5 6.9 12 5 14.6 5h1.9v3.5Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+              </svg>
+              facebook
+            </a>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thuận dưỡng</span>

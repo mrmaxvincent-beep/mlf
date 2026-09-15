@@ -179,16 +179,6 @@ export function FilmPicker({ films }: { films: Phim[] }) {
             <div style={{ position: "relative", aspectRatio: "16/9", borderRadius: "1.25rem", overflow: "hidden" }}>
               <TrailerFrame film={film} />
             </div>
-            {/* mobile-only: keeps the shuffle action right next to the video, so tapping it never
-             * leaves the new trailer scrolled out of view the way the bottom button can on small screens */}
-            <button
-              type="button"
-              onClick={pickAnother}
-              className="phim-shuffle-top cta-btn cta-btn--outline"
-              style={{ cursor: "pointer", borderRadius: "999px", marginTop: "1rem", width: "100%", justifyContent: "center" }}
-            >
-              thử một bộ phim khác <span className="ar">→</span>
-            </button>
           </div>
 
           <div style={{ flex: "1 1 320px", minWidth: 260, display: "flex", flexDirection: "column", justifyContent: "center" }}>

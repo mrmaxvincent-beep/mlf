@@ -32,7 +32,7 @@ export const phimList: Phim[] = [
   {
     title: "Departures",
     year: "2008",
-    feeling: "Một sự tĩnh lặng nặng mà nhẹ, khiến mình nhìn lại những điều mình chưa kịp nói với người đã đi xa.",
+    feeling: "Cảm giác nặng mà cũng nhẹ, khiến mình nhìn lại những điều mình chưa kịp nói với người đã đi xa và cả những điều với chính mình nữa.",
     quote: "Chết không phải là hết. Người ta đi qua nó, để bước tiếp sang một điều khác.",
     quoteBy: "Shokichi",
     tags: ["xem tối muộn", "khi mệt mà không ngủ được", "phim để xem hai lần", "xem cùng một người"],

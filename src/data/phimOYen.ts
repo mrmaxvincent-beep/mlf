@@ -62,7 +62,7 @@ export const phimList: Phim[] = [
     feeling: "Đôi khi mộng mơ không phải là xa rời thực tế, nó là thứ giúp cuộc sống thực trở nên đáng sống hơn.",
     quote: "Chúng ta cần những giấc mơ. Hơn bao giờ hết.",
     quoteBy: "Ada Harris",
-    tags: ["xem tối muộn", "xem khi trời mưa", "khi cần được yên", "xem một mình"],
+    tags: ["xem tối muộn", "xem khi trời mưa", "khi cần được yên", "xem một mình", "mơ một chút"],
     youtubeId: "iO9JcPbbmAA",
   },
 ];

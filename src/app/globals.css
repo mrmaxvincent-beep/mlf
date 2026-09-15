@@ -1361,8 +1361,8 @@ details[open] > summary .acc-icon {
   background-size: 0;
 }
 .one-day-btn:hover {
-  color: var(--color-cham-dem);
-  border-color: var(--color-cham-dem);
+  color: var(--color-cham-dem) !important;
+  border-color: var(--color-cham-dem) !important;
   background-image: linear-gradient(
     to right,
     currentColor 0%,

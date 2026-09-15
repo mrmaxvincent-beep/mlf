@@ -51,7 +51,7 @@ export const phimList: Phim[] = [
     title: "This Beautiful Fantastic",
     year: "2017",
     feeling: "Một bộ phim dịu dàng về cô gái sợ hãi thế giới, một ông già cộc cằn, một khu vườn bị bỏ quên và những con người đã vô tình giúp nhau học lại cách sống, cách yêu thương và cách… bay.",
-    quote: "Chúng đi theo đường cong của mặt trời từ bình minh đến hoàng hôn, đón lấy trọn vẹn năng lượng của mỗi ngày.",
+    quote: "Chúng - hoa hướng dương, đi theo đường cong của mặt trời từ bình minh đến hoàng hôn, đón lấy trọn vẹn năng lượng của mỗi ngày.",
     quoteBy: "Alfie",
     tags: ["xem sáng chủ nhật", "khi cần được yên", "phim để xem hai lần", "xem một mình"],
     youtubeId: "eZDg-EBC4nA",

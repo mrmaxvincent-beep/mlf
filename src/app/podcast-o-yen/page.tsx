@@ -34,16 +34,18 @@ export default function PodcastOYenPage() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
         <Breadcrumb label="podcast ở-yên" />
-        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>nghe & cảm</span>
-        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
-          podcast ở-yên
-        </h1>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.1rem", lineHeight: 1.7, color: "var(--color-stone)", maxWidth: "44ch", margin: "0 0 0.9rem" }}>
-          những cuộc trò chuyện về đời sống ở-yên.
-        </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          phát hành vào ngày 1 hàng tháng, trên Spotify.
-        </p>
+        <div style={{ textAlign: "center" }}>
+          <span className="eyebrow" style={{ color: "var(--color-ink)" }}>nghe & cảm</span>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
+            podcast ở-yên
+          </h1>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.1rem", lineHeight: 1.7, color: "var(--color-stone)", maxWidth: "44ch", margin: "0 auto 0.9rem" }}>
+            những cuộc trò chuyện về đời sống ở-yên.
+          </p>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 auto" }}>
+            phát hành vào ngày 1 hàng tháng, trên Spotify.
+          </p>
+        </div>
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>

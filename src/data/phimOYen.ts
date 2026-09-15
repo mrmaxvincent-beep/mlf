@@ -74,4 +74,13 @@ export const phimList: Phim[] = [
     tags: ["xem khi trời mưa", "khi cần được yên", "xem một mình", "khoảnh khắc chờ đợi"],
     youtubeId: "bnFBoF06SqE",
   },
+  {
+    title: "The Secret World of Arrietty",
+    year: "2010",
+    feeling: "Ngay dưới sàn nhà, sau những bức tường và giữa những bụi cỏ, có một thế giới nhỏ bé mà con người chẳng hề biết đến. Những người tí hon sống ở đó, lặng lẽ “mượn” những thứ con người bỏ quên. Hai thế giới vốn không nên gặp nhau, nhưng rồi một tình bạn rất dịu dàng đã nảy sinh từ cuộc gặp ấy.",
+    quote: "Đôi khi, bạn phải can đảm.",
+    quoteBy: "Arrietty",
+    tags: ["xem chiều thứ 7", "xem khi trời mưa", "xem một mình", "khoảnh khắc chờ đợi"],
+    youtubeId: "vxoqVTSsFfo",
+  },
 ];

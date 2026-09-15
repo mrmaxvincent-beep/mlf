@@ -168,10 +168,11 @@ export function FilmPicker({ films }: { films: Phim[] }) {
 
   return (
     <div>
-      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "clamp(1.25rem, 6vw, 3.5rem)" }}>
+      <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.25rem", padding: "clamp(1.25rem, 6vw, 3.5rem)", minHeight: "39rem", display: "flex", alignItems: "center" }}>
         <div
           style={{
             display: "flex",
+            width: "100%",
             gap: "clamp(1.25rem, 6vw, 3rem)",
             flexWrap: "wrap",
             transition: "opacity 1.1s ease-in-out, filter 1.1s ease-in-out, transform 1.1s ease-in-out",

@@ -202,7 +202,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
       </div>
 
       {/* GỢI Ý */}
-      <Reveal style={{ padding: "3.4rem 0", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)", marginBottom: "7rem" }}>
+      <Reveal style={{ padding: "3.4rem 0", borderTop: "1px solid var(--color-ink)", borderBottom: "1px solid var(--color-ink)", marginBottom: "7rem" }}>
         <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", display: "block", marginBottom: "0.9rem", textAlign: "center" }}>
           có thể bắt đầu từ đây
         </span>

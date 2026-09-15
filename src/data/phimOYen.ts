@@ -119,4 +119,13 @@ export const phimList: Phim[] = [
     tags: ["xem khi trời mưa", "khi cần được yên", "rất ít lời", "xem một mình"],
     youtubeId: "KcwKPRfTMa4",
   },
+  {
+    title: "Destiny: The Tale Of Kamakura",
+    year: "2017",
+    feeling: "Ở Kamakura, người sống và người đã khuất, con người và yêu quái, những điều có thật và những điều tưởng như không thể tồn tại cùng nhau trong một thế giới rất đỗi bình thường.",
+    quote: "Thị trấn này thật thư thả. Kamakura là một nơi kỳ diệu, nơi thời gian trôi theo một nhịp khác Tokyo.",
+    quoteBy: "Akiko",
+    tags: ["xem tối muộn", "không có gì xảy ra", "phim để xem nhiều lần", "xem cùng ai đó"],
+    youtubeId: "F76HUC-02EY",
+  },
 ];

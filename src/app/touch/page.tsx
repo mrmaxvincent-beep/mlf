@@ -88,8 +88,9 @@ export default function TouchPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thuần upcycle</span>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "nowrap", overflowX: "auto" }}>
             <a
               href="https://www.instagram.com/thuan.upcycle/"
               target="_blank"
@@ -134,6 +135,7 @@ export default function TouchPage() {
               </svg>
               threads
             </a>
+            </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thuận dưỡng</span>

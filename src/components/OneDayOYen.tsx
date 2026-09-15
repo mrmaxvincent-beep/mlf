@@ -289,6 +289,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
         <button
           onClick={contribute}
           disabled={contributed}
+          className={contributed ? undefined : "contribute-btn"}
           style={
             contributed
               ? { fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-cham-dem)", background: "transparent", border: "none", padding: "0.4rem 0", cursor: "default", whiteSpace: "nowrap" }

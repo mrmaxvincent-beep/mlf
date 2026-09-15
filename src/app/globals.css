@@ -1126,6 +1126,12 @@ details[open] > summary .acc-icon {
 .itin-day--detailed .time-row .activity .detail {
   font-style: italic;
 }
+.contribute-btn {
+  transition: background 0.2s var(--ease-standard);
+}
+.contribute-btn:hover {
+  background: var(--color-cham-dem) !important;
+}
 .day-gradient-spin {
   animation: day-gradient-spin 22s linear infinite;
 }

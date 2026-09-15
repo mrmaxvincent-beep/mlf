@@ -3,7 +3,6 @@ import { ScrollExtras } from "@/components/ScrollExtras";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 export function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer className="wrap" style={{ padding: "2.5rem 1.5rem 2rem", textAlign: "center", borderTop: "1px solid var(--color-mist)" }}>
       <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginBottom: "1.75rem" }}>
@@ -43,19 +42,8 @@ export function Footer() {
 
       <NewsletterForm />
 
-      <span style={{ position: "relative", width: 52.5, height: 66, display: "block", margin: "0 auto 1rem", opacity: 0.8 }}>
+      <span style={{ position: "relative", width: 52.5, height: 66, display: "block", margin: "0 auto", opacity: 0.8 }}>
         <Image src="/assets/wordmark-o-yen.webp" alt="ở-yên" fill sizes="53px" style={{ objectFit: "contain" }} />
-      </span>
-      <span
-        style={{
-          fontFamily: "var(--font-mono)",
-          fontSize: "0.6rem",
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          color: "var(--color-stone)",
-        }}
-      >
-        mộc little farm · {year}
       </span>
 
       <ScrollExtras />

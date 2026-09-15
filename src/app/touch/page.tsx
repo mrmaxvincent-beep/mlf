@@ -116,6 +116,24 @@ export default function TouchPage() {
               </svg>
               facebook
             </a>
+            <a
+              href="https://www.threads.com/@thuan.upcycle"
+              target="_blank"
+              rel="noopener"
+              className="mono-link"
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path
+                  d="M12 3c-4.4 0-7.5 2.9-7.5 8v2c0 5.1 3.1 8 7.5 8 3.3 0 5.7-1.5 6.6-4.1.5-1.5.2-3-.9-4-1-.9-2.6-1.2-4.3-.9-1.4.2-2.4 1-2.4 2.1 0 .9.7 1.6 2 1.6 1.5 0 2.5-.9 2.7-2.4"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              threads
+            </a>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>thuận dưỡng</span>

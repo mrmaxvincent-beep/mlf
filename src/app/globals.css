@@ -1126,6 +1126,19 @@ details[open] > summary .acc-icon {
 .itin-day--detailed .time-row .activity .detail {
   font-style: italic;
 }
+.day-gradient-spin {
+  animation: day-gradient-spin 22s linear infinite;
+}
+@keyframes day-gradient-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .day-gradient-spin {
+    animation: none;
+  }
+}
 .kenburns-zoom {
   animation: kenburns-zoom 8s ease-in-out infinite alternate;
 }

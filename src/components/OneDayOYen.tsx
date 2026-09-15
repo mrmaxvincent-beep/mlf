@@ -259,6 +259,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
         </span>
         <span
           style={{
+            position: "relative",
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
@@ -267,9 +268,20 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             borderRadius: "50%",
             border: "1px solid var(--color-mist)",
             marginBottom: "1.6rem",
+            overflow: "hidden",
           }}
         >
-          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 9vw, 3.2rem)", lineHeight: 1, color: "var(--color-ink)" }}>
+          <span
+            aria-hidden
+            className="day-gradient-spin"
+            style={{
+              position: "absolute",
+              inset: "-25%",
+              background: "conic-gradient(from 0deg, var(--color-cham-suong), var(--color-moss), var(--color-mist), var(--color-cham-suong))",
+              opacity: 0.35,
+            }}
+          />
+          <span style={{ position: "relative", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 9vw, 3.2rem)", lineHeight: 1, color: "var(--color-ink)" }}>
             {fmt(totalDays)}
           </span>
         </span>

@@ -65,4 +65,13 @@ export const phimList: Phim[] = [
     tags: ["xem tối muộn", "xem khi trời mưa", "xem một mình", "mơ một chút"],
     youtubeId: "iO9JcPbbmAA",
   },
+  {
+    title: "The Garden of Words",
+    year: "2013",
+    feeling: "Họ không hẹn nhau, chỉ tình cờ gặp lại vào những ngày trời mưa. Giữa khu vườn xanh, những cơn mưa cùng khoảng lặng, hai con người đang lạc lối dần tìm thấy một nơi để được lắng nghe, được ở cạnh nhau và học cách bước tiếp.",
+    quote: "Một tiếng sấm khẽ, dù trời có mưa hay không, tôi vẫn sẽ ở đây. Cùng với bạn.",
+    quoteBy: "Takao",
+    tags: ["xem khi trời mưa", "khi cần được yên", "xem một mình", "khoảnh khắc chờ đợi"],
+    youtubeId: "bnFBoF06SqE",
+  },
 ];

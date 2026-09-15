@@ -35,7 +35,7 @@ export const phimList: Phim[] = [
     feeling: "Cảm giác nặng mà cũng nhẹ, khiến mình nhìn lại những điều mình chưa kịp nói với người đã đi xa và cả những điều với chính mình nữa.",
     quote: "Chết không phải là hết. Người ta đi qua nó, để bước tiếp sang một điều khác.",
     quoteBy: "Shokichi",
-    tags: ["xem tối muộn", "khi mệt mà không ngủ được", "phim để xem hai lần", "xem cùng một người"],
+    tags: ["xem tối muộn", "khi mệt mà không ngủ được", "phim để xem nhiều lần", "xem cùng một người"],
     youtubeId: "EIqD2-D6FC0",
   },
   {
@@ -53,7 +53,7 @@ export const phimList: Phim[] = [
     feeling: "Một bộ phim dịu dàng về cô gái sợ hãi thế giới, một ông già cộc cằn, một khu vườn bị bỏ quên và những con người đã vô tình giúp nhau học lại cách sống, cách yêu thương và cách… bay.",
     quote: "Chúng - hoa hướng dương, đi theo đường cong của mặt trời từ bình minh đến hoàng hôn, đón lấy trọn vẹn năng lượng của mỗi ngày.",
     quoteBy: "Alfie",
-    tags: ["xem sáng chủ nhật", "khi cần được yên", "phim để xem hai lần", "xem một mình"],
+    tags: ["xem chiều chủ nhật", "khi cần được yên", "phim để xem nhiều lần", "xem một mình"],
     youtubeId: "eZDg-EBC4nA",
   },
 ];

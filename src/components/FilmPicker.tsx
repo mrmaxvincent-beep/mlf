@@ -127,18 +127,36 @@ const pill: React.CSSProperties = {
   color: "var(--color-stone)",
 };
 
+/** Shuffles 0..n-1 (Fisher–Yates) so every film is shown once before any repeats. */
+function shuffledOrder(n: number, avoidFirst?: number) {
+  const order = Array.from({ length: n }, (_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  // avoid the new queue starting with the film just shown, so back-to-back clicks never repeat
+  if (avoidFirst !== undefined && order.length > 1 && order[0] === avoidFirst) {
+    [order[0], order[1]] = [order[1], order[0]];
+  }
+  return order;
+}
+
 /** Single-film card ("mlf giới thiệu những bộ phim để ở-yên") with a trailer embed slot, a feeling note,
- * and a button that swaps to another random pick from the list — mirrors GuestWhyRotator's fade transition. */
+ * and a button that cycles to the next film in a shuffled order — every film is shown once before any repeats,
+ * instead of a naive random pick which can resurface the same film after just one or two clicks. */
 export function FilmPicker({ films }: { films: Phim[] }) {
   const [index, setIndex] = useState(0);
   const [fading, setFading] = useState(false);
   const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const queueRef = useRef<number[]>([]);
   const film = films[index];
 
   function pickAnother() {
     if (films.length <= 1) return;
-    let next = index;
-    while (next === index) next = Math.floor(Math.random() * films.length);
+    if (queueRef.current.length === 0) {
+      queueRef.current = shuffledOrder(films.length, index);
+    }
+    const next = queueRef.current.shift()!;
     if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
     setFading(true);
     // 1.1s echoes a slow inhale/exhale rather than a snap-cut — matches the site's unhurried pacing

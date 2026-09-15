@@ -56,4 +56,13 @@ export const phimList: Phim[] = [
     tags: ["xem chiều chủ nhật", "khi cần được yên", "phim để xem nhiều lần", "xem một mình"],
     youtubeId: "eZDg-EBC4nA",
   },
+  {
+    title: "Mrs. Harris Goes To Paris",
+    year: "2022",
+    feeling: "Đôi khi mộng mơ không phải là xa rời thực tế, nó là thứ giúp cuộc sống thực trở nên đáng sống hơn.",
+    quote: "Chúng ta cần những giấc mơ. Hơn bao giờ hết.",
+    quoteBy: "Ada Harris",
+    tags: ["xem tối muộn", "xem khi trời mưa", "khi cần được yên", "xem một mình"],
+    youtubeId: "iO9JcPbbmAA",
+  },
 ];

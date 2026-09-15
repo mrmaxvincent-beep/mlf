@@ -35,7 +35,7 @@ export const phimList: Phim[] = [
     feeling: "Cảm giác nặng mà cũng nhẹ, khiến mình nhìn lại những điều mình chưa kịp nói với người đã đi xa và cả những điều với chính mình nữa.",
     quote: "Chết không phải là hết. Người ta đi qua nó, để bước tiếp sang một điều khác.",
     quoteBy: "Shokichi",
-    tags: ["xem tối muộn", "khi mệt mà không ngủ được", "phim để xem nhiều lần", "xem cùng một người"],
+    tags: ["xem tối muộn", "khi mệt mà không ngủ được", "phim để xem nhiều lần", "xem cùng ai đó"],
     youtubeId: "EIqD2-D6FC0",
   },
   {
@@ -44,7 +44,7 @@ export const phimList: Phim[] = [
     feeling: "Vừa buồn cười, vừa nghẹn ngào - một chuyến đi chẳng có đích, nhưng rồi lại chạm tới những điều rất thật.",
     quote: "Hỏi tử tế, thì mọi chuyện dễ hơn nhiều.",
     quoteBy: "Masao",
-    tags: ["xem sáng chủ nhật", "khi thấy vội", "không có gì xảy ra", "xem cùng một người"],
+    tags: ["xem sáng chủ nhật", "khi thấy vội", "không có gì xảy ra", "xem cùng ai đó"],
     youtubeId: "EbN3wQc5Y_Q",
   },
   {

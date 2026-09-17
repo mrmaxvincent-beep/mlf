@@ -155,7 +155,12 @@ export default function BeStillPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
-        <a className="go mono-link" href="https://www.bestill.life/" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+        <a className="go mono-link" href="https://www.bestill.life/" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M5 4h10l4 4v12H5V4Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+            <path d="M15 4v4h4" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+            <path d="M8.5 12.5h7M8.5 15.5h7M8.5 9.5h3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+          </svg>
           đọc tâm quán <span className="ar">→</span>
         </a>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0.6rem 0 0" }}>

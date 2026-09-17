@@ -1698,6 +1698,11 @@ details[open] > summary .acc-icon {
   top: 6.5rem;
   align-self: start;
 }
+.lb-content {
+  background: var(--color-paper);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
 .lb-list {
   display: flex;
   flex-wrap: wrap;

@@ -47,7 +47,7 @@ export function ChuyenVeReader({ episodes }: { episodes: Episode[] }) {
         </div>
       </div>
 
-      <div style={{ opacity: fading ? 0 : 1, transition: "opacity .18s ease" }}>
+      <div className="cv-content" style={{ opacity: fading ? 0 : 1, transition: "opacity .18s ease" }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.5rem" }}>
           <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>

@@ -1965,6 +1965,9 @@ details[open] > summary .acc-icon {
 }
 .letter-fade {
   transition: opacity 0.35s ease;
+  background: var(--color-paper);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
 }
 .letter-para {
   font-family: var(--font-serif);

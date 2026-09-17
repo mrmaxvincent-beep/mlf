@@ -121,6 +121,42 @@ export default function TeaMindPage() {
         </p>
       </Reveal>
 
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>theo dõi Vũ</span>
+          <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap" }}>
+            <a
+              href="https://fieldnotes-levu.blogspot.com/"
+              target="_blank"
+              rel="noopener"
+              className="mono-link"
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M5 4h10l4 4v12H5V4Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+                <path d="M15 4v4h4" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+                <path d="M8.5 12.5h7M8.5 15.5h7M8.5 9.5h3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+              </svg>
+              fieldnotes · blog
+            </a>
+            <a
+              href="https://instagram.com/tea.mind/"
+              target="_blank"
+              rel="noopener"
+              className="mono-link"
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.4" />
+                <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+              </svg>
+              instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </>
   );

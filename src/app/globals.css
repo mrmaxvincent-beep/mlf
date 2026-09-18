@@ -22,6 +22,7 @@ body {
   background-image: url("/assets/light_background2.webp");
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-weight: 400;

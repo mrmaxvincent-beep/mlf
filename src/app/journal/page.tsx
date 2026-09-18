@@ -47,7 +47,7 @@ export default function JournalPage() {
               <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--color-stone)", flex: "none", width: "1.6rem" }}>{c.num}</span>
               <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", fontWeight: 500, color: "var(--color-ink)", flex: "none" }}>{c.name}</span>
               <span className="toc-leader" />
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", flex: "none", maxWidth: "32ch", textAlign: "right" }}>{c.tagline}</span>
+              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", flexShrink: 1, minWidth: 0, maxWidth: "min(32ch, 50vw)", textAlign: "right" }}>{c.tagline}</span>
             </div>
           ))}
         </RevealStagger>

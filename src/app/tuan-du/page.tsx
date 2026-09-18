@@ -241,7 +241,7 @@ export default function TuanDuPage() {
         </div>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "3.5rem", height: "70vh", width: "52.5vh", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 3.5rem" }}>
+      <div className="wrap" style={{ marginBottom: "3.5rem", width: "min(52.5vh, 100%)", aspectRatio: "3/4", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 3.5rem" }}>
         <ImageCarousel
           images={[
             { label: "ảnh · tuần-du 01", aspectRatio: "3/4", src: "/assets/tuandu_slide1.webp" },

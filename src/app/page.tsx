@@ -190,9 +190,9 @@ export default function HomePage() {
       <div style={{ padding: "2.2rem 0" }} />
 
       {/* ảnh banner — 4 ảnh dọc ghép liền */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0 }}>
+      <div style={{ width: "100%", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0 }}>
         {bannerImages.map((v) => (
-          <div key={v.id} style={{ position: "relative", aspectRatio: "3/4" }}>
+          <div key={v.id} style={{ position: "relative", aspectRatio: "3/4", minWidth: 0 }}>
             {v.type === "video" ? (
               <video autoPlay muted loop playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }}>
                 <source src={v.src ? `/assets/${v.src}` : "/video/home-hero.mp4"} type="video/mp4" />
@@ -360,7 +360,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div style={{ aspectRatio: "21/9", minHeight: 340, position: "relative" }}>
+      <div style={{ width: "100%", aspectRatio: "21/9", minHeight: 340, position: "relative" }}>
         <Image src="/assets/home_split.webp" alt="khoảnh khắc ở-yên" fill sizes="100vw" style={{ objectFit: "cover" }} />
       </div>
 

@@ -481,6 +481,22 @@ details[open] > summary .acc-icon {
   background: var(--color-paper);
   padding: clamp(1.1rem, 4vw, 1.6rem);
 }
+/* Ảnh đại diện kiểu social post — logo mlf làm avatar */
+.dn-avatar {
+  position: relative;
+  flex: none;
+  display: block;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-mist);
+  overflow: hidden;
+}
+.dn-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* Chấm còn thở — dấu hiệu duy nhất cho biết khung này là một dòng chảy đang tiếp diễn */
 .dn-dot {
   position: relative;
@@ -490,6 +506,16 @@ details[open] > summary .acc-icon {
   height: 6px;
   border-radius: 50%;
   background: var(--color-moss);
+}
+/* Khi đặt trên avatar: chấm nổi ở góc dưới-phải, có viền để tách khỏi ảnh bên dưới */
+.dn-dot--badge {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--color-paper);
+  background-clip: padding-box;
 }
 .dn-dot::after {
   content: "";

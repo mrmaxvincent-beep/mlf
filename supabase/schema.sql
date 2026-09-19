@@ -80,7 +80,11 @@ create table traces (
 alter table traces enable row level security;
 create policy "public can read published traces" on traces
   for select using (published = true);
--- Không có policy insert/update/delete cho public — viết dấu vết mới từ Table Editor
--- trên Supabase dashboard, hoặc qua một admin role thêm sau.
+-- Ghi: chỉ tài khoản đã đăng nhập (Supabase Auth) — form ở /pushstatus. Site là static
+-- export nên anon key nằm công khai trong bundle; chốt chặn thật phải ở đây, không phải
+-- ở chỗ đường dẫn trang khó đoán. Tạo tài khoản tại Authentication → Users → Add user.
+create policy "authenticated can write traces" on traces
+  for insert to authenticated with check (true);
+-- Vẫn không có policy update/delete — sửa/xóa làm từ Table Editor trên dashboard.
 
 alter publication supabase_realtime add table traces;

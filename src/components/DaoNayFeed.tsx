@@ -12,11 +12,11 @@ const monoLabel: React.CSSProperties = {
 };
 
 /** Một dòng ở tầng 2 và tầng 3 — ngày cố định bên trái, nội dung co giãn bên phải. */
-function Row({ trace }: { trace: Trace }) {
+function Row({ trace, last }: { trace: Trace; last?: boolean }) {
   return (
-    <div style={{ display: "flex", gap: "1.1rem", alignItems: "baseline", padding: "0.8rem 0", borderBottom: "1px solid var(--color-mist)" }}>
+    <div style={{ display: "flex", gap: "1.1rem", alignItems: "baseline", padding: "0.8rem 0", borderBottom: last ? "none" : "1px solid var(--color-mist)" }}>
       <span style={{ ...monoLabel, flex: "none", width: "2.9rem" }}>{ddmm(parseTraceDate(trace.d))}</span>
-      <p style={{ flex: "1 1 auto", minWidth: 0, fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.65, color: "var(--color-stone-alt)", margin: 0 }}>
+      <p style={{ flex: "1 1 auto", minWidth: 0, fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.65, color: "var(--color-ink)", margin: 0 }}>
         {trace.body}
       </p>
     </div>
@@ -42,14 +42,19 @@ export function DaoNayFeed({ fallback }: { fallback: Trace[] }) {
 
   return (
     <div>
-      {recent.map((t) => {
+      {recent.map((t, i) => {
         const date = parseTraceDate(t.d);
         return (
-          <article key={t.d + t.body} style={{ paddingBottom: "2.6rem", marginBottom: "2.6rem", borderBottom: "1px solid var(--color-mist)" }}>
-            {/* Trước khi mount chỉ có ngày thật; thời gian tương đối cần đồng hồ của người đọc. */}
-            <span style={{ ...monoLabel, display: "block", marginBottom: "0.9rem" }}>{today ? relativeLabel(date, today) : ddmm(date)}</span>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>{t.body}</p>
-            {t.photo ? <ImagePlaceholder label="ảnh · dạo này" src={t.photo} alt={t.body} aspectRatio="4/3" style={{ marginTop: "1.3rem" }} /> : null}
+          <article key={t.d + t.body} className="dn-card" style={{ marginBottom: "1.1rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.55rem", marginBottom: "0.9rem" }}>
+              {/* Chỉ dấu vết mới nhất còn thở — hai cái sau đã là chuyện vừa qua */}
+              <span className={i === 0 ? "dn-dot" : "dn-dot dn-dot--quiet"} aria-hidden />
+              {/* Trước khi mount chỉ có ngày thật; thời gian tương đối cần đồng hồ của người đọc. */}
+              <span style={monoLabel}>{today ? relativeLabel(date, today) : ddmm(date)}</span>
+              <span style={{ ...monoLabel, marginLeft: "auto" }}>{ddmm(date)}</span>
+            </div>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.1rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>{t.body}</p>
+            {t.photo ? <ImagePlaceholder label="ảnh · dạo này" src={t.photo} alt={t.body} aspectRatio="4/3" style={{ marginTop: "1.2rem", borderRadius: "0.75rem" }} /> : null}
           </article>
         );
       })}
@@ -57,28 +62,32 @@ export function DaoNayFeed({ fallback }: { fallback: Trace[] }) {
       {condensed.length ? (
         <section style={{ marginTop: "3.5rem" }}>
           <span style={{ ...monoLabel, display: "block", letterSpacing: "0.18em", marginBottom: "1.2rem", opacity: 0.8 }}>trước đó</span>
-          {condensed.map((t) => (
-            <Row key={t.d + t.body} trace={t} />
-          ))}
+          <div className="dn-card">
+            {condensed.map((t, i) => (
+              <Row key={t.d + t.body} trace={t} last={i === condensed.length - 1} />
+            ))}
+          </div>
         </section>
       ) : null}
 
       {archive.length ? (
         <section style={{ marginTop: "3.5rem" }}>
           <span style={{ ...monoLabel, display: "block", letterSpacing: "0.18em", marginBottom: "1.2rem", opacity: 0.8 }}>xa hơn</span>
-          {archive.map((g) => (
-            <details key={g.key} className="dn-month">
-              <summary>
-                <span>{g.label}</span>
-                <span className="dn-count">{g.rows.length} dấu vết</span>
-              </summary>
-              <div style={{ paddingBottom: "1.2rem" }}>
-                {g.rows.map((t) => (
-                  <Row key={t.d + t.body} trace={t} />
-                ))}
-              </div>
-            </details>
-          ))}
+          <div className="dn-card" style={{ paddingTop: 0, paddingBottom: 0 }}>
+            {archive.map((g) => (
+              <details key={g.key} className="dn-month">
+                <summary>
+                  <span>{g.label}</span>
+                  <span className="dn-count">{g.rows.length} dấu vết</span>
+                </summary>
+                <div style={{ paddingBottom: "1.2rem" }}>
+                  {g.rows.map((t, i) => (
+                    <Row key={t.d + t.body} trace={t} last={i === g.rows.length - 1} />
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
         </section>
       ) : null}
     </div>

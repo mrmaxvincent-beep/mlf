@@ -499,6 +499,13 @@ details[open] > summary .acc-icon {
   border: 1px solid var(--color-moss);
   animation: dn-breathe 3.2s var(--ease-standard) infinite;
 }
+/* Dấu vết cũ hơn: vẫn là một thẻ, nhưng đã thôi thở */
+.dn-dot--quiet {
+  background: var(--color-mist);
+}
+.dn-dot--quiet::after {
+  display: none;
+}
 @keyframes dn-breathe {
   0% {
     transform: scale(0.6);
@@ -524,6 +531,13 @@ details[open] > summary .acc-icon {
 }
 .dn-month:first-of-type {
   border-top: 1px solid var(--color-mist);
+}
+/* Trong khung, viền của khung đã lo hai đầu rồi */
+.dn-card > .dn-month:first-of-type {
+  border-top: 0;
+}
+.dn-card > .dn-month:last-of-type {
+  border-bottom: 0;
 }
 .dn-month > summary {
   display: flex;

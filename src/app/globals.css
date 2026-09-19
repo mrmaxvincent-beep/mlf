@@ -474,6 +474,34 @@ details[open] > summary .acc-icon {
   transform: rotate(45deg);
 }
 
+/* "dạo này" — tầng 3, các tháng đã đi qua gom lại thành hàng mở được */
+.dn-month {
+  border-bottom: 1px solid var(--color-mist);
+}
+.dn-month:first-of-type {
+  border-top: 1px solid var(--color-mist);
+}
+.dn-month > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--color-stone);
+  transition: color var(--duration-hover) var(--ease-standard);
+}
+.dn-month > summary:hover,
+.dn-month[open] > summary {
+  color: var(--color-ink);
+}
+.dn-month .dn-count {
+  flex: none;
+  opacity: 0.6;
+}
+
 /* Feature triptych, two-column info grid, and timeline/milestone rows —
    reused across itinerary-heavy pages (tuần-du kỳ, retreat "lịch trình"). */
 .feat-grid {

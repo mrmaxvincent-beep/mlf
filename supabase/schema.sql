@@ -65,3 +65,22 @@ create policy "public can read events" on upcoming_events for select using (true
 alter publication supabase_realtime add table oyen_notes;
 alter publication supabase_realtime add table oyen_days;
 alter publication supabase_realtime add table upcoming_events;
+
+-- 4. traces — dấu vết "dạo này": mỗi bản ghi một dòng, ảnh tuỳ chọn.
+--    Phân tầng (3 gần nhất / 10 tiếp theo / gom theo tháng) được tính lúc render,
+--    không lưu trong DB — đổi hằng T1, T2 trong src/data/daoNay.ts.
+create table traces (
+  id uuid primary key default gen_random_uuid(),
+  body text not null check (char_length(body) <= 140),
+  photo_url text,
+  published boolean not null default true,
+  created_at timestamptz not null default now()
+);
+
+alter table traces enable row level security;
+create policy "public can read published traces" on traces
+  for select using (published = true);
+-- Không có policy insert/update/delete cho public — viết dấu vết mới từ Table Editor
+-- trên Supabase dashboard, hoặc qua một admin role thêm sau.
+
+alter publication supabase_realtime add table traces;

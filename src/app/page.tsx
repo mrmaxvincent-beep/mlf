@@ -10,6 +10,8 @@ import { UpcomingEvents } from "@/components/UpcomingEvents";
 import { HeroClock } from "@/components/HeroClock";
 import { DropRipple } from "@/components/DropRipple";
 import { QuickTour } from "@/components/QuickTour";
+import { DaoNayLine } from "@/components/DaoNayLine";
+import { tracesFallback } from "@/data/daoNay";
 import { routes } from "@/lib/nav";
 import {
   entries,
@@ -185,6 +187,9 @@ export default function HomePage() {
           </div>
           <UpcomingEvents fallback={fallbackUpcoming} />
         </div>
+
+        <div style={{ padding: "0.75rem 0" }} />
+        <DaoNayLine fallback={tracesFallback} />
       </div>
 
       <div style={{ padding: "2.2rem 0" }} />

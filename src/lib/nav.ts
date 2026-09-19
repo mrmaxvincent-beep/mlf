@@ -39,6 +39,7 @@ export const routes = {
   chuyenVe: "/chuyen-ve",
   ungHoMlf: "/ung-ho-mlf",
   journal: "/journal",
+  daoNay: "/dao-nay",
   khoLoiNhanOYen: "/mot-ngay-o-yen/kho-loi-nhan-o-yen",
   soTayKhach: "/so-tay-khach",
   deMucChiTiet: "/cong-dong-o-yen/de-muc-chi-tiet",

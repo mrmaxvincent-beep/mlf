@@ -26,7 +26,7 @@ export default function DaoNayPage() {
           dạo này
         </h1>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", lineHeight: 1.6, color: "var(--color-stone)", maxWidth: "30em", margin: 0 }}>
-          Không phải tin tức. Chỉ là những gì vừa xảy ra ở đây, ghi lại một dòng, rồi thôi.
+          để lại chút dấu vết, rằng nhà đang thở...
         </p>
       </div>
 

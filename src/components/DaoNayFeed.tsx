@@ -42,15 +42,13 @@ export function DaoNayFeed({ fallback }: { fallback: Trace[] }) {
 
   return (
     <div>
-      {recent.map((t, i) => {
+      {recent.map((t) => {
         const date = parseTraceDate(t.d);
         return (
           <article key={t.d + t.body} className="dn-card" style={{ marginBottom: "1.1rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.9rem" }}>
               <span className="dn-avatar">
                 <img src="/icon.png" alt="" />
-                {/* Chỉ dấu vết mới nhất còn thở — hai cái sau đã là chuyện vừa qua */}
-                {i === 0 ? <span className="dn-dot dn-dot--badge" aria-hidden /> : null}
               </span>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.15rem" }}>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", fontWeight: 600, color: "var(--color-ink)" }}>mộc little farm</span>

@@ -26,9 +26,14 @@ export function DaoNayLine({ fallback }: { fallback: Trace[] }) {
   return (
     <div className="wrap" style={{ paddingTop: "1.25rem" }}>
       <div className="dn-card">
-        <div style={{ display: "flex", alignItems: "center", gap: "0.55rem", marginBottom: "0.9rem" }}>
-          <span className="dn-dot" aria-hidden />
-          <span style={{ ...mono, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)" }}>dạo này</span>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.9rem" }}>
+          <span className="dn-avatar">
+            <img src="/icon.png" alt="" />
+          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.55rem" }}>
+            <span className="dn-dot" aria-hidden />
+            <span style={{ ...mono, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)" }}>dạo này</span>
+          </div>
           <span style={{ ...mono, marginLeft: "auto", textAlign: "right" }}>nhà đang thở</span>
         </div>
 

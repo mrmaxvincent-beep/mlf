@@ -20,7 +20,7 @@ export default function DaoNayPage() {
         <Breadcrumb label="dạo này" />
         <span className="eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", color: "var(--color-ink)" }}>
           <span className="dn-dot" aria-hidden />
-          mộc little farm · nhà đang thở
+          mộc little farm
         </span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 1rem" }}>
           dạo này

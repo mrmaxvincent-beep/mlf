@@ -5,7 +5,7 @@ export const hero = {
 };
 
 export const loiMoi = [
-  "mỗi tháng một lần, khi trăng vừa tròn vành, khu vườn lại mở cổng đón người tới chơi.",
+  "mỗi tháng một lần, khi trăng lên tròn vành, khu vườn lại mở cổng đón người tới chơi.",
   "nhà mộc mời những người bạn hữu duyên, cùng về, uống một chén trà, ăn một bữa cơm, cùng nhau chuyện trò.",
 ];
 

@@ -11,7 +11,7 @@ export const loiMoi = [
 
 /** Hai câu mang hình ảnh trăng đáy nước — tách khỏi văn xuôi để đứng thành một khoảng lặng. */
 export const loiMoiQuote = [
-  "trăng đêm rằm soi xuống mặt nước, và nơi nào nước lặng thì vầng trăng hiện lên trọn vẹn.",
+  "trăng soi xuống nước. nước càng lặng, bóng càng tròn đầy.",
   "trăng-yên là một khoảng nước lặng như thế ở giữa tháng, giữa những ngày nhiều xáo động.",
 ];
 

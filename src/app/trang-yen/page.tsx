@@ -76,7 +76,7 @@ export default function TrangYenPage() {
           <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.12em", lineHeight: 1.8, color: "var(--color-cham-suong)", margin: "0 0 2.25rem" }}>
             {hero.sub}
           </p>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.15rem, 3.4vw, 1.45rem)", lineHeight: 1.75, color: "var(--text-on-night)", maxWidth: "34ch", margin: "0 auto" }}>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1rem, 3vw, 1.45rem)", lineHeight: 1.75, color: "var(--text-on-night)", whiteSpace: "nowrap", margin: 0 }}>
             {hero.lead}
           </p>
         </Reveal>

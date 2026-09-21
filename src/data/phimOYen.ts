@@ -180,6 +180,6 @@ export const phimList: Phim[] = [
     quote: "Tương lai của cháu là một trang giấy trắng. Tương lai sẽ trở thành điều gì là do chính cháu viết nên.",
     quoteBy: "Yuji Namiya",
     tags: ["xem tối muộn", "khi cần được yên", "phim để xem nhiều lần", "xem cùng ai đó"],
-    youtubeId: "9Ftdp3r94OQ",
+    youtubeId: "_10VAhMTzSM",
   },
 ];

@@ -6,7 +6,7 @@ export const hero = {
 
 export const loiMoi = [
   "mỗi tháng một lần, vào buổi tối gần ngày rằm, khu vườn mlf ở Huế mở cổng cho bất kỳ ai muốn ghé.",
-  "người ta đến sau một ngày dài, tay cầm một món ăn nấu ở nhà, đặt lên chiếc bàn chung rồi ngồi xuống cạnh những người có khi mới gặp lần đầu. buổi tối cứ thế trôi đi theo tiếng chuông, qua một bữa ăn, một ấm trà và những câu chuyện, và có lẽ đến lúc ra về, phần xao động trong người cũng đã tự lắng xuống ít nhiều.",
+  "người đến sau một ngày dài, tay cầm một món ăn nấu ở nhà, đặt lên chiếc bàn chung rồi ngồi xuống cạnh những người có khi mới gặp lần đầu. buổi tối cứ thế trôi đi theo tiếng chuông, qua một bữa ăn, một ấm trà và những câu chuyện.",
 ];
 
 /** Hai câu mang hình ảnh trăng đáy nước — tách khỏi văn xuôi để đứng thành một khoảng lặng. */

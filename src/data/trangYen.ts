@@ -1,7 +1,7 @@
 export const hero = {
   title: "trăng-yên",
   sub: "ngồi xuống, trông trăng đáy nước.",
-  lead: "đêm ở vườn mlf Huế, khi trăng lên tròn vành.",
+  lead: "đêm ở vườn mlf Huế, khi mặt hồ vừa đủ lặng.",
 };
 
 export const loiMoi = [

@@ -1,6 +1,6 @@
 export const hero = {
   title: "trăng-yên",
-  sub: "một buổi tối mỗi tháng ở vườn mlf, khi trăng gần tròn",
+  sub: "một buổi tối ở vườn mlf, khi trăng gần tròn",
   lead: "ghé qua, cùng ăn một bữa cơm, uống một chén trà và ngồi yên bên nhau một lúc giữa ngày xáo động.",
 };
 

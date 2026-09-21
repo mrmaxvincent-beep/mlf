@@ -146,4 +146,13 @@ export const phimList: Phim[] = [
     tags: ["xem chiều chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem cùng ai đó"],
     youtubeId: "-jBe-uHhlNs",
   },
+  {
+    title: "The Makanai: Cooking for the Maiko House",
+    year: "2023",
+    feeling: "Không có điều gì lớn lao, ở đó có những buổi sáng, những mùa đi qua, những bữa cơm nóng và một căn nhà dần trở thành nhà.",
+    quote: "Mỗi người đều có lựa chọn của riêng mình. Ta có thể là nấu, hoặc là người ngồi ăn. Ta có thể là người ra đi, hoặc người ở lại.",
+    quoteBy: "Kiyo",
+    tags: ["xem sáng chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem cùng ai đó"],
+    youtubeId: "uTQ1oCVR74o",
+  },
 ];

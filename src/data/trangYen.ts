@@ -26,7 +26,7 @@ export const nhip = [
   },
   {
     name: "góp tay dọn dẹp",
-    desc: "ăn xong, mỗi người nhận một việc nhỏ, người rửa chén, người lau bàn, người xếp lại ghế, và khu vườn gọn gàng trở lại nhờ bàn tay của tất cả.",
+    desc: "ăn xong, mỗi người phụ một tay, người rửa chén, người lau bàn, người xếp lại ghế, và khu vườn gọn gàng trở lại nhờ bàn tay của tất cả.",
   },
   { name: "ngồi yên nghe chuông", desc: "tiếng chuông ngân lên, cả khu vườn cùng ngồi yên theo hơi thở của mình." },
   { name: "uống trà", desc: "trà được rót thong thả, chén này chuyền sang tay người kia, trong ánh đèn vàng và tiếng côn trùng đêm." },

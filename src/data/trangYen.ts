@@ -41,7 +41,7 @@ export const nhip = [
 export const chuCuaThang = "Mỗi tối trăng-yên đi cùng một chữ trong từ điển ở-yên, là chủ đề của mỗi đêm.";
 
 export const gop =
-  "trăng-yên là một buổi tối cộng đồng, mọi người góp bằng món ăn thay cho tiền. Mỗi người mang theo một ít đồ chay, đựng trong hộp dùng lại được vì mlf là không gian thuần chay. Món nào cũng được đón nhận như nhau, bởi bữa ăn đầy lên từ chính sự góp chung ấy.";
+  "trăng-yên là một buổi tối cộng đồng, mọi người góp bằng món ăn, mlf không nhận tiền đóng góp. Mỗi người mang theo một ít đồ chay, đựng trong hộp dùng lại được vì mlf là không gian thuần chay. Món nào cũng được đón nhận như nhau.";
 
 export const cungCacBe =
   "các gia đình có thể đưa con nhỏ theo. khu vườn có một góc để các bé chơi nhẹ nhàng, và tiếng trẻ con cũng là một phần của buổi tối, như tiếng lá hay tiếng dế.";

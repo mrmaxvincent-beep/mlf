@@ -128,4 +128,13 @@ export const phimList: Phim[] = [
     tags: ["xem tối muộn", "không có gì xảy ra", "phim để xem nhiều lần", "xem cùng ai đó"],
     youtubeId: "F76HUC-02EY",
   },
+  {
+    title: "Under the Hawthorn Tree",
+    year: "2010",
+    feeling: "Tuổi trẻ, tình yêu và những điều chúng ta cứ nghĩ rằng mình còn rất nhiều thời gian để chờ.",
+    quote: "Sao không đợi đến khi hoa nở rồi cùng đi xem?",
+    quoteBy: "Lão Tam",
+    tags: ["xem tối muộn", "tiếc một điều đã qua", "phim để xem nhiều lần", "xem cùng ai đó"],
+    youtubeId: "5aLxRWj3c0I",
+  },
 ];

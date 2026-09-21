@@ -1,7 +1,7 @@
 export const hero = {
   title: "trăng-yên",
-  sub: "một buổi tối ở vườn mlf, khi trăng gần tròn",
-  lead: "ghé qua, ăn một bữa cơm, uống một chén trà và ngồi yên bên nhau một lúc giữa ngày xáo động.",
+  sub: "ta ngồi lại, để trông trăng đáy nước.",
+  lead: "một tối mỗi tháng ở vườn mlf Huế, khi trăng lên cao.",
 };
 
 export const loiMoi = [
@@ -12,7 +12,7 @@ export const loiMoi = [
 /** Hai câu mang hình ảnh trăng đáy nước — tách khỏi văn xuôi để đứng thành một khoảng lặng. */
 export const loiMoiQuote = [
   "trăng đêm rằm soi xuống mặt nước, và nơi nào nước lặng thì vầng trăng hiện lên trọn vẹn.",
-  "trăng-yên, một khoảng nước lặng giữa tháng, ngồi xuống yên ả và soi bóng trăng trên hồ.",
+  "trăng-yên là một khoảng nước lặng như thế ở giữa tháng, giữa những ngày nhiều xáo động.",
 ];
 
 export const nhip = [
@@ -33,7 +33,7 @@ export const nhip = [
   { name: "chuyện ở-yên", desc: "Tâm mlf kể một câu chuyện." },
   {
     name: "trò chuyện tâm-thức",
-    desc: "mỗi người rút một lá thăm, rồi kể một câu chuyện của mình, để lời đã nói ra được ở yên nơi nó thuộc về.",
+    desc: "mỗi người rút một lá thăm và chia sẻ từ trải nghiệm của riêng mình, cả vòng lắng nghe trọn vẹn, để lời đã nói ra được ở yên nơi nó thuộc về.",
   },
   { name: "chuông cuối, chia tay", desc: "tiếng chuông cuối khép lại buổi tối, và mỗi người thong thả ra về dưới trăng." },
 ];
@@ -58,4 +58,4 @@ export const registrationUrl = "";
 
 export const ghiChuLich = "hoạt động sẽ tổ chức định kỳ ngày rằm hàng tháng khi mlf ổn định tại Huế.";
 
-export const loiKhep = ["trăng tròn rồi khuyết, khu vườn đóng rồi mở, mỗi tháng một lần.", "ta ngồi lại, để trông trăng đáy nước."];
+export const loiKhep = ["trăng tròn rồi khuyết, khu vườn đóng rồi mở, mỗi tháng một lần."];

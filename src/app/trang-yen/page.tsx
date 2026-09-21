@@ -8,9 +8,25 @@ import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { chuCuaThang, cungCacBe, ghiChuLich, gop, hero, loiKhep, loiMoi, loiMoiQuote, nhip, registrationUrl, thongTin } from "@/data/trangYen";
 
+const description = "một buổi tối mỗi tháng ở vườn mlf Huế: ăn chung một bữa chay, uống trà, ngồi yên bên nhau.";
+
 export const metadata: Metadata = {
   title: "trăng-yên",
-  description: hero.sub,
+  description,
+  keywords: "trăng-yên, ở-yên, Huế, sinh hoạt cộng đồng, thiền, trà",
+  openGraph: {
+    title: "trăng-yên · mộc little farm",
+    description,
+    type: "website",
+    url: "https://moclittlefarm.com/trang-yen",
+  },
+  twitter: {
+    title: "trăng-yên · mộc little farm",
+    description,
+  },
+  alternates: {
+    canonical: "https://moclittlefarm.com/trang-yen",
+  },
 };
 
 const label: React.CSSProperties = {
@@ -210,9 +226,9 @@ export default function TrangYenPage() {
               fontWeight: 300,
               fontSize: "clamp(1.1rem, 3.2vw, 1.35rem)",
               lineHeight: 1.85,
-              color: i === 0 ? "var(--color-cham-suong)" : "var(--text-on-night)",
+              color: "var(--color-cham-suong)",
               textAlign: "center",
-              margin: i === 0 ? "0 0 1.5rem" : 0,
+              margin: 0,
             }}
           >
             {line}

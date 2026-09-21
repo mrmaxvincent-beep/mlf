@@ -5,7 +5,7 @@ export const hero = {
 };
 
 export const loiMoi = [
-  "vào đêm trăng rằm, khu vườn mlf ở Huế mở cổng đón những người ghé qua.",
+  "mỗi tháng một lần, khi trăng vừa đầy, khu vườn lại mở cổng.",
   "nhà mộc mời những người bạn hữu duyên, cùng về ngồi dưới trăng, uống một chén trà, dùng một bữa cơm, và trông trăng cùng nhau.",
 ];
 

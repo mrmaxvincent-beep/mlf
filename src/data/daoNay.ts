@@ -5,7 +5,7 @@ export type Trace = {
 };
 
 /** Số dấu vết hiện đầy đủ (tầng 1) và thu còn một dòng (tầng 2). Phần còn lại gom theo tháng. */
-export const T1 = 3;
+export const T1 = 7;
 export const T2 = 10;
 
 /** Dùng khi Supabase chưa cấu hình hoặc chưa có bản ghi nào — xem supabase/schema.sql, bảng `traces`. */

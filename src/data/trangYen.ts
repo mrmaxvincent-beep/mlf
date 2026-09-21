@@ -18,11 +18,11 @@ export const loiMoiQuote = [
 export const nhip = [
   {
     name: "cổng mở",
-    desc: "cổng vườn mở lúc chạng vạng. Mỗi người đặt món mình mang theo lên bàn chung và tìm cho mình một chỗ ngồi.",
+    desc: "cổng vườn mở lúc chạng vạng. mỗi người đặt món mình mang theo lên bàn chung và tìm cho mình một chỗ ngồi.",
   },
   {
     name: "bữa góp",
-    desc: "những món chay từ nhiều căn bếp được bày ra chung một mâm. Cả vòng ăn trong im lặng một lúc đầu, để nghe được vị của từng miếng cơm và hơi ấm của người ngồi bên cạnh.",
+    desc: "những món chay từ nhiều căn bếp được bày ra chung một mâm. cả vòng ăn trong im lặng một lúc đầu, để nghe được vị của từng miếng cơm và hơi ấm của người ngồi bên cạnh.",
   },
   {
     name: "góp tay dọn dẹp",
@@ -38,7 +38,7 @@ export const nhip = [
   { name: "chuông cuối, chia tay", desc: "tiếng chuông cuối khép lại buổi tối, và mỗi người thong thả ra về dưới trăng." },
 ];
 
-export const chuCuaThang = "Mỗi tối trăng-yên đi cùng một chữ trong từ điển ở-yên, là chủ đề của mỗi đêm.";
+export const chuCuaThang = "mỗi tối trăng-yên đi cùng một chữ trong từ điển ở-yên, là chủ đề của mỗi đêm.";
 
 export const gop =
   "trăng-yên là một buổi tối cộng đồng, mọi người góp bằng món ăn, mlf không nhận tiền đóng góp. mỗi người mang theo một ít đồ chay, đựng trong hộp dùng lại được vì mlf là không gian thuần chay. món nào cũng được đón nhận như nhau.";
@@ -56,6 +56,6 @@ export const thongTin = [
 /** Chưa có form — thay bằng link Google Form khi sẵn sàng. */
 export const registrationUrl = "";
 
-export const ghiChuLich = "Hoạt động sẽ tổ chức định kỳ ngày rằm hàng tháng khi mlf ổn định tại Huế.";
+export const ghiChuLich = "hoạt động sẽ tổ chức định kỳ ngày rằm hàng tháng khi mlf ổn định tại Huế.";
 
 export const loiKhep = ["trăng tròn rồi khuyết, khu vườn đóng rồi mở mỗi tháng một lần.", "ta ngồi lại để trông trăng đáy nước."];

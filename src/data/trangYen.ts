@@ -12,7 +12,7 @@ export const loiMoi = [
 /** Hai câu mang hình ảnh trăng đáy nước — tách khỏi văn xuôi để đứng thành một khoảng lặng. */
 export const loiMoiQuote = [
   "trăng soi xuống nước. nước càng lặng, bóng càng tròn đầy.",
-  "trăng-yên là một khoảng nước lặng như thế ở giữa tháng, giữa những ngày nhiều xáo động.",
+  "trăng-yên là một khoảng nước lặng, giữa những ngày nhiều xáo động.",
 ];
 
 export const nhip = [

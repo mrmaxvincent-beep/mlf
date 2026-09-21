@@ -40,6 +40,7 @@ export const routes = {
   ungHoMlf: "/ung-ho-mlf",
   journal: "/journal",
   daoNay: "/dao-nay",
+  trangYen: "/trang-yen",
   khoLoiNhanOYen: "/mot-ngay-o-yen/kho-loi-nhan-o-yen",
   soTayKhach: "/so-tay-khach",
   deMucChiTiet: "/cong-dong-o-yen/de-muc-chi-tiet",
@@ -76,6 +77,7 @@ export const thuVienMenu = [
 export const congDongMenu = [
   { label: "một ngày ở-yên", href: routes.motNgayOYen },
   { label: "cộng đồng ở-yên", href: routes.congDongOYen },
+  { label: "trăng-yên", href: routes.trangYen },
 ];
 
 export const mlfMenu = [
@@ -156,6 +158,7 @@ export const mobileMenuSections = [
     items: [
       { label: "một ngày ở-yên", href: routes.motNgayOYen },
       { label: "cộng đồng ở-yên", href: routes.congDongOYen },
+      { label: "trăng-yên", href: routes.trangYen },
     ],
   },
   {

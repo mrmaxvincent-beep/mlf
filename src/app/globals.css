@@ -2211,3 +2211,115 @@ details[open] > summary .acc-icon {
   background: #1a2d3a !important;
   box-shadow: 0 2px 8px rgba(18, 44, 56, 0.3) !important;
 }
+
+/* ---------------------------------------------------------------------------
+   trăng-yên — trang đêm. Đây là trang duy nhất chạy trên nền chàm-đêm, nên các
+   thành phần dùng chung (Header, Footer, Breadcrumb) phải được phủ màu lại ở
+   đây. Chúng đặt màu bằng inline style, mà inline luôn thắng stylesheet, nên
+   những chỗ phủ lại buộc phải dùng !important.
+--------------------------------------------------------------------------- */
+.night-page {
+  position: relative;
+}
+/* Lớp nền phủ kín viewport, đứng yên cả khi cuộn quá đà ở hai đầu trang */
+.night-page__bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-cham-dem);
+}
+
+/* Thanh điều hướng trên cùng */
+.night-page .site-header {
+  background: var(--color-cham-dem) !important;
+  border-bottom-color: var(--border-night) !important;
+}
+.night-page .site-header > a,
+.night-page .site-header .nav-links > a,
+.night-page .site-header .nav-links > button,
+.night-page .site-header .nav-links > div > button,
+.night-page .site-header .mobile-toggle {
+  color: var(--text-on-night) !important;
+}
+
+/* Breadcrumb */
+.night-page .wrap > div:first-child a,
+.night-page .wrap > div:first-child span {
+  color: var(--color-cham-suong) !important;
+}
+
+/* Trăng gần tròn — khuyết nhẹ ở mép phải, vẽ bằng gradient nên không cần ảnh */
+.moon {
+  width: clamp(3.25rem, 9vw, 4.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-bottom: clamp(2rem, 6vw, 3rem);
+  background: radial-gradient(circle at 38% 34%, #f4efe2 0%, #e4dccb 55%, #c9c0ad 100%);
+  box-shadow: 0 0 3.5rem rgba(233, 228, 216, 0.28);
+}
+
+.night-rule {
+  height: 1px;
+  background: var(--border-night);
+}
+
+.night-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-on-night);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-night);
+  transition: border-color var(--duration-hover) var(--ease-standard);
+}
+.night-link:hover {
+  border-bottom-color: var(--text-on-night);
+}
+
+.night-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.9rem;
+  border: 1px solid var(--color-cham-suong);
+  border-radius: 999px;
+  color: var(--text-on-night);
+  transition:
+    background var(--duration-fade) var(--ease-standard),
+    color var(--duration-fade) var(--ease-standard),
+    border-color var(--duration-fade) var(--ease-standard);
+}
+.night-btn:hover {
+  background: var(--text-on-night);
+  color: var(--color-cham-dem);
+  border-color: var(--text-on-night);
+}
+
+/* Chân trang */
+.night-page footer {
+  border-top-color: var(--border-night) !important;
+}
+.night-page footer a,
+.night-page footer span,
+.night-page footer input,
+.night-page footer button {
+  color: var(--text-on-night) !important;
+}
+.night-page footer input {
+  border-bottom-color: var(--border-night) !important;
+}
+.night-page footer svg {
+  color: var(--color-cham-suong);
+}
+/* Wordmark vốn là nét mực sẫm trên nền trong suốt — đảo màu để hiện trên nền đêm */
+.night-page footer img {
+  filter: invert(1) brightness(1.35);
+}

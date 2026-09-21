@@ -6,7 +6,7 @@ export const hero = {
 
 export const loiMoi = [
   "mỗi tháng một lần, vào đêm trăng rằm, khu vườn mlf ở Huế mở cổng cho bất kỳ ai muốn ghé.",
-  "ngồi xuống ăn cơm cùng những người mới gặp, uống một tách trà và chuyện trò.",
+  "mlf mời những người bạn hữu duyên đến và trông trăng cùng nhà mộc.",
 ];
 
 /** Hai câu mang hình ảnh trăng đáy nước — tách khỏi văn xuôi để đứng thành một khoảng lặng. */

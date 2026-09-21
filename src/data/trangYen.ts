@@ -44,7 +44,7 @@ export const gop =
   "trăng-yên là một buổi tối cộng đồng, mọi người góp bằng món ăn, mlf không nhận tiền đóng góp. Mỗi người mang theo một ít đồ chay, đựng trong hộp dùng lại được vì mlf là không gian thuần chay. Món nào cũng được đón nhận như nhau.";
 
 export const cungCacBe =
-  "các gia đình có thể đưa con nhỏ theo. khu vườn có một góc để các bé chơi nhẹ nhàng, và tiếng trẻ con cũng là một phần của buổi tối, như tiếng lá hay tiếng dế.";
+  "gia đình có thể đưa con nhỏ theo. khu vườn có một góc để các bé chơi và được nương đỡ trong bầu không khí ở-yên. tiếng trẻ con cũng là một phần của buổi tối, như tiếng lá xào xạc hay tiếng dế râm ran.";
 
 export const thongTin = [
   { label: "thời gian", value: "đêm rằm, từ 18:00 đến 21:00" },

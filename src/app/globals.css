@@ -2276,11 +2276,6 @@ details[open] > summary .acc-icon {
 .night-quote > * {
   position: relative;
 }
-/* Hoạ tiết gợn nước vốn là nét mực sẫm — đảo màu để thành vòng sáng trên mặt nước đêm */
-.night-motif {
-  filter: invert(1) brightness(1.25);
-  margin-bottom: clamp(1.6rem, 5vw, 2.4rem);
-}
 
 .night-link {
   display: inline-flex;

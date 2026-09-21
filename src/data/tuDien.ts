@@ -765,4 +765,48 @@ export const entries: DictEntry[] = [
       { word: "hàm-dưỡng", desc: "thứ dày lên qua nhiều mùa, chỉ thấy được khi nhìn lại" },
     ],
   },
+  {
+    word: "thở",
+    origin: "Thuần Việt",
+    group: "Thân thể · Nhịp · Hiện diện",
+    gloss: "việc mình làm suốt đời mà ít khi để ý",
+    definition: [
+      ["Hít khí vào rồi đẩy khí ra, đều đặn suốt từ lúc sinh ra."],
+      [
+        "Thở là việc duy nhất bên trong con người, vừa diễn ra vô thức mà cũng vừa điều khiển được. Ta không thể bảo tim hay dạ dày ngừng lại, nhưng hơi thở thì có thể nín một lát hoặc thở sâu hay chậm hơn. Đó là cánh cửa duy nhất, thông giữa phần mình biết và phần mình chẳng biết.",
+      ],
+      [
+        "Tiếng Việt dùng chữ thở để nói về sự sống. Còn thở là còn sống, trút hơi thở cuối cùng là chết. Người ta cũng nói liên kết hơi thở với tâm trạng của một con người: thở phào khi thấy lòng mình nhẹ đi, thở dài khi trong lòng có gì đó nặng nề.",
+      ],
+      [
+        "Tại mlf, hơi thở là việc được nhắc tới trong mọi buổi tập, mọi lúc ngồi. Khoảng giữa hai hơi thở là hình ảnh mà nhà mộc hay mượn để nói về ở-yên.",
+      ],
+    ],
+    story: [
+      ["Đàn bà làng chài lặn hái rong, mỗi lần lặn xuống chừng vài phút, có người lâu hơn. Khi hết hơi, thì ngoi lên hít một hơi dài rồi tiếp tục lặn xuống."],
+      ["Người mới học lặn hay nín được rất ngắn. Xuống nước là ngực tức lên, tim đập nhanh, mới nửa phút đã phải ngoi lên."],
+      ["Cụ bà lớn tuổi nhất trong nhóm bảo cứ xuống từ từ, xuống rồi thả lỏng người ra, đừng vội hái. Người cứng thì tốn hơi, hoảng lên một cái là hết."],
+      ["Hơi thở dài hay ngắn vốn nằm ở chỗ yên trong người chứ chẳng phải ở lá phổi."],
+    ],
+    insight: [
+      [
+        "Hơi thở ở cùng mình suốt mấy chục năm, nhưng hầu như chẳng ai để ý tới nó. Chỉ lúc chạy mệt, lúc sợ, lúc ốm thì mới nghe thấy được tiếng thở của mình.",
+      ],
+      [
+        "Đang lo thì hơi ngắn lại, dồn lên trên ngực. Đang yên thì nó tự dài ra, xuống sâu tới bụng. Muốn biết mình đang thế nào thì nghe thử một lúc là ra.",
+      ],
+      [
+        "Con đường ấy vốn thông ở cả hai chiều. Tâm đổi thì hơi thở đổi, hơi thở đổi thì tâm cũng đổi theo. Người lặn giỏi biết điều này, họ thả lỏng người trước khi xuống nước.",
+      ],
+      ["Vậy nên ngồi thở vài phút cũng là làm được một việc. Đó là chỗ gần nhất mình có thể chạm vào cái đang diễn ra bên trong."],
+    ],
+    insightClose: ["Thở là cánh cửa duy nhất mở sẵn đường vào bên trong mình."],
+    variants: [
+      { word: "khoảng giữa hai hơi thở", desc: "cái giữa nhỏ nhất, có sẵn trong người, lúc nào cũng dùng được" },
+      { word: "nhịp thở", desc: "chỗ nhịp bên trong hiện ra rõ nhất, sớm hơn cả suy nghĩ" },
+      { word: "thả lỏng", desc: "việc làm trước, để hơi thở tự dài ra theo" },
+      { word: "thuận dưỡng", desc: "tập theo hơi thở, thuận cơ thể mà dưỡng cả tâm trí" },
+      { word: "hiện diện", desc: "có mặt ở đây, và hơi thở là thứ duy nhất luôn ở thì hiện tại" },
+    ],
+  },
 ];

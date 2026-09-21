@@ -137,4 +137,13 @@ export const phimList: Phim[] = [
     tags: ["xem tối muộn", "tiếc một điều đã qua", "phim để xem nhiều lần", "xem cùng ai đó"],
     youtubeId: "5aLxRWj3c0I",
   },
+  {
+    title: "In This Corner Of The World",
+    year: "2016",
+    feeling: "Những bữa cơm, những bức tranh, một khu vườn, một gia đình và cách con người vẫn tìm thấy những điều để yêu thương, ngay cả khi thế giới xung quanh đang đổi thay.",
+    quote: "Cảm ơn anh, vì đã tìm thấy em ở một góc nhỏ của thế giới này.",
+    quoteBy: "Suzu",
+    tags: ["xem chiều chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem cùng ai đó"],
+    youtubeId: "-jBe-uHhlNs",
+  },
 ];

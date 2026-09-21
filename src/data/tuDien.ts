@@ -809,4 +809,48 @@ export const entries: DictEntry[] = [
       { word: "hiện diện", desc: "có mặt ở đây, và hơi thở là thứ duy nhất luôn ở thì hiện tại" },
     ],
   },
+  {
+    word: "đất",
+    origin: "Thuần Việt",
+    group: "Nơi chốn · Nuôi dưỡng · Gốc",
+    gloss: "thứ nuôi được nhờ có lúc để không",
+    definition: [
+      ["Lớp mặt của mặt đất, nơi cây mọc lên được."],
+      [
+        "Người mình để chữ này ở chỗ rất cao. Đất nước, quê đất, đất lành chim đậu, tấc đất tấc vàng. Hỏi ai người ở đâu thì thật ra đang hỏi họ thuộc về mảnh đất nào.",
+      ],
+      [
+        "Trong lối nói hằng ngày, đất còn có nghĩa là chỗ đứng. Có đất dụng võ, hết đất sống. Ai được người khác dành cho một khoảng thì gọi là có đất, cứ như chỗ đứng của một người cũng là thứ trồng được, cần người khác chừa ra cho.",
+      ],
+      [
+        "Tại mlf, đất là phần việc đầu tiên mỗi sáng. Vườn ở Măng Đen trồng theo lối để đất tự sống, ít xới ít bón, cỏ mọc lẫn với rau.",
+      ],
+    ],
+    story: [
+      ["Ruộng làm liên tục mấy vụ thì lúa kém dần. Bón thêm phân cũng chỉ được một vụ, vụ sau lại kém. Người làm ruộng lâu năm gọi là đất mệt."],
+      ["Cách xưa là bỏ hóa. Một vụ thôi trồng gì cả, để cỏ mọc, để mưa nắng đi qua. Ruộng bỏ hóa nhìn hoang, hàng xóm đi ngang có khi còn nói vào."],
+      ["Cỏ mọc lên rồi mục xuống, giun dế về làm tổ, mưa xuống thì nước ngấm sâu hơn vì đất tơi ra. Cả vụ ấy chẳng thu được gì."],
+      ["Vụ sau cấy xuống thì lúa lên khác hẳn. Ông bà nói đất vừa nghỉ xong."],
+    ],
+    insight: [
+      [
+        "Đất nuôi được là nhờ phần đã mục trong nó. Lá rụng, rễ chết, con gì đó nằm lại. Những thứ ấy mục đi rồi thành cái nuôi lứa cây sau. Đất sạch quá thì cây chẳng lên.",
+      ],
+      [
+        "Người ta nhìn một mảnh ruộng bỏ hóa thì thấy một vụ mất trắng. Trong mảnh ruộng ấy có việc đang làm, mà việc đó chẳng ra thóc gạo gì trong năm nay.",
+      ],
+      [
+        "Trong một đời cũng có những vụ như vậy. Năm không làm nên trò trống gì, chuyện hỏng dở để lại, những thứ tưởng là mất. Chúng nằm đó mục dần, rồi thành cái nuôi những gì mọc lên về sau.",
+      ],
+      ["Ai cũng cần một khoảng đất chừa lại cho mình, chỗ không phải ra sản lượng. Có khoảng ấy thì mấy phần còn lại mới sống lâu được."],
+    ],
+    insightClose: ["Đất nuôi được là nhờ có lúc nó được để không."],
+    variants: [
+      { word: "vườn-tâm", desc: "khoảng đất bên trong, thứ phải chừa ra rồi mới chăm được" },
+      { word: "bén rễ", desc: "lúc một thứ thôi là khách, bắt đầu thuộc về chỗ nó đang đứng" },
+      { word: "gieo", desc: "việc làm được, còn cây lên hay không thì tùy đất và tùy mùa" },
+      { word: "mùa", desc: "nhịp lớn hơn nhịp của người, trong đó có cả những vụ để nghỉ" },
+      { word: "hàm-dưỡng", desc: "phần mục xuống rồi thành cái nuôi, thứ chỉ thấy được ở mùa sau" },
+    ],
+  },
 ];

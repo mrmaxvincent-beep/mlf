@@ -35,7 +35,7 @@ export const nhip = [
     name: "trò chuyện tâm-thức",
     desc: "mỗi người rút một lá thăm và chia sẻ, cả vòng lắng nghe trọn vẹn, để lời đã nói ra được ở yên nơi nó thuộc về.",
   },
-  { name: "chuông cuối, chia tay", desc: "tiếng chuông cuối khép lại buổi tối, và mỗi người thong thả ra về dưới trăng." },
+  { name: "chuông cuối, chia tay", desc: "tiếng chuông cuối khép lại buổi tối, và mỗi người nhẹ bước ra về dưới trăng." },
 ];
 
 export const chuCuaThang = "mỗi tối trăng-yên đi cùng một chữ trong từ điển ở-yên, là chủ đề của mỗi đêm.";

@@ -58,4 +58,4 @@ export const registrationUrl = "";
 
 export const ghiChuLich = "hoạt động sẽ tổ chức định kỳ ngày rằm hàng tháng khi mlf ổn định tại Huế.";
 
-export const loiKhep = ["trăng tròn rồi khuyết, khu vườn đóng rồi mở mỗi tháng một lần.", "ta ngồi lại, để trông trăng đáy nước."];
+export const loiKhep = ["trăng tròn rồi khuyết, khu vườn đóng rồi mở, mỗi tháng một lần.", "ta ngồi lại, để trông trăng đáy nước."];

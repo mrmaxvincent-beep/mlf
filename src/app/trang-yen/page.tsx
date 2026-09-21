@@ -185,11 +185,11 @@ export default function TrangYenPage() {
         <div style={{ textAlign: "center" }}>
           {registrationUrl ? (
             <RegistrationLink href={registrationUrl} programName="trang-yen" className="night-btn">
-              ngồi xuống đi
+              ngồi xuống đây
             </RegistrationLink>
           ) : (
             <a href="mailto:hello@moclittlefarm.com?subject=gi%E1%BB%AF%20m%E1%BB%99t%20ch%E1%BB%97%20ng%E1%BB%93i%20%C2%B7%20tr%C4%83ng-y%C3%AAn" className="night-btn">
-              ngồi xuống đi
+              ngồi xuống đây
             </a>
           )}
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-cham-suong)", maxWidth: "36ch", margin: "1.6rem auto 0" }}>

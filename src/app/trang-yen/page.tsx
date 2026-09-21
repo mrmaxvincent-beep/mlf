@@ -108,7 +108,10 @@ export default function TrangYenPage() {
       </Reveal>
 
       {/* MỘT TỐI Ở TRĂNG-YÊN */}
-      <Reveal className="wrap" style={{ marginTop: "7rem", maxWidth: "46rem" }}>
+      {/* Buổi tối tự mở ra theo tám nhịp. Không kẻ ngang, không viền: mỗi nhịp được
+          tách ra bằng khoảng trống, để chỗ này đọc như một chuỗi việc đang diễn ra
+          chứ không như bảng lịch trình. */}
+      <Reveal className="wrap" style={{ marginTop: "9rem", maxWidth: "46rem" }}>
         <span style={label}>một tối ở trăng-yên</span>
         <ol style={{ listStyle: "none", margin: 0, padding: 0 }}>
           {nhip.map((n, i) => (
@@ -118,19 +121,17 @@ export default function TrangYenPage() {
                 display: "flex",
                 gap: "clamp(1rem, 4vw, 2.25rem)",
                 alignItems: "baseline",
-                padding: "1.9rem 0",
-                borderTop: i === 0 ? "1px solid var(--border-night)" : "none",
-                borderBottom: "1px solid var(--border-night)",
+                marginBottom: i === nhip.length - 1 ? 0 : "clamp(3rem, 8vw, 4.25rem)",
               }}
             >
-              <span style={{ flex: "none", width: "2rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)" }}>
+              <span style={{ flex: "none", width: "1.9rem", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)", opacity: 0.7 }}>
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div style={{ flex: "1 1 auto", minWidth: 0 }}>
-                <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.35rem", lineHeight: 1.4, color: "var(--text-on-night)", marginBottom: "0.6rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.35rem, 3.6vw, 1.6rem)", lineHeight: 1.35, color: "var(--text-on-night)", marginBottom: "0.85rem" }}>
                   {n.name}
                 </span>
-                <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-cham-suong)" }}>{n.desc}</span>
+                <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-cham-suong)", maxWidth: "44ch" }}>{n.desc}</span>
               </div>
             </li>
           ))}
@@ -138,7 +139,7 @@ export default function TrangYenPage() {
       </Reveal>
 
       {/* CHỮ CỦA THÁNG NÀY */}
-      <Reveal className="wrap" style={{ marginTop: "7rem", maxWidth: "46rem" }}>
+      <Reveal className="wrap" style={{ marginTop: "9rem", maxWidth: "46rem" }}>
         <span style={label}>chữ của tháng</span>
         <p style={{ ...prose, marginBottom: "1.75rem" }}>{chuCuaThang}</p>
         <Link href={routes.tuDienOYen} className="night-link">
@@ -152,7 +153,8 @@ export default function TrangYenPage() {
         <p style={{ ...prose, margin: 0 }}>{gop}</p>
       </Reveal>
 
-      <Reveal className="wrap" style={{ marginTop: "5rem", maxWidth: "46rem" }}>
+      {/* Hai ghi chú thực dụng, để sát nhau thành một cụm thay vì hai mục rời */}
+      <Reveal className="wrap" style={{ marginTop: "3rem", maxWidth: "46rem" }}>
         <span style={label}>cùng các bé</span>
         <p style={{ ...prose, margin: 0 }}>{cungCacBe}</p>
       </Reveal>
@@ -197,7 +199,8 @@ export default function TrangYenPage() {
       </Reveal>
 
       {/* LỜI KHÉP */}
-      <Reveal className="wrap" style={{ marginTop: "7rem", marginBottom: "6rem", maxWidth: "42rem" }}>
+      <Reveal className="wrap" style={{ marginTop: "10rem", marginBottom: "6rem", maxWidth: "42rem" }}>
+        <div className="moon moon--waning" aria-hidden />
         {loiKhep.map((line, i) => (
           <p
             key={i}

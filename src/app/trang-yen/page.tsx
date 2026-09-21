@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
-import { chuCuaThang, cungCacBe, gop, hero, loiKhep, loiMoi, loiMoiQuote, nhip, registrationUrl, thongTin } from "@/data/trangYen";
+import { chuCuaThang, cungCacBe, ghiChuLich, gop, hero, loiKhep, loiMoi, loiMoiQuote, nhip, registrationUrl, thongTin } from "@/data/trangYen";
 
 export const metadata: Metadata = {
   title: "trăng-yên",
@@ -181,6 +181,9 @@ export default function TrangYenPage() {
               giữ một chỗ ngồi
             </a>
           )}
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-cham-suong)", maxWidth: "36ch", margin: "1.6rem auto 0" }}>
+            {ghiChuLich}
+          </p>
         </div>
       </Reveal>
 

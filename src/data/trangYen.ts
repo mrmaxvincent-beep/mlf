@@ -56,4 +56,6 @@ export const thongTin = [
 /** Chưa có form — thay bằng link Google Form khi sẵn sàng. */
 export const registrationUrl = "";
 
+export const ghiChuLich = "Hoạt động sẽ tổ chức định kỳ ngày rằm hàng tháng khi mlf ổn định tại Huế.";
+
 export const loiKhep = ["trăng tròn rồi khuyết, khu vườn đóng rồi mở mỗi tháng một lần.", "ta ngồi lại để trông trăng đáy nước."];

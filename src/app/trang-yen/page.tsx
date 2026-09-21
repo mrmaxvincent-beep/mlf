@@ -58,8 +58,8 @@ export default function TrangYenPage() {
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem", maxWidth: "46rem" }}>
         <Breadcrumb label="trăng-yên" />
 
-        <Reveal>
-          <div className="moon" aria-hidden />
+        <Reveal style={{ textAlign: "center" }}>
+          <div className="moon" style={{ margin: "0 auto clamp(2rem, 6vw, 3rem)" }} aria-hidden />
           <h1
             style={{
               fontFamily: "var(--font-serif)",
@@ -76,7 +76,7 @@ export default function TrangYenPage() {
           <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.12em", lineHeight: 1.8, color: "var(--color-cham-suong)", margin: "0 0 2.25rem" }}>
             {hero.sub}
           </p>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.15rem, 3.4vw, 1.45rem)", lineHeight: 1.75, color: "var(--text-on-night)", maxWidth: "34ch", margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.15rem, 3.4vw, 1.45rem)", lineHeight: 1.75, color: "var(--text-on-night)", maxWidth: "34ch", margin: "0 auto" }}>
             {hero.lead}
           </p>
         </Reveal>

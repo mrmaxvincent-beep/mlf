@@ -155,4 +155,13 @@ export const phimList: Phim[] = [
     tags: ["xem sáng chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem cùng ai đó"],
     youtubeId: "uTQ1oCVR74o",
   },
+  {
+    title: "Mùa Hè Chiều Thẳng Đứng",
+    year: "2000",
+    feeling: "Một Hà Nội mùa hè đầy nắng, tiếng ve, cây xanh và những căn nhà cũ đầy ký ức.",
+    quote: "Ngoài phố rất đông và em có một cảm giác rất lạ.",
+    quoteBy: "Liên",
+    tags: ["xem chiều chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem một mình"],
+    youtubeId: "nmYuZAk-0-k",
+  },
 ];

@@ -18,7 +18,7 @@ export const loiMoiQuote = [
 export const nhip = [
   {
     name: "cổng mở",
-    desc: "cổng vườn mở lúc chạng vạng. mỗi người đặt món mình mang theo lên bàn chung và tìm cho mình một chỗ ngồi.",
+    desc: "cổng vườn mở lúc chạng vạng. mỗi người đến hãy thong thả xem như nhà mình.",
   },
   {
     name: "bữa góp",

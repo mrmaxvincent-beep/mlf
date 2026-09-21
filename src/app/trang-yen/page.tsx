@@ -97,7 +97,7 @@ export default function TrangYenPage() {
             fontFamily: "var(--font-serif)",
             fontStyle: "italic",
             fontWeight: 300,
-            fontSize: "clamp(1.1rem, 3.2vw, 1.35rem)",
+            fontSize: "clamp(0.95rem, 2.6vw, 1.1rem)",
             lineHeight: 1.85,
             color: "var(--color-cham-suong)",
             margin: 0,

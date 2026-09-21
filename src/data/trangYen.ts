@@ -29,7 +29,7 @@ export const nhip = [
     desc: "ăn xong, mỗi người phụ một tay, rửa chén, xếp lại chỗ ngồi và khu vườn gọn gàng trở lại.",
   },
   { name: "ngồi yên nghe chuông", desc: "tiếng chuông ngân lên, cả khu vườn cùng ngồi yên theo hơi thở của mình." },
-  { name: "uống trà", desc: "trà được rót thong thả, chén này chuyền sang tay người kia, trong ánh đèn vàng và tiếng côn trùng đêm." },
+  { name: "uống trà", desc: "trà được rót chầm chậm, chén này chuyền sang tay người kia, trong ánh đèn vàng và tiếng côn trùng đêm." },
   { name: "chuyện ở-yên", desc: "Tâm mlf kể một câu chuyện." },
   {
     name: "trò chuyện tâm-thức",

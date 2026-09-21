@@ -173,4 +173,13 @@ export const phimList: Phim[] = [
     tags: ["xem chiều chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem một mình"],
     youtubeId: "q2OfJYvjgQ8",
   },
+  {
+    title: "The Miracles of the Namiya General Store",
+    year: "2017",
+    feeling: "Một cửa hàng tạp hóa cũ, những lá thư gửi từ quá khứ và những người xa lạ đang tìm kiếm một lời khuyên.",
+    quote: "Tương lai của cháu là một trang giấy trắng. Tương lai sẽ trở thành điều gì là do chính cháu viết nên.",
+    quoteBy: "Yuji Namiya",
+    tags: ["xem tối muộn", "khi cần được yên", "phim để xem nhiều lần", "xem cùng ai đó"],
+    youtubeId: "9Ftdp3r94OQ",
+  },
 ];

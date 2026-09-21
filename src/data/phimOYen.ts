@@ -164,4 +164,13 @@ export const phimList: Phim[] = [
     tags: ["xem chiều chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem một mình"],
     youtubeId: "nmYuZAk-0-k",
   },
+  {
+    title: "Mùi Đu Đủ Xanh",
+    year: "1993",
+    feeling: "Những ngày tháng của tuổi thơ được nhớ bằng một mùi hương, tiếng dao trong bếp, tiếng mưa ngoài hiên. Cô bé Mùi lặng lẽ lớn lên ở đó, quan sát thế giới qua những điều xíu xiu, một chiếc lá, con kiến, quả đu đủ xanh.",
+    quote: "Có lẽ con bé ở nơi đó sẽ tốt hơn.",
+    quoteBy: "mẹ của gia đình",
+    tags: ["xem chiều chủ nhật", "khi cần được yên", "không có gì xảy ra", "xem một mình"],
+    youtubeId: "q2OfJYvjgQ8",
+  },
 ];

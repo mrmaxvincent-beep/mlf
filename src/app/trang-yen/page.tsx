@@ -130,7 +130,7 @@ export default function TrangYenPage() {
 
       {/* CHỮ CỦA THÁNG NÀY */}
       <Reveal className="wrap" style={{ marginTop: "7rem", maxWidth: "46rem" }}>
-        <span style={label}>chữ của tháng này</span>
+        <span style={label}>chữ của tháng</span>
         <p style={{ ...prose, marginBottom: "1.75rem" }}>{chuCuaThang}</p>
         <Link href={routes.tuDienOYen} className="night-link">
           mở từ điển ở-yên <span className="ar">→</span>

@@ -22,7 +22,7 @@ export const nhip = [
   },
   {
     name: "bữa góp",
-    desc: "bữa ăn góp lại từ nhiều căn bếp. cả vòng ăn trong im lặng một lúc đầu, để nghe được vị của từng miếng cơm và hơi ấm của người ngồi bên cạnh.",
+    desc: "bữa ăn góp lại từ nhiều căn bếp. những phút đầu, cả vòng cùng ngồi trong im lặng, để nghe vị của từng miếng cơm và hơi ấm của người ngồi bên cạnh.",
   },
   {
     name: "góp tay dọn dẹp",

@@ -33,7 +33,7 @@ export const nhip = [
   { name: "chuyện ở-yên", desc: "Tâm mlf kể một câu chuyện." },
   {
     name: "trò chuyện tâm-thức",
-    desc: "mỗi người rút một lá thăm và chia sẻ từ trải nghiệm của riêng mình, để lời nói được ở yên nơi nó được nói ra.",
+    desc: "mỗi người rút một lá thăm, rồi kể một câu chuyện của mình, để lời đã nói ra được ở yên nơi nó thuộc về.",
   },
   { name: "chuông cuối, chia tay", desc: "tiếng chuông cuối khép lại buổi tối, và mỗi người thong thả ra về dưới trăng." },
 ];

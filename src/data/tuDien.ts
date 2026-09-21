@@ -853,4 +853,52 @@ export const entries: DictEntry[] = [
       { word: "hàm-dưỡng", desc: "phần mục xuống rồi thành cái nuôi, thứ chỉ thấy được ở mùa sau" },
     ],
   },
+  {
+    word: "lành",
+    origin: "Thuần Việt",
+    group: "Thân thể · Tính cách · Đời sống",
+    gloss: "trạng thái yên với cái mình đã mang",
+    definition: [
+      ["Nguyên vẹn, yên ổn, ở với mình mà chẳng gây hại."],
+      [
+        "Chữ này đi qua nhiều tầng. Áo lành là áo chưa rách. Vết thương lành là đã kín miệng. Đồ ăn lành là ăn vào người thấy dễ chịu. Người hiền lành là người ở cạnh mình thấy yên.",
+      ],
+      [
+        "Tiếng Việt cũng để chữ này ở phía may mắn. Đất lành chim đậu, ngày lành tháng tốt, gặp lành. Cứ như chỗ nào yên và chẳng hại ai thì chỗ ấy tự có phúc.",
+      ],
+      [
+        "Tại mlf, chữ lành hay được dùng theo lối so sánh vừa phải, lành hơn một chút so với hôm qua. Bếp nấu đồ chay cũng theo hướng ấy, làm sao ăn xong người thấy nhẹ.",
+      ],
+    ],
+    story: [
+      ["Cây trong vườn bị gãy một cành lớn sau bão. Chỗ gãy toác ra, nhựa chảy mấy hôm, ruồi bu đen. Nhìn thì tưởng cây hỏng."],
+      ["Người làm vườn cưa lại cho phẳng rồi để đó. Ông nói cây tự làm được."],
+      [
+        "Mấy tháng sau, quanh miệng vết cưa nổi lên một cái gờ, vỏ mới bò dần từ ngoài vào trong, mỗi năm lại khép thêm một ít. Sờ vào thấy cứng hơn phần vỏ thường.",
+      ],
+      ["Vết ấy sẽ theo cây suốt đời. Mà từ chỗ dưới nó, mấy cành mới đâm ra, mùa sau lá dày hơn cả bên kia."],
+    ],
+    insight: [
+      [
+        "Người ta hay hiểu lành là trở về như trước. Chữa xong thì mọi thứ y nguyên, chuyện cũ khép lại thì coi như chưa từng có. Mong như vậy rồi tới lúc thấy vết còn nguyên đó thì đâm ra nghĩ mình chưa lành.",
+      ],
+      [
+        "Cây thì chẳng trả lại cành đã gãy. Nó bọc quanh chỗ gãy một lớp gỗ dày hơn, rồi mọc tiếp về hướng khác. Vết cưa mấy chục năm sau sờ vẫn thấy.",
+      ],
+      [
+        "Cái lành của cây nằm ở chỗ nó thôi chảy nhựa và bắt đầu mọc tiếp. Ngày nào chỗ ấy còn là chỗ đau thì cây còn dồn sức vào đó, và phần trên chẳng lên được.",
+      ],
+      [
+        "Với người có lẽ cũng thế. Lành là ngày mình nhắc lại chuyện cũ mà trong người chẳng còn nhói, chứ không phải ngày chuyện đó biến mất khỏi trí nhớ.",
+      ],
+    ],
+    insightClose: ["Lành là lúc vết cũ thôi lấy mất sức của mình."],
+    variants: [
+      { word: "vết nứt được trám lại", desc: "chỗ hỏng vẫn còn đó mà vật thì dùng tiếp được" },
+      { word: "lành hơn", desc: "lối so sánh quen của mlf, nhích một chút so với hôm qua là đủ" },
+      { word: "phía sáng", desc: "hướng mọc tiếp sau khi một vết thương đã khép miệng" },
+      { word: "cũ", desc: "dấu vết cho thấy một thứ đã được dùng thật, và đã đi qua vài mùa" },
+      { word: "hiền", desc: "phẩm chất của người đã yên với mình, gần với chữ lành tới mức đi liền nhau" },
+    ],
+  },
 ];

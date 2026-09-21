@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { Motif } from "@/components/Motif";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { chuCuaThang, cungCacBe, ghiChuLich, gop, hero, loiKhep, loiMoi, loiMoiQuote, nhip, registrationUrl, thongTin } from "@/data/trangYen";
@@ -76,26 +77,36 @@ export default function TrangYenPage() {
         ))}
       </Reveal>
 
-      <Reveal className="wrap" style={{ marginTop: "5rem", maxWidth: "42rem" }}>
-        <div className="night-rule" />
-        {loiMoiQuote.map((line, i) => (
-          <p
-            key={i}
-            style={{
-              fontFamily: "var(--font-serif)",
-              fontStyle: "italic",
-              fontWeight: 300,
-              fontSize: "clamp(1.2rem, 3.6vw, 1.5rem)",
-              lineHeight: 1.8,
-              color: "var(--text-on-night)",
-              textAlign: "center",
-              margin: i === 0 ? "3rem 0 2rem" : "0 0 3rem",
-            }}
-          >
-            {line}
-          </p>
-        ))}
-        <div className="night-rule" />
+      <Reveal className="wrap night-quote" style={{ marginTop: "5.5rem", maxWidth: "40rem" }}>
+        <Motif name="gon-nuoc" size={64} opacity={0.5} className="night-motif" />
+        {/* Câu đầu là hình ảnh, câu sau là nghĩa của nó — để câu sau nhạt hơn một bậc,
+            như vầng trăng và bóng trăng dưới nước. */}
+        <p
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontStyle: "italic",
+            fontWeight: 300,
+            fontSize: "clamp(1.25rem, 3.8vw, 1.6rem)",
+            lineHeight: 1.85,
+            color: "var(--text-on-night)",
+            margin: "0 0 2.4rem",
+          }}
+        >
+          {loiMoiQuote[0]}
+        </p>
+        <p
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontStyle: "italic",
+            fontWeight: 300,
+            fontSize: "clamp(1.1rem, 3.2vw, 1.35rem)",
+            lineHeight: 1.85,
+            color: "var(--color-cham-suong)",
+            margin: 0,
+          }}
+        >
+          {loiMoiQuote[1]}
+        </p>
       </Reveal>
 
       {/* MỘT TỐI Ở TRĂNG-YÊN */}

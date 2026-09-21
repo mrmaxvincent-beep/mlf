@@ -2258,9 +2258,28 @@ details[open] > summary .acc-icon {
   box-shadow: 0 0 3.5rem rgba(233, 228, 216, 0.28);
 }
 
-.night-rule {
-  height: 1px;
-  background: var(--border-night);
+/* Khối trích dẫn trăng-nước: có mặt bằng một vầng sáng loang chứ không bằng đường
+   viền, để chỗ này đọc như một khoảng lặng thay vì một cái hộp. */
+.night-quote {
+  position: relative;
+  text-align: center;
+  padding-top: clamp(3rem, 9vw, 5rem);
+  padding-bottom: clamp(3rem, 9vw, 5rem);
+}
+.night-quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 62% 58% at 50% 42%, rgba(233, 228, 216, 0.1), transparent 72%);
+  pointer-events: none;
+}
+.night-quote > * {
+  position: relative;
+}
+/* Hoạ tiết gợn nước vốn là nét mực sẫm — đảo màu để thành vòng sáng trên mặt nước đêm */
+.night-motif {
+  filter: invert(1) brightness(1.25);
+  margin-bottom: clamp(1.6rem, 5vw, 2.4rem);
 }
 
 .night-link {

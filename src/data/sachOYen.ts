@@ -3,7 +3,7 @@ export const books = [
     id: "nep-nha-mlf",
     title: "nếp nhà mộc little farm",
     tag: "ấn phẩm miễn phí",
-    cover: "/assets/nepnha.webp",
+    cover: "/assets/mlf_nepnha.png",
     desc: "sống-vừa-vặn — nếp sống hằng ngày ở mộc little farm, được ghi lại thành một cuốn sách nhỏ để đọc chậm và mang theo bên mình.",
     format: "PDF",
     release: "06/2025",

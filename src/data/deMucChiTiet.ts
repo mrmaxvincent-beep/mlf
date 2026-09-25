@@ -7,7 +7,7 @@ export const doors = [
     articles: [
       { title: "biên-thư-cho-Hy", desc: "những lá thư riêng, gửi một người bạn tên Hy", href: "/bien-thu-cho-hy" },
       { title: "người đi qua", desc: "ghi chép từ những chuyến tuần-du", href: "/tuan-du/blog" },
-      { title: "lưu bút", desc: "những lời thì thầm của người đã đến ở nhà mộc", href: "/ngay-hien/luu-but" },
+      { title: "thư-gửi-mộc", desc: "những lời thì thầm của người đã đến ở nhà mộc", href: "/thu-gui-moc" },
     ],
   },
   {

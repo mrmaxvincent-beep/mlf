@@ -1810,7 +1810,7 @@ details[open] > summary .acc-icon {
   animation-play-state: paused;
 }
 
-/* lưu bút: numbered-grid picker + reading pane */
+/* thư-gửi-mộc: numbered-grid picker + reading pane */
 .lb-shell {
   display: grid;
   grid-template-columns: 17rem 1fr;

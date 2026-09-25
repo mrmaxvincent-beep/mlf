@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import type { Entry } from "@/data/luuBut";
+import type { Entry } from "@/data/thuGuiMoc";
 
 const pStyle: React.CSSProperties = {
   fontFamily: "var(--font-sans)",
@@ -12,8 +12,8 @@ const pStyle: React.CSSProperties = {
   margin: "0 0 1.2rem",
 };
 
-/** Numbered-grid entry picker + reading pane, with a brief fade on switch — lưu bút guestbook. */
-export function LuuButReader({ entries }: { entries: Entry[] }) {
+/** Numbered-grid entry picker + reading pane, with a brief fade on switch — thư-gửi-mộc guestbook. */
+export function ThuGuiMocReader({ entries }: { entries: Entry[] }) {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
   const dateRef = useRef<HTMLDivElement>(null);
@@ -75,7 +75,7 @@ export function LuuButReader({ entries }: { entries: Entry[] }) {
               onClick={() => select(active - 1)}
               style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
-              ← lưu bút trước
+              ← thư trước
             </button>
           ) : (
             <span />
@@ -85,7 +85,7 @@ export function LuuButReader({ entries }: { entries: Entry[] }) {
               onClick={() => select(active + 1)}
               style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
-              lưu bút sau →
+              thư sau →
             </button>
           ) : null}
         </div>

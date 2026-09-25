@@ -60,10 +60,6 @@ export default function NgayHienPage() {
           <Link href={routes.daoMotVong} className="mono-link" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-stone)" }}>
             dạo một vòng
           </Link>
-          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-ink)" }}>/</span>
-          <Link href={routes.luuBut} className="mono-link" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-stone)" }}>
-            lưu bút
-          </Link>
         </div>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 auto 0.75rem" }}>
           <br />
@@ -243,8 +239,8 @@ export default function NgayHienPage() {
           <Testimonials items={testimonials} showDots={false} fontSize="1.2rem" />
         </div>
         <div style={{ textAlign: "center", marginTop: "2rem" }}>
-          <Link className="go mono-link" href={routes.luuBut} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
-            đọc thêm lưu bút <span className="ar">→</span>
+          <Link className="go mono-link" href={routes.thuGuiMoc} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+            đọc thêm thư-gửi-mộc <span className="ar">→</span>
           </Link>
         </div>
       </Reveal>

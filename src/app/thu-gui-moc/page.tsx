@@ -57,7 +57,7 @@ export default function ThuGuiMocPage() {
           bạn cũng có thể viết cho mộc.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 auto 2rem", maxWidth: "46ch" }}>
-          sau một buổi ở lại, một chuyến đi, hay chỉ là một điều muốn nói mà chưa có chỗ để nói — viết bao lâu cũng được. thư sẽ được mộc đọc, và nếu bạn đồng ý, có thể được đăng lên đây.
+          có điều gì bạn muốn gửi tới nhà mộc, hãy soạn thư cho chúng tôi tới email hello@moclittlefarm.com. lá thư ấy sẽ được đăng tải ở đây, như một sự lưu dấu giữa bạn và mlf.
         </p>
         <a href={mailtoHref} className="cta-btn cta-btn--outline" style={{ borderRadius: "999px" }}>
           viết thư cho mộc <span className="ar">→</span>

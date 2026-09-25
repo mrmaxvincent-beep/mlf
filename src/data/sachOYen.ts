@@ -14,7 +14,7 @@ export const books = [
     id: "tin-nhan-5am",
     title: "tuyển tập tin nhắn lúc 5 giờ sáng từ mlf",
     tag: "ấn phẩm miễn phí",
-    cover: "/assets/tinnhan5am.webp",
+    cover: "/assets/loinhan5am.png",
     desc: "những dòng tin nhắn ngắn, gửi đi lúc trời còn chưa sáng hẳn — góp nhặt lại thành một tuyển tập nhỏ.",
     format: "PDF",
     release: "12/2026",

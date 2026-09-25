@@ -29,12 +29,10 @@ export default function ThuGuiMocPage() {
 
       {/* MỜI GỬI THƯ — thư nhận qua email (không giới hạn độ dài), được chọn và đăng thủ công vào khung đọc bên dưới */}
       <Reveal className="wrap" style={{ marginTop: "3.5rem", maxWidth: "40rem", textAlign: "center" }}>
-        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>gửi thư tới mộc</span>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.3rem, 4vw, 1.7rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
-          bạn có thể viết cho mộc.
-        </p>
+        <span className="eyebrow" style={{ color: "var(--color-ink)", marginBottom: "1.4rem" }}>gửi thư tới mộc</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 auto 2rem", maxWidth: "46ch" }}>
-          có điều gì bạn muốn gửi tới nhà mộc, hãy soạn thư cho chúng tôi tới email hello@moclittlefarm.com. lá thư ấy sẽ được đăng tải ở đây, như một sự lưu dấu giữa bạn và mlf.
+          có điều gì bạn muốn gửi tới nhà mộc, hãy soạn thư tới{" "}
+          <strong style={{ fontWeight: 600 }}>hello@moclittlefarm.com</strong>. lá thư ấy sẽ được đăng tải ở đây, như một sự lưu dấu giữa bạn và mlf.
         </p>
         <a href={mailtoHref} className="cta-btn cta-btn--outline" style={{ borderRadius: "999px" }}>
           viết thư cho mộc <span className="ar">→</span>

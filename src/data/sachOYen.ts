@@ -18,7 +18,7 @@ export const books = [
     desc: "những dòng tin nhắn ngắn, gửi đi lúc trời còn chưa sáng hẳn — góp nhặt lại thành một tuyển tập nhỏ.",
     format: "PDF",
     release: "12/2026",
-    downloadHref: undefined as string | undefined,
-    comingSoon: true,
+    downloadHref: "https://drive.google.com/drive/folders/1XtE-QIsg-JkcEDCrtgpjImzf1yAqvyi8?usp=sharing",
+    comingSoon: false,
   },
 ];

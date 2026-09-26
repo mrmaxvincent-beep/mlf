@@ -54,6 +54,13 @@ export default function RetreatAnVuiPage() {
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
+        <div
+          role="note"
+          style={{ display: "flex", alignItems: "baseline", justifyContent: "center", flexWrap: "wrap", gap: "0.4rem 0.9rem", textAlign: "center", padding: "0.9rem 1.25rem", marginBottom: "2rem", border: "1px solid var(--color-mist)", background: "color-mix(in srgb, var(--color-cham-dem) 5%, transparent)" }}
+        >
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>lưu ý</span>
+          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6, color: "var(--color-ink)" }}>retreat an-vui sẽ bắt đầu tại Huế, từ tháng 04.2027.</span>
+        </div>
         <Breadcrumb trail={[{ label: "ngày-hiền", href: routes.ngayHien }, { label: "retreat an-vui" }]} />
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
           retreat an-vui

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { Note } from "@/data/thuVien";
+import type { Note } from "@/data/ghiChep";
 
 const paraStyle: React.CSSProperties = {
   fontFamily: "var(--font-sans)",

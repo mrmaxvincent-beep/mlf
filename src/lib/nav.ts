@@ -25,7 +25,7 @@ export const routes = {
   touch: "/touch",
   touchThuanDuong: "/touch/thuan-duong",
   touchThuanUpcycle: "/touch/thuan-upcycle",
-  thuVien: "/thu-vien",
+  ghiChep: "/ghi-chep",
   tuDienOYen: "/tu-dien-o-yen",
   podcastOYen: "/podcast-o-yen",
   phimOYen: "/phim-o-yen",
@@ -66,7 +66,7 @@ export const hoatDongMenu = [
 ];
 
 export const thuVienMenu = [
-  { label: "ghi chép ở-yên", href: routes.thuVien },
+  { label: "ghi chép ở-yên", href: routes.ghiChep },
   { label: "từ điển ở-yên", href: routes.tuDienOYen },
   { label: "podcast", href: routes.podcastOYen },
   { label: "phim", href: routes.phimOYen },
@@ -146,7 +146,7 @@ export const mobileMenuSections = [
   {
     heading: "thư viện",
     items: [
-      { label: "ghi chép ở-yên", href: routes.thuVien },
+      { label: "ghi chép ở-yên", href: routes.ghiChep },
       { label: "từ điển ở-yên", href: routes.tuDienOYen },
       { label: "podcast", href: routes.podcastOYen },
       { label: "phim", href: routes.phimOYen },

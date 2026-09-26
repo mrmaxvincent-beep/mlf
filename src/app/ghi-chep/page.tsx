@@ -5,14 +5,14 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { LibraryReader } from "@/components/LibraryReader";
 import { Reveal } from "@/components/Reveal";
-import { notes } from "@/data/thuVien";
+import { notes } from "@/data/ghiChep";
 
 export const metadata: Metadata = {
   title: "ghi chép ở-yên",
   description: "ghi chép về ở-yên. Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình.",
 };
 
-export default function ThuVienPage() {
+export default function GhiChepPage() {
   return (
     <>
       <Header />
@@ -26,9 +26,9 @@ export default function ThuVienPage() {
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 1" aspectRatio="16/12" src="/assets/thuvienoyen01.webp" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 2" aspectRatio="16/12" src="/assets/thuvienoyen02.webp" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 3" aspectRatio="16/12" src="/assets/thuvienoyen03.webp" alt="thu-vien" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 1" aspectRatio="16/12" src="/assets/thuvienoyen01.webp" alt="ghi chép ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 2" aspectRatio="16/12" src="/assets/thuvienoyen02.webp" alt="ghi chép ở-yên" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · kệ sách, ánh sáng cửa sổ 3" aspectRatio="16/12" src="/assets/thuvienoyen03.webp" alt="ghi chép ở-yên" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="lib-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ISSUE_02_RELEASE, remainingParts, type Remaining } from "@/lib/countdown";
 
 const bigStyle: React.CSSProperties = {
@@ -24,14 +24,18 @@ const captionStyle: React.CSSProperties = {
  *  (tính lúc build sẽ đông cứng lại ở giờ build); khung giữ sẵn chiều cao để trang không nhảy khi số hiện ra. */
 export function JournalCountdown() {
   const [now, setNow] = useState<number | null>(null);
+  // Góc cộng dồn (không đưa về 0 khi đủ vòng) để chấm luôn đi thuận chiều; giữ số nhỏ vì số góc quá lớn làm trình duyệt mất chính xác.
+  const angle = useRef(0);
 
-  // Cập nhật đúng lúc đổi phút (không đếm giây), để chấm trên đồng hồ nhích cùng nhịp phút thật.
+  // Cập nhật đúng lúc đổi giây để chấm chạy vòng cùng nhịp giây thật; số hiển thị vẫn chỉ đổi khi đủ ngày/phút.
   useEffect(() => {
     let id: ReturnType<typeof setTimeout>;
     const tick = () => {
       const t = Date.now();
+      const target = (Math.floor(t / 1000) % 60) * 6;
+      angle.current += (target - (angle.current % 360) + 360) % 360;
       setNow(t);
-      id = setTimeout(tick, 60_000 - (t % 60_000) + 50);
+      id = setTimeout(tick, 1000 - (t % 1000) + 20);
     };
     tick();
     return () => clearTimeout(id);
@@ -39,16 +43,16 @@ export function JournalCountdown() {
 
   return (
     <div style={{ minHeight: RING, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem" }}>
-      {now !== null ? <Content remaining={remainingParts(ISSUE_02_RELEASE.getTime() - now)} minuteIndex={Math.floor(now / 60_000)} /> : null}
+      {now !== null ? <Content remaining={remainingParts(ISSUE_02_RELEASE.getTime() - now)} angle={angle.current} /> : null}
     </div>
   );
 }
 
 const RING = "clamp(15rem, 74vw, 18.5rem)";
 
-/** Vòng tròn mảnh bọc cả cụm đếm; một chấm chạy quanh mép như kim phút, mỗi phút tiến 6°.
- *  Góc tính từ số phút tuyệt đối (chỉ tăng) nên luôn đi thuận chiều, không quay ngược khi qua phút 59 → 0. */
-function Ring({ minuteIndex, children }: { minuteIndex: number; children: React.ReactNode }) {
+/** Vòng tròn mảnh bọc cả cụm đếm; một chấm chạy quanh mép như kim giây, mỗi giây tiến 6° (đủ vòng sau 60 giây).
+ *  Góc chỉ tăng nên luôn đi thuận chiều, không quay ngược khi qua giây 59 → 0. */
+function Ring({ angle, children }: { angle: number; children: React.ReactNode }) {
   return (
     <div
       style={{
@@ -67,7 +71,7 @@ function Ring({ minuteIndex, children }: { minuteIndex: number; children: React.
         boxSizing: "border-box",
       }}
     >
-      <span className="cd-hand" aria-hidden style={{ transform: `rotate(${minuteIndex * 6}deg)` }}>
+      <span className="cd-hand" aria-hidden style={{ transform: `rotate(${angle}deg)` }}>
         <span className="cd-dot" />
       </span>
       {children}
@@ -75,7 +79,7 @@ function Ring({ minuteIndex, children }: { minuteIndex: number; children: React.
   );
 }
 
-function Content({ remaining, minuteIndex }: { remaining: Remaining; minuteIndex: number }) {
+function Content({ remaining, angle }: { remaining: Remaining; angle: number }) {
   if (remaining.mode === "released") {
     return <p style={{ ...bigStyle, fontSize: "clamp(1.6rem, 5vw, 2.4rem)" }}>quyển 02 đã ra mắt</p>;
   }
@@ -92,7 +96,7 @@ function Content({ remaining, minuteIndex }: { remaining: Remaining; minuteIndex
     );
 
   return (
-    <Ring minuteIndex={minuteIndex}>
+    <Ring angle={angle}>
       <p style={{ ...bigStyle, fontSize: remaining.mode === "days" ? "clamp(3.2rem, 9vw, 5rem)" : "clamp(1.4rem, 5vw, 2rem)" }}>{bigText}</p>
       <p style={captionStyle}>{remaining.mode === "days" ? "ngày nữa, quyển 02 ra mắt" : "nữa, quyển 02 ra mắt"}</p>
       <p style={{ ...captionStyle, fontSize: "0.6rem", opacity: 0.75 }}>18:00 · 05/02/2027</p>

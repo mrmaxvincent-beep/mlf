@@ -6,6 +6,7 @@ import { Reveal, RevealStagger } from "@/components/Reveal";
 import { JournalIssue } from "@/components/JournalIssue";
 import { ExpandableContent } from "@/components/ExpandableContent";
 import { RevealEmailButton } from "@/components/RevealEmailButton";
+import { JournalThanks } from "@/components/JournalThanks";
 import { issues, defaultIssueIndex, columns } from "@/data/journal";
 
 export const metadata: Metadata = {
@@ -113,6 +114,10 @@ export default function JournalPage() {
         </p>
         <RevealEmailButton email="hello@moclittlefarm.com" label="gửi bài / ý tưởng cộng tác" />
       </div>
+
+      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "46rem", textAlign: "center" }}>
+        <JournalThanks />
+      </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "0", maxWidth: "60ch" }}>
         <ExpandableContent

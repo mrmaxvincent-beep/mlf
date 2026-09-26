@@ -235,7 +235,7 @@ export const entries: Entry[] = [
     no: 19,
     date: "8.2025",
     name: "c. K",
-    role: "mùa thu · học cách can đảm hơn một chút",
+    role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
     blocks: [
       p("Một ngày đầu thu tháng 8, 2025! Mình đến Mộc và có nhiều cái nhìn mới về cuộc đời. Mình soi chiếu sâu hơn vào bản thân, và can đảm hơn (chỉ một chút thôi) để nhìn nhiều góc cạnh hơn trong cuộc sống."),
       p("Cuộc sống nếu chỉ có 2 mặt thôi thì đơn giản hơn biết bao. Tiếc là không, việc chấp nhận cuộc sống, là vô ngã, là bất như ý đòi hỏi rất nhiều sự can đảm và tỉnh thức từ mình."),

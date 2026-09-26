@@ -218,7 +218,7 @@ export default function TrangYenPage() {
       <Reveal className="wrap" style={{ marginTop: "9rem", maxWidth: "46rem" }}>
         <span style={label}>cần giúp đỡ</span>
         <p style={{ ...prose, marginBottom: "1.25rem" }}>
-          mlf đang tìm một tình nguyện viên sống ở Huế, để cùng giữ trăng-yên mỗi tháng: nối những người đến với nhau, xác nhận các đăng ký, và ở bên người mới để họ không bỡ ngỡ khi ngồi xuống.
+          mlf đang tìm một tình nguyện viên sống ở Huế, để cùng giữ trăng-yên mỗi tháng: kết nối cộng đồng quanh mlf ở Huế, xác nhận các đăng ký, và ở bên người mới để họ không bỡ ngỡ khi ngồi xuống.
         </p>
         <p style={{ ...prose, marginBottom: "1.75rem" }}>
           nếu bạn thấy mình ở đây, hãy viết thư cho mlf qua{" "}

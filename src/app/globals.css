@@ -2410,3 +2410,24 @@ details[open] > summary .acc-icon {
     width: 7.5rem;
   }
 }
+
+/* đồng hồ chấm của countdown journal: chấm nhích 6° mỗi phút quanh vòng tròn mảnh */
+.cd-hand {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cd-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: var(--color-ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cd-hand { transition: none; }
+}

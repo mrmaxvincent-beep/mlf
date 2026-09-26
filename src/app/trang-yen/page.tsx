@@ -214,6 +214,21 @@ export default function TrangYenPage() {
         </div>
       </Reveal>
 
+      {/* CẦN GIÚP ĐỠ */}
+      <Reveal className="wrap" style={{ marginTop: "9rem", maxWidth: "46rem" }}>
+        <span style={label}>cần giúp đỡ</span>
+        <p style={{ ...prose, marginBottom: "1.25rem" }}>
+          mlf đang tìm một tình nguyện viên sống ở Huế, để cùng giữ trăng-yên mỗi tháng: nối những người đến với nhau, xác nhận các đăng ký, và ở bên người mới để họ không bỡ ngỡ khi ngồi xuống.
+        </p>
+        <p style={{ ...prose, marginBottom: "1.75rem" }}>
+          nếu bạn thấy mình ở đây, hãy viết thư cho mlf qua{" "}
+          <strong style={{ fontWeight: 600 }}>hello@moclittlefarm.com</strong>.
+        </p>
+        <a href="mailto:hello@moclittlefarm.com?subject=t%C3%ACnh%20nguy%E1%BB%87n%20vi%C3%AAn%20%C2%B7%20tr%C4%83ng-y%C3%AAn" className="night-link">
+          viết thư cho mlf <span className="ar">→</span>
+        </a>
+      </Reveal>
+
       {/* LỜI KHÉP */}
       <Reveal className="wrap" style={{ marginTop: "10rem", marginBottom: "6rem", maxWidth: "42rem" }}>
         <div className="moon moon--waning" aria-hidden />

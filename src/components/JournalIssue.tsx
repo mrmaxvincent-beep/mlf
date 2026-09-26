@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { JournalCountdown } from "@/components/JournalCountdown";
 import type { Issue } from "@/data/journal";
 import { pageSpreads } from "@/data/journal";
 
@@ -28,11 +29,14 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
           <span className="folio">phát hành 30 tháng chạp · hàng năm</span>
         </div>
       </div>
-      <div className="wrap-wide" style={{ padding: "3.5rem 1.5rem 7rem", textAlign: "center" }}>
+      <div className="wrap-wide" style={{ padding: "3.5rem 1.5rem 5.5rem", textAlign: "center" }}>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.6rem, 11vw, 7.5rem)", lineHeight: 0.9, color: "var(--color-ink)", margin: 0, letterSpacing: "-0.01em" }}>mlf journal</h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "52ch", margin: "1.5rem auto 0" }}>
           một quyển tạp chí được ươm mầm bởi mlf, những ghi chép về ở-yên. Viết ra từ mong ước giữ lại một nhịp sống ở-yên giữa những tất bật thường ngày  — ở lại, ngay trong đời sống đang diễn ra.
         </p>
+        <div style={{ marginTop: "3rem" }}>
+          <JournalCountdown />
+        </div>
       </div>
 
       <div style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", marginBottom: "3.5rem" }}>

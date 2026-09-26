@@ -11,6 +11,7 @@ import { episodes } from "@/data/chuyenVe";
 export const metadata: Metadata = {
   title: "chuyện-về",
   description: "những cuộc trò chuyện cùng người bạn thân quen của mlf.",
+  robots: { index: false, follow: false },
 };
 
 export default function ChuyenVePage() {

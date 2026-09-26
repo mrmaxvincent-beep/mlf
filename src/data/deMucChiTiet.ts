@@ -16,7 +16,6 @@ export const doors = [
     name: "chiêm nghiệm",
     feel: "Khi cần ngồi lại một mình với điều gì chưa rõ, và để nó từ từ sáng lên.",
     articles: [
-      { title: "chuyện-về", desc: "những cuộc trò chuyện cùng người bạn thân quen", href: "/chuyen-ve" },
       { title: "phía sáng", desc: "một buổi ngồi lại, để nhìn rõ hơn", href: "/be-still/phia-sang" },
       { title: "nhất-hiện", desc: "bình phàm — thuần tịnh", href: "/be-still/nhat-hien" },
     ],

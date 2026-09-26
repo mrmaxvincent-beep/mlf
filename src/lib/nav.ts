@@ -85,7 +85,6 @@ export const mlfMenu = [
   { label: "về mlf", href: routes.veMlf },
   { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
   { label: "thư-gửi-mộc", href: routes.thuGuiMoc },
-  { label: "chuyện-về", href: routes.chuyenVe },
   { label: "ủng hộ mlf", href: routes.ungHoMlf },
 ];
 
@@ -169,7 +168,6 @@ export const mobileMenuSections = [
       { label: "về mlf", href: routes.veMlf },
       { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
       { label: "thư-gửi-mộc", href: routes.thuGuiMoc },
-      { label: "chuyện-về", href: routes.chuyenVe },
       { label: "ủng hộ mlf", href: routes.ungHoMlf },
     ],
   },

@@ -20,7 +20,7 @@ import {
   days,
   programInfo,
   pricingItems,
-  schedule2026,
+  schedule2027,
   medicalFaqs,
   faqs,
   policyLines,
@@ -236,15 +236,15 @@ export default function RetreatAnVuiPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "2rem", textAlign: "center" }}>
-        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>lịch retreat trong năm 2026</span>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>lịch retreat trong năm 2027</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "560px" }}>
-        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
-          {schedule2026.map((s, idx) => {
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "820px" }}>
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", rowGap: "2.5rem" }}>
+          {schedule2027.map((s) => {
             const match = s.match(/^(\d+)\s*–\s*(\d+)\.(\d+)\.(\d+)\s*\((.+)\)$/);
             const [, dayFrom, dayTo, month, year, weekday] = match ?? ["", "", "", "", "", s];
             return (
-              <Reveal key={s} style={{ flex: "1 1 220px", maxWidth: "260px", padding: "0 2rem", textAlign: "center", borderLeft: idx > 0 ? "1px solid var(--color-mist)" : "none" }}>
+              <Reveal key={s} className="sched-item" style={{ flex: "1 1 220px", maxWidth: "260px", padding: "0 2rem", textAlign: "center" }}>
                 <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2.4rem", lineHeight: 1, color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
                   {dayFrom}–{dayTo}
                 </span>
@@ -338,7 +338,7 @@ export default function RetreatAnVuiPage() {
             ))}
           </div>
         </Disclosure>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CÁCH DI CHUYỂN TỚI MĂNG ĐEN</span>}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CÁCH DI CHUYỂN TỚI HUẾ</span>}>
           <div>
             {travelGroups.map((group) => (
               <div key={group.title} style={{ marginBottom: "1.4rem" }}>

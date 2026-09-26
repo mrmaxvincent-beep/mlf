@@ -19,10 +19,10 @@ export const days = [
     n: "01",
     title: "về nhà",
     rows: [
-      { time: "10:00", activity: "xe đón tại thị trấn Măng Đen" },
+      { time: "10:00", activity: "mlf đón tại sân bay/bến xe Huế" },
       { time: "—", activity: "gặp gỡ nhà mộc, nhận phòng, an vị, nghỉ ngơi" },
       { time: "—", activity: "trà chiều nhẹ" },
-      { time: "—", activity: "vãng cảnh chùa Khánh Lâm/nhà thờ Đức Mẹ, ngắm hoàng hôn" },
+      { time: "—", activity: "dạo nhẹ quanh nhà, ngắm hoàng hôn" },
       { time: "18:00 – 19:00", activity: "ăn tối" },
       { time: "19:30", activity: "nghỉ ngơi, đi ngủ sớm" },
     ],
@@ -82,7 +82,7 @@ export const days = [
       { time: "7:30 – 8:30", activity: "ăn sáng thong thả" },
       { time: "9:00 – 11:00", activity: "phơi nắng, đọc sách" },
       { time: "11:30 – 12:30", activity: "bữa trưa chia tay" },
-      { time: "13:00", activity: "xe đưa ra thị trấn" },
+      { time: "13:00", activity: "xe đưa ra sân bay/bến xe Huế" },
     ],
     note: "một món quà để bố mẹ học lại một điều đã quên — cách thương mình và cách nhận lại, sau cả một đời chỉ biết cho đi.",
   },
@@ -90,22 +90,25 @@ export const days = [
 
 export const programInfo = [
   { label: "thời gian", val: "5 ngày 4 đêm" },
-  { label: "tần suất", val: "3 tháng / lần" },
   { label: "giới hạn", val: "4 khách / chuyến" },
   { label: "độ tuổi", val: "+ 50" },
   { label: "phòng ngủ", val: "1 người / 1 phòng" },
   { label: "bao gồm", val: "bảo hiểm du lịch" },
-  { label: "đón/trả khách", val: "tại thị trấn Măng Đen" },
+  { label: "đón/trả khách", val: "tại sân bay/bến xe Huế" },
 ];
 
 export const pricingItems = [];
 
-export const schedule2026 = ["23 – 27.11.2026 (thứ 2 – thứ 6)"];
+export const schedule2027 = [
+  "05 – 09.04.2027 (thứ 2 – thứ 6)",
+  "02 – 06.08.2027 (thứ 2 – thứ 6)",
+  "06 – 10.12.2027 (thứ 2 – thứ 6)",
+];
 
 export const medicalFaqs = [
   { q: "bố/mẹ tôi có bệnh nền (cao huyết áp, tiểu đường, khớp...) thì có tham gia được không?", a: "Có. Tùy tình trạng sức khỏe, chúng tôi sẽ điều chỉnh lịch trình, cách di chuyển và bữa ăn cho phù hợp. Xin khai báo đầy đủ tình trạng sức khỏe và thuốc đang dùng khi đăng ký, mang đủ thuốc cho cả chuyến kèm một phần dự phòng. Vì mlf không có nhân viên y tế thường trực, chúng tôi xin phép không nhận khách đang điều trị tích cực (vừa phẫu thuật lớn, đang hóa trị, mới đột quỵ/nhồi máu trong vòng 6 tháng) hoặc cần thiết bị y tế hỗ trợ liên tục." },
   { q: "các buổi đi rừng có an toàn cho người lớn tuổi không?", a: "Có. Toàn bộ địa điểm trong 5 ngày đều dễ đi: đường bằng, gần, không leo dốc hay vượt địa hình khó. Ai cần đi chậm hơn hoặc nghỉ giữa đường, nhà mộc luôn đi cùng và sẵn sàng điều chỉnh." },
-  { q: "nếu có vấn đề sức khỏe xảy ra trong lúc retreat thì sao?", a: "Khi đăng ký, chúng tôi xin số điện thoại người thân để liên hệ khi cần. Mỗi khách được mua bảo hiểm du lịch trong suốt 5 ngày. Cơ sở y tế gần nhất cách mlf khoảng 8km (thị trấn Măng Đen), bệnh viện quốc tế gần nhất khoảng 50km (TP.Kontum). Nhà mộc cũng có sẵn các bài thuốc cơ bản cho cảm lạnh, cảm nắng, đau bụng thông thường." },
+  { q: "nếu có vấn đề sức khỏe xảy ra trong lúc retreat thì sao?", a: "Khi đăng ký, chúng tôi xin số điện thoại người thân để liên hệ khi cần. Mỗi khách được mua bảo hiểm du lịch trong suốt 5 ngày. Nhà mộc cũng có sẵn các bài thuốc cơ bản cho cảm lạnh, cảm nắng, đau bụng thông thường." },
   { q: "con cái có thể đăng ký giúp, hoặc đi theo cùng bố mẹ không?", a: "Có. Bạn có thể đăng ký giúp bố mẹ mình. Nếu muốn đi cùng, người nhà đi kèm được tính phí như một khách tham gia bình thường." },
 ];
 
@@ -122,7 +125,7 @@ export const faqs = [
   { q: "vấn đề an toàn vệ sinh thực phẩm và an toàn cho người tham gia như thế nào?", a: "Chúng tôi sử dụng rau củ quả từ vườn rau của mlf và các nông trại lân cận để đảm bảo biết nguồn gốc. Chúng tôi có chuẩn bị sẵn các bài thuốc trị côn trùng cắn, cảm nắng, cảm lạnh, đau bụng, trúng thực thông thường." },
   { q: "tiêu chuẩn phục vụ tại mlf, tương xứng với khách sạn/resort bao nhiêu sao?", a: "Chúng tôi là farmhouse, một ngôi nhà đúng nghĩa. Chúng tôi tôn vinh cái đẹp từ sự không hoàn hảo theo tinh thần wabi-sabi, nên khó lòng nếu bạn tìm kiếm một bức tường trắng muốt không tì vết." },
   { q: "tôi bị sợ chó/mèo/côn trùng… tôi có thể tham gia được không?", a: "Chúng tôi là không gian thân thiện với thú cưng, nhà có bạn chó nhỏ, các hoạt động đều nương tựa vào thiên nhiên, nếu bạn ngại tiếp xúc thú cưng, côn trùng… xin hãy cân nhắc trừ khi bạn muốn cùng chúng tôi học cách vượt qua nỗi sợ này." },
-  { q: "nếu trời mưa liên tục trong các ngày tôi đến thì phải làm sao?", a: "Các trải nghiệm đều được thiết kế để nương tựa vào thiên nhiên ở Măng Đen, nên chúng ta hãy chuẩn bị một tâm thế cởi mở, đón nhận mọi sự thay đổi. Nếu trời mưa liên tục, chúng tôi sẽ ưu tiên các hoạt động trong nhà hơn." },
+  { q: "nếu trời mưa liên tục trong các ngày tôi đến thì phải làm sao?", a: "Các trải nghiệm đều được thiết kế để nương tựa vào thiên nhiên ở Huế, nên chúng ta hãy chuẩn bị một tâm thế cởi mở, đón nhận mọi sự thay đổi. Nếu trời mưa liên tục, chúng tôi sẽ ưu tiên các hoạt động trong nhà hơn." },
   { q: "sau chuyến retreat, tôi muốn ở lại tiếp tục có được không?", a: "Sau chuyến retreat, nhà mộc có thể chuẩn bị bữa ăn và lưu trú thêm theo hình thức homestay. Xin lưu ý chúng tôi không tiếp khách đến lưu trú từ bên ngoài (nếu không phải là khách đã tham gia retreat trước đó)." },
   { q: "tôi là người nhạy cảm với tiếng ồn như tiếng mưa/gió/côn trùng… có cách nào để tôi ngủ êm?", a: "Chúng tôi có chuẩn bị bịt tai và bịt mắt trong trường hợp bạn là người nhạy cảm và cần thời gian để làm quen với đời sống ở nơi vùng cao." },
 ];
@@ -134,7 +137,5 @@ export const policyLines = [
 ];
 
 export const travelGroups = [
-  { title: "từ sài gòn", lines: ["Xe khách giường nằm Phượng Thu, Phong Phú (12 tiếng, 18h00 – 06h00) - giá vé từ 350.000đ – 650.000đ tùy loại xe.", "Máy bay Sài Gòn – Pleiku (1 tiếng) - giá vé khứ hồi từ 1,5 triệu đồng/người tùy thời điểm và hãng bay."] },
-  { title: "từ hà nội", lines: ["Máy bay Hà Nội – Pleiku (1 tiếng 45 phút) - giá vé khứ hồi từ 2 triệu đồng/người tùy thời điểm và hãng bay."] },
-  { title: "từ sân bay pleiku đến măng đen", lines: ["Hành trình 2 tiếng: taxi 800.000đ · xe 16 chỗ 100.000đ/người/lượt (chiều Pleiku–Măng Đen 7:30 và 9:30, chiều về 13:15 và 14:30) · hoặc limousine 250.000đ/người/lượt (chiều Pleiku–Măng Đen 9:00–9:30, chiều về 12:45).", "Di chuyển từ các tỉnh thành khác, vui lòng liên hệ nhà mộc để được giải đáp. Xe của nhà mộc sẽ đón bạn tại trung tâm thị trấn Măng Đen để đến mlf."] },
+  { title: "đến huế", lines: ["Bạn đến Huế bằng máy bay hoặc xe khách. Xe của nhà mộc sẽ đón bạn tại sân bay hoặc bến xe Huế để đến mlf, và đưa bạn trở lại đó khi chuyến retreat kết thúc.", "Di chuyển từ các tỉnh thành khác, vui lòng liên hệ nhà mộc để được giải đáp."] },
 ];

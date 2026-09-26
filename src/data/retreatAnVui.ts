@@ -137,5 +137,5 @@ export const policyLines = [
 ];
 
 export const travelGroups = [
-  { title: "đến huế", lines: ["Bạn đến Huế bằng máy bay hoặc xe khách. Xe của nhà mộc sẽ đón bạn tại sân bay hoặc bến xe Huế để đến mlf, và đưa bạn trở lại đó khi chuyến retreat kết thúc.", "Di chuyển từ các tỉnh thành khác, vui lòng liên hệ nhà mộc để được giải đáp."] },
+  { title: "đến huế", lines: ["Bạn đến Huế bằng máy bay hoặc xe khách. Xe của nhà mộc sẽ đón bạn tại sân bay hoặc bến xe Huế để đến mlf, và đưa bạn trở lại đó khi chuyến retreat kết thúc."] },
 ];

@@ -38,27 +38,40 @@ export function JournalCountdown() {
   }, []);
 
   return (
-    <div style={{ minHeight: "6.5rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem" }}>
+    <div style={{ minHeight: RING, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.85rem" }}>
       {now !== null ? <Content remaining={remainingParts(ISSUE_02_RELEASE.getTime() - now)} minuteIndex={Math.floor(now / 60_000)} /> : null}
     </div>
   );
 }
 
-/** Vòng tròn mảnh + một chấm chạy quanh mép như kim phút: mỗi phút tiến 6°. Góc tính từ số phút tuyệt đối
- *  (chỉ tăng) nên chuyển động luôn đi thuận chiều, không quay ngược khi qua phút 59 → 0. */
-function MinuteDot({ minuteIndex }: { minuteIndex: number }) {
+const RING = "clamp(15rem, 74vw, 18.5rem)";
+
+/** Vòng tròn mảnh bọc cả cụm đếm; một chấm chạy quanh mép như kim phút, mỗi phút tiến 6°.
+ *  Góc tính từ số phút tuyệt đối (chỉ tăng) nên luôn đi thuận chiều, không quay ngược khi qua phút 59 → 0. */
+function Ring({ minuteIndex, children }: { minuteIndex: number; children: React.ReactNode }) {
   return (
-    <span
-      aria-hidden
-      style={{ position: "absolute", right: "calc(100% + 1.1rem)", top: "50%", width: "1.35rem", height: "1.35rem", marginTop: "-0.675rem", display: "block" }}
+    <div
+      style={{
+        position: "relative",
+        width: RING,
+        height: RING,
+        borderRadius: "50%",
+        border: "1px solid color-mix(in srgb, var(--color-stone) 45%, transparent)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "0.85rem",
+        textAlign: "center",
+        padding: "0 1.25rem",
+        boxSizing: "border-box",
+      }}
     >
-      <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" style={{ display: "block", overflow: "visible" }}>
-        <circle cx="10" cy="10" r="9" stroke="var(--color-stone)" strokeWidth="0.8" opacity="0.55" />
-      </svg>
-      <span className="cd-hand" style={{ transform: `rotate(${minuteIndex * 6}deg)` }}>
+      <span className="cd-hand" aria-hidden style={{ transform: `rotate(${minuteIndex * 6}deg)` }}>
         <span className="cd-dot" />
       </span>
-    </span>
+      {children}
+    </div>
   );
 }
 
@@ -79,13 +92,10 @@ function Content({ remaining, minuteIndex }: { remaining: Remaining; minuteIndex
     );
 
   return (
-    <>
-      <p style={{ ...bigStyle, position: "relative", fontSize: remaining.mode === "days" ? "clamp(3.2rem, 9vw, 5rem)" : "clamp(2rem, 6vw, 3.2rem)" }}>
-        <MinuteDot minuteIndex={minuteIndex} />
-        {bigText}
-      </p>
+    <Ring minuteIndex={minuteIndex}>
+      <p style={{ ...bigStyle, fontSize: remaining.mode === "days" ? "clamp(3.2rem, 9vw, 5rem)" : "clamp(1.4rem, 5vw, 2rem)" }}>{bigText}</p>
       <p style={captionStyle}>{remaining.mode === "days" ? "ngày nữa, quyển 02 ra mắt" : "nữa, quyển 02 ra mắt"}</p>
       <p style={{ ...captionStyle, fontSize: "0.6rem", opacity: 0.75 }}>18:00 · 05/02/2027</p>
-    </>
+    </Ring>
   );
 }

@@ -2354,17 +2354,19 @@ details[open] > summary .acc-icon {
   filter: invert(1) brightness(1.35);
 }
 
-/* mlf journal — lời cảm ơn thành viên nòng cốt: lưới avatar tròn, 4 cột (8 người → 4+4), 2 cột trên điện thoại */
+/* mlf journal — lời cảm ơn thành viên nòng cốt: các avatar xếp hàng tự canh giữa (9 người → 5+4), 2 cột trên điện thoại */
 .thanks-grid {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 6.5rem);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2.75rem 2rem;
-  margin: 0;
+  max-width: 42rem;
+  margin: 0 auto;
   padding: 0;
 }
 .thanks-item {
+  width: 6.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2402,7 +2404,9 @@ details[open] > summary .acc-icon {
 }
 @media (max-width: 560px) {
   .thanks-grid {
-    grid-template-columns: repeat(2, 7.5rem);
     gap: 2.25rem 1.5rem;
+  }
+  .thanks-item {
+    width: 7.5rem;
   }
 }

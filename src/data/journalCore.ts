@@ -6,12 +6,13 @@ export type CoreMember = {
 
 /** Những người là thành viên nòng cốt của các số mlf journal — thứ tự hiển thị. */
 export const coreMembers: CoreMember[] = [
-  { name: "Tâm", photo: "/assets/tam.webp" },
-  { name: "Vũ", photo: "/assets/vu.webp" },
-  { name: "Thuận", photo: "/assets/thuan.webp" },
   { name: "Khanh Trần" },
   { name: "Hồng Ân" },
   { name: "Vân Chi" },
   { name: "Gia Linh" },
   { name: "Lê Thi" },
+  { name: "Giang Đỗ" },
+  { name: "Tâm", photo: "/assets/tam.webp" },
+  { name: "Vũ", photo: "/assets/vu.webp" },
+  { name: "Thuận", photo: "/assets/thuan.webp" },
 ];

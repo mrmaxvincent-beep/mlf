@@ -13,8 +13,10 @@ const pStyle: React.CSSProperties = {
 };
 
 /** Numbered-grid entry picker + reading pane, with a brief fade on switch — thư-gửi-mộc guestbook. */
-export function ThuGuiMocReader({ entries }: { entries: Entry[] }) {
-  const [active, setActive] = useState(0);
+export function ThuGuiMocReader({ entries: unsorted }: { entries: Entry[] }) {
+  // Số thứ tự `no` là cố định của từng lá thư (1 = lâu nhất); luôn xếp theo số này, mở sẵn lá mới nhất.
+  const entries = [...unsorted].sort((a, b) => a.no - b.no);
+  const [active, setActive] = useState(entries.length - 1);
   const [fading, setFading] = useState(false);
   const dateRef = useRef<HTMLDivElement>(null);
 
@@ -39,9 +41,9 @@ export function ThuGuiMocReader({ entries }: { entries: Entry[] }) {
     <div className="lb-shell">
       <div className="lb-rail">
         <div className="lb-list">
-          {entries.map((_, i) => (
-            <button key={i} className={`lb-item${i === active ? " active" : ""}`} onClick={() => select(i)}>
-              {i + 1}
+          {entries.map((e, i) => (
+            <button key={e.no} className={`lb-item${i === active ? " active" : ""}`} onClick={() => select(i)}>
+              {e.no}
             </button>
           ))}
         </div>

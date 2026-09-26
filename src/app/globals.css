@@ -2374,8 +2374,8 @@ details[open] > summary .acc-icon {
 .thanks-avatar {
   position: relative;
   display: block;
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--color-mist);
@@ -2390,7 +2390,7 @@ details[open] > summary .acc-icon {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--color-stone);
 }
 .thanks-name {

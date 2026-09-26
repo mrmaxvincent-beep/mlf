@@ -20,7 +20,7 @@ export function JournalThanks() {
           <li key={m.name} className="thanks-item">
             <span className="thanks-avatar">
               {m.photo ? (
-                <Image src={m.photo} alt={m.name} fill sizes="96px" style={{ objectFit: "cover", objectPosition: "center 30%" }} />
+                <Image src={m.photo} alt={m.name} fill sizes="48px" style={{ objectFit: "cover", objectPosition: "center 30%" }} />
               ) : (
                 <span aria-hidden className="thanks-initial">
                   {m.name.trim().charAt(0)}

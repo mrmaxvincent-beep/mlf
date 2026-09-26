@@ -50,7 +50,7 @@ export const days = [
     rows: [
       { time: "6:00 – 7:00", activity: "vận động nhẹ cùng Thuận" },
       { time: "7:30 – 8:30", activity: "ăn sáng thong thả" },
-      { time: "8:30 – 11:30", activity: "tham quan điểm đến ở Huế: buổi hiểu về thế hệ con cháu" },
+      { time: "8:30 – 11:30", activity: "ngồi ở một khu vườn: buổi hiểu về thế hệ con cháu" },
       { time: "11:30 – 15:00", activity: "nghỉ ngơi tự do, ăn trưa, ngủ trưa" },
       { time: "15:00 – 16:30", activity: "thiền trà cùng Vũ" },
       { time: "16:30 – 17:30", activity: "tự do (làm thủ công, đọc sách, làm vườn...)" },

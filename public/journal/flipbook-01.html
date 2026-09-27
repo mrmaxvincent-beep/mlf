@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <title>mlf journal 01 · muôn nẻo về nhà</title>
 <meta name="description" content="đọc mlf journal số 01 — muôn nẻo về nhà. một ghi chép để ở yên.">
 <link rel="canonical" href="https://moclittlefarm.com/journal/flipbook-01.html">
@@ -23,75 +23,86 @@
 html,body{height:100%;overflow:hidden;background:var(--paper);color:var(--ink)}
 body{display:flex;flex-direction:column;font-family:var(--serif)}
 
-/* crumb */
 .crumb{
   position:absolute;top:0;left:0;right:0;z-index:20;
   padding:1rem 1.25rem;
   display:flex;align-items:center;gap:0.5rem;
   font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;
-  color:var(--stone);
-  pointer-events:auto;
+  color:var(--stone);pointer-events:auto;
 }
 .crumb a{color:var(--stone);text-decoration:none;transition:color .2s}
 .crumb a:hover{color:var(--ink)}
 .crumb .sep{opacity:.4}
 
-/* fullscreen button */
 .fs-btn{
   position:absolute;top:0.75rem;right:1rem;z-index:20;
   background:none;border:1px solid color-mix(in srgb,var(--stone) 40%,transparent);
   border-radius:3px;padding:0.4rem;cursor:pointer;
-  color:var(--stone);transition:color .2s,border-color .2s;
-  line-height:0;
+  color:var(--stone);transition:color .2s,border-color .2s;line-height:0;
 }
 .fs-btn:hover{color:var(--ink);border-color:var(--stone)}
 .fs-btn svg{width:18px;height:18px;display:block}
 
-/* book area */
 .book-wrap{
   flex:1;display:flex;align-items:center;justify-content:center;
   position:relative;overflow:hidden;
-  padding:3rem 0.5rem 1.5rem;
+  padding:3rem 0.5rem 2.8rem;
 }
 
-/* spread container — holds left + right pages */
+/* spread with 3D perspective */
 .spread{
-  position:relative;
-  display:flex;
-  max-height:100%;
+  position:relative;display:flex;max-height:100%;
+  perspective:2200px;
 }
 .spread.single{justify-content:center}
 
 .page-slot{
-  position:relative;
-  overflow:hidden;
-  background:var(--mist);
+  position:relative;overflow:hidden;background:var(--mist);
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 .page-slot canvas{display:block;width:100%;height:100%}
 
-/* flip overlay */
+/* 3D flip overlay */
 .flip-overlay{
   position:absolute;top:0;width:50%;height:100%;
-  transform-origin:left center;
   backface-visibility:hidden;
-  transition:transform 0.45s cubic-bezier(.4,.0,.2,1);
-  z-index:10;
-  pointer-events:none;
+  transition:transform 0.5s cubic-bezier(.36,.07,.19,.97);
+  z-index:10;pointer-events:none;
+  transform-style:preserve-3d;
 }
-.flip-overlay.from-right{left:50%;transform-origin:left center;transform:rotateY(0deg)}
-.flip-overlay.from-left{left:0;transform-origin:right center;transform:rotateY(0deg)}
+.flip-overlay.from-right{
+  left:50%;transform-origin:left center;transform:rotateY(0deg);
+}
+.flip-overlay.from-left{
+  right:0;left:auto;transform-origin:right center;transform:rotateY(0deg);
+}
 .flip-overlay canvas{width:100%;height:100%;display:block}
-.flip-overlay.flipping-forward{transform:rotateY(-180deg)}
-.flip-overlay.flipping-backward{transform:rotateY(180deg)}
+.flip-overlay.flipping{transform:rotateY(-180deg)}
+.flip-overlay.flipping-back{transform:rotateY(180deg)}
 
-/* page shadow during flip */
-.flip-shadow{
-  position:absolute;top:0;height:100%;width:40px;
-  pointer-events:none;z-index:11;opacity:0;
-  transition:opacity 0.45s;
+/* shadow that appears on the spine during flip */
+.flip-overlay::after{
+  content:'';position:absolute;top:0;bottom:0;width:60px;
+  opacity:0;transition:opacity 0.5s;pointer-events:none;
 }
-.flip-shadow.left{right:100%;background:linear-gradient(to left,rgba(0,0,0,.08),transparent)}
-.flip-shadow.right{left:100%;background:linear-gradient(to right,rgba(0,0,0,.08),transparent)}
+.flip-overlay.from-right::after{
+  right:-60px;
+  background:linear-gradient(to right,rgba(0,0,0,.12),transparent);
+}
+.flip-overlay.from-left::after{
+  left:-60px;
+  background:linear-gradient(to left,rgba(0,0,0,.12),transparent);
+}
+.flip-overlay.flipping::after,.flip-overlay.flipping-back::after{opacity:1}
+
+/* spine shadow between pages */
+.spread::after{
+  content:'';position:absolute;top:0;bottom:0;left:50%;
+  width:16px;transform:translateX(-50%);z-index:3;pointer-events:none;
+  background:linear-gradient(to right,
+    transparent,rgba(0,0,0,.04) 30%,rgba(0,0,0,.07) 50%,rgba(0,0,0,.04) 70%,transparent);
+}
+.spread.single::after{display:none}
 
 /* nav buttons */
 .nav-zone{
@@ -102,12 +113,55 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
 .nav-zone.prev{left:0}
 .nav-zone.next{right:0}
 
-/* page indicator */
+/* bottom bar: progress + page indicator */
+.bottom-bar{
+  position:absolute;bottom:0;left:0;right:0;z-index:20;
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 1rem 0.5rem;gap:0.3rem;
+}
+.progress-track{
+  width:100%;max-width:600px;height:3px;
+  background:color-mix(in srgb,var(--stone) 20%,transparent);
+  border-radius:2px;cursor:pointer;position:relative;
+}
+.progress-fill{
+  height:100%;background:var(--stone);border-radius:2px;
+  transition:width 0.3s;pointer-events:none;
+}
+.progress-thumb{
+  position:absolute;top:50%;width:12px;height:12px;
+  background:var(--ink);border-radius:50%;
+  transform:translate(-50%,-50%);opacity:0;
+  transition:opacity 0.2s;cursor:grab;
+}
+.progress-track:hover .progress-thumb{opacity:1}
+
 .page-ind{
-  position:absolute;bottom:0.6rem;left:50%;transform:translateX(-50%);
   font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;
-  color:var(--stone);opacity:0.7;z-index:20;
-  pointer-events:none;white-space:nowrap;
+  color:var(--stone);opacity:0.7;white-space:nowrap;cursor:pointer;
+  border:none;background:none;padding:0.15rem 0.5rem;
+  border-radius:2px;transition:background .2s;
+}
+.page-ind:hover{background:var(--mist)}
+
+/* page jump input */
+.jump-input{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;
+  color:var(--ink);background:var(--mist);border:1px solid var(--stone);
+  border-radius:2px;padding:0.2rem 0.5rem;width:5rem;text-align:center;
+  outline:none;
+}
+
+/* zoom */
+.zoom-layer{
+  position:absolute;inset:0;z-index:15;
+  overflow:hidden;display:none;cursor:grab;
+}
+.zoom-layer.active{display:block}
+.zoom-layer.dragging{cursor:grabbing}
+.zoom-canvas{
+  position:absolute;top:0;left:0;
+  transform-origin:0 0;
 }
 
 /* loading / error */
@@ -120,8 +174,7 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
 .overlay-msg button{
   font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;
   background:none;border:1px solid var(--stone);color:var(--ink);
-  padding:0.5rem 1.5rem;border-radius:2px;cursor:pointer;
-  transition:background .2s;
+  padding:0.5rem 1.5rem;border-radius:2px;cursor:pointer;transition:background .2s;
 }
 .overlay-msg button:hover{background:var(--mist)}
 
@@ -129,7 +182,11 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
 
 @media(max-width:600px){
   .crumb{padding:0.75rem 1rem;font-size:0.58rem}
-  .book-wrap{padding:2.5rem 0 1.2rem}
+  .book-wrap{padding:2.5rem 0 2.6rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .flip-overlay{transition:none!important}
+  .flip-overlay::after{transition:none!important}
 }
 </style>
 </head>
@@ -155,10 +212,20 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   </div>
 
   <div class="spread hidden" id="spread"></div>
+  <div class="zoom-layer" id="zoomLayer">
+    <canvas class="zoom-canvas" id="zoomCanvas"></canvas>
+  </div>
 
   <button class="nav-zone prev" id="prevBtn" aria-label="trang trước"></button>
   <button class="nav-zone next" id="nextBtn" aria-label="trang sau"></button>
-  <div class="page-ind" id="pageInd"></div>
+
+  <div class="bottom-bar" id="bottomBar">
+    <div class="progress-track" id="progressTrack">
+      <div class="progress-fill" id="progressFill"></div>
+      <div class="progress-thumb" id="progressThumb"></div>
+    </div>
+    <button class="page-ind" id="pageInd" title="nhảy đến trang"></button>
+  </div>
 </div>
 
 <script src="/vendor/pdfjs/pdf.min.js"></script>
@@ -167,252 +234,525 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   "use strict";
 
   var PDF_URL = "/journal/mlf-journal-01.pdf";
-  var PDFJS_VERSION = "3.11.174";
 
   /* ── state ── */
   var pdf = null;
   var totalPages = 0;
-  var currentSpreadStart = 1;   // first page number shown (1-based)
-  var isSingle = false;         // single-page mode (mobile)
+  var currentSpreadStart = 1;
+  var isSingle = false;
   var flipping = false;
   var settleTimer = null;
-  var pageCanvasCache = {};     // pageNum → canvas element
+  var renderCache = {};
+  var renderQueue = {};
+  var zoomed = false;
 
   /* ── DOM ── */
-  var spread    = document.getElementById("spread");
-  var loadingEl = document.getElementById("loadingMsg");
-  var errorEl   = document.getElementById("errorMsg");
-  var retryBtn  = document.getElementById("retryBtn");
-  var prevBtn   = document.getElementById("prevBtn");
-  var nextBtn   = document.getElementById("nextBtn");
-  var pageInd   = document.getElementById("pageInd");
-  var fsBtn     = document.getElementById("fsBtn");
-  var bookWrap  = document.getElementById("bookWrap");
+  var spread       = document.getElementById("spread");
+  var loadingEl    = document.getElementById("loadingMsg");
+  var errorEl      = document.getElementById("errorMsg");
+  var retryBtn     = document.getElementById("retryBtn");
+  var prevBtn      = document.getElementById("prevBtn");
+  var nextBtn      = document.getElementById("nextBtn");
+  var pageInd      = document.getElementById("pageInd");
+  var fsBtn        = document.getElementById("fsBtn");
+  var bookWrap     = document.getElementById("bookWrap");
+  var progressTrack= document.getElementById("progressTrack");
+  var progressFill = document.getElementById("progressFill");
+  var progressThumb= document.getElementById("progressThumb");
+  var zoomLayer    = document.getElementById("zoomLayer");
+  var zoomCanvas   = document.getElementById("zoomCanvas");
+  var bottomBar    = document.getElementById("bottomBar");
 
-  /* ── PDF.js setup ── */
+  /* ── PDF.js ── */
   function initPdfJs(){
     if(typeof pdfjsLib==="undefined") throw new Error("pdfjsLib missing");
     pdfjsLib.GlobalWorkerOptions.workerSrc = "/vendor/pdfjs/pdf.worker.min.js";
   }
 
-  /* ── boot ── */
   function boot(){
-    try{ initPdfJs(); } catch(e){ showError(); return; }
+    try{ initPdfJs(); }catch(e){ showError(); return; }
     loadPdf();
   }
 
   function loadPdf(){
     showLoading();
-    var loadingTask = pdfjsLib.getDocument({url: PDF_URL, disableAutoFetch: false, disableStream: false});
-    loadingTask.promise.then(function(doc){
-      pdf = doc;
-      totalPages = doc.numPages;
-      detectMode();
-      currentSpreadStart = 1;
-      showSpread();
-    }).catch(function(){ showError(); });
+    pdfjsLib.getDocument({url:PDF_URL,disableAutoFetch:false,disableStream:false})
+      .promise.then(function(doc){
+        pdf = doc;
+        totalPages = doc.numPages;
+        detectMode();
+        var saved = readSavedPage();
+        currentSpreadStart = saved;
+        showSpread();
+      }).catch(function(){ showError(); });
   }
 
   function showLoading(){ loadingEl.classList.remove("hidden"); errorEl.classList.add("hidden"); spread.classList.add("hidden"); }
   function showError(){ errorEl.classList.remove("hidden"); loadingEl.classList.add("hidden"); spread.classList.add("hidden"); }
 
-  /* ── detect single vs spread ── */
+  /* ── localStorage: remember page ── */
+  function savePage(){
+    try{ localStorage.setItem("mlfj01_page", String(currentSpreadStart)); }catch(e){}
+  }
+  function readSavedPage(){
+    try{
+      var v = parseInt(localStorage.getItem("mlfj01_page"),10);
+      if(v && v >= 1 && v <= totalPages) return v;
+    }catch(e){}
+    return 1;
+  }
+
+  /* ── mode ── */
   function detectMode(){
     isSingle = window.innerWidth < 700;
     spread.classList.toggle("single", isSingle);
   }
 
-  /* ── render a page onto a canvas ── */
+  /* ── render page (cached) ── */
+  function getPageDims(){
+    var r = bookWrap.getBoundingClientRect();
+    var aW = r.width - 16;
+    var aH = r.height - 60;
+    var perW = isSingle ? aW : aW * 0.5;
+    return {maxW:perW, maxH:aH};
+  }
+
   function renderPage(pageNum, maxW, maxH){
-    return pdf.getPage(pageNum).then(function(page){
+    var key = pageNum+"_"+Math.round(maxW)+"x"+Math.round(maxH);
+    if(renderCache[key]) return Promise.resolve(renderCache[key]);
+    if(renderQueue[key]) return renderQueue[key];
+
+    var p = pdf.getPage(pageNum).then(function(page){
       var vp = page.getViewport({scale:1});
-      var scale = Math.min(maxW / vp.width, maxH / vp.height, 3);
-      var sv = page.getViewport({scale: scale});
+      var scale = Math.min(maxW/vp.width, maxH/vp.height, 3);
+      var sv = page.getViewport({scale:scale});
       var canvas = document.createElement("canvas");
-      canvas.width  = sv.width;
+      canvas.width = sv.width;
       canvas.height = sv.height;
-      canvas.style.width  = sv.width / scale * Math.min(scale, 2) + "px";
-      canvas.style.height = sv.height / scale * Math.min(scale, 2) + "px";
-      return page.render({canvasContext: canvas.getContext("2d"), viewport: sv}).promise.then(function(){
+      canvas.style.width  = Math.round(sv.width/scale*Math.min(scale,2))+"px";
+      canvas.style.height = Math.round(sv.height/scale*Math.min(scale,2))+"px";
+      return page.render({canvasContext:canvas.getContext("2d"),viewport:sv}).promise.then(function(){
+        renderCache[key] = canvas;
+        delete renderQueue[key];
         return canvas;
       });
     });
+    renderQueue[key] = p;
+    return p;
   }
 
-  /* ── show current spread ── */
+  /* ── pages to show ── */
+  function pagesForSpread(start){
+    if(isSingle) return [start];
+    if(start === 1) return [1];
+    var arr = [start, start+1];
+    return arr.filter(function(p){ return p >= 1 && p <= totalPages; });
+  }
+
+  /* ── show spread ── */
   function showSpread(){
+    if(zoomed) exitZoom();
     spread.innerHTML = "";
     spread.classList.remove("hidden");
     loadingEl.classList.add("hidden");
     errorEl.classList.add("hidden");
 
-    var wrapRect = bookWrap.getBoundingClientRect();
-    var availW = wrapRect.width - 16;
-    var availH = wrapRect.height - 60;
+    var dims = getPageDims();
+    var pages = pagesForSpread(currentSpreadStart);
 
-    var pagesToShow = [];
-    if(isSingle){
-      pagesToShow = [currentSpreadStart];
-    } else {
-      if(currentSpreadStart === 1){
-        pagesToShow = [1];
-      } else {
-        pagesToShow = [currentSpreadStart, currentSpreadStart+1];
-        pagesToShow = pagesToShow.filter(function(p){ return p <= totalPages; });
-      }
-    }
-
-    var perPageW = isSingle ? availW : (pagesToShow.length === 1 ? availW * 0.5 : availW * 0.5);
-
-    var promises = pagesToShow.map(function(pn){
-      return renderPage(pn, perPageW, availH);
-    });
+    var promises = pages.map(function(pn){ return renderPage(pn, dims.maxW, dims.maxH); });
 
     Promise.all(promises).then(function(canvases){
       spread.innerHTML = "";
-      canvases.forEach(function(cv, i){
+      canvases.forEach(function(cv){
         var slot = document.createElement("div");
         slot.className = "page-slot";
         slot.style.width  = cv.style.width;
         slot.style.height = cv.style.height;
-        slot.appendChild(cv);
+        var clone = cv.cloneNode(false);
+        clone.getContext("2d").drawImage(cv, 0, 0);
+        clone.style.width = cv.style.width;
+        clone.style.height = cv.style.height;
+        slot.appendChild(clone);
         spread.appendChild(slot);
       });
-      updatePageInd(pagesToShow);
+      updateUI(pages);
+      savePage();
+      preloadNeighbors();
     });
   }
 
-  function updatePageInd(pages){
-    if(pages.length === 1){
-      pageInd.textContent = pages[0] + " / " + totalPages;
-    } else {
-      pageInd.textContent = pages[0] + "–" + pages[pages.length-1] + " / " + totalPages;
-    }
+  function updateUI(pages){
+    var first = pages[0], last = pages[pages.length-1];
+    var label = pages.length === 1
+      ? first+" / "+totalPages
+      : first+"–"+last+" / "+totalPages;
+    pageInd.textContent = label;
+
+    var pct = (last / totalPages * 100).toFixed(1);
+    progressFill.style.width = pct+"%";
+    progressThumb.style.left = pct+"%";
   }
 
-  /* ── navigation ── */
+  /* ── preload neighbors ── */
+  function preloadNeighbors(){
+    var dims = getPageDims();
+    var next = nextSpreadStart();
+    var prev = prevSpreadStart();
+    var toLoad = [];
+    if(next <= totalPages) toLoad = toLoad.concat(pagesForSpread(next));
+    if(prev >= 1 && currentSpreadStart > 1) toLoad = toLoad.concat(pagesForSpread(prev));
+    toLoad.forEach(function(pn){
+      renderPage(pn, dims.maxW, dims.maxH);
+    });
+  }
+
+  /* ── navigation helpers ── */
   function nextSpreadStart(){
     if(isSingle) return currentSpreadStart + 1;
     if(currentSpreadStart === 1) return 2;
     return currentSpreadStart + 2;
   }
-
   function prevSpreadStart(){
     if(isSingle) return currentSpreadStart - 1;
     if(currentSpreadStart <= 2) return 1;
     return currentSpreadStart - 2;
   }
-
   function canGoForward(){ return nextSpreadStart() <= totalPages; }
-  function canGoBackward(){ return prevSpreadStart() >= 1 && currentSpreadStart > 1; }
+  function canGoBackward(){ return currentSpreadStart > 1; }
 
-  /* ── flip animation ── */
+  /* ── 3D page flip ── */
   function flipForward(){
     if(flipping || !canGoForward()) return;
+    if(zoomed){ exitZoom(); return; }
     flipping = true;
 
-    var nextStart = nextSpreadStart();
-    var wrapRect = bookWrap.getBoundingClientRect();
-    var availW = wrapRect.width - 16;
-    var availH = wrapRect.height - 60;
-    var perPageW = isSingle ? availW : availW * 0.5;
+    var nxt = nextSpreadStart();
+    var dims = getPageDims();
+    var nextPages = pagesForSpread(nxt);
 
-    var targetPage = isSingle ? nextStart : nextStart;
+    Promise.all(nextPages.map(function(p){ return renderPage(p, dims.maxW, dims.maxH); }))
+      .then(function(nextCanvases){
+        var slots = spread.querySelectorAll(".page-slot");
+        var flipSlot = isSingle ? slots[0] : (slots[1] || slots[0]);
+        var flipCanvas = flipSlot.querySelector("canvas");
 
-    renderPage(targetPage, perPageW, availH).then(function(newCanvas){
-      currentSpreadStart = nextStart;
-      showSpread();
-      settleAfter(function(){ flipping = false; });
-    }).catch(function(){
-      flipping = false;
-    });
+        var overlay = document.createElement("div");
+        overlay.className = "flip-overlay from-right";
+        overlay.style.height = flipSlot.style.height;
+        var oc = flipCanvas.cloneNode(false);
+        oc.getContext("2d").drawImage(flipCanvas, 0, 0);
+        oc.style.width = "100%"; oc.style.height = "100%";
+        overlay.appendChild(oc);
+        spread.appendChild(overlay);
+
+        void overlay.offsetWidth;
+        overlay.classList.add("flipping");
+
+        function onDone(){
+          overlay.removeEventListener("transitionend", onDone);
+          clearTimeout(settleTimer);
+          currentSpreadStart = nxt;
+          spread.removeChild(overlay);
+          showSpread();
+          flipping = false;
+        }
+        overlay.addEventListener("transitionend", onDone);
+        settleAfter(onDone);
+      })
+      .catch(function(){ flipping = false; });
   }
 
   function flipBackward(){
     if(flipping || !canGoBackward()) return;
+    if(zoomed){ exitZoom(); return; }
     flipping = true;
 
-    var prevStart = prevSpreadStart();
-    currentSpreadStart = prevStart;
-    showSpread();
-    settleAfter(function(){ flipping = false; });
+    var prv = prevSpreadStart();
+    var dims = getPageDims();
+    var prevPages = pagesForSpread(prv);
+
+    Promise.all(prevPages.map(function(p){ return renderPage(p, dims.maxW, dims.maxH); }))
+      .then(function(prevCanvases){
+        var slots = spread.querySelectorAll(".page-slot");
+        var flipSlot = slots[0];
+        var flipCanvas = flipSlot.querySelector("canvas");
+
+        var overlay = document.createElement("div");
+        overlay.className = "flip-overlay from-left";
+        overlay.style.height = flipSlot.style.height;
+
+        var showCanvas = prevCanvases[isSingle ? 0 : (prevCanvases.length-1)];
+        var oc = showCanvas.cloneNode(false);
+        oc.getContext("2d").drawImage(showCanvas, 0, 0);
+        oc.style.width = "100%"; oc.style.height = "100%";
+        overlay.appendChild(oc);
+        spread.appendChild(overlay);
+
+        overlay.style.transform = "rotateY(-180deg)";
+        void overlay.offsetWidth;
+        overlay.style.transform = "";
+        overlay.classList.remove("flipping-back");
+
+        function onDone(){
+          overlay.removeEventListener("transitionend", onDone);
+          clearTimeout(settleTimer);
+          currentSpreadStart = prv;
+          spread.removeChild(overlay);
+          showSpread();
+          flipping = false;
+        }
+        overlay.addEventListener("transitionend", onDone);
+        settleAfter(onDone);
+      })
+      .catch(function(){ flipping = false; });
   }
 
-  /* ── settleAfter: timeout safety net for bfcache / interrupted transitions ── */
+  function goToPage(pageNum){
+    if(flipping || pageNum < 1 || pageNum > totalPages) return;
+    if(zoomed) exitZoom();
+    if(!isSingle && pageNum > 1 && pageNum % 2 !== 0) pageNum--;
+    currentSpreadStart = pageNum;
+    showSpread();
+  }
+
+  /* ── settleAfter ── */
   function settleAfter(cb){
     clearTimeout(settleTimer);
-    settleTimer = setTimeout(function(){
-      if(cb) cb();
-    }, 600);
+    settleTimer = setTimeout(function(){ if(cb) cb(); }, 700);
   }
-
   function forceSettle(){
     clearTimeout(settleTimer);
     flipping = false;
     showSpread();
   }
+  window.addEventListener("pageshow", function(e){ if(e.persisted) forceSettle(); });
 
-  /* ── bfcache recovery ── */
-  window.addEventListener("pageshow", function(e){
-    if(e.persisted) forceSettle();
+  /* ── progress bar interaction ── */
+  function progressToPage(e){
+    var rect = progressTrack.getBoundingClientRect();
+    var ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    var page = Math.max(1, Math.round(ratio * totalPages));
+    goToPage(page);
+  }
+  progressTrack.addEventListener("click", progressToPage);
+
+  var draggingProgress = false;
+  progressThumb.addEventListener("mousedown", function(e){
+    e.preventDefault(); draggingProgress = true;
+  });
+  document.addEventListener("mousemove", function(e){
+    if(!draggingProgress) return;
+    progressToPage(e);
+  });
+  document.addEventListener("mouseup", function(){
+    draggingProgress = false;
   });
 
-  /* ── events ── */
-  nextBtn.addEventListener("click", flipForward);
-  prevBtn.addEventListener("click", flipBackward);
+  /* ── page jump ── */
+  pageInd.addEventListener("click", function(){
+    var input = document.createElement("input");
+    input.type = "number"; input.min = 1; input.max = totalPages;
+    input.className = "jump-input";
+    input.value = currentSpreadStart;
+    input.placeholder = "trang";
+    pageInd.replaceWith(input);
+    input.focus();
+    input.select();
+    var committed = false;
+    function commit(){
+      if(committed) return;
+      committed = true;
+      var v = parseInt(input.value, 10);
+      if(input.parentNode) input.replaceWith(pageInd);
+      if(v && v >= 1 && v <= totalPages) goToPage(v);
+    }
+    input.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){ e.preventDefault(); commit(); }
+      if(e.key === "Escape"){ committed = true; if(input.parentNode) input.replaceWith(pageInd); }
+      e.stopPropagation();
+    });
+    input.addEventListener("blur", commit);
+  });
+
+  /* ── zoom (double-click / pinch) ── */
+  var zoomScale = 1;
+  var zoomPanX = 0, zoomPanY = 0;
+  var zoomPageNum = 0;
+
+  function enterZoom(clientX, clientY){
+    if(zoomed || !pdf) return;
+    zoomed = true;
+
+    var pages = pagesForSpread(currentSpreadStart);
+    var spreadRect = spread.getBoundingClientRect();
+    var relX = clientX - spreadRect.left;
+    var clickedRight = relX > spreadRect.width / 2;
+    var pageIdx = (!isSingle && pages.length === 2 && clickedRight) ? 1 : 0;
+    zoomPageNum = pages[pageIdx];
+
+    var wrapRect = bookWrap.getBoundingClientRect();
+    zoomScale = 2.5;
+
+    pdf.getPage(zoomPageNum).then(function(page){
+      var vp = page.getViewport({scale:1});
+      var fitScale = Math.min(wrapRect.width / vp.width, wrapRect.height / vp.height) * zoomScale;
+      var sv = page.getViewport({scale: fitScale});
+
+      zoomCanvas.width = sv.width;
+      zoomCanvas.height = sv.height;
+      zoomCanvas.style.width = sv.width + "px";
+      zoomCanvas.style.height = sv.height + "px";
+
+      page.render({canvasContext: zoomCanvas.getContext("2d"), viewport: sv}).promise.then(function(){
+        var cx = (clientX - wrapRect.left) / wrapRect.width;
+        var cy = (clientY - wrapRect.top) / wrapRect.height;
+        zoomPanX = -(sv.width * cx - wrapRect.width / 2);
+        zoomPanY = -(sv.height * cy - wrapRect.height / 2);
+        clampPan(wrapRect);
+        applyPan();
+        zoomLayer.classList.add("active");
+        bottomBar.style.display = "none";
+      });
+    });
+  }
+
+  function exitZoom(){
+    zoomed = false;
+    zoomLayer.classList.remove("active");
+    bottomBar.style.display = "";
+  }
+
+  function clampPan(wrapRect){
+    if(!wrapRect) wrapRect = bookWrap.getBoundingClientRect();
+    var maxX = 0, maxY = 0;
+    var minX = -(zoomCanvas.width - wrapRect.width);
+    var minY = -(zoomCanvas.height - wrapRect.height);
+    zoomPanX = Math.max(minX, Math.min(maxX, zoomPanX));
+    zoomPanY = Math.max(minY, Math.min(maxY, zoomPanY));
+  }
+
+  function applyPan(){
+    zoomCanvas.style.transform = "translate("+Math.round(zoomPanX)+"px,"+Math.round(zoomPanY)+"px)";
+  }
+
+  // drag to pan
+  var zDragStart = null;
+  zoomLayer.addEventListener("mousedown", function(e){
+    e.preventDefault();
+    zDragStart = {x:e.clientX - zoomPanX, y:e.clientY - zoomPanY};
+    zoomLayer.classList.add("dragging");
+  });
+  document.addEventListener("mousemove", function(e){
+    if(!zDragStart) return;
+    zoomPanX = e.clientX - zDragStart.x;
+    zoomPanY = e.clientY - zDragStart.y;
+    clampPan();
+    applyPan();
+  });
+  document.addEventListener("mouseup", function(){
+    zDragStart = null;
+    zoomLayer.classList.remove("dragging");
+  });
+
+  // touch drag for zoom pan
+  var zTouchStart = null;
+  zoomLayer.addEventListener("touchstart", function(e){
+    if(e.touches.length === 1){
+      zTouchStart = {x:e.touches[0].clientX - zoomPanX, y:e.touches[0].clientY - zoomPanY};
+    }
+  }, {passive:true});
+  zoomLayer.addEventListener("touchmove", function(e){
+    if(zTouchStart && e.touches.length === 1){
+      e.preventDefault();
+      zoomPanX = e.touches[0].clientX - zTouchStart.x;
+      zoomPanY = e.touches[0].clientY - zTouchStart.y;
+      clampPan();
+      applyPan();
+    }
+  }, {passive:false});
+  zoomLayer.addEventListener("touchend", function(){ zTouchStart = null; }, {passive:true});
+
+  // double-click to zoom in/out
+  var lastTap = 0;
+  spread.addEventListener("dblclick", function(e){
+    e.preventDefault();
+    if(flipping) return;
+    enterZoom(e.clientX, e.clientY);
+  });
+  zoomLayer.addEventListener("dblclick", function(e){
+    e.preventDefault();
+    exitZoom();
+  });
+
+  // mobile double-tap on spread
+  spread.addEventListener("touchend", function(e){
+    var now = Date.now();
+    if(now - lastTap < 320 && e.changedTouches.length === 1){
+      e.preventDefault();
+      if(!zoomed && !flipping){
+        enterZoom(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+      }
+    }
+    lastTap = now;
+  });
+  zoomLayer.addEventListener("touchend", function(e){
+    var now = Date.now();
+    if(now - lastTap < 320){
+      e.preventDefault();
+      exitZoom();
+    }
+    lastTap = now;
+  });
+
+  /* ── nav events ── */
+  nextBtn.addEventListener("click", function(e){
+    if(zoomed) return;
+    flipForward();
+  });
+  prevBtn.addEventListener("click", function(e){
+    if(zoomed) return;
+    flipBackward();
+  });
   retryBtn.addEventListener("click", loadPdf);
 
   document.addEventListener("keydown", function(e){
+    if(e.target.tagName === "INPUT") return;
+    if(e.key === "Escape" && zoomed){ exitZoom(); return; }
+    if(zoomed) return;
     if(e.key === "ArrowRight" || e.key === " ") flipForward();
     else if(e.key === "ArrowLeft") flipBackward();
   });
 
-  /* ── touch/swipe ── */
-  var touchStartX = 0;
-  var touchStartY = 0;
+  /* ── swipe ── */
+  var touchStartX = 0, touchStartY = 0;
   bookWrap.addEventListener("touchstart", function(e){
-    if(e.touches.length === 1){
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    }
+    if(zoomed || e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
   }, {passive:true});
-
   bookWrap.addEventListener("touchend", function(e){
-    if(e.changedTouches.length === 1){
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      var dy = e.changedTouches[0].clientY - touchStartY;
-      if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){
-        if(dx < 0) flipForward();
-        else flipBackward();
-      }
+    if(zoomed || e.changedTouches.length !== 1) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+    if(Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)*1.5){
+      if(dx < 0) flipForward(); else flipBackward();
     }
   }, {passive:true});
 
   /* ── fullscreen ── */
-  var fsIcon_enter = '<path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>';
-  var fsIcon_exit  = '<path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3m0 18v-3a2 2 0 012-2h3M3 16h3a2 2 0 012 2v3"/>';
-
-  function isFullscreen(){ return !!(document.fullscreenElement || document.webkitFullscreenElement); }
-
-  function toggleFullscreen(){
-    if(isFullscreen()){
-      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-    } else {
-      var el = document.documentElement;
-      (el.requestFullscreen || el.webkitRequestFullscreen).call(el);
-    }
+  var fsEnter = '<path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>';
+  var fsExit  = '<path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3m0 18v-3a2 2 0 012-2h3M3 16h3a2 2 0 012 2v3"/>';
+  function isFs(){ return !!(document.fullscreenElement||document.webkitFullscreenElement); }
+  function toggleFs(){
+    if(isFs()) (document.exitFullscreen||document.webkitExitFullscreen).call(document);
+    else{ var el=document.documentElement;(el.requestFullscreen||el.webkitRequestFullscreen).call(el); }
   }
-
-  function onFsChange(){
-    var svg = fsBtn.querySelector("svg");
-    svg.innerHTML = isFullscreen() ? fsIcon_exit : fsIcon_enter;
-  }
-
-  // hide button on iOS Safari (no Fullscreen API)
+  function onFsChange(){ fsBtn.querySelector("svg").innerHTML = isFs() ? fsExit : fsEnter; }
   if(!document.documentElement.requestFullscreen && !document.documentElement.webkitRequestFullscreen){
     fsBtn.style.display = "none";
   } else {
-    fsBtn.addEventListener("click", toggleFullscreen);
+    fsBtn.addEventListener("click", toggleFs);
     document.addEventListener("fullscreenchange", onFsChange);
     document.addEventListener("webkitfullscreenchange", onFsChange);
   }
@@ -422,20 +762,15 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   window.addEventListener("resize", function(){
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function(){
-      var wasSingle = isSingle;
+      var was = isSingle;
       detectMode();
-      if(wasSingle !== isSingle){
-        if(!isSingle && currentSpreadStart > 1 && currentSpreadStart % 2 === 0){
-          // already correct for spread mode
-        } else if(!isSingle && currentSpreadStart > 1 && currentSpreadStart % 2 !== 0){
-          currentSpreadStart = Math.max(1, currentSpreadStart - 1);
-        }
-      }
+      renderCache = {};
+      if(!isSingle && currentSpreadStart > 1 && currentSpreadStart % 2 !== 0)
+        currentSpreadStart = Math.max(1, currentSpreadStart - 1);
       showSpread();
     }, 200);
   });
 
-  /* ── go ── */
   boot();
 })();
 </script>

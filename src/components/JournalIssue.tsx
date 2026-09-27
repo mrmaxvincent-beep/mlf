@@ -5,9 +5,11 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { JournalCountdown } from "@/components/JournalCountdown";
 import type { Issue } from "@/data/journal";
 import { pageSpreads } from "@/data/journal";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 /** Issue cover spread + "kho tạp chí" picker + "trích trang" preview — all share the active-issue state. */
 export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaultIndex: number }) {
+  const { trackEvent } = useAnalytics();
   const [active, setActive] = useState(defaultIndex);
   const [fading, setFading] = useState(false);
   const issue = issues[active];
@@ -77,11 +79,12 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
               aria-disabled={!issue.published}
               target={issue.published ? "_blank" : undefined}
               rel={issue.published ? "noopener noreferrer" : undefined}
+              onClick={() => issue.published && trackEvent("journal_download", { issue: issue.num, link_url: issue.ebookHref })}
             >
               {issue.published ? "tải ebook" : "sắp ra mắt"}
             </a>
             {issue.flipbookHref && (
-              <a className="cta-btn" href={issue.flipbookHref} target="_blank" rel="noopener noreferrer">
+              <a className="cta-btn" href={issue.flipbookHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("journal_flipbook_open", { issue: issue.num })}>
                 xem flipbook
               </a>
             )}

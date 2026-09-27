@@ -40,7 +40,11 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
       </div>
 
       <div style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", marginBottom: "3.5rem" }}>
-        <ImagePlaceholder label="ảnh · mlf journal" aspectRatio="21/6" src="/assets/mlfjournal.webp" alt="mlf journal" style={{ width: "100%", height: "auto" }} />
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+          <ImagePlaceholder label="ảnh · mlf journal 1" aspectRatio="16/12" src="/assets/chuyenve01.webp" alt="mlf journal" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · mlf journal 2" aspectRatio="16/12" src="/assets/chuyenve02.webp" alt="mlf journal" style={{ width: "100%", height: "auto" }} />
+          <ImagePlaceholder label="ảnh · mlf journal 3" aspectRatio="16/12" src="/assets/chuyenve03.webp" alt="mlf journal" style={{ width: "100%", height: "auto" }} />
+        </div>
       </div>
 
       <div

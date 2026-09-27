@@ -319,28 +319,76 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
     return {maxW:perW, maxH:aH};
   }
 
+  var MAX_PIXELS = 9e6;
+  var CACHE_LIMIT = 14;
+
+  /* pixel canvas trên mỗi pixel CSS: màn hình retina × mức pinch-zoom hiện tại */
+  function qualityScale(){
+    var vv = window.visualViewport;
+    var q = (window.devicePixelRatio || 1) * (vv && vv.scale ? vv.scale : 1);
+    return Math.max(1, Math.round(q*4)/4);
+  }
+
   function renderPage(pageNum, maxW, maxH){
-    var key = pageNum+"_"+Math.round(maxW)+"x"+Math.round(maxH);
-    if(renderCache[key]) return Promise.resolve(renderCache[key]);
+    var q = qualityScale();
+    var key = pageNum+"_"+Math.round(maxW)+"x"+Math.round(maxH)+"_"+q;
+    if(renderCache[key]){
+      var hit = renderCache[key];
+      delete renderCache[key];
+      renderCache[key] = hit;
+      return Promise.resolve(hit);
+    }
     if(renderQueue[key]) return renderQueue[key];
 
     var p = pdf.getPage(pageNum).then(function(page){
       var vp = page.getViewport({scale:1});
-      var scale = Math.min(maxW/vp.width, maxH/vp.height, 3);
-      var sv = page.getViewport({scale:scale});
+      var fit = Math.min(maxW/vp.width, maxH/vp.height);
+      var cssW = vp.width*fit, cssH = vp.height*fit;
+      var rq = Math.min(q, Math.sqrt(MAX_PIXELS/(cssW*cssH)));
+      var sv = page.getViewport({scale:fit*rq});
       var canvas = document.createElement("canvas");
-      canvas.width = sv.width;
-      canvas.height = sv.height;
-      canvas.style.width  = Math.round(sv.width/scale*Math.min(scale,2))+"px";
-      canvas.style.height = Math.round(sv.height/scale*Math.min(scale,2))+"px";
+      canvas.width = Math.floor(sv.width);
+      canvas.height = Math.floor(sv.height);
+      canvas.style.width  = Math.round(cssW)+"px";
+      canvas.style.height = Math.round(cssH)+"px";
       return page.render({canvasContext:canvas.getContext("2d"),viewport:sv}).promise.then(function(){
         renderCache[key] = canvas;
         delete renderQueue[key];
+        var keys = Object.keys(renderCache);
+        while(keys.length > CACHE_LIMIT) delete renderCache[keys.shift()];
         return canvas;
       });
     });
     renderQueue[key] = p;
     return p;
+  }
+
+  /* pinch-zoom (điện thoại): vẽ lại trang hiện tại nét hơn tại chỗ, không nháy */
+  var sharpenTimer;
+  function sharpenSpread(){
+    if(!pdf || flipping || zoomed) return;
+    var start = currentSpreadStart;
+    var dims = getPageDims();
+    var pages = pagesForSpread(start);
+    Promise.all(pages.map(function(pn){ return renderPage(pn, dims.maxW, dims.maxH); })).then(function(canvases){
+      if(flipping || zoomed || start !== currentSpreadStart) return;
+      var slots = spread.querySelectorAll(".page-slot");
+      if(slots.length !== canvases.length) return;
+      canvases.forEach(function(cv, i){
+        var old = slots[i].querySelector("canvas");
+        var clone = cv.cloneNode(false);
+        clone.getContext("2d").drawImage(cv, 0, 0);
+        clone.style.width = cv.style.width;
+        clone.style.height = cv.style.height;
+        slots[i].replaceChild(clone, old);
+      });
+    });
+  }
+  if(window.visualViewport){
+    window.visualViewport.addEventListener("resize", function(){
+      clearTimeout(sharpenTimer);
+      sharpenTimer = setTimeout(sharpenSpread, 250);
+    });
   }
 
   /* ── pages to show ── */
@@ -571,6 +619,7 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   var zoomScale = 1;
   var zoomPanX = 0, zoomPanY = 0;
   var zoomPageNum = 0;
+  var zoomCssW = 0, zoomCssH = 0;
 
   function enterZoom(clientX, clientY){
     if(zoomed || !pdf) return;
@@ -589,18 +638,21 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
     pdf.getPage(zoomPageNum).then(function(page){
       var vp = page.getViewport({scale:1});
       var fitScale = Math.min(wrapRect.width / vp.width, wrapRect.height / vp.height) * zoomScale;
-      var sv = page.getViewport({scale: fitScale});
+      zoomCssW = vp.width * fitScale;
+      zoomCssH = vp.height * fitScale;
+      var rq = Math.min(Math.max(1, window.devicePixelRatio || 1), Math.sqrt(16e6 / (zoomCssW * zoomCssH)));
+      var sv = page.getViewport({scale: fitScale * rq});
 
-      zoomCanvas.width = sv.width;
-      zoomCanvas.height = sv.height;
-      zoomCanvas.style.width = sv.width + "px";
-      zoomCanvas.style.height = sv.height + "px";
+      zoomCanvas.width = Math.floor(sv.width);
+      zoomCanvas.height = Math.floor(sv.height);
+      zoomCanvas.style.width = zoomCssW + "px";
+      zoomCanvas.style.height = zoomCssH + "px";
 
       page.render({canvasContext: zoomCanvas.getContext("2d"), viewport: sv}).promise.then(function(){
         var cx = (clientX - wrapRect.left) / wrapRect.width;
         var cy = (clientY - wrapRect.top) / wrapRect.height;
-        zoomPanX = -(sv.width * cx - wrapRect.width / 2);
-        zoomPanY = -(sv.height * cy - wrapRect.height / 2);
+        zoomPanX = -(zoomCssW * cx - wrapRect.width / 2);
+        zoomPanY = -(zoomCssH * cy - wrapRect.height / 2);
         clampPan(wrapRect);
         applyPan();
         zoomLayer.classList.add("active");
@@ -618,8 +670,8 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   function clampPan(wrapRect){
     if(!wrapRect) wrapRect = bookWrap.getBoundingClientRect();
     var maxX = 0, maxY = 0;
-    var minX = -(zoomCanvas.width - wrapRect.width);
-    var minY = -(zoomCanvas.height - wrapRect.height);
+    var minX = -(zoomCssW - wrapRect.width);
+    var minY = -(zoomCssH - wrapRect.height);
     zoomPanX = Math.max(minX, Math.min(maxX, zoomPanX));
     zoomPanY = Math.max(minY, Math.min(maxY, zoomPanY));
   }

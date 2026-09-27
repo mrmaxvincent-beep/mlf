@@ -103,12 +103,12 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
 }
 .flip-overlay.flipping::after,.flip-overlay.flipping-back::after{opacity:1}
 
-/* mobile (1 trang): lật nguyên trang quanh gáy bên trái */
-.spread.single .flip-overlay{left:0;width:100%;transform-origin:left center}
-.spread.single .flip-overlay.from-right{transform:rotateY(0deg)}
-.spread.single .flip-overlay.from-right.flipping{transform:rotateY(-180deg)}
-.spread.single .flip-overlay.from-left{transform:rotateY(-180deg)}
-.spread.single .flip-overlay.from-left.flipping-back{transform:rotateY(0deg)}
+/* trang đơn (mobile, hoặc bìa/trang lẻ cuối trên desktop): lật nguyên trang quanh gáy bên trái */
+.flip-overlay.solo{left:0;width:100%;transform-origin:left center}
+.flip-overlay.solo.from-right{transform:rotateY(0deg)}
+.flip-overlay.solo.from-right.flipping{transform:rotateY(-180deg)}
+.flip-overlay.solo.from-left{transform:rotateY(-180deg)}
+.flip-overlay.solo.from-left.flipping-back{transform:rotateY(0deg)}
 
 /* spine shadow between pages */
 .spread::after{
@@ -499,11 +499,12 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
     Promise.all(nextPages.map(function(p){ return renderPage(p, dims.maxW, dims.maxH); }))
       .then(function(nextCanvases){
         var slots = spread.querySelectorAll(".page-slot");
+        var solo = slots.length === 1;
         var flipSlot = isSingle ? slots[0] : (slots[1] || slots[0]);
         var flipCanvas = flipSlot.querySelector("canvas");
 
         var overlay = document.createElement("div");
-        overlay.className = "flip-overlay from-right";
+        overlay.className = "flip-overlay from-right" + (solo ? " solo" : "");
         overlay.style.height = flipSlot.style.height;
         var oc = flipCanvas.cloneNode(false);
         oc.getContext("2d").drawImage(flipCanvas, 0, 0);
@@ -543,12 +544,13 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
 
     var prv = prevSpreadStart();
     var slots = spread.querySelectorAll(".page-slot");
+    var solo = slots.length === 1;
     var flipSlot = slots[0];
     var flipCanvas = flipSlot.querySelector("canvas");
 
     function run(overlayCanvas){
       var overlay = document.createElement("div");
-      overlay.className = "flip-overlay from-left";
+      overlay.className = "flip-overlay from-left" + (solo ? " solo" : "");
       overlay.style.height = flipSlot.style.height;
       var oc = overlayCanvas.cloneNode(false);
       oc.getContext("2d").drawImage(overlayCanvas, 0, 0);

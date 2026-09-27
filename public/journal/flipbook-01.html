@@ -74,8 +74,9 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   left:50%;transform-origin:left center;transform:rotateY(0deg);
 }
 .flip-overlay.from-left{
-  right:0;left:auto;transform-origin:right center;transform:rotateY(0deg);
+  left:0;transform-origin:right center;transform:rotateY(0deg);
 }
+.flip-overlay.from-left.flipping-back{transform:rotateY(180deg)}
 .flip-overlay canvas{width:100%;height:100%;display:block}
 .flip-overlay.flipping{transform:rotateY(-180deg)}
 .flip-overlay.flipping-back{transform:rotateY(180deg)}
@@ -90,8 +91,8 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
   background:linear-gradient(to right,rgba(0,0,0,.12),transparent);
 }
 .flip-overlay.from-left::after{
-  left:-60px;
-  background:linear-gradient(to left,rgba(0,0,0,.12),transparent);
+  right:-60px;
+  background:linear-gradient(to right,rgba(0,0,0,.12),transparent);
 }
 .flip-overlay.flipping::after,.flip-overlay.flipping-back::after{opacity:1}
 
@@ -470,43 +471,32 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
     flipping = true;
 
     var prv = prevSpreadStart();
-    var dims = getPageDims();
-    var prevPages = pagesForSpread(prv);
+    var slots = spread.querySelectorAll(".page-slot");
+    var flipSlot = slots[0];
+    var flipCanvas = flipSlot.querySelector("canvas");
 
-    Promise.all(prevPages.map(function(p){ return renderPage(p, dims.maxW, dims.maxH); }))
-      .then(function(prevCanvases){
-        var slots = spread.querySelectorAll(".page-slot");
-        var flipSlot = slots[0];
-        var flipCanvas = flipSlot.querySelector("canvas");
+    var overlay = document.createElement("div");
+    overlay.className = "flip-overlay from-left";
+    overlay.style.height = flipSlot.style.height;
+    var oc = flipCanvas.cloneNode(false);
+    oc.getContext("2d").drawImage(flipCanvas, 0, 0);
+    oc.style.width = "100%"; oc.style.height = "100%";
+    overlay.appendChild(oc);
+    spread.appendChild(overlay);
 
-        var overlay = document.createElement("div");
-        overlay.className = "flip-overlay from-left";
-        overlay.style.height = flipSlot.style.height;
+    void overlay.offsetWidth;
+    overlay.classList.add("flipping-back");
 
-        var showCanvas = prevCanvases[isSingle ? 0 : (prevCanvases.length-1)];
-        var oc = showCanvas.cloneNode(false);
-        oc.getContext("2d").drawImage(showCanvas, 0, 0);
-        oc.style.width = "100%"; oc.style.height = "100%";
-        overlay.appendChild(oc);
-        spread.appendChild(overlay);
-
-        overlay.style.transform = "rotateY(-180deg)";
-        void overlay.offsetWidth;
-        overlay.style.transform = "";
-        overlay.classList.remove("flipping-back");
-
-        function onDone(){
-          overlay.removeEventListener("transitionend", onDone);
-          clearTimeout(settleTimer);
-          currentSpreadStart = prv;
-          spread.removeChild(overlay);
-          showSpread();
-          flipping = false;
-        }
-        overlay.addEventListener("transitionend", onDone);
-        settleAfter(onDone);
-      })
-      .catch(function(){ flipping = false; });
+    function onDone(){
+      overlay.removeEventListener("transitionend", onDone);
+      clearTimeout(settleTimer);
+      currentSpreadStart = prv;
+      spread.removeChild(overlay);
+      showSpread();
+      flipping = false;
+    }
+    overlay.addEventListener("transitionend", onDone);
+    settleAfter(onDone);
   }
 
   function goToPage(pageNum){

@@ -10,6 +10,13 @@
 <meta property="og:description" content="đọc mlf journal số 01 — muôn nẻo về nhà. một ghi chép để ở yên.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://moclittlefarm.com/journal/flipbook-01.html">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-32RLFLEE5Z"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-32RLFLEE5Z');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -445,6 +452,7 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
       ? first+" / "+totalPages
       : first+"–"+last+" / "+totalPages;
     pageInd.textContent = label;
+    try{ gtag("event", "flipbook_page", {issue:"01", page:first}); }catch(e){}
 
     var pct = (last / totalPages * 100).toFixed(1);
     progressFill.style.width = pct+"%";

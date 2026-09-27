@@ -96,6 +96,13 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
 }
 .flip-overlay.flipping::after,.flip-overlay.flipping-back::after{opacity:1}
 
+/* mobile (1 trang): lật nguyên trang quanh gáy bên trái */
+.spread.single .flip-overlay{left:0;width:100%;transform-origin:left center}
+.spread.single .flip-overlay.from-right{transform:rotateY(0deg)}
+.spread.single .flip-overlay.from-right.flipping{transform:rotateY(-180deg)}
+.spread.single .flip-overlay.from-left{transform:rotateY(-180deg)}
+.spread.single .flip-overlay.from-left.flipping-back{transform:rotateY(0deg)}
+
 /* spine shadow between pages */
 .spread::after{
   content:'';position:absolute;top:0;bottom:0;left:50%;
@@ -496,6 +503,14 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
         overlay.appendChild(oc);
         spread.appendChild(overlay);
 
+        if(isSingle && nextCanvases[0]){
+          var under = nextCanvases[0].cloneNode(false);
+          under.getContext("2d").drawImage(nextCanvases[0], 0, 0);
+          under.style.width = flipCanvas.style.width;
+          under.style.height = flipCanvas.style.height;
+          flipSlot.replaceChild(under, flipCanvas);
+        }
+
         void overlay.offsetWidth;
         overlay.classList.add("flipping");
 
@@ -523,28 +538,37 @@ body{display:flex;flex-direction:column;font-family:var(--serif)}
     var flipSlot = slots[0];
     var flipCanvas = flipSlot.querySelector("canvas");
 
-    var overlay = document.createElement("div");
-    overlay.className = "flip-overlay from-left";
-    overlay.style.height = flipSlot.style.height;
-    var oc = flipCanvas.cloneNode(false);
-    oc.getContext("2d").drawImage(flipCanvas, 0, 0);
-    oc.style.width = "100%"; oc.style.height = "100%";
-    overlay.appendChild(oc);
-    spread.appendChild(overlay);
+    function run(overlayCanvas){
+      var overlay = document.createElement("div");
+      overlay.className = "flip-overlay from-left";
+      overlay.style.height = flipSlot.style.height;
+      var oc = overlayCanvas.cloneNode(false);
+      oc.getContext("2d").drawImage(overlayCanvas, 0, 0);
+      oc.style.width = "100%"; oc.style.height = "100%";
+      overlay.appendChild(oc);
+      spread.appendChild(overlay);
 
-    void overlay.offsetWidth;
-    overlay.classList.add("flipping-back");
+      void overlay.offsetWidth;
+      overlay.classList.add("flipping-back");
 
-    function onDone(){
-      overlay.removeEventListener("transitionend", onDone);
-      clearTimeout(settleTimer);
-      currentSpreadStart = prv;
-      spread.removeChild(overlay);
-      showSpread();
-      flipping = false;
+      function onDone(){
+        overlay.removeEventListener("transitionend", onDone);
+        clearTimeout(settleTimer);
+        currentSpreadStart = prv;
+        spread.removeChild(overlay);
+        showSpread();
+        flipping = false;
+      }
+      overlay.addEventListener("transitionend", onDone);
+      settleAfter(onDone);
     }
-    overlay.addEventListener("transitionend", onDone);
-    settleAfter(onDone);
+
+    if(isSingle){
+      var dims = getPageDims();
+      renderPage(prv, dims.maxW, dims.maxH).then(run).catch(function(){ flipping = false; });
+    } else {
+      run(flipCanvas);
+    }
   }
 
   function goToPage(pageNum){

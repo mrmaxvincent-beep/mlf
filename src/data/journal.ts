@@ -7,6 +7,7 @@ export type Issue = {
   coverPlaceholder: string;
   coverImageSrc?: string;
   ebookHref: string;
+  flipbookHref?: string;
   published: boolean;
 };
 
@@ -20,6 +21,7 @@ export const issues: Issue[] = [
     coverPlaceholder: "ảnh bìa · quyển 01 — muôn nẻo về nhà",
     coverImageSrc: "/assets/mlf_journal_2026.webp",
     ebookHref: "https://drive.google.com/drive/folders/1ylKJak4PLy9dOmXDKED8WWnhsdPUEGeX?usp=sharing",
+    flipbookHref: "/journal/flipbook-01.html",
     published: true,
   },
   {

@@ -76,6 +76,11 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
             >
               {issue.published ? "tải ebook" : "sắp ra mắt"}
             </a>
+            {issue.flipbookHref && (
+              <a className="cta-btn" href={issue.flipbookHref} target="_blank" rel="noopener noreferrer">
+                xem flipbook
+              </a>
+            )}
           </div>
         </div>
       </div>

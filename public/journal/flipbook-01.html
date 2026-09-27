@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlf journal 01 · muôn nẻo về nhà</title>
+<meta name="description" content="đọc mlf journal số 01 — muôn nẻo về nhà. một ghi chép để ở yên.">
+<link rel="canonical" href="https://moclittlefarm.com/journal/flipbook-01.html">
+<meta property="og:title" content="mlf journal 01 · muôn nẻo về nhà">
+<meta property="og:description" content="đọc mlf journal số 01 — muôn nẻo về nhà. một ghi chép để ở yên.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moclittlefarm.com/journal/flipbook-01.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1714;--stone:#8a8377;--mist:#f5f2ed;--paper:#faf8f4;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html,body{height:100%;overflow:hidden;background:var(--paper);color:var(--ink)}
+body{display:flex;flex-direction:column;font-family:var(--serif)}
+
+/* crumb */
+.crumb{
+  position:absolute;top:0;left:0;right:0;z-index:20;
+  padding:1rem 1.25rem;
+  display:flex;align-items:center;gap:0.5rem;
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;
+  color:var(--stone);
+  pointer-events:auto;
+}
+.crumb a{color:var(--stone);text-decoration:none;transition:color .2s}
+.crumb a:hover{color:var(--ink)}
+.crumb .sep{opacity:.4}
+
+/* fullscreen button */
+.fs-btn{
+  position:absolute;top:0.75rem;right:1rem;z-index:20;
+  background:none;border:1px solid color-mix(in srgb,var(--stone) 40%,transparent);
+  border-radius:3px;padding:0.4rem;cursor:pointer;
+  color:var(--stone);transition:color .2s,border-color .2s;
+  line-height:0;
+}
+.fs-btn:hover{color:var(--ink);border-color:var(--stone)}
+.fs-btn svg{width:18px;height:18px;display:block}
+
+/* book area */
+.book-wrap{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  padding:3rem 0.5rem 1.5rem;
+}
+
+/* spread container — holds left + right pages */
+.spread{
+  position:relative;
+  display:flex;
+  max-height:100%;
+}
+.spread.single{justify-content:center}
+
+.page-slot{
+  position:relative;
+  overflow:hidden;
+  background:var(--mist);
+}
+.page-slot canvas{display:block;width:100%;height:100%}
+
+/* flip overlay */
+.flip-overlay{
+  position:absolute;top:0;width:50%;height:100%;
+  transform-origin:left center;
+  backface-visibility:hidden;
+  transition:transform 0.45s cubic-bezier(.4,.0,.2,1);
+  z-index:10;
+  pointer-events:none;
+}
+.flip-overlay.from-right{left:50%;transform-origin:left center;transform:rotateY(0deg)}
+.flip-overlay.from-left{left:0;transform-origin:right center;transform:rotateY(0deg)}
+.flip-overlay canvas{width:100%;height:100%;display:block}
+.flip-overlay.flipping-forward{transform:rotateY(-180deg)}
+.flip-overlay.flipping-backward{transform:rotateY(180deg)}
+
+/* page shadow during flip */
+.flip-shadow{
+  position:absolute;top:0;height:100%;width:40px;
+  pointer-events:none;z-index:11;opacity:0;
+  transition:opacity 0.45s;
+}
+.flip-shadow.left{right:100%;background:linear-gradient(to left,rgba(0,0,0,.08),transparent)}
+.flip-shadow.right{left:100%;background:linear-gradient(to right,rgba(0,0,0,.08),transparent)}
+
+/* nav buttons */
+.nav-zone{
+  position:absolute;top:0;width:25%;height:100%;z-index:5;
+  cursor:pointer;background:transparent;border:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.nav-zone.prev{left:0}
+.nav-zone.next{right:0}
+
+/* page indicator */
+.page-ind{
+  position:absolute;bottom:0.6rem;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;
+  color:var(--stone);opacity:0.7;z-index:20;
+  pointer-events:none;white-space:nowrap;
+}
+
+/* loading / error */
+.overlay-msg{
+  position:absolute;inset:0;z-index:50;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;
+  background:var(--paper);
+  font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--ink);
+}
+.overlay-msg button{
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;
+  background:none;border:1px solid var(--stone);color:var(--ink);
+  padding:0.5rem 1.5rem;border-radius:2px;cursor:pointer;
+  transition:background .2s;
+}
+.overlay-msg button:hover{background:var(--mist)}
+
+.hidden{display:none!important}
+
+@media(max-width:600px){
+  .crumb{padding:0.75rem 1rem;font-size:0.58rem}
+  .book-wrap{padding:2.5rem 0 1.2rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="crumb">
+  <a href="/journal/">mlf journal</a>
+  <span class="sep">/</span>
+  <span>số 01</span>
+</nav>
+
+<button class="fs-btn" id="fsBtn" title="toàn màn hình" aria-label="toàn màn hình">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+  </svg>
+</button>
+
+<div class="book-wrap" id="bookWrap">
+  <div class="overlay-msg" id="loadingMsg">đang mở sách…</div>
+  <div class="overlay-msg hidden" id="errorMsg">
+    <span>không tải được sách</span>
+    <button id="retryBtn">thử lại</button>
+  </div>
+
+  <div class="spread hidden" id="spread"></div>
+
+  <button class="nav-zone prev" id="prevBtn" aria-label="trang trước"></button>
+  <button class="nav-zone next" id="nextBtn" aria-label="trang sau"></button>
+  <div class="page-ind" id="pageInd"></div>
+</div>
+
+<script src="/vendor/pdfjs/pdf.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  var PDF_URL = "/journal/mlf-journal-01.pdf";
+  var PDFJS_VERSION = "3.11.174";
+
+  /* ── state ── */
+  var pdf = null;
+  var totalPages = 0;
+  var currentSpreadStart = 1;   // first page number shown (1-based)
+  var isSingle = false;         // single-page mode (mobile)
+  var flipping = false;
+  var settleTimer = null;
+  var pageCanvasCache = {};     // pageNum → canvas element
+
+  /* ── DOM ── */
+  var spread    = document.getElementById("spread");
+  var loadingEl = document.getElementById("loadingMsg");
+  var errorEl   = document.getElementById("errorMsg");
+  var retryBtn  = document.getElementById("retryBtn");
+  var prevBtn   = document.getElementById("prevBtn");
+  var nextBtn   = document.getElementById("nextBtn");
+  var pageInd   = document.getElementById("pageInd");
+  var fsBtn     = document.getElementById("fsBtn");
+  var bookWrap  = document.getElementById("bookWrap");
+
+  /* ── PDF.js setup ── */
+  function initPdfJs(){
+    if(typeof pdfjsLib==="undefined") throw new Error("pdfjsLib missing");
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "/vendor/pdfjs/pdf.worker.min.js";
+  }
+
+  /* ── boot ── */
+  function boot(){
+    try{ initPdfJs(); } catch(e){ showError(); return; }
+    loadPdf();
+  }
+
+  function loadPdf(){
+    showLoading();
+    var loadingTask = pdfjsLib.getDocument({url: PDF_URL, disableAutoFetch: false, disableStream: false});
+    loadingTask.promise.then(function(doc){
+      pdf = doc;
+      totalPages = doc.numPages;
+      detectMode();
+      currentSpreadStart = 1;
+      showSpread();
+    }).catch(function(){ showError(); });
+  }
+
+  function showLoading(){ loadingEl.classList.remove("hidden"); errorEl.classList.add("hidden"); spread.classList.add("hidden"); }
+  function showError(){ errorEl.classList.remove("hidden"); loadingEl.classList.add("hidden"); spread.classList.add("hidden"); }
+
+  /* ── detect single vs spread ── */
+  function detectMode(){
+    isSingle = window.innerWidth < 700;
+    spread.classList.toggle("single", isSingle);
+  }
+
+  /* ── render a page onto a canvas ── */
+  function renderPage(pageNum, maxW, maxH){
+    return pdf.getPage(pageNum).then(function(page){
+      var vp = page.getViewport({scale:1});
+      var scale = Math.min(maxW / vp.width, maxH / vp.height, 3);
+      var sv = page.getViewport({scale: scale});
+      var canvas = document.createElement("canvas");
+      canvas.width  = sv.width;
+      canvas.height = sv.height;
+      canvas.style.width  = sv.width / scale * Math.min(scale, 2) + "px";
+      canvas.style.height = sv.height / scale * Math.min(scale, 2) + "px";
+      return page.render({canvasContext: canvas.getContext("2d"), viewport: sv}).promise.then(function(){
+        return canvas;
+      });
+    });
+  }
+
+  /* ── show current spread ── */
+  function showSpread(){
+    spread.innerHTML = "";
+    spread.classList.remove("hidden");
+    loadingEl.classList.add("hidden");
+    errorEl.classList.add("hidden");
+
+    var wrapRect = bookWrap.getBoundingClientRect();
+    var availW = wrapRect.width - 16;
+    var availH = wrapRect.height - 60;
+
+    var pagesToShow = [];
+    if(isSingle){
+      pagesToShow = [currentSpreadStart];
+    } else {
+      if(currentSpreadStart === 1){
+        pagesToShow = [1];
+      } else {
+        pagesToShow = [currentSpreadStart, currentSpreadStart+1];
+        pagesToShow = pagesToShow.filter(function(p){ return p <= totalPages; });
+      }
+    }
+
+    var perPageW = isSingle ? availW : (pagesToShow.length === 1 ? availW * 0.5 : availW * 0.5);
+
+    var promises = pagesToShow.map(function(pn){
+      return renderPage(pn, perPageW, availH);
+    });
+
+    Promise.all(promises).then(function(canvases){
+      spread.innerHTML = "";
+      canvases.forEach(function(cv, i){
+        var slot = document.createElement("div");
+        slot.className = "page-slot";
+        slot.style.width  = cv.style.width;
+        slot.style.height = cv.style.height;
+        slot.appendChild(cv);
+        spread.appendChild(slot);
+      });
+      updatePageInd(pagesToShow);
+    });
+  }
+
+  function updatePageInd(pages){
+    if(pages.length === 1){
+      pageInd.textContent = pages[0] + " / " + totalPages;
+    } else {
+      pageInd.textContent = pages[0] + "–" + pages[pages.length-1] + " / " + totalPages;
+    }
+  }
+
+  /* ── navigation ── */
+  function nextSpreadStart(){
+    if(isSingle) return currentSpreadStart + 1;
+    if(currentSpreadStart === 1) return 2;
+    return currentSpreadStart + 2;
+  }
+
+  function prevSpreadStart(){
+    if(isSingle) return currentSpreadStart - 1;
+    if(currentSpreadStart <= 2) return 1;
+    return currentSpreadStart - 2;
+  }
+
+  function canGoForward(){ return nextSpreadStart() <= totalPages; }
+  function canGoBackward(){ return prevSpreadStart() >= 1 && currentSpreadStart > 1; }
+
+  /* ── flip animation ── */
+  function flipForward(){
+    if(flipping || !canGoForward()) return;
+    flipping = true;
+
+    var nextStart = nextSpreadStart();
+    var wrapRect = bookWrap.getBoundingClientRect();
+    var availW = wrapRect.width - 16;
+    var availH = wrapRect.height - 60;
+    var perPageW = isSingle ? availW : availW * 0.5;
+
+    var targetPage = isSingle ? nextStart : nextStart;
+
+    renderPage(targetPage, perPageW, availH).then(function(newCanvas){
+      currentSpreadStart = nextStart;
+      showSpread();
+      settleAfter(function(){ flipping = false; });
+    }).catch(function(){
+      flipping = false;
+    });
+  }
+
+  function flipBackward(){
+    if(flipping || !canGoBackward()) return;
+    flipping = true;
+
+    var prevStart = prevSpreadStart();
+    currentSpreadStart = prevStart;
+    showSpread();
+    settleAfter(function(){ flipping = false; });
+  }
+
+  /* ── settleAfter: timeout safety net for bfcache / interrupted transitions ── */
+  function settleAfter(cb){
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(function(){
+      if(cb) cb();
+    }, 600);
+  }
+
+  function forceSettle(){
+    clearTimeout(settleTimer);
+    flipping = false;
+    showSpread();
+  }
+
+  /* ── bfcache recovery ── */
+  window.addEventListener("pageshow", function(e){
+    if(e.persisted) forceSettle();
+  });
+
+  /* ── events ── */
+  nextBtn.addEventListener("click", flipForward);
+  prevBtn.addEventListener("click", flipBackward);
+  retryBtn.addEventListener("click", loadPdf);
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "ArrowRight" || e.key === " ") flipForward();
+    else if(e.key === "ArrowLeft") flipBackward();
+  });
+
+  /* ── touch/swipe ── */
+  var touchStartX = 0;
+  var touchStartY = 0;
+  bookWrap.addEventListener("touchstart", function(e){
+    if(e.touches.length === 1){
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+  }, {passive:true});
+
+  bookWrap.addEventListener("touchend", function(e){
+    if(e.changedTouches.length === 1){
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      var dy = e.changedTouches[0].clientY - touchStartY;
+      if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){
+        if(dx < 0) flipForward();
+        else flipBackward();
+      }
+    }
+  }, {passive:true});
+
+  /* ── fullscreen ── */
+  var fsIcon_enter = '<path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>';
+  var fsIcon_exit  = '<path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3m0 18v-3a2 2 0 012-2h3M3 16h3a2 2 0 012 2v3"/>';
+
+  function isFullscreen(){ return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+
+  function toggleFullscreen(){
+    if(isFullscreen()){
+      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    } else {
+      var el = document.documentElement;
+      (el.requestFullscreen || el.webkitRequestFullscreen).call(el);
+    }
+  }
+
+  function onFsChange(){
+    var svg = fsBtn.querySelector("svg");
+    svg.innerHTML = isFullscreen() ? fsIcon_exit : fsIcon_enter;
+  }
+
+  // hide button on iOS Safari (no Fullscreen API)
+  if(!document.documentElement.requestFullscreen && !document.documentElement.webkitRequestFullscreen){
+    fsBtn.style.display = "none";
+  } else {
+    fsBtn.addEventListener("click", toggleFullscreen);
+    document.addEventListener("fullscreenchange", onFsChange);
+    document.addEventListener("webkitfullscreenchange", onFsChange);
+  }
+
+  /* ── resize ── */
+  var resizeTimer;
+  window.addEventListener("resize", function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function(){
+      var wasSingle = isSingle;
+      detectMode();
+      if(wasSingle !== isSingle){
+        if(!isSingle && currentSpreadStart > 1 && currentSpreadStart % 2 === 0){
+          // already correct for spread mode
+        } else if(!isSingle && currentSpreadStart > 1 && currentSpreadStart % 2 !== 0){
+          currentSpreadStart = Math.max(1, currentSpreadStart - 1);
+        }
+      }
+      showSpread();
+    }, 200);
+  });
+
+  /* ── go ── */
+  boot();
+})();
+</script>
+</body>
+</html>

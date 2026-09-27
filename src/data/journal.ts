@@ -38,7 +38,7 @@ export const issues: Issue[] = [
 ];
 
 /** Source defaults to the newest (unpublished) issue on load. */
-export const defaultIssueIndex = 1;
+export const defaultIssueIndex = 0;
 
 export const columns = [
   { num: "01", name: "thong dong", tagline: "à, đời sống có thể sống như thế này." },

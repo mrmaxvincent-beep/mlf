@@ -258,6 +258,23 @@ export const entries: Entry[] = [
   },
   {
     no: 20,
+    date: "20.05.2025",
+    name: "M.",
+    role: `retreat "một trời vô ưu" · khách duy nhất của chuyến`,
+    blocks: [
+      p("Hôm nay là một ngày đẹp (con số ý). Hôm nay cũng là một ngày nắng đẹp."),
+      p("Khi lên đây thì mình rất mong những người mình quan tâm là bố, T. & cô D. có thể ở đây và nhận được những gì mình nhận được. Rồi chợt nghĩ có thể họ sẽ không thích. Ở đây mình cảm thấy an toàn. Phòng ngủ chỉ đúng 1 giường và làm đúng chức năng của nó."),
+      p("Ở đây mình thấy mình được nuông chiều, được ưu ái, được ưu tiên, được yêu thương theo cách mà mình muốn."),
+      p("Chuyến đi này của mình may mắn lắm. Mình trở thành trung tâm của vũ trụ vì chỉ có 1 người khách là mình."),
+      p("Lần sau liệu mình có được may mắn này nữa hay không."),
+      p("Khi ở đây mình nhìn được đôi chút về mình. Mình hiểu được là mình vẫn đang vật lộn để sống tốt hơn chứ không phải là tồn tại. Ở đây mình được an yên, thoải mái."),
+      p("Về Sài Gòn, chắc mình có thể sẽ làm được đôi điều cho bản thân, đơn giản như là cho đi những đồ dùng mình đã tích trữ bấy lâu nay là sách, là những món quà nhận rồi để đó, có thể mình sẽ mua cho mình một bộ đồ xông phòng hoặc là có thể mình sẽ được ai đó tặng món quà này. Mình tin những điều mình muốn thì mình sẽ có được, chỉ cần mình kiên trì với nó. Rồi mình cũng mong được trải nghiệm, được ở Mộc vào một thời gian khác để học cách Mộc tìm cho mình niềm an yên vào những lúc khác nhau."),
+      p("— M."),
+      p("P/S: Cám ơn Mộc đã cho em thấy sự tích cực bên trong mình."),
+    ],
+  },
+  {
+    no: 21,
     date: "17.06.2025",
     name: "a. T",
     role: "28 tuổi · sống tại Sài Gòn",
@@ -268,7 +285,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 21,
+    no: 22,
     date: "8.2025",
     name: "c. K",
     role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
@@ -280,7 +297,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 22,
+    no: 23,
     date: "thu 2025",
     name: "c. K",
     role: `32 tuổi · Sài Gòn · retreat "xuyến chi trên đồi gió"`,
@@ -293,7 +310,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 23,
+    no: 24,
     date: "9/2025",
     name: "vợ chồng C & K",
     role: "Đà Nẵng · một ngày mưa tháng 9",
@@ -306,7 +323,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 24,
+    no: 25,
     date: "17.11.2025",
     name: "N.H.Y",
     role: "Măng Đen",
@@ -317,7 +334,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 25,
+    no: 26,
     date: "10–13.01.2026",
     name: "c. A",
     role: "TP.HCM · nhật ký 4 ngày ở Măng Đen",
@@ -337,7 +354,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 26,
+    no: 27,
     date: "13.01.2026",
     name: "c. Ng",
     role: "TP.HCM · retreat 81",
@@ -348,7 +365,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 27,
+    no: 28,
     date: "TP.HCM",
     name: "Q.N",
     role: "vị khách 3 lần tới mlf · lược trích nhật ký",
@@ -362,7 +379,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 28,
+    no: 29,
     date: "26.02.2026",
     name: "A.",
     role: "retreat 82 · cùng mẹ",
@@ -375,7 +392,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 29,
+    no: 30,
     date: "17.03.2026",
     name: "L.",
     role: "Bắc Ninh · retreat hàm-dưỡng 77 · xuân khẽ dưới tán rừng",
@@ -390,7 +407,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 30,
+    no: 31,
     date: "7/2026",
     name: "C.",
     role: "TP.HCM · hai tuần work from mộc",
@@ -430,7 +447,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 32,
+    no: 33,
     date: "08.09.2026",
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
@@ -444,7 +461,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 31,
+    no: 32,
     date: "08.2026",
     name: "ba người bạn",
     role: "nhật ký chung · hai chuyến đi",

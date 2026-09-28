@@ -50,7 +50,11 @@ export const entries: Entry[] = [
       p(`Măng Đen, tháng 9/2023. Trái tim mình có những ngóc ngách, cứ ngỡ như chưa từng tồn tại cho đến "Nắng ấm phơi chăn" khơi mở, thì ngóc ngách ấy mới trở nên hiện hữu.`),
       p("Em bước vào chuyến đi với tâm thế giản đơn, gặp những người em yêu quý, và được ăn ngon. Mỗi ngày trôi qua đều làm em muốn khóc. Em thấy mọi thứ sao mà thân thuộc ghê. Cỏ cây, sự ân cần, mùi bánh thơm, tiếng muỗng đũa trong bếp, tiếng côn trùng rì rào, cái ôm của cà chua, sự tỉ mẩn của anh Vũ, anh Tâm và Ân nữa."),
       p("Những ngày qua cứ như một hành trình em bóc tách bản thân, như một củ hành vậy. Kiên nhẫn từng lớp một, để thấy cái phần đẹp đẽ bên trong, để thấy khi mình được chậm lại, được hít sâu, mình vẫn là một tâm hồn đẹp đẽ và tràn đầy tình thương."),
-      p("Cảm ơn nhà mộc vì tất cả những phần đẹp đẽ trong hành trình retreat tháng chín đã mang đến cho em. Mong rằng em lại sớm có cơ hội thăm anh Tâm, em Ân, chị Cà Chua, anh Vũ, Midnight rồi cả June nữa. — From Saigon with love. Love you all *hugs*"),
+      p("Cảm ơn nhà mộc vì tất cả những phần đẹp đẽ trong hành trình retreat tháng chín đã mang đến cho em. Mọi người là những dễ chịu trong đời em mà em không cần phải cố gắng tìm cảm giác đó ở những người khác. Ai cũng mang đến cho mình một cảm giác khác nhau, đúng không? Nên em sẽ giữ mọi người thiệt chặt ở ngăn kéo thân thuộc và dễ chịu đó nhe, ấm áp hệt như hít thật sâu mùi tiêu rừng vậy ❤"),
+      p("Mong rằng em lại sớm có cơ hội thăm anh Tâm, em Ân, chị Cà Chua, anh Vũ, Midnight rồi cả June nữa. Trong lúc đó thì mọi người vẫn sẽ chăm sóc nơi này thật xịn nha. Tưới tắm cho khu vườn và góc bếp bằng tình yêu và thật nhiều chân thành, đắm say. Rồi các anh chị cũng sẽ tưới tắm cho những người như em, đưa tụi em vào một hành trình được bện chặt bằng sự thấu hiểu."),
+      p("Khi người ta hiểu cho nhau, người ta cũng sẽ hiểu cho bản thân mình. Hoặc khi người ta đã hiểu cho mình, người ta sẽ cảm thông và hiểu cho nhau. Hen."),
+      p("Em vẫn yêu và sẽ thương nhớ mọi người nhiều lắm."),
+      p("From Saigon with love. Love you all *hugs*"),
     ],
   },
   {

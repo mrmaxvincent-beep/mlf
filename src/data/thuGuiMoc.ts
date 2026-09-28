@@ -132,7 +132,7 @@ export const entries: Entry[] = [
   {
     no: 11,
     date: "27.01.2024",
-    name: "C. N",
+    name: "T.N",
     role: "23 tuổi · sống tại Gia Lai",
     blocks: [
       p("Chào Mộc, tìm đến Mộc khi lòng mình đầy mâu thuẫn, tuổi 23, mình đã bước vào một căn nhà bao dung, mình được yêu thương, học yêu chính mình."),

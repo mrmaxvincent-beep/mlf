@@ -56,7 +56,7 @@ export const entries: Entry[] = [
   {
     no: 5,
     date: "09.10.2023",
-    name: "c. N",
+    name: "N",
     role: "34 tuổi · Kon Tum",
     blocks: [
       p("Ngoài trời đang mưa, nghe là ảnh hưởng của một cơn bão tháng mười. Nhà mộc lúc này, đang yên ắng với tiếng mưa rơi đều đều bên ngoài cửa, với ánh đèn vàng dịu và ấm. Và, mọi người đang êm ả đọc sách."),

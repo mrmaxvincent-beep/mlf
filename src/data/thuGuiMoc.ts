@@ -375,7 +375,8 @@ export const entries: Entry[] = [
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
     blocks: [
-      p("Thân gửi: Mộc Little Farm. Trước khi đến thì háo hức nhưng khi về lại man mát buồn. Hợp rồi lại tan, cuộc vui nào cũng có lúc phải chia tay. Nhưng Mộc little farm đã để lại nhiều kỷ niệm đẹp; quang cảnh thì thơ mộng, khí hậu thì ôn hòa, đặc biệt là những thành viên trong Mộc thì khỏe mạnh, thân thiện, gần gũi, hiền hòa, dễ mến, thật thà, bao dung, rộng lượng, nhân hậu, khiêm tốn, cần cù, chăm chỉ, từ bi, trí tuệ sẽ mãi mãi lưu lại trong ký ức."),
+      p("Thân gửi: Mộc Little Farm."),
+      p("Trước khi đến thì háo hức nhưng khi về lại man mát buồn. Hợp rồi lại tan, cuộc vui nào cũng có lúc phải chia tay. Nhưng Mộc little farm đã để lại nhiều kỷ niệm đẹp; quang cảnh thì thơ mộng, khí hậu thì ôn hòa, đặc biệt là những thành viên trong Mộc thì khỏe mạnh, thân thiện, gần gũi, hiền hòa, dễ mến, thật thà, bao dung, rộng lượng, nhân hậu, khiêm tốn, cần cù, chăm chỉ, từ bi, trí tuệ sẽ mãi mãi lưu lại trong ký ức."),
       p("Đại diện gia đình cám ơn Tâm, Thuận, Vũ trong những ngày qua đã tiếp đón nhiệt tình và chu đáo."),
       p("Mong rằng một ngày không xa sẽ hội ngộ ba anh em như ba chàng ngự lâm luôn luôn kiên cường, đứng vững trên con đường tu tập đầy gian khổ, khó khăn vất vả, chông gai, trắc trở, hiểm nguy để thử thách bản thân vượt qua đến một lý tưởng tốt đẹp nhất."),
       p("Từ đó sẽ lan tỏa rộng rãi cho tất cả chúng sanh đủ duyên hội tụ. — Chú P. (Saigon)"),

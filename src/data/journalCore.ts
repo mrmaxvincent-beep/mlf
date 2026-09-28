@@ -14,5 +14,5 @@ export const coreMembers: CoreMember[] = [
   { name: "Giang Đỗ" },
   { name: "Thành Tâm", photo: "/assets/thanhtam.jpg" },
   { name: "Vũ", photo: "/assets/vu.webp" },
-  { name: "Thuận", photo: "/assets/thuan.webp" },
+  { name: "Văn Thuận", photo: "/assets/vanthuan.jpg" },
 ];

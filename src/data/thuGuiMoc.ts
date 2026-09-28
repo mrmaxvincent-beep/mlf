@@ -406,7 +406,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 29,
+    no: 30,
     date: "08.09.2026",
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
@@ -420,7 +420,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 30,
+    no: 29,
     date: "08.2026",
     name: "ba người bạn",
     role: "nhật ký chung · hai chuyến đi",

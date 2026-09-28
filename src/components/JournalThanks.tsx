@@ -9,7 +9,7 @@ export function JournalThanks() {
         cảm ơn
       </span>
       <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.3rem, 4vw, 1.7rem)", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1rem" }}>
-        mỗi số journal là công của nhiều bàn tay.
+        mỗi số journal là công sức của nhiều bàn tay.
       </p>
       <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 auto 3rem", maxWidth: "46ch" }}>
         xin cảm ơn những người bạn đã ở lại cùng mộc, làm nòng cốt cho từng số ra.

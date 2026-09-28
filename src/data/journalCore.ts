@@ -6,7 +6,7 @@ export type CoreMember = {
 
 /** Những người là thành viên nòng cốt của các số mlf journal — thứ tự hiển thị. */
 export const coreMembers: CoreMember[] = [
-  { name: "Khanh Trần" },
+  { name: "Khanh Trần", photo: "/assets/khanhtran.jpg" },
   { name: "Hồng Ân" },
   { name: "Vân Chi" },
   { name: "Gia Linh" },

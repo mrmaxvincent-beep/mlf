@@ -77,7 +77,10 @@ export const entries: Entry[] = [
       p("Em thích tất cả mọi thứ ở nhà mlf. Em thích cách mọi người sinh hoạt, nấu ăn và bày trí. Nó chỉnh chu, một sự chỉnh chu rất tự nhiên chứ không phải cố ép nó thành ra như vậy, rất thật."),
       p("Em rất an tâm khi chọn mlf. Từ khi đặt chỗ xong em biết mình chỉ cần mang vali và đi thôi, không cần nghĩ gì, chỉ cần nghỉ ngơi. Em đã nạp đủ năng lượng để quay lại Sài Gòn rồi."),
       p("Cảm ơn chị Ân, chị Cà Chua, anh Tâm, anh Vũ, anh Thuận rất nhiều. Dù chỉ có mấy ngày nhưng mọi người đã ở trong tim em rồi, em thật sự quý mọi người nhiều nhiều lắm."),
-      p("Em đã thấy được cầu vồng, hoàng hôn siêu xịn ở đây, còn bình minh, bầu trời đầy sao và mùa đào nở, em sẽ quay lại để được tận hưởng. Ôm mọi người."),
+      p("Em đã thấy được cầu vồng, hoàng hôn siêu xịn ở đây, còn bình minh, bầu trời đầy sao và mùa đào nở, em sẽ quay lại để được tận hưởng."),
+      p(`Dù rất tự nhiên nhưng những thông điệp em nhận được lại rất hợp lí. Cảm ơn vì những sự tinh tế, ấm thầm của cả nhà – vị bún chả siêu ngon, bánh bột mì tuổi thơ, buổi lẩu đầy hợp lí và chiếc bánh kem "trái hồng". Tuổi mới của em thật vui khi có mọi người xuất hiện.`),
+      p("Ôm mọi người, L. ^^"),
+      p("P.S: em không thấy lưu luyến hay níu kéo những giây phút ở đây vì em biết em đã tận hưởng rất trọn vẹn và em đã sẵn sàng để quay lại nhịp sống cũ với một tâm thế mới."),
     ],
   },
   {

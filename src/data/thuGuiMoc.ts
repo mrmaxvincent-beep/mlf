@@ -229,7 +229,7 @@ export const entries: Entry[] = [
     no: 18,
     date: "05.09.2024",
     name: "Chị Đ.P",
-    role: "retreat 43.5 · Tầng lặng, Ngoài im",
+    role: "retreat 43.5 · Trong Lặng, Ngoài Im",
     blocks: [
       p("Vậy là đã tới thời điểm phải nói lời tạm biệt với nhà Mộc rồi. Không hiểu sao nhịp sống ở nhà Mộc chậm thật chậm mà ngày của mình lại trôi qua nhanh đến vậy. Cảm giác như chưa sẵn sàng để rời đi, hệt như cảm giác phải trở lại Sài Gòn, sau khi về nhà vậy."),
       p("Có lẽ Tâm nói đúng, mảnh đất Măng Đen này có gì đó thật đặc biệt, chỉ ngay khi đặt chân xuống xe, chào Măng Đen – đã thấy trong lòng nhẹ bẫng, dù trước đó trên xe đầu óc còn hỗn độn biết bao là suy tư nặng trĩu."),

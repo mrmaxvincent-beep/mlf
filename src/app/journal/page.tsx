@@ -107,7 +107,7 @@ export default function JournalPage() {
           nếu bạn mang một câu chuyện muốn kể, mlf journal đang chờ.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
-          và nếu bạn không quen viết, cũng không sao. nếu bạn có những tấm ảnh về &ldquo;khoảng xanh&rdquo; của riêng mình — một mầm cây, một góc vườn, một khoảnh khắc thấy đời sống đang xanh lại — hãy gửi cho chúng tôi. mlf journal quyển 02 cũng đang chờ những hình ảnh ấy.
+          và nếu bạn không quen viết, cũng không sao. bạn cũng có thể cộng tác hình ảnh bằng những ảnh chụp về &ldquo;khoảng xanh&rdquo; của riêng mình — một mầm cây, một góc vườn, một khoảnh khắc thấy đời sống đang xanh lại.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.5rem" }}>
           bbt mlf journal

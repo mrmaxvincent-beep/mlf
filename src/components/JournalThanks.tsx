@@ -12,7 +12,7 @@ export function JournalThanks() {
         mỗi số journal là công sức của nhiều bàn tay.
       </p>
       <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 auto 3rem", maxWidth: "46ch" }}>
-        xin cảm ơn những người bạn đã cùng mộc góp nhặt từng ý tưởng, nâng niu từng con chữ, để mỗi số journal được thành hình bằng thật nhiều tâm sức và thương mến.
+        xin cảm ơn những người bạn - là đội ngũ nồng cốt của mlf journal - đã cùng góp nhặt từng ý tưởng, nâng niu từng con chữ, để mỗi số journal được thành hình bằng nhiều tâm sức và thương mến.
       </p>
 
       <ul className="thanks-grid">

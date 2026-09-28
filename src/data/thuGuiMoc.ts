@@ -223,7 +223,7 @@ export const entries: Entry[] = [
       p("Mộc ơi, sao mà đi dễ mà khó về quá \"Mộc\" ơi!"),
       p("\"Hiểu càng sâu, thương càng rộng\""),
       p("— USA, 05.08.2024"),
-      day("M.H"),
+      day("con"),
       p("Yêu đến từng hơi thở. Mộc ơi, Mộc sẽ luôn như thế này nhé, để mỗi khi trở về, luôn được gặp Mộc như đúng tên gọi và sự mệnh của bạn."),
       p("— Mộc, 5.8.2024, M.H"),
     ],

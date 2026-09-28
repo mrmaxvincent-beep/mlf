@@ -144,18 +144,6 @@ export const entries: Entry[] = [
   },
   {
     no: 11,
-    date: "Hà Nội",
-    name: "c. H",
-    role: "32 tuổi · sống tại Hà Nội",
-    blocks: [
-      p("Măng Đen, một ngày trời nhiều mây nhiều sương. Cảm giác thời gian trôi vừa nhanh vừa chậm, mới ngày thứ 6 tới mà nay đã là ngày về thật là nhanh quá đi, nhưng cũng thật chậm vì em có cảm giác như đã gặp anh Tâm, anh Vũ, chị Cà Chua và em Ân từ lâu lắm rồi."),
-      p("Việc sinh hoạt hàng ngày và đi chơi diễn ra thật tự nhiên và nhẹ nhàng, quen thuộc mang lại cảm giác dễ chịu và dịu dàng đọng mãi ở trong lòng. Măng Đen thật đẹp, nhà mộc cũng thật đẹp, còn bao nhiêu thứ em chưa kịp nhìn ngắm hết."),
-      p("Chuyến đi ngày khi quyết định đi em cũng không suy nghĩ hay kỳ vọng gì quá nhiều, chỉ mong có những ngày nhẹ nhàng bình lặng. Thực tế thì đã vượt quá kỳ vọng của em, được đi rừng đi suối, tham gia nhiều hoạt động và trò chuyện kết nối với mọi người, được đi dạo hàng ngày em rất vui."),
-      p("Em cảm ơn mọi người vì những tình cảm, sự quan tâm, sự chuẩn bị chu đáo từng chút từng chút để em có được trải nghiệm thật đẹp như thế này. Cảm ơn ông trời đã tạo ra mối nhân duyên để em được tới đây, được gặp mọi người. Mong gặp lại mọi người một ngày không xa ở Măng Đen hoặc ở bất cứ nơi đâu."),
-    ],
-  },
-  {
-    no: 12,
     date: "27.01.2024",
     name: "T.N",
     role: "23 tuổi · sống tại Gia Lai",
@@ -166,7 +154,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 13,
+    no: 12,
     date: "22–25.03.2024",
     name: "ẩn danh",
     role: "một bản nhạc giao hưởng",
@@ -177,7 +165,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 14,
+    no: 13,
     date: "08.04.2024",
     name: "D.",
     role: "một ngày hạ ở Mộc thân thương ♡ · gửi Thanh & nhà Mộc",
@@ -197,7 +185,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 15,
+    no: 14,
     date: "8.4.2024",
     name: "T.D",
     role: "4 ngày · lần đầu retreat",
@@ -212,7 +200,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 16,
+    no: 15,
     date: "12–15.04.2024",
     name: "L.D.N",
     role: "nhật ký 4 ngày · chuyện con nhện",
@@ -239,6 +227,21 @@ export const entries: Entry[] = [
       p("Cuối cùng là cảm ơn chó June và mèo Midnight đã bầu bạn với anh suốt 4 ngày nhé!"),
       p("Mãi iu nhà Mộc."),
       p("— MĐ, 15.4.2024, L.D.N"),
+    ],
+  },
+  {
+    no: 16,
+    date: "10.05.2024",
+    name: "c. H",
+    role: "32 tuổi · sống tại Hà Nội",
+    blocks: [
+      p("Măng Đen, một ngày trời nhiều mây nhiều sương. Cảm giác thời gian trôi vừa nhanh vừa chậm, mới ngày thứ 6 tới mà nay đã là ngày về thật là nhanh quá đi, nhưng cũng thật chậm vì em có cảm giác như đã gặp anh Tâm, anh Vũ, chị Cà Chua và em Ân từ lâu lắm rồi."),
+      p("Việc sinh hoạt hàng ngày và đi chơi diễn ra thật tự nhiên và nhẹ nhàng, quen thuộc mang lại cảm giác dễ chịu và dịu dàng đọng mãi ở trong lòng."),
+      p("Măng Đen thật đẹp, nhà mộc cũng thật đẹp, còn bao nhiêu thứ em chưa kịp nhìn ngắm hết. Chuyến đi ngày khi quyết định đi em cũng không suy nghĩ hay kỳ vọng gì quá nhiều, chỉ mong có những ngày nhẹ nhàng bình lặng. Thực tế thì đã vượt quá kỳ vọng của em, được đi rừng đi suối, tham gia nhiều hoạt động và trò chuyện kết nối với mọi người, được đi dạo hàng ngày em rất vui, giống như những gì em vẫn mong ước."),
+      p("Em cảm ơn mọi người vì những tình cảm, sự quan tâm, sự chuẩn bị chu đáo từng chút từng chút để em có được trải nghiệm thật đẹp như thế này. Cảm ơn ông trời đã tạo ra mối nhân duyên để em được tới đây, được gặp mọi người."),
+      p("Em chúc anh Tâm, anh Vũ, chị Cà Chua, em Ân thật nhiều sức khỏe, mong mọi người tìm thấy điều mà mọi người tìm kiếm, luôn hạnh phúc an yên."),
+      p("Chúc em Jun và em Midnight vui vẻ ăn ngon chơi vui nha!"),
+      p("Mong gặp lại mọi người một ngày không xa ở Măng Đen hoặc ở bất cứ nơi đâu."),
     ],
   },
   {

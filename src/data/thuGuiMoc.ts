@@ -383,4 +383,20 @@ export const entries: Entry[] = [
       p("— Chú P. (Saigon)"),
     ],
   },
+  {
+    no: 28,
+    date: "08.2026",
+    name: "ba người bạn",
+    role: "nhật ký chung · hai chuyến đi",
+    blocks: [
+      day("một chuyến đi của 2 người"),
+      p("Đến: không có kỳ vọng gì, không có mong muốn gì."),
+      p("Đi: có những người anh mới, có những dự định tự tin hơn."),
+      day("một chuyến đi của 1 người (không đi cùng 2 người trên)"),
+      p("08.2026. Lần thứ 2 quay lại, cách lần đầu cỡ 10 tháng thôi mà tưởng đã đi qua một cuộc đời vòng quanh nhân thế rồi, mới lại về nhà."),
+      p("Mong lần tiếp theo sẽ không cần đi vòng qua một cuộc đời nữa rồi mới được quay về. Hoặc có."),
+      p("Himalaya (1999). Loving Karma (2026)."),
+      p("Nhà là ở bên trong, không phải năm châu bốn bể."),
+    ],
+  },
 ];

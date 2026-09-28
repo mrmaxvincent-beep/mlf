@@ -242,6 +242,22 @@ export const entries: Entry[] = [
   },
   {
     no: 19,
+    date: "29.11.2024",
+    name: "ẩn danh",
+    role: "Măng Đen · hãy mở vào phút cuối",
+    blocks: [
+      day("hãy mở vào phút cuối."),
+      p("Xin chào một sự khởi đầu mới!"),
+      p("Giây phút này đây, khi mà sự sống của tôi chỉ còn một chút thời gian ngắn ngủi, tôi muốn viết ra những lời này để bạn có thể hiểu hơn về sự cận kề của cái chết."),
+      p("Cái chết có thực sự đáng sợ không? Chết có phải là hết không? Thật ra cái chết không phải là một cái gì đó đang chờ đợi ta phía trước, cái chết vốn luôn hiện hữu trong ta từng giờ, từng phút, từng giây. Sự sống - cái chết vốn luôn diễn ra liên tục, không ngừng nghỉ, các tế bào trong cơ thể chúng ta vẫn luôn sinh ra và chết đi mỗi ngày, chỉ là do ta quá bận rộn mà không để ý đến sự vận hành tự nhiên này của đất trời để thấy thôi. Chúng ta đã bắt đầu chết từ khi sinh thành nên hình hài này rồi. Vậy thì tại sao ta lại phải sợ cái chết. Hãy nhìn thật sâu vào hiện tại để có thể thấy cái chết luôn diễn ra thì ta sẽ chấp nhận đón lấy cái chết thật nhẹ nhàng, an yên."),
+      p("Cái chết không đáng sợ, cái đáng sợ nhất là ta đã sống những ngày tháng không an trú ở giây phút hiện tại."),
+      p("Hãy cố gắng sống trọn vẹn từng giây phút này, hãy nhìn thật sâu, hãy sống mà không còn gì hối hận."),
+      p("Cánh cửa này đóng lại, cánh cửa khác sẽ mở ra, một sự khởi đầu mới sẽ chờ đón bạn phía trước!"),
+      p("— MĐ, 29.11.2024"),
+    ],
+  },
+  {
+    no: 20,
     date: "17.06.2025",
     name: "a. T",
     role: "28 tuổi · sống tại Sài Gòn",
@@ -252,7 +268,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 20,
+    no: 21,
     date: "8.2025",
     name: "c. K",
     role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
@@ -264,7 +280,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 21,
+    no: 22,
     date: "thu 2025",
     name: "c. K",
     role: `32 tuổi · Sài Gòn · retreat "xuyến chi trên đồi gió"`,
@@ -277,7 +293,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 22,
+    no: 23,
     date: "9/2025",
     name: "vợ chồng C & K",
     role: "Đà Nẵng · một ngày mưa tháng 9",
@@ -290,7 +306,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 23,
+    no: 24,
     date: "10–13.01.2026",
     name: "c. A",
     role: "TP.HCM · nhật ký 4 ngày ở Măng Đen",
@@ -310,7 +326,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 24,
+    no: 25,
     date: "13.01.2026",
     name: "c. Ng",
     role: "TP.HCM · retreat 81",
@@ -321,7 +337,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 25,
+    no: 26,
     date: "TP.HCM",
     name: "Q.N",
     role: "vị khách 3 lần tới mlf · lược trích nhật ký",
@@ -335,7 +351,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 26,
+    no: 27,
     date: "17.03.2026",
     name: "L.",
     role: "Bắc Ninh · retreat hàm-dưỡng 77 · xuân khẽ dưới tán rừng",
@@ -350,7 +366,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 27,
+    no: 28,
     date: "7/2026",
     name: "C.",
     role: "TP.HCM · hai tuần work from mộc",
@@ -390,7 +406,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 28,
+    no: 29,
     date: "08.09.2026",
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
@@ -404,7 +420,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 29,
+    no: 30,
     date: "08.2026",
     name: "ba người bạn",
     role: "nhật ký chung · hai chuyến đi",

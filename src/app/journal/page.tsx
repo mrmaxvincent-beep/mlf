@@ -109,6 +109,9 @@ export default function JournalPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           và nếu bạn không quen viết, cũng không sao. bạn cũng có thể cộng tác hình ảnh bằng những ảnh chụp về &ldquo;khoảng xanh&rdquo; của riêng mình — một mầm cây, một góc vườn, một khoảnh khắc thấy đời sống đang xanh lại.
         </p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+          rất mong nhận được sự cộng tác của bạn.
+        </p>
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.5rem" }}>
           bbt mlf journal
         </p>

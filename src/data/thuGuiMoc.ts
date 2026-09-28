@@ -63,7 +63,6 @@ export const entries: Entry[] = [
       p("Mình giữ cho mình một sự kỳ vọng không nhiều khi tới đây, chỉ vừa đủ cho mình. Những ngày sống ở mlf cùng mọi người, sự vừa đủ ấy cứ lớn dần lên, ấm áp, ủi an và vừa vặn, với mình."),
       p("Lời chào đầu tiên từ Cà Chua. Cánh tay đưa ra cửa sổ đón gió khi lái xe của Vũ. Cái ôm đầy nhiệt tình và nhiều mùi của June. Vẻ mặt hờn giận và không để ý của Midnight. Những cái bánh ngon lành của Ân. Giọng nói dễ chịu và dễ thương của anh Thuận. Buổi trò chuyện đầy ủi an trong ráng chiều cùng anh Tâm."),
       p("Chiều qua, chị H hỏi mình, em hạnh phúc khi nào. Mình đã không ngần ngại mà trả lời chị, sáng nay, thấy anh Thuận và anh Tâm nấu nướng và dọn dẹp trong bếp, em đã hạnh phúc, ngồi đây gọt hồng với chị và Cà Chua và Ân, em cũng hạnh phúc."),
-      p("Anh Thuận nói với mình, ở mlf, em làm gì cũng được, muốn làm gì thì làm. Và mình đã thật sự thả lỏng và tận hưởng khi ở đây. Cảm ơn mlf nhiều, thật nhiều, thật nhiều! Hẹn gặp lại, một ngày không xa, với thật nhiều thương yêu. — N."),
     ],
   },
   {

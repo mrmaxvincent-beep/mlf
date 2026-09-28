@@ -69,7 +69,7 @@ export const entries: Entry[] = [
   {
     no: 6,
     date: "21.11.2023",
-    name: "c. L",
+    name: "L",
     role: "28 tuổi · Sài Gòn · khách duy nhất của chuyến",
     blocks: [
       p("Thân gửi nhà mlf, em thật cảm ơn mọi người đã chơi cùng em trong những ngày qua. Lúc biết tới mộc, em đã tự nhủ là nhất định phải tới đây thôi và em đã tới."),

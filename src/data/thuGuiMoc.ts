@@ -352,6 +352,19 @@ export const entries: Entry[] = [
   },
   {
     no: 27,
+    date: "26.02.2026",
+    name: "A.",
+    role: "retreat 82 · cùng mẹ",
+    blocks: [
+      p("Cuối cùng cũng đến được với Mộc, sau 2-3 năm theo dõi hành trình của mọi người. Mình đã có một cảm xúc thật kỳ lạ và đặc biệt, có lẽ đây là lần duy nhất trong đời mình được trải nghiệm nó. Trước giờ mình chỉ tưởng tượng về Mộc qua hình ảnh, thước phim, bài viết và những câu chuyện. Bây giờ đây mình không cần phải tưởng tượng nữa, không cần hình dung về không gian, về cái bàn, cái ghế, về tấm vải, không cần nghĩ xem mùi vị của những món ăn ra sao. Mọi điều mình mong mỏi đang diễn ra trước mắt, mình thật sống động. Vừa lạ mà vừa quen."),
+      p("Mình cảm nhận mọi thứ bằng tất cả các giác quan. Được thấy anh Tâm và Vũ, được nhìn thật sâu vào mắt họ. Được nghe tiếng nhạc, tiếng chuông gió, tiếng chim, tiếng ếch nhái. Được ngửi mùi hoa bưởi, mùi vườn, mùi trầm hương và cả mùi bếp nấu. Được nếm các món ăn ngon. Được chạm vào bông hoa mua tím, loài hoa đặc trưng trong mỗi tấm hình về Mộc."),
+      p("Mình như được bước ra khỏi tiểu thuyết để đến với hiện tại, và hay như từ trên trời xuống trần gian. Thật hạnh phúc!"),
+      p("Retreat 82 với mẹ."),
+      p("— A."),
+    ],
+  },
+  {
+    no: 28,
     date: "17.03.2026",
     name: "L.",
     role: "Bắc Ninh · retreat hàm-dưỡng 77 · xuân khẽ dưới tán rừng",
@@ -366,7 +379,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 28,
+    no: 29,
     date: "7/2026",
     name: "C.",
     role: "TP.HCM · hai tuần work from mộc",
@@ -406,7 +419,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 30,
+    no: 31,
     date: "08.09.2026",
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
@@ -420,7 +433,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 29,
+    no: 30,
     date: "08.2026",
     name: "ba người bạn",
     role: "nhật ký chung · hai chuyến đi",

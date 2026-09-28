@@ -44,7 +44,7 @@ export const entries: Entry[] = [
   {
     no: 4,
     date: "9/2023",
-    name: "c. G",
+    name: "G",
     role: "30 tuổi · sống tại Sài Gòn",
     blocks: [
       p(`Măng Đen, tháng 9/2023. Trái tim mình có những ngóc ngách, cứ ngỡ như chưa từng tồn tại cho đến "Nắng ấm phơi chăn" khơi mở, thì ngóc ngách ấy mới trở nên hiện hữu.`),

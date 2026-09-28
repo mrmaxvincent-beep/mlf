@@ -162,18 +162,6 @@ export const entries: Entry[] = [
   },
   {
     no: 13,
-    date: "2024",
-    name: "c. Q.",
-    role: "34 tuổi · sống tại Đức",
-    blocks: [
-      p("Trong vô ngàn lượng kiếp, có một lần được gặp, được vui và được trò chuyện, đó là một món quà. Có lẽ một lúc nào đó nhìn lại, Q và mọi người sẽ nhớ nhau thông qua những câu chuyện, chia sẻ và những điều vô tri nho nhỏ."),
-      p("Mùa thu là mùa của sự đủ đầy, biết ơn và chuẩn bị. Biết ơn một mùa vụ sai quả chín cành. Chuẩn bị cho một mùa đông lặng lẽ quay về bên trong mình. Có lẽ duyên gặp Mộc, anh Tâm, Vũ, anh Thuận, Ân, H. và anh P. là chất liệu để Q sống một mùa thu lá vàng trọn vẹn."),
-      p("Mùa thu nước Đức chạm ngõ với những chiếc lá vàng đầu tiên. Mùa thu năm 2018, Q có lên một ngọn núi mà mình có thể thấy đa sắc màu từ cây lá cành, đỏ, vàng, nâu. Mùa thu đi kèm với những cơn gió hiu hiu lạnh khi gió chạm mặt mình như thể một nụ hôn của đất trời."),
-      p("Vậy đó mùa Thu đem đến nhiều món quà và báo hiệu một mùa kết thúc một chu kì mùa Đông. Bắt đầu cũng quan trọng và kết thúc lại quan trọng hơn. Hi hi có vậy thôi. Hẹn gặp lại nha! — Hồ Thu Phẳng Lặng - 48, 2024"),
-    ],
-  },
-  {
-    no: 14,
     date: "22.06.2024",
     name: "c. M",
     role: "33 tuổi · sống tại Sài Gòn",
@@ -185,7 +173,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 15,
+    no: 14,
     date: "7.2024",
     name: "T.N",
     role: "hành trình \"về nhà\"",
@@ -199,7 +187,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 16,
+    no: 15,
     date: "Sài Gòn",
     name: "c. H",
     role: "37 tuổi · những ngày mây-sương-gió",
@@ -211,7 +199,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 17,
+    no: 16,
     date: "cuối trip",
     name: "c. C",
     role: "28 tuổi · Sài Gòn · viết những ngày ở mộc",
@@ -225,7 +213,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 18,
+    no: 17,
     date: "30.8.2024",
     name: "c. C",
     role: "33 tuổi · Đà Lạt · dừng-chân-an-trú 30 ngày",
@@ -235,6 +223,18 @@ export const entries: Entry[] = [
       p("Hôm nay là ngày cuối cùng, thì tôi bỗng nhiên muốn khiếu nại, tôi khiếu nại tại sao anh Vũ lại nấu các bữa ăn quá ngon, anh Tâm lại dịu dàng chăm sóc, anh Thuận lại ân cần chỉ dạy, chị Cà Chua lại niềm nở, tháo vát và Ân lại tỉ mỉ đáng yêu. Những sự chăm sóc này sẽ làm tôi nhớ lắm khi về lại với cuộc sống bình thường."),
       p("Nhưng rồi, không gì là mãi mãi, nên ta gói nhặt tất cả những điều tốt đẹp ở nhà mộc làm kỷ niệm quý báu của tâm hồn - sống như một phần con người ta."),
       p("Trước khi lên đây em nói em không ổn, bây giờ em nói em sẽ ổn thôi! Em chúc mọi người nhiều sức khỏe và luôn tràn đầy tình yêu. — Dừng-chân-an-trú | C.30.8.24"),
+    ],
+  },
+  {
+    no: 18,
+    date: "08.10.2024",
+    name: "c. Q.",
+    role: "34 tuổi · sống tại Đức",
+    blocks: [
+      p("Trong vô ngàn lượng kiếp, có một lần được gặp, được vui và được trò chuyện, đó là một món quà. Có lẽ một lúc nào đó nhìn lại, Q và mọi người sẽ nhớ nhau thông qua những câu chuyện, chia sẻ và những điều vô tri nho nhỏ."),
+      p("Mùa thu là mùa của sự đủ đầy, biết ơn và chuẩn bị. Biết ơn một mùa vụ sai quả chín cành. Chuẩn bị cho một mùa đông lặng lẽ quay về bên trong mình. Có lẽ duyên gặp Mộc, anh Tâm, Vũ, anh Thuận, Ân, H. và anh P. là chất liệu để Q sống một mùa thu lá vàng trọn vẹn."),
+      p("Mùa thu nước Đức chạm ngõ với những chiếc lá vàng đầu tiên. Mùa thu năm 2018, Q có lên một ngọn núi mà mình có thể thấy đa sắc màu từ cây lá cành, đỏ, vàng, nâu. Mùa thu đi kèm với những cơn gió hiu hiu lạnh khi gió chạm mặt mình như thể một nụ hôn của đất trời."),
+      p("Vậy đó mùa Thu đem đến nhiều món quà và báo hiệu một mùa kết thúc một chu kì mùa Đông. Bắt đầu cũng quan trọng và kết thúc lại quan trọng hơn. Hi hi có vậy thôi. Hẹn gặp lại nha! — Hồ Thu Phẳng Lặng - 48, 2024"),
     ],
   },
   {

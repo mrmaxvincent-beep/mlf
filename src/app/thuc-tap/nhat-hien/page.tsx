@@ -81,7 +81,7 @@ export default function NhatHienPage() {
         <a className="go mono-link" href="https://www.bestill.life/p/phap.html" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
           tìm hiểu thêm về nhất-hiện <span className="ar">→</span>
         </a>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-ink)", marginTop: "0.7rem" }}>nhathien.com</span>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-ink)", marginTop: "0.7rem" }}>nhathien.com (đang phát triển)</span>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>

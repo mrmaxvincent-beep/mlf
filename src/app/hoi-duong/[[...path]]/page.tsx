@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -7,13 +8,33 @@ import { HoiDuongReader } from "@/components/HoiDuongReader";
 import { topics } from "@/data/hoiDuong";
 
 const title = "hỏi-đường";
+const baseDescription = "thực tập là một con đường, và khi lạc thì người ta hỏi đường.";
 
-export const metadata: Metadata = {
-  title,
-  description: "thực tập là một con đường, và khi lạc thì người ta hỏi đường.",
-};
+function resolve(path: string[]) {
+  const [topicId] = path;
+  const topic = topicId ? topics.find((t) => t.id === topicId) : topics[0];
+  return topic ?? null;
+}
 
-export default function Page() {
+export function generateStaticParams() {
+  return [{ path: [] }, ...topics.map((t) => ({ path: [t.id] }))];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ path?: string[] }> }): Promise<Metadata> {
+  const { path = [] } = await params;
+  const topic = resolve(path);
+  if (!topic) return {};
+  return {
+    title: path.length ? `${topic.name} · ${title}` : title,
+    description: baseDescription,
+  };
+}
+
+export default async function Page({ params }: { params: Promise<{ path?: string[] }> }) {
+  const { path = [] } = await params;
+  const topic = resolve(path);
+  if (!topic) notFound();
+
   return (
     <>
       <Header />
@@ -35,7 +56,7 @@ export default function Page() {
       </Reveal>
 
       <Reveal style={{ marginBottom: "6rem" }}>
-        <HoiDuongReader topics={topics} />
+        <HoiDuongReader topics={topics} initialTopicId={topic.id} />
       </Reveal>
 
       <Footer />

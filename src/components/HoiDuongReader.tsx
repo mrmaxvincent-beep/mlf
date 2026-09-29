@@ -1,18 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Topic } from "@/data/hoiDuong";
 
-/** Two-pane picker: chủ đề bên trái, câu hỏi + câu trả lời của chủ đề đang chọn bên phải — mô phỏng cấu trúc thư-gửi-mộc. */
-export function HoiDuongReader({ topics }: { topics: Topic[] }) {
-  const [active, setActive] = useState(0);
-  const current = topics[active];
+/** Two-pane picker: chủ đề bên trái, câu hỏi + câu trả lời của chủ đề đang chọn bên phải. URL là /hoi-duong/[chủ đề] nên share thẳng được. */
+export function HoiDuongReader({ topics, initialTopicId }: { topics: Topic[]; initialTopicId: string }) {
+  const router = useRouter();
+  const current = topics.find((t) => t.id === initialTopicId) ?? topics[0];
 
   return (
     <div className="hd-shell">
       <div className="hd-rail">
-        {topics.map((t, i) => (
-          <button key={t.id} className={`hd-topic${i === active ? " active" : ""}`} onClick={() => setActive(i)}>
+        {topics.map((t) => (
+          <button
+            key={t.id}
+            className={`hd-topic${t.id === current.id ? " active" : ""}`}
+            onClick={() => router.push(`/hoi-duong/${t.id}`, { scroll: false })}
+          >
             {t.name}
           </button>
         ))}

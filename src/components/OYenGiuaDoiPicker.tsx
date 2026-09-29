@@ -1,54 +1,37 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import type { Section } from "@/data/oYenGiuaDoi";
 
-/** Two-pane picker: 5 phần bên trái, nội dung bên phải — chọn bài đọc ngay trong khung, không rời trang, để 01–05 luôn trong tầm tay. Lựa chọn được đồng bộ vào URL (?phan=&bai=) để share được thẳng tới một bài. */
-export function OYenGiuaDoiPicker({ sections }: { sections: Section[] }) {
+/** Two-pane picker: 5 phần bên trái, nội dung bên phải — chọn bài đọc ngay trong khung, không rời trang, để 01–05 luôn trong tầm tay. URL là /o-yen-giua-doi/[phần]/[bài] nên share thẳng được một bài. */
+export function OYenGiuaDoiPicker({
+  sections,
+  initialSectionId,
+  initialArticleSlug,
+}: {
+  sections: Section[];
+  initialSectionId: string;
+  initialArticleSlug: string | null;
+}) {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const current = sections.find((s) => s.id === initialSectionId) ?? sections[0];
+  const article = initialArticleSlug ? (current.articles.find((a) => a.slug === initialArticleSlug) ?? null) : null;
 
-  const sectionParam = searchParams.get("phan");
-  const articleParam = searchParams.get("bai");
-
-  const activeSectionIndex = useMemo(() => {
-    const i = sections.findIndex((s) => s.id === sectionParam);
-    return i === -1 ? 0 : i;
-  }, [sections, sectionParam]);
-
-  const current = sections[activeSectionIndex];
-  const article = articleParam ? (current.articles.find((a) => a.slug === articleParam) ?? null) : null;
-
-  const setParams = useCallback(
-    (next: { phan?: string; bai?: string | null }) => {
-      const params = new URLSearchParams(searchParams.toString());
-      if (next.phan !== undefined) params.set("phan", next.phan);
-      if (next.bai === null) params.delete("bai");
-      else if (next.bai !== undefined) params.set("bai", next.bai);
-      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-    },
-    [pathname, router, searchParams],
-  );
-
-  function selectSection(i: number) {
-    setParams({ phan: sections[i].id, bai: null });
+  function goSection(id: string) {
+    router.push(`/o-yen-giua-doi/${id}`, { scroll: false });
   }
-
-  function selectArticle(slug: string) {
-    setParams({ phan: current.id, bai: slug });
+  function goArticle(slug: string) {
+    router.push(`/o-yen-giua-doi/${current.id}/${slug}`, { scroll: false });
   }
-
   function backToList() {
-    setParams({ phan: current.id, bai: null });
+    router.push(`/o-yen-giua-doi/${current.id}`, { scroll: false });
   }
 
   return (
     <div className="hd-shell">
       <div className="hd-rail">
-        {sections.map((s, i) => (
-          <button key={s.id} className={`hd-topic${i === activeSectionIndex ? " active" : ""}`} onClick={() => selectSection(i)}>
+        {sections.map((s) => (
+          <button key={s.id} className={`hd-topic${s.id === current.id ? " active" : ""}`} onClick={() => goSection(s.id)}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", marginRight: "0.6rem", opacity: 0.6 }}>
               {s.num}
             </span>
@@ -97,7 +80,7 @@ export function OYenGiuaDoiPicker({ sections }: { sections: Section[] }) {
               {current.articles.map((a) => (
                 <button
                   key={a.slug}
-                  onClick={() => selectArticle(a.slug)}
+                  onClick={() => goArticle(a.slug)}
                   className="link-sweep"
                   style={{
                     display: "flex",

@@ -63,6 +63,7 @@ export const hoatDongMenu = [
   { label: "be-still", href: routes.beStill },
   { label: "tea · mind", href: routes.teaMind },
   { label: "touch", href: routes.touch },
+  { label: "cộng đồng ở-yên", href: routes.congDongOYen },
 ];
 
 export const thuVienMenu = [
@@ -76,7 +77,6 @@ export const thuVienMenu = [
 
 export const congDongMenu = [
   { label: "một ngày ở-yên", href: routes.motNgayOYen },
-  { label: "cộng đồng ở-yên", href: routes.congDongOYen },
   { label: "trăng-yên", href: routes.trangYen },
 ];
 
@@ -140,6 +140,7 @@ export const mobileMenuSections = [
       { label: "be-still", href: routes.beStill },
       { label: "tea · mind", href: routes.teaMind },
       { label: "touch", href: routes.touch },
+      { label: "cộng đồng ở-yên", href: routes.congDongOYen },
     ],
   },
   {
@@ -157,7 +158,6 @@ export const mobileMenuSections = [
     heading: "cộng đồng",
     items: [
       { label: "một ngày ở-yên", href: routes.motNgayOYen },
-      { label: "cộng đồng ở-yên", href: routes.congDongOYen },
       { label: "trăng-yên", href: routes.trangYen },
     ],
   },

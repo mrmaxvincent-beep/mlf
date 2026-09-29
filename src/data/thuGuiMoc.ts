@@ -870,7 +870,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 43,
+    no: 44,
     date: "1/2025",
     name: "Gia đình TMT",
     role: "Đồi Mây Mơ Ngủ",
@@ -884,7 +884,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 44,
+    no: 45,
     date: "26.02.2025",
     name: "ẩn danh",
     role: "retreat đầu năm · Khói Trời Ngun Ngút",
@@ -932,7 +932,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 45,
+    no: 46,
     date: "20.05.2025",
     name: "M.",
     role: `retreat "một trời vô ưu" · khách duy nhất của chuyến`,
@@ -949,7 +949,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 46,
+    no: 47,
     date: "17.06.2025",
     name: "a. T",
     role: "28 tuổi · sống tại Sài Gòn",
@@ -960,7 +960,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 47,
+    no: 48,
     date: "8.2025",
     name: "c. K",
     role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
@@ -972,7 +972,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 48,
+    no: 49,
     date: "thu 2025",
     name: "c. K",
     role: `32 tuổi · Sài Gòn · retreat "xuyến chi trên đồi gió"`,
@@ -990,7 +990,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 49,
+    no: 50,
     date: "9/2025",
     name: "vợ chồng C & K",
     role: "Đà Nẵng · một ngày mưa tháng 9",
@@ -1003,7 +1003,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 50,
+    no: 51,
     date: "23.09.2025",
     name: "c. C",
     role: "28 tuổi · Sài Gòn · viết những ngày ở mộc",
@@ -1024,7 +1024,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 51,
+    no: 52,
     date: "17.11.2025",
     name: "N.H.Y",
     role: "Măng Đen",
@@ -1035,7 +1035,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 52,
+    no: 53,
     date: "10–13.01.2026",
     name: "c. A",
     role: "TP.HCM · nhật ký 4 ngày ở Măng Đen",
@@ -1055,7 +1055,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 53,
+    no: 54,
     date: "13.01.2026",
     name: "c. Ng",
     role: "TP.HCM · retreat 81",
@@ -1066,7 +1066,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 54,
+    no: 55,
     date: "01.02.2026",
     name: "ẩn danh",
     role: "Sài Gòn · Viết gửi mộc · một cái cây, đang lớn",
@@ -1134,8 +1134,8 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 55,
-    date: "TP.HCM",
+    no: 43,
+    date: "11.01.2025",
     name: "Q.N",
     role: "vị khách 3 lần tới mlf · lược trích nhật ký",
     blocks: [

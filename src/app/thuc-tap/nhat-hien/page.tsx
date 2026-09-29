@@ -5,7 +5,6 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
-import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "nhất-hiện · bình phàm — thuần tịnh — rõ biết",
@@ -27,7 +26,7 @@ export default function NhatHienPage() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem", textAlign: "center" }}>
         <div style={{ textAlign: "left" }}>
-          <Breadcrumb trail={[{ label: "be-still", href: routes.beStill }, { label: "nhất-hiện" }]} />
+          <Breadcrumb label="nhất-hiện" />
         </div>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.2rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 2.2rem" }}>
           nhất-hiện

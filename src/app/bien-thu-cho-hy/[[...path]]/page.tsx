@@ -1,18 +1,40 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { LetterReader } from "@/components/LetterReader";
 import { Reveal } from "@/components/Reveal";
-import { letters } from "@/data/bienThuChoHy";
+import { letters, dateSlug } from "@/data/bienThuChoHy";
 
-export const metadata: Metadata = {
-  title: "biên-thư-cho-Hy",
-  description: "những lá thư riêng, gửi một người bạn tên Hy.",
-};
+const title = "biên-thư-cho-Hy";
+const baseDescription = "những lá thư riêng, gửi một người bạn tên Hy.";
 
-export default function BienThuChoHyPage() {
+function resolve(path: string[]) {
+  if (!path[0]) return letters[0] ?? null;
+  return letters.find((l) => dateSlug(l.date) === path[0]) ?? null;
+}
+
+export function generateStaticParams() {
+  return [{ path: [] }, ...letters.map((l) => ({ path: [dateSlug(l.date)] }))];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ path?: string[] }> }): Promise<Metadata> {
+  const { path = [] } = await params;
+  const letter = resolve(path);
+  if (!letter) return {};
+  return {
+    title: path.length ? `${letter.date} · ${title}` : title,
+    description: baseDescription,
+  };
+}
+
+export default async function BienThuChoHyPage({ params }: { params: Promise<{ path?: string[] }> }) {
+  const { path = [] } = await params;
+  const letter = resolve(path);
+  if (!letter) notFound();
+
   return (
     <>
       <Header />
@@ -38,7 +60,7 @@ export default function BienThuChoHyPage() {
       </Reveal>
 
       <div style={{ marginBottom: "5rem" }}>
-        <LetterReader letters={letters} />
+        <LetterReader letters={letters} initialSlug={dateSlug(letter.date)} />
       </div>
 
       <Footer />

@@ -1,11 +1,14 @@
 "use client";
 
-import { useRef, useState } from "react";
-import type { Letter } from "@/data/bienThuChoHy";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { dateSlug, type Letter } from "@/data/bienThuChoHy";
 
-/** idx-rail letter picker + reading pane — biên-thư-cho-Hy. */
-export function LetterReader({ letters }: { letters: Letter[] }) {
-  const [active, setActive] = useState(0);
+/** idx-rail letter picker + reading pane — biên-thư-cho-Hy. URL là /bien-thu-cho-hy/[ngày] nên share thẳng được một lá thư. */
+export function LetterReader({ letters, initialSlug }: { letters: Letter[]; initialSlug: string }) {
+  const router = useRouter();
+  const foundIndex = letters.findIndex((l) => dateSlug(l.date) === initialSlug);
+  const active = foundIndex === -1 ? 0 : foundIndex;
   const [fading, setFading] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -13,8 +16,7 @@ export function LetterReader({ letters }: { letters: Letter[] }) {
     if (i === active) return;
     setFading(true);
     setTimeout(() => {
-      setActive(i);
-      setFading(false);
+      router.push(`/bien-thu-cho-hy/${dateSlug(letters[i].date)}`, { scroll: false });
     }, 200);
   }
 
@@ -25,6 +27,10 @@ export function LetterReader({ letters }: { letters: Letter[] }) {
     }
     select(i);
   }
+
+  useEffect(() => {
+    setFading(false);
+  }, [initialSlug]);
 
   const current = letters[active];
 

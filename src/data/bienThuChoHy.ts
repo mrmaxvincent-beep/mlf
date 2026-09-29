@@ -3,6 +3,11 @@ export type Letter = {
   paragraphs: string[];
 };
 
+/** URL-safe slug cho một lá thư, dựa trên `date` (vd. "ngày 03.06.2023" → "03-06-2023"). */
+export function dateSlug(date: string): string {
+  return date.replace(/^ngày\s*/, "").replace(/\./g, "-");
+}
+
 export const letters: Letter[] = [
   {
     date: "ngày 03.06.2023",

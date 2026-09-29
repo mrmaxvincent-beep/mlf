@@ -63,6 +63,7 @@ export const hoatDongMenu = [
   { label: "be-still", href: routes.beStill },
   { label: "tea · mind", href: routes.teaMind },
   { label: "touch", href: routes.touch },
+  { divider: true as const },
   { label: "cộng đồng ở-yên", href: routes.congDongOYen },
 ];
 

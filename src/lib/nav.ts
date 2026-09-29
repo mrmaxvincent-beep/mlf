@@ -33,6 +33,7 @@ export const routes = {
   motNgayOYen: "/mot-ngay-o-yen",
   congDongOYen: "/cong-dong-o-yen",
   vongTraTam: "/vong-tra-tam",
+  vuonTam: "/vuon-tam",
   conDuongMlf: "/con-duong-mlf",
   veMlf: "/ve-mlf",
   tamBietMangDen: "/ve-mlf/tam-biet-mang-den",
@@ -81,6 +82,7 @@ export const congDongMenu = [
   { label: "một ngày ở-yên", href: routes.motNgayOYen },
   { label: "trăng-yên", href: routes.trangYen },
   { label: "vòng-trà-tâm", href: routes.vongTraTam },
+  { label: "vườn-tâm", href: routes.vuonTam },
 ];
 
 export const mlfMenu = [
@@ -136,6 +138,7 @@ export const programsPanel = [
     items: [
       { label: "cộng đồng ở-yên", href: routes.congDongOYen },
       { label: "vòng-trà-tâm", href: routes.vongTraTam },
+      { label: "vườn-tâm", href: routes.vuonTam },
     ],
   },
 ];
@@ -170,6 +173,7 @@ export const mobileMenuSections = [
       { label: "một ngày ở-yên", href: routes.motNgayOYen },
       { label: "trăng-yên", href: routes.trangYen },
       { label: "vòng-trà-tâm", href: routes.vongTraTam },
+      { label: "vườn-tâm", href: routes.vuonTam },
     ],
   },
   {

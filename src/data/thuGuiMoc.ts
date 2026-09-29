@@ -417,20 +417,6 @@ export const entries: Entry[] = [
   },
   {
     no: 28,
-    date: "cuối trip",
-    name: "c. C",
-    role: "28 tuổi · Sài Gòn · viết những ngày ở mộc",
-    blocks: [
-      p(`Lúc ngồi gõ những dòng này, là ngày cuối cùng mình ở mộc trong trip lần này, ngồi bên bình cà phê pour-over mà anh Vũ chỉ cho mình cách pha, và chờ một cuộc điện thoại từ khách hàng của mình.`),
-      p(`Những trip trước, nếu như mình đến mộc để "bỏ chạy" và "tạm lánh" đi khỏi cuộc sống thường nhật, thì trip lần này, mình tự thấy mình mở lòng ra hơn, và bắt đầu đón nhận mọi thứ cởi mở hơn (dù vẫn thấy đau lòng và khổ sở ở một vài đoạn).`),
-      p("Cảm giác an ổn, giờ mình đã hiểu, không phải là cảm giác mọi thứ luôn nhẹ nhàng, dễ chịu, và dịu dàng, cảm giác an ổn là cảm giác mà mình vẫn có thể cảm thấy bình an với tất cả những xáo trộn bên trong cuộc sống đời thường."),
-      p("Vậy mà… sáng nay, mình ngồi đọc sách ngoài sân, Midnight nằm kế bên lười biếng cuộn tròn người lại, như một con gấu bông, thì mình chỉ bật cười. Mình nhận ra, có những khoảnh khắc, thời gian như ngưng lại tại cái lúc đó, như không còn chảy nữa."),
-      p("Ở mộc, mình nhận ra bài học về sự khác biệt và đón nhận những sự khác biệt của đời sống. Ở mộc, mình nhận ra, người ta chỉ có thể thương và quan tâm tới người khác một cách thật sự khi người ta đủ thương và quan tâm tới chính mình."),
-      p(`Đến cuối cùng, mình dùng lại câu này, lời văn này mà mình đã viết ở mộc 1 năm về trước: "Chỉ mong cho chân cứng, đá mềm. Chỉ mong bản thân sẽ đủ can đảm và tình yêu thương cuộc sống này để có thể bước đi và sống trọn vẹn - từng chút một - cuộc sống này."`),
-    ],
-  },
-  {
-    no: 29,
     date: "05.08.2024",
     name: "Mẹ & M.H (con)",
     role: "mẹ và con trong chuyến retreat",
@@ -446,7 +432,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 30,
+    no: 29,
     date: "12.08.2024",
     name: "5 người bạn U60",
     role: "những người bạn từ thuở xưa",
@@ -457,7 +443,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 31,
+    no: 30,
     date: "16–18.08.2024",
     name: "đoàn bác sĩ ĐH Y Dược TP.HCM",
     role: "11 người · team retreat",
@@ -477,7 +463,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 32,
+    no: 31,
     date: "26.08.2024",
     name: "V.T.M & V.T.T.A",
     role: "2 chị em · ở nhà Mộc hơn 10 ngày",
@@ -495,7 +481,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 33,
+    no: 32,
     date: "30.8.2024",
     name: "c. C",
     role: "33 tuổi · Đà Lạt · dừng-chân-an-trú 30 ngày",
@@ -508,7 +494,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 34,
+    no: 33,
     date: "05.09.2024",
     name: "Chị Đ.P",
     role: "retreat 43.5 · Trong Lặng, Ngoài Im",
@@ -530,7 +516,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 35,
+    no: 34,
     date: "08.10.2024",
     name: "c. Q.",
     role: "34 tuổi · sống tại Đức",
@@ -542,7 +528,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 36,
+    no: 35,
     date: "8.10.2024",
     name: "A.P",
     role: "retreat 48 · Hồ Thu Phẳng Lặng",
@@ -560,7 +546,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 37,
+    no: 36,
     date: "8–11.11.2024",
     name: "c. Tr",
     role: "28 tuổi · Kiên Giang · nhật ký 4 ngày",
@@ -604,7 +590,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 38,
+    no: 37,
     date: "29.11.2024",
     name: "ẩn danh",
     role: "Măng Đen · hãy mở vào phút cuối",
@@ -620,7 +606,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 39,
+    no: 38,
     date: "01.01.2025",
     name: "bé B.N",
     role: "retreat 58 🖤",
@@ -639,7 +625,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 40,
+    no: 39,
     date: "1/2025",
     name: "Gia đình TMT",
     role: "Đồi Mây Mơ Ngủ",
@@ -653,7 +639,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 41,
+    no: 40,
     date: "20.05.2025",
     name: "M.",
     role: `retreat "một trời vô ưu" · khách duy nhất của chuyến`,
@@ -670,7 +656,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 42,
+    no: 41,
     date: "17.06.2025",
     name: "a. T",
     role: "28 tuổi · sống tại Sài Gòn",
@@ -681,7 +667,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 43,
+    no: 42,
     date: "8.2025",
     name: "c. K",
     role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
@@ -693,7 +679,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 44,
+    no: 43,
     date: "thu 2025",
     name: "c. K",
     role: `32 tuổi · Sài Gòn · retreat "xuyến chi trên đồi gió"`,
@@ -706,7 +692,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 45,
+    no: 44,
     date: "9/2025",
     name: "vợ chồng C & K",
     role: "Đà Nẵng · một ngày mưa tháng 9",
@@ -716,6 +702,27 @@ export const entries: Entry[] = [
       p("Cảm ơn từng sự hiện diện nhỏ nhất trong ngôi nhà này, bé June, Midnight, Nâu, từng nhành hoa ngọn cỏ, từng đồ vật, từng mùi hương luôn cho tụi em cảm giác thật dễ chịu."),
       p(`Đêm trước khi ngủ, lúc thực hành lòng biết ơn, tụi em đã nói với nhau rằng, những ngày qua đúng là cuộc sống hạnh phúc trọn vẹn, đáng mơ ước, trong đời không mong gì hơn! Em tin rằng chuyến đi đến Mộc lần này là một lần được "đi để trở về" và là một cuộc gặp gỡ hội tụ thật nhiều nhân duyên.`),
       p("Biết ơn và trân trọng, — vợ chồng C & K"),
+    ],
+  },
+  {
+    no: 45,
+    date: "23.09.2025",
+    name: "c. C",
+    role: "28 tuổi · Sài Gòn · viết những ngày ở mộc",
+    blocks: [
+      p(`Lúc ngồi gõ những dòng này, là ngày cuối cùng mình ở mộc trong trip lần này, ngồi bên bình cà phê pour-over mà anh Vũ chỉ cho mình cách pha, và chờ một cuộc điện thoại từ khách hàng của mình.`),
+      p(`Những trip trước, nếu như mình đến mộc để "bỏ chạy" và "tạm lánh" đi khỏi cuộc sống thường nhật để cảm nhận lại hơi thở, để cảm nhận lại từng bước chân của mình, nên mình gần như lánh xa tất cả công việc hay những kết nối thường ngày. Thì trip lần này, mình tự thấy mình mở lòng ra hơn, và bắt đầu đón nhận mọi thứ cởi mở hơn (dù vẫn thấy đau lòng và khổ sở ở một vài đoạn). Thậm chí việc mình vẫn còn phải xử lý một số công việc ở nhà thì mình vẫn cảm thấy an ổn.`),
+      p("Cảm giác an ổn, là cảm giác quan trọng và ý nghĩa với mình. An ổn - giờ mình đã hiểu, không phải là cảm giác mọi thứ luôn nhẹ nhàng, dễ chịu, và dịu dàng, cảm giác an ổn là cảm giác mà mình vẫn có thể cảm thấy bình an với tất cả những xáo trộn bên trong cuộc sống đời thường. Bình an thậm chí là khi đang ở trong một cuộc tranh luận nảy lửa. Bên ngoài có thể động, nhưng bên trong thì lại cảm thấy tĩnh lặng và đón nhận mọi chuyện."),
+      p("Những ngày ở đây, lâu lâu, mình vẫn sẽ lạc mất đi hơi thở của mình, vài lúc, và chợt cảm thấy bất an vì những giấc mơ, vài lúc, và có những ngày, khi tỉnh dậy, mình không nhớ được mình đang ở đâu. Những ngày này, cứ như là mình đi đi lại lại giữa những phần khác nhau ở bên trong của chính mình. Có khi là đứa con nít, hạnh phúc nhìn dòng suối lấp la lấp lánh. Có khi lại là một người nào đó, nhìn trời đất hoà làm một và áng mây trôi che đi mất mặt trời và bầu trời trong xanh lại cảm thấy đầy sự tiếc nuối và chông chênh."),
+      p("Mình vẫn cứ hỏi đi hỏi lại mãi câu hỏi rằng, đời sống này, vì sao lại khó khăn đến như vậy. Đời sống này, đi đến tận cùng thì ý nghĩa của nó là gì. Những câu hỏi mà mình biết là có khi phải dành cả đời người để có thể trả lời."),
+      p("Vậy mà…sáng nay, mình ngồi đọc sách ngoài sân, Midnight nằm kế bên lười biếng cuộn tròn người lại, như một con gấu bông, thì mình chỉ bật cười. Mình nhận ra, có những khoảnh khắc, thời gian như ngưng lại tại cái lúc đó, như không còn chảy nữa. Mãi mãi dừng lại ở thời khắc ấy. Những thời khắc, nhỏ và giản dị, nhưng lại là những khắc nuôi dưỡng và mang mình về với đời sống này…như cái lúc nhìn nước lấp lánh, như cái lúc ngửa mặt lên trời nhìn tán cây che chở và ôm ấp lấy mình, như cái lúc thấy lòng thênh thang và êm ả khi nhìn thấy những đứa nhỏ cười vui, như cái lúc, mình ngửa mặt lên bầu trời và để cho ánh nắng sưởi ấm lấy mình. Tất cả những điều đó. Từng chút, từng chút một nuôi dưỡng một điều gì đó quan trọng và ý nghĩa với chính mình, bây giờ và mãi về sau."),
+      p(`Trước ngày lên mộc, được hỏi rằng có gì nhắn nhủ với mộc không? Câu hỏi đơn giản mà không biết sao, mình lại mất nhiều thời gian để suy nghĩ và trả lời. Mình viết rằng:`),
+      p(`Ở những đoạn mà em gọi là "kỳ lạ" của đời mình, không biết sao em lại đến, và nghĩ, hay chỉ là tự nhiên mộc xuất hiện trong đầu của em (từ hồi mộc còn là quán cà phê ở Sài Gòn cơ). Kiểu như, vũ trụ bảo đến mộc để kết thúc một chương nào đó của hành trình mình đang đi, và chuẩn bị cho một chương kế tiếp của mình.`),
+      p("Dạo này em ít viết, chuyển sang đọc lại những gì mình viết nhiều hơn. Và bằng cách nào đó, những câu chữ mà em từng viết khi ở mộc vẫn là những câu chữ khiến cho chính bản thân em được chạm và được nhìn thấy chính mình nhiều nhất, vượt qua tất cả những vai trò, trách nhiệm, và kỳ vọng của người khác về mình và của chính mình về mình. Em thấy chính em nhiều hơn, version purely là mình, không pha trộn bất kỳ điều gì khác, version mà mình vừa thương, vừa thích, lại vừa ghét cùng một lúc và thậm chí chính cảm xúc đó em cũng thấy mình vẫn okie với tất cả (lạ ghê)."),
+      p("Cái khúc cua này cũng vậy, sáng đọc chủ đề của chuyến đi, em bật cười, vì nó cũng là câu hỏi em hỏi chính mình gần đây. Có điều gì, cần phải kết thúc, và có hành trình nào, cần mình bước đi tiếp đây?"),
+      p("Ở mộc, mình nhận ra bài học về sự khác biệt và đón nhận những sự khác biệt của đời sống. Ở mộc, mình nhận ra, người ta chỉ có thể thương và quan tâm tới người khác một cách thật sự khi người ta đủ thương và quan tâm tới chính mình. Cái gì có ở bên trong thì mới có thể tràn ra bên ngoài và chạm vào người khác. Chắc vậy, nên lần nào đến đây, điều ghé vào và chạm vào mình đầu tiên là những cơn đau. Cơn đau của việc mình buông xuống những kỳ vọng, những mong cầu, những nhãn dán, để mình chỉ còn là mình, một phiên bản đơn giản nhất, một phiên bản mà mình không còn phải là bất kỳ ai khác, để rồi từng chút, từng chút một, mình làm quen lại với chính mình thêm một chút và nhìn thấy chính mình nhiều hơn. Và với mình, nó là hành trình đầy khó khăn nhưng cũng đầy niềm vui và hy vọng."),
+      p(`Đến cuối cùng, mình dùng lại câu này, lời văn này mà mình đã viết ở mộc 1 năm về trước. Chỉ mong cho chân cứng, đá mềm. Chỉ mong bản thân sẽ đủ can đảm và tình yêu thương cuộc sống này để có thể bước đi và sống trọn vẹn - từng chút một - cuộc sống này.`),
+      p("Ngày chiếc lá mùa thu bên trong mình rơi xuống, chạm nhẹ vào mặt hồ và mình ở đó, nhìn gợn sóng lan ra từng đợt, từng đợt, mà lòng bình thản ôm lấy tất cả mọi thứ vào lòng. Hít một hơi thật sâu, thở ra nhẹ nhàng, và tự vỗ vai chính mình. Đã đi một hành trình thật khó, và thật xa rồi."),
     ],
   },
   {

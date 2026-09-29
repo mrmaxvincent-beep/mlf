@@ -15,4 +15,12 @@ export const messages: Message[] = [
   { id: "06", text: "bạn không cần phải ổn ngay bây giờ." },
   { id: "07", text: "ngồi xuống, để nghe rõ chính mình." },
   { id: "08", text: "hôm nay, chỉ cần vừa đủ." },
+  { id: "09", text: "không phải chuyện gì cũng cần giải quyết ngay." },
+  { id: "10", text: "yên, không có nghĩa là đứng lại." },
+  { id: "11", text: "một tách trà, và một khoảng lặng." },
+  { id: "12", text: "buông một nhịp, để thấy rõ hơn." },
+  { id: "13", text: "im lặng cũng là một câu trả lời." },
+  { id: "14", text: "về lại với hơi thở, khi lòng rối." },
+  { id: "15", text: "mỗi ngày, một khoảng dừng nhỏ." },
+  { id: "16", text: "ở-yên là trở về, không phải trốn đi." },
 ];

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
@@ -8,12 +9,33 @@ import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 import { posts } from "@/data/tuanDuBlog";
 
-export const metadata: Metadata = {
-  title: "người đi qua",
-  description: "ghi chép & chia sẻ từ những chuyến tuần-du.",
-};
+const title = "người đi qua";
+const baseDescription = "ghi chép & chia sẻ từ những chuyến tuần-du.";
 
-export default function TuanDuBlogPage() {
+function resolve(path: string[]) {
+  if (!path[0]) return posts[0] ?? null;
+  return posts.find((p) => p.slug === path[0]) ?? null;
+}
+
+export function generateStaticParams() {
+  return [{ path: [] }, ...posts.map((p) => ({ path: [p.slug] }))];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ path?: string[] }> }): Promise<Metadata> {
+  const { path = [] } = await params;
+  const post = resolve(path);
+  if (!post) return {};
+  return {
+    title: path.length ? `${post.title} · ${title}` : title,
+    description: baseDescription,
+  };
+}
+
+export default async function TuanDuBlogPage({ params }: { params: Promise<{ path?: string[] }> }) {
+  const { path = [] } = await params;
+  const post = resolve(path);
+  if (!post) notFound();
+
   return (
     <>
       <Header />
@@ -51,7 +73,7 @@ export default function TuanDuBlogPage() {
         </Reveal>
       </div>
 
-      <BlogReader posts={posts} />
+      <BlogReader posts={posts} initialSlug={post.slug} />
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
         <Link href={routes.tuanDu} className="cta-btn">

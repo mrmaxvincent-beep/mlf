@@ -12,6 +12,7 @@ const q = (text: string): Block => ({ type: "q", text });
 const a = (text: string): Block => ({ type: "a", text });
 
 export type Post = {
+  slug: string;
   tag: string;
   date: string;
   name: string;
@@ -22,6 +23,7 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "ben-cho-ben-doi",
     tag: "tuần-du 01",
     date: "kỳ 01",
     name: "bến chờ, bến đợi",
@@ -65,6 +67,7 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: "mot-neo-truc-lam",
     tag: "tuần-du 03",
     date: "kỳ 03",
     name: "một nẻo Trúc Lâm",
@@ -140,6 +143,7 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: "3-chuyen-tuan-du",
     tag: "kể chuyện",
     date: "tuần-du",
     name: "3 chuyến tuần-du",

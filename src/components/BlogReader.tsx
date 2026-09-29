@@ -1,27 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Post } from "@/data/tuanDuBlog";
 
-/** Sidebar post picker + reading pane, with a brief fade on switch — "người đi qua" blog. */
-export function BlogReader({ posts }: { posts: Post[] }) {
-  const [active, setActive] = useState(0);
+/** Sidebar post picker + reading pane, with a brief fade on switch — "người đi qua" blog. URL là /tuan-du/blog/[slug] nên share thẳng được một bài. */
+export function BlogReader({ posts, initialSlug }: { posts: Post[]; initialSlug: string }) {
+  const router = useRouter();
+  const foundIndex = posts.findIndex((p) => p.slug === initialSlug);
+  const active = foundIndex === -1 ? 0 : foundIndex;
   const [fading, setFading] = useState(false);
 
-  const prevActive = useRef<number | null>(null);
+  const prevSlug = useRef<string | null>(null);
   useEffect(() => {
-    if (prevActive.current !== null && prevActive.current !== active) {
+    setFading(false);
+    if (prevSlug.current !== null && prevSlug.current !== initialSlug) {
       window.scrollTo({ top: 400, behavior: "smooth" });
     }
-    prevActive.current = active;
-  }, [active]);
+    prevSlug.current = initialSlug;
+  }, [initialSlug]);
 
   function selectPost(i: number) {
     if (i === active) return;
     setFading(true);
     setTimeout(() => {
-      setActive(i);
-      setFading(false);
+      router.push(`/tuan-du/blog/${posts[i].slug}`, { scroll: false });
     }, 180);
   }
 

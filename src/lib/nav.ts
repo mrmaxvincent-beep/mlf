@@ -16,7 +16,7 @@ export const routes = {
   imLangChuNghia: "/be-still/im-lang-chu-nghia",
   clariTea: "/be-still/clari-tea",
   phiaSang: "/be-still/phia-sang",
-  nhatHien: "/be-still/nhat-hien",
+  nhatHien: "/thuc-tap/nhat-hien",
   teaMind: "/tea-mind",
   teaMindTra: "/tea-mind/tra",
   teaMindGom: "/tea-mind/gom",
@@ -39,7 +39,6 @@ export const routes = {
   thucTapNepNha: "/thuc-tap/nep-nha",
   thucTapLoiNhacOYen: "/thuc-tap/loi-nhac-o-yen",
   thucTapUongTraCungTam: "/thuc-tap/uong-tra-cung-tam",
-  thucTapNhatHien: "/thuc-tap/nhat-hien",
   conDuongMlf: "/con-duong-mlf",
   veMlf: "/ve-mlf",
   tamBietMangDen: "/ve-mlf/tam-biet-mang-den",
@@ -81,7 +80,7 @@ export const thucTapMenu = [
   { label: "nếp nhà", href: routes.thucTapNepNha },
   { label: "lời nhắc ở-yên", href: routes.thucTapLoiNhacOYen },
   { label: "uống trà cùng tâm", href: routes.thucTapUongTraCungTam },
-  { label: "nhất-hiện", href: routes.thucTapNhatHien },
+  { label: "nhất-hiện", href: routes.nhatHien },
 ];
 
 export const thuVienMenu = [
@@ -179,7 +178,7 @@ export const mobileMenuSections = [
       { label: "nếp nhà", href: routes.thucTapNepNha },
       { label: "lời nhắc ở-yên", href: routes.thucTapLoiNhacOYen },
       { label: "uống trà cùng tâm", href: routes.thucTapUongTraCungTam },
-      { label: "nhất-hiện", href: routes.thucTapNhatHien },
+      { label: "nhất-hiện", href: routes.nhatHien },
     ],
   },
   {

@@ -16,6 +16,7 @@ export const entries: Entry[] = [
       p("Mình thực sự cảm nhận được thế nào là sống và sự bình yên khi cho phép tâm trí mình được lắng lại và hòa vào nhịp điệu sinh hoạt cùng nhà Mộc mỗi ngày."),
       p("Sẽ rất nhớ Jun với điệu bộ xoắn xuýt như đứa trẻ khi chờ được ăn hay đòi chơi cùng, nhớ hương vị những bữa ăn và màu sắc rực rỡ của bàn ăn như mang cả khu vườn và bốn mùa vào từng bữa ăn của nhà Mộc."),
       p("Mình sẽ mang theo những điều nhỏ bé mà kỳ diệu này tiếp tục cuộc hành trình của mình. Nếu có bán bánh tráng nước ở xứ Phần Lan đắt khách sẽ livestream về nhà Mộc nhé. Cảm ơn và nhất định sẽ gặp lại nhé!"),
+      p("Chúc MLF và các thiên thần nhà Mộc một hành trình mới sẽ gặp gỡ và chạm tới thật nhiều vị khách thú vị tại Măng Đen nha!"),
     ],
   },
   {

@@ -723,6 +723,45 @@ export const entries: Entry[] = [
   },
   {
     no: 37,
+    date: "23.09.2024",
+    name: "ẩn danh",
+    role: "retreat 46 · Lối Cũ Đã Thu",
+    blocks: [
+      day("Ngày 1: NÔN NAO"),
+      p("Mình vừa đáp chuyến bay từ Sài Gòn đến Pleiku, rồi đi một đoạn đường khá dài đến Măng Đen. Cái nhìn đầu tiên của mình về vùng đất này là trông thật hùng vĩ, nếu ví Đà Lạt như một nàng công chúa nhẹ nhàng thơ mộng, thì Măng Đen như một chàng hoàng tử oai nghiêm, khiêm nhường và không kém phần lạnh lùng."),
+      p("Ngày mình đến mưa rơi rả rích cả ngày, sương mù giăng kín lối đi, một cảm giác mờ mờ ảo ảo như đang bước vào một khu rừng cổ tích vậy."),
+      p("Mặc dù đêm trước chỉ ngủ có 2 tiếng và di chuyển một đoạn đường dài đến đây, cũng có chút thấm mệt đấy, nhưng dường như lòng hào hứng đến được Mộc Little Farm của mình nó đã che lấp đi sự yểu xìu đấy rồi! ^^"),
+      p("Ấn tượng ban đầu với mình chính là vườn hoa ngay chỗ để xe, mình thích lắm, không biết phải diễn tả sao, nhưng mỗi lần chạy xe vào, ngồi trên xe qua ô cửa kính nhìn qua làm mình thật hạnh phúc. Đây có lẽ cũng là ấn tượng mạnh mẽ nhất của mình ở Mộc."),
+      p("Vừa bước xuống xe đã có ngay một em cún trắng muốt chạy lại vẫy đuôi mừng rỡ. Em rất là hiền luôn và cũng hiếu khách cực kỳ. Mình thích lắm!"),
+      p("Bước chân vào nhà Mộc, vẫn là cái cảm giác đó, cái cảm giác của 2 năm về trước khi mình lần đầu bước chân vào quán cafe của Mộc ở Sài Gòn, một thứ cảm xúc thật nhẹ nhàng, ấm áp và đầy ắp sự yêu thương. <3"),
+      day("Ngày 2: CẢM XÚC"),
+      p("Những ngày ở Mộc, mình cảm thấy như mình đang được đi một chuyến phiêu lưu vào sâu bên trong mình, mình khám phá được rất nhiều điều mới mẻ còn ẩn sâu bên trong, nó dường như làm mình vỡ òa cảm xúc. Thật hạnh phúc!!!"),
+      p("Mình tiếp xúc sâu với chính mình, mình được vẽ tranh, vẽ bất cứ thứ gì mà mình nghĩ ra trong đầu. Và... mình phát hiện mình có nhiều suy nghĩ trong đầu thật, có nhiều mong muốn và luôn muốn thể hiện hết các mong muốn lên bức tranh."),
+      p("Dường như, những thứ mình cần thay đổi đang dần được hiện ra một cách rõ nét hơn..."),
+      p("Có lẽ, điều đọng lại trong mình nhiều nhất vào ngày hôm ấy chính là buổi được trò chuyện cùng anh Tâm (một người anh, giữ trọng trách nâng đỡ tinh thần của nhà Mộc)."),
+      p("Những tưởng mình đã mạnh mẽ nhiều rồi, nhưng thực sự thì vẫn còn nhiều vấn đề bên trong mà ngay cả bản thân mình cũng không biết. Cảm ơn anh nhiều lắm!"),
+      day("Ngày 3: THÂN THIẾT"),
+      p("Ngày hôm nay, mình cảm thấy thân thiết với mọi người nhiều hơn."),
+      p("Tụi mình cùng dùng bữa tối trên chiếc chiếu được trải dưới đất, làm mình nhớ đến những bữa cơm ngày xưa, thật đậm chất Việt Nam. Xong rồi mọi người còn ca hát, giống y như mấy ông hay nhậu ở dưới quê ^^"),
+      p("Mọi người bày tỏ cởi mở hơn, không còn thấy nhút nhát rụt rè như những ngày đầu nữa."),
+      p("Và dường như, mình bắt đầu có một chút dính mắc với những con người nơi đây rồi!!!…"),
+      p("À, ngày hôm nay mình còn được biết thêm nhiều khía cạnh về những vấn đề mình đang quan tâm nữa, những câu trả lời mà mình khó thể nào tìm được ở môi trường sống của mình."),
+      p("Biết ơn mọi người thật nhiều ạ!"),
+      day("Ngày 4: BIẾT ƠN"),
+      p("Ngày hôm nay mình sẽ không nói về những cảm xúc của mình nữa, mà sẽ dành cho sự biết ơn."),
+      p("Xin biết ơn thật nhiều:"),
+      p("— Mỗi nhân duyên vô cùng đẹp đẽ này."),
+      p("— Những con người nhà Mộc: anh Tâm, anh Thuận, anh Vũ, cô Ân đã dành thiệt nhiều tình yêu thương cho mình và mọi người."),
+      p("— Bé Th. đã đi cùng chị."),
+      p("— Chị Q. đã cho em mở mang tầm mắt hơn về các nước ngoài Việt Nam."),
+      p("— Em June, Midnight để chị biết rằng chị cũng yêu quý động vật."),
+      p("Mình đã thực sự sống trọn vẹn từng giây phút ở MLF này, năng lượng cũng đã nạp đủ rồi, về thôi, về để tiếp tục sứ mệnh của mình thôi nào!"),
+      p("Có những người có thể cả cuộc đời này chúng ta chỉ có thể được gặp 1 lần, nhưng có lẽ sẽ vẫn ở mãi trong tâm trí ta, không thể nào quên được!!!"),
+      p("Hết còn ạ!"),
+    ],
+  },
+  {
+    no: 38,
     date: "08.10.2024",
     name: "c. Q.",
     role: "34 tuổi · sống tại Đức",
@@ -734,7 +773,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 38,
+    no: 39,
     date: "8.10.2024",
     name: "A.P",
     role: "retreat 48 · Hồ Thu Phẳng Lặng",
@@ -752,7 +791,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 39,
+    no: 40,
     date: "8–11.11.2024",
     name: "c. Tr",
     role: "28 tuổi · Kiên Giang · nhật ký 4 ngày",
@@ -796,7 +835,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 40,
+    no: 41,
     date: "29.11.2024",
     name: "ẩn danh",
     role: "Măng Đen · hãy mở vào phút cuối",
@@ -812,7 +851,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 41,
+    no: 42,
     date: "01.01.2025",
     name: "bé B.N",
     role: "retreat 58 🖤",
@@ -831,7 +870,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 42,
+    no: 43,
     date: "1/2025",
     name: "Gia đình TMT",
     role: "Đồi Mây Mơ Ngủ",
@@ -845,7 +884,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 43,
+    no: 44,
     date: "26.02.2025",
     name: "ẩn danh",
     role: "retreat đầu năm · Khói Trời Ngun Ngút",
@@ -893,7 +932,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 44,
+    no: 45,
     date: "20.05.2025",
     name: "M.",
     role: `retreat "một trời vô ưu" · khách duy nhất của chuyến`,
@@ -910,7 +949,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 45,
+    no: 46,
     date: "17.06.2025",
     name: "a. T",
     role: "28 tuổi · sống tại Sài Gòn",
@@ -921,7 +960,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 46,
+    no: 47,
     date: "8.2025",
     name: "c. K",
     role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
@@ -933,7 +972,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 47,
+    no: 48,
     date: "thu 2025",
     name: "c. K",
     role: `32 tuổi · Sài Gòn · retreat "xuyến chi trên đồi gió"`,
@@ -951,7 +990,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 48,
+    no: 49,
     date: "9/2025",
     name: "vợ chồng C & K",
     role: "Đà Nẵng · một ngày mưa tháng 9",
@@ -964,7 +1003,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 49,
+    no: 50,
     date: "23.09.2025",
     name: "c. C",
     role: "28 tuổi · Sài Gòn · viết những ngày ở mộc",
@@ -985,7 +1024,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 50,
+    no: 51,
     date: "17.11.2025",
     name: "N.H.Y",
     role: "Măng Đen",
@@ -996,7 +1035,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 51,
+    no: 52,
     date: "10–13.01.2026",
     name: "c. A",
     role: "TP.HCM · nhật ký 4 ngày ở Măng Đen",
@@ -1016,7 +1055,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 52,
+    no: 53,
     date: "13.01.2026",
     name: "c. Ng",
     role: "TP.HCM · retreat 81",
@@ -1027,7 +1066,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 53,
+    no: 54,
     date: "01.02.2026",
     name: "ẩn danh",
     role: "Sài Gòn · Viết gửi mộc · một cái cây, đang lớn",
@@ -1095,7 +1134,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 54,
+    no: 55,
     date: "TP.HCM",
     name: "Q.N",
     role: "vị khách 3 lần tới mlf · lược trích nhật ký",
@@ -1116,7 +1155,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 55,
+    no: 56,
     date: "26.02.2026",
     name: "A.",
     role: "retreat 82 · cùng mẹ",
@@ -1129,7 +1168,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 56,
+    no: 57,
     date: "17.03.2026",
     name: "L.",
     role: "Bắc Ninh · retreat hàm-dưỡng 77 · xuân khẽ dưới tán rừng",
@@ -1144,7 +1183,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 57,
+    no: 58,
     date: "31.05.2026",
     name: "ẩn danh",
     role: "lưu trú 4 ngày · chuyến đi bất ngờ",
@@ -1169,7 +1208,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 58,
+    no: 59,
     date: "7/2026",
     name: "C.",
     role: "TP.HCM · hai tuần work from mộc",
@@ -1209,7 +1248,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 60,
+    no: 61,
     date: "08.09.2026",
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
@@ -1223,7 +1262,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 61,
+    no: 62,
     date: "08–09.09.2026",
     name: "B.M.Q",
     role: "Măng Đen",
@@ -1235,7 +1274,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 59,
+    no: 60,
     date: "08.2026",
     name: "ba người bạn",
     role: "nhật ký chung · hai chuyến đi",

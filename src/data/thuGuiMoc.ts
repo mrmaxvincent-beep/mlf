@@ -493,6 +493,35 @@ export const entries: Entry[] = [
   },
   {
     no: 32,
+    date: "26.08.2024",
+    name: "Anh Tâm",
+    role: "gửi tặng cô · retreat Nắng-Chiều-Song-Song",
+    blocks: [
+      day("Thương mình!"),
+      p(`Con đã nghe, đã chia sẻ, đã thấu, đã cảm nhận hai tiếng "thương mình" trong vô số kể lần. Nhưng những ngày qua, sống cùng cô O., cô H. và cả C (một cô gái trong chương trình retreat dài hạn 30 ngày), lần đầu tiên con thấy thương mình ghê lắm.`),
+      p("À, thì ra có những lúc muốn thương mình nhưng cũng không thể nào thương được. Như sợi dây thun, bị kéo căng, khi bung ra thì không thể nào quay lại như dáng hình ban đầu. Chỉ có ở trong những đêm lặng lẽ, nghe tiếng cựa mình theo từng nhịp khắc đồng hồ, với đôi mắt trắng, trái tim chật chội ta mới thấy được sự bất lực của bản thân: khi muốn thương mình, cho mình một giấc ngủ cũng trở nên khó khăn tới dường nào."),
+      p("Những đêm con nằm xuống, ngủ ngon lành, chợt ngẫm lại mới thấy quý siết bao. Rồi con nghĩ về những ham muốn và cả những vẩn vơ trong đầu, bất chợt tất cả quỳ rạp xuống, quy hàng một điều bé nhỏ: thương mình."),
+      p("Con mong rằng cái duyên gặp gỡ C. ở đây, tại nhà mộc - cô gái đầy nghị lực đã vượt lên những đêm mất ngủ và cả bệnh tật để hiểu và thương mình, sẽ là chút động lực để cô thấy rằng mình cũng có thể. Con mong thông qua từng bữa ăn chăm chút của Vũ, cô sẽ cảm nhận được rằng mình được quan tâm và yêu thương rất nhiều. Con mong những đúc rút đầy chiêm nghiệm của Thuận sẽ giúp cô hiểu hơn về mình một chút. Con mong những sự tỉ mẫn của Ân sẽ nhắc nhớ cô về những điều nhỏ xíu nhưng mang ý nghĩa nhiệm màu. Con mong sự tĩnh tại của con sẽ giúp cô thấu hiểu cuộc đời dẫu lắm những bể dâu, nhưng tới bờ bên kia sẽ là bình an."),
+      p(`Trong những ngày qua, chúng ta nói nhiều về chữ "Buông". Nhưng buông làm sao được khi ta còn mong muốn quá nhiều?`),
+      p("Con mong những chất liệu bình an ở đây sẽ theo chân cô về lại tổ ấm, để quy hoạch lại cuộc sống của mình. Để mỗi ngày trôi qua không lãng phí. Ta có quyền sáng tạo, tô điểm cho cuộc sống của mình trong từng phút giây."),
+      p(`Chỉ khi ta ngẫm cho đủ chữ "Thương", mới thấy mình chưa bao giờ đủ để "Thương" mình. Một đóa hoa cần nước và ánh sáng mỗi ngày. Thế "đóa hoa" trong lòng mình, có được tưới tắm đủ đầy chưa?`),
+      p("Con mong cô nhớ rằng bản thân xứng đáng được yêu thương. Hãy dành những khoảng thời gian để được là mình, được ở với chính mình, bỏ lại những bận bịu, những gánh vác con cháu... để tự do hơn, trọn vẹn hơn với khoảng thời gian hữu hạn mà chúng ta đang có."),
+      p(`Cuộc đời có mấy khi là "vừa vặn", thế nên con mong cô luôn nhớ chữ "Chấp nhận", chữ "Thế à" mà chúng ta đã cùng nói cho nhau nghe trong buổi chiều mưa ngày hôm qua. Buông không chỉ là bỏ lại hết mọi thứ để không còn gì bận tậm. Buông là cởi bỏ lại những suy nghĩ, những niềm tin, những thói quen cũ... để cảm nhận được sự tự do thật sự từ sâu trong tâm trí. Để những vướng bận, nhìn lại không chỉ là trách nhiệm. Để những khó chịu, nhìn lại hóa ra những lầm tưởng thường tình. Để tự thắp ngọn đèn của mình mà soi tỏ lại từng việc nhỏ nhặt, để thấy thì ra là "thế à".`),
+      p(`Hành trình này chỉ có thể bắt đầu từng chút, từng chút một... và cần rất nhiều sự kiên nhẫn. Mỗi lần thấy mình như cũ, cô hãy nhớ rằng tụi con cũng đã nỗ lực "thương mình" thế nào, tụi con đã làm được, cô cũng vậy!`),
+      p("Đóa hoa buồn bã ngày nào, khi được chăm sóc sẽ lại rạng ngời trở lại."),
+      p("Con mong cô thắp lên một niềm tin, rằng mình có thể tự chữa khỏi cho mình. Mà không lệ thuộc vào bất kỳ sự hỗ trợ nào."),
+      p("Đóa hoa sẽ tự vực dậy, nếu chưa ổn, tức là vẫn chưa đủ."),
+      p("Cần tưới tắm và dành nhiều sự chăm sóc nhiều hơn nữa."),
+      p("Con mong gặp lại cô với thật nhiều năng lượng."),
+      p("Xin hãy tin vào chính mình, tựa vào những yêu thương quanh mình cô nhé."),
+      p("Cảm ơn cô và cô H. rất nhiều đã yêu thương tụi con như con cháu trong nhà."),
+      p("Cảm ơn cô H. đã cho tụi con thấy tình yêu thương thật lớn dành cho người chị của mình, cô đã làm tất cả để đồng hành cùng chị mình, mang cô O. lên đây cùng mlf, tình thương ấy là điều mà tụi con phải học hỏi và soi chiếu."),
+      p("Nguyện cầu bình an cho tất cả mọi người!"),
+      p("— Anh Tâm mlf gửi tặng cô và mọi người, retreat Nắng-Chiều-Song-Song, 26.08.2024"),
+    ],
+  },
+  {
+    no: 33,
     date: "30.8.2024",
     name: "c. C",
     role: "33 tuổi · Đà Lạt · dừng-chân-an-trú 30 ngày",
@@ -505,7 +534,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 33,
+    no: 34,
     date: "05.09.2024",
     name: "Chị Đ.P",
     role: "retreat 43.5 · Trong Lặng, Ngoài Im",
@@ -527,7 +556,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 34,
+    no: 35,
     date: "08.10.2024",
     name: "c. Q.",
     role: "34 tuổi · sống tại Đức",
@@ -539,7 +568,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 35,
+    no: 36,
     date: "8.10.2024",
     name: "A.P",
     role: "retreat 48 · Hồ Thu Phẳng Lặng",
@@ -557,7 +586,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 36,
+    no: 37,
     date: "8–11.11.2024",
     name: "c. Tr",
     role: "28 tuổi · Kiên Giang · nhật ký 4 ngày",
@@ -601,7 +630,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 37,
+    no: 38,
     date: "29.11.2024",
     name: "ẩn danh",
     role: "Măng Đen · hãy mở vào phút cuối",
@@ -617,7 +646,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 38,
+    no: 39,
     date: "01.01.2025",
     name: "bé B.N",
     role: "retreat 58 🖤",
@@ -636,7 +665,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 39,
+    no: 40,
     date: "1/2025",
     name: "Gia đình TMT",
     role: "Đồi Mây Mơ Ngủ",
@@ -650,7 +679,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 40,
+    no: 41,
     date: "26.02.2025",
     name: "ẩn danh",
     role: "retreat đầu năm · Khói Trời Ngun Ngút",
@@ -698,7 +727,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 41,
+    no: 42,
     date: "20.05.2025",
     name: "M.",
     role: `retreat "một trời vô ưu" · khách duy nhất của chuyến`,
@@ -715,7 +744,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 42,
+    no: 43,
     date: "17.06.2025",
     name: "a. T",
     role: "28 tuổi · sống tại Sài Gòn",
@@ -726,7 +755,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 43,
+    no: 44,
     date: "8.2025",
     name: "c. K",
     role: "Sài Gòn · mùa thu · học cách can đảm hơn một chút",
@@ -738,7 +767,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 44,
+    no: 45,
     date: "thu 2025",
     name: "c. K",
     role: `32 tuổi · Sài Gòn · retreat "xuyến chi trên đồi gió"`,
@@ -756,7 +785,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 45,
+    no: 46,
     date: "9/2025",
     name: "vợ chồng C & K",
     role: "Đà Nẵng · một ngày mưa tháng 9",
@@ -769,7 +798,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 46,
+    no: 47,
     date: "23.09.2025",
     name: "c. C",
     role: "28 tuổi · Sài Gòn · viết những ngày ở mộc",
@@ -790,7 +819,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 47,
+    no: 48,
     date: "17.11.2025",
     name: "N.H.Y",
     role: "Măng Đen",
@@ -801,7 +830,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 48,
+    no: 49,
     date: "10–13.01.2026",
     name: "c. A",
     role: "TP.HCM · nhật ký 4 ngày ở Măng Đen",
@@ -821,7 +850,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 49,
+    no: 50,
     date: "13.01.2026",
     name: "c. Ng",
     role: "TP.HCM · retreat 81",
@@ -832,7 +861,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 50,
+    no: 51,
     date: "TP.HCM",
     name: "Q.N",
     role: "vị khách 3 lần tới mlf · lược trích nhật ký",
@@ -853,7 +882,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 51,
+    no: 52,
     date: "26.02.2026",
     name: "A.",
     role: "retreat 82 · cùng mẹ",
@@ -866,7 +895,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 52,
+    no: 53,
     date: "17.03.2026",
     name: "L.",
     role: "Bắc Ninh · retreat hàm-dưỡng 77 · xuân khẽ dưới tán rừng",
@@ -881,7 +910,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 53,
+    no: 54,
     date: "7/2026",
     name: "C.",
     role: "TP.HCM · hai tuần work from mộc",
@@ -921,7 +950,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 55,
+    no: 56,
     date: "08.09.2026",
     name: "Chú P.",
     role: "Sài Gòn · retreat 85",
@@ -935,7 +964,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 56,
+    no: 57,
     date: "08–09.09.2026",
     name: "B.M.Q",
     role: "Măng Đen",
@@ -947,7 +976,7 @@ export const entries: Entry[] = [
     ],
   },
   {
-    no: 54,
+    no: 55,
     date: "08.2026",
     name: "ba người bạn",
     role: "nhật ký chung · hai chuyến đi",

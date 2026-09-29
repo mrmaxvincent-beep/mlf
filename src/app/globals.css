@@ -2500,7 +2500,7 @@ details[open] > summary .acc-icon {
   .sched-item + .sched-item { border-left: 1px solid var(--color-mist); }
 }
 
-/* lời nhắc ở-yên: 1 ảnh lớn đang chọn + dải thumbnail bên dưới để chuyển */
+/* lời nhắc ở-yên: 1 ảnh lớn + dải thumbnail, gọn trong 1 khung — tải/chia sẻ đặt góc ảnh */
 .wallpaper-feature {
   max-width: 640px;
   margin: 0 auto;
@@ -2516,25 +2516,45 @@ details[open] > summary .acc-icon {
 }
 .wallpaper-feature__card {
   position: relative;
-  width: min(100%, 380px);
+  width: min(100%, 300px);
   aspect-ratio: 4 / 5;
   border-radius: 1.4rem;
   overflow: hidden;
   background: var(--color-photo-placeholder);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
-.wallpaper-feature__actions {
+.wallpaper-feature__corner {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
   display: flex;
+  gap: 0.5rem;
+  z-index: 1;
+}
+.wallpaper-icon-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1.6rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-ink);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  transition: background 0.2s var(--ease-standard);
+}
+.wallpaper-icon-btn:hover { background: #fff; }
+.wallpaper-icon-btn--disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 .wallpaper-thumbs {
   display: flex;
-  gap: 0.6rem;
-  margin-top: 2.2rem;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
   padding-bottom: 0.4rem;
   overflow-x: auto;
   max-width: 100%;
@@ -2544,9 +2564,9 @@ details[open] > summary .acc-icon {
 .wallpaper-thumb {
   position: relative;
   flex: 0 0 auto;
-  width: 3.6rem;
+  width: 3rem;
   aspect-ratio: 4 / 5;
-  border-radius: 0.6rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   border: 2px solid transparent;
   padding: 0;

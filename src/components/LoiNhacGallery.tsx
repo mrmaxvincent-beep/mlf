@@ -88,23 +88,23 @@ export function LoiNhacGallery({ messages }: { messages: Message[] }) {
     <div className="wallpaper-feature">
       <div className="wallpaper-feature__stage">
         <div className="wallpaper-feature__card">
-          <WallpaperCard message={current} index={active} fontSize="1.5rem" />
-        </div>
-      </div>
+          <WallpaperCard message={current} index={active} fontSize="1.3rem" />
 
-      <div className="wallpaper-feature__actions">
-        {current.src ? (
-          <a href={current.src} download className="cta-btn cta-btn--solid">
-            tải hình nền <DownloadIcon />
-          </a>
-        ) : (
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            ảnh đang cập nhật
-          </span>
-        )}
-        <button className="cta-btn" onClick={() => share(current)} style={{ background: "none", color: "var(--color-ink)" }}>
-          chia sẻ <ShareIcon />
-        </button>
+          <div className="wallpaper-feature__corner">
+            <button className="wallpaper-icon-btn" onClick={() => share(current)} aria-label="chia sẻ">
+              <ShareIcon />
+            </button>
+            {current.src ? (
+              <a href={current.src} download className="wallpaper-icon-btn" aria-label="tải hình nền">
+                <DownloadIcon />
+              </a>
+            ) : (
+              <span className="wallpaper-icon-btn wallpaper-icon-btn--disabled" title="ảnh đang cập nhật" aria-label="ảnh đang cập nhật">
+                <DownloadIcon />
+              </span>
+            )}
+          </div>
+        </div>
       </div>
 
       <div className="wallpaper-thumbs">

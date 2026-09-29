@@ -29,7 +29,7 @@ export default function Page() {
         </p>
       </div>
 
-      <Reveal style={{ marginTop: "3rem", marginBottom: "6rem" }}>
+      <Reveal style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <LoiNhacGallery messages={messages} />
       </Reveal>
 

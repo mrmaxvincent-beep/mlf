@@ -123,10 +123,6 @@ export default function PhiaSangPage() {
           <Link className="mono-link" href={routes.clariTea} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             clari-tea
           </Link>
-          <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.nhatHien} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            nhất-hiện
-          </Link>
         </div>
       </div>
 

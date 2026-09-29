@@ -128,7 +128,6 @@ export const programsPanel = [
       { label: "im lặng, chữ nghĩa", href: routes.imLangChuNghia },
       { label: "clari-tea", href: routes.clariTea },
       { label: "phía sáng", href: routes.phiaSang },
-      { label: "nhất-hiện", href: routes.nhatHien },
     ],
   },
   {

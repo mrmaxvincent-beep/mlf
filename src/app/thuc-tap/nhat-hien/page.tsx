@@ -84,29 +84,6 @@ export default function NhatHienPage() {
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-ink)", marginTop: "0.7rem" }}>nhathien.com</span>
       </div>
 
-      <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1.4rem" }}>
-          tham khảo thêm hành trình khác
-        </span>
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: "1rem", flexWrap: "wrap" }}>
-          <Link className="mono-link" href={routes.khaiTam} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            khai tâm
-          </Link>
-          <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.imLangChuNghia} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            im lặng, chữ nghĩa
-          </Link>
-          <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.clariTea} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            clari-tea
-          </Link>
-          <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.phiaSang} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-            phía sáng
-          </Link>
-        </div>
-      </div>
-
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
         <Link className="go" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", color: "var(--color-ink)" }}>
           về trang be-still

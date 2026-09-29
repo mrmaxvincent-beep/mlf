@@ -28,7 +28,7 @@ export default function VongTraTamPage() {
           vòng-trà-tâm là nơi mọi người ngồi lại với tâm mình.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
-          mlf mong muốn mang ngày càng nhiều vòng-trà-tâm đến nhiều nơi.
+          mlf mong muốn mang ngày càng nhiều vòng-trà-tâm đến nhiều nơi, có thể tự vận hành ở mỗi tỉnh, thành phố.
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
           và chúng tôi đang chuẩn bị cho hành trình đó.

@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 
-const title = "uống trà cùng tâm";
+const title = "hỏi-đường";
 
 export const metadata: Metadata = {
   title,

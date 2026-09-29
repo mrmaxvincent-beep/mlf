@@ -2517,7 +2517,7 @@ details[open] > summary .acc-icon {
 }
 .wallpaper-card {
   position: relative;
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 4 / 5;
   border-radius: 1.1rem;
   overflow: hidden;
   border: none;
@@ -2569,8 +2569,8 @@ details[open] > summary .acc-icon {
 }
 .wallpaper-lightbox__card {
   position: relative;
-  width: min(78vw, 320px);
-  aspect-ratio: 9 / 19.5;
+  width: min(84vw, 380px);
+  aspect-ratio: 4 / 5;
   border-radius: 1.4rem;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);

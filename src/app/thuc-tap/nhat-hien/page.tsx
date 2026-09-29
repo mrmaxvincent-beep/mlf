@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -43,7 +42,7 @@ export default function NhatHienPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "44ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 0.5rem" }}>nhất-hiện là cái gốc, làm nền cho tinh thần ở-yên.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>nhất-hiện là cái gốc, làm nền cho tinh thần ở-yên.</p>
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: 0 }}>nhất-hiện là nơi để mỗi người lặng về tu sửa mình.</p>
       </Reveal>
 
@@ -83,12 +82,6 @@ export default function NhatHienPage() {
           tìm hiểu thêm về nhất-hiện <span className="ar">→</span>
         </a>
         <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.06em", color: "var(--color-ink)", marginTop: "0.7rem" }}>nhathien.com (đang phát triển)</span>
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", color: "var(--color-ink)" }}>
-          về trang be-still
-        </Link>
       </div>
 
       <Footer />

@@ -64,14 +64,22 @@ export default function Page() {
               triggerStyle={{ padding: "1.6rem 0" }}
               border={false}
             >
-              <div style={{ paddingBottom: "1.6rem", display: "flex", flexDirection: "column", gap: "0.7rem" }}>
+              <div style={{ paddingBottom: "1rem" }}>
                 {s.articles.map((a, j) => (
-                  <div key={j} style={{ display: "flex", alignItems: "baseline", gap: "0.7rem" }}>
-                    <span style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--color-stone)", flexShrink: 0 }} />
-                    <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.7, color: "var(--color-ink)" }}>
-                      {a.title}
-                    </span>
-                  </div>
+                  <Disclosure
+                    key={j}
+                    trigger={
+                      <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "0.92rem", lineHeight: 1.7, color: "var(--color-ink)" }}>
+                        {a.title}
+                      </span>
+                    }
+                    triggerStyle={{ padding: "0.7rem 0" }}
+                    border={false}
+                  >
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: "0 0 0.9rem", paddingLeft: "0.1rem" }}>
+                      {a.body}
+                    </p>
+                  </Disclosure>
                 ))}
               </div>
             </Disclosure>

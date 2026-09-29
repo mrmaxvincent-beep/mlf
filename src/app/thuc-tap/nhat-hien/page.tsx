@@ -42,7 +42,7 @@ export default function NhatHienPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "44ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>nhất-hiện là cái gốc, làm nền cho tinh thần ở-yên.</p>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>nhất-hiện là cái gốc, làm nền cho tinh thần ở-yên.</p>
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: 0 }}>nhất-hiện là nơi để mỗi người lặng về tu sửa mình.</p>
       </Reveal>
 

@@ -8,7 +8,7 @@ const title = "hỏi-đường";
 
 export const metadata: Metadata = {
   title,
-  description: "trang đang cập nhật.",
+  description: "thực tập là một con đường, và khi lạc thì người ta hỏi đường.",
 };
 
 export default function Page() {
@@ -23,9 +23,12 @@ export default function Page() {
         </h1>
       </div>
 
-      <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "6rem" }}>
+      <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "6rem", maxWidth: "40rem" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
+          thực tập là một con đường, và khi lạc thì người ta hỏi đường. người chỉ đường không phải thầy, chỉ là người đã đi qua đoạn ấy, chỉ một hướng rồi để người hỏi tự bước tiếp.
+        </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-          trang đang cập nhật.
+          hãy hỏi đường ở đây: <strong style={{ fontWeight: 600 }}>hello@moclittlefarm.com</strong>
         </p>
       </Reveal>
 

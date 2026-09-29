@@ -1874,6 +1874,69 @@ details[open] > summary .acc-icon {
   }
 }
 
+/* hỏi-đường: chủ đề bên trái, câu hỏi/câu trả lời bên phải */
+.hd-shell {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: 3rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.hd-rail {
+  position: sticky;
+  top: 6.5rem;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.hd-topic {
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  padding: 0.6rem 0 0.6rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-stone);
+  transition: all 0.2s var(--ease-standard);
+}
+.hd-topic:hover {
+  color: var(--color-ink);
+}
+.hd-topic.active {
+  border-left-color: var(--color-ink);
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.hd-content {
+  background: var(--color-paper);
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+@media (max-width: 840px) {
+  .hd-shell {
+    grid-template-columns: 1fr;
+  }
+  .hd-rail {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+  }
+  .hd-topic {
+    padding: 0.4rem 0;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+  .hd-topic.active {
+    border-left: none;
+    border-bottom-color: var(--color-ink);
+  }
+}
+
 /* cộng đồng ở-yên: section label, pillar/space grids, membership box, FAQ */
 .sec-label {
   font-family: var(--font-mono);

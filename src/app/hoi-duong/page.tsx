@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { HoiDuongReader } from "@/components/HoiDuongReader";
+import { topics } from "@/data/hoiDuong";
 
 const title = "hỏi-đường";
 
@@ -30,6 +32,10 @@ export default function Page() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
           hãy hỏi đường ở đây: <strong style={{ fontWeight: 600 }}>hello@moclittlefarm.com</strong>
         </p>
+      </Reveal>
+
+      <Reveal style={{ marginBottom: "6rem" }}>
+        <HoiDuongReader topics={topics} />
       </Reveal>
 
       <Footer />

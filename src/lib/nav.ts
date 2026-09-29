@@ -129,6 +129,10 @@ export const programsPanel = [
       { label: "thuần upcycle", href: routes.touchThuanUpcycle },
     ],
   },
+  {
+    group: "cộng đồng",
+    items: [{ label: "cộng đồng ở-yên", href: routes.congDongOYen }],
+  },
 ];
 
 export const mobileMenuSections = [

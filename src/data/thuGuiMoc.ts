@@ -79,10 +79,13 @@ export const entries: Entry[] = [
     name: "a. H",
     role: `32 tuổi · Sài Gòn · "thảm lá càng dày"`,
     blocks: [
-      p("28/07 - 01/08/2023. Đến với mộc và Măng Đen vào những ngày cuối cùng của những năm 20s, mình đã không quá kỳ vọng mà với tâm thế hãy để mọi thứ tự nhiên nhất có thể. Chắc bởi vì mình hiểu rằng càng kỳ vọng thì đôi khi chính nó có thể làm hỏng chuyến đi nhất."),
-      p(`Nhẹ nhàng như cách bé Ân nói chuyện, thân tình như cách chị Cà Chua quan tâm em, tinh tế như từng món ăn mà anh Vũ nấu nướng, sâu sắc như những điều mà anh Tâm chia sẻ và chắc chắn không thể thiếu sự nhiệt tình của chú bé June hay sự "kiêu kỳ" của Midnight, tất cả như là cách mà Măng Đen và chuyến retreat này mang lại em!`),
-      p(`Đây chắc sẽ là một trong những "món quà" quý giá nhất mà em đã dành cho bản thân ở ngưỡng tuổi mà dù muốn hay không thì chúng ta cần phải trưởng thành đúng không ạ? Em chào đón tuổi 30 với nhiều sự điềm tĩnh hơn, thấu hiểu bản thân hơn, thực tế hơn mặc dù hành trình sắp tới sẽ có nhiều thử thách hơn.`),
-      p("Mong rằng tất cả thành viên trong gia đình chúng ta sẽ luôn có thật nhiều sức khỏe, an yên, đam mê, hạnh phúc & bình an trong cuộc đời vạn biến này! — 31.07.2023. ps. Being a part of something special makes you special!"),
+      p("Thảm lá càng dầy, 28/07 - 01/08/2023."),
+      p("Đến với mộc và Măng Đen vào những ngày cuối cùng của những năm 20s, mình đã không quá kỳ vọng mà với tâm thế hãy để mọi thứ tự nhiên nhất có thể. Chắc bởi vì mình hiểu rằng càng kỳ vọng thì đôi khi chính nó có thể làm hỏng chuyến đi nhất. Tuy nhiên, chuyến retreat này đánh dấu những trải nghiệm, những ấn tượng & cả những cảm xúc mà chắc chắn sẽ rất lâu lâu sau này nữa mình sẽ không quên!"),
+      p(`Nhẹ nhàng như cách bé Ân nói chuyện, thân tình như cách chị Cà Chua quan tâm em, tinh tế như từng món ăn mà anh Vũ nấu nướng, sâu sắc như những điều mà anh Tâm chia sẻ và chắc chắn không thể thiếu sự nhiệt tình của chú bé June hay sự "kiêu kỳ" (hoặc khó đoán như thời tiết tại Măng Đen) của Midnight, tất cả như là cách mà Măng Đen và chuyến retreat này mang lại em!`),
+      p(`Đây chắc sẽ là một trong những "món quà" quý giá nhất mà em đã dành cho bản thân ở ngưỡng tuổi mà dù muốn hay không thì chúng ta cần phải trưởng thành đúng không ạ? Chắc chắn không phải kiểu mơ mộng như 18, màu hồng như 21, ngạo mạn như 25, hoang mang như 27. Em chào đón tuổi 30 với nhiều sự điềm tĩnh hơn, thấu hiểu bản thân hơn, thực tế hơn mặc dù hành trình sắp tới sẽ có nhiều thử thách hơn. Nhưng cứ "thuận theo tự nhiên" & "go with the flows" như chuyến retreat này đúng không ạ! Hy vọng lần sau khi gặp lại cả nhà, anh Tâm & chị Cà Chua sẽ có thể nhìn thấy sự "tĩnh" trong đôi mắt của em nha!`),
+      p("Mong rằng tất cả thành viên trong gia đình chúng ta sẽ luôn có thật nhiều sức khỏe, an yên, đam mê, hạnh phúc & bình an trong cuộc đời vạn biến này! Hy vọng lần gặp nhau không xa với tất cả mọi người có thể tại Măng Đen hay tại bất kỳ đâu giữa dòng đời hối hả này nhé ạ!"),
+      p("— 31.07.2023"),
+      p("ps. Being a part of something special makes you special!"),
     ],
   },
   {

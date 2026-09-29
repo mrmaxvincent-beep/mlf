@@ -9,7 +9,7 @@ import { routes } from "@/lib/nav";
 import { tiers, creditUses } from "@/data/giua";
 
 export const metadata: Metadata = {
-  title: "ủng hộ mlf",
+  title: "góp cùng mlf",
   description: "bạn có thể đồng hành cùng mlf bằng cách mua trước dịch vụ, hoặc trợ duyên cho người hữu duyên.",
 };
 
@@ -28,9 +28,9 @@ export default function UngHoMlfPage() {
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
-        <Breadcrumb label="ủng hộ mlf" />
+        <Breadcrumb label="góp cùng mlf" />
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
-          ủng hộ mlf
+          góp cùng mlf
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
           có hai cách bạn có thể đồng hành cùng mlf: mua trước dịch vụ, hoặc trợ duyên cho người hữu duyên.
@@ -86,7 +86,7 @@ export default function UngHoMlfPage() {
         </p>
       </div>
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <RegistrationLink href="https://forms.gle/JWwJoysTiyxGh2XL6" programName="ủng hộ mlf" className="cta-btn cta-btn--solid">
+        <RegistrationLink href="https://forms.gle/JWwJoysTiyxGh2XL6" programName="góp cùng mlf" className="cta-btn cta-btn--solid">
           tham gia gieo mlf ở Huế <span className="ar">→</span>
         </RegistrationLink>
         <div style={{ marginTop: "1rem" }}>

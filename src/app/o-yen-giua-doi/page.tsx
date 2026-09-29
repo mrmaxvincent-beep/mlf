@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
-import { Disclosure } from "@/components/Disclosure";
+import { OYenGiuaDoiPicker } from "@/components/OYenGiuaDoiPicker";
 import { sections } from "@/data/oYenGiuaDoi";
 
 const title = "ở-yên giữa đời";
@@ -28,64 +28,9 @@ export default function Page() {
         </p>
       </div>
 
-      <div className="wrap" style={{ marginTop: "4rem", marginBottom: "6rem", maxWidth: "44rem" }}>
-        {sections.map((s, i) => (
-          <Reveal key={s.id} style={{ position: "relative", borderTop: i === 0 ? "1px solid var(--color-mist)" : undefined, borderBottom: "1px solid var(--color-mist)" }}>
-            <span
-              aria-hidden
-              style={{
-                position: "absolute",
-                top: "0.6rem",
-                right: 0,
-                fontFamily: "var(--font-serif)",
-                fontStyle: "italic",
-                fontWeight: 300,
-                fontSize: "3.4rem",
-                lineHeight: 1,
-                color: "var(--color-cham-dem)",
-                opacity: 0.07,
-                userSelect: "none",
-                pointerEvents: "none",
-              }}
-            >
-              {s.num}
-            </span>
-            <Disclosure
-              trigger={
-                <div>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.4rem" }}>
-                    {s.num}
-                  </span>
-                  <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.4rem", color: "var(--color-ink)" }}>
-                    {s.name}
-                  </span>
-                </div>
-              }
-              triggerStyle={{ padding: "1.6rem 0" }}
-              border={false}
-            >
-              <div style={{ paddingBottom: "1rem" }}>
-                {s.articles.map((a, j) => (
-                  <Disclosure
-                    key={j}
-                    trigger={
-                      <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "0.92rem", lineHeight: 1.7, color: "var(--color-ink)" }}>
-                        {a.title}
-                      </span>
-                    }
-                    triggerStyle={{ padding: "0.7rem 0" }}
-                    border={false}
-                  >
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: "0 0 0.9rem", paddingLeft: "0.1rem" }}>
-                      {a.body}
-                    </p>
-                  </Disclosure>
-                ))}
-              </div>
-            </Disclosure>
-          </Reveal>
-        ))}
-      </div>
+      <Reveal style={{ marginTop: "3.5rem", marginBottom: "6rem" }}>
+        <OYenGiuaDoiPicker sections={sections} />
+      </Reveal>
 
       <Footer />
     </>

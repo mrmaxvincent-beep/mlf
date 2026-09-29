@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import type { Entry } from "@/data/thuGuiMoc";
 
 const pStyle: React.CSSProperties = {
@@ -12,28 +13,39 @@ const pStyle: React.CSSProperties = {
   margin: "0 0 1.2rem",
 };
 
-/** Numbered-grid entry picker + reading pane, with a brief fade on switch — thư-gửi-mộc guestbook. */
-export function ThuGuiMocReader({ entries: unsorted }: { entries: Entry[] }) {
+/** Numbered-grid entry picker + reading pane, with a brief fade on switch — thư-gửi-mộc guestbook. URL là /thu-gui-moc/[no] nên share thẳng được một lá thư. */
+export function ThuGuiMocReader({ entries: unsorted, initialNo }: { entries: Entry[]; initialNo: number }) {
+  const router = useRouter();
   // Số thứ tự `no` là cố định của từng lá thư (1 = lâu nhất); luôn xếp theo số này, mở sẵn lá mới nhất.
   const entries = [...unsorted].sort((a, b) => a.no - b.no);
-  const [active, setActive] = useState(entries.length - 1);
+  const foundIndex = entries.findIndex((e) => e.no === initialNo);
+  const active = foundIndex === -1 ? entries.length - 1 : foundIndex;
   const [fading, setFading] = useState(false);
   const dateRef = useRef<HTMLDivElement>(null);
+  const firstRender = useRef(true);
 
   function select(i: number) {
     if (i === active) return;
     setFading(true);
     setTimeout(() => {
-      setActive(i);
-      setFading(false);
-      // Scroll to align with bottom of header image
-      if (dateRef.current) {
-        const rect = dateRef.current.getBoundingClientRect();
-        const offset = window.scrollY + rect.top - 200; // Adjust 200px based on image height + margin
-        window.scrollTo({ top: offset, behavior: "smooth" });
-      }
+      router.push(`/thu-gui-moc/${entries[i].no}`, { scroll: false });
     }, 180);
   }
+
+  useEffect(() => {
+    setFading(false);
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    // Scroll to align with bottom of header image
+    if (dateRef.current) {
+      const rect = dateRef.current.getBoundingClientRect();
+      const offset = window.scrollY + rect.top - 200; // Adjust 200px based on image height + margin
+      window.scrollTo({ top: offset, behavior: "smooth" });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialNo]);
 
   const current = entries[active];
 

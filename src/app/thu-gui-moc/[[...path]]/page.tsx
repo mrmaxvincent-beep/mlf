@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -7,12 +8,35 @@ import { ThuGuiMocReader } from "@/components/ThuGuiMocReader";
 import { Reveal } from "@/components/Reveal";
 import { entries } from "@/data/thuGuiMoc";
 
-export const metadata: Metadata = {
-  title: "thư-gửi-mộc",
-  description: "những lời thì thầm gửi tới nhà mộc.",
-};
+const title = "thư-gửi-mộc";
+const baseDescription = "những lời thì thầm gửi tới nhà mộc.";
+const maxNo = Math.max(...entries.map((e) => e.no));
 
-export default function ThuGuiMocPage() {
+function resolve(path: string[]) {
+  if (!path[0]) return entries.find((e) => e.no === maxNo) ?? null;
+  const no = Number(path[0]);
+  return entries.find((e) => e.no === no) ?? null;
+}
+
+export function generateStaticParams() {
+  return [{ path: [] }, ...entries.map((e) => ({ path: [String(e.no)] }))];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ path?: string[] }> }): Promise<Metadata> {
+  const { path = [] } = await params;
+  const entry = resolve(path);
+  if (!entry) return {};
+  return {
+    title: path.length ? `lời thì thầm của ${entry.name} · ${title}` : title,
+    description: baseDescription,
+  };
+}
+
+export default async function ThuGuiMocPage({ params }: { params: Promise<{ path?: string[] }> }) {
+  const { path = [] } = await params;
+  const entry = resolve(path);
+  if (!entry) notFound();
+
   return (
     <>
       <Header />
@@ -41,7 +65,7 @@ export default function ThuGuiMocPage() {
       </div>
 
       <Reveal style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>
-        <ThuGuiMocReader entries={entries} />
+        <ThuGuiMocReader entries={entries} initialNo={entry.no} />
       </Reveal>
 
       <Footer />

@@ -768,6 +768,18 @@ export const entries: Entry[] = [
     ],
   },
   {
+    no: 50,
+    date: "08–09.09.2026",
+    name: "B.M.Q",
+    role: "Măng Đen",
+    blocks: [
+      p("Hôm nay, Em Q. tạm chia tay Anh Tâm, Anh Thuận, Anh Vũ để về nhà, em rất buồn."),
+      p("Em cám ơn các Anh đã chăm sóc, chu đáo, nâng niu Em trong những ngày qua."),
+      p("Em hẹn sớm sẽ gặp lại các Anh."),
+      p("— B.M.Q"),
+    ],
+  },
+  {
     no: 48,
     date: "08.2026",
     name: "ba người bạn",

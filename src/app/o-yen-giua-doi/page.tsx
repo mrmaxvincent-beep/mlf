@@ -64,11 +64,14 @@ export default function Page() {
               triggerStyle={{ padding: "1.6rem 0" }}
               border={false}
             >
-              <div style={{ paddingBottom: "1.6rem", display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+              <div style={{ paddingBottom: "1.6rem", display: "flex", flexDirection: "column", gap: "0.7rem" }}>
                 {s.articles.map((a, j) => (
-                  <p key={j} style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.8, color: "var(--color-stone)", margin: 0 }}>
-                    {a.title}
-                  </p>
+                  <div key={j} style={{ display: "flex", alignItems: "baseline", gap: "0.7rem" }}>
+                    <span style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--color-stone)", flexShrink: 0 }} />
+                    <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.92rem", lineHeight: 1.7, color: "var(--color-ink)" }}>
+                      {a.title}
+                    </span>
+                  </div>
                 ))}
               </div>
             </Disclosure>

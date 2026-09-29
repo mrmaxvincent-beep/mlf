@@ -1,19 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import type { Section } from "@/data/oYenGiuaDoi";
 
-/** Two-pane picker: 5 phần bên trái, danh sách bài nhỏ của phần đang chọn bên phải — mỗi bài dẫn ra trang riêng để đọc trọn vẹn. */
+/** Two-pane picker: 5 phần bên trái, nội dung bên phải — chọn bài đọc ngay trong khung, không rời trang, để 01–05 luôn trong tầm tay. */
 export function OYenGiuaDoiPicker({ sections }: { sections: Section[] }) {
-  const [active, setActive] = useState(0);
-  const current = sections[active];
+  const [activeSection, setActiveSection] = useState(0);
+  const [activeArticle, setActiveArticle] = useState<string | null>(null);
+  const current = sections[activeSection];
+  const article = current.articles.find((a) => a.slug === activeArticle) ?? null;
+
+  function selectSection(i: number) {
+    setActiveSection(i);
+    setActiveArticle(null);
+  }
 
   return (
     <div className="hd-shell">
       <div className="hd-rail">
         {sections.map((s, i) => (
-          <button key={s.id} className={`hd-topic${i === active ? " active" : ""}`} onClick={() => setActive(i)}>
+          <button key={s.id} className={`hd-topic${i === activeSection ? " active" : ""}`} onClick={() => selectSection(i)}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", marginRight: "0.6rem", opacity: 0.6 }}>
               {s.num}
             </span>
@@ -23,33 +29,76 @@ export function OYenGiuaDoiPicker({ sections }: { sections: Section[] }) {
       </div>
 
       <div className="hd-content">
-        <span className="eyebrow" style={{ marginBottom: "1.6rem" }}>
-          {current.num} · {current.name} · {current.articles.length} bài
-        </span>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {current.articles.map((a) => (
-            <Link
-              key={a.slug}
-              href={`/o-yen-giua-doi/${current.id}/${a.slug}`}
-              className="link-sweep"
+        {article ? (
+          <>
+            <button
+              onClick={() => setActiveArticle(null)}
               style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "baseline",
-                gap: "1rem",
-                padding: "0.95rem 0",
-                borderTop: "1px solid var(--color-mist)",
+                display: "block",
+                marginBottom: "1.6rem",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 0,
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.62rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "var(--color-stone)",
               }}
             >
-              <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--color-ink)" }}>
-                {a.title}
-              </span>
-              <span className="ar" style={{ flexShrink: 0, fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--color-stone)" }}>
-                →
-              </span>
-            </Link>
-          ))}
-        </div>
+              ← quay lại danh sách bài
+            </button>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+              {current.num} · {current.name}
+            </span>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.4, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
+              {article.title}
+            </h2>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.98rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+              {article.body}
+            </p>
+          </>
+        ) : (
+          <>
+            <span className="eyebrow" style={{ marginBottom: "1.6rem" }}>
+              {current.num} · {current.name} · {current.articles.length} bài
+            </span>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              {current.articles.map((a) => (
+                <button
+                  key={a.slug}
+                  onClick={() => setActiveArticle(a.slug)}
+                  className="link-sweep"
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "baseline",
+                    gap: "1rem",
+                    padding: "0.95rem 0",
+                    borderTop: "1px solid var(--color-mist)",
+                    background: "none",
+                    border: "none",
+                    borderTopWidth: "1px",
+                    borderTopStyle: "solid",
+                    borderTopColor: "var(--color-mist)",
+                    cursor: "pointer",
+                    width: "100%",
+                    textAlign: "left",
+                    font: "inherit",
+                  }}
+                >
+                  <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--color-ink)" }}>
+                    {a.title}
+                  </span>
+                  <span className="ar" style={{ flexShrink: 0, fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--color-stone)" }}>
+                    →
+                  </span>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

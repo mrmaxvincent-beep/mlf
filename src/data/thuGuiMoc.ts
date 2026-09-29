@@ -757,7 +757,7 @@ export const entries: Entry[] = [
       p("— Em June, Midnight để chị biết rằng chị cũng yêu quý động vật."),
       p("Mình đã thực sự sống trọn vẹn từng giây phút ở MLF này, năng lượng cũng đã nạp đủ rồi, về thôi, về để tiếp tục sứ mệnh của mình thôi nào!"),
       p("Có những người có thể cả cuộc đời này chúng ta chỉ có thể được gặp 1 lần, nhưng có lẽ sẽ vẫn ở mãi trong tâm trí ta, không thể nào quên được!!!"),
-      p("Hết còn ạ!"),
+      p("Hết rồi ạ."),
     ],
   },
   {

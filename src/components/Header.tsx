@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { routes, hoatDongMenu, thuVienMenu, congDongMenu, mlfMenu, programsPanel, mobileMenuSections } from "@/lib/nav";
+import { routes, hoatDongMenu, thucTapMenu, thuVienMenu, congDongMenu, mlfMenu, programsPanel, mobileMenuSections } from "@/lib/nav";
 
-type DropdownKey = "hoatDong" | "thuVien" | "congDong" | "mlf" | null;
+type DropdownKey = "hoatDong" | "thucTap" | "thuVien" | "congDong" | "mlf" | null;
 
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled])';
 
@@ -174,6 +174,15 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           color={navTextColor}
           open={openDropdown === "hoatDong"}
           onOpen={() => setOpenDropdown("hoatDong")}
+          onClose={() => setOpenDropdown(null)}
+        />
+
+        <NavDropdown
+          label="thực tập"
+          items={thucTapMenu}
+          color={navTextColor}
+          open={openDropdown === "thucTap"}
+          onOpen={() => setOpenDropdown("thucTap")}
           onClose={() => setOpenDropdown(null)}
         />
 

@@ -32,9 +32,9 @@ function ShareIcon() {
 }
 
 /** Card wallpaper: dùng ảnh thật nếu có `src`, ngược lại dựng thẻ chữ bằng CSS thay ảnh. */
-function WallpaperCard({ message, index }: { message: Message; index: number }) {
+function WallpaperCard({ message, index, fontSize = "1.05rem" }: { message: Message; index: number; fontSize?: string }) {
   if (message.src) {
-    return <Image src={message.src} alt={message.text} fill sizes="(max-width: 640px) 45vw, 20vw" style={{ objectFit: "cover" }} />;
+    return <Image src={message.src} alt={message.text} fill sizes="(max-width: 640px) 90vw, 420px" style={{ objectFit: "cover" }} />;
   }
   return (
     <div
@@ -53,7 +53,7 @@ function WallpaperCard({ message, index }: { message: Message; index: number }) 
           fontFamily: "var(--font-serif)",
           fontStyle: "italic",
           fontWeight: 300,
-          fontSize: "1.05rem",
+          fontSize,
           lineHeight: 1.6,
           color: "var(--color-ink)",
           textAlign: "center",
@@ -79,78 +79,47 @@ async function share(message: Message) {
   }
 }
 
+/** 1 ảnh lớn đang chọn ở trên, dải thumbnail để chuyển bên dưới — vào là thấy ngay, không cần mở lightbox. */
 export function LoiNhacGallery({ messages }: { messages: Message[] }) {
-  const [openId, setOpenId] = useState<string | null>(null);
-  const openMessage = messages.find((m) => m.id === openId) ?? null;
-  const openIndex = openMessage ? messages.indexOf(openMessage) : -1;
+  const [active, setActive] = useState(0);
+  const current = messages[active];
 
   return (
-    <>
-      <div className="wallpaper-grid">
+    <div className="wallpaper-feature">
+      <div className="wallpaper-feature__stage">
+        <div className="wallpaper-feature__card">
+          <WallpaperCard message={current} index={active} fontSize="1.5rem" />
+        </div>
+      </div>
+
+      <div className="wallpaper-feature__actions">
+        {current.src ? (
+          <a href={current.src} download className="cta-btn cta-btn--solid">
+            tải hình nền <DownloadIcon />
+          </a>
+        ) : (
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+            ảnh đang cập nhật
+          </span>
+        )}
+        <button className="cta-btn" onClick={() => share(current)} style={{ background: "none", color: "var(--color-ink)" }}>
+          chia sẻ <ShareIcon />
+        </button>
+      </div>
+
+      <div className="wallpaper-thumbs">
         {messages.map((m, i) => (
-          <button key={m.id} className="wallpaper-card" onClick={() => setOpenId(m.id)} aria-label={`xem lời nhắc: ${m.text}`}>
-            <WallpaperCard message={m} index={i} />
-            <div className="wallpaper-card__overlay">
-              <span
-                role="button"
-                tabIndex={0}
-                className="wallpaper-icon-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  share(m);
-                }}
-                aria-label="chia sẻ"
-              >
-                <ShareIcon />
-              </span>
-              {m.src ? (
-                <a
-                  href={m.src}
-                  download
-                  className="wallpaper-icon-btn"
-                  onClick={(e) => e.stopPropagation()}
-                  aria-label="tải hình nền"
-                >
-                  <DownloadIcon />
-                </a>
-              ) : null}
-            </div>
+          <button
+            key={m.id}
+            className={`wallpaper-thumb${i === active ? " active" : ""}`}
+            onClick={() => setActive(i)}
+            aria-label={`xem lời nhắc: ${m.text}`}
+            aria-current={i === active}
+          >
+            <WallpaperCard message={m} index={i} fontSize="0.62rem" />
           </button>
         ))}
       </div>
-
-      {openMessage ? (
-        <div className="wallpaper-lightbox" onClick={() => setOpenId(null)}>
-          <div className="wallpaper-lightbox__card" onClick={(e) => e.stopPropagation()}>
-            <div style={{ position: "relative", width: "100%", height: "100%" }}>
-              <WallpaperCard message={openMessage} index={openIndex} />
-            </div>
-          </div>
-
-          <button className="wallpaper-lightbox__close" onClick={() => setOpenId(null)} aria-label="đóng">
-            ✕
-          </button>
-
-          <div className="wallpaper-lightbox__actions">
-            {openMessage.src ? (
-              <a href={openMessage.src} download className="cta-btn cta-btn--solid">
-                tải hình nền <DownloadIcon />
-              </a>
-            ) : (
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)" }}>
-                ảnh đang cập nhật
-              </span>
-            )}
-            <button
-              className="cta-btn"
-              onClick={() => share(openMessage)}
-              style={{ background: "none", border: "1px solid rgba(255,255,255,0.4)", color: "#fff" }}
-            >
-              chia sẻ <ShareIcon />
-            </button>
-          </div>
-        </div>
-      ) : null}
-    </>
+    </div>
   );
 }

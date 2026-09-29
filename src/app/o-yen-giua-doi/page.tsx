@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -29,7 +30,9 @@ export default function Page() {
       </div>
 
       <Reveal style={{ marginTop: "3.5rem", marginBottom: "6rem" }}>
-        <OYenGiuaDoiPicker sections={sections} />
+        <Suspense fallback={null}>
+          <OYenGiuaDoiPicker sections={sections} />
+        </Suspense>
       </Reveal>
 
       <Footer />

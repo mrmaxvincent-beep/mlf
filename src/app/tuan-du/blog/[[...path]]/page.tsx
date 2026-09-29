@@ -9,7 +9,7 @@ import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
 import { posts } from "@/data/tuanDuBlog";
 
-const title = "người đi qua";
+const title = "tuần-du ký";
 const baseDescription = "ghi chép & chia sẻ từ những chuyến tuần-du.";
 
 function resolve(path: string[]) {
@@ -50,10 +50,10 @@ export default async function TuanDuBlogPage({ params }: { params: Promise<{ pat
             tuần-du
           </Link>
           <span>/</span>
-          <span style={{ color: "var(--color-ink)" }}>người đi qua</span>
+          <span style={{ color: "var(--color-ink)" }}>tuần-du ký</span>
         </div>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
-          người đi qua
+          tuần-du ký
         </h1>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>ghi chép &amp; chia sẻ từ những chuyến tuần-du</span>
       </div>

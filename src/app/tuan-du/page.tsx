@@ -407,7 +407,7 @@ export default function TuanDuPage() {
           người tham gia viết về tuần-du
         </span>
         <Link className="go mono-link" href={routes.tuanDuBlog} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-          đọc thêm ở người đi qua <span className="ar">→</span>
+          đọc thêm ở tuần-du ký <span className="ar">→</span>
         </Link>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "58ch" }}>

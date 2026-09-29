@@ -39,5 +39,5 @@ export const testimonials = [
 export const tuanDuSubnav = [
   { label: "tuần-du", href: routes.tuanDu },
   { label: "chuỗi tuần-du", href: routes.chuoiTuanDu },
-  { label: "người đi qua", href: routes.tuanDuBlog },
+  { label: "tuần-du ký", href: routes.tuanDuBlog },
 ];

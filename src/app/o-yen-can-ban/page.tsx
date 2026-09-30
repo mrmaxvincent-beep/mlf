@@ -21,6 +21,9 @@ export default function Page() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           {title}
         </h1>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
+          một hệ thống thực tập để học cách không bị cuốn đi bởi chính mình.
+        </p>
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "6rem" }}>

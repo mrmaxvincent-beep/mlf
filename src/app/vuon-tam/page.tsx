@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { VuonTamStories } from "@/components/VuonTamStories";
+import { stories } from "@/data/vuonTam";
 
 const description = "mỗi người đều đang chăm một khu vườn bên trong mình — vườn-tâm là nơi chia sẻ những câu chuyện gieo trồng, chăm sóc hạt giống ấy.";
 
@@ -33,6 +35,10 @@ export default function VuonTamPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
           gửi về <strong style={{ fontWeight: 600 }}>hello@moclittlefarm.com</strong>, chia sẻ của bạn sẽ được gieo xuống khu vườn chung ở đây.
         </p>
+      </Reveal>
+
+      <Reveal style={{ marginBottom: "6rem" }}>
+        <VuonTamStories stories={stories} />
       </Reveal>
 
       <Footer />

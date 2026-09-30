@@ -113,5 +113,17 @@ export const sections: Section[] = [
       { slug: "song-cung-thu-cung", title: "Sống cùng thú cưng", body: placeholder },
     ],
   },
-  { id: "mot-ngay-song-vua-van", roman: "VI", name: "một ngày sống vừa vặn", articles: [] },
+  {
+    id: "mot-ngay-song-vua-van",
+    roman: "VI",
+    name: "một ngày sống vừa vặn",
+    articles: [
+      { slug: "buoi-sang", title: "Buổi sáng", body: placeholder },
+      { slug: "trong-nha", title: "Trong nhà", body: placeholder },
+      { slug: "bua-an", title: "Bữa ăn", body: placeholder },
+      { slug: "than-the", title: "Thân thể", body: placeholder },
+      { slug: "tam-tri", title: "Tâm trí", body: placeholder },
+      { slug: "buoi-toi", title: "Buổi tối", body: placeholder },
+    ],
+  },
 ];

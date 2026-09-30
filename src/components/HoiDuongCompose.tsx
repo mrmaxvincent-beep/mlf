@@ -40,7 +40,7 @@ export function HoiDuongCompose({ topicId }: { topicId?: string }) {
       <div style={{ border: "1px solid var(--color-cham-dem)", borderRadius: "1rem", padding: "2rem 1.6rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-cham-dem)", margin: 0 }}>đã nhận câu hỏi của bạn.</p>
         <p style={{ fontSize: "0.85rem", lineHeight: 1.9, color: "var(--color-stone)", margin: "0.8rem auto 0", maxWidth: "38ch" }}>
-          nhà mộc sẽ đọc và tìm cách trả lời sớm nhất có thể.
+          nhà mộc sẽ đọc và trả lời sớm tại trang này.
         </p>
       </div>
     );

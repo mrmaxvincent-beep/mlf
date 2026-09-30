@@ -56,7 +56,7 @@ export default async function Page({ params }: { params: Promise<{ path?: string
       </Reveal>
 
       <Reveal style={{ marginBottom: "6rem" }}>
-        <HoiDuongReader topics={topics} initialTopicId={topic.id} />
+        <HoiDuongReader topics={topics} initialTopicId={topic.id} style={{ maxWidth: "40rem" }} />
       </Reveal>
 
       <Footer />

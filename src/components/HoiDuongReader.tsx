@@ -1,15 +1,16 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import type { CSSProperties } from "react";
 import type { Topic } from "@/data/hoiDuong";
 
 /** Two-pane picker: chủ đề bên trái, câu hỏi + câu trả lời của chủ đề đang chọn bên phải. URL là /hoi-duong/[chủ đề] nên share thẳng được. */
-export function HoiDuongReader({ topics, initialTopicId }: { topics: Topic[]; initialTopicId: string }) {
+export function HoiDuongReader({ topics, initialTopicId, style }: { topics: Topic[]; initialTopicId: string; style?: CSSProperties }) {
   const router = useRouter();
   const current = topics.find((t) => t.id === initialTopicId) ?? topics[0];
 
   return (
-    <div className="hd-shell">
+    <div className="hd-shell" style={style}>
       <div className="hd-rail">
         {topics.map((t) => (
           <button

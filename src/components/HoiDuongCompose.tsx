@@ -50,8 +50,8 @@ export function HoiDuongCompose({ topicId }: { topicId?: string }) {
     <div style={{ border: "1px solid var(--color-cham-dem)", borderRadius: "1rem", padding: "2rem 1.6rem" }}>
       <textarea
         value={question}
-        onChange={(e) => setQuestion(e.target.value.slice(0, 500))}
-        maxLength={500}
+        onChange={(e) => setQuestion(e.target.value.slice(0, 1000))}
+        maxLength={1000}
         placeholder="bạn đang lạc ở đâu, đang thắc mắc điều gì…"
         style={{
           width: "100%",
@@ -88,7 +88,7 @@ export function HoiDuongCompose({ topicId }: { topicId?: string }) {
         }}
       />
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.4rem" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: question.length > 450 ? "#b5715c" : "var(--color-stone)" }}>{question.length} / 500</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: question.length > 900 ? "#b5715c" : "var(--color-stone)" }}>{question.length} / 1000</span>
         <button
           onClick={send}
           disabled={!question.trim() || sending}

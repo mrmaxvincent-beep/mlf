@@ -95,7 +95,7 @@ alter publication supabase_realtime add table traces;
 create table hoi_duong_questions (
   id uuid primary key default gen_random_uuid(),
   topic_id text,
-  question text not null check (char_length(question) <= 500),
+  question text not null check (char_length(question) <= 1000),
   from_label text,
   created_at timestamptz not null default now()
 );

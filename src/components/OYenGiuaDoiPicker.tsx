@@ -73,9 +73,12 @@ export function OYenGiuaDoiPicker({
           </>
         ) : (
           <>
-            <span className="eyebrow" style={{ marginBottom: "1.6rem" }}>
+            <span className="eyebrow" style={{ marginBottom: "0.9rem" }}>
               {current.num} · {current.name} · {current.articles.length} bài
             </span>
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.05rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 1.6rem" }}>
+              {current.tagline}
+            </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
               {current.articles.map((a) => (
                 <button

@@ -1,5 +1,5 @@
 export type Article = { slug: string; title: string; body: string };
-export type Section = { id: string; num: string; name: string; articles: Article[] };
+export type Section = { id: string; num: string; name: string; tagline: string; articles: Article[] };
 
 /** 5 phần của ở-yên giữa đời, mỗi phần chứa các bài nhỏ — demo minh họa, thay bằng bài thật khi có. */
 export const sections: Section[] = [
@@ -7,6 +7,7 @@ export const sections: Section[] = [
     id: "voi-chinh-minh",
     num: "01",
     name: "với chính mình",
+    tagline: "Ở-yên khi không biết phải làm gì với chính mình.",
     articles: [
       {
         slug: "buoi-sang-dau-tien",
@@ -29,6 +30,7 @@ export const sections: Section[] = [
     id: "trong-gia-dinh",
     num: "02",
     name: "trong gia đình",
+    tagline: "Ở-yên giữa những người mình thương và những vết thương mình mang theo.",
     articles: [
       {
         slug: "bua-com-khong-dien-thoai",
@@ -51,6 +53,7 @@ export const sections: Section[] = [
     id: "noi-cong-so",
     num: "03",
     name: "nơi công sở",
+    tagline: "Ở-yên giữa tham vọng, áp lực và nhu cầu được công nhận.",
     articles: [
       {
         slug: "mot-hoi-tho-truoc-khi-gui-email",
@@ -73,6 +76,7 @@ export const sections: Section[] = [
     id: "giua-xa-hoi",
     num: "04",
     name: "giữa xã hội",
+    tagline: "Ở-yên giữa rất nhiều tiếng nói, lựa chọn và phản ứng.",
     articles: [
       {
         slug: "luot-mang-xa-hoi-khong-cuon-theo",
@@ -95,6 +99,7 @@ export const sections: Section[] = [
     id: "khi-bien-co",
     num: "05",
     name: "khi biến cố",
+    tagline: "Ở-yên khi đời sống xảy ra điều mình không thể kiểm soát.",
     articles: [
       {
         slug: "khi-tin-xau-ap-den-bat-ngo",

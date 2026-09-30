@@ -25,7 +25,7 @@ export default function Page() {
           {title}
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          những lời nhắc nhỏ, mang theo trên màn hình điện thoại mỗi ngày. chạm vào một tấm để xem trọn, tải về làm hình nền hoặc chia sẻ cho ai đó.
+          những lời nhắc nhỏ, mang theo mỗi ngày. tải về làm hình nền hoặc chia sẻ cho ai đó.
         </p>
       </div>
 

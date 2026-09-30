@@ -31,7 +31,7 @@ export default function NhatHienPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.2rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 2.2rem" }}>
           nhất-hiện
         </h1>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-stone)", maxWidth: "38ch", margin: "0 auto" }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-stone)", maxWidth: "49ch", margin: "0 auto" }}>
           bình phàm — thuần tịnh — rõ biết
         </p>
       </div>
@@ -40,7 +40,7 @@ export default function NhatHienPage() {
         <ImagePlaceholder label="ảnh · cộng đồng thực tập nhất-hiện" aspectRatio="4/5" src="/assets/nhat_hien.webp" />
       </div>
 
-      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "44ch", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "57ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.2rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>nhất-hiện là cái gốc, làm nền cho tinh thần ở-yên.</p>
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1.05rem", lineHeight: 2, color: "var(--color-ink)", margin: 0 }}>
           nếu bạn dừng lại ở-yên giữa đời sống, điều đó vẫn ổn.
@@ -49,7 +49,7 @@ export default function NhatHienPage() {
         </p>
       </Reveal>
 
-      <RevealStagger className="wrap" style={{ marginBottom: "5rem", maxWidth: "44ch" }}>
+      <RevealStagger className="wrap" style={{ marginBottom: "5rem", maxWidth: "57ch" }}>
         {qualities.map((q) => (
           <div key={q.name} style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.9rem" }}>{q.name}</span>
@@ -58,7 +58,7 @@ export default function NhatHienPage() {
         ))}
       </RevealStagger>
 
-      <Reveal className="wrap" style={{ marginBottom: "7rem", maxWidth: "38ch", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "7rem", maxWidth: "49ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", lineHeight: 1.95, color: "var(--color-ink)", margin: 0 }}>
           một con đường trung dung
           <br />
@@ -68,7 +68,7 @@ export default function NhatHienPage() {
         </p>
       </Reveal>
 
-      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "38ch", textAlign: "center" }}>
+      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "49ch", textAlign: "center" }}>
         {infoList.map((item) => (
           <p key={item} style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.84rem", lineHeight: 2.2, color: "var(--color-ink)", margin: 0 }}>
             {item}

@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { HoiDuongReader } from "@/components/HoiDuongReader";
+import { HoiDuongCompose } from "@/components/HoiDuongCompose";
 import { topics } from "@/data/hoiDuong";
 
 const title = "hỏi-đường";
@@ -46,17 +47,18 @@ export default async function Page({ params }: { params: Promise<{ path?: string
         </h1>
       </div>
 
-      <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "6rem", maxWidth: "40rem" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
-          thực tập là một con đường, và khi lạc thì người ta hỏi đường. người chỉ đường không phải thầy, chỉ là người đã đi qua đoạn ấy, chỉ một hướng rồi để người hỏi tự bước tiếp.
-        </p>
+      <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "3rem", maxWidth: "40rem" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-          hãy hỏi đường ở đây: <strong style={{ fontWeight: 600 }}>hello@moclittlefarm.com</strong>
+          thực tập là một con đường, và khi lạc thì người ta hỏi đường. người chỉ đường không phải thầy, chỉ là người đã đi qua đoạn ấy, chỉ một hướng rồi để người hỏi tự bước tiếp.
         </p>
       </Reveal>
 
+      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "40rem" }}>
+        <HoiDuongCompose topicId={topic.id} />
+      </Reveal>
+
       <Reveal style={{ marginBottom: "6rem" }}>
-        <HoiDuongReader topics={topics} initialTopicId={topic.id} style={{ maxWidth: "40rem" }} />
+        <HoiDuongReader topics={topics} initialTopicId={topic.id} />
       </Reveal>
 
       <Footer />

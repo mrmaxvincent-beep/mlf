@@ -86,7 +86,7 @@ export function OYenCanBanPicker({
                 <button
                   key={l.slug}
                   onClick={() => goLesson(l.slug)}
-                  className="link-sweep"
+                  className="link-row"
                   style={{
                     display: "flex",
                     justifyContent: "space-between",

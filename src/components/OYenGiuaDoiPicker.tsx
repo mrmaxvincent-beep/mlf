@@ -84,7 +84,7 @@ export function OYenGiuaDoiPicker({
                 <button
                   key={a.slug}
                   onClick={() => goArticle(a.slug)}
-                  className="link-sweep"
+                  className="link-row"
                   style={{
                     display: "flex",
                     justifyContent: "space-between",

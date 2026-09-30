@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -6,22 +7,41 @@ import { Reveal } from "@/components/Reveal";
 import { VuonTamStories } from "@/components/VuonTamStories";
 import { stories } from "@/data/vuonTam";
 
+const title = "vườn-tâm";
 const description = "mỗi người đều đang chăm một khu vườn bên trong mình — vườn-tâm là nơi chia sẻ những câu chuyện gieo trồng, chăm sóc hạt giống ấy.";
 
-export const metadata: Metadata = {
-  title: "vườn-tâm",
-  description,
-};
+function resolve(path: string[]) {
+  if (!path[0]) return stories[0] ?? null;
+  return stories.find((s) => s.slug === path[0]) ?? null;
+}
 
-export default function VuonTamPage() {
+export function generateStaticParams() {
+  return [{ path: [] }, ...stories.map((s) => ({ path: [s.slug] }))];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ path?: string[] }> }): Promise<Metadata> {
+  const { path = [] } = await params;
+  const story = resolve(path);
+  if (!story) return {};
+  return {
+    title: path.length ? `${story.title} · ${title}` : title,
+    description,
+  };
+}
+
+export default async function VuonTamPage({ params }: { params: Promise<{ path?: string[] }> }) {
+  const { path = [] } = await params;
+  const story = resolve(path);
+  if (!story) notFound();
+
   return (
     <>
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
-        <Breadcrumb label="vườn-tâm" />
+        <Breadcrumb label={title} />
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
-          vườn-tâm
+          {title}
         </h1>
       </div>
 
@@ -38,7 +58,7 @@ export default function VuonTamPage() {
       </Reveal>
 
       <Reveal style={{ marginBottom: "6rem" }}>
-        <VuonTamStories stories={stories} />
+        <VuonTamStories stories={stories} initialSlug={story.slug} />
       </Reveal>
 
       <Footer />

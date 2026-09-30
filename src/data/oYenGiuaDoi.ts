@@ -9,21 +9,13 @@ export const sections: Section[] = [
     name: "với chính mình",
     tagline: "Ở-yên khi không biết phải làm gì với chính mình.",
     articles: [
-      {
-        slug: "buoi-sang-dau-tien",
-        title: "buổi sáng đầu tiên, trước khi mở điện thoại",
-        body: "có một khoảng vài phút, ngay khi vừa mở mắt, trước khi tay chạm vào điện thoại. Nếu để ý, đó có thể là khoảng yên nhất trong cả ngày — chưa tin nhắn nào cần trả lời, chưa việc gì cần giải quyết. Thử nằm yên ở đó một chút, trước khi để ngày mới cuốn mình đi.",
-      },
-      {
-        slug: "khong-biet-minh-muon-gi",
-        title: "khi không biết mình đang muốn gì",
-        body: "có những lúc ngồi trước nhiều lựa chọn mà lòng trống rỗng, không biết mình thật sự muốn điều gì. Thay vì cố tìm câu trả lời ngay, có thể chỉ cần ngồi lại, thở vài hơi, và để câu hỏi ở đó — không phải mọi câu hỏi đều cần được trả lời ngay lập tức.",
-      },
-      {
-        slug: "ngoi-yen-5-phut",
-        title: "ngồi yên 5 phút, không làm gì cả",
-        body: "không nghe nhạc, không lướt điện thoại, không cả thiền theo một phương pháp nào. Chỉ ngồi, để cơ thể và tâm trí được nghỉ một chút giữa một ngày đầy việc. 5 phút ấy không làm ngày dài ra, nhưng có thể làm nó nhẹ hơn.",
-      },
+      { slug: "khi-suy-nghi-qua-nhieu", title: "khi suy nghĩ quá nhiều", body: "nội dung đang cập nhật." },
+      { slug: "khi-tu-phan-xet", title: "khi tự phán xét", body: "nội dung đang cập nhật." },
+      { slug: "khi-lo-lang-ve-tuong-lai", title: "khi lo lắng về tương lai", body: "nội dung đang cập nhật." },
+      { slug: "khi-mac-ket-trong-mot-quyet-dinh", title: "khi mắc kẹt trong một quyết định", body: "nội dung đang cập nhật." },
+      { slug: "khi-that-vong-ve-ban-than", title: "khi thất vọng về bản thân", body: "nội dung đang cập nhật." },
+      { slug: "khi-muon-thay-doi-minh-ngay-lap-tuc", title: "khi muốn thay đổi mình ngay lập tức", body: "nội dung đang cập nhật." },
+      { slug: "khi-khong-biet-minh-muon-gi", title: "khi không biết mình muốn gì", body: "nội dung đang cập nhật." },
     ],
   },
   {
@@ -32,21 +24,13 @@ export const sections: Section[] = [
     name: "trong gia đình",
     tagline: "Ở-yên giữa những người mình thương và những vết thương mình mang theo.",
     articles: [
-      {
-        slug: "bua-com-khong-dien-thoai",
-        title: "bữa cơm không có điện thoại trên bàn",
-        body: "một bữa cơm không có gì đặc biệt, chỉ là không ai cầm điện thoại. Không phải vì đó là quy tắc phải theo, mà vì khi tay không bận, mắt và tai mới thật sự có mặt với người ngồi cùng bàn.",
-      },
-      {
-        slug: "khi-con-cai-khong-nghe-loi",
-        title: "khi con cái không nghe lời",
-        body: "phản ứng đầu tiên thường là muốn lớn tiếng ngay. Nhưng nếu dừng lại một nhịp thở trước khi nói, đôi khi sẽ nghe ra được điều con đang thật sự cần, phía sau cái không nghe lời ấy.",
-      },
-      {
-        slug: "im-lang-la-mot-cach-lang-nghe",
-        title: "im lặng cũng là một cách lắng nghe",
-        body: "không phải lúc nào cũng cần nói điều gì đó để cho thấy mình đang quan tâm. Đôi khi, chỉ cần ngồi đó, im lặng, và để người kia biết mình đang thật sự lắng nghe — đã là đủ.",
-      },
+      { slug: "khi-cha-me-lam-minh-ton-thuong", title: "khi cha mẹ làm mình tổn thương", body: "nội dung đang cập nhật." },
+      { slug: "khi-vo-chong-khong-hieu-minh", title: "khi vợ/chồng không hiểu mình", body: "nội dung đang cập nhật." },
+      { slug: "khi-con-cai-khong-nghe-loi", title: "khi con cái không nghe lời", body: "nội dung đang cập nhật." },
+      { slug: "khi-nhung-chuyen-cu-lap-lai", title: "khi những chuyện cũ lặp lại", body: "nội dung đang cập nhật." },
+      { slug: "khi-muon-duoc-nguoi-than-cong-nhan", title: "khi muốn được người thân công nhận", body: "nội dung đang cập nhật." },
+      { slug: "khi-tranh-luan", title: "khi tranh luận", body: "nội dung đang cập nhật." },
+      { slug: "khi-can-dat-mot-ranh-gioi", title: "khi cần đặt một ranh giới", body: "nội dung đang cập nhật." },
     ],
   },
   {
@@ -55,21 +39,14 @@ export const sections: Section[] = [
     name: "nơi công sở",
     tagline: "Ở-yên giữa tham vọng, áp lực và nhu cầu được công nhận.",
     articles: [
-      {
-        slug: "mot-hoi-tho-truoc-khi-gui-email",
-        title: "một hơi thở trước khi bấm gửi email",
-        body: "một email viết trong lúc nóng giận thường mang theo nhiều hơn những gì mình muốn nói. Trước khi bấm gửi, thử dừng lại một hơi thở — đôi khi chỉ vậy thôi cũng đủ để đổi cách diễn đạt.",
-      },
-      {
-        slug: "deadline-don-dap-tam-van-yen",
-        title: "deadline dồn dập, tâm vẫn có thể yên",
-        body: "công việc gấp không có nghĩa là tâm phải rối theo. Giữa những việc cần làm ngay, vẫn có thể chọn làm từng việc một, thay vì để đầu óc chạy cùng lúc nhiều hướng.",
-      },
-      {
-        slug: "khi-dong-nghiep-lam-minh-kho-chiu",
-        title: "khi đồng nghiệp làm mình khó chịu",
-        body: "khó chịu là phản ứng tự nhiên, không cần phải dập tắt ngay. Nhưng trước khi phản ứng lại, có thể tự hỏi: điều này có thật sự cần một phản ứng ngay bây giờ không, hay chỉ cần được nhìn thấy và để yên.",
-      },
+      { slug: "khi-bi-phe-binh", title: "khi bị phê bình", body: "nội dung đang cập nhật." },
+      { slug: "khi-khong-duoc-cong-nhan", title: "khi không được công nhận", body: "nội dung đang cập nhật." },
+      { slug: "khi-dong-nghiep-hon-minh", title: "khi đồng nghiệp hơn mình", body: "nội dung đang cập nhật." },
+      { slug: "khi-bi-hieu-lam", title: "khi bị hiểu lầm", body: "nội dung đang cập nhật." },
+      { slug: "khi-sep-gay-ap-luc", title: "khi sếp gây áp lực", body: "nội dung đang cập nhật." },
+      { slug: "khi-muon-chung-minh-minh-dung", title: "khi muốn chứng minh mình đúng", body: "nội dung đang cập nhật." },
+      { slug: "khi-that-bai", title: "khi thất bại", body: "nội dung đang cập nhật." },
+      { slug: "khi-phai-dua-ra-quyet-dinh-kho", title: "khi phải đưa ra quyết định khó", body: "nội dung đang cập nhật." },
     ],
   },
   {
@@ -78,21 +55,16 @@ export const sections: Section[] = [
     name: "giữa xã hội",
     tagline: "Ở-yên giữa rất nhiều tiếng nói, lựa chọn và phản ứng.",
     articles: [
-      {
-        slug: "luot-mang-xa-hoi-khong-cuon-theo",
-        title: "lướt mạng xã hội mà không cuốn theo",
-        body: "mỗi lần lướt điện thoại là hàng chục câu chuyện, ý kiến, cảm xúc của người khác ùa vào. Không cần phải rời xa hoàn toàn, chỉ cần biết khi nào mình đang xem, và khi nào mình đang bị cuốn đi.",
-      },
-      {
-        slug: "giua-dam-dong-van-giu-duoc-minh",
-        title: "giữa đám đông, vẫn giữ được mình",
-        body: "ở giữa nhiều người, nhiều tiếng nói, dễ quên mất tiếng nói của chính mình. Thỉnh thoảng dừng lại, hỏi mình đang cảm thấy gì, đang nghĩ gì — là một cách nhỏ để không lạc mất mình.",
-      },
-      {
-        slug: "y-kien-trai-chieu-lam-minh-nong-len",
-        title: "khi ý kiến trái chiều làm mình nóng lên",
-        body: "không phải ý kiến khác mình là sai. Cơn nóng dâng lên thường đến trước khi kịp hiểu hết điều người khác đang nói. Một nhịp dừng, trước khi đáp lại, có thể giữ cho cuộc trò chuyện không đi quá xa.",
-      },
+      { slug: "mang-xa-hoi", title: "mạng xã hội", body: "nội dung đang cập nhật." },
+      { slug: "tin-tuc", title: "tin tức", body: "nội dung đang cập nhật." },
+      { slug: "tranh-luan", title: "tranh luận", body: "nội dung đang cập nhật." },
+      { slug: "dam-dong", title: "đám đông", body: "nội dung đang cập nhật." },
+      { slug: "nguoi-la", title: "người lạ", body: "nội dung đang cập nhật." },
+      { slug: "khac-biet-quan-diem", title: "khác biệt quan điểm", body: "nội dung đang cập nhật." },
+      { slug: "ap-luc-phai-co-y-kien", title: "áp lực phải có ý kiến", body: "nội dung đang cập nhật." },
+      { slug: "so-sanh-minh-voi-nguoi-khac", title: "so sánh mình với người khác", body: "nội dung đang cập nhật." },
+      { slug: "fomo", title: "FOMO", body: "nội dung đang cập nhật." },
+      { slug: "nhu-cau-duoc-nhin-nhan", title: "nhu cầu được nhìn nhận", body: "nội dung đang cập nhật." },
     ],
   },
   {
@@ -101,21 +73,12 @@ export const sections: Section[] = [
     name: "khi biến cố",
     tagline: "Ở-yên khi đời sống xảy ra điều mình không thể kiểm soát.",
     articles: [
-      {
-        slug: "khi-tin-xau-ap-den-bat-ngo",
-        title: "khi tin xấu ập đến bất ngờ",
-        body: "có những tin không ai chuẩn bị trước được. Trong những giây đầu tiên, không cần phải biết ngay mình sẽ làm gì. Chỉ cần cho phép mình thở, cho phép mình choáng váng một chút, trước khi bước tiếp.",
-      },
-      {
-        slug: "o-lai-voi-noi-dau",
-        title: "ở lại với nỗi đau, thay vì trốn chạy",
-        body: "bản năng thường muốn né tránh những gì đau đớn. Nhưng đôi khi, ở lại một chút với cảm giác ấy — không cố đẩy đi, cũng không cố sức chịu đựng — lại là cách để nó dần qua đi.",
-      },
-      {
-        slug: "sau-con-bao-tim-lai-nhip-tho",
-        title: "sau cơn bão, tìm lại nhịp thở",
-        body: "khi mọi thứ đã tạm lắng, cơ thể và tâm trí vẫn cần thời gian để trở lại nhịp bình thường. Không cần vội quay lại như chưa có gì xảy ra — cho mình một khoảng để thở lại đã.",
-      },
+      { slug: "khi-mat-mat", title: "khi mất mát", body: "nội dung đang cập nhật." },
+      { slug: "khi-so-hai", title: "khi sợ hãi", body: "nội dung đang cập nhật." },
+      { slug: "khi-moi-thu-do-vo", title: "khi mọi thứ đổ vỡ", body: "nội dung đang cập nhật." },
+      { slug: "khi-khong-biet-tuong-lai", title: "khi không biết tương lai", body: "nội dung đang cập nhật." },
+      { slug: "khi-phai-bat-dau-lai", title: "khi phải bắt đầu lại", body: "nội dung đang cập nhật." },
+      { slug: "khi-khong-the-sua-duoc-dieu-da-xay-ra", title: "khi không thể sửa được điều đã xảy ra", body: "nội dung đang cập nhật." },
     ],
   },
 ];

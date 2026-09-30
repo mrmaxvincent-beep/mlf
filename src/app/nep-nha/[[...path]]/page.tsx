@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { NepNhaPicker } from "@/components/NepNhaPicker";
-import { sections } from "@/data/nepNha";
+import { sections, allArticles } from "@/data/nepNha";
 
 const title = "nếp nhà";
 const baseDescription = "đưa ở-yên vào không gian và nếp sống.";
@@ -15,7 +15,7 @@ function resolve(path: string[]) {
   const section = sectionId ? sections.find((s) => s.id === sectionId) : sections[0];
   if (!section) return null;
   if (!slug) return { section, article: null };
-  const article = section.articles.find((a) => a.slug === slug);
+  const article = allArticles(section).find((a) => a.slug === slug);
   return article ? { section, article } : null;
 }
 
@@ -23,7 +23,7 @@ export function generateStaticParams() {
   const params: { path: string[] }[] = [{ path: [] }];
   for (const s of sections) {
     params.push({ path: [s.id] });
-    for (const a of s.articles) params.push({ path: [s.id, a.slug] });
+    for (const a of allArticles(s)) params.push({ path: [s.id, a.slug] });
   }
   return params;
 }

@@ -417,13 +417,9 @@ export default function HomePage() {
         <Prose paragraphs={veOYenIntroA} leadDash />
 
         <div style={{ marginTop: "2rem" }}>
-          <IconLink href={routes.ghiChep} eyebrow="tự đọc & ngẫm" title="ghi chép ở-yên" />
-          <IconLink href={routes.podcastOYen} eyebrow="nghe & cảm" title="podcast ở-yên" />
-          <IconLink href={routes.sachOYen} eyebrow="chiêm nghiệm" title="sách ở-yên" />
-        </div>
-        <div>
-          <IconLink href={routes.motNgayOYen} eyebrow="thử ở-yên một ngày" title="một ngày ở-yên" />
-          <IconLink href={routes.congDongOYen} eyebrow="cùng nhau ở-yên" title="cộng đồng ở-yên" />
+          <IconLink href={routes.thucTapOYenCanBan} eyebrow="học nền tảng" title="ở-yên căn bản" />
+          <IconLink href={routes.thucTapOYenGiuaDoi} eyebrow="thực tập giữa đời" title="ở-yên giữa đời" />
+          <IconLink href={routes.thucTapNepNha} eyebrow="đưa vào nếp sống" title="nếp nhà" />
         </div>
       </div>
 

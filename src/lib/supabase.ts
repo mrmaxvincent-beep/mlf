@@ -26,3 +26,10 @@ export type UpcomingEvent = {
   href: string;
   sort_order: number;
 };
+
+export type VuonTamSpeciesRow = {
+  id: string;
+  name: string;
+  sort_order: number;
+  awakened_count: number;
+};

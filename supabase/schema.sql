@@ -103,3 +103,47 @@ create table hoi_duong_questions (
 alter table hoi_duong_questions enable row level security;
 create policy "public can insert questions" on hoi_duong_questions
   for insert with check (true);
+
+-- 6. vườn-tâm — kho hạt (loài hạt + số người "đánh thức") + hộp gieo hạt (câu chuyện gửi
+--    về, riêng tư đến khi nhà mộc duyệt và gom vào một loài hạt).
+create table vuon_tam_species (
+  id text primary key,
+  name text not null,
+  sort_order integer not null default 0,
+  awakened_count integer not null default 0
+);
+alter table vuon_tam_species enable row level security;
+create policy "public can read species" on vuon_tam_species for select using (true);
+
+create or replace function increment_vuon_tam_awaken(species_id text)
+returns integer
+language plpgsql
+security definer
+as $$
+declare
+  new_count integer;
+begin
+  update vuon_tam_species set awakened_count = awakened_count + 1
+  where id = species_id
+  returning awakened_count into new_count;
+  return new_count;
+end;
+$$;
+
+alter publication supabase_realtime add table vuon_tam_species;
+
+create table vuon_tam_submissions (
+  id uuid primary key default gen_random_uuid(),
+  seed_name text not null check (char_length(seed_name) <= 120),
+  body text not null check (char_length(body) <= 2000),
+  author_label text,
+  is_anonymous boolean not null default true,
+  consent boolean not null default false,
+  approved boolean not null default false,
+  created_at timestamptz not null default now()
+);
+alter table vuon_tam_submissions enable row level security;
+create policy "public can insert submissions with consent" on vuon_tam_submissions
+  for insert with check (consent = true);
+-- Riêng tư: không có policy select — nhà mộc đọc, duyệt và gom vào loài hạt từ Table
+-- Editor theo tuần (mùa đầu vận hành thủ công, đúng như đề xuất ban đầu).

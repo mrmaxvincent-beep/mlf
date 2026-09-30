@@ -148,11 +148,7 @@ export const programsPanel = [
   },
   {
     group: "cộng đồng",
-    items: [
-      { label: "cộng đồng ở-yên", href: routes.congDongOYen },
-      { label: "vòng-trà-tâm", href: routes.vongTraTam },
-      { label: "vườn-tâm", href: routes.vuonTam },
-    ],
+    items: [{ label: "cộng đồng ở-yên", href: routes.congDongOYen }],
   },
 ];
 

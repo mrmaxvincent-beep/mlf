@@ -5,7 +5,7 @@ export type Section = { id: string; num: string; name: string; tagline: string; 
 export const sections: Section[] = [
   {
     id: "voi-chinh-minh",
-    num: "01",
+    num: "I",
     name: "với chính mình",
     tagline: "Ở-yên khi không biết phải làm gì với chính mình.",
     articles: [
@@ -20,7 +20,7 @@ export const sections: Section[] = [
   },
   {
     id: "trong-gia-dinh",
-    num: "02",
+    num: "II",
     name: "trong gia đình",
     tagline: "Ở-yên giữa những người mình thương và những vết thương mình mang theo.",
     articles: [
@@ -35,7 +35,7 @@ export const sections: Section[] = [
   },
   {
     id: "noi-cong-so",
-    num: "03",
+    num: "III",
     name: "nơi công sở",
     tagline: "Ở-yên giữa tham vọng, áp lực và nhu cầu được công nhận.",
     articles: [
@@ -51,7 +51,7 @@ export const sections: Section[] = [
   },
   {
     id: "giua-xa-hoi",
-    num: "04",
+    num: "IV",
     name: "giữa xã hội",
     tagline: "Ở-yên giữa rất nhiều tiếng nói, lựa chọn và phản ứng.",
     articles: [
@@ -69,7 +69,7 @@ export const sections: Section[] = [
   },
   {
     id: "khi-bien-co",
-    num: "05",
+    num: "V",
     name: "khi biến cố",
     tagline: "Ở-yên khi đời sống xảy ra điều mình không thể kiểm soát.",
     articles: [

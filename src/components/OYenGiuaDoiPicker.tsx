@@ -80,7 +80,7 @@ export function OYenGiuaDoiPicker({
               {current.tagline}
             </p>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              {current.articles.map((a) => (
+              {current.articles.map((a, i) => (
                 <button
                   key={a.slug}
                   onClick={() => goArticle(a.slug)}
@@ -103,8 +103,13 @@ export function OYenGiuaDoiPicker({
                     font: "inherit",
                   }}
                 >
-                  <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--color-ink)" }}>
-                    {a.title}
+                  <span style={{ display: "flex", alignItems: "baseline", gap: "0.9rem" }}>
+                    <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", color: "var(--color-stone)" }}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--color-ink)" }}>
+                      {a.title}
+                    </span>
                   </span>
                   <span className="ar" style={{ flexShrink: 0, fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--color-stone)" }}>
                     →

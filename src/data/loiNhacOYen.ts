@@ -5,22 +5,22 @@ export type Message = {
   src?: string;
 };
 
-/** Mỗi lời nhắc là một tấm hình nền điện thoại — demo minh họa, thay bằng ảnh thật khi có. */
+/** Mỗi lời nhắc là một tấm hình nền điện thoại — demo minh họa (chữ "ở-yên" tạm thay ảnh thật), thay bằng ảnh + lời nhắc thật khi có. */
 export const messages: Message[] = [
-  { id: "01", text: "chậm lại một chút, cũng không sao." },
-  { id: "02", text: "ở-yên, không phải là không làm gì." },
-  { id: "03", text: "hơi thở này, chỉ có một lần." },
-  { id: "04", text: "để tâm được yên, trước khi vội vàng." },
-  { id: "05", text: "một khoảng dừng, cũng là một câu trả lời." },
-  { id: "06", text: "bạn không cần phải ổn ngay bây giờ." },
-  { id: "07", text: "ngồi xuống, để nghe rõ chính mình." },
-  { id: "08", text: "hôm nay, chỉ cần vừa đủ." },
-  { id: "09", text: "không phải chuyện gì cũng cần giải quyết ngay." },
-  { id: "10", text: "yên, không có nghĩa là đứng lại." },
-  { id: "11", text: "một tách trà, và một khoảng lặng." },
-  { id: "12", text: "buông một nhịp, để thấy rõ hơn." },
-  { id: "13", text: "im lặng cũng là một câu trả lời." },
-  { id: "14", text: "về lại với hơi thở, khi lòng rối." },
-  { id: "15", text: "mỗi ngày, một khoảng dừng nhỏ." },
-  { id: "16", text: "ở-yên là trở về, không phải trốn đi." },
+  { id: "01", text: "ở-yên" },
+  { id: "02", text: "ở-yên" },
+  { id: "03", text: "ở-yên" },
+  { id: "04", text: "ở-yên" },
+  { id: "05", text: "ở-yên" },
+  { id: "06", text: "ở-yên" },
+  { id: "07", text: "ở-yên" },
+  { id: "08", text: "ở-yên" },
+  { id: "09", text: "ở-yên" },
+  { id: "10", text: "ở-yên" },
+  { id: "11", text: "ở-yên" },
+  { id: "12", text: "ở-yên" },
+  { id: "13", text: "ở-yên" },
+  { id: "14", text: "ở-yên" },
+  { id: "15", text: "ở-yên" },
+  { id: "16", text: "ở-yên" },
 ];

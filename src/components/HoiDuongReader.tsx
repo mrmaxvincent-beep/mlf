@@ -10,7 +10,7 @@ export function HoiDuongReader({ topics, initialTopicId, style }: { topics: Topi
   const current = topics.find((t) => t.id === initialTopicId) ?? topics[0];
 
   return (
-    <div className="hd-shell" style={style}>
+    <div className="hd-shell hd-shell--anchored" style={style}>
       <div className="hd-rail">
         {topics.map((t) => (
           <button

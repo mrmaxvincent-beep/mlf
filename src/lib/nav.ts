@@ -94,7 +94,6 @@ export const thuVienMenu = [
 
 export const congDongMenu = [
   { label: "một ngày ở-yên", href: routes.motNgayOYen },
-  { label: "vườn-tâm", href: routes.vuonTam },
   { label: "trăng-yên", href: routes.trangYen },
   { label: "vòng-trà-tâm", href: routes.vongTraTam },
 ];
@@ -191,7 +190,6 @@ export const mobileMenuSections = [
     heading: "cộng đồng",
     items: [
       { label: "một ngày ở-yên", href: routes.motNgayOYen },
-      { label: "vườn-tâm", href: routes.vuonTam },
       { label: "trăng-yên", href: routes.trangYen },
       { label: "vòng-trà-tâm", href: routes.vongTraTam },
     ],

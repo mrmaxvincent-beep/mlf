@@ -11,28 +11,40 @@ const title = "nếp nhà";
 const baseDescription = "đưa ở-yên vào không gian và nếp sống.";
 
 function resolve(path: string[]) {
-  if (!path[0]) return sections[0] ?? null;
-  return sections.find((s) => s.id === path[0]) ?? null;
+  const [sectionId, slug] = path;
+  const section = sectionId ? sections.find((s) => s.id === sectionId) : sections[0];
+  if (!section) return null;
+  if (!slug) return { section, article: null };
+  const article = section.articles.find((a) => a.slug === slug);
+  return article ? { section, article } : null;
 }
 
 export function generateStaticParams() {
-  return [{ path: [] }, ...sections.map((s) => ({ path: [s.id] }))];
+  const params: { path: string[] }[] = [{ path: [] }];
+  for (const s of sections) {
+    params.push({ path: [s.id] });
+    for (const a of s.articles) params.push({ path: [s.id, a.slug] });
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ path?: string[] }> }): Promise<Metadata> {
   const { path = [] } = await params;
-  const section = resolve(path);
-  if (!section) return {};
-  return {
-    title: path.length ? `${section.name} · ${title}` : title,
-    description: baseDescription,
-  };
+  const resolved = resolve(path);
+  if (!resolved) return {};
+  if (resolved.article) {
+    return {
+      title: `${resolved.article.title} · ${title}`,
+      description: baseDescription,
+    };
+  }
+  return { title, description: baseDescription };
 }
 
 export default async function Page({ params }: { params: Promise<{ path?: string[] }> }) {
   const { path = [] } = await params;
-  const section = resolve(path);
-  if (!section) notFound();
+  const resolved = resolve(path);
+  if (!resolved) notFound();
 
   return (
     <>
@@ -49,7 +61,7 @@ export default async function Page({ params }: { params: Promise<{ path?: string
       </div>
 
       <Reveal style={{ marginTop: "3.5rem", marginBottom: "6rem" }}>
-        <NepNhaPicker sections={sections} initialSectionId={section.id} />
+        <NepNhaPicker sections={sections} initialSectionId={resolved.section.id} initialArticleSlug={resolved.article?.slug ?? null} />
       </Reveal>
 
       <Footer />

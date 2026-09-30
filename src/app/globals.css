@@ -1936,7 +1936,7 @@ details[open] > summary .acc-icon {
     border-bottom-color: var(--color-ink);
   }
 }
-/* biến thể "neo theo khung trắng": khung trắng có cùng max-width/padding với đoạn giới thiệu phía trên nên luôn thẳng hàng; rail dọc tràn sang trái ở khoảng trống, ở màn hẹp thì rail rơi xuống thành hàng ngang phía trên như bản gốc (dùng cho hỏi-đường) */
+/* biến thể "neo theo khung trắng": khung trắng độc lập, có cùng max-width/padding với đoạn giới thiệu phía trên nên luôn thẳng hàng; rail dọc đứng tách riêng bên trái, không bị gò vào chung khung với nội dung — ở màn hẹp mới rơi xuống hàng ngang phía trên (dùng cho hỏi-đường) */
 .hd-shell--anchored {
   position: relative;
   display: block;
@@ -1945,16 +1945,17 @@ details[open] > summary .acc-icon {
 .hd-shell--anchored .hd-content {
   max-width: 100%;
 }
-@media (min-width: 1100px) {
+@media (min-width: 841px) {
   .hd-shell--anchored .hd-rail {
     position: absolute;
     top: 0;
     right: 100%;
-    margin-right: 3rem;
-    width: 13rem;
+    margin-right: 1.6rem;
+    width: auto;
+    white-space: nowrap;
   }
 }
-@media (max-width: 1099px) {
+@media (max-width: 840px) {
   .hd-shell--anchored .hd-rail {
     position: static;
     flex-direction: row;

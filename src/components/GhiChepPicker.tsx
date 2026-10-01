@@ -36,7 +36,7 @@ export function GhiChepPicker({ notes, initialSlug }: { notes: Note[]; initialSl
         </div>
       </div>
 
-      <div>
+      <div style={{ background: "#fff", borderRadius: "1.25rem", padding: "clamp(1.5rem, 4vw, 3rem)" }}>
         {active ? (
           <div>
             <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.25rem, 2.8vw, 1.6rem)", lineHeight: 1.3, color: "var(--color-ink)", margin: "0 0 2rem" }}>

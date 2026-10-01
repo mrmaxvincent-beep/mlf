@@ -10,7 +10,7 @@ const cardGradients = [
   "linear-gradient(160deg, #f1ece5 0%, #ddd3c6 100%)",
 ];
 
-function DownloadIcon() {
+export function DownloadIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
       <path d="M8 1.5v9" stroke="currentColor" strokeWidth="1.1" />
@@ -20,7 +20,7 @@ function DownloadIcon() {
   );
 }
 
-function ShareIcon() {
+export function ShareIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
       <circle cx="12.5" cy="3.5" r="1.6" stroke="currentColor" strokeWidth="1.1" />
@@ -32,7 +32,7 @@ function ShareIcon() {
 }
 
 /** Card wallpaper: dùng ảnh thật nếu có `src`, ngược lại dựng thẻ chữ bằng CSS thay ảnh. */
-function WallpaperCard({ message, index, fontSize = "1.05rem" }: { message: Message; index: number; fontSize?: string }) {
+export function WallpaperCard({ message, index, fontSize = "1.05rem" }: { message: Message; index: number; fontSize?: string }) {
   if (message.src) {
     return <Image src={message.src} alt={message.text} fill sizes="(max-width: 640px) 90vw, 420px" style={{ objectFit: "cover" }} />;
   }
@@ -66,7 +66,7 @@ function WallpaperCard({ message, index, fontSize = "1.05rem" }: { message: Mess
   );
 }
 
-async function share(message: Message) {
+export async function share(message: Message) {
   const shareData = { title: "lời nhắc ở-yên", text: message.text, url: typeof window !== "undefined" ? window.location.href : undefined };
   if (typeof navigator !== "undefined" && navigator.share) {
     try {

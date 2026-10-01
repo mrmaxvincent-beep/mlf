@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
-import { LoiNhacGallery } from "@/components/LoiNhacGallery";
+import { LoiNhacDraw } from "@/components/LoiNhacDraw";
 import { messages } from "@/data/loiNhacOYen";
 
 const title = "lời nhắc ở-yên";
@@ -30,7 +30,7 @@ export default function Page() {
       </div>
 
       <Reveal style={{ marginTop: "2rem", marginBottom: "4rem" }}>
-        <LoiNhacGallery messages={messages} />
+        <LoiNhacDraw messages={messages} />
       </Reveal>
 
       <Footer />

@@ -2618,3 +2618,95 @@ details[open] > summary .acc-icon {
   border-color: var(--color-ink);
   transform: translateY(-2px);
 }
+
+/* lời nhắc ở-yên: rút một lá */
+.lnd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.lnd-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin-bottom: 1.8rem;
+}
+.lnd-deck {
+  position: relative;
+  width: min(100%, 300px);
+  aspect-ratio: 4 / 5;
+  perspective: 1400px;
+}
+.lnd-back,
+.lnd-face--back {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(42, 40, 36, 0.06) 34.5% 35%, transparent 35.5%),
+    radial-gradient(circle at 50% 50%, transparent 0 44%, rgba(42, 40, 36, 0.05) 44.5% 45%, transparent 45.5%),
+    linear-gradient(160deg, #ebe3d8 0%, #d8ccbc 100%);
+}
+.lnd-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.4rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+.lnd-back--3 { transform: rotate(-6deg) translate(-10px, 6px); opacity: 0.7; }
+.lnd-back--2 { transform: rotate(3.5deg) translate(8px, 3px); opacity: 0.85; }
+.lnd-card {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.lnd-card:not(.flipped):hover { transform: translateY(-6px) rotate(-1deg); }
+.lnd-card.flipped { transform: rotateY(180deg); cursor: default; }
+.lnd-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+.lnd-face--back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lnd-face--front {
+  transform: rotateY(180deg);
+  background: var(--color-photo-placeholder);
+}
+.lnd-mark {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  opacity: 0.55;
+}
+.lnd-actions {
+  animation: lnd-fade 0.5s 0.6s both;
+}
+@keyframes lnd-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.lnd-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.2rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lnd-card { transition: none; }
+}

@@ -945,4 +945,48 @@ export const entries: DictEntry[] = [
       { word: "cộng đồng ở-yên", desc: "chỗ người ta chơi với nhau, chẳng việc gì ràng buộc" },
     ],
   },
+  {
+    word: "gieo",
+    origin: "Thuần Việt",
+    group: "Hành động · Thời gian · Duyên",
+    gloss: "làm xong phần mình rồi thôi",
+    definition: [
+      ["Rải hạt xuống đất cho nó mọc lên."],
+      [
+        "Việc này kết thúc ngay khi tay buông hạt. Mọi thứ sau đó thuộc về đất, về mưa, về cái hạt ấy. Người gieo đứng ngoài toàn bộ phần còn lại, và cũng không có cách nào chen vào.",
+      ],
+      [
+        "Tiếng Việt mượn chữ này cho những việc chẳng liên quan tới ruộng. Gieo duyên, gieo mầm, gieo tiếng oán. Lối nói ấy hàm ý rằng, những việc mình làm hôm nay mà kết quả rơi xuống vào một lúc mình chẳng biết trước, có khi nhiều năm sau.",
+      ],
+      ["Tại mlf, chữ gieo nằm trong tên chương trình gieo mlf ở Huế. Góp phần vào một chỗ chưa có, chờ nó lên."],
+    ],
+    story: [
+      ["Gieo rau cải thì người ta rắc dày hơn mức cần. Một luống chỉ nuôi được chừng ấy cây, mà hạt thì rắc gấp mấy lần."],
+      ["Lý do là hạt nào lên hạt nào nằm im thì chẳng ai biết trước. Có hạt gặp chỗ đất tốt, có hạt rơi vào chỗ sỏi. Có hạt tự nó lép sẵn từ trong."],
+      ["Mươi hôm sau nhìn luống thì thấy chỗ dày chỗ thưa, có khoảng trống hẳn. Người làm vườn tỉa bớt chỗ dày, chỗ trống thì để vậy."],
+      ["Bà bảo gieo nhiều cho chắc, lên được bao nhiêu thì ăn bấy nhiêu."],
+    ],
+    insight: [
+      [
+        "Người ta hay làm việc với một cái đích gắn sẵn. Viết thì mong có người đọc, giúp ai thì mong họ khá lên, mở một chỗ thì mong khách tới. Mong như vậy là thường, mà cái mong ấy kéo dài ra thành chờ, rồi thành nặng.",
+      ],
+      [
+        "Người gieo rắc dày vì biết trước sẽ có hạt nằm im. Họ gieo xong thì đi làm việc khác, mươi hôm sau ra xem luống, lên chừng nào hay chừng ấy.",
+      ],
+      [
+        "Phần mình làm được dừng lại ở chỗ rắc hạt và tưới nước. Giữ lấy phần đó cho tử tế rồi buông tay, vì phần sau có cố cũng chẳng vào được.",
+      ],
+      [
+        "Việc nào cũng gieo được theo lối ấy. Nói một câu tử tế với ai rồi thôi, chẳng nhìn xem nó đi tới đâu. Có khi mấy năm sau mới thấy, có khi chẳng bao giờ thấy.",
+      ],
+    ],
+    insightClose: ["Gieo là làm phần mình, phần còn lại thuộc về đất."],
+    variants: [
+      { word: "gieo mlf ở Huế", desc: "góp phần vào một chỗ chưa có, rồi chờ nó lên" },
+      { word: "tùy duyên", desc: "làm xong phần mình, còn lại tin vào đúng người đúng lúc" },
+      { word: "để chín", desc: "đợi đủ ngày của một thứ, việc mà thời gian làm thay cho mình" },
+      { word: "đất", desc: "chỗ nhận lấy hạt, và cũng là chỗ quyết phần mình chẳng quyết được" },
+      { word: "buông", desc: "thả tay sau khi rắc hạt, việc khó hơn cả việc gieo" },
+    ],
+  },
 ];

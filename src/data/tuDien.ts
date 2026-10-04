@@ -989,4 +989,48 @@ export const entries: DictEntry[] = [
       { word: "buông", desc: "thả tay sau khi rắc hạt, việc khó hơn cả việc gieo" },
     ],
   },
+  {
+    word: "nhà",
+    origin: "Thuần Việt",
+    group: "Nơi chốn · Quan hệ · Thuộc về",
+    gloss: "chỗ ráp lại từ những gì quanh mình",
+    definition: [
+      ["Chỗ ở của một người hay một gia đình."],
+      [
+        "Chữ này trong tiếng Việt chỉ hai thứ cùng lúc. Cái nhà xây bằng gạch gỗ, và những người sống trong đó. Nói nhà tôi là nói vợ hay chồng mình, nói cả nhà là nói hết người trong ấy. Người mình gộp chỗ ở với người ở vào một chữ.",
+      ],
+      [
+        "Chữ này còn dùng cho nghề. Nhà văn, nhà nông, nhà giáo. Ai gắn đời mình với một việc đủ lâu thì việc ấy thành nhà của họ.",
+      ],
+      [
+        "Tại mlf, chỗ ở Măng Đen được gọi là nhà mộc. Khách tới thì gọi là về, và bữa cơm thì khách ngồi cùng mâm với người trong nhà.",
+      ],
+    ],
+    story: [
+      ["Trong vườn có tổ chim sâu treo dưới tán ổi, bé bằng nắm tay. Nhìn gần thì thấy nó ráp bằng đủ thứ. Rễ cây khô, sợi chỉ ai đánh rơi, một mẩu ni lông, mấy cọng tơ nhện."],
+      ["Thứ nào cũng là thứ nhặt được quanh đó trong vòng vài chục mét. Con chim chẳng đi xa kiếm vật liệu, nó dùng cái sẵn có trong tầm bay của mình."],
+      ["Tổ ấy nhìn xấu, lộn xộn, mà qua mấy trận mưa vẫn còn. Bên trong lót êm, chim non nằm trong đó mấy tuần."],
+      ["Hết mùa thì chim đi, bỏ tổ lại trên cành. Năm sau chúng làm tổ khác, cũng bằng những thứ nhặt quanh đó."],
+    ],
+    insight: [
+      [
+        "Nhiều người hình dung nhà là thứ dựng xong một lần trong đời. Dành dụm bao năm đủ tiền thì xây, xây xong thì yên. Nghĩ vậy thì những năm chưa có nhà là những năm sống tạm.",
+      ],
+      ["Con chim sâu ráp tổ bằng mẩu ni lông với sợi chỉ rơi. Nó dùng cái có trong tầm bay, và cái tổ ấy che được mưa."],
+      [
+        "Nhà của một người cũng ráp từ những thứ quanh tầm tay. Một chỗ ngồi quen thuộc, vài người gọi điện lúc nửa đêm được, một thói quen buổi sáng. Toàn thứ nhỏ, nhặt dần, và góp lại thì đủ che.",
+      ],
+      [
+        "Ai dọn đi chỗ khác thì mất một phần trong đó, rồi lại nhặt dần cái mới. Mấy tháng đầu thấy trống là chuyện thường, tổ chưa ráp xong thì ngồi đâu cũng thấy lạ.",
+      ],
+    ],
+    insightClose: ["Nhà là thứ mình nhặt dần trong tầm tay."],
+    variants: [
+      { word: "chốn về", desc: "chỗ người ta về chứ chẳng phải chỗ để tới" },
+      { word: "nhà mộc", desc: "chỗ ở tại Măng Đen, nơi khách và người trong nhà ngồi cùng mâm" },
+      { word: "bén rễ", desc: "lúc một người thôi là khách ở chỗ mình đang sống" },
+      { word: "quen", desc: "thứ chỉ thời gian cho được, và cũng là thứ làm một chỗ thành nhà" },
+      { word: "ở lại", desc: "trục thứ ba của mlf, việc phải làm đủ lâu thì tổ mới ráp xong" },
+    ],
+  },
 ];

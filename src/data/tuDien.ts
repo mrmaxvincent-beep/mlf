@@ -901,4 +901,48 @@ export const entries: DictEntry[] = [
       { word: "hiền", desc: "phẩm chất của người đã yên với mình, gần với chữ lành tới mức đi liền nhau" },
     ],
   },
+  {
+    word: "chơi",
+    origin: "Thuần Việt",
+    group: "Hành động · Thời gian · Quan hệ",
+    gloss: "việc làm vì chính nó",
+    definition: [
+      ["Làm một việc cho vui, chẳng nhắm tới kết quả nào ngoài chính việc ấy."],
+      [
+        "Chữ này rộng hơn trò chơi rất nhiều. Chơi cây, chơi trà, chơi chữ, chơi đàn. Những thú ấy đòi công phu hàng chục năm, mà người mình vẫn gọi là chơi, vì làm xong chẳng để làm gì cả.",
+      ],
+      [
+        "Người mình cũng dùng chữ này cho tình thân. Bạn chơi, chơi với nhau từ nhỏ, qua nhà ai đó chơi. Mối quan hệ nào chẳng có việc gì ràng buộc thì gọi là chơi, và những mối ấy lại hay bền nhất.",
+      ],
+      [
+        "Tại mlf, phần lớn một ngày là chơi theo nghĩa đó. Pha trà, nhặt rau, ngồi ngoài hiên nhìn mưa. Chẳng việc nào trong đó ra được cái gì.",
+      ],
+    ],
+    story: [
+      ["Đứa nhỏ ngồi ngoài sân cả buổi chiều với một que củi. Nó vạch xuống đất, xóa đi, vạch lại. Lùa mấy hòn sỏi sang bên này rồi sang bên kia."],
+      ["Người lớn đi ngang hỏi con chơi gì đấy. Nó ngẩng lên nói chơi thôi, rồi cúi xuống vạch tiếp."],
+      ["Trời sắp tối, mẹ gọi vào ăn cơm. Nó bỏ que củi xuống đứng dậy, chẳng tiếc gì, cũng chẳng nói hôm nay mình làm được gì."],
+      ["Mấy đường vạch trên sân đến đêm mưa là trôi hết."],
+    ],
+    insight: [
+      [
+        "Lớn lên rồi thì việc gì cũng phải ra cái gì. Đi bộ thì tính bước, đọc sách thì ghi lại bài học, nghỉ phép đi chơi cũng phải về với một ít tấm ảnh. Lâu dần thì mọi thứ đều có phần sau nó, và thứ nào chẳng có phần sau thì thấy phí.",
+      ],
+      [
+        "Đứa nhỏ ngoài sân không phí buổi chiều nào cả. Nó ở nguyên trong việc nó đang làm, chẳng để mắt ra chỗ nào khác, mà cũng chẳng cần ai nhìn.",
+      ],
+      [
+        "Cái khó của người lớn nằm ở chỗ muốn chơi thì phải thật sự thôi tính. Pha một ấm trà rồi uống, không chụp, không kể lại, không rút ra bài học nào về sự chậm rãi.",
+      ],
+      ["Những buổi như vậy trôi đi chẳng để lại gì, giống mấy đường vạch trên sân."],
+    ],
+    insightClose: ["Chơi là việc duy nhất mình làm cho mình."],
+    variants: [
+      { word: "ngày-hiền", desc: "một ngày chẳng ra cái gì, và cũng chẳng cần ra cái gì" },
+      { word: "không gian của sự không đòi hỏi", desc: "chỗ mà một buổi chiều trôi đi cũng chẳng ai hỏi được gì" },
+      { word: "tea · mind", desc: "chơi trà, việc công phu mà làm xong chẳng để làm gì" },
+      { word: "thong dong", desc: "làm việc theo nhịp mình, trong lòng rộng như lúc đang chơi" },
+      { word: "cộng đồng ở-yên", desc: "chỗ người ta chơi với nhau, chẳng việc gì ràng buộc" },
+    ],
+  },
 ];

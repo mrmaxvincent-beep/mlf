@@ -22,9 +22,7 @@ export const day2 = [
 ];
 
 export const priceTiers = [
-  { label: "early circle (5 người đầu tiên)", price: "3.500.000đ" },
   { label: "standard", price: "3.800.000đ" },
-  { label: "last spots (từ tháng 10/2026)", price: "4.200.000đ" },
 ];
 
 export const faqs = [
@@ -47,10 +45,6 @@ export const faqs = [
   {
     q: "Có giới hạn độ tuổi không?",
     a: "Chương trình dành cho người từ 15 tuổi trở lên.",
-  },
-  {
-    q: "Early circle là gì? Tôi có còn kịp không?",
-    a: "5 người đăng ký đầu tiên được mức phí ưu đãi 3.500.000đ. Sau đó mức chuẩn là 3.800.000đ. Từ tháng 10/2026, các suất cuối sẽ là 4.200.000đ. Vui lòng liên hệ để biết còn suất early circle không.",
   },
   {
     q: "Nếu tôi phải hủy, có được hoàn tiền không?",

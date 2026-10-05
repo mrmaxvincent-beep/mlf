@@ -44,7 +44,7 @@ export const faqs = [
   },
   {
     q: "Nếu tôi phải hủy, có được hoàn tiền không?",
-    a: "Có. Nếu bạn báo trước ít nhất 30 ngày, nhà mộc hoàn lại 100%. Nếu hủy trong vòng 30 ngày trước chương trình, tùy thời gian sẽ có mức hoàn tương ứng. Chi tiết xem tại mục đăng ký.",
+    a: "Có. Nếu bạn báo trước ít nhất 30 ngày, nhà mộc hoàn lại 100%. Nếu hủy trong vòng 30 ngày trước chương trình, tùy thời gian sẽ có mức hoàn tương ứng. Chi tiết xem tại booking.",
   },
   {
     q: "Tuần-du 04 có khác gì so với một buổi retreat thông thường không?",

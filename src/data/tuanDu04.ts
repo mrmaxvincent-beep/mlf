@@ -21,10 +21,6 @@ export const day2 = [
   { time: "13:00 - 14:00", activity: "về lại trung tâm thành phố" },
 ];
 
-export const priceTiers = [
-  { label: "standard", price: "3.800.000đ" },
-];
-
 export const faqs = [
   {
     q: "Tôi đi một mình có được không?",
@@ -49,10 +45,6 @@ export const faqs = [
   {
     q: "Nếu tôi phải hủy, có được hoàn tiền không?",
     a: "Có. Nếu bạn báo trước ít nhất 30 ngày, nhà mộc hoàn lại 100%. Nếu hủy trong vòng 30 ngày trước chương trình, hoàn lại 80%.",
-  },
-  {
-    q: `"Ngồi chung im ắng" vào buổi sáng là gì?`,
-    a: "Không phải thiền có hướng dẫn, cũng không phải nghi thức. Chỉ là cùng nhau ngồi im — mỗi người theo nhịp riêng của mình — trong một khoảng không gian yên. Bạn không cần làm gì đúng hay sai.",
   },
   {
     q: "Tuần-du 04 có khác gì so với một buổi retreat thông thường không?",

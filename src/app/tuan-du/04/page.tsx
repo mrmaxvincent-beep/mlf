@@ -9,7 +9,7 @@ import { DayCard } from "@/components/DayCard";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { routes } from "@/lib/nav";
-import { day1, day2, priceTiers, faqs } from "@/data/tuanDu04";
+import { day1, day2, faqs } from "@/data/tuanDu04";
 
 export const metadata: Metadata = {
   title: "tuần-du 04 · a pause in Saigon",
@@ -141,7 +141,7 @@ export default function TuanDu04Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem", marginTop: "3.5rem" }}>
         <span className="eyebrow">thông tin và đăng ký</span>
       </div>
-      <div className="wrap" style={{ marginBottom: "1.5rem", maxWidth: "56ch" }}>
+      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
           Chi phí: 3.800.000đ/người
         </p>
@@ -152,28 +152,6 @@ export default function TuanDu04Page() {
           Giới hạn: 15 người
         </p>
       </div>
-      <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <div style={{ border: "1px solid var(--color-mist)" }}>
-          {priceTiers.map((t, i) => (
-            <div
-              key={t.label}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "baseline",
-                gap: "1rem",
-                padding: "0.9rem 1.1rem",
-                borderBottom: i < priceTiers.length - 1 ? "1px solid var(--color-mist)" : "none",
-                flexWrap: "wrap",
-              }}
-            >
-              <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", color: "var(--color-ink)" }}>{t.label}</span>
-              <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-cham-dem)" }}>{t.price}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", lineHeight: 1.6, color: "var(--color-ink)", margin: "0 0 2rem" }}>
           nếu bạn cảm thấy mình cần một khoảng dừng, đây có thể là nơi để bắt đầu.

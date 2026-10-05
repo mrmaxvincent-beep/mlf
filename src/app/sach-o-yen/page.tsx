@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
+import { BookDownloadLink } from "@/components/BookDownloadLink";
 import { books } from "@/data/sachOYen";
 
 export const metadata: Metadata = {
@@ -78,9 +79,7 @@ export default function SachOYenPage() {
                   sắp ra mắt
                 </span>
               ) : (
-                <a href={book.downloadHref} target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
-                  tải xuống <span className="ar">→</span>
-                </a>
+                <BookDownloadLink bookId={book.id} title={book.title} href={book.downloadHref} />
               )}
             </div>
           </Reveal>

@@ -75,6 +75,9 @@ const tripStatus = (num: string) => trips.find((t) => t.num === num)!.status;
 const tripTitle = (num: string) =>
   chuoiList.find((c) => c.num === num)?.title ?? "";
 const byId = (id: string) => landmarks.find((l) => l.id === id)!;
+/** Số thứ tự chung 1..N theo lần đầu điểm xuất hiện trong các chuyến; điểm đi lại giữ nguyên số. */
+const placeNum: Record<string, number> = {};
+for (const t of trips) for (const id of t.stops) placeNum[id] ??= Object.keys(placeNum).length + 1;
 const landmarkStatus = (l: Landmark) =>
   tripsOf(l.id)
     .map(tripStatus)
@@ -496,7 +499,7 @@ export function TuanDuMap() {
                 const on = !activeTrip || tripsOf(l.id).includes(activeTrip);
                 const isSel = selected === l.id;
                 const isHover = hovered === l.id;
-                const r = (isSel ? 7 : 5) * u;
+                const r = (isSel ? 9.5 : 8) * u;
                 return (
                   <g
                     key={l.id}
@@ -528,6 +531,15 @@ export function TuanDuMap() {
                         st === "planned" ? `${2 * s} ${2 * s}` : undefined
                       }
                     />
+                    <text
+                      x={x}
+                      y={y + 2.8 * u}
+                      textAnchor="middle"
+                      fontSize={7.5 * u}
+                      className={st === "done" ? "tdm-num tdm-num--light" : "tdm-num"}
+                    >
+                      {placeNum[l.id]}
+                    </text>
                     {isSel || isHover ? (
                       <text
                         x={x + r + 4 * u}
@@ -633,6 +645,9 @@ export function TuanDuMap() {
                         onMouseEnter={() => setHovered(id)}
                         onMouseLeave={() => setHovered(null)}
                       >
+                        <span className={`tdm-group-num tdm-group-num--${landmarkStatus(l)}`}>
+                          {placeNum[id]}
+                        </span>
                         {l.name}
                       </button>
                     </li>

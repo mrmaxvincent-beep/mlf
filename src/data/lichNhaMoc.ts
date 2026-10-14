@@ -48,6 +48,12 @@ export const events: CalEvent[] = [
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-08-02", end: "2027-08-06" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-12-06", end: "2027-12-10" },
 
+  // hàm-dưỡng 2027: mới biết tháng, ngày cụ thể cập nhật sau
+  { program: "ham-duong", title: "retreat mùa xuân", note: "ngày cụ thể sẽ cập nhật", month: "2027-03" },
+  { program: "ham-duong", title: "retreat mùa hạ", note: "ngày cụ thể sẽ cập nhật", month: "2027-06" },
+  { program: "ham-duong", title: "retreat mùa thu", note: "ngày cụ thể sẽ cập nhật", month: "2027-09" },
+  { program: "ham-duong", title: "retreat mùa đông", note: "ngày cụ thể sẽ cập nhật", month: "2027-12" },
+
   // đêm rằm hằng tháng (ngày 15 âm lịch), tính theo âm lịch Việt Nam
   { program: "trang-yen", title: "trăng-yên · rằm tháng 2", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-03-22" },
   { program: "trang-yen", title: "trăng-yên · rằm tháng 3", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-04-21" },

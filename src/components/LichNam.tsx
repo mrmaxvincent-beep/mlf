@@ -92,11 +92,10 @@ export function LichNam() {
   }
   if (cursor < y1) openSegments.push([cursor, y1]);
   const monthInYear = (e: Dated) => Math.max(span(e)[0], y0);
-  const rows = programs.filter((p) => yearEvents.some((e) => e.program === p.id));
+  const rows = programs.filter((p) => p.ongoing || yearEvents.some((e) => e.program === p.id));
   // mỗi nhóm: một hàng nhãn rồi tới các hàng chương trình; nhóm "quanh năm" luôn ở cuối
   const sections = [
-    ...groups.map((g) => ({ key: g.id, label: g.name, items: rows.filter((p) => p.group === g.id), ongoing: false })).filter((g) => g.items.length),
-    { key: "quanh-nam", label: "quanh năm", items: ongoing, ongoing: true },
+    ...groups.map((g) => ({ key: g.id, label: g.name, items: rows.filter((p) => p.group === g.id) })).filter((g) => g.items.length),
   ];
   let rowNo = 2;
   const placed = sections.map((sec) => {
@@ -206,11 +205,12 @@ export function LichNam() {
             <div className="lnm-track lnm-track--group" style={{ gridRow: sec.labelRow }} />
             {sec.rows.map(({ p, row }) => (
               <div key={p.id} className="lnm-row">
-                <Link href={p.href} className={`lnm-name${sec.ongoing ? " lnm-name--ongoing" : ""}`} style={{ gridRow: row }}>
+                <Link href={p.href} className={`lnm-name${p.ongoing ? " lnm-name--ongoing" : ""}`} style={{ gridRow: row }}>
                   {p.name}
+                  {p.ongoing ? <small>quanh năm</small> : null}
                 </Link>
-                <div className={`lnm-track${sec.ongoing ? " lnm-track--ongoing" : ""}`} style={{ gridRow: row }}>
-                  {sec.ongoing ? renderOpen() : renderMarks(p)}
+                <div className={`lnm-track${p.ongoing ? " lnm-track--ongoing" : ""}`} style={{ gridRow: row }}>
+                  {p.ongoing ? renderOpen() : renderMarks(p)}
                 </div>
               </div>
             ))}

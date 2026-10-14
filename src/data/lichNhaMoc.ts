@@ -1,6 +1,7 @@
 import { routes } from "@/lib/nav";
 
-export type Program = { id: string; name: string; href: string; group?: string };
+/** `ongoing`: hoạt động quanh năm, đặt lúc nào cũng được — vẽ thành vạch liền suốt năm, ngắt ở các quãng nghỉ. */
+export type Program = { id: string; name: string; href: string; group?: string; ongoing?: boolean };
 
 /** `start`/`end` dạng YYYY-MM-DD; nếu chỉ biết tháng thì để `month` dạng YYYY-MM và bỏ trống start/end. */
 export type CalEvent = {
@@ -12,16 +13,6 @@ export type CalEvent = {
   month?: string;
   href?: string;
 };
-
-/** Chương trình thường nhật, đặt lúc nào cũng được — vẽ thành vạch liền suốt năm, ngắt ở các quãng nghỉ. */
-export const ongoing: Program[] = [
-  { id: "o-yen", name: "retreat ở-yên", href: routes.retreatOYen },
-  { id: "stay-talk", name: "stay+talk", href: routes.stayTalk },
-  { id: "khai-tam", name: "khai tâm", href: routes.khaiTam },
-  { id: "phia-sang", name: "phía sáng", href: routes.phiaSang },
-  { id: "clari-tea", name: "clari-tea", href: routes.clariTea },
-  { id: "yoga-thuan-duong", name: "yoga online thuận dưỡng", href: routes.touchThuanDuong },
-];
 
 /** Những quãng nhà mộc nghỉ, vẽ thành dải phủ dọc qua mọi hàng. */
 export type Closure = { label: string; title: string; note?: string; start: string; end: string };
@@ -39,30 +30,38 @@ export const groups = [
   { id: "thu-vien", name: "thư viện" },
 ];
 
-/** Thứ tự trong mỗi nhóm là thứ tự các hàng trên dải năm. */
+/** Thứ tự trong mỗi nhóm là thứ tự các hàng trên dải năm (theo thứ tự trên menu của site). */
 export const programs: Program[] = [
+  { id: "stay-talk", name: "stay+talk", href: routes.stayTalk, group: "hoat-dong", ongoing: true },
+  { id: "o-yen", name: "retreat ở-yên", href: routes.retreatOYen, group: "hoat-dong", ongoing: true },
   { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong, group: "hoat-dong" },
   { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui, group: "hoat-dong" },
   { id: "tuan-du", name: "tuần-du", href: routes.tuanDu, group: "hoat-dong" },
-  { id: "be-still", name: "be-still", href: routes.beStill, group: "hoat-dong" },
+  { id: "khai-tam", name: "khai tâm", href: routes.khaiTam, group: "hoat-dong", ongoing: true },
+  { id: "be-still", name: "im lặng chữ nghĩa", href: routes.imLangChuNghia, group: "hoat-dong" },
+  { id: "clari-tea", name: "clari-tea", href: routes.clariTea, group: "hoat-dong", ongoing: true },
+  { id: "phia-sang", name: "phía sáng", href: routes.phiaSang, group: "hoat-dong", ongoing: true },
+  { id: "yoga-thuan-duong", name: "yoga online thuận dưỡng", href: routes.touchThuanDuong, group: "hoat-dong", ongoing: true },
   { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen, group: "cong-dong" },
   { id: "trang-yen", name: "trăng-yên", href: routes.trangYen, group: "cong-dong" },
   { id: "an-pham", name: "ấn phẩm", href: routes.sachOYen, group: "thu-vien" },
   { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen, group: "thu-vien" },
 ];
 
+export const ongoing = programs.filter((p) => p.ongoing);
+
 export const events: CalEvent[] = [
   { program: "an-pham", title: "mlf journal · quyển 01 · muôn nẻo về nhà", note: "phát hành ngày 30 tháng chạp", start: "2026-02-16", href: routes.journal },
   { program: "ham-duong", title: "retreat mùa xuân [77]", note: "xuân khẽ dưới tán rừng", start: "2026-03-13", end: "2026-03-17" },
   { program: "tuan-du", title: "tuần-du 03 · một nẻo Trúc Lâm", start: "2026-04-18", end: "2026-04-22" },
   { program: "ham-duong", title: "retreat mùa hạ [78]", note: "hạ về trên dòng nước mỏng", start: "2026-06-12", end: "2026-06-16" },
-  { program: "be-still", title: "im lặng chữ nghĩa", note: "lớp học viết online", start: "2026-09-05", end: "2026-10-05", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết online", start: "2026-09-05", end: "2026-10-05", href: routes.imLangChuNghia },
   { program: "an-pham", title: "tuyển tập tin nhắn lúc 5 giờ sáng", note: "sách ở-yên · miễn phí", month: "2026-09", href: routes.sachOYen },
   { program: "ham-duong", title: "retreat mùa thu [79]", note: "mùa thay lá dịu", start: "2026-09-11", end: "2026-09-15" },
   { program: "tuan-du", title: "tuần-du 04 · a pause in Saigon", start: "2026-10-10", end: "2026-10-11" },
   { program: "an-pham", title: "lịch tea·mind 2027", note: "chén trà tâm", month: "2026-11", href: routes.teaMindLich },
   { program: "ham-duong", title: "retreat mùa đông [80]", note: "trắng trời đông sang", start: "2026-12-11", end: "2026-12-15" },
-  { program: "be-still", title: "im lặng chữ nghĩa", note: "lớp học viết online", start: "2026-12-05", end: "2027-01-05", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết online", start: "2026-12-05", end: "2027-01-05", href: routes.imLangChuNghia },
 
   { program: "an-pham", title: "mlf journal · quyển 02 · xanh lại", note: "phát hành 18:00, ngày 30 tháng chạp", start: "2027-02-05", href: routes.journal },
   { program: "tuan-du", title: "tuần-du 05 · chuông vọng đôi bờ", start: "2027-03-26", end: "2027-03-30", href: routes.tuanDu05 },

@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
+import { TuanDuMap } from "@/components/TuanDuMap";
 import { routes } from "@/lib/nav";
 import { chuoiList } from "@/data/chuoiTuanDu";
 
@@ -88,6 +89,13 @@ export default function ChuoiTuanDuPage() {
             );
           })}
         </div>
+      </div>
+
+      <div className="wrap-wide" style={{ marginTop: "4.5rem" }}>
+        <span className="eyebrow" style={{ color: "var(--color-cham-dem)", marginBottom: "1.5rem", display: "block" }}>
+          những nơi tuần-du đã và sẽ đi qua
+        </span>
+        <TuanDuMap />
       </div>
 
       <Reveal className="wrap" style={{ margin: "4.5rem auto 5rem", textAlign: "center", maxWidth: "56ch" }}>

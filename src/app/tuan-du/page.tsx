@@ -8,9 +8,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { DayCard } from "@/components/DayCard";
 import { Testimonials } from "@/components/Testimonials";
-import { ImageCarousel } from "@/components/ImageCarousel";
-import { TuanDuMap } from "@/components/TuanDuMap";
-import { routes } from "@/lib/nav";
+import { ImageCarousel } from "@/components/ImageCarousel";import { routes } from "@/lib/nav";
 import { ngoLines, scheduleRows, kyList, testimonials, tuanDuSubnav } from "@/data/tuanDu";
 
 export const metadata: Metadata = {
@@ -373,9 +371,6 @@ export default function TuanDuPage() {
         <Link className="go mono-link" href={routes.chuoiTuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           xem toàn bộ chuỗi <span className="ar">→</span>
         </Link>
-      </div>
-      <div className="wrap-wide" style={{ marginBottom: "3.5rem" }}>
-        <TuanDuMap />
       </div>
       <RevealStagger className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
         {kyList.map((ky) => (

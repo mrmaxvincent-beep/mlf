@@ -19,9 +19,11 @@ export const programs: Program[] = [
   { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui },
   { id: "tuan-du", name: "tuần-du", href: routes.tuanDu },
   { id: "be-still", name: "be-still", href: routes.beStill },
+  { id: "journal", name: "mlf journal", href: routes.journal },
 ];
 
 export const events: CalEvent[] = [
+  { program: "journal", title: "quyển 01 · muôn nẻo về nhà", note: "phát hành ngày 30 tháng chạp", start: "2026-02-16" },
   { program: "ham-duong", title: "retreat mùa xuân [77]", note: "xuân khẽ dưới tán rừng", start: "2026-03-13", end: "2026-03-17" },
   { program: "tuan-du", title: "tuần-du 03 · một nẻo Trúc Lâm", start: "2026-04-18", end: "2026-04-22" },
   { program: "ham-duong", title: "retreat mùa hạ [78]", note: "hạ về trên dòng nước mỏng", start: "2026-06-12", end: "2026-06-16" },
@@ -31,6 +33,7 @@ export const events: CalEvent[] = [
   { program: "ham-duong", title: "retreat mùa đông [80]", note: "trắng trời đông sang", start: "2026-12-11", end: "2026-12-15" },
   { program: "be-still", title: "im lặng chữ nghĩa", note: "lớp học viết online", start: "2026-12-05", end: "2027-01-05", href: routes.imLangChuNghia },
 
+  { program: "journal", title: "quyển 02 · xanh lại", note: "phát hành 18:00, ngày 30 tháng chạp", start: "2027-02-05" },
   { program: "tuan-du", title: "tuần-du 05 · chuông vọng đôi bờ", start: "2027-03-26", end: "2027-03-30", href: routes.tuanDu05 },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-04-05", end: "2027-04-09" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-08-02", end: "2027-08-06" },

@@ -3296,3 +3296,26 @@ details[open] > summary .acc-icon {
 }
 .lnm-mark.cut-start { border-top-left-radius: 0; border-bottom-left-radius: 0; border-left-style: dashed; }
 .lnm-mark.cut-end { border-top-right-radius: 0; border-bottom-right-radius: 0; border-right-style: dashed; }
+
+.lnm-off {
+  position: absolute;
+  top: 1.6rem;
+  bottom: 0;
+  border-left: 1px dashed var(--color-stone);
+  border-right: 1px dashed var(--color-stone);
+  background: repeating-linear-gradient(135deg, rgba(154, 149, 144, 0.18) 0 4px, transparent 4px 8px);
+}
+.lnm-off em {
+  position: absolute;
+  top: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  white-space: nowrap;
+}
+.lnm-item--off .lnm-item-title { color: var(--color-stone); }

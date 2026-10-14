@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { events, programs, type CalEvent } from "@/data/lichNhaMoc";
+import { closures, events, programs, type CalEvent } from "@/data/lichNhaMoc";
+
+type Dated = Pick<CalEvent, "start" | "end" | "month">;
 
 const DAY = 86_400_000;
 
@@ -12,7 +14,7 @@ function parse(d: string) {
 }
 
 /** [ngày đầu, ngày cuối] tính bằng ms UTC; sự kiện chỉ biết tháng thì phủ cả tháng. */
-function span(e: CalEvent): [number, number] {
+function span(e: Dated): [number, number] {
   if (e.month) {
     const [y, m] = e.month.split("-").map(Number);
     return [Date.UTC(y, m - 1, 1), Date.UTC(y, m, 1) - DAY];
@@ -22,7 +24,7 @@ function span(e: CalEvent): [number, number] {
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
-function fmt(e: CalEvent) {
+function fmt(e: Dated) {
   if (e.month) {
     const [y, m] = e.month.split("-");
     return `tháng ${m}.${y}`;
@@ -68,15 +70,23 @@ export function LichNam() {
         .sort((a, b) => span(a)[0] - span(b)[0]),
     [year],
   );
-  const monthInYear = (e: CalEvent) => Math.max(span(e)[0], y0);
+  const yearClosures = closures.filter((c) => {
+    const [a, b] = span(c);
+    return a < y1 && b + DAY > y0;
+  });
+  const monthInYear = (e: Dated) => Math.max(span(e)[0], y0);
   const rows = programs.filter((p) => yearEvents.some((e) => e.program === p.id));
   const months = Array.from({ length: 12 }, (_, m) => ({ m, start: pct(Date.UTC(year, m, 1)), mid: pct(Date.UTC(year, m, 15)) }));
   const todayPct = now !== null && now >= y0 && now < y1 ? pct(now) : null;
-  const isPast = (e: CalEvent) => now !== null && span(e)[1] + DAY <= now;
+  const isPast = (e: Dated) => now !== null && span(e)[1] + DAY <= now;
 
   const byMonth = months
-    .map(({ m }) => ({ m, list: yearEvents.filter((e) => new Date(monthInYear(e)).getUTCMonth() === m) }))
-    .filter((g) => g.list.length);
+    .map(({ m }) => ({
+      m,
+      list: yearEvents.filter((e) => new Date(monthInYear(e)).getUTCMonth() === m),
+      offs: yearClosures.filter((c) => new Date(monthInYear(c)).getUTCMonth() === m),
+    }))
+    .filter((g) => g.list.length || g.offs.length);
 
   return (
     <div className="lnm">
@@ -102,6 +112,15 @@ export function LichNam() {
           {months.map(({ m, start }) => (
             <i key={m} style={{ left: `${start}%` }} />
           ))}
+          {yearClosures.map((c) => {
+            const [a, b] = span(c);
+            const left = pct(Math.max(a, y0));
+            return (
+              <span key={c.start} className="lnm-off" style={{ left: `${left}%`, width: `${pct(Math.min(b + DAY, y1)) - left}%` }}>
+                <em>{c.label}</em>
+              </span>
+            );
+          })}
           {todayPct !== null ? (
             <b className="lnm-today" style={{ left: `${todayPct}%` }}>
               <span>hôm nay</span>
@@ -151,10 +170,20 @@ export function LichNam() {
       </div>
 
       <div className="lnm-list">
-        {byMonth.map(({ m, list }) => (
+        {byMonth.map(({ m, list, offs }) => (
           <section key={m} className="lnm-month">
             <span className="lnm-month-name">tháng {pad(m + 1)}</span>
             <div>
+              {offs.map((c) => (
+                <div key={c.start} className={`lnm-item lnm-item--off${isPast(c) ? " past" : ""}`}>
+                  <span className="lnm-item-date">{fmt(c)}</span>
+                  <span className="lnm-item-title">{c.title}</span>
+                  <span className="lnm-item-meta">
+                    {c.note}
+                    {isPast(c) ? " · đã qua" : ""}
+                  </span>
+                </div>
+              ))}
               {list.map((e) => {
                 const k = keyOf(e);
                 const p = programOf(e.program);

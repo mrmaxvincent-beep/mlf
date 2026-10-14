@@ -89,7 +89,7 @@ export function LichNam() {
       </div>
 
       <div className="lnm-strip" style={{ gridTemplateRows: `auto repeat(${rows.length}, auto)` }}>
-        <span className="lnm-corner">{yearEvents.length} chương trình</span>
+        <span className="lnm-corner">{yearEvents.length} sự kiện</span>
         <div className="lnm-months" aria-hidden="true">
           {months.map(({ m, mid }) => (
             <span key={m} style={{ left: `${mid}%` }}>

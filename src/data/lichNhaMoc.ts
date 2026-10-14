@@ -17,6 +17,7 @@ export type CalEvent = {
 export const programs: Program[] = [
   { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
   { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui },
+  { id: "trang-yen", name: "trăng-yên", href: routes.trangYen },
   { id: "tuan-du", name: "tuần-du", href: routes.tuanDu },
   { id: "be-still", name: "be-still", href: routes.beStill },
   { id: "journal", name: "mlf journal", href: routes.journal },
@@ -38,4 +39,16 @@ export const events: CalEvent[] = [
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-04-05", end: "2027-04-09" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-08-02", end: "2027-08-06" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-12-06", end: "2027-12-10" },
+
+  // đêm rằm hằng tháng (ngày 15 âm lịch), tính theo âm lịch Việt Nam
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 2", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-03-22" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 3", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-04-21" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 4", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-05-20" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 5", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-06-19" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 6", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-07-18" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 7", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-08-16" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 8", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-09-15" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 9", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-10-14" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 10", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-11-12" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 11", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-12-12" },
 ];

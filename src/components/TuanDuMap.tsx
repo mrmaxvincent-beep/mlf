@@ -602,6 +602,7 @@ export function TuanDuMap() {
       {zoomed && selectedLandmark ? (
         <div className="tdm-card">
           <span className="tdm-card-name">{selectedLandmark.name}</span>
+          <span className="tdm-card-area">{selectedLandmark.area}</span>
           <div className="tdm-card-trips">
             {tripsOf(selectedLandmark.id).map((num) => (
               <span key={num} className="tdm-card-trip">

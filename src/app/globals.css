@@ -2988,3 +2988,12 @@ details[open] > summary .acc-icon {
 }
 .tdm-group-num--done { background: var(--color-cham-dem); color: var(--color-paper); }
 .tdm-group-num--planned { border-style: dashed; border-color: var(--color-stone); color: var(--color-stone); }
+.tdm-card-area {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin-top: 0.35rem;
+}

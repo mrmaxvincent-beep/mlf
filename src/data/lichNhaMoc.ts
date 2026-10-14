@@ -36,12 +36,12 @@ export const closures: Closure[] = [
 export const programs: Program[] = [
   { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
   { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui },
-  { id: "trang-yen", name: "trăng-yên", href: routes.trangYen },
   { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen },
   { id: "tuan-du", name: "tuần-du", href: routes.tuanDu },
   { id: "be-still", name: "be-still", href: routes.beStill },
   { id: "an-pham", name: "ấn phẩm", href: routes.sachOYen },
   { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen },
+  { id: "trang-yen", name: "trăng-yên", href: routes.trangYen },
 ];
 
 export const events: CalEvent[] = [

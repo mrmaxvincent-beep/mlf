@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
-import { closures, events, ongoing, programs, type CalEvent } from "@/data/lichNhaMoc";
+import { Fragment, useEffect, useMemo, useState } from "react";
+import { closures, events, groups, ongoing, programs, type CalEvent, type Program } from "@/data/lichNhaMoc";
 
 type Dated = Pick<CalEvent, "start" | "end" | "month">;
 
@@ -93,7 +93,17 @@ export function LichNam() {
   if (cursor < y1) openSegments.push([cursor, y1]);
   const monthInYear = (e: Dated) => Math.max(span(e)[0], y0);
   const rows = programs.filter((p) => yearEvents.some((e) => e.program === p.id));
-  const allRows = rows.length + 1 + ongoing.length;
+  // mỗi nhóm: một hàng nhãn rồi tới các hàng chương trình; nhóm "quanh năm" luôn ở cuối
+  const sections = [
+    ...groups.map((g) => ({ key: g.id, label: g.name, items: rows.filter((p) => p.group === g.id), ongoing: false })).filter((g) => g.items.length),
+    { key: "quanh-nam", label: "quanh năm", items: ongoing, ongoing: true },
+  ];
+  let rowNo = 2;
+  const placed = sections.map((sec) => {
+    const labelRow = rowNo++;
+    return { ...sec, labelRow, rows: sec.items.map((p) => ({ p, row: rowNo++ })) };
+  });
+  const allRows = rowNo - 2;
   const months = Array.from({ length: 12 }, (_, m) => ({ m, start: pct(Date.UTC(year, m, 1)), mid: pct(Date.UTC(year, m, 15)) }));
   const todayPct = now !== null && now >= y0 && now < y1 ? pct(now) : null;
   const isPast = (e: Dated) => now !== null && span(e)[1] + DAY <= now;
@@ -105,6 +115,44 @@ export function LichNam() {
       offs: yearClosures.filter((c) => new Date(monthInYear(c)).getUTCMonth() === m),
     }))
     .filter((g) => g.list.length || g.offs.length);
+
+  const renderOpen = () =>
+    openSegments.map(([a, b]) => <span key={a} className="lnm-ongoing" style={{ left: `${pct(a)}%`, width: `${pct(b) - pct(a)}%` }} />);
+
+  const renderMarks = (p: Program) => (
+    <>
+    {yearEvents
+      .filter((e) => e.program === p.id)
+      .map((e) => {
+        const [a, b] = span(e);
+        const k = keyOf(e);
+        const cutStart = a < y0;
+        const cutEnd = b + DAY > y1;
+        const left = pct(Math.max(a, y0));
+        const right = pct(Math.min(b + DAY, y1));
+        const tipSide = left < 18 ? "start" : left > 78 ? "end" : "mid";
+        return (
+          <button
+            key={k}
+            className={`lnm-mark${e.month ? " lnm-mark--month" : ""}${cutStart ? " cut-start" : ""}${cutEnd ? " cut-end" : ""}${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
+            style={{ left: `${left}%`, width: `${right - left}%` }}
+            onMouseEnter={() => setHover(k)}
+            onMouseLeave={() => setHover(null)}
+            onFocus={() => setHover(k)}
+            onBlur={() => setHover(null)}
+            onClick={() => document.getElementById(`lnm-${k}`)?.scrollIntoView({ behavior: "smooth", block: "center" })}
+            aria-label={`${e.title}, ${fmt(e)}`}
+          >
+            {hover === k ? (
+              <span className={`lnm-tip lnm-tip--${tipSide}`}>
+                {e.title} · {fmt(e)}
+              </span>
+            ) : null}
+          </button>
+        );
+      })}
+    </>
+  );
 
   return (
     <div className="lnm">
@@ -150,61 +198,23 @@ export function LichNam() {
           ) : null}
         </div>
 
-        {rows.map((p, i) => (
-          <div key={p.id} className="lnm-row">
-            <Link href={p.href} className="lnm-name" style={{ gridRow: i + 2 }}>
-              {p.name}
-            </Link>
-            <div className="lnm-track" style={{ gridRow: i + 2 }}>
-              {yearEvents
-                .filter((e) => e.program === p.id)
-                .map((e) => {
-                  const [a, b] = span(e);
-                  const k = keyOf(e);
-                  const cutStart = a < y0;
-                  const cutEnd = b + DAY > y1;
-                  const left = pct(Math.max(a, y0));
-                  const right = pct(Math.min(b + DAY, y1));
-                  const tipSide = left < 18 ? "start" : left > 78 ? "end" : "mid";
-                  return (
-                    <button
-                      key={k}
-                      className={`lnm-mark${e.month ? " lnm-mark--month" : ""}${cutStart ? " cut-start" : ""}${cutEnd ? " cut-end" : ""}${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
-                      style={{ left: `${left}%`, width: `${right - left}%` }}
-                      onMouseEnter={() => setHover(k)}
-                      onMouseLeave={() => setHover(null)}
-                      onFocus={() => setHover(k)}
-                      onBlur={() => setHover(null)}
-                      onClick={() => document.getElementById(`lnm-${k}`)?.scrollIntoView({ behavior: "smooth", block: "center" })}
-                      aria-label={`${e.title}, ${fmt(e)}`}
-                    >
-                      {hover === k ? (
-                        <span className={`lnm-tip lnm-tip--${tipSide}`}>
-                          {e.title} · {fmt(e)}
-                        </span>
-                      ) : null}
-                    </button>
-                  );
-                })}
-            </div>
-          </div>
-        ))}
-
-        <span className="lnm-group" style={{ gridRow: rows.length + 2 }}>
-          quanh năm
-        </span>
-        <div className="lnm-track lnm-track--group" style={{ gridRow: rows.length + 2 }} />
-        {ongoing.map((p, i) => (
-          <div key={p.id} className="lnm-row">
-            <Link href={p.href} className="lnm-name lnm-name--ongoing" style={{ gridRow: rows.length + 3 + i }}>
-              {p.name}
-            </Link>
-            <div className="lnm-track lnm-track--ongoing" style={{ gridRow: rows.length + 3 + i }}>
-              {openSegments.map(([a, b]) => (
-                <span key={a} className="lnm-ongoing" style={{ left: `${pct(a)}%`, width: `${pct(b) - pct(a)}%` }} />
-              ))}
-            </div>
-          </div>
+        {placed.map((sec) => (
+          <Fragment key={sec.key}>
+            <span className="lnm-group" style={{ gridRow: sec.labelRow }}>
+              {sec.label}
+            </span>
+            <div className="lnm-track lnm-track--group" style={{ gridRow: sec.labelRow }} />
+            {sec.rows.map(({ p, row }) => (
+              <div key={p.id} className="lnm-row">
+                <Link href={p.href} className={`lnm-name${sec.ongoing ? " lnm-name--ongoing" : ""}`} style={{ gridRow: row }}>
+                  {p.name}
+                </Link>
+                <div className={`lnm-track${sec.ongoing ? " lnm-track--ongoing" : ""}`} style={{ gridRow: row }}>
+                  {sec.ongoing ? renderOpen() : renderMarks(p)}
+                </div>
+              </div>
+            ))}
+          </Fragment>
         ))}
       </div>
 

@@ -1,6 +1,6 @@
 import { routes } from "@/lib/nav";
 
-export type Program = { id: string; name: string; href: string };
+export type Program = { id: string; name: string; href: string; group?: string };
 
 /** `start`/`end` dạng YYYY-MM-DD; nếu chỉ biết tháng thì để `month` dạng YYYY-MM và bỏ trống start/end. */
 export type CalEvent = {
@@ -32,16 +32,23 @@ export const closures: Closure[] = [
   { label: "nghỉ", title: "nhà mộc nghỉ tháng 10", note: "nghỉ trọn tháng", start: "2027-10-01", end: "2027-10-31" },
 ];
 
-/** Thứ tự ở đây là thứ tự các hàng trên dải năm. */
+/** Nhóm hàng trên dải năm, theo đúng các nhóm trên menu của site. */
+export const groups = [
+  { id: "hoat-dong", name: "hoạt động" },
+  { id: "cong-dong", name: "cộng đồng" },
+  { id: "thu-vien", name: "thư viện" },
+];
+
+/** Thứ tự trong mỗi nhóm là thứ tự các hàng trên dải năm. */
 export const programs: Program[] = [
-  { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
-  { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui },
-  { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen },
-  { id: "tuan-du", name: "tuần-du", href: routes.tuanDu },
-  { id: "be-still", name: "be-still", href: routes.beStill },
-  { id: "an-pham", name: "ấn phẩm", href: routes.sachOYen },
-  { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen },
-  { id: "trang-yen", name: "trăng-yên", href: routes.trangYen },
+  { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong, group: "hoat-dong" },
+  { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui, group: "hoat-dong" },
+  { id: "tuan-du", name: "tuần-du", href: routes.tuanDu, group: "hoat-dong" },
+  { id: "be-still", name: "be-still", href: routes.beStill, group: "hoat-dong" },
+  { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen, group: "cong-dong" },
+  { id: "trang-yen", name: "trăng-yên", href: routes.trangYen, group: "cong-dong" },
+  { id: "an-pham", name: "ấn phẩm", href: routes.sachOYen, group: "thu-vien" },
+  { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen, group: "thu-vien" },
 ];
 
 export const events: CalEvent[] = [

@@ -3187,12 +3187,11 @@ details[open] > summary .acc-icon {
 .lnm-name {
   grid-column: 1;
   align-self: center;
-  padding: 0.85rem 0;
+  padding: 0.55rem 0;
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.02rem;
   color: var(--color-ink);
-  border-top: 1px solid var(--color-mist);
 }
 .lnm-name:hover { color: var(--color-cham-dem); }
 .lnm-track {
@@ -3200,8 +3199,7 @@ details[open] > summary .acc-icon {
   position: relative;
   z-index: 1;
   align-self: stretch;
-  min-height: 2.8rem;
-  border-top: 1px solid var(--color-mist);
+  min-height: 2.5rem;
 }
 .lnm-mark {
   position: absolute;
@@ -3341,9 +3339,9 @@ details[open] > summary .acc-icon {
   text-transform: uppercase;
   color: var(--color-stone);
 }
-.lnm-track--group { min-height: 0; }
-.lnm-name--ongoing { padding: 0.35rem 0; font-size: 0.9rem; border-top: none; }
-.lnm-track--ongoing { min-height: 1.9rem; border-top: none; }
+.lnm-track--group { min-height: 0; border-top: 1px solid var(--color-mist); }
+.lnm-name--ongoing { padding: 0.35rem 0; font-size: 0.9rem; }
+.lnm-track--ongoing { min-height: 1.9rem; }
 .lnm-item--ongoing .lnm-item-title { line-height: 1.6; }
 .lnm-item--ongoing .lnm-item-title a:hover { color: var(--color-cham-dem); text-decoration: underline; text-underline-offset: 4px; }
 .lnm-sep { color: var(--color-stone); }

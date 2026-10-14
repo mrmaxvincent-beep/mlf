@@ -25,6 +25,7 @@ export const events: CalEvent[] = [
   { program: "ham-duong", title: "retreat mùa xuân [77]", note: "xuân khẽ dưới tán rừng", start: "2026-03-13", end: "2026-03-17" },
   { program: "tuan-du", title: "tuần-du 03 · một nẻo Trúc Lâm", start: "2026-04-18", end: "2026-04-22" },
   { program: "ham-duong", title: "retreat mùa hạ [78]", note: "hạ về trên dòng nước mỏng", start: "2026-06-12", end: "2026-06-16" },
+  { program: "be-still", title: "im lặng chữ nghĩa", note: "lớp học viết online", start: "2026-09-05", end: "2026-10-05", href: routes.imLangChuNghia },
   { program: "ham-duong", title: "retreat mùa thu [79]", note: "mùa thay lá dịu", start: "2026-09-11", end: "2026-09-15" },
   { program: "tuan-du", title: "tuần-du 04 · a pause in Saigon", start: "2026-10-10", end: "2026-10-11" },
   { program: "ham-duong", title: "retreat mùa đông [80]", note: "trắng trời đông sang", start: "2026-12-11", end: "2026-12-15" },

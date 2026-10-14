@@ -37,6 +37,14 @@ function fmt(e: Dated) {
   return `${dm(a)} – ${dm(b)}.${b.getUTCFullYear()}`;
 }
 
+/** Ngày ngắn không kèm năm, dùng cho nhãn trên dải: "01 – 14.02". */
+function fmtShort(e: Dated) {
+  const [a, b] = span(e).map((ms) => new Date(ms));
+  const dm = (d: Date) => `${pad(d.getUTCDate())}.${pad(d.getUTCMonth() + 1)}`;
+  if (a.getUTCMonth() === b.getUTCMonth()) return `${pad(a.getUTCDate())} – ${dm(b)}`;
+  return `${dm(a)} – ${dm(b)}`;
+}
+
 const keyOf = (e: CalEvent) => `${e.program}-${e.start ?? e.month}`;
 const programOf = (id: string) => programs.find((p) => p.id === id)!;
 
@@ -117,7 +125,11 @@ export function LichNam() {
             const left = pct(Math.max(a, y0));
             return (
               <span key={c.start} className="lnm-off" style={{ left: `${left}%`, width: `${pct(Math.min(b + DAY, y1)) - left}%` }}>
-                <em>{c.label}</em>
+                <em>
+                  {c.label}
+                  <br />
+                  {fmtShort(c)}
+                </em>
               </span>
             );
           })}

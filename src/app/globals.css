@@ -3141,7 +3141,7 @@ details[open] > summary .acc-icon {
   grid-column: 2;
   grid-row: 1;
   position: relative;
-  height: 2.4rem;
+  height: 3.5rem;
 }
 .lnm-months span {
   position: absolute;
@@ -3159,7 +3159,7 @@ details[open] > summary .acc-icon {
 }
 .lnm-grid i {
   position: absolute;
-  top: 1.6rem;
+  top: 2.7rem;
   bottom: 0;
   width: 1px;
   background: var(--color-mist);
@@ -3299,7 +3299,7 @@ details[open] > summary .acc-icon {
 
 .lnm-off {
   position: absolute;
-  top: 1.6rem;
+  top: 2.7rem;
   bottom: 0;
   border-left: 1px dashed var(--color-stone);
   border-right: 1px dashed var(--color-stone);
@@ -3307,15 +3307,17 @@ details[open] > summary .acc-icon {
 }
 .lnm-off em {
   position: absolute;
-  top: -1.6rem;
+  top: -2.7rem;
+  line-height: 1.45;
+  text-align: center;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-mono);
   font-style: normal;
-  font-size: 0.52rem;
-  letter-spacing: 0.1em;
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-stone);
+  color: var(--color-cham-dem);
   white-space: nowrap;
 }
 .lnm-item--off .lnm-item-title { color: var(--color-stone); }

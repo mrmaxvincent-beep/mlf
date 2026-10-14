@@ -32,6 +32,7 @@ export const programs: Program[] = [
   { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
   { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui },
   { id: "trang-yen", name: "trăng-yên", href: routes.trangYen },
+  { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen },
   { id: "tuan-du", name: "tuần-du", href: routes.tuanDu },
   { id: "be-still", name: "be-still", href: routes.beStill },
   { id: "journal", name: "mlf journal", href: routes.journal },
@@ -53,6 +54,20 @@ export const events: CalEvent[] = [
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-04-05", end: "2027-04-09" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-08-02", end: "2027-08-06" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-12-06", end: "2027-12-10" },
+
+  // meet-up cộng đồng ở-yên: chủ nhật đầu tiên mỗi tháng
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-01-03" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-02-07" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-03-07" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-04-04" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-05-02" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-06-06" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-07-04" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-08-01" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-09-05" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-10-03" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-11-07" },
+  { program: "cong-dong", title: "meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-12-05" },
 
   // hàm-dưỡng 2027: mới biết tháng, ngày cụ thể cập nhật sau
   { program: "ham-duong", title: "retreat mùa xuân", note: "ngày cụ thể sẽ cập nhật", month: "2027-03" },

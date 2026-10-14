@@ -22,6 +22,9 @@ const COS = Math.cos((20 * Math.PI) / 180);
 
 type Box = [number, number, number, number];
 
+const ZOOM_STEP = 1.8;
+const MAX_ZOOM = 4;
+
 function proj([lon, lat]: LonLat): [number, number] {
   return [(lon - 67) * K * COS, (36 - lat) * K];
 }
@@ -103,6 +106,10 @@ export function TuanDuMap() {
   const frameRef = useRef<HTMLDivElement>(null);
   const [frameW, setFrameW] = useState(760);
   const [play, setPlay] = useState<{ num: string; step: number } | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const drag = useRef<{ x: number; y: number; box: Box; moved: boolean } | null>(null);
+  const justDragged = useRef(false);
 
   useEffect(() => () => cancelAnimationFrame(rafRef.current), []);
 
@@ -170,6 +177,7 @@ export function TuanDuMap() {
   }
 
   function openRegion(id: string) {
+    setZoom(1);
     setView(id);
     setSelected(null);
     animateTo(regionBox(id));
@@ -177,6 +185,7 @@ export function TuanDuMap() {
 
   function backToOverview() {
     setPlay(null);
+    setZoom(1);
     setView(null);
     setSelected(null);
     animateTo(FULL);
@@ -200,7 +209,60 @@ export function TuanDuMap() {
     frameRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
+  function zoomBy(dir: 1 | -1) {
+    if (!view) return;
+    const next = Math.min(MAX_ZOOM, Math.max(1, zoom + dir));
+    if (next === zoom) return;
+    setZoom(next);
+    const base = regionBox(view);
+    if (next === 1) {
+      animateTo(base);
+      return;
+    }
+    const cur = boxRef.current;
+    const f = Math.pow(ZOOM_STEP, -(next - 1));
+    const w = base[2] * f;
+    const h = base[3] * f;
+    const [cx, cy] =
+      dir === 1 && selected
+        ? proj(byId(selected).pos)
+        : [cur[0] + cur[2] / 2, cur[1] + cur[3] / 2];
+    animateTo([cx - w / 2, cy - h / 2, w, h]);
+  }
+
+  function onPointerDown(e: React.PointerEvent<SVGSVGElement>) {
+    if (zoom <= 1) return;
+    drag.current = { x: e.clientX, y: e.clientY, box: boxRef.current, moved: false };
+  }
+
+  function onPointerMove(e: React.PointerEvent<SVGSVGElement>) {
+    const d = drag.current;
+    const el = svgRef.current;
+    if (!d || !el) return;
+    const dx = e.clientX - d.x;
+    const dy = e.clientY - d.y;
+    if (!d.moved) {
+      if (Math.hypot(dx, dy) < 5) return;
+      d.moved = true;
+      cancelAnimationFrame(rafRef.current);
+      el.setPointerCapture(e.pointerId);
+    }
+    const k = d.box[2] / el.clientWidth;
+    const b: Box = [d.box[0] - dx * k, d.box[1] - dy * k, d.box[2], d.box[3]];
+    boxRef.current = b;
+    setBox(b);
+  }
+
+  function onPointerUp() {
+    if (drag.current?.moved) {
+      justDragged.current = true;
+      window.setTimeout(() => (justDragged.current = false), 0);
+    }
+    drag.current = null;
+  }
+
   function pickPoint(id: string) {
+    if (justDragged.current) return;
     setPlay(null);
     setSelected(selected === id ? null : id);
   }
@@ -273,7 +335,13 @@ export function TuanDuMap() {
     <div>
       <div className="tdm-frame" ref={frameRef}>
         <svg
+          ref={svgRef}
           viewBox={box.join(" ")}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+          style={{ touchAction: zoom > 1 ? "none" : "auto", cursor: zoom > 1 ? "grab" : undefined }}
           className="tdm-svg"
           role="img"
           aria-label="bản đồ những nơi tuần-du đã và sẽ đi qua"
@@ -659,6 +727,17 @@ export function TuanDuMap() {
             {regions.find((r) => r.id === view)?.name}
           </span>
         ) : null}
+        {zoomed ? (
+          <div className="tdm-zoom">
+            <button onClick={() => zoomBy(1)} disabled={zoom >= MAX_ZOOM} aria-label="phóng to">
+              +
+            </button>
+            <button onClick={() => zoomBy(-1)} disabled={zoom <= 1} aria-label="thu nhỏ">
+              −
+            </button>
+          </div>
+        ) : null}
+        {zoomed && zoom > 1 ? <span className="tdm-drag-hint">kéo để di chuyển</span> : null}
         {play && playTrip ? (
           <div className="tdm-playbar">
             <span>

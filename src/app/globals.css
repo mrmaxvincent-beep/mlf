@@ -3054,3 +3054,45 @@ details[open] > summary .acc-icon {
 }
 .tdm-play:hover,
 .tdm-play.playing { background: var(--color-cham-dem); color: var(--color-paper); }
+
+.tdm-zoom {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-mist);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  overflow: hidden;
+}
+.tdm-zoom button {
+  width: 2.3rem;
+  height: 2.3rem;
+  border: none;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  line-height: 1;
+  color: var(--color-cham-dem);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tdm-zoom button + button { border-top: 1px solid var(--color-mist); }
+.tdm-zoom button:hover:not(:disabled) { background: var(--color-cotton); }
+.tdm-zoom button:disabled { color: var(--color-mist); cursor: default; }
+.tdm-drag-hint {
+  position: absolute;
+  right: 3.9rem;
+  bottom: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  pointer-events: none;
+}
+@media (max-width: 520px) {
+  .tdm-drag-hint { display: none; }
+  .tdm-zoom button { width: 2rem; height: 2rem; }
+}

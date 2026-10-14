@@ -2762,12 +2762,6 @@ details[open] > summary .acc-icon {
   pointer-events: none;
 }
 .tdm-point { cursor: pointer; outline: none; transition: opacity 0.3s; }
-.tdm-num {
-  font-family: var(--font-mono);
-  fill: var(--color-cham-dem);
-  pointer-events: none;
-}
-.tdm-num--light { fill: var(--color-paper); }
 .tdm-label {
   font-family: var(--font-sans);
   fill: var(--color-ink);
@@ -2830,11 +2824,6 @@ details[open] > summary .acc-icon {
 .tdm-key--done { background: var(--color-cham-dem); }
 .tdm-key--upcoming { background: var(--color-paper); }
 .tdm-key--planned { border: 1px dashed var(--color-stone); }
-.tdm-panel {
-  margin-top: 1.6rem;
-  display: grid;
-  gap: 1.2rem;
-}
 .tdm-card {
   border: 1px solid var(--color-mist);
   border-radius: 1rem;
@@ -2857,96 +2846,11 @@ details[open] > summary .acc-icon {
   letter-spacing: 0.06em;
   color: var(--color-cham-dem);
 }
-.tdm-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  column-gap: 1.6rem;
-}
-.tdm-list-item {
-  display: grid;
-  grid-template-columns: 1.35rem 1fr auto;
-  gap: 0.7rem;
-  align-items: center;
-  width: 100%;
-  padding: 0.55rem 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--color-mist);
-  cursor: pointer;
-  text-align: left;
-  font: inherit;
-  transition: opacity 0.3s;
-}
-.tdm-list-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.35rem;
-  height: 1.35rem;
-  border-radius: 50%;
-  border: 1px solid var(--color-cham-dem);
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  color: var(--color-cham-dem);
-  align-self: center;
-}
-.tdm-list-num--done { background: var(--color-cham-dem); color: var(--color-paper); }
-.tdm-list-num--planned { border-style: dashed; border-color: var(--color-stone); }
-.tdm-list-name {
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  color: var(--color-ink);
-}
-.tdm-list-item:hover .tdm-list-name,
-.tdm-list-item.active .tdm-list-name { color: var(--color-cham-dem); }
-.tdm-list-trips {
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.06em;
-  color: var(--color-stone);
-}
-.tdm-trips {
-  display: flex;
-  gap: 0.6rem;
-  margin-top: 1.8rem;
-  padding-bottom: 0.4rem;
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-.tdm-trip {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.25rem;
-  min-width: 8.5rem;
-  max-width: 11rem;
-  padding: 0.8rem 0.9rem;
-  border: 1px solid var(--color-mist);
-  border-radius: 0.8rem;
-  background: var(--color-paper);
-  cursor: pointer;
-  text-align: left;
-  font: inherit;
-  transition: border-color 0.2s, background 0.2s;
-}
-.tdm-trip:hover { border-color: var(--color-stone); }
-.tdm-trip.active { border-color: var(--color-cham-dem); background: var(--color-cotton); }
-.tdm-trip--planned { border-style: dashed; }
 .tdm-trip-num {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.1rem;
   color: var(--color-cham-dem);
-}
-.tdm-trip-title {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  line-height: 1.4;
-  color: var(--color-ink);
 }
 .tdm-trip-status {
   font-family: var(--font-mono);
@@ -2990,3 +2894,71 @@ details[open] > summary .acc-icon {
   font-size: 0.6rem;
   color: var(--color-cham-dem);
 }
+.tdm-card { margin-top: 1.4rem; }
+.tdm-all { margin-top: 2.6rem; }
+.tdm-all-total {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin: 0 0 1.6rem;
+}
+.tdm-all-total span {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 0;
+  color: var(--color-cham-dem);
+  margin-right: 0.4rem;
+  vertical-align: -0.15em;
+}
+.tdm-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
+  gap: 2rem 1.8rem;
+}
+.tdm-group-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  width: 100%;
+  padding: 0 0 0.7rem;
+  margin-bottom: 0.4rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-mist);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+.tdm-group.active .tdm-group-head { border-bottom-color: var(--color-cham-dem); }
+.tdm-group-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+.tdm-group--planned .tdm-group-title,
+.tdm-group--planned .tdm-trip-num { color: var(--color-stone); }
+.tdm-group-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tdm-group-item {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--color-ink);
+  transition: color 0.2s;
+}
+.tdm-group-item:hover,
+.tdm-group-item.active { color: var(--color-cham-dem); text-decoration: underline; text-underline-offset: 3px; }

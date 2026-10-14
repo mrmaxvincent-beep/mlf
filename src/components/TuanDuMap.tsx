@@ -156,6 +156,13 @@ export function TuanDuMap() {
     animateTo(FULL);
   }
 
+  function focusLandmark(id: string) {
+    const l = byId(id);
+    if (view !== l.region) openRegion(l.region);
+    setSelected(id);
+    frameRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
   function chooseTrip(num: string) {
     if (activeTrip === num) {
       setActiveTrip(null);
@@ -483,13 +490,13 @@ export function TuanDuMap() {
                 );
               })}
 
-              {regionLandmarks.map((l, i) => {
+              {regionLandmarks.map((l) => {
                 const [x, y] = proj(l.pos);
                 const st = landmarkStatus(l);
                 const on = !activeTrip || tripsOf(l.id).includes(activeTrip);
                 const isSel = selected === l.id;
                 const isHover = hovered === l.id;
-                const r = (isSel ? 9.5 : 8) * u;
+                const r = (isSel ? 7 : 5) * u;
                 return (
                   <g
                     key={l.id}
@@ -521,17 +528,6 @@ export function TuanDuMap() {
                         st === "planned" ? `${2 * s} ${2 * s}` : undefined
                       }
                     />
-                    <text
-                      x={x}
-                      y={y + 3 * u}
-                      textAnchor="middle"
-                      fontSize={8 * u}
-                      className={
-                        st === "done" ? "tdm-num tdm-num--light" : "tdm-num"
-                      }
-                    >
-                      {i + 1}
-                    </text>
                     {isSel || isHover ? (
                       <text
                         x={x + r + 4 * u}
@@ -591,66 +587,61 @@ export function TuanDuMap() {
         <span>✦ nhà mộc</span>
       </div>
 
-      {zoomed ? (
-        <div className="tdm-panel">
-          {selectedLandmark ? (
-            <div className="tdm-card">
-              <span className="tdm-card-name">{selectedLandmark.name}</span>
-              <div className="tdm-card-trips">
-                {tripsOf(selectedLandmark.id).map((num) => (
-                  <span key={num} className="tdm-card-trip">
-                    tuần-du {num} · {tripTitle(num)}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ) : null}
-          <ol className="tdm-list">
-            {regionLandmarks.map((l, i) => {
-              const on = !activeTrip || tripsOf(l.id).includes(activeTrip);
-              return (
-                <li key={l.id}>
-                  <button
-                    className={`tdm-list-item${selected === l.id ? " active" : ""}`}
-                    style={{ opacity: on ? 1 : 0.35 }}
-                    onClick={() => setSelected(selected === l.id ? null : l.id)}
-                    onMouseEnter={() => setHovered(l.id)}
-                    onMouseLeave={() => setHovered(null)}
-                  >
-                    <span
-                      className={`tdm-list-num tdm-list-num--${landmarkStatus(l)}`}
-                    >
-                      {i + 1}
-                    </span>
-                    <span className="tdm-list-name">{l.name}</span>
-                    <span className="tdm-list-trips">
-                      tuần-du {tripsOf(l.id).join(" · ")}
-                    </span>
-                  </button>
-                </li>
-              );
-            })}
-          </ol>
+      {zoomed && selectedLandmark ? (
+        <div className="tdm-card">
+          <span className="tdm-card-name">{selectedLandmark.name}</span>
+          <div className="tdm-card-trips">
+            {tripsOf(selectedLandmark.id).map((num) => (
+              <span key={num} className="tdm-card-trip">
+                tuần-du {num} · {tripTitle(num)}
+              </span>
+            ))}
+          </div>
         </div>
       ) : null}
 
-      <div
-        className="tdm-trips"
-        role="group"
-        aria-label="lọc theo chuyến tuần-du"
-      >
-        {trips.map((t) => (
-          <button
-            key={t.num}
-            className={`tdm-trip tdm-trip--${t.status}${activeTrip === t.num ? " active" : ""}`}
-            onClick={() => chooseTrip(t.num)}
-            aria-pressed={activeTrip === t.num}
-          >
-            <span className="tdm-trip-num">{t.num}</span>
-            <span className="tdm-trip-title">{tripTitle(t.num)}</span>
-            <span className="tdm-trip-status">{statusLabel[t.status]}</span>
-          </button>
-        ))}
+      <div className="tdm-all">
+        <p className="tdm-all-total">
+          <span>{landmarks.length}</span> điểm đến qua {trips.length} chuyến
+          tuần-du
+        </p>
+        <div className="tdm-groups">
+          {trips.map((t) => (
+            <section
+              key={t.num}
+              className={`tdm-group tdm-group--${t.status}${activeTrip === t.num ? " active" : ""}`}
+            >
+              <button
+                className="tdm-group-head"
+                onClick={() => chooseTrip(t.num)}
+                aria-pressed={activeTrip === t.num}
+              >
+                <span className="tdm-trip-num">{t.num}</span>
+                <span className="tdm-group-title">{tripTitle(t.num)}</span>
+                <span className="tdm-trip-status">
+                  {statusLabel[t.status]} · {t.stops.length} điểm
+                </span>
+              </button>
+              <ul className="tdm-group-list">
+                {t.stops.map((id) => {
+                  const l = byId(id);
+                  return (
+                    <li key={id}>
+                      <button
+                        className={`tdm-group-item${selected === id ? " active" : ""}`}
+                        onClick={() => focusLandmark(id)}
+                        onMouseEnter={() => setHovered(id)}
+                        onMouseLeave={() => setHovered(null)}
+                      >
+                        {l.name}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          ))}
+        </div>
       </div>
     </div>
   );

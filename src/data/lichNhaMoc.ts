@@ -23,6 +23,7 @@ export const ongoing: Program[] = [
 export type Closure = { label: string; title: string; note?: string; start: string; end: string };
 
 export const closures: Closure[] = [
+  { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Ất Tỵ", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2025-01-24", end: "2025-02-06" },
   { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Bính Ngọ", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2026-02-12", end: "2026-02-25" },
   { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Đinh Mùi", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2027-02-01", end: "2027-02-14" },
 ];
@@ -39,6 +40,7 @@ export const programs: Program[] = [
 ];
 
 export const events: CalEvent[] = [
+  { program: "an-pham", title: "lịch tea·mind 2026", note: "chén trà tâm · 12 mùa tâm", month: "2025-11", href: routes.teaMindLich },
   { program: "an-pham", title: "mlf journal · quyển 01 · muôn nẻo về nhà", note: "phát hành ngày 30 tháng chạp", start: "2026-02-16", href: routes.journal },
   { program: "ham-duong", title: "retreat mùa xuân [77]", note: "xuân khẽ dưới tán rừng", start: "2026-03-13", end: "2026-03-17" },
   { program: "tuan-du", title: "tuần-du 03 · một nẻo Trúc Lâm", start: "2026-04-18", end: "2026-04-22" },
@@ -47,6 +49,7 @@ export const events: CalEvent[] = [
   { program: "an-pham", title: "tuyển tập tin nhắn lúc 5 giờ sáng", note: "sách ở-yên · miễn phí", month: "2026-09", href: routes.sachOYen },
   { program: "ham-duong", title: "retreat mùa thu [79]", note: "mùa thay lá dịu", start: "2026-09-11", end: "2026-09-15" },
   { program: "tuan-du", title: "tuần-du 04 · a pause in Saigon", start: "2026-10-10", end: "2026-10-11" },
+  { program: "an-pham", title: "lịch tea·mind 2027", note: "chén trà tâm", month: "2026-11", href: routes.teaMindLich },
   { program: "ham-duong", title: "retreat mùa đông [80]", note: "trắng trời đông sang", start: "2026-12-11", end: "2026-12-15" },
   { program: "be-still", title: "im lặng chữ nghĩa", note: "lớp học viết online", start: "2026-12-05", end: "2027-01-05", href: routes.imLangChuNghia },
 

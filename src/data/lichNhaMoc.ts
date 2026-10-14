@@ -106,7 +106,6 @@ export const events: CalEvent[] = [
   { program: "trang-yen", title: "trăng-yên · rằm tháng 6", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-07-18" },
   { program: "trang-yen", title: "trăng-yên · rằm tháng 7", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-08-16" },
   { program: "trang-yen", title: "trăng-yên · rằm tháng 8", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-09-15" },
-  { program: "trang-yen", title: "trăng-yên · rằm tháng 9", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-10-14" },
   { program: "trang-yen", title: "trăng-yên · rằm tháng 10", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-11-12" },
   { program: "trang-yen", title: "trăng-yên · rằm tháng 11", note: "18:00 – 21:00 · vườn mlf Huế", start: "2027-12-12" },
 ];

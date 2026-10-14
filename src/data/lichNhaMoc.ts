@@ -13,6 +13,12 @@ export type CalEvent = {
   href?: string;
 };
 
+/** Chương trình thường nhật, đặt lúc nào cũng được — vẽ thành vạch liền suốt năm, ngắt ở các quãng nghỉ. */
+export const ongoing: Program[] = [
+  { id: "o-yen", name: "retreat ở-yên", href: routes.retreatOYen },
+  { id: "stay-talk", name: "stay+talk", href: routes.stayTalk },
+];
+
 /** Những quãng nhà mộc nghỉ, vẽ thành dải phủ dọc qua mọi hàng. */
 export type Closure = { label: string; title: string; note?: string; start: string; end: string };
 

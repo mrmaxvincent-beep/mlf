@@ -3321,3 +3321,23 @@ details[open] > summary .acc-icon {
   white-space: nowrap;
 }
 .lnm-item--off .lnm-item-title { color: var(--color-stone); }
+
+.lnm-ongoing {
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: var(--color-cham);
+  opacity: 0.28;
+}
+.lnm-name--ongoing small {
+  display: block;
+  margin-top: 0.1rem;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+}

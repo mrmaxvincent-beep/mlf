@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { closures, events, programs, type CalEvent } from "@/data/lichNhaMoc";
+import { closures, events, ongoing, programs, type CalEvent } from "@/data/lichNhaMoc";
 
 type Dated = Pick<CalEvent, "start" | "end" | "month">;
 
@@ -82,8 +82,18 @@ export function LichNam() {
     const [a, b] = span(c);
     return a < y1 && b + DAY > y0;
   });
+  // các khúc mở cửa trong năm = cả năm trừ những quãng nghỉ
+  const openSegments: [number, number][] = [];
+  let cursor = y0;
+  for (const c of [...yearClosures].sort((p, q) => span(p)[0] - span(q)[0])) {
+    const [a, b] = span(c);
+    if (a > cursor) openSegments.push([cursor, a]);
+    cursor = Math.max(cursor, b + DAY);
+  }
+  if (cursor < y1) openSegments.push([cursor, y1]);
   const monthInYear = (e: Dated) => Math.max(span(e)[0], y0);
   const rows = programs.filter((p) => yearEvents.some((e) => e.program === p.id));
+  const allRows = ongoing.length + rows.length;
   const months = Array.from({ length: 12 }, (_, m) => ({ m, start: pct(Date.UTC(year, m, 1)), mid: pct(Date.UTC(year, m, 15)) }));
   const todayPct = now !== null && now >= y0 && now < y1 ? pct(now) : null;
   const isPast = (e: Dated) => now !== null && span(e)[1] + DAY <= now;
@@ -106,7 +116,7 @@ export function LichNam() {
         ))}
       </div>
 
-      <div className="lnm-strip" style={{ gridTemplateRows: `auto repeat(${rows.length}, auto)` }}>
+      <div className="lnm-strip" style={{ gridTemplateRows: `auto repeat(${allRows}, auto)` }}>
         <span className="lnm-corner">{yearEvents.length} sự kiện</span>
         <div className="lnm-months" aria-hidden="true">
           {months.map(({ m, mid }) => (
@@ -116,7 +126,7 @@ export function LichNam() {
           ))}
         </div>
 
-        <div className="lnm-grid" style={{ gridRow: `1 / span ${rows.length + 1}` }} aria-hidden="true">
+        <div className="lnm-grid" style={{ gridRow: `1 / span ${allRows + 1}` }} aria-hidden="true">
           {months.map(({ m, start }) => (
             <i key={m} style={{ left: `${start}%` }} />
           ))}
@@ -140,12 +150,26 @@ export function LichNam() {
           ) : null}
         </div>
 
-        {rows.map((p, i) => (
+        {ongoing.map((p, i) => (
           <div key={p.id} className="lnm-row">
-            <Link href={p.href} className="lnm-name" style={{ gridRow: i + 2 }}>
+            <Link href={p.href} className="lnm-name lnm-name--ongoing" style={{ gridRow: i + 2 }}>
               {p.name}
+              <small>quanh năm</small>
             </Link>
             <div className="lnm-track" style={{ gridRow: i + 2 }}>
+              {openSegments.map(([a, b]) => (
+                <span key={a} className="lnm-ongoing" style={{ left: `${pct(a)}%`, width: `${pct(b) - pct(a)}%` }} />
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {rows.map((p, i) => (
+          <div key={p.id} className="lnm-row">
+            <Link href={p.href} className="lnm-name" style={{ gridRow: i + 2 + ongoing.length }}>
+              {p.name}
+            </Link>
+            <div className="lnm-track" style={{ gridRow: i + 2 + ongoing.length }}>
               {yearEvents
                 .filter((e) => e.program === p.id)
                 .map((e) => {
@@ -182,6 +206,18 @@ export function LichNam() {
       </div>
 
       <div className="lnm-list">
+        <section className="lnm-month">
+          <span className="lnm-month-name">quanh năm</span>
+          <div>
+            {ongoing.map((p) => (
+              <Link key={p.id} href={p.href} className="lnm-item">
+                <span className="lnm-item-date">đặt lúc nào cũng được</span>
+                <span className="lnm-item-title">{p.name}</span>
+                <span className="lnm-item-meta">nhận đặt chỗ quanh năm · trừ dịp nghỉ Tết</span>
+              </Link>
+            ))}
+          </div>
+        </section>
         {byMonth.map(({ m, list, offs }) => (
           <section key={m} className="lnm-month">
             <span className="lnm-month-name">tháng {pad(m + 1)}</span>

@@ -36,6 +36,7 @@ export const programs: Program[] = [
   { id: "tuan-du", name: "tuần-du", href: routes.tuanDu },
   { id: "be-still", name: "be-still", href: routes.beStill },
   { id: "an-pham", name: "ấn phẩm", href: routes.sachOYen },
+  { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen },
 ];
 
 export const events: CalEvent[] = [
@@ -71,6 +72,20 @@ export const events: CalEvent[] = [
   { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-10-03" },
   { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-11-07" },
   { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-12-05" },
+
+  // podcast ở-yên: ngày 1 mỗi tháng
+  { program: "podcast", title: "podcast ở-yên · tập tháng 01", note: "phát hành ngày 1 hằng tháng", start: "2027-01-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 02", note: "phát hành ngày 1 hằng tháng", start: "2027-02-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 03", note: "phát hành ngày 1 hằng tháng", start: "2027-03-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 04", note: "phát hành ngày 1 hằng tháng", start: "2027-04-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 05", note: "phát hành ngày 1 hằng tháng", start: "2027-05-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 06", note: "phát hành ngày 1 hằng tháng", start: "2027-06-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 07", note: "phát hành ngày 1 hằng tháng", start: "2027-07-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 08", note: "phát hành ngày 1 hằng tháng", start: "2027-08-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 09", note: "phát hành ngày 1 hằng tháng", start: "2027-09-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 10", note: "phát hành ngày 1 hằng tháng", start: "2027-10-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 11", note: "phát hành ngày 1 hằng tháng", start: "2027-11-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 12", note: "phát hành ngày 1 hằng tháng", start: "2027-12-01" },
 
   // hàm-dưỡng 2027: mới biết tháng, ngày cụ thể cập nhật sau
   { program: "ham-duong", title: "retreat mùa xuân", note: "ngày cụ thể sẽ cập nhật", month: "2027-03" },

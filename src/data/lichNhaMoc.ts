@@ -23,7 +23,6 @@ export const ongoing: Program[] = [
 export type Closure = { label: string; title: string; note?: string; start: string; end: string };
 
 export const closures: Closure[] = [
-  { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Ất Tỵ", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2025-01-24", end: "2025-02-06" },
   { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Bính Ngọ", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2026-02-12", end: "2026-02-25" },
   { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Đinh Mùi", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2027-02-01", end: "2027-02-14" },
 ];
@@ -40,7 +39,6 @@ export const programs: Program[] = [
 ];
 
 export const events: CalEvent[] = [
-  { program: "an-pham", title: "lịch tea·mind 2026", note: "chén trà tâm · 12 mùa tâm", month: "2025-11", href: routes.teaMindLich },
   { program: "an-pham", title: "mlf journal · quyển 01 · muôn nẻo về nhà", note: "phát hành ngày 30 tháng chạp", start: "2026-02-16", href: routes.journal },
   { program: "ham-duong", title: "retreat mùa xuân [77]", note: "xuân khẽ dưới tán rừng", start: "2026-03-13", end: "2026-03-17" },
   { program: "tuan-du", title: "tuần-du 03 · một nẻo Trúc Lâm", start: "2026-04-18", end: "2026-04-22" },
@@ -57,6 +55,7 @@ export const events: CalEvent[] = [
   { program: "tuan-du", title: "tuần-du 05 · chuông vọng đôi bờ", start: "2027-03-26", end: "2027-03-30", href: routes.tuanDu05 },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-04-05", end: "2027-04-09" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-08-02", end: "2027-08-06" },
+  { program: "an-pham", title: "lịch tea·mind 2028", note: "chén trà tâm", month: "2027-11", href: routes.teaMindLich },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-12-06", end: "2027-12-10" },
 
   // meet-up cộng đồng ở-yên: chủ nhật đầu tiên mỗi tháng

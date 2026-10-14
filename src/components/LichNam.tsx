@@ -93,7 +93,7 @@ export function LichNam() {
   if (cursor < y1) openSegments.push([cursor, y1]);
   const monthInYear = (e: Dated) => Math.max(span(e)[0], y0);
   const rows = programs.filter((p) => yearEvents.some((e) => e.program === p.id));
-  const allRows = ongoing.length + rows.length;
+  const allRows = rows.length + 1 + ongoing.length;
   const months = Array.from({ length: 12 }, (_, m) => ({ m, start: pct(Date.UTC(year, m, 1)), mid: pct(Date.UTC(year, m, 15)) }));
   const todayPct = now !== null && now >= y0 && now < y1 ? pct(now) : null;
   const isPast = (e: Dated) => now !== null && span(e)[1] + DAY <= now;
@@ -150,26 +150,12 @@ export function LichNam() {
           ) : null}
         </div>
 
-        {ongoing.map((p, i) => (
-          <div key={p.id} className="lnm-row">
-            <Link href={p.href} className="lnm-name lnm-name--ongoing" style={{ gridRow: i + 2 }}>
-              {p.name}
-              <small>quanh năm</small>
-            </Link>
-            <div className="lnm-track" style={{ gridRow: i + 2 }}>
-              {openSegments.map(([a, b]) => (
-                <span key={a} className="lnm-ongoing" style={{ left: `${pct(a)}%`, width: `${pct(b) - pct(a)}%` }} />
-              ))}
-            </div>
-          </div>
-        ))}
-
         {rows.map((p, i) => (
           <div key={p.id} className="lnm-row">
-            <Link href={p.href} className="lnm-name" style={{ gridRow: i + 2 + ongoing.length }}>
+            <Link href={p.href} className="lnm-name" style={{ gridRow: i + 2 }}>
               {p.name}
             </Link>
-            <div className="lnm-track" style={{ gridRow: i + 2 + ongoing.length }}>
+            <div className="lnm-track" style={{ gridRow: i + 2 }}>
               {yearEvents
                 .filter((e) => e.program === p.id)
                 .map((e) => {
@@ -203,21 +189,26 @@ export function LichNam() {
             </div>
           </div>
         ))}
+
+        <span className="lnm-group" style={{ gridRow: rows.length + 2 }}>
+          quanh năm
+        </span>
+        <div className="lnm-track lnm-track--group" style={{ gridRow: rows.length + 2 }} />
+        {ongoing.map((p, i) => (
+          <div key={p.id} className="lnm-row">
+            <Link href={p.href} className="lnm-name lnm-name--ongoing" style={{ gridRow: rows.length + 3 + i }}>
+              {p.name}
+            </Link>
+            <div className="lnm-track lnm-track--ongoing" style={{ gridRow: rows.length + 3 + i }}>
+              {openSegments.map(([a, b]) => (
+                <span key={a} className="lnm-ongoing" style={{ left: `${pct(a)}%`, width: `${pct(b) - pct(a)}%` }} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="lnm-list">
-        <section className="lnm-month">
-          <span className="lnm-month-name">quanh năm</span>
-          <div>
-            {ongoing.map((p) => (
-              <Link key={p.id} href={p.href} className="lnm-item">
-                <span className="lnm-item-date">đặt lúc nào cũng được</span>
-                <span className="lnm-item-title">{p.name}</span>
-                <span className="lnm-item-meta">nhận đặt chỗ quanh năm · trừ dịp nghỉ Tết</span>
-              </Link>
-            ))}
-          </div>
-        </section>
         {byMonth.map(({ m, list, offs }) => (
           <section key={m} className="lnm-month">
             <span className="lnm-month-name">tháng {pad(m + 1)}</span>
@@ -257,6 +248,21 @@ export function LichNam() {
             </div>
           </section>
         ))}
+        <section className="lnm-month">
+          <span className="lnm-month-name">quanh năm</span>
+          <div className="lnm-item lnm-item--ongoing">
+            <span className="lnm-item-date">lúc nào cũng được</span>
+            <span className="lnm-item-title">
+              {ongoing.map((p, i) => (
+                <span key={p.id}>
+                  {i ? <span className="lnm-sep"> · </span> : null}
+                  <Link href={p.href}>{p.name}</Link>
+                </span>
+              ))}
+            </span>
+            <span className="lnm-item-meta">trừ dịp nghỉ Tết</span>
+          </div>
+        </section>
       </div>
     </div>
   );

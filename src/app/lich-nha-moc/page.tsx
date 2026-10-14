@@ -22,7 +22,7 @@ export default function LichNhaMocPage() {
           {title}
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          một năm ở nhà mộc, trải trên một dải.
+          một năm ở nhà mộc
         </p>
       </div>
 

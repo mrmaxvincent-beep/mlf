@@ -17,6 +17,10 @@ export type CalEvent = {
 export const ongoing: Program[] = [
   { id: "o-yen", name: "retreat ở-yên", href: routes.retreatOYen },
   { id: "stay-talk", name: "stay+talk", href: routes.stayTalk },
+  { id: "khai-tam", name: "khai tâm", href: routes.khaiTam },
+  { id: "phia-sang", name: "phía sáng", href: routes.phiaSang },
+  { id: "clari-tea", name: "clari-tea", href: routes.clariTea },
+  { id: "yoga-thuan-duong", name: "yoga online thuận dưỡng", href: routes.touchThuanDuong },
 ];
 
 /** Những quãng nhà mộc nghỉ, vẽ thành dải phủ dọc qua mọi hàng. */

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { chuoiList } from "@/data/chuoiTuanDu";
 import {
   home,
@@ -603,14 +602,9 @@ export function TuanDuMap() {
               ) : null}
               <div className="tdm-card-trips">
                 {tripsOf(selectedLandmark.id).map((num) => (
-                  <Link
-                    key={num}
-                    href={trips.find((t) => t.num === num)!.href}
-                    className="mono-link tdm-card-trip"
-                  >
-                    tuần-du {num} · {tripTitle(num)}{" "}
-                    <span className="ar">→</span>
-                  </Link>
+                  <span key={num} className="tdm-card-trip">
+                    tuần-du {num} · {tripTitle(num)}
+                  </span>
                 ))}
               </div>
             </div>

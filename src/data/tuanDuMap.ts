@@ -1,11 +1,9 @@
-import { routes } from "@/lib/nav";
-
 export type LonLat = [number, number];
 
 export type TripStatus = "done" | "upcoming" | "planned";
 
 /** `stops` là id các điểm theo đúng thứ tự đi — đường đi trên bản đồ vẽ theo thứ tự này. */
-export type MapTrip = { num: string; status: TripStatus; href: string; stops: string[] };
+export type MapTrip = { num: string; status: TripStatus; stops: string[] };
 
 export type Landmark = {
   id: string;
@@ -20,14 +18,14 @@ export type Landmark = {
 export type MapRegion = { id: string; name: string; bounds: [LonLat, LonLat]; anchor: LonLat };
 
 export const trips: MapTrip[] = [
-  { num: "01", status: "done", href: `${routes.tuanDuBlog}/ben-cho-ben-doi`, stops: ["pho-co", "co-loa", "den-do", "phat-tich", "but-thap", "kinh-duong-vuong", "lac-long-quan", "au-co", "den-hung", "hoa-lu", "bai-dinh", "trang-an", "am-tien", "hang-mua", "tam-coc"] },
-  { num: "02", status: "done", href: routes.chuoiTuanDu, stops: ["quoc-hoc", "thanh-noi", "tinh-tam", "tang-thu", "lang-tu-duc", "tu-hieu", "lang-gia-long", "thien-mu", "huyen-khong", "vong-canh", "nam-giao", "thanh-tien", "lang-sinh", "bao-vinh"] },
-  { num: "03", status: "done", href: `${routes.tuanDuBlog}/mot-neo-truc-lam`, stops: ["bo-da", "vinh-nghiem", "tay-yen-tu", "yen-tu", "ngoa-van", "con-son", "chua-giam", "lang-nom", "but-thap"] },
-  { num: "04", status: "done", href: routes.tuanDu04, stops: ["suoi-rao"] },
-  { num: "05", status: "upcoming", href: routes.tuanDu05, stops: ["chua-huong", "van-long", "chau-son", "bac-trach", "chua-keo", "ngoa-van", "thanh-mai", "phu-lang"] },
-  { num: "06", status: "planned", href: routes.chuoiTuanDu, stops: ["that-son"] },
-  { num: "07", status: "planned", href: routes.chuoiTuanDu, stops: ["an-do", "nepal"] },
-  { num: "08", status: "planned", href: routes.chuoiTuanDu, stops: ["himalaya"] },
+  { num: "01", status: "done", stops: ["pho-co", "co-loa", "den-do", "phat-tich", "but-thap", "kinh-duong-vuong", "lac-long-quan", "au-co", "den-hung", "hoa-lu", "bai-dinh", "trang-an", "am-tien", "hang-mua", "tam-coc"] },
+  { num: "02", status: "done", stops: ["quoc-hoc", "thanh-noi", "tinh-tam", "tang-thu", "lang-tu-duc", "tu-hieu", "lang-gia-long", "thien-mu", "huyen-khong", "vong-canh", "nam-giao", "thanh-tien", "lang-sinh", "bao-vinh"] },
+  { num: "03", status: "done", stops: ["bo-da", "vinh-nghiem", "tay-yen-tu", "yen-tu", "ngoa-van", "con-son", "chua-giam", "lang-nom", "but-thap"] },
+  { num: "04", status: "done", stops: ["suoi-rao"] },
+  { num: "05", status: "upcoming", stops: ["chua-huong", "van-long", "chau-son", "bac-trach", "chua-keo", "ngoa-van", "thanh-mai", "phu-lang"] },
+  { num: "06", status: "planned", stops: ["that-son"] },
+  { num: "07", status: "planned", stops: ["an-do", "nepal"] },
+  { num: "08", status: "planned", stops: ["himalaya"] },
 ];
 
 export const regions: MapRegion[] = [

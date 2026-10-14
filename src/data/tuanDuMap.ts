@@ -8,10 +8,8 @@ export type MapTrip = { num: string; status: TripStatus; stops: string[] };
 export type Landmark = {
   id: string;
   name: string;
-  area: string;
   pos: LonLat;
   region: string;
-  note?: string;
 };
 
 /** `anchor` là chỗ đặt nhãn cụm ở tầng toàn cảnh — đặt ra ngoài biển/khoảng trống để không che các chấm. */
@@ -20,7 +18,7 @@ export type MapRegion = { id: string; name: string; bounds: [LonLat, LonLat]; an
 export const trips: MapTrip[] = [
   { num: "01", status: "done", stops: ["pho-co", "co-loa", "den-do", "phat-tich", "but-thap", "kinh-duong-vuong", "lac-long-quan", "au-co", "den-hung", "hoa-lu", "bai-dinh", "trang-an", "am-tien", "hang-mua", "tam-coc"] },
   { num: "02", status: "done", stops: ["quoc-hoc", "thanh-noi", "tinh-tam", "tang-thu", "lang-tu-duc", "tu-hieu", "lang-gia-long", "thien-mu", "huyen-khong", "vong-canh", "nam-giao", "thanh-tien", "lang-sinh", "bao-vinh"] },
-  { num: "03", status: "done", stops: ["bo-da", "vinh-nghiem", "tay-yen-tu", "yen-tu", "ngoa-van", "con-son", "chua-giam", "lang-nom", "but-thap"] },
+  { num: "03", status: "done", stops: ["bo-da", "vinh-nghiem", "tay-yen-tu", "yen-tu", "ngoa-van", "con-son", "chua-giam", "lang-nom"] },
   { num: "04", status: "done", stops: ["suoi-rao"] },
   { num: "05", status: "upcoming", stops: ["chua-huong", "van-long", "chau-son", "bac-trach", "chua-keo", "ngoa-van", "thanh-mai", "phu-lang"] },
   { num: "06", status: "planned", stops: ["that-son"] },
@@ -36,61 +34,61 @@ export const regions: MapRegion[] = [
 ];
 
 export const landmarks: Landmark[] = [
-  { id: "pho-co", name: "phố cổ Hà Nội", area: "Hà Nội", pos: [105.851, 21.034], region: "bac-bo", note: "đêm đầu, đi dạo phố cổ" },
-  { id: "co-loa", name: "Cổ Loa", area: "Hà Nội", pos: [105.873, 21.115], region: "bac-bo", note: "thành cổ và đền An Dương Vương" },
-  { id: "den-do", name: "Đền Đô", area: "Bắc Ninh", pos: [105.958, 21.118], region: "bac-bo", note: "nơi thờ tám vị vua nhà Lý" },
-  { id: "phat-tich", name: "chùa Phật Tích", area: "Bắc Ninh", pos: [106.027, 21.092], region: "bac-bo" },
-  { id: "but-thap", name: "chùa Bút Tháp", area: "Bắc Ninh", pos: [106.09, 21.078], region: "bac-bo", note: "ngôi chùa nép mình bên sông Đuống" },
-  { id: "kinh-duong-vuong", name: "đền Kinh Dương Vương", area: "Bắc Ninh", pos: [106.062, 21.058], region: "bac-bo" },
-  { id: "lac-long-quan", name: "đền Lạc Long Quân", area: "Phú Thọ", pos: [105.33, 21.38], region: "bac-bo" },
-  { id: "au-co", name: "đền Mẫu Âu Cơ", area: "Phú Thọ", pos: [105.02, 21.56], region: "bac-bo" },
-  { id: "den-hung", name: "quần thể đền Hùng", area: "Phú Thọ", pos: [105.318, 21.367], region: "bac-bo" },
-  { id: "hoa-lu", name: "cố đô Hoa Lư", area: "Ninh Bình", pos: [105.91, 20.285], region: "bac-bo" },
-  { id: "bai-dinh", name: "chùa Bái Đính", area: "Ninh Bình", pos: [105.845, 20.272], region: "bac-bo", note: "chùa mới, chùa cổ cùng Hang Sáng, Hang Tối" },
-  { id: "trang-an", name: "quần thể Tràng An", area: "Ninh Bình", pos: [105.885, 20.245], region: "bac-bo" },
-  { id: "am-tien", name: "động Am Tiên", area: "Ninh Bình", pos: [105.928, 20.292], region: "bac-bo" },
-  { id: "hang-mua", name: "Hang Múa", area: "Ninh Bình", pos: [105.935, 20.229], region: "bac-bo" },
-  { id: "tam-coc", name: "Tam Cốc", area: "Ninh Bình", pos: [105.93, 20.214], region: "bac-bo" },
+  { id: "pho-co", name: "phố cổ Hà Nội", pos: [105.851, 21.034], region: "bac-bo" },
+  { id: "co-loa", name: "Cổ Loa", pos: [105.873, 21.115], region: "bac-bo" },
+  { id: "den-do", name: "Đền Đô", pos: [105.958, 21.118], region: "bac-bo" },
+  { id: "phat-tich", name: "chùa Phật Tích", pos: [106.027, 21.092], region: "bac-bo" },
+  { id: "but-thap", name: "chùa Bút Tháp", pos: [106.09, 21.078], region: "bac-bo" },
+  { id: "kinh-duong-vuong", name: "đền Kinh Dương Vương", pos: [106.062, 21.058], region: "bac-bo" },
+  { id: "lac-long-quan", name: "đền Lạc Long Quân", pos: [105.33, 21.38], region: "bac-bo" },
+  { id: "au-co", name: "đền Mẫu Âu Cơ", pos: [105.02, 21.56], region: "bac-bo" },
+  { id: "den-hung", name: "quần thể đền Hùng", pos: [105.318, 21.367], region: "bac-bo" },
+  { id: "hoa-lu", name: "cố đô Hoa Lư", pos: [105.91, 20.285], region: "bac-bo" },
+  { id: "bai-dinh", name: "chùa Bái Đính", pos: [105.845, 20.272], region: "bac-bo" },
+  { id: "trang-an", name: "quần thể Tràng An", pos: [105.885, 20.245], region: "bac-bo" },
+  { id: "am-tien", name: "động Am Tiên", pos: [105.928, 20.292], region: "bac-bo" },
+  { id: "hang-mua", name: "Hang Múa", pos: [105.935, 20.229], region: "bac-bo" },
+  { id: "tam-coc", name: "Tam Cốc", pos: [105.93, 20.214], region: "bac-bo" },
 
-  { id: "quoc-hoc", name: "Quốc học Huế", area: "Huế", pos: [107.584, 16.461], region: "hue" },
-  { id: "thanh-noi", name: "Thành Nội", area: "Huế", pos: [107.578, 16.469], region: "hue", note: "cùng buổi dạo phố đêm trong thành" },
-  { id: "tinh-tam", name: "hồ Tịnh Tâm", area: "Huế", pos: [107.575, 16.479], region: "hue" },
-  { id: "tang-thu", name: "hồ Tàng Thư", area: "Huế", pos: [107.569, 16.474], region: "hue" },
-  { id: "lang-tu-duc", name: "lăng Tự Đức", area: "Huế", pos: [107.565, 16.433], region: "hue" },
-  { id: "tu-hieu", name: "chùa Từ Hiếu", area: "Huế", pos: [107.553, 16.436], region: "hue" },
-  { id: "lang-gia-long", name: "lăng Gia Long", area: "Huế", pos: [107.586, 16.356], region: "hue" },
-  { id: "thien-mu", name: "chùa Thiên Mụ", area: "Huế", pos: [107.545, 16.453], region: "hue", note: "sau chuyến thuyền trên sông Hương" },
-  { id: "huyen-khong", name: "Huyền Không Sơn Thượng", area: "Huế", pos: [107.512, 16.441], region: "hue" },
-  { id: "vong-canh", name: "đồi Vọng Cảnh", area: "Huế", pos: [107.559, 16.426], region: "hue" },
-  { id: "nam-giao", name: "đàn Nam Giao", area: "Huế", pos: [107.581, 16.445], region: "hue" },
-  { id: "thanh-tien", name: "làng Thanh Tiên", area: "Huế", pos: [107.622, 16.508], region: "hue" },
-  { id: "lang-sinh", name: "làng Sình", area: "Huế", pos: [107.611, 16.52], region: "hue" },
-  { id: "bao-vinh", name: "làng cổ Bao Vinh", area: "Huế", pos: [107.585, 16.494], region: "hue" },
+  { id: "quoc-hoc", name: "Quốc học Huế", pos: [107.584, 16.461], region: "hue" },
+  { id: "thanh-noi", name: "Thành Nội", pos: [107.578, 16.469], region: "hue" },
+  { id: "tinh-tam", name: "hồ Tịnh Tâm", pos: [107.575, 16.479], region: "hue" },
+  { id: "tang-thu", name: "hồ Tàng Thư", pos: [107.569, 16.474], region: "hue" },
+  { id: "lang-tu-duc", name: "lăng Tự Đức", pos: [107.565, 16.433], region: "hue" },
+  { id: "tu-hieu", name: "chùa Từ Hiếu", pos: [107.553, 16.436], region: "hue" },
+  { id: "lang-gia-long", name: "lăng Gia Long", pos: [107.586, 16.356], region: "hue" },
+  { id: "thien-mu", name: "chùa Thiên Mụ", pos: [107.545, 16.453], region: "hue" },
+  { id: "huyen-khong", name: "Huyền Không Sơn Thượng", pos: [107.512, 16.441], region: "hue" },
+  { id: "vong-canh", name: "đồi Vọng Cảnh", pos: [107.559, 16.426], region: "hue" },
+  { id: "nam-giao", name: "đàn Nam Giao", pos: [107.581, 16.445], region: "hue" },
+  { id: "thanh-tien", name: "làng Thanh Tiên", pos: [107.622, 16.508], region: "hue" },
+  { id: "lang-sinh", name: "làng Sình", pos: [107.611, 16.52], region: "hue" },
+  { id: "bao-vinh", name: "làng cổ Bao Vinh", pos: [107.585, 16.494], region: "hue" },
 
-  { id: "bo-da", name: "chùa Bổ Đà", area: "Bắc Giang", pos: [106.065, 21.24], region: "bac-bo", note: "trung tâm Phật giáo lớn từ thời Lý" },
-  { id: "vinh-nghiem", name: "chùa Vĩnh Nghiêm", area: "Bắc Giang", pos: [106.235, 21.29], region: "bac-bo", note: "cái nôi của thiền phái Trúc Lâm" },
-  { id: "tay-yen-tu", name: "Tây Yên Tử", area: "Bắc Giang", pos: [106.745, 21.2], region: "bac-bo" },
-  { id: "yen-tu", name: "Đông Yên Tử", area: "Quảng Ninh", pos: [106.718, 21.155], region: "bac-bo", note: "chùa Một Mái, chùa Hoa Yên, vườn tháp Huệ Quang" },
-  { id: "ngoa-van", name: "am Ngọa Vân", area: "Quảng Ninh", pos: [106.592, 21.17], region: "bac-bo", note: "nơi vua Trần Nhân Tông về ẩn tu, rồi nằm lại" },
-  { id: "con-son", name: "Côn Sơn – Kiếp Bạc", area: "Hải Dương", pos: [106.39, 21.14], region: "bac-bo" },
-  { id: "chua-giam", name: "chùa Giám", area: "Hải Dương", pos: [106.215, 20.985], region: "bac-bo" },
-  { id: "lang-nom", name: "làng Nôm", area: "Hưng Yên", pos: [106.06, 20.975], region: "bac-bo", note: "đình Nôm, chùa Nôm và nếp làng quê Bắc Bộ" },
+  { id: "bo-da", name: "chùa Bổ Đà", pos: [106.065, 21.24], region: "bac-bo" },
+  { id: "vinh-nghiem", name: "chùa Vĩnh Nghiêm", pos: [106.235, 21.29], region: "bac-bo" },
+  { id: "tay-yen-tu", name: "Tây Yên Tử", pos: [106.745, 21.2], region: "bac-bo" },
+  { id: "yen-tu", name: "Đông Yên Tử", pos: [106.718, 21.155], region: "bac-bo" },
+  { id: "ngoa-van", name: "am Ngọa Vân", pos: [106.592, 21.17], region: "bac-bo" },
+  { id: "con-son", name: "Côn Sơn – Kiếp Bạc", pos: [106.39, 21.14], region: "bac-bo" },
+  { id: "chua-giam", name: "chùa Giám", pos: [106.215, 20.985], region: "bac-bo" },
+  { id: "lang-nom", name: "làng Nôm", pos: [106.06, 20.975], region: "bac-bo" },
 
-  { id: "suoi-rao", name: "Suối Rao", area: "Bà Rịa – Vũng Tàu", pos: [107.32, 10.66], region: "nam-bo", note: "a pause in Saigon" },
+  { id: "suoi-rao", name: "Suối Rao", pos: [107.32, 10.66], region: "nam-bo" },
 
-  { id: "chua-huong", name: "chùa Hương", area: "Hà Nội", pos: [105.748, 20.617], region: "bac-bo", note: "ngôi chùa nằm sâu trong núi đá" },
-  { id: "van-long", name: "đầm Vân Long", area: "Ninh Bình", pos: [105.875, 20.375], region: "bac-bo" },
-  { id: "chau-son", name: "đan viện Châu Sơn", area: "Ninh Bình", pos: [105.78, 20.33], region: "bac-bo", note: "nơi các đan sĩ giữ thinh lặng trọn đời" },
-  { id: "bac-trach", name: "nhà thờ Bác Trạch", area: "Thái Bình", pos: [106.56, 20.38], region: "bac-bo", note: "thánh đường vươn lên giữa đồng lúa ven biển" },
-  { id: "chua-keo", name: "chùa Keo", area: "Thái Bình", pos: [106.3, 20.44], region: "bac-bo", note: "gác chuông gỗ ba tầng, dựng từ thế kỷ 17" },
-  { id: "thanh-mai", name: "chùa Thanh Mai", area: "Hải Dương", pos: [106.44, 21.135], region: "bac-bo", note: "nơi tổ Pháp Loa viên tịch" },
-  { id: "phu-lang", name: "làng gốm Phù Lãng", area: "Bắc Ninh", pos: [106.275, 21.165], region: "bac-bo" },
+  { id: "chua-huong", name: "chùa Hương", pos: [105.748, 20.617], region: "bac-bo" },
+  { id: "van-long", name: "đầm Vân Long", pos: [105.875, 20.375], region: "bac-bo" },
+  { id: "chau-son", name: "đan viện Châu Sơn", pos: [105.78, 20.33], region: "bac-bo" },
+  { id: "bac-trach", name: "nhà thờ Bác Trạch", pos: [106.56, 20.38], region: "bac-bo" },
+  { id: "chua-keo", name: "chùa Keo", pos: [106.3, 20.44], region: "bac-bo" },
+  { id: "thanh-mai", name: "chùa Thanh Mai", pos: [106.44, 21.135], region: "bac-bo" },
+  { id: "phu-lang", name: "làng gốm Phù Lãng", pos: [106.275, 21.165], region: "bac-bo" },
 
-  { id: "that-son", name: "Thất Sơn", area: "An Giang", pos: [104.99, 10.51], region: "nam-bo", note: "điệu hoà phù sa" },
+  { id: "that-son", name: "Thất Sơn", pos: [104.99, 10.51], region: "nam-bo" },
 
-  { id: "an-do", name: "Ấn Độ", area: "đất Bụt", pos: [84.99, 24.7], region: "an-do-nepal", note: "theo Bụt ta đi — lịch trình đang soạn" },
-  { id: "nepal", name: "Nepal", area: "đất Bụt", pos: [83.28, 27.47], region: "an-do-nepal", note: "theo Bụt ta đi — lịch trình đang soạn" },
-  { id: "himalaya", name: "Himalaya", area: "Nepal", pos: [84.0, 28.55], region: "an-do-nepal", note: "vòm trời nghiêng nghiêng — lịch trình đang soạn" },
+  { id: "an-do", name: "Ấn Độ", pos: [84.99, 24.7], region: "an-do-nepal" },
+  { id: "nepal", name: "Nepal", pos: [83.28, 27.47], region: "an-do-nepal" },
+  { id: "himalaya", name: "Himalaya", pos: [84.0, 28.55], region: "an-do-nepal" },
 ];
 
 export const home: { name: string; pos: LonLat } = { name: "nhà mộc · Măng Đen", pos: [108.27, 14.61] };

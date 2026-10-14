@@ -595,11 +595,7 @@ export function TuanDuMap() {
         <div className="tdm-panel">
           {selectedLandmark ? (
             <div className="tdm-card">
-              <span className="tdm-card-area">{selectedLandmark.area}</span>
               <span className="tdm-card-name">{selectedLandmark.name}</span>
-              {selectedLandmark.note ? (
-                <p className="tdm-card-note">{selectedLandmark.note}</p>
-              ) : null}
               <div className="tdm-card-trips">
                 {tripsOf(selectedLandmark.id).map((num) => (
                   <span key={num} className="tdm-card-trip">
@@ -621,12 +617,14 @@ export function TuanDuMap() {
                     onMouseEnter={() => setHovered(l.id)}
                     onMouseLeave={() => setHovered(null)}
                   >
-                    <span className="tdm-list-num">
-                      {String(i + 1).padStart(2, "0")}
+                    <span
+                      className={`tdm-list-num tdm-list-num--${landmarkStatus(l)}`}
+                    >
+                      {i + 1}
                     </span>
                     <span className="tdm-list-name">{l.name}</span>
                     <span className="tdm-list-trips">
-                      {tripsOf(l.id).join(" · ")}
+                      tuần-du {tripsOf(l.id).join(" · ")}
                     </span>
                   </button>
                 </li>

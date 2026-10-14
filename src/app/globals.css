@@ -2842,15 +2842,6 @@ details[open] > summary .acc-icon {
   background: var(--color-paper);
   animation: lnd-fade 0.35s both;
 }
-.tdm-card-area {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-stone);
-  margin-bottom: 0.4rem;
-}
 .tdm-card-name {
   display: block;
   font-family: var(--font-serif);
@@ -2858,13 +2849,6 @@ details[open] > summary .acc-icon {
   font-weight: 300;
   font-size: 1.4rem;
   color: var(--color-ink);
-}
-.tdm-card-note {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: var(--color-ink);
-  margin: 0.5rem 0 0;
 }
 .tdm-card-trips { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.9rem; }
 .tdm-card-trip {
@@ -2883,9 +2867,9 @@ details[open] > summary .acc-icon {
 }
 .tdm-list-item {
   display: grid;
-  grid-template-columns: 1.8rem 1fr auto;
-  gap: 0.6rem;
-  align-items: baseline;
+  grid-template-columns: 1.35rem 1fr auto;
+  gap: 0.7rem;
+  align-items: center;
   width: 100%;
   padding: 0.55rem 0;
   background: none;
@@ -2897,10 +2881,20 @@ details[open] > summary .acc-icon {
   transition: opacity 0.3s;
 }
 .tdm-list-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-cham-dem);
   font-family: var(--font-mono);
-  font-size: 0.6rem;
-  color: var(--color-stone);
+  font-size: 0.55rem;
+  color: var(--color-cham-dem);
+  align-self: center;
 }
+.tdm-list-num--done { background: var(--color-cham-dem); color: var(--color-paper); }
+.tdm-list-num--planned { border-style: dashed; border-color: var(--color-stone); }
 .tdm-list-name {
   font-family: var(--font-sans);
   font-size: 0.88rem;

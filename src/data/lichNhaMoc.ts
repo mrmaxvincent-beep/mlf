@@ -29,6 +29,7 @@ export type Closure = { label: string; title: string; note?: string; start: stri
 export const closures: Closure[] = [
   { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Bính Ngọ", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2026-02-12", end: "2026-02-25" },
   { label: "nghỉ Tết", title: "nhà mộc nghỉ Tết Đinh Mùi", note: "25 tháng chạp – mùng 9 tháng giêng", start: "2027-02-01", end: "2027-02-14" },
+  { label: "nghỉ", title: "nhà mộc nghỉ tháng 10", note: "nghỉ trọn tháng", start: "2027-10-01", end: "2027-10-31" },
 ];
 
 /** Thứ tự ở đây là thứ tự các hàng trên dải năm. */

@@ -3294,3 +3294,5 @@ details[open] > summary .acc-icon {
   .lnm-item { grid-template-columns: 1fr; }
   .lnm-item-date { grid-row: auto; padding-top: 0; }
 }
+.lnm-mark.cut-start { border-top-left-radius: 0; border-bottom-left-radius: 0; border-left-style: dashed; }
+.lnm-mark.cut-end { border-top-right-radius: 0; border-bottom-right-radius: 0; border-right-style: dashed; }

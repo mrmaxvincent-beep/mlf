@@ -30,6 +30,7 @@ function fmt(e: CalEvent) {
   const [a, b] = span(e).map((ms) => new Date(ms));
   const dm = (d: Date) => `${pad(d.getUTCDate())}.${pad(d.getUTCMonth() + 1)}`;
   if (+a === +b) return `${dm(a)}.${a.getUTCFullYear()}`;
+  if (a.getUTCFullYear() !== b.getUTCFullYear()) return `${dm(a)}.${a.getUTCFullYear()} – ${dm(b)}.${b.getUTCFullYear()}`;
   if (a.getUTCMonth() === b.getUTCMonth()) return `${pad(a.getUTCDate())} – ${dm(b)}.${b.getUTCFullYear()}`;
   return `${dm(a)} – ${dm(b)}.${b.getUTCFullYear()}`;
 }
@@ -56,17 +57,25 @@ export function LichNam() {
   const y1 = Date.UTC(year + 1, 0, 1);
   const pct = (ms: number) => ((ms - y0) / (y1 - y0)) * 100;
 
+  // sự kiện vắt qua hai năm hiện ở cả hai năm, vạch được cắt ở mép năm
   const yearEvents = useMemo(
-    () => events.filter((e) => new Date(span(e)[0]).getUTCFullYear() === year).sort((a, b) => span(a)[0] - span(b)[0]),
+    () =>
+      events
+        .filter((e) => {
+          const [a, b] = span(e);
+          return a < Date.UTC(year + 1, 0, 1) && b + DAY > Date.UTC(year, 0, 1);
+        })
+        .sort((a, b) => span(a)[0] - span(b)[0]),
     [year],
   );
+  const monthInYear = (e: CalEvent) => Math.max(span(e)[0], y0);
   const rows = programs.filter((p) => yearEvents.some((e) => e.program === p.id));
   const months = Array.from({ length: 12 }, (_, m) => ({ m, start: pct(Date.UTC(year, m, 1)), mid: pct(Date.UTC(year, m, 15)) }));
   const todayPct = now !== null && now >= y0 && now < y1 ? pct(now) : null;
   const isPast = (e: CalEvent) => now !== null && span(e)[1] + DAY <= now;
 
   const byMonth = months
-    .map(({ m }) => ({ m, list: yearEvents.filter((e) => new Date(span(e)[0]).getUTCMonth() === m) }))
+    .map(({ m }) => ({ m, list: yearEvents.filter((e) => new Date(monthInYear(e)).getUTCMonth() === m) }))
     .filter((g) => g.list.length);
 
   return (
@@ -111,13 +120,16 @@ export function LichNam() {
                 .map((e) => {
                   const [a, b] = span(e);
                   const k = keyOf(e);
-                  const left = pct(a);
+                  const cutStart = a < y0;
+                  const cutEnd = b + DAY > y1;
+                  const left = pct(Math.max(a, y0));
+                  const right = pct(Math.min(b + DAY, y1));
                   const tipSide = left < 18 ? "start" : left > 78 ? "end" : "mid";
                   return (
                     <button
                       key={k}
-                      className={`lnm-mark${e.month ? " lnm-mark--month" : ""}${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
-                      style={{ left: `${left}%`, width: `${pct(b + DAY) - left}%` }}
+                      className={`lnm-mark${e.month ? " lnm-mark--month" : ""}${cutStart ? " cut-start" : ""}${cutEnd ? " cut-end" : ""}${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
+                      style={{ left: `${left}%`, width: `${right - left}%` }}
                       onMouseEnter={() => setHover(k)}
                       onMouseLeave={() => setHover(null)}
                       onFocus={() => setHover(k)}

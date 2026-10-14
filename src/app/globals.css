@@ -2710,3 +2710,289 @@ details[open] > summary .acc-icon {
 @media (prefers-reduced-motion: reduce) {
   .lnd-card { transition: none; }
 }
+
+/* tuần-du: bản đồ vẽ tay hai tầng */
+.tdm-frame {
+  position: relative;
+  border: 1px solid var(--color-mist);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(58, 76, 99, 0.04), transparent 60%),
+    var(--color-paper);
+  overflow: hidden;
+}
+.tdm-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 940 / 600;
+}
+.tdm-country {
+  font-family: var(--font-serif);
+  font-style: italic;
+  fill: var(--color-stone);
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+.tdm-small {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  fill: var(--color-stone);
+  pointer-events: none;
+}
+.tdm-cluster { cursor: pointer; outline: none; }
+.tdm-badge {
+  fill: var(--color-paper);
+  stroke: var(--color-cham-dem);
+  stroke-width: 1;
+  transition: fill 0.2s;
+}
+.tdm-cluster:hover .tdm-badge,
+.tdm-cluster:focus-visible .tdm-badge { fill: var(--color-cotton); }
+.tdm-cluster:focus-visible .tdm-badge { stroke-width: 2; }
+.tdm-badge-num {
+  font-family: var(--font-mono);
+  fill: var(--color-cham-dem);
+  pointer-events: none;
+}
+.tdm-badge-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  fill: var(--color-ink);
+  pointer-events: none;
+}
+.tdm-point { cursor: pointer; outline: none; transition: opacity 0.3s; }
+.tdm-num {
+  font-family: var(--font-mono);
+  fill: var(--color-cham-dem);
+  pointer-events: none;
+}
+.tdm-num--light { fill: var(--color-paper); }
+.tdm-label {
+  font-family: var(--font-sans);
+  fill: var(--color-ink);
+  paint-order: stroke;
+  stroke: var(--color-paper);
+  stroke-width: 0.35em;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.tdm-back,
+.tdm-hint,
+.tdm-region-name {
+  position: absolute;
+  top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+}
+.tdm-back {
+  left: 0.9rem;
+  background: var(--color-paper);
+  border: 1px solid var(--color-mist);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tdm-back:hover { color: var(--color-ink); border-color: var(--color-stone); }
+.tdm-hint { left: 1.1rem; }
+.tdm-region-name {
+  right: 1.1rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink);
+}
+.tdm-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  margin-top: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+}
+.tdm-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.tdm-key {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-cham-dem);
+}
+.tdm-key--done { background: var(--color-cham-dem); }
+.tdm-key--upcoming { background: var(--color-paper); }
+.tdm-key--planned { border: 1px dashed var(--color-stone); }
+.tdm-panel {
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 1.2rem;
+}
+.tdm-card {
+  border: 1px solid var(--color-mist);
+  border-radius: 1rem;
+  padding: 1.2rem 1.4rem;
+  background: var(--color-paper);
+  animation: lnd-fade 0.35s both;
+}
+.tdm-card-area {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin-bottom: 0.4rem;
+}
+.tdm-card-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: var(--color-ink);
+}
+.tdm-card-note {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-ink);
+  margin: 0.5rem 0 0;
+}
+.tdm-card-trips { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.9rem; }
+.tdm-card-trip {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: var(--color-cham-dem);
+}
+.tdm-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  column-gap: 1.6rem;
+}
+.tdm-list-item {
+  display: grid;
+  grid-template-columns: 1.8rem 1fr auto;
+  gap: 0.6rem;
+  align-items: baseline;
+  width: 100%;
+  padding: 0.55rem 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-mist);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: opacity 0.3s;
+}
+.tdm-list-num {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--color-stone);
+}
+.tdm-list-name {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-ink);
+}
+.tdm-list-item:hover .tdm-list-name,
+.tdm-list-item.active .tdm-list-name { color: var(--color-cham-dem); }
+.tdm-list-trips {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+  color: var(--color-stone);
+}
+.tdm-trips {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+  padding-bottom: 0.4rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.tdm-trip {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  min-width: 8.5rem;
+  max-width: 11rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--color-mist);
+  border-radius: 0.8rem;
+  background: var(--color-paper);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+.tdm-trip:hover { border-color: var(--color-stone); }
+.tdm-trip.active { border-color: var(--color-cham-dem); background: var(--color-cotton); }
+.tdm-trip--planned { border-style: dashed; }
+.tdm-trip-num {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-cham-dem);
+}
+.tdm-trip-title {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+.tdm-trip-status {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+}
+.tdm-hint {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+}
+@media (max-width: 520px) {
+  .tdm-hint { display: none; }
+  .tdm-region-name { font-size: 0.9rem; }
+}
+.tdm-region-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+.tdm-region-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--color-mist);
+  border-radius: 999px;
+  background: var(--color-paper);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.tdm-region-chip span {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.6rem;
+  color: var(--color-cham-dem);
+}

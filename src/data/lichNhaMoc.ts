@@ -1,7 +1,7 @@
 import { routes } from "@/lib/nav";
 
 /** `ongoing`: hoạt động quanh năm, đặt lúc nào cũng được — vẽ thành vạch liền suốt năm, ngắt ở các quãng nghỉ. */
-export type Program = { id: string; name: string; href: string; group?: string; ongoing?: boolean };
+export type Program = { id: string; name: string; href?: string; group?: string; ongoing?: boolean };
 
 /** `start`/`end` dạng YYYY-MM-DD; nếu chỉ biết tháng thì để `month` dạng YYYY-MM và bỏ trống start/end. */
 export type CalEvent = {
@@ -44,7 +44,7 @@ export const programs: Program[] = [
   { id: "yoga-thuan-duong", name: "yoga online thuận dưỡng", href: routes.touchThuanDuong, group: "hoat-dong", ongoing: true },
   { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen, group: "cong-dong" },
   { id: "trang-yen", name: "trăng-yên", href: routes.trangYen, group: "cong-dong" },
-  { id: "an-pham", name: "ấn phẩm", href: routes.sachOYen, group: "thu-vien" },
+  { id: "an-pham", name: "ấn phẩm", group: "thu-vien" },
   { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen, group: "thu-vien" },
 ];
 

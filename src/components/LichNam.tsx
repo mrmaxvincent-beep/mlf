@@ -205,10 +205,16 @@ export function LichNam() {
             <div className="lnm-track lnm-track--group" style={{ gridRow: sec.labelRow }} />
             {sec.rows.map(({ p, row }) => (
               <div key={p.id} className="lnm-row">
-                <Link href={p.href} className={`lnm-name${p.ongoing ? " lnm-name--ongoing" : ""}`} style={{ gridRow: row }}>
-                  {p.name}
-                  {p.ongoing ? <small>quanh năm</small> : null}
-                </Link>
+                {p.href ? (
+                  <Link href={p.href} className={`lnm-name${p.ongoing ? " lnm-name--ongoing" : ""}`} style={{ gridRow: row }}>
+                    {p.name}
+                    {p.ongoing ? <small>quanh năm</small> : null}
+                  </Link>
+                ) : (
+                  <span className="lnm-name lnm-name--plain" style={{ gridRow: row }}>
+                    {p.name}
+                  </span>
+                )}
                 <div className={`lnm-track${p.ongoing ? " lnm-track--ongoing" : ""}`} style={{ gridRow: row }}>
                   {p.ongoing ? renderOpen() : renderMarks(p)}
                 </div>
@@ -236,15 +242,15 @@ export function LichNam() {
               {list.map((e) => {
                 const k = keyOf(e);
                 const p = programOf(e.program);
-                return (
-                  <Link
-                    key={k}
-                    id={`lnm-${k}`}
-                    href={e.href ?? p.href}
-                    className={`lnm-item${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
-                    onMouseEnter={() => setHover(k)}
-                    onMouseLeave={() => setHover(null)}
-                  >
+                const href = e.href ?? p.href;
+                const props = {
+                  id: `lnm-${k}`,
+                  className: `lnm-item${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`,
+                  onMouseEnter: () => setHover(k),
+                  onMouseLeave: () => setHover(null),
+                };
+                const body = (
+                  <>
                     <span className="lnm-item-date">{fmt(e)}</span>
                     <span className="lnm-item-title">{e.title}</span>
                     <span className="lnm-item-meta">
@@ -252,7 +258,16 @@ export function LichNam() {
                       {e.note ? ` · ${e.note}` : ""}
                       {isPast(e) ? " · đã qua" : ""}
                     </span>
+                  </>
+                );
+                return href ? (
+                  <Link key={k} href={href} {...props}>
+                    {body}
                   </Link>
+                ) : (
+                  <div key={k} {...props}>
+                    {body}
+                  </div>
                 );
               })}
             </div>
@@ -266,7 +281,7 @@ export function LichNam() {
               {ongoing.map((p, i) => (
                 <span key={p.id}>
                   {i ? <span className="lnm-sep"> · </span> : null}
-                  <Link href={p.href}>{p.name}</Link>
+                  {p.href ? <Link href={p.href}>{p.name}</Link> : p.name}
                 </span>
               ))}
             </span>

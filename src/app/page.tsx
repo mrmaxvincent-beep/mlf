@@ -180,10 +180,13 @@ export default function HomePage() {
 
         {/* sắp diễn ra */}
         <div>
-          <div className="wrap" style={{ paddingTop: "1.25rem" }}>
-            <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)", display: "block", marginBottom: "1rem" }}>
+          <div className="wrap" style={{ paddingTop: "1.25rem", display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", marginBottom: "1rem" }}>
+            <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)" }}>
               sắp diễn ra
             </span>
+            <Link className="go mono-link" href={routes.lichNhaMoc} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+              lịch cả năm <span className="ar">→</span>
+            </Link>
           </div>
           <UpcomingEvents fallback={fallbackUpcoming} />
         </div>

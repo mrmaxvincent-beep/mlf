@@ -102,6 +102,7 @@ export function TuanDuMap() {
   const rafRef = useRef(0);
   const frameRef = useRef<HTMLDivElement>(null);
   const [frameW, setFrameW] = useState(760);
+  const [play, setPlay] = useState<{ num: string; step: number } | null>(null);
 
   useEffect(() => () => cancelAnimationFrame(rafRef.current), []);
 
@@ -114,6 +115,27 @@ export function TuanDuMap() {
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!play) return;
+    const trip = trips.find((t) => t.num === play.num)!;
+    if (play.step >= trip.stops.length - 1) {
+      const id = window.setTimeout(() => setPlay(null), 2400);
+      return () => window.clearTimeout(id);
+    }
+    const id = window.setTimeout(
+      () => {
+        const nextId = trip.stops[play.step + 1];
+        const next = byId(nextId);
+        if (next.region !== view) openRegion(next.region);
+        setSelected(nextId);
+        setPlay({ num: play.num, step: play.step + 1 });
+      },
+      play.step === 0 ? 1500 : 1300,
+    );
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [play, view]);
 
   function animateTo(target: Box) {
     cancelAnimationFrame(rafRef.current);
@@ -154,19 +176,37 @@ export function TuanDuMap() {
   }
 
   function backToOverview() {
+    setPlay(null);
     setView(null);
     setSelected(null);
     animateTo(FULL);
   }
 
   function focusLandmark(id: string) {
+    setPlay(null);
     const l = byId(id);
     if (view !== l.region) openRegion(l.region);
     setSelected(id);
     frameRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
+  function startPlay(num: string) {
+    const trip = trips.find((t) => t.num === num)!;
+    const first = byId(trip.stops[0]);
+    setActiveTrip(num);
+    if (first.region !== view) openRegion(first.region);
+    setSelected(first.id);
+    setPlay({ num, step: 0 });
+    frameRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function pickPoint(id: string) {
+    setPlay(null);
+    setSelected(selected === id ? null : id);
+  }
+
   function chooseTrip(num: string) {
+    setPlay(null);
     if (activeTrip === num) {
       setActiveTrip(null);
       return;
@@ -212,6 +252,17 @@ export function TuanDuMap() {
       }))
       .filter((r) => r.pts.length > 1);
   }, [view]);
+
+  const playTrip = play ? trips.find((t) => t.num === play.num)! : null;
+  const reached = new Set(playTrip && play ? playTrip.stops.slice(0, play.step + 1) : []);
+  const playPts =
+    playTrip && play
+      ? playTrip.stops
+          .slice(0, play.step + 1)
+          .map(byId)
+          .filter((l) => l.region === view)
+          .map((l) => proj(l.pos))
+      : [];
 
   const dotFill = (st: TripStatus) =>
     st === "done" ? "var(--color-cham-dem)" : "var(--color-paper)";
@@ -471,6 +522,7 @@ export function TuanDuMap() {
           {zoomed ? (
             <g>
               {regionRoutes.map((r) => {
+                if (play && r.num === play.num) return null;
                 const on = !activeTrip || activeTrip === r.num;
                 return (
                   <polyline
@@ -493,10 +545,48 @@ export function TuanDuMap() {
                 );
               })}
 
+              {playPts.length > 1 ? (
+                <g>
+                  {playPts.length > 2 ? (
+                    <polyline
+                      points={playPts
+                        .slice(0, -1)
+                        .map((p) => p.join(","))
+                        .join(" ")}
+                      fill="none"
+                      stroke="var(--color-cham-dem)"
+                      strokeOpacity={0.85}
+                      strokeWidth={1.6 * s}
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                    />
+                  ) : null}
+                  <path
+                    key={play?.step}
+                    d={`M${playPts[playPts.length - 2].join(",")}L${playPts[playPts.length - 1].join(",")}`}
+                    pathLength={1}
+                    className="tdm-draw"
+                    fill="none"
+                    stroke="var(--color-cham-dem)"
+                    strokeWidth={1.6 * s}
+                    strokeLinecap="round"
+                  />
+                </g>
+              ) : null}
+
               {regionLandmarks.map((l) => {
                 const [x, y] = proj(l.pos);
                 const st = landmarkStatus(l);
                 const on = !activeTrip || tripsOf(l.id).includes(activeTrip);
+                const opacity = playTrip
+                  ? reached.has(l.id)
+                    ? 1
+                    : playTrip.stops.includes(l.id)
+                      ? 0.35
+                      : 0.12
+                  : on
+                    ? 1
+                    : 0.22;
                 const isSel = selected === l.id;
                 const isHover = hovered === l.id;
                 const r = (isSel ? 9.5 : 8) * u;
@@ -507,8 +597,8 @@ export function TuanDuMap() {
                     role="button"
                     tabIndex={0}
                     aria-label={l.name}
-                    opacity={on ? 1 : 0.22}
-                    onClick={() => setSelected(isSel ? null : l.id)}
+                    opacity={opacity}
+                    onClick={() => pickPoint(l.id)}
                     onMouseEnter={() => setHovered(l.id)}
                     onMouseLeave={() => setHovered(null)}
                     onFocus={() => setHovered(l.id)}
@@ -516,7 +606,7 @@ export function TuanDuMap() {
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
-                        setSelected(isSel ? null : l.id);
+                        pickPoint(l.id);
                       }
                     }}
                   >
@@ -568,6 +658,14 @@ export function TuanDuMap() {
           <span className="tdm-region-name">
             {regions.find((r) => r.id === view)?.name}
           </span>
+        ) : null}
+        {play && playTrip ? (
+          <div className="tdm-playbar">
+            <span>
+              tuần-du {play.num} · {play.step + 1} / {playTrip.stops.length}
+            </span>
+            <button onClick={() => setPlay(null)}>dừng ■</button>
+          </div>
         ) : null}
       </div>
 
@@ -624,17 +722,29 @@ export function TuanDuMap() {
               key={t.num}
               className={`tdm-group tdm-group--${t.status}${activeTrip === t.num ? " active" : ""}`}
             >
-              <button
-                className="tdm-group-head"
-                onClick={() => chooseTrip(t.num)}
-                aria-pressed={activeTrip === t.num}
-              >
-                <span className="tdm-trip-num">{t.num}</span>
-                <span className="tdm-group-title">{tripTitle(t.num)}</span>
-                <span className="tdm-trip-status">
-                  {statusLabel[t.status]} · {t.stops.length} điểm
-                </span>
-              </button>
+              <div className="tdm-group-headrow">
+                <button
+                  className="tdm-group-head"
+                  onClick={() => chooseTrip(t.num)}
+                  aria-pressed={activeTrip === t.num}
+                >
+                  <span className="tdm-trip-num">{t.num}</span>
+                  <span className="tdm-group-title">{tripTitle(t.num)}</span>
+                  <span className="tdm-trip-status">
+                    {statusLabel[t.status]} · {t.stops.length} điểm
+                  </span>
+                </button>
+                {t.stops.length > 1 && t.status !== "planned" ? (
+                  <button
+                    className={`tdm-play${play?.num === t.num ? " playing" : ""}`}
+                    onClick={() => (play?.num === t.num ? setPlay(null) : startPlay(t.num))}
+                    aria-label={play?.num === t.num ? "dừng" : `đi lại hành trình tuần-du ${t.num}`}
+                    title={play?.num === t.num ? "dừng" : "đi lại hành trình"}
+                  >
+                    {play?.num === t.num ? "■" : "▶"}
+                  </button>
+                ) : null}
+              </div>
               <ul className="tdm-group-list">
                 {t.stops.map((id) => {
                   const l = byId(id);

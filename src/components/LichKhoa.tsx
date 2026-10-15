@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export type Khoa = { label: string; range: string; start: number; end: number };
+export type Khoa = { label: string; range: string; fee: string; start: number; end: number };
 
 const DAY = 86_400_000;
 
@@ -39,9 +39,11 @@ export function LichKhoa({ items }: { items: Khoa[] }) {
           >
             <span style={{ flex: "none", width: "5.5rem", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.2rem", color: "var(--color-cham-dem)" }}>{k.label}</span>
             <span style={{ flex: "1 1 12rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.04em", color: "var(--color-ink)" }}>{k.range}</span>
+            <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "var(--color-ink)", whiteSpace: "nowrap" }}>{k.fee}</span>
             <span
               style={{
-                marginLeft: "auto",
+                width: "6.5rem",
+                textAlign: "right",
                 whiteSpace: "nowrap",
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.58rem",

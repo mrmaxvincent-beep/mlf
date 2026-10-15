@@ -32,7 +32,9 @@ const khoaList: Khoa[] = events
     const a = new Date(utc(e.start!));
     const b = new Date(utc(e.end!));
     const dm = (d: Date) => `${pad(d.getUTCDate())}.${pad(d.getUTCMonth() + 1)}.${d.getUTCFullYear()}`;
-    return { label: e.title.replace("lớp học viết ", ""), range: `${dm(a)} – ${dm(b)}`, start: +a, end: +b };
+    const label = e.title.replace("lớp học viết ", "");
+    const num = Number(label.replace(/\D/g, ""));
+    return { label, range: `${dm(a)} – ${dm(b)}`, fee: num >= 4 ? "08 triệu đồng" : "05 triệu đồng", start: +a, end: +b };
   });
 
 export default function ImLangChuNghiaPage() {
@@ -288,7 +290,8 @@ export default function ImLangChuNghiaPage() {
       </div>
       <div className="wrap" style={{ marginBottom: "3rem" }}>
         <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.95rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>Lớp học giới hạn cho 10 người</span>
-        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-cham-dem)" }}>Học phí: 05 triệu đồng</span>
+        <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-cham-dem)" }}>Học phí: 08 triệu đồng</span>
+        <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-stone)", marginTop: "0.4rem" }}>từ khóa 4 · khóa 3 vẫn giữ học phí 05 triệu đồng</span>
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>

@@ -503,6 +503,7 @@ export function TuanDuMap() {
                 const pts = landmarks.filter((l) => l.region === r.id);
                 const [ax, ay] = proj(r.anchor);
                 const [cx, cy] = proj(centroid(pts.map((p) => p.pos)));
+                const [bx, by] = compact ? (r.compactAnchor ? proj(r.compactAnchor) : [cx, cy]) : [ax, ay];
                 const tripNums = Array.from(
                   new Set(pts.flatMap((p) => tripsOf(p.id))),
                 ).sort();
@@ -521,12 +522,12 @@ export function TuanDuMap() {
                       }
                     }}
                   >
-                    {compact ? null : (
+                    {compact && !r.compactAnchor ? null : (
                       <line
                         x1={cx}
                         y1={cy}
-                        x2={ax}
-                        y2={ay}
+                        x2={bx}
+                        y2={by}
                         stroke="var(--color-cham)"
                         strokeOpacity={0.45}
                         strokeWidth={0.8}
@@ -543,7 +544,7 @@ export function TuanDuMap() {
                       strokeWidth={0.8}
                     />
                     <g
-                      transform={`translate(${compact ? cx : ax} ${compact ? cy : ay}) scale(${ui})`}
+                      transform={`translate(${bx} ${by}) scale(${ui})`}
                     >
                       <rect
                         x={-17}

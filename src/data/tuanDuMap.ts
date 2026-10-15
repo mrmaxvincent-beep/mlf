@@ -14,9 +14,11 @@ export type Landmark = {
 };
 
 /** `anchor` là chỗ đặt nhãn cụm ở tầng toàn cảnh — đặt ra ngoài biển/khoảng trống để không che các chấm. */
-export type MapRegion = { id: string; name: string; bounds: [LonLat, LonLat]; anchor: LonLat };
+/** `compactAnchor`: chỗ đặt số cụm trên màn hình hẹp khi cụm nằm quá sát cụm khác. */
+export type MapRegion = { id: string; name: string; bounds: [LonLat, LonLat]; anchor: LonLat; compactAnchor?: LonLat };
 
 export const trips: MapTrip[] = [
+  { num: "00", status: "done", stops: ["hoi-an"] },
   { num: "01", status: "done", stops: ["pho-co", "co-loa", "den-do", "phat-tich", "but-thap", "kinh-duong-vuong", "lac-long-quan", "au-co", "den-hung", "hoa-lu", "bai-dinh", "trang-an", "am-tien", "hang-mua", "tam-coc"] },
   { num: "02", status: "done", stops: ["quoc-hoc", "thanh-noi", "tinh-tam", "tang-thu", "lang-tu-duc", "tu-hieu", "lang-gia-long", "thien-mu", "huyen-khong", "vong-canh", "nam-giao", "thanh-tien", "lang-sinh", "bao-vinh"] },
   { num: "03", status: "done", stops: ["bo-da", "vinh-nghiem", "tay-yen-tu", "yen-tu", "ngoa-van", "con-son", "chua-giam", "lang-nom"] },
@@ -29,6 +31,7 @@ export const trips: MapTrip[] = [
 
 export const regions: MapRegion[] = [
   { id: "bac-bo", name: "đồng bằng Bắc Bộ", bounds: [[104.9, 20.1], [106.85, 21.65]], anchor: [109.7, 21.4] },
+  { id: "hoi-an", name: "Hội An", bounds: [[108.24, 15.83], [108.42, 15.93]], anchor: [110.4, 13.4], compactAnchor: [110.6, 14.2] },
   { id: "hue", name: "Huế", bounds: [[107.49, 16.34], [107.64, 16.53]], anchor: [109.5, 18.6] },
   { id: "nam-bo", name: "Nam Bộ", bounds: [[104.6, 9.9], [107.6, 11.3]], anchor: [108.9, 9.3] },
   { id: "an-do-nepal", name: "Ấn Độ · Nepal", bounds: [[82.2, 24.0], [86.4, 29.2]], anchor: [88.4, 31.0] },
@@ -50,6 +53,8 @@ export const landmarks: Landmark[] = [
   { id: "am-tien", name: "động Am Tiên", area: "Ninh Bình", pos: [105.928, 20.292], region: "bac-bo" },
   { id: "hang-mua", name: "Hang Múa", area: "Ninh Bình", pos: [105.935, 20.229], region: "bac-bo" },
   { id: "tam-coc", name: "Tam Cốc", area: "Ninh Bình", pos: [105.93, 20.214], region: "bac-bo" },
+
+  { id: "hoi-an", name: "phố cổ Hội An", area: "Quảng Nam", pos: [108.328, 15.877], region: "hoi-an" },
 
   { id: "quoc-hoc", name: "Quốc học Huế", area: "Huế", pos: [107.584, 16.461], region: "hue" },
   { id: "thanh-noi", name: "Thành Nội", area: "Huế", pos: [107.578, 16.469], region: "hue" },

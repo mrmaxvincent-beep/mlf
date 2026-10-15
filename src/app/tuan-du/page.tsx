@@ -86,6 +86,7 @@ export default function TuanDuPage() {
         <div className="hscroll-clean" style={{ display: "flex", gap: "2.5rem", overflowX: "auto", justifyContent: "center", paddingBottom: "1.1rem", borderBottom: "1px solid var(--color-mist)" }}>
           {(
             [
+              { n: "00", tier: "past" as const },
               { n: "01", tier: "past" as const },
               { n: "02", tier: "past" as const },
               { n: "03", tier: "past" as const },

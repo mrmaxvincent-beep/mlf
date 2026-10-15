@@ -83,7 +83,7 @@ export default function ChuoiTuanDuPage() {
                   <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.05em", color: "var(--color-stone)", marginBottom: "0.6rem" }}>
                     {c.places} · {c.duration}
                   </span>
-                  <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.02rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0, maxWidth: "42ch" }}>{c.tagline}</p>
+                  {c.tagline ? <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.02rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0, maxWidth: "42ch" }}>{c.tagline}</p> : null}
                 </div>
               </Reveal>
             );

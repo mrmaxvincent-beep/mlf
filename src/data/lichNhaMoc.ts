@@ -107,10 +107,9 @@ export const events: CalEvent[] = [
   { program: "ham-duong", title: "retreat mùa thu", note: "ngày cụ thể sẽ cập nhật", month: "2027-09" },
   { program: "ham-duong", title: "retreat mùa đông", note: "ngày cụ thể sẽ cập nhật", month: "2027-12" },
 
-  // đêm rằm (ngày 15 âm lịch), 2 tháng một lần từ tháng 3.2027, tính theo âm lịch Việt Nam
-  { program: "trang-yen", title: "trăng-yên · rằm tháng 2", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-03-22" },
-  { program: "trang-yen", title: "trăng-yên · rằm tháng 4", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-05-20" },
-  { program: "trang-yen", title: "trăng-yên · rằm tháng 6", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-07-18" },
-  { program: "trang-yen", title: "trăng-yên · rằm tháng 8", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-09-15" },
-  { program: "trang-yen", title: "trăng-yên · rằm tháng 10", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-11-12" },
+  // đêm rằm (ngày 15 âm lịch), 2 tháng một lần từ tháng 4.2027 (bỏ tháng 10 nghỉ an cư), tính theo âm lịch Việt Nam
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 3", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-04-21" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 5", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-06-19" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 7", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-08-16" },
+  { program: "trang-yen", title: "trăng-yên · rằm tháng 11", note: "2 tháng một lần · 18:00 – 21:00 · vườn mlf Huế", start: "2027-12-12" },
 ];

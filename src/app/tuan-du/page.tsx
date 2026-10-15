@@ -8,7 +8,8 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { DayCard } from "@/components/DayCard";
 import { Testimonials } from "@/components/Testimonials";
-import { ImageCarousel } from "@/components/ImageCarousel";import { routes } from "@/lib/nav";
+import { ImageCarousel } from "@/components/ImageCarousel";
+import { HScrollToEnd } from "@/components/HScrollToEnd";import { routes } from "@/lib/nav";
 import { ngoLines, scheduleRows, kyList, testimonials, tuanDuSubnav } from "@/data/tuanDu";
 
 export const metadata: Metadata = {
@@ -83,7 +84,8 @@ export default function TuanDuPage() {
       </div>
 
       <div className="wrap" style={{ paddingTop: "2.75rem" }}>
-        <div className="hscroll-clean" style={{ display: "flex", gap: "2.5rem", overflowX: "auto", justifyContent: "center", paddingBottom: "1.1rem", borderBottom: "1px solid var(--color-mist)" }}>
+        <HScrollToEnd className="hscroll-clean" style={{ overflowX: "auto", paddingBottom: "1.1rem", borderBottom: "1px solid var(--color-mist)" }}>
+          <div style={{ display: "flex", gap: "2.5rem", width: "max-content", margin: "0 auto" }}>
           {(
             [
               { n: "00", tier: "past" as const },
@@ -136,7 +138,8 @@ export default function TuanDuPage() {
               </div>
             );
           })}
-        </div>
+          </div>
+        </HScrollToEnd>
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "4rem" }}>

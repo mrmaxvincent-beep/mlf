@@ -95,6 +95,10 @@ export const events: CalEvent[] = [
   { program: "nhat-hien", title: "hạ ngươn", start: "2027-09-01", end: "2027-11-30" },
   { program: "nhat-hien", title: "hoàn ngươn", start: "2027-12-01", end: "2028-02-29" },
 
+  // lớp học viết im lặng chữ nghĩa 2027
+  { program: "be-still", title: "lớp học viết online", start: "2027-06-05", end: "2027-07-05", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết online", start: "2027-10-02", end: "2027-11-02", href: routes.imLangChuNghia },
+
   // hàm-dưỡng 2027: mới biết tháng, ngày cụ thể cập nhật sau
   { program: "ham-duong", title: "retreat mùa xuân", note: "ngày cụ thể sẽ cập nhật", month: "2027-03" },
   { program: "ham-duong", title: "retreat mùa hạ", note: "ngày cụ thể sẽ cập nhật", month: "2027-06" },

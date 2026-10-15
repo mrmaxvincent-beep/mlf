@@ -5,7 +5,7 @@ export const hero = {
 };
 
 export const loiMoi = [
-  "mỗi tháng một lần, khi trăng lên tròn vành, khu vườn lại mở cổng đón người tới chơi.",
+  "hai tháng một lần, khi trăng lên tròn vành, khu vườn lại mở cổng đón người tới chơi.",
   "nhà mộc mời những người bạn hữu duyên, cùng về, uống một chén trà, ăn một bữa cơm, cùng nhau chuyện trò.",
 ];
 
@@ -47,7 +47,7 @@ export const cungCacBe =
   "gia đình có thể đưa con nhỏ theo. khu vườn có một góc để các bé chơi và được nương đỡ trong bầu không khí ở-yên. tiếng trẻ con cũng là một phần của buổi tối, như tiếng lá xào xạc hay tiếng dế râm ran.";
 
 export const thongTin = [
-  { label: "thời gian", value: "đêm rằm, từ 18:00 đến 21:00" },
+  { label: "thời gian", value: "đêm rằm, hai tháng một lần, từ 18:00 đến 21:00" },
   { label: "nơi", value: "vườn mlf, Huế" },
   { label: "số chỗ", value: "15 người, giữ chỗ theo thứ tự đăng ký" },
   { label: "mang theo", value: "một món ăn chay nhỏ" },
@@ -56,6 +56,6 @@ export const thongTin = [
 /** Chưa có form — thay bằng link Google Form khi sẵn sàng. */
 export const registrationUrl = "";
 
-export const ghiChuLich = "hoạt động sẽ tổ chức định kỳ ngày rằm hàng tháng khi mlf ổn định tại Huế.";
+export const ghiChuLich = "trăng-yên tổ chức định kỳ vào đêm rằm, hai tháng một lần, bắt đầu từ tháng 4.2027.";
 
-export const loiKhep = ["trăng tròn rồi khuyết, vườn đóng rồi mở, mỗi tháng một lần."];
+export const loiKhep = ["trăng tròn rồi khuyết, vườn đóng rồi mở, hai tháng một lần."];

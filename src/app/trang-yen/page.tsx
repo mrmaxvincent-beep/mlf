@@ -7,8 +7,23 @@ import { Reveal } from "@/components/Reveal";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { routes } from "@/lib/nav";
 import { chuCuaThang, cungCacBe, ghiChuLich, gop, hero, loiKhep, loiMoi, loiMoiQuote, nhip, registrationUrl, thongTin } from "@/data/trangYen";
+import { events } from "@/data/lichNhaMoc";
 
-const description = "một buổi tối mỗi tháng ở vườn mlf Huế: ăn chung một bữa chay, uống trà, ngồi yên bên nhau.";
+const weekdays = ["chủ nhật", "thứ hai", "thứ ba", "thứ tư", "thứ năm", "thứ sáu", "thứ bảy"];
+
+/** Lịch trăng-yên lấy từ lịch nhà mộc, để hai trang luôn khớp nhau. */
+const lich2027 = events
+  .filter((e) => e.program === "trang-yen" && e.start?.startsWith("2027"))
+  .map((e) => {
+    const [y, m, d] = e.start!.split("-").map(Number);
+    return {
+      date: `${String(d).padStart(2, "0")}.${String(m).padStart(2, "0")}.${y}`,
+      weekday: weekdays[new Date(Date.UTC(y, m - 1, d)).getUTCDay()],
+      lunar: e.title.split(" · ")[1] ?? "",
+    };
+  });
+
+const description = "một buổi tối hai tháng một lần ở vườn mlf Huế: ăn chung một bữa chay, uống trà, ngồi yên bên nhau.";
 
 export const metadata: Metadata = {
   title: "trăng-yên",
@@ -198,6 +213,32 @@ export default function TrangYenPage() {
           ))}
         </dl>
 
+        {lich2027.length ? (
+          <div style={{ margin: "0 0 3.5rem" }}>
+            <span style={{ ...label, marginBottom: "1rem" }}>lịch 2027</span>
+            <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+              {lich2027.map((r, i) => (
+                <li
+                  key={r.date}
+                  style={{
+                    display: "flex",
+                    gap: "clamp(1rem, 4vw, 2.25rem)",
+                    alignItems: "baseline",
+                    flexWrap: "wrap",
+                    padding: "0.95rem 0",
+                    borderTop: i === 0 ? "1px solid var(--border-night)" : "none",
+                    borderBottom: "1px solid var(--border-night)",
+                  }}
+                >
+                  <span style={{ flex: "none", width: "6.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)" }}>{r.weekday}</span>
+                  <span style={{ flex: "1 1 8rem", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", color: "var(--text-on-night)" }}>{r.date}</span>
+                  <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "var(--color-cham-suong)" }}>{r.lunar} âm lịch</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
         <div style={{ textAlign: "center" }}>
           {registrationUrl ? (
             <RegistrationLink href={registrationUrl} programName="trang-yen" className="night-btn">
@@ -218,7 +259,7 @@ export default function TrangYenPage() {
       <Reveal className="wrap" style={{ marginTop: "9rem", maxWidth: "46rem" }}>
         <span style={label}>cần giúp đỡ</span>
         <p style={{ ...prose, marginBottom: "1.25rem" }}>
-          mlf đang tìm một tình nguyện viên sống ở Huế, để cùng giữ trăng-yên mỗi tháng: kết nối cộng đồng quanh mlf ở Huế, xác nhận các đăng ký, và ở bên người mới để họ không bỡ ngỡ khi ngồi xuống.
+          mlf đang tìm một tình nguyện viên sống ở Huế, để cùng giữ trăng-yên mỗi kỳ: kết nối cộng đồng quanh mlf ở Huế, xác nhận các đăng ký, và ở bên người mới để họ không bỡ ngỡ khi ngồi xuống.
         </p>
         <p style={{ ...prose, marginBottom: "1.75rem" }}>
           nếu bạn thấy mình ở đây, hãy viết thư cho mlf qua{" "}

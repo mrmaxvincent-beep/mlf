@@ -26,6 +26,7 @@ export const closures: Closure[] = [
 /** Nhóm hàng trên dải năm, theo đúng các nhóm trên menu của site. */
 export const groups = [
   { id: "hoat-dong", name: "hoạt động" },
+  { id: "thuc-tap", name: "thực tập" },
   { id: "cong-dong", name: "cộng đồng" },
   { id: "thu-vien", name: "thư viện" },
 ];
@@ -41,7 +42,8 @@ export const programs: Program[] = [
   { id: "be-still", name: "im lặng chữ nghĩa", href: routes.imLangChuNghia, group: "hoat-dong" },
   { id: "clari-tea", name: "clari-tea", href: routes.clariTea, group: "hoat-dong", ongoing: true },
   { id: "phia-sang", name: "phía sáng", href: routes.phiaSang, group: "hoat-dong", ongoing: true },
-  { id: "yoga-thuan-duong", name: "yoga online thuận dưỡng", href: routes.touchThuanDuong, group: "hoat-dong", ongoing: true },
+  { id: "yoga-thuan-duong", name: "yoga thuận dưỡng", href: routes.touchThuanDuong, group: "hoat-dong", ongoing: true },
+  { id: "nhat-hien", name: "nhất-hiện", href: routes.nhatHien, group: "thuc-tap" },
   { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen, group: "cong-dong" },
   { id: "trang-yen", name: "trăng-yên", href: routes.trangYen, group: "cong-dong" },
   { id: "an-pham", name: "ấn phẩm", group: "thu-vien" },
@@ -97,6 +99,13 @@ export const events: CalEvent[] = [
   { program: "podcast", title: "podcast ở-yên · tập tháng 10", note: "phát hành ngày 1 hằng tháng", start: "2027-10-01" },
   { program: "podcast", title: "podcast ở-yên · tập tháng 11", note: "phát hành ngày 1 hằng tháng", start: "2027-11-01" },
   { program: "podcast", title: "podcast ở-yên · tập tháng 12", note: "phát hành ngày 1 hằng tháng", start: "2027-12-01" },
+
+  // nhất-hiện 2027: các giai đoạn nối tiếp nhau, vẽ thành dải có ghi tên
+  { program: "nhat-hien", title: "tuyển sinh", start: "2027-01-01", end: "2027-02-28" },
+  { program: "nhat-hien", title: "thượng ngươn", start: "2027-03-01", end: "2027-05-31" },
+  { program: "nhat-hien", title: "trung ngươn", start: "2027-06-01", end: "2027-08-31" },
+  { program: "nhat-hien", title: "hạ ngươn", start: "2027-09-01", end: "2027-11-30" },
+  { program: "nhat-hien", title: "hoàn ngươn", start: "2027-12-01", end: "2028-02-29" },
 
   // hàm-dưỡng 2027: mới biết tháng, ngày cụ thể cập nhật sau
   { program: "ham-duong", title: "retreat mùa xuân", note: "ngày cụ thể sẽ cập nhật", month: "2027-03" },

@@ -3359,3 +3359,38 @@ details[open] > summary .acc-icon {
 @media (max-width: 640px) {
   .lnm-name--ongoing small { display: block; margin-left: 0; margin-top: 0.1rem; }
 }
+
+.lnm-mark--phase {
+  height: 1.35rem;
+  border-color: var(--color-cham);
+  background: #e9ebee;
+  border-radius: 0.4rem;
+  box-shadow: inset 0 0 0 2px var(--color-paper);
+  overflow: visible;
+}
+.lnm-mark--phase:hover,
+.lnm-mark--phase:focus-visible,
+.lnm-mark--phase.active { transform: translateY(-50%); background: #d7dce3; }
+.lnm-mark--phase .lnm-tip--mid { transform: translateX(-50%); }
+.lnm-mark--phase .lnm-tip--start,
+.lnm-mark--phase .lnm-tip--end { transform: none; }
+.lnm-phase-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.3rem;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-cham-dem);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .lnm-phase-label { font-size: 0.42rem; letter-spacing: 0; padding: 0 0.15rem; }
+}

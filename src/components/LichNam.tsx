@@ -130,10 +130,12 @@ export function LichNam() {
         const left = pct(Math.max(a, y0));
         const right = pct(Math.min(b + DAY, y1));
         const tipSide = left < 18 ? "start" : left > 78 ? "end" : "mid";
+        // giai đoạn dài (từ 6 tuần) vẽ thành dải nhạt có ghi tên bên trong
+        const phase = !e.month && b - a >= 42 * DAY;
         return (
           <button
             key={k}
-            className={`lnm-mark${e.month ? " lnm-mark--month" : ""}${cutStart ? " cut-start" : ""}${cutEnd ? " cut-end" : ""}${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
+            className={`lnm-mark${e.month ? " lnm-mark--month" : ""}${phase ? " lnm-mark--phase" : ""}${cutStart ? " cut-start" : ""}${cutEnd ? " cut-end" : ""}${isPast(e) ? " past" : ""}${hover === k ? " active" : ""}`}
             style={{ left: `${left}%`, width: `${right - left}%` }}
             onMouseEnter={() => setHover(k)}
             onMouseLeave={() => setHover(null)}
@@ -142,6 +144,7 @@ export function LichNam() {
             onClick={() => setHover(k)}
             aria-label={`${e.title}, ${fmt(e)}`}
           >
+            {phase ? <span className="lnm-phase-label">{e.title}</span> : null}
             {hover === k ? (
               <span className={`lnm-tip lnm-tip--${tipSide}`}>
                 {e.title} · {fmt(e)}

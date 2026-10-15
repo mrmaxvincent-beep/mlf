@@ -139,7 +139,7 @@ export function LichNam() {
             onMouseLeave={() => setHover(null)}
             onFocus={() => setHover(k)}
             onBlur={() => setHover(null)}
-            onClick={() => document.getElementById(`lnm-${k}`)?.scrollIntoView({ behavior: "smooth", block: "center" })}
+            onClick={() => setHover(k)}
             aria-label={`${e.title}, ${fmt(e)}`}
           >
             {hover === k ? (

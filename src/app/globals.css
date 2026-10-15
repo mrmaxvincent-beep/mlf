@@ -3356,3 +3356,6 @@ details[open] > summary .acc-icon {
 .lnm-item--ongoing .lnm-item-title a:hover { color: var(--color-cham-dem); text-decoration: underline; text-underline-offset: 4px; }
 .lnm-sep { color: var(--color-stone); }
 .lnm-name--plain:hover { color: var(--color-ink); }
+@media (max-width: 640px) {
+  .lnm-name--ongoing small { display: block; margin-left: 0; margin-top: 0.1rem; }
+}

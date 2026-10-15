@@ -8,7 +8,7 @@ import { episodes } from "@/data/podcastOYen";
 
 export const metadata: Metadata = {
   title: "podcast ở-yên",
-  description: "chương trình podcast của mộc little farm, phát hành ngày 1 hàng tháng trên Spotify.",
+  description: "chương trình podcast của mộc little farm, phát hành ngày 1, hai tháng một tập, trên Spotify.",
 };
 
 const pill: React.CSSProperties = {
@@ -40,7 +40,7 @@ export default function PodcastOYenPage() {
             podcast ở-yên
           </h1>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 auto" }}>
-            phát hành vào ngày 1 hàng tháng, trên Spotify.
+            phát hành vào ngày 1, hai tháng một tập, trên Spotify.
           </p>
         </div>
       </div>

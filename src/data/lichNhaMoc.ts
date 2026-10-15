@@ -80,19 +80,13 @@ export const events: CalEvent[] = [
   { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-09-05" },
   { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-11-07" },
 
-  // podcast ở-yên: ngày 1 mỗi tháng
-  { program: "podcast", title: "podcast ở-yên · tập tháng 01", note: "phát hành ngày 1 hằng tháng", start: "2027-01-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 02", note: "phát hành ngày 1 hằng tháng", start: "2027-02-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 03", note: "phát hành ngày 1 hằng tháng", start: "2027-03-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 04", note: "phát hành ngày 1 hằng tháng", start: "2027-04-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 05", note: "phát hành ngày 1 hằng tháng", start: "2027-05-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 06", note: "phát hành ngày 1 hằng tháng", start: "2027-06-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 07", note: "phát hành ngày 1 hằng tháng", start: "2027-07-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 08", note: "phát hành ngày 1 hằng tháng", start: "2027-08-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 09", note: "phát hành ngày 1 hằng tháng", start: "2027-09-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 10", note: "phát hành ngày 1 hằng tháng", start: "2027-10-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 11", note: "phát hành ngày 1 hằng tháng", start: "2027-11-01" },
-  { program: "podcast", title: "podcast ở-yên · tập tháng 12", note: "phát hành ngày 1 hằng tháng", start: "2027-12-01" },
+  // podcast ở-yên: ngày 1, hai tháng một tập, từ 01.01.2027
+  { program: "podcast", title: "podcast ở-yên · tập tháng 01", note: "phát hành ngày 1 · hai tháng một tập", start: "2027-01-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 03", note: "phát hành ngày 1 · hai tháng một tập", start: "2027-03-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 05", note: "phát hành ngày 1 · hai tháng một tập", start: "2027-05-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 07", note: "phát hành ngày 1 · hai tháng một tập", start: "2027-07-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 09", note: "phát hành ngày 1 · hai tháng một tập", start: "2027-09-01" },
+  { program: "podcast", title: "podcast ở-yên · tập tháng 11", note: "phát hành ngày 1 · hai tháng một tập", start: "2027-11-01" },
 
   // nhất-hiện 2027: các giai đoạn nối tiếp nhau, vẽ thành dải có ghi tên
   { program: "nhat-hien", title: "tuyển sinh", start: "2027-01-01", end: "2027-02-28" },

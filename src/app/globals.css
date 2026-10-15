@@ -3342,10 +3342,12 @@ details[open] > summary .acc-icon {
 .lnm-track--group { min-height: 0; border-top: 1px solid var(--color-mist); }
 .lnm-name--ongoing { padding: 0.4rem 0; }
 .lnm-name--ongoing small {
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
+  vertical-align: super;
+  line-height: 0;
   font-family: var(--font-mono);
   font-style: normal;
-  font-size: 0.5rem;
+  font-size: 0.42rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-stone);
@@ -3357,7 +3359,7 @@ details[open] > summary .acc-icon {
 .lnm-sep { color: var(--color-stone); }
 .lnm-name--plain:hover { color: var(--color-ink); }
 @media (max-width: 640px) {
-  .lnm-name--ongoing small { display: block; margin-left: 0; margin-top: 0.1rem; }
+  .lnm-name--ongoing small { display: block; margin-left: 0; margin-top: 0.15rem; vertical-align: baseline; line-height: 1; }
 }
 
 .lnm-mark--phase {

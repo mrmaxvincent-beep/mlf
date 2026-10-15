@@ -26,7 +26,6 @@ export const closures: Closure[] = [
 /** Nhóm hàng trên dải năm, theo đúng các nhóm trên menu của site. */
 export const groups = [
   { id: "hoat-dong", name: "hoạt động" },
-  { id: "thuc-tap", name: "thực tập" },
   { id: "cong-dong", name: "cộng đồng" },
   { id: "thu-vien", name: "thư viện" },
 ];
@@ -43,7 +42,7 @@ export const programs: Program[] = [
   { id: "clari-tea", name: "clari-tea", href: routes.clariTea, group: "hoat-dong", ongoing: true },
   { id: "phia-sang", name: "phía sáng", href: routes.phiaSang, group: "hoat-dong", ongoing: true },
   { id: "yoga-thuan-duong", name: "yoga thuận dưỡng", href: routes.touchThuanDuong, group: "hoat-dong", ongoing: true },
-  { id: "nhat-hien", name: "nhất-hiện", href: routes.nhatHien, group: "thuc-tap" },
+  { id: "nhat-hien", name: "nhất-hiện", href: routes.nhatHien, group: "cong-dong" },
   { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen, group: "cong-dong" },
   { id: "trang-yen", name: "trăng-yên", href: routes.trangYen, group: "cong-dong" },
   { id: "an-pham", name: "ấn phẩm", group: "thu-vien" },

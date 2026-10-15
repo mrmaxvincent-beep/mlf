@@ -72,19 +72,13 @@ export const events: CalEvent[] = [
   { program: "an-pham", title: "lịch tea·mind 2028", note: "chén trà tâm", month: "2027-11", href: routes.teaMindLich },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-12-06", end: "2027-12-10" },
 
-  // meet-up cộng đồng ở-yên: chủ nhật đầu tiên mỗi tháng
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-01-03" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-02-07" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-03-07" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-04-04" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-05-02" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-06-06" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-07-04" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-08-01" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-09-05" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-10-03" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-11-07" },
-  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-12-05" },
+  // meet-up cộng đồng ở-yên: 2 tháng một lần, chủ nhật đầu tháng
+  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-01-03" },
+  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-03-07" },
+  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-05-02" },
+  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-07-04" },
+  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-09-05" },
+  { program: "cong-dong", title: "online meet-up cộng đồng ở-yên", note: "2 tháng một lần · chủ nhật đầu tháng · 20:00 – 21:30", start: "2027-11-07" },
 
   // podcast ở-yên: ngày 1 mỗi tháng
   { program: "podcast", title: "podcast ở-yên · tập tháng 01", note: "phát hành ngày 1 hằng tháng", start: "2027-01-01" },

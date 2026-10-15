@@ -47,7 +47,7 @@ export const programs: Program[] = [
   { id: "cong-dong", name: "cộng đồng ở-yên", href: routes.congDongOYen, group: "cong-dong" },
   { id: "trang-yen", name: "trăng-yên", href: routes.trangYen, group: "cong-dong" },
   { id: "an-pham", name: "ấn phẩm", group: "thu-vien" },
-  { id: "podcast", name: "podcast ở-yên", href: routes.podcastOYen, group: "thu-vien" },
+  { id: "podcast", name: "podcast", href: routes.podcastOYen, group: "thu-vien" },
 ];
 
 export const ongoing = programs.filter((p) => p.ongoing);

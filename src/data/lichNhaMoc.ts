@@ -67,6 +67,7 @@ export const events: CalEvent[] = [
 
   { program: "an-pham", title: "mlf journal · quyển 02 · xanh lại", note: "phát hành 18:00, ngày 30 tháng chạp", start: "2027-02-05", href: routes.journal },
   { program: "tuan-du", title: "tuần-du 05 · chuông vọng đôi bờ", start: "2027-03-26", end: "2027-03-30", href: routes.tuanDu05 },
+  { program: "tuan-du", title: "tuần-du 06 · điệu hoà phù sa", note: "An Giang – Thất Sơn · ngày cụ thể sẽ cập nhật", month: "2027-10", href: routes.chuoiTuanDu },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-04-05", end: "2027-04-09" },
   { program: "an-vui", title: "retreat an-vui", note: "Huế", start: "2027-08-02", end: "2027-08-06" },
   { program: "an-pham", title: "lịch tea·mind 2028", note: "chén trà tâm", month: "2027-11", href: routes.teaMindLich },

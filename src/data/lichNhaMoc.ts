@@ -57,13 +57,13 @@ export const events: CalEvent[] = [
   { program: "ham-duong", title: "retreat mùa xuân [77]", note: "xuân khẽ dưới tán rừng", start: "2026-03-13", end: "2026-03-17" },
   { program: "tuan-du", title: "tuần-du 03 · một nẻo Trúc Lâm", start: "2026-04-18", end: "2026-04-22" },
   { program: "ham-duong", title: "retreat mùa hạ [78]", note: "hạ về trên dòng nước mỏng", start: "2026-06-12", end: "2026-06-16" },
-  { program: "be-still", title: "lớp học viết online", start: "2026-09-05", end: "2026-10-05", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết khóa 2", note: "online", start: "2026-09-05", end: "2026-10-05", href: routes.imLangChuNghia },
   { program: "an-pham", title: "tuyển tập tin nhắn lúc 5 giờ sáng", note: "sách ở-yên · miễn phí", month: "2026-09", href: routes.sachOYen },
   { program: "ham-duong", title: "retreat mùa thu [79]", note: "mùa thay lá dịu", start: "2026-09-11", end: "2026-09-15" },
   { program: "tuan-du", title: "tuần-du 04 · a pause in Saigon", start: "2026-10-10", end: "2026-10-11" },
   { program: "an-pham", title: "lịch tea·mind 2027", note: "chén trà tâm", month: "2026-11", href: routes.teaMindLich },
   { program: "ham-duong", title: "retreat mùa đông [80]", note: "trắng trời đông sang", start: "2026-12-11", end: "2026-12-15" },
-  { program: "be-still", title: "lớp học viết online", start: "2026-12-05", end: "2027-01-05", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết khóa 3", note: "online", start: "2026-12-05", end: "2027-01-05", href: routes.imLangChuNghia },
 
   { program: "an-pham", title: "mlf journal · quyển 02 · xanh lại", note: "phát hành 18:00, ngày 30 tháng chạp", start: "2027-02-05", href: routes.journal },
   { program: "tuan-du", title: "tuần-du 05 · chuông vọng đôi bờ", start: "2027-03-26", end: "2027-03-30", href: routes.tuanDu05 },
@@ -96,8 +96,8 @@ export const events: CalEvent[] = [
   { program: "nhat-hien", title: "hoàn ngươn", start: "2027-12-01", end: "2028-02-29" },
 
   // lớp học viết im lặng chữ nghĩa 2027
-  { program: "be-still", title: "lớp học viết online", start: "2027-06-05", end: "2027-07-05", href: routes.imLangChuNghia },
-  { program: "be-still", title: "lớp học viết online", start: "2027-10-02", end: "2027-11-02", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết khóa 4", note: "online", start: "2027-06-05", end: "2027-07-05", href: routes.imLangChuNghia },
+  { program: "be-still", title: "lớp học viết khóa 5", note: "online", start: "2027-10-02", end: "2027-11-02", href: routes.imLangChuNghia },
 
   // hàm-dưỡng 2027: mới biết tháng, ngày cụ thể cập nhật sau
   { program: "ham-duong", title: "retreat mùa xuân", note: "ngày cụ thể sẽ cập nhật", month: "2027-03" },

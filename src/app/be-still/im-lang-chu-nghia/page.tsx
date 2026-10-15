@@ -8,6 +8,8 @@ import { Reveal, RevealStagger } from "@/components/Reveal";
 import { Motif } from "@/components/Motif";
 import { SessionTabs } from "@/components/SessionTabs";
 import { RegistrationLink } from "@/components/RegistrationLink";
+import { LichKhoa, type Khoa } from "@/components/LichKhoa";
+import { events } from "@/data/lichNhaMoc";
 import { routes } from "@/lib/nav";
 import { essayParas, essayParas2, forList, methods, journey, sessions, overview, after30, afterClassList } from "@/data/imLangChuNghia";
 
@@ -15,6 +17,23 @@ export const metadata: Metadata = {
   title: "im lặng, chữ nghĩa · 30 ngày tìm lại mạch chữ của mình",
   description: "khoá học viết từ tâm — im lặng, chữ nghĩa là thực tập viết để đưa sự hiện diện của mình về với câu chữ. Khi tâm có mặt, chữ tự nhiên có lực.",
 };
+
+const pad = (n: number) => String(n).padStart(2, "0");
+const utc = (d: string) => {
+  const [y, m, dd] = d.split("-").map(Number);
+  return Date.UTC(y, m - 1, dd);
+};
+
+/** Lịch các khóa lấy từ lịch nhà mộc (hàng im lặng chữ nghĩa), để hai trang luôn khớp nhau. */
+const khoaList: Khoa[] = events
+  .filter((e) => e.program === "be-still" && e.start && e.end)
+  .sort((a, b) => utc(a.start!) - utc(b.start!))
+  .map((e) => {
+    const a = new Date(utc(e.start!));
+    const b = new Date(utc(e.end!));
+    const dm = (d: Date) => `${pad(d.getUTCDate())}.${pad(d.getUTCMonth() + 1)}.${d.getUTCFullYear()}`;
+    return { label: e.title.replace("lớp học viết ", ""), range: `${dm(a)} – ${dm(b)}`, start: +a, end: +b };
+  });
 
 export default function ImLangChuNghiaPage() {
   return (
@@ -270,6 +289,13 @@ export default function ImLangChuNghiaPage() {
       <div className="wrap" style={{ marginBottom: "3rem" }}>
         <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.95rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>Lớp học giới hạn cho 10 người</span>
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-cham-dem)" }}>Học phí: 05 triệu đồng</span>
+      </div>
+
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="sec-title">lịch các khóa</span>
+      </div>
+      <div className="wrap" style={{ marginBottom: "4rem" }}>
+        <LichKhoa items={khoaList} />
       </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>

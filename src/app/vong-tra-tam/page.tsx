@@ -118,23 +118,27 @@ export default function VongTraTamPage() {
               <table className="vtt-table">
                 <thead>
                   <tr>
+                    <th>vòng</th>
                     <th>thời gian</th>
                     <th>địa điểm</th>
-                    <th>người quản vòng-trà</th>
+                    <th>người giữ vòng-trà</th>
                   </tr>
                 </thead>
                 <tbody>
                   {m.vongs.length ? (
                     m.vongs.map((v) => (
-                      <tr key={`${v.when}-${v.place}`}>
-                        <td data-label="thời gian">{v.when}</td>
-                        <td data-label="địa điểm">{v.place}</td>
-                        <td data-label="người quản vòng-trà">{v.host}</td>
+                      <tr key={v.name}>
+                        <td className="vtt-vong" data-label="vòng">
+                          <span>vòng-trà-tâm</span> {v.name}
+                        </td>
+                        <td data-label="thời gian">{v.when ?? <em className="vtt-tbd">đang cập nhật</em>}</td>
+                        <td data-label="địa điểm">{v.place ?? <em className="vtt-tbd">đang cập nhật</em>}</td>
+                        <td data-label="người giữ vòng-trà">{v.host ?? <em className="vtt-tbd">đang cập nhật</em>}</td>
                       </tr>
                     ))
                   ) : (
                     <tr className="vtt-empty-row">
-                      <td colSpan={3}>lịch đang được cập nhật.</td>
+                      <td colSpan={4}>lịch đang được cập nhật.</td>
                     </tr>
                   )}
                 </tbody>

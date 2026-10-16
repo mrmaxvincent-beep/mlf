@@ -3414,8 +3414,12 @@ details[open] > summary .acc-icon {
   overflow: hidden;
 }
 .vtt-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-.vtt-table th:nth-child(1) { width: 38%; }
-.vtt-table th:nth-child(2) { width: 30%; }
+.vtt-table th:nth-child(1) { width: 30%; }
+.vtt-table th:nth-child(2) { width: 25%; }
+.vtt-table th:nth-child(3) { width: 22%; }
+.vtt-vong { font-family: var(--font-serif) !important; font-style: italic; font-size: 1.12rem !important; color: var(--color-cham-dem) !important; }
+.vtt-vong span { display: block; font-family: var(--font-mono); font-style: normal; font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-stone); }
+.vtt-tbd { font-style: normal; font-size: 0.85rem; color: var(--color-stone); }
 .vtt-table th {
   padding: 0.85rem 1.2rem;
   text-align: left;

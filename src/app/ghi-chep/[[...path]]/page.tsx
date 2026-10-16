@@ -62,7 +62,7 @@ export default async function GhiChepPage({ params }: { params: Promise<{ path?:
         <ImagePlaceholder
           label="ảnh · chủ biên"
           aspectRatio="1/1"
-          src="/assets/khanhtran_avatar.jpg"
+          src="/assets/khanhtran_avatar.webp"
           alt={editor.name}
           style={{ width: "6.5rem", height: "6.5rem", borderRadius: "50%", flexShrink: 0 }}
         />

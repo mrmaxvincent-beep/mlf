@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { EnsoAgenda } from "@/components/EnsoAgenda";
 import { agenda, gioiThieu, khoiThongTin, luotChiaSe, luotGhiChu, miens, nguyenTac } from "@/data/vongTraTam";
 
 const description = "vòng-trà-tâm là nơi mọi người ngồi lại với tâm mình.";
@@ -36,56 +37,72 @@ export default function VongTraTamPage() {
         </p>
       </Reveal>
 
-      <div className="wrap vtt-doc" style={{ maxWidth: "46rem" }}>
-        <p className="vtt-lead">{gioiThieu}</p>
+      <div className="wrap vtt-doc">
+        <p className="vtt-summary">miễn phí · 10 người · mỗi tháng một lần · 2 tiếng 30 phút</p>
 
-        {khoiThongTin.map((k) => (
-          <Reveal key={k.title} className="vtt-block">
-            <h2 className="vtt-h">{k.title}</h2>
-            <ul className="vtt-ul">
-              {k.items.map((it) => (
+        <Reveal className="vtt-open">
+          <p className="vtt-lead">{gioiThieu}</p>
+        </Reveal>
+
+        <div className="vtt-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <path d="M33 14 A14 14 0 1 0 31 28" fill="none" stroke="var(--color-cham)" strokeWidth="1.6" strokeLinecap="round" opacity="0.55" />
+          </svg>
+        </div>
+
+        <section className="vtt-move">
+          <span className="vtt-step">một · ngồi vào vòng</span>
+          {khoiThongTin.map((k) => (
+            <Reveal key={k.title} className="vtt-block">
+              <h2 className="vtt-h">{k.title}</h2>
+              <ul className="vtt-ul">
+                {k.items.map((it) => (
+                  <li key={it}>{it}</li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </section>
+
+        <div className="vtt-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <path d="M33 14 A14 14 0 1 0 31 28" fill="none" stroke="var(--color-cham)" strokeWidth="1.6" strokeLinecap="round" opacity="0.55" />
+          </svg>
+        </div>
+
+        <section className="vtt-move">
+          <span className="vtt-step">hai · chén trà</span>
+          <Reveal>
+            <EnsoAgenda phases={agenda} />
+          </Reveal>
+        </section>
+
+        <div className="vtt-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <path d="M33 14 A14 14 0 1 0 31 28" fill="none" stroke="var(--color-cham)" strokeWidth="1.6" strokeLinecap="round" opacity="0.55" />
+          </svg>
+        </div>
+
+        <section className="vtt-move">
+          <span className="vtt-step">ba · mười lượt</span>
+          <Reveal>
+            <ol className="vtt-ol">
+              {luotChiaSe.map((it) => (
                 <li key={it}>{it}</li>
               ))}
-            </ul>
+            </ol>
+            <p className="vtt-note">{luotGhiChu}</p>
           </Reveal>
-        ))}
+        </section>
 
-        <Reveal className="vtt-block">
-          <h2 className="vtt-h">agenda</h2>
-          <div className="vtt-table-wrap">
-            <table className="vtt-table vtt-table--agenda">
-              <thead>
-                <tr>
-                  <th>thời gian</th>
-                  <th>phần</th>
-                  <th>nội dung</th>
-                </tr>
-              </thead>
-              <tbody>
-                {agenda.map((a) => (
-                  <tr key={a.time}>
-                    <td data-label="thời gian">{a.time}</td>
-                    <td data-label="phần">{a.part}</td>
-                    <td data-label="nội dung">{a.desc}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </Reveal>
-
-        <Reveal className="vtt-block">
-          <h2 className="vtt-h">một lượt trong vòng chia sẻ</h2>
-          <ol className="vtt-ol">
-            {luotChiaSe.map((it) => (
-              <li key={it}>{it}</li>
-            ))}
-          </ol>
-          <p className="vtt-note">{luotGhiChu}</p>
-        </Reveal>
+        <div className="vtt-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34">
+            <path d="M33 14 A14 14 0 1 0 31 28" fill="none" stroke="var(--color-cham)" strokeWidth="1.6" strokeLinecap="round" opacity="0.55" />
+          </svg>
+        </div>
 
         <Reveal className="vtt-rule">
-          <span className="vtt-cap">nguyên tắc chung</span>
+          <span className="vtt-step">khép vòng</span>
           <p>{nguyenTac}</p>
         </Reveal>
       </div>

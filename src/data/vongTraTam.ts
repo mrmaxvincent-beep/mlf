@@ -31,6 +31,7 @@ export const khoiThongTin: { title: string; items: string[] }[] = [
   {
     title: "người-giữ-vòng",
     items: [
+      "là người nằm trong chương trình thực tập nhất-hiện trong 1 năm của mlf.",
       "được mlf hướng dẫn và đào tạo theo chương trình vòng-trà-tâm.",
       "là người duy nhất được truy cập chỉ-nguyệt và mộc-ngữ, hai nguồn online riêng của mlf.",
     ],

@@ -3398,46 +3398,60 @@ details[open] > summary .acc-icon {
 }
 
 /* vòng-trà-tâm: lịch theo miền */
-.vtt-mien { padding: 2.2rem 0 2rem; border-top: 1px solid var(--color-mist); }
-.vtt-mien:first-of-type { margin-top: 1rem; }
+.vtt-mien { padding: 2rem 0 0.4rem; }
 .vtt-mien-name {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1rem;
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 300;
   font-size: clamp(1.5rem, 4vw, 1.9rem);
   color: var(--color-ink);
 }
-.vtt-empty {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  color: var(--color-stone);
+.vtt-table-wrap {
+  background: #fff;
+  border: 1px solid var(--color-mist);
+  border-radius: 1rem;
+  overflow: hidden;
 }
-.vtt-row {
-  display: grid;
-  grid-template-columns: 1.1fr 1.2fr 1fr;
-  gap: 1.2rem 1.6rem;
-  padding: 1rem 0;
-  border-top: 1px solid var(--color-mist);
-}
-.vtt-row:last-child { border-bottom: 1px solid var(--color-mist); }
-.vtt-cap {
-  display: block;
-  margin-bottom: 0.3rem;
+.vtt-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.vtt-table th:nth-child(1) { width: 38%; }
+.vtt-table th:nth-child(2) { width: 30%; }
+.vtt-table th {
+  padding: 0.85rem 1.2rem;
+  text-align: left;
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-weight: 400;
+  font-size: 0.58rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-stone);
+  border-bottom: 1px solid var(--color-mist);
 }
-.vtt-val {
-  display: block;
+.vtt-table td {
+  padding: 1rem 1.2rem;
+  vertical-align: top;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--color-ink);
 }
+.vtt-table tbody tr + tr td { border-top: 1px solid var(--color-mist); }
+.vtt-table .vtt-empty-row td { color: var(--color-stone); }
 @media (max-width: 640px) {
-  .vtt-row { grid-template-columns: 1fr; gap: 0.7rem; }
+  .vtt-table thead { display: none; }
+  .vtt-table, .vtt-table tbody, .vtt-table tr, .vtt-table td { display: block; width: 100%; }
+  .vtt-table td { padding: 0.55rem 1.1rem; }
+  .vtt-table tbody tr { padding: 0.5rem 0; }
+  .vtt-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-stone);
+  }
+  .vtt-table tbody tr + tr td { border-top: none; }
+  .vtt-table tbody tr + tr { border-top: 1px solid var(--color-mist); }
 }

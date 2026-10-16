@@ -43,28 +43,32 @@ export default function VongTraTamPage() {
         {miens.map((m) => (
           <Reveal key={m.id} className="vtt-mien">
             <h2 className="vtt-mien-name">{m.name}</h2>
-            {m.vongs.length ? (
-              <div className="vtt-list">
-                {m.vongs.map((v) => (
-                  <div key={`${v.when}-${v.place}`} className="vtt-row">
-                    <div>
-                      <span className="vtt-cap">thời gian</span>
-                      <span className="vtt-val">{v.when}</span>
-                    </div>
-                    <div>
-                      <span className="vtt-cap">địa điểm</span>
-                      <span className="vtt-val">{v.place}</span>
-                    </div>
-                    <div>
-                      <span className="vtt-cap">người quản vòng-trà</span>
-                      <span className="vtt-val">{v.host}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="vtt-empty">lịch đang được cập nhật.</p>
-            )}
+            <div className="vtt-table-wrap">
+              <table className="vtt-table">
+                <thead>
+                  <tr>
+                    <th>thời gian</th>
+                    <th>địa điểm</th>
+                    <th>người quản vòng-trà</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {m.vongs.length ? (
+                    m.vongs.map((v) => (
+                      <tr key={`${v.when}-${v.place}`}>
+                        <td data-label="thời gian">{v.when}</td>
+                        <td data-label="địa điểm">{v.place}</td>
+                        <td data-label="người quản vòng-trà">{v.host}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr className="vtt-empty-row">
+                      <td colSpan={3}>lịch đang được cập nhật.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
           </Reveal>
         ))}
       </div>

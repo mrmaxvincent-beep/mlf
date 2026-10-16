@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
-import { miens } from "@/data/vongTraTam";
+import { agenda, gioiThieu, khoiThongTin, luotChiaSe, luotGhiChu, miens, nguyenTac } from "@/data/vongTraTam";
 
 const description = "vòng-trà-tâm là nơi mọi người ngồi lại với tâm mình.";
 
@@ -35,6 +35,60 @@ export default function VongTraTamPage() {
           và chúng tôi đang chuẩn bị cho hành trình đó.
         </p>
       </Reveal>
+
+      <div className="wrap vtt-doc" style={{ maxWidth: "46rem" }}>
+        <p className="vtt-lead">{gioiThieu}</p>
+
+        {khoiThongTin.map((k) => (
+          <Reveal key={k.title} className="vtt-block">
+            <h2 className="vtt-h">{k.title}</h2>
+            <ul className="vtt-ul">
+              {k.items.map((it) => (
+                <li key={it}>{it}</li>
+              ))}
+            </ul>
+          </Reveal>
+        ))}
+
+        <Reveal className="vtt-block">
+          <h2 className="vtt-h">agenda</h2>
+          <div className="vtt-table-wrap">
+            <table className="vtt-table vtt-table--agenda">
+              <thead>
+                <tr>
+                  <th>thời gian</th>
+                  <th>phần</th>
+                  <th>nội dung</th>
+                </tr>
+              </thead>
+              <tbody>
+                {agenda.map((a) => (
+                  <tr key={a.time}>
+                    <td data-label="thời gian">{a.time}</td>
+                    <td data-label="phần">{a.part}</td>
+                    <td data-label="nội dung">{a.desc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Reveal>
+
+        <Reveal className="vtt-block">
+          <h2 className="vtt-h">một lượt trong vòng chia sẻ</h2>
+          <ol className="vtt-ol">
+            {luotChiaSe.map((it) => (
+              <li key={it}>{it}</li>
+            ))}
+          </ol>
+          <p className="vtt-note">{luotGhiChu}</p>
+        </Reveal>
+
+        <Reveal className="vtt-rule">
+          <span className="vtt-cap">nguyên tắc chung</span>
+          <p>{nguyenTac}</p>
+        </Reveal>
+      </div>
 
       <div className="wrap" style={{ marginBottom: "6rem", maxWidth: "46rem" }}>
         <span className="eyebrow" style={{ display: "block", marginBottom: "0.4rem" }}>

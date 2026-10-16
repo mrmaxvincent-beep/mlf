@@ -84,7 +84,7 @@ export default async function GhiChepPage({ params }: { params: Promise<{ path?:
       <div className="wrap" style={{ marginBottom: "2rem" }}>
         <Reveal>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "left", margin: 0, maxWidth: "60ch" }}>
-            Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình. Chọn một tựa bài bên trái để đọc.
+            Mỗi ghi chép là một góc nhìn về việc ở lại với chính mình.
           </p>
         </Reveal>
       </div>

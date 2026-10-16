@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { miens } from "@/data/vongTraTam";
 
 const description = "vòng-trà-tâm là nơi mọi người ngồi lại với tâm mình.";
 
@@ -34,6 +35,39 @@ export default function VongTraTamPage() {
           và chúng tôi đang chuẩn bị cho hành trình đó.
         </p>
       </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "6rem", maxWidth: "46rem" }}>
+        <span className="eyebrow" style={{ display: "block", marginBottom: "0.4rem" }}>
+          lịch sinh hoạt
+        </span>
+        {miens.map((m) => (
+          <Reveal key={m.id} className="vtt-mien">
+            <h2 className="vtt-mien-name">{m.name}</h2>
+            {m.vongs.length ? (
+              <div className="vtt-list">
+                {m.vongs.map((v) => (
+                  <div key={`${v.when}-${v.place}`} className="vtt-row">
+                    <div>
+                      <span className="vtt-cap">thời gian</span>
+                      <span className="vtt-val">{v.when}</span>
+                    </div>
+                    <div>
+                      <span className="vtt-cap">địa điểm</span>
+                      <span className="vtt-val">{v.place}</span>
+                    </div>
+                    <div>
+                      <span className="vtt-cap">người quản vòng-trà</span>
+                      <span className="vtt-val">{v.host}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="vtt-empty">lịch đang được cập nhật.</p>
+            )}
+          </Reveal>
+        ))}
+      </div>
 
       <Footer />
     </>

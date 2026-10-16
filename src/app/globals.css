@@ -3573,3 +3573,8 @@ details[open] > summary .acc-icon {
   .vtt-mark { margin: 4.5rem 0; }
   .vtt-summary { margin-bottom: 4rem; }
 }
+
+.vtt-start { max-width: 40rem; margin: 0 auto 7rem; text-align: center; }
+.vtt-start-cap { display: block; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-stone); }
+.vtt-start-date { display: block; margin: 0.6rem 0 0.9rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(2rem, 6vw, 2.8rem); color: var(--color-cham-dem); }
+.vtt-start p { margin: 0 auto; max-width: 34ch; font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.8; color: var(--color-ink); }

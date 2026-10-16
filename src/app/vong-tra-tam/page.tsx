@@ -148,6 +148,12 @@ export default function VongTraTamPage() {
         ))}
       </div>
 
+      <Reveal className="wrap vtt-start">
+        <span className="vtt-start-cap">bắt đầu sinh hoạt</span>
+        <span className="vtt-start-date">tháng 04 · 2027</span>
+        <p>các vòng-trà-tâm ở ba miền cùng mở vòng đầu tiên từ tháng 4 năm 2027.</p>
+      </Reveal>
+
       <Footer />
     </>
   );

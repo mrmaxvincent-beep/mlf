@@ -41,9 +41,9 @@ export default function NguoiTrongNhaPage() {
       </div>
 
       <div className="ntn-photos">
-        <ImagePlaceholder label="ảnh · người-trong-nhà 1" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · người-trong-nhà 2" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
-        <ImagePlaceholder label="ảnh · người-trong-nhà 3" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người-trong-nhà 1" aspectRatio="16/12" src="/assets/nguoitrongnha1.webp" alt="người-trong-nhà" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người-trong-nhà 2" aspectRatio="16/12" src="/assets/nguoitrongnha2.webp" alt="người-trong-nhà" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người-trong-nhà 3" aspectRatio="16/12" src="/assets/nguoitrongnha3.webp" alt="người-trong-nhà" style={{ width: "100%", height: "auto" }} />
       </div>
 
       <div className="ntn">

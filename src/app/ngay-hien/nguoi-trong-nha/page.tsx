@@ -4,6 +4,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { Disclosure } from "@/components/Disclosure";
+import { policyLines, travelGroups } from "@/data/stayTalk";
 import { routes } from "@/lib/nav";
 import { baoGom, chiPhi, danhCho, diemNeo, hero, khongCo, loiMo, ngoaiDiemNeo, thoiGian, viSao05Dem } from "@/data/nguoiTrongNha";
 
@@ -30,12 +33,20 @@ export default function NguoiTrongNhaPage() {
         <Breadcrumb trail={[{ label: "ngày-hiền", href: routes.ngayHien }, { label: hero.title }]} />
       </div>
 
-      <div className="ntn">
+      <div className="ntn ntn--top">
         <Reveal className="ntn-hero">
           <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
         </Reveal>
+      </div>
 
+      <div className="ntn-photos">
+        <ImagePlaceholder label="ảnh · người-trong-nhà 1" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người-trong-nhà 2" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
+        <ImagePlaceholder label="ảnh · người-trong-nhà 3" aspectRatio="16/12" style={{ width: "100%", height: "auto" }} />
+      </div>
+
+      <div className="ntn">
         <Reveal className="ntn-open">
           {loiMo.map((p) => (
             <p key={p}>{p}</p>
@@ -91,14 +102,59 @@ export default function NguoiTrongNhaPage() {
           <p className="ntn-price">{chiPhi}</p>
         </Reveal>
 
+        <div className="ntn-more">
+          <Disclosure trigger={<span className="ntn-more-label">chính sách hủy / hoàn</span>}>
+            <div>
+              {policyLines.map((line) => (
+                <p key={line} className="ntn-small">
+                  {line}
+                </p>
+              ))}
+            </div>
+          </Disclosure>
+          <Disclosure trigger={<span className="ntn-more-label">cách di chuyển tới măng đen</span>}>
+            <div>
+              {travelGroups.map((group) => (
+                <div key={group.title} style={{ marginBottom: "1.4rem" }}>
+                  <span className="ntn-more-sub">{group.title}</span>
+                  {group.lines.map((line) => (
+                    <p key={line} className="ntn-small">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </Disclosure>
+          <Link href={routes.specialTreat} className="mono-link ntn-more-link">
+            special treat: dành cho khách quen <span className="ar">→</span>
+          </Link>
+        </div>
+
         <Reveal className="ntn-cta">
           <a href="https://m.me/mlfmangden" target="_blank" rel="noopener" className="cta-btn cta-btn--solid">
-            hỏi nhà còn chỗ <span className="ar">→</span>
+            liên hệ qua fanpage <span className="ar">→</span>
           </a>
-          <Link href={routes.soTayKhach} className="ntn-guide">
-            đọc guest guide
+          <Link href={routes.soTayKhach} className="cta-btn cta-btn--outline">
+            đọc guest guide <span className="ar">→</span>
           </Link>
         </Reveal>
+
+        <div className="ntn-others">
+          <span>tham khảo thêm hành trình khác</span>
+          <div>
+            <Link className="mono-link" href={routes.stayTalk}>stay+talk</Link>
+            <i>·</i>
+            <Link className="mono-link" href={routes.retreatOYen}>retreat ở-yên</Link>
+            <i>·</i>
+            <Link className="mono-link" href={routes.retreatHamDuong}>retreat hàm-dưỡng</Link>
+            <i>·</i>
+            <Link className="mono-link" href={routes.retreatAnVui}>retreat an-vui</Link>
+          </div>
+          <Link href={routes.ngayHien} className="go mono-link ntn-back">
+            về trang ngày-hiền <span className="ar">→</span>
+          </Link>
+        </div>
       </div>
 
       <Footer />

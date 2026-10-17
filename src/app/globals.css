@@ -3652,9 +3652,23 @@ details[open] > summary .acc-icon {
 .ntn-soft { font-family: var(--font-serif) !important; font-style: italic; font-size: 1.15rem !important; line-height: 1.95 !important; }
 .ntn-quiet { font-family: var(--font-serif) !important; font-style: italic; font-weight: 300; font-size: clamp(1.25rem, 3.2vw, 1.5rem) !important; }
 .ntn-price { font-family: var(--font-serif) !important; font-style: italic; font-weight: 300; font-size: clamp(1.8rem, 5vw, 2.3rem) !important; color: var(--color-cham-dem) !important; }
-.ntn-cta { padding-top: 5rem; display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
-.ntn-guide { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink); text-decoration: underline; text-underline-offset: 4px; }
+.ntn-photos { margin: 0 calc(-50vw + 50%); width: 100vw; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.ntn-photos + .ntn { padding-top: 7rem; }
+.ntn-more { margin-top: 6rem; text-align: left; }
+.ntn-more-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cham-dem); }
+.ntn-more-sub { display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-ink); }
+.ntn .ntn-small { margin: 0 0 1rem; font-size: 0.88rem; line-height: 1.85; text-align: justify; }
+.ntn-more-link { display: block; margin-top: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--color-mist); font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cham-dem); }
+.ntn-cta { padding-top: 4.5rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+.ntn-others { margin-top: 5rem; }
+.ntn-others > span { display: block; margin-bottom: 0.9rem; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink); }
+.ntn-others > div { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 1rem; }
+.ntn-others > div a { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-ink); }
+.ntn-others i { font-style: normal; color: var(--color-mist); }
+.ntn-back { display: inline-block; margin-top: 3rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-ink); }
 @media (max-width: 640px) {
   .ntn-hero { padding: 4.5rem 0 4rem; }
   .ntn-pause { padding: 4.5rem 0; }
 }
+.ntn--top { padding-bottom: 0; }
+.ntn--top .ntn-hero { padding: 5rem 0 3.5rem; }

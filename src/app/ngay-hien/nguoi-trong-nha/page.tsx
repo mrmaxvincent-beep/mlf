@@ -8,7 +8,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Disclosure } from "@/components/Disclosure";
 import { policyLines, travelGroups } from "@/data/stayTalk";
 import { routes } from "@/lib/nav";
-import { baoGom, chiPhi, danhCho, diemNeo, hero, khongCo, loiMo, ngoaiDiemNeo, thoiGian, viSao05Dem } from "@/data/nguoiTrongNha";
+import { baoGom, chiPhi, motto, danhCho, diemNeo, hero, khongCo, loiMo, ngoaiDiemNeo, thoiGian, viSao05Dem } from "@/data/nguoiTrongNha";
 
 export const metadata: Metadata = {
   title: "người-trong-nhà",
@@ -70,6 +70,12 @@ export default function NguoiTrongNhaPage() {
           {loiMo.map((p) => (
             <p key={p}>{p}</p>
           ))}
+        </Reveal>
+
+        <Pause />
+
+        <Reveal>
+          <p className="ntn-motto">{motto}</p>
         </Reveal>
 
         <Pause />

@@ -9,6 +9,8 @@ export const loiMo = [
   "ở mộc, chúng tôi không đón những vị khách chỉ đến thuê một căn phòng. chúng tôi mở cửa nhà, mời ai đó về sống như một người trong nhà.",
 ];
 
+export const motto = "doing less, staying longer.";
+
 export const danhCho = [
   "người chỉ muốn tìm một nơi yên tĩnh, không cần làm gì cả.",
   "người đang mệt, muốn tạm dừng những bộn bề thường nhật.",

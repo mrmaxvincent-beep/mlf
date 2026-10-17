@@ -26,7 +26,7 @@ export const ngoaiDiemNeo =
 
 export const khongCo = "không chương trình, không ai dẫn dắt, không ai phục vụ.";
 
-export const thoiGian = "tối thiểu 05 đêm. bắt đầu bất cứ khi nào nhà còn chỗ.";
+export const thoiGian = "tối thiểu 05 đêm, tối đa 10 đêm. bắt đầu bất cứ khi nào nhà còn chỗ.";
 
 export const viSao05Dem =
   "hai ngày đầu, có thể bạn vẫn còn mang theo nhịp sống vội vàng, những thói quen và bồn chồn từ bên ngoài. đến ngày thứ ba, mọi thứ có thể bắt đầu lắng xuống. và đôi khi, phải đến ngày thứ tư, thứ năm, ta mới thực sự cảm thấy mình đã về nhà.";

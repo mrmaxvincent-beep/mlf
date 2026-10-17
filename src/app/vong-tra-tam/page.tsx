@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { EnsoAgenda } from "@/components/EnsoAgenda";
-import { agenda, gioiThieu, khoiThongTin, luotChiaSe, luotGhiChu, miens, nguyenTac } from "@/data/vongTraTam";
+import { agenda, choMoiNguoi, gioiThieu, khoiThongTin, luotChiaSe, luotGhiChu, miens, nguyenTac } from "@/data/vongTraTam";
 
 const description = "vòng-trà-tâm là nơi mọi người ngồi lại với tâm mình.";
 
@@ -42,6 +42,7 @@ export default function VongTraTamPage() {
 
         <Reveal className="vtt-open">
           <p className="vtt-lead">{gioiThieu}</p>
+          <p className="vtt-for-all">{choMoiNguoi}</p>
         </Reveal>
 
         <div className="vtt-mark" aria-hidden="true">

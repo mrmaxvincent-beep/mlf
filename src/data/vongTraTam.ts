@@ -21,6 +21,8 @@ export const miens: Mien[] = [
 export const gioiThieu =
   "một vòng trà mỗi tháng, mười người ngồi cùng nhau uống trà, hỏi nhau những câu hỏi thật và cùng soi sáng câu trả lời, do người-giữ-vòng được mlf đào tạo giữ nhịp.";
 
+export const choMoiNguoi = "những vòng-trà-tâm này dành cho mọi tôn giáo hoặc không thuộc tôn giáo nào.";
+
 export const khoiThongTin: { title: string; items: string[] }[] = [
   {
     title: "hình thức",

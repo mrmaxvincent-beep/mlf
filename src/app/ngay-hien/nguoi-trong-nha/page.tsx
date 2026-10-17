@@ -37,6 +37,22 @@ export default function NguoiTrongNhaPage() {
         <Reveal className="ntn-hero">
           <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
+          <nav className="ntn-subnav" aria-label="các hành trình ngày-hiền">
+            <span className="current">{hero.title}</span>
+            {[
+              { label: "stay+talk", href: routes.stayTalk },
+              { label: "retreat ở-yên", href: routes.retreatOYen },
+              { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
+              { label: "retreat an-vui", href: routes.retreatAnVui },
+            ].map((item) => (
+              <span key={item.href}>
+                <i>/</i>
+                <Link href={item.href} className="mono-link">
+                  {item.label}
+                </Link>
+              </span>
+            ))}
+          </nav>
         </Reveal>
       </div>
 

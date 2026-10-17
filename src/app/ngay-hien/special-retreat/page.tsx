@@ -31,6 +31,7 @@ const proseP: React.CSSProperties = {
 
 const journeySubnav: Array<{ label: string; href: string }> = [
   { label: "stay+talk", href: routes.stayTalk },
+  { label: "người-trong-nhà", href: routes.nguoiTrongNha },
   { label: "retreat ở-yên", href: routes.retreatOYen },
   { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
   { label: "retreat an-vui", href: routes.retreatAnVui },

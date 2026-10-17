@@ -38,18 +38,22 @@ export default function NguoiTrongNhaPage() {
           <h1>{hero.title}</h1>
           <p>{hero.sub}</p>
           <nav className="ntn-subnav" aria-label="các hành trình ngày-hiền">
-            <span className="current">{hero.title}</span>
             {[
               { label: "stay+talk", href: routes.stayTalk },
+              { label: hero.title, href: routes.nguoiTrongNha },
               { label: "retreat ở-yên", href: routes.retreatOYen },
               { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
               { label: "retreat an-vui", href: routes.retreatAnVui },
-            ].map((item) => (
+            ].map((item, i) => (
               <span key={item.href}>
-                <i>/</i>
-                <Link href={item.href} className="mono-link">
-                  {item.label}
-                </Link>
+                {i > 0 ? <i>/</i> : null}
+                {item.href === routes.nguoiTrongNha ? (
+                  <span className="current">{item.label}</span>
+                ) : (
+                  <Link href={item.href} className="mono-link">
+                    {item.label}
+                  </Link>
+                )}
               </span>
             ))}
           </nav>

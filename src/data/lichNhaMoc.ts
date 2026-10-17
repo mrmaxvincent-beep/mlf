@@ -33,6 +33,7 @@ export const groups = [
 /** Thứ tự trong mỗi nhóm là thứ tự các hàng trên dải năm (theo thứ tự trên menu của site). */
 export const programs: Program[] = [
   { id: "stay-talk", name: "stay+talk", href: routes.stayTalk, group: "hoat-dong", ongoing: true },
+  { id: "nguoi-trong-nha", name: "người-trong-nhà", href: routes.nguoiTrongNha, group: "hoat-dong", ongoing: true },
   { id: "o-yen", name: "retreat ở-yên", href: routes.retreatOYen, group: "hoat-dong", ongoing: true },
   { id: "ham-duong", name: "retreat hàm-dưỡng", href: routes.retreatHamDuong, group: "hoat-dong" },
   { id: "an-vui", name: "retreat an-vui", href: routes.retreatAnVui, group: "hoat-dong" },

@@ -30,6 +30,7 @@ const proseP: React.CSSProperties = {
 
 const journeySubnav = [
   { label: "stay+talk", href: routes.stayTalk },
+  { label: "người-trong-nhà", href: routes.nguoiTrongNha },
   { label: "retreat ở-yên", href: routes.retreatOYen },
   { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
   { label: "retreat an-vui", href: routes.retreatAnVui },
@@ -244,6 +245,10 @@ export default function StayTalkPage() {
           tham khảo thêm hành trình khác
         </span>
         <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0.6rem 1rem" }}>
+          <Link className="mono-link" href={routes.nguoiTrongNha} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+            người-trong-nhà
+          </Link>
+          <span style={{ color: "var(--color-mist)" }}>·</span>
           <Link className="mono-link" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat ở-yên
           </Link>

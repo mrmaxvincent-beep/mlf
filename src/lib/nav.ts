@@ -114,6 +114,7 @@ export const programsPanel = [
     group: "ngày-hiền",
     items: [
       { label: "stay+talk", href: routes.stayTalk },
+      { label: "người-trong-nhà", href: routes.nguoiTrongNha },
       { label: "retreat ở-yên", href: routes.retreatOYen },
       { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
       { label: "retreat an-vui", href: routes.retreatAnVui },

@@ -13,6 +13,17 @@ export const programs = [
     imgScale: 0.91,
   },
   {
+    tagline: "dành cho người đang mệt, muốn sống chậm một thời gian trong một nếp nhà",
+    name: "người-trong-nhà",
+    duration: "tối thiểu 5 đêm · không chương trình · bắt đầu khi nhà còn chỗ",
+    desc: "dành trọn 06 ngày sống trong một nếp nhà, gìn giữ những khoảng yên nhỏ. góp tay việc nhà, nhận lời một buổi trà, ăn chung bữa cơm chay — ngoài những điều ấy, ngày là của bạn.",
+    href: routes.nguoiTrongNha,
+    imgLabel: "ảnh · người-trong-nhà",
+    imgSrc: "/assets/motif-hien-nha.webp",
+    imgObjectFit: "contain" as const,
+    imgScale: 0.91,
+  },
+  {
     tagline: "private retreat · dành cho nhóm bạn hoặc gia đình để kết nối và hiểu nhau hơn",
     name: "retreat ở-yên",
     duration: "từ 2 khách · 4N3Đ hoặc 5N4Đ · lịch linh hoạt",

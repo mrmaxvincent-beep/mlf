@@ -15,7 +15,7 @@ export const programs = [
   {
     tagline: "dành cho người đang cần được yên",
     name: "người-trong-nhà",
-    duration: "tối thiểu 5 đêm · không chương trình · bắt đầu khi nhà còn chỗ",
+    duration: "tối thiểu 5 đêm · không chương trình",
     desc: "dành trọn 06 ngày sống trong một nếp nhà, gìn giữ những khoảng yên nhỏ. góp tay việc nhà, nhận lời một buổi trà, ăn chung bữa cơm chay — ngoài những điều ấy, ngày là của bạn.",
     href: routes.nguoiTrongNha,
     imgLabel: "ảnh · người-trong-nhà",

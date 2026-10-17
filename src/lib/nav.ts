@@ -60,6 +60,7 @@ export const routes = {
   retreatHamDuongLichTrinh: "/ngay-hien/retreat-ham-duong/lich-trinh",
   retreatAnVui: "/ngay-hien/retreat-an-vui",
   specialTreat: "/ngay-hien/special-treat",
+  nguoiTrongNha: "/ngay-hien/nguoi-trong-nha",
   lichNhaMoc: "/lich-nha-moc",
 } as const;
 

@@ -29,35 +29,34 @@ export default function NguoiTrongNhaPage() {
     <>
       <Header />
 
-      <div className="wrap" style={{ paddingTop: "6.5rem" }}>
+      <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
         <Breadcrumb trail={[{ label: "ngày-hiền", href: routes.ngayHien }, { label: hero.title }]} />
-      </div>
-
-      <div className="ntn ntn--top">
-        <Reveal className="ntn-hero">
-          <h1>{hero.title}</h1>
-          <p>{hero.sub}</p>
-          <nav className="ntn-subnav" aria-label="các hành trình ngày-hiền">
-            {[
-              { label: "stay+talk", href: routes.stayTalk },
-              { label: hero.title, href: routes.nguoiTrongNha },
-              { label: "retreat ở-yên", href: routes.retreatOYen },
-              { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
-              { label: "retreat an-vui", href: routes.retreatAnVui },
-            ].map((item, i) => (
-              <span key={item.href}>
-                {i > 0 ? <i>/</i> : null}
-                {item.href === routes.nguoiTrongNha ? (
-                  <span className="current">{item.label}</span>
-                ) : (
-                  <Link href={item.href} className="mono-link">
-                    {item.label}
-                  </Link>
-                )}
-              </span>
-            ))}
-          </nav>
-        </Reveal>
+        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>
+          {hero.title}
+        </h1>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 0 0.75rem" }}>
+          {hero.sub}
+        </p>
+        <nav className="ntn-subnav" aria-label="các hành trình ngày-hiền">
+          {[
+            { label: "stay+talk", href: routes.stayTalk },
+            { label: hero.title, href: routes.nguoiTrongNha },
+            { label: "retreat ở-yên", href: routes.retreatOYen },
+            { label: "retreat hàm-dưỡng", href: routes.retreatHamDuong },
+            { label: "retreat an-vui", href: routes.retreatAnVui },
+          ].map((item, i) => (
+            <span key={item.href}>
+              {i > 0 ? <i>/</i> : null}
+              {item.href === routes.nguoiTrongNha ? (
+                <span className="current">{item.label}</span>
+              ) : (
+                <Link href={item.href} className="mono-link">
+                  {item.label}
+                </Link>
+              )}
+            </span>
+          ))}
+        </nav>
       </div>
 
       <div className="ntn-photos">

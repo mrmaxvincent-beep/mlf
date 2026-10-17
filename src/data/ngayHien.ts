@@ -19,7 +19,7 @@ export const programs = [
     desc: "dành trọn 06 ngày sống trong một nếp nhà, gìn giữ những khoảng yên nhỏ. góp tay việc nhà, nhận lời một buổi trà, ăn chung bữa cơm chay — ngoài những điều ấy, ngày là của bạn.",
     href: routes.nguoiTrongNha,
     imgLabel: "ảnh · người-trong-nhà",
-    imgSrc: "/assets/motif-hien-nha.webp",
+    imgSrc: "/assets/ngayhien_nguoitrongnha.webp",
     imgObjectFit: "contain" as const,
     imgScale: 0.91,
   },

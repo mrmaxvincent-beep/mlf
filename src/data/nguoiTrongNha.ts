@@ -31,6 +31,6 @@ export const thoiGian = "tối thiểu 05 đêm. bắt đầu bất cứ khi nà
 export const viSao05Dem =
   "hai ngày đầu, có thể bạn vẫn còn mang theo nhịp sống vội vàng, những thói quen và bồn chồn từ bên ngoài. đến ngày thứ ba, mọi thứ có thể bắt đầu lắng xuống. và đôi khi, phải đến ngày thứ tư, thứ năm, ta mới thực sự cảm thấy mình đã về nhà.";
 
-export const baoGom = ["chỗ ở", "03 bữa chay mỗi ngày", "02 buổi trà mỗi 5 đêm"];
+export const baoGom = ["01 phòng ngủ riêng", "03 bữa chay mỗi ngày", "02 buổi trà mỗi 5 đêm"];
 
 export const chiPhi = "900.000đ / đêm";

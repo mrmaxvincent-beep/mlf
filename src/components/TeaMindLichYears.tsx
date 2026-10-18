@@ -114,6 +114,12 @@ function Edition2027() {
         </span>
       </div>
 
+      <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "48ch" }}>
+        <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
+          {concept2027}
+        </p>
+      </Reveal>
+
       <div className="wrap tm27-mot">
         <Reveal>
           <p className="tm27-lead">{theme2027.lead}</p>
@@ -167,12 +173,6 @@ function Edition2027() {
           );
         })}
       </div>
-
-      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "48ch" }}>
-        <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-          {concept2027}
-        </p>
-      </Reveal>
 
       <div className="wrap tm27-pair" style={{ marginBottom: "4rem" }}>
         <ImagePlaceholder label="ảnh · bộ lịch thực tế" aspectRatio="3/4" />

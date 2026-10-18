@@ -21,3 +21,6 @@ export const specs = [
   { k: "túi đựng", v: "giấy kraft thân thiện môi trường" },
   { k: "chân đế", v: "gỗ, thiết kế tối giản" },
 ];
+
+export const lichYears = [2026, 2027] as const;
+export type LichYear = (typeof lichYears)[number];

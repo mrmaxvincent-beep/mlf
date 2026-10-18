@@ -143,7 +143,18 @@ function Edition2027() {
                 <span>{`chặng 0${i + 1}`}</span>
                 <h3>{st.name}</h3>
               </div>
-              <div className="tm27-pair">
+              {st.months.map((mo) => (
+                <div key={mo.num} className="tm27-row">
+                  <span className="tm27-num">{mo.num}</span>
+                  <span className="tm27-title">
+                    {mo.title}
+                    <i>{mo.en}</i>
+                    <em>{mo.reminder}</em>
+                  </span>
+                  <span className="tm27-theme">{mo.theme}</span>
+                </div>
+              ))}
+              <div className="tm27-pair" style={{ marginTop: "1.6rem" }}>
                 <ImagePlaceholder label={`ảnh · tháng ${m.num} · mặt trước`} aspectRatio="3/4" />
                 <ImagePlaceholder label={`ảnh · tháng ${m.num} · mặt sau`} aspectRatio="3/4" />
               </div>

@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { seasons, specs, lichYears, type LichYear } from "@/data/teaMindLich";
+import { theme2027, motLines, bridge, concept2027, stages2027 } from "@/data/teaMindLich2027";
+
+// 2027 giữ nguyên chất liệu, kích thước, giá; chỉ đổi dòng số lượng cho đúng chủ đề.
+const specs2027 = specs.map((sp) => (sp.k === "số lượng" ? { ...sp, v: "12 tờ - 12 tháng, 12 lát cắt đời sống" } : sp));
 
 const serif = "var(--font-serif)";
 const sans = "var(--font-sans)";
@@ -99,23 +103,97 @@ function Edition2026() {
   );
 }
 
-function ComingSoon({ year }: { year: number }) {
+function Edition2027() {
   return (
     <>
-    <Theme title="small things, quiet days" sub="những điều nhỏ, những ngày yên" />
-    <div className="wrap" style={{ marginBottom: "5rem" }}>
-      <p style={{ fontFamily: sans, fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 1.5rem" }}>
-        bộ lịch {year} đang được vẽ. mộc sẽ chia sẻ thêm khi sắp ra mắt.
-      </p>
-      <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem", marginBottom: "2rem" }}>
-        sắp ra mắt · {year}
-      </span>
-      <div>
-        <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">
-          theo dõi tại ig <span className="ar">→</span>
-        </a>
+      <Theme title={theme2027.title} sub={theme2027.sub} />
+
+      <div className="wrap" style={{ marginBottom: "2rem" }}>
+        <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem" }}>
+          sắp ra mắt · 2027
+        </span>
       </div>
-    </div>
+
+      <div className="wrap tm27-mot">
+        <Reveal>
+          <p className="tm27-lead">{theme2027.lead}</p>
+        </Reveal>
+        {motLines.map((line) => (
+          <Reveal key={line}>
+            <p>{line}</p>
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal className="wrap tm27-bridge">
+        {bridge.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+      </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow">mười hai tháng · bốn chặng</span>
+      </div>
+      <div className="wrap tm27-stages">
+        {stages2027.map((st, i) => (
+          <Reveal key={st.name} className="tm27-stage">
+            <div className="tm27-stage-head">
+              <span>{`chặng 0${i + 1}`}</span>
+              <h3>{st.name}</h3>
+            </div>
+            {st.months.map((m) => (
+              <details key={m.num} className="tm27-month">
+                <summary>
+                  <span className="tm27-num">{m.num}</span>
+                  <span className="tm27-title">
+                    {m.title}
+                    <i>{m.en}</i>
+                  </span>
+                  <span className="tm27-theme">{m.theme}</span>
+                </summary>
+                <div className="tm27-body">
+                  <ImagePlaceholder label={`ảnh · tháng ${m.num}`} aspectRatio="4/3" />
+                  <p className="tm27-rem">{m.reminder}</p>
+                  <p>{m.text}</p>
+                </div>
+              </details>
+            ))}
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "48ch" }}>
+        <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
+          {concept2027}
+        </p>
+      </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+        <span className="eyebrow">thông tin sản phẩm</span>
+      </div>
+      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
+        {specs2027.map((sp) => (
+          <div key={sp.k} className="spec-row">
+            <span style={{ color: "var(--color-stone-alt)" }}>{sp.k}</span>
+            <span style={{ color: "var(--color-ink)", textAlign: "right" }}>{sp.v}</span>
+          </div>
+        ))}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", paddingTop: "1.4rem" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>giá</span>
+          <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-stone-alt)" }}>150.000đ</span>
+        </div>
+      </Reveal>
+
+      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+        <p style={{ fontFamily: sans, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
+          bộ lịch 2027 sắp ra mắt - theo dõi tea.mind để biết ngày mở đặt trước.
+        </p>
+        <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+          <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">
+            theo dõi tại ig <span className="ar">→</span>
+          </a>
+        </div>
+      </div>
     </>
   );
 }
@@ -148,7 +226,7 @@ export function TeaMindLichYears() {
           ))}
         </div>
       </div>
-      {year === 2026 ? <Edition2026 /> : <ComingSoon year={year} />}
+      {year === 2026 ? <Edition2026 /> : <Edition2027 />}
     </>
   );
 }

@@ -120,6 +120,10 @@ function Edition2027() {
         </p>
       </Reveal>
 
+      <Reveal style={{ marginBottom: "4rem" }}>
+        <ImagePlaceholder label="ảnh · bộ lịch thực tế (toàn chiều ngang)" aspectRatio="21/9" style={{ width: "100%", height: "auto" }} />
+      </Reveal>
+
       <div className="wrap tm27-mot">
         <Reveal>
           <p className="tm27-lead">{theme2027.lead}</p>

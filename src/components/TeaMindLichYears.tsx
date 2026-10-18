@@ -162,6 +162,7 @@ function Edition2027() {
                 tháng {m.num} · {m.title}
                 <i>{m.en}</i>
               </p>
+              <p className="tm27-story">{m.text}</p>
             </Reveal>
           );
         })}

@@ -7,7 +7,7 @@ import { routes } from "@/lib/nav";
 import { TeaMindLichYears } from "@/components/TeaMindLichYears";
 
 export const metadata: Metadata = {
-  title: "chén trà tâm · lịch",
+  title: "tea.mind calendar",
   description: "bước tới 365 ngày bằng sự có mặt — 12 mùa tâm được vẽ nên như những điểm dừng nhỏ giữa nhịp sống nhiều chuyển động.",
 };
 
@@ -20,7 +20,7 @@ export default function TeaMindLichPage() {
         <Breadcrumb trail={[{ label: "tea · mind", href: routes.teaMind }, { label: "lịch" }]} />
         <span className="eyebrow">tác phẩm · tea.mind</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6.5vw, 3.4rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 1.2rem" }}>
-          chén trà tâm
+          tea.mind calendar
         </h1>
       </div>
 

@@ -8,9 +8,20 @@ import { seasons, specs, lichYears, type LichYear } from "@/data/teaMindLich";
 const serif = "var(--font-serif)";
 const sans = "var(--font-sans)";
 
+function Theme({ title, sub }: { title: string; sub?: string }) {
+  return (
+    <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+      <span className="eyebrow">chủ đề</span>
+      <h2 style={{ fontFamily: serif, fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 4.4vw, 2.1rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0.3rem 0 0" }}>{title}</h2>
+      {sub ? <p style={{ fontFamily: sans, fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0.4rem 0 0" }}>{sub}</p> : null}
+    </div>
+  );
+}
+
 function Edition2026() {
   return (
     <>
+      <Theme title="chén trà tâm" />
       <div className="wrap">
         <p style={{ fontFamily: sans, fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 1.5rem" }}>
           bước tới 365 ngày bằng sự có mặt - 12 mùa tâm được vẽ nên như những điểm dừng nhỏ giữa nhịp sống nhiều chuyển động.
@@ -90,9 +101,11 @@ function Edition2026() {
 
 function ComingSoon({ year }: { year: number }) {
   return (
+    <>
+    <Theme title="small things, quiet days" sub="những điều nhỏ, những ngày yên" />
     <div className="wrap" style={{ marginBottom: "5rem" }}>
       <p style={{ fontFamily: sans, fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 1.5rem" }}>
-        bộ lịch chén trà tâm {year} đang được vẽ. mộc sẽ chia sẻ thêm khi sắp ra mắt.
+        bộ lịch {year} đang được vẽ. mộc sẽ chia sẻ thêm khi sắp ra mắt.
       </p>
       <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem", marginBottom: "2rem" }}>
         sắp ra mắt · {year}
@@ -103,6 +116,7 @@ function ComingSoon({ year }: { year: number }) {
         </a>
       </div>
     </div>
+    </>
   );
 }
 

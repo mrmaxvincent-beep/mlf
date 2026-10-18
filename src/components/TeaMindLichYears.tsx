@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { seasons, specs, lichYears, type LichYear } from "@/data/teaMindLich";
-import { theme2027, motLines, bridge, concept2027, stages2027 } from "@/data/teaMindLich2027";
+import { theme2027, motLines, bridge, concept2027, stages2027, featured2027 } from "@/data/teaMindLich2027";
 
 // 2027 giữ nguyên chất liệu, kích thước, giá; chỉ đổi dòng số lượng cho đúng chủ đề.
 const specs2027 = specs.map((sp) => (sp.k === "số lượng" ? { ...sp, v: "12 tờ - 12 tháng, 12 lát cắt đời sống" } : sp));
@@ -135,31 +135,25 @@ function Edition2027() {
         <span className="eyebrow">mười hai tháng · bốn chặng</span>
       </div>
       <div className="wrap tm27-stages">
-        {stages2027.map((st, i) => (
-          <Reveal key={st.name} className="tm27-stage">
-            <div className="tm27-stage-head">
-              <span>{`chặng 0${i + 1}`}</span>
-              <h3>{st.name}</h3>
-            </div>
-            {st.months.map((m) => (
-              <details key={m.num} className="tm27-month">
-                <summary>
-                  <span className="tm27-num">{m.num}</span>
-                  <span className="tm27-title">
-                    {m.title}
-                    <i>{m.en}</i>
-                  </span>
-                  <span className="tm27-theme">{m.theme}</span>
-                </summary>
-                <div className="tm27-body">
-                  <ImagePlaceholder label={`ảnh · tháng ${m.num}`} aspectRatio="4/3" />
-                  <p className="tm27-rem">{m.reminder}</p>
-                  <p>{m.text}</p>
-                </div>
-              </details>
-            ))}
-          </Reveal>
-        ))}
+        {stages2027.map((st, i) => {
+          const m = st.months.find((x) => featured2027.includes(x.num)) ?? st.months[0];
+          return (
+            <Reveal key={st.name} className="tm27-stage">
+              <div className="tm27-stage-head">
+                <span>{`chặng 0${i + 1}`}</span>
+                <h3>{st.name}</h3>
+              </div>
+              <div className="tm27-pair">
+                <ImagePlaceholder label={`ảnh · tháng ${m.num} · mặt trước`} aspectRatio="3/4" />
+                <ImagePlaceholder label={`ảnh · tháng ${m.num} · mặt sau`} aspectRatio="3/4" />
+              </div>
+              <p className="tm27-cap">
+                tháng {m.num} · {m.title}
+                <i>{m.en}</i>
+              </p>
+            </Reveal>
+          );
+        })}
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "48ch" }}>
@@ -167,6 +161,11 @@ function Edition2027() {
           {concept2027}
         </p>
       </Reveal>
+
+      <div className="wrap tm27-pair" style={{ marginBottom: "4rem" }}>
+        <ImagePlaceholder label="ảnh · bộ lịch thực tế" aspectRatio="3/4" />
+        <ImagePlaceholder label="ảnh · bìa lịch" aspectRatio="3/4" />
+      </div>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">thông tin sản phẩm</span>

@@ -152,3 +152,6 @@ export const stages2027: Stage2027[] = [
     ],
   },
 ];
+
+// mỗi chặng giới thiệu một tháng tiêu biểu (mặt trước + mặt sau)
+export const featured2027 = ["02", "06", "08", "12"];

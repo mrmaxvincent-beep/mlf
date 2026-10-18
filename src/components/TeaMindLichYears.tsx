@@ -14,7 +14,7 @@ const sans = "var(--font-sans)";
 
 function Theme({ title, sub }: { title: string; sub?: string }) {
   return (
-    <div className="wrap" style={{ marginBottom: "1.2rem" }}>
+    <div className="wrap" style={{ marginBottom: "1.2rem", textAlign: "center" }}>
       <span className="eyebrow">chủ đề</span>
       <h2 style={{ fontFamily: serif, fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 4.4vw, 2.1rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0.3rem 0 0" }}>{title}</h2>
       {sub ? <p style={{ fontFamily: sans, fontSize: "0.95rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0.4rem 0 0" }}>{sub}</p> : null}
@@ -108,7 +108,7 @@ function Edition2027() {
     <>
       <Theme title={theme2027.title} sub={theme2027.sub} />
 
-      <div className="wrap" style={{ marginBottom: "2rem" }}>
+      <div className="wrap" style={{ marginBottom: "2rem", textAlign: "center" }}>
         <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem" }}>
           sắp ra mắt · 2027
         </span>

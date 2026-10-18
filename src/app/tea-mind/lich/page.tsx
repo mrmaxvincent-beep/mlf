@@ -18,7 +18,7 @@ export default function TeaMindLichPage() {
 
       <div className="wrap" style={{ paddingTop: "6.5rem" }}>
         <Breadcrumb trail={[{ label: "tea · mind", href: routes.teaMind }, { label: "lịch" }]} />
-        <span className="eyebrow">tác phẩm · mỗi năm một chủ đề</span>
+        <span className="eyebrow">bộ lịch giấy · 12 tháng</span>
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6.5vw, 3.4rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 1.2rem" }}>
           tea.mind calendar
         </h1>

@@ -6,18 +6,14 @@ export const theme2027 = {
 
 export const motLines = [
   "một chén trà còn ấm, lặng lẽ chờ ta ngồi xuống.",
-  "một bữa cơm dọn ra khi trời vừa chạng vạng, khói bếp còn vương trên mái.",
-  "một con mèo lim dim trong vệt nắng nghiêng bên khung cửa.",
-  "một bó hoa vừa cắm, cánh còn ngậm chút sương mai.",
+  "một bữa cơm dọn ra khi trời chạng vạng, khói bếp còn vương trên mái.",
+  "một con mèo lim dim trong vệt nắng bên khung cửa.",
   "một đôi dép nằm yên ngoài hiên, như biết người vẫn còn ở nhà.",
-  "một cơn mưa ghé qua khu vườn, làm xanh thêm những phiến lá.",
-  "một chiếc giỏ cứ đầy dần lên, qua bao mùa hái nhặt.",
 ];
 
 export const bridge = [
-  "đời sống cứ thế trôi, ngày nối ngày, mùa tiếp mùa. giữa những bận rộn, đôi khi ta mải miết tìm kiếm điều gì xa xôi mà quên mất những gì vẫn luôn ở bên mình.",
-  "năm nay, hãy cùng trở về với nhịp sống thân quen: lắng nghe tiếng nước reo trong gian bếp, ngắm nắng đi qua hiên nhà, nghe mưa thì thầm trên tán lá, dành cho mình một khoảng nghỉ, và ngồi lâu hơn bên mâm cơm có người thương.",
-  "mười hai tháng, mười hai lát cắt của đời sống thường ngày. để mỗi lần lật sang trang mới, ta có dịp chậm lại, nhìn ngắm những điều đang hiện diện và nhận ra mình vẫn luôn có mặt trong chính cuộc đời mình.",
+  "giữa những bận rộn, ta mải tìm điều xa xôi mà quên những gì vẫn luôn ở bên mình. năm nay, hãy trở về với nhịp sống thân quen: tiếng nước reo trong gian bếp, nắng đi qua hiên nhà, mưa thì thầm trên tán lá, và một bữa cơm ngồi lâu hơn bên người thương.",
+  "mười hai tháng, mười hai lát cắt đời sống thường ngày. để mỗi lần lật trang, ta chậm lại và nhận ra mình vẫn luôn có mặt trong chính cuộc đời mình.",
 ];
 
 export const concept2027 =

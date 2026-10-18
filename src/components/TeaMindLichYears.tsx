@@ -124,22 +124,18 @@ function Edition2027() {
         <ImagePlaceholder label="ảnh · bộ lịch thực tế (toàn chiều ngang)" aspectRatio="21/9" style={{ width: "100%", height: "auto" }} />
       </Reveal>
 
-      <div className="wrap tm27-mot">
-        <Reveal>
+      <div className="wrap tm27-intro">
+        <ImagePlaceholder label="ảnh · trang lời tựa" aspectRatio="3/4" />
+        <Reveal className="tm27-intro-text">
           <p className="tm27-lead">{theme2027.lead}</p>
+          {motLines.map((line) => (
+            <p key={line} className="tm27-mot-line">{line}</p>
+          ))}
+          {bridge.map((p) => (
+            <p key={p} className="tm27-bridge-line">{p}</p>
+          ))}
         </Reveal>
-        {motLines.map((line) => (
-          <Reveal key={line}>
-            <p>{line}</p>
-          </Reveal>
-        ))}
       </div>
-
-      <Reveal className="wrap tm27-bridge">
-        {bridge.map((p) => (
-          <p key={p}>{p}</p>
-        ))}
-      </Reveal>
 
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">mười hai tháng · bốn chặng</span>

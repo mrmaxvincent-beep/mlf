@@ -140,7 +140,7 @@ export function TeaMindLichYears() {
   return (
     <>
       <div className="wrap">
-        <div className="lnm-years" role="tablist" aria-label="chọn năm" style={{ marginBottom: "1.6rem" }}>
+        <div className="lnm-years" role="tablist" aria-label="chọn năm" style={{ marginBottom: "1.6rem", justifyContent: "center" }}>
           {lichYears.map((y) => (
             <button key={y} role="tab" aria-selected={y === year} className={y === year ? "active" : ""} onClick={() => pick(y)}>
               {y}

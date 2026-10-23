@@ -375,7 +375,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "1.2rem" }}>
         <span className="eyebrow">thông tin và đăng ký</span>
       </div>
-      <div className="wrap info-grid info-grid--3col" style={{ marginBottom: "1.5rem" }}>
+      <div className="wrap info-grid" style={{ marginBottom: "1.5rem" }}>
         <div>
           <span style={label}>chi phí</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>13.000.000đ</span>
@@ -384,10 +384,6 @@ export default function TuanDu05Page() {
         <div>
           <span style={label}>số lượng tối đa</span>
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>10 người</span>
-        </div>
-        <div>
-          <span style={label}>số lượng tối thiểu</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.3rem", color: "var(--color-ink)", marginTop: "0.45rem" }}>06 người</span>
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem" }}>
@@ -427,7 +423,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "5rem" }}>
         <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
-            Nếu không nhận đủ tối thiểu 6 người tham gia, BTC sẽ hoãn hoặc hủy chương trình. Chi tiết lịch trình, vật dụng cần chuẩn bị, bảo hiểm và các cập nhật sẽ được gửi trong nhóm chat chung (Zalo) sau khi hoàn tất đăng ký.
+            Chi tiết lịch trình, vật dụng cần chuẩn bị, bảo hiểm và các cập nhật sẽ được gửi trong nhóm chat chung (Zalo) sau khi hoàn tất đăng ký.
           </p>
         </div>
       </div>
@@ -490,20 +486,6 @@ export default function TuanDu05Page() {
                 <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.7rem" }}>Nếu không thể đến do lệnh cấm di chuyển hoặc lý do bất khả kháng, 100% chi phí được bảo lưu cho chương trình sau.</p>
                 <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>Nếu tự quyết định huỷ do lo ngại cá nhân, áp dụng chính sách huỷ thông thường ở mục 1.</p>
               </div>
-            </div>
-          </div>
-          <div style={{ borderTop: "1px solid var(--color-mist)", paddingTop: "2.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
-              3. huỷ từ phía BTC do không đủ số lượng
-            </span>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.25rem", textAlign: "justify" }}>
-              Trong trường hợp không nhận đủ tối thiểu số người tham gia, BTC sẽ hoãn hoặc huỷ chương trình. BTC sẽ xác nhận chuyến đi lần cuối trước 30 ngày khởi hành. Sau khi nhận xác nhận, người tham gia có thể sắp xếp đặt vé di chuyển đến Hà Nội.
-            </p>
-            <div style={{ borderLeft: "2px solid var(--color-stone)", padding: "1.1rem 1.5rem" }}>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 0.5rem" }}>Trường hợp huỷ chuyến, toàn bộ chi phí đặt cọc sẽ được BTC trả lại 100% trong vòng 7 ngày sau khi thông báo.</p>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: 0 }}>
-                BTC không khuyến cáo người tham gia đặt vé di chuyển đến Hà Nội trước khi nhận thông báo chính thức. Trong trường hợp phải huỷ vé, BTC không chịu trách nhiệm về chi phí hoàn vé tàu, máy bay.
-              </p>
             </div>
           </div>
         </Accordion>

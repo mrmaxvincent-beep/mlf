@@ -216,7 +216,7 @@ export const includes = [
 ];
 
 export const milestones = [
-  { when: "sau khi đủ số lượng", what: "BTC xác nhận chuyến đi và gửi hướng dẫn đặt vé đến Nội Bài" },
+  { when: "đã đủ số lượng", what: "chuyến đi chắc chắn diễn ra. BTC gửi hướng dẫn đặt vé đến Nội Bài" },
   { when: "trước 2 tuần", what: "gửi các thông tin cần thiết cho hành trình" },
   { when: "trước 1 tuần", what: "gặp mặt online để làm quen, hướng dẫn chuẩn bị và các phương án dự phòng" },
   { when: "26.02.2027", what: "chốt số lượng người tham gia và mức chi phí cuối cùng" },

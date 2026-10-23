@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# mlf os: chỉ được chép vào đây lúc build trên Vercel (xem next.config.ts)
+/public/os

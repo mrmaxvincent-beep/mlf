@@ -288,6 +288,6 @@ export const faqs = [
   },
   {
     q: "Vé máy bay nên đặt giờ nào?",
-    a: "Chiều đi: có mặt tại Nội Bài trước 08:00 ngày đầu tiên. Chiều về: đoàn tới sân bay khoảng 19:00 ngày cuối cùng, nên đặt chuyến từ 21:00 trở đi để trừ hao giờ cao điểm trên đường từ Bắc Ninh về.",
+    a: "Chiều đi: có mặt tại Nội Bài trước 08:00 ngày đầu tiên. Chiều về: đoàn tới sân bay khoảng 19:00 ngày cuối cùng, nên đặt chuyến từ 21:30 trở đi để trừ hao giờ cao điểm trên đường từ Bắc Ninh về.",
   },
 ];

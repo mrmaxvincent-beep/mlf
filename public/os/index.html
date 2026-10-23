@@ -260,8 +260,8 @@ ul.items{list-style:none;margin:0;padding:0}
 .sform select{grid-column:1/-1;font-size:.9rem}
 .install{margin-top:14px;padding:12px 14px;border:1px dashed var(--line);border-radius:10px;font-size:.82rem;color:var(--stone)}
 .install b{color:var(--ink);font-weight:500}
-.otp{display:flex;gap:6px;margin-top:4px}
-.otp input{flex:1;letter-spacing:.3em;text-align:center}
+.login input{margin:6px 0}
+.login #pwForm .solid{margin-top:6px;width:100%}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>
@@ -276,13 +276,17 @@ ul.items{list-style:none;margin:0;padding:0}
   <section id="login" hidden>
     <div class="card login">
       <h2>đăng nhập</h2>
-      <p class="meta">Nhập email của bạn, nhà mộc sẽ gửi một đường link để vào trang. Không cần mật khẩu.</p>
-      <form id="loginForm"><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="email của bạn"><button class="solid" type="submit">gửi link đăng nhập</button></form>
-      <p class="meta" id="loginMsg"></p>
-      <form id="otpForm" hidden autocomplete="off">
-        <p class="meta" style="margin-top:10px">Hoặc nhập mã 6 số trong email (tiện khi mở trang từ màn hình chính):</p>
-        <div class="otp"><input name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="••••••" aria-label="mã đăng nhập"><button class="solid" type="submit">vào</button></div>
+      <p class="meta">Đăng nhập một lần, điện thoại sẽ nhớ.</p>
+      <form id="pwForm">
+        <input type="email" name="email" required autocomplete="username" inputmode="email" placeholder="email của bạn" aria-label="email">
+        <input type="password" name="password" required autocomplete="current-password" placeholder="mật khẩu" aria-label="mật khẩu">
+        <button class="solid" type="submit">vào</button>
       </form>
+      <p class="meta" id="loginMsg"></p>
+      <details class="more">
+        <summary>quên mật khẩu? nhận link qua email</summary>
+        <form id="loginForm"><input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="email của bạn" aria-label="email nhận link"><button class="ghost" type="submit">gửi link đăng nhập</button></form>
+      </details>
     </div>
   </section>
 
@@ -858,13 +862,14 @@ $('loginForm').addEventListener('submit',async function(ev){
   $('loginMsg').textContent='đang gửi …';
   var r=await sb.auth.signInWithOtp({email:email,options:{emailRedirectTo:location.origin+location.pathname,shouldCreateUser:false}});
   $('loginMsg').textContent=r.error?'Email này chưa có quyền vào trang, hoặc gửi chưa được. Thử lại sau ít phút.':'Đã gửi. Mở hộp thư trên điện thoại và bấm vào link.';
-  if(!r.error){S.otpEmail=email;$('otpForm').hidden=false}
 });
-$('otpForm').addEventListener('submit',async function(ev){
-  ev.preventDefault();var code=(ev.target.elements.code.value||'').replace(/\D/g,'');if(!code||!S.otpEmail)return;
-  $('loginMsg').textContent='đang kiểm tra mã …';
-  var r=await sb.auth.verifyOtp({email:S.otpEmail,token:code,type:'email'});
-  $('loginMsg').textContent=r.error?'Mã chưa đúng hoặc đã hết hạn. Gửi lại link để nhận mã mới.':'';
+$('pwForm').addEventListener('submit',async function(ev){
+  ev.preventDefault();var f=ev.target,email=(f.elements.email.value||'').trim().toLowerCase(),pw=f.elements.password.value||'';
+  if(!email||!pw)return;
+  $('loginMsg').textContent='đang vào …';
+  var r=await sb.auth.signInWithPassword({email:email,password:pw});
+  $('loginMsg').textContent=r.error?'Email hoặc mật khẩu chưa đúng.':'';
+  if(!r.error)f.elements.password.value='';
 });
 $('logout').addEventListener('click',async function(){await sb.auth.signOut();location.reload()});
 
@@ -881,7 +886,7 @@ async function start(session){
   channel=sb.channel('mlf-os').on('postgres_changes',{event:'*',schema:'public'},function(){reload()}).subscribe();
 }
 function boot(){
-  if(!window.supabase||!CFG.supabaseUrl||!CFG.supabaseAnonKey){showLogin('Trang chưa được cấu hình (config.js).');$('loginForm').hidden=true;return}
+  if(!window.supabase||!CFG.supabaseUrl||!CFG.supabaseAnonKey){showLogin('Trang chưa được cấu hình (config.js).');$('loginForm').hidden=true;$('pwForm').hidden=true;return}
   sb=window.supabase.createClient(CFG.supabaseUrl,CFG.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
   sb.auth.getSession().then(function(r){start(r.data.session)});
   sb.auth.onAuthStateChange(function(evt,session){if(evt==='SIGNED_IN')start(session);if(evt==='SIGNED_OUT')showLogin()});

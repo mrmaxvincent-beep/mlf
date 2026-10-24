@@ -3886,3 +3886,12 @@ details[open] > summary .acc-icon {
 .mh-open--wide .mh-lead { font-family: var(--font-sans); font-style: normal; font-size: 1rem; line-height: 1.85; }
 .mh-heading { margin: 0 0 0.25rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; color: var(--color-ink); }
 .mh-heading--center { text-align: center; margin-bottom: 1rem; }
+
+/* gian kết nối: canh giữa, một cột */
+#gian-ket-noi .mhr-cols { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 2rem; text-align: center; }
+#gian-ket-noi .mh-col { align-items: center; max-width: 62ch; width: 100%; }
+#gian-ket-noi .mh-heading { text-align: center; }
+#gian-ket-noi .mh-open { align-items: center; }
+#gian-ket-noi .mh-caution { padding: 1rem 0 0; border-left: 0; border-top: 1px solid var(--color-mist); font-style: normal; max-width: 52ch; }
+#gian-ket-noi .mhr-aside { max-width: 62ch; width: 100%; align-items: center; }
+#gian-ket-noi .mh-links { justify-content: center; }

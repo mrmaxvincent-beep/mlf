@@ -1199,7 +1199,7 @@ function fillCats(keep){
       var v=gi+':'+ii;if(keep&&keep.grp===c[0]&&keep.item===it)pick=v;return h('option',{value:v},it)}))});
   if(keep&&!pick)groups.unshift(h('optgroup',{label:'đã ghi trước đây'},h('option',{value:UNKNOWN_CAT},keep.item?keep.item+' ('+keep.grp+')':keep.grp)));
   sel.replaceChildren.apply(sel,groups);
-  sel.value=pick||(keep?UNKNOWN_CAT:'0:0');
+  if(pick||keep)sel.value=pick||UNKNOWN_CAT;else sel.selectedIndex=0;
 }
 function catOf(){
   var v=XF.elements.cat.value;

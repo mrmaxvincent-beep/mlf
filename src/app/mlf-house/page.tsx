@@ -72,11 +72,13 @@ export default function MlfHousePage() {
     <>
       <div className="mh-open mh-open--wide">
         <h2>{gopTay.heading}</h2>
-        {gopTay.intro.map((para) => (
-          <p key={para} className="mh-lead">
-            {para}
-          </p>
-        ))}
+        <div className="mh-paras">
+          {gopTay.intro.map((para) => (
+            <p key={para} className="mh-lead">
+              {para}
+            </p>
+          ))}
+        </div>
       </div>
       <MlfHouseInvites />
     </>

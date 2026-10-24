@@ -3878,7 +3878,10 @@ details[open] > summary .acc-icon {
 .mh-hero > div:first-child { justify-content: center; }
 .mh-open { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.4rem; }
 .mh-open p { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.02rem, 1.7vw, 1.15rem); line-height: 1.7; color: var(--color-ink); }
-.mh-open--wide { gap: 1rem; max-width: 62ch; margin: 0 0 2.5rem; }
+.mh-open--wide { gap: 1.25rem; max-width: none; margin: 0 0 2.75rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--color-mist); }
+.mh-paras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2.25rem; }
+.mh-paras .mh-lead { margin: 0; font-size: 0.96rem; line-height: 1.8; }
+@media (max-width: 760px) { .mh-paras { grid-template-columns: 1fr; gap: 1rem; } }
 .mh-open--wide h2 { margin: 0 0 0.25rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; color: var(--color-ink); }
 .mh-open--wide .mh-lead { font-family: var(--font-sans); font-style: normal; font-size: 1rem; line-height: 1.85; }
 .mh-heading { margin: 0 0 0.25rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; color: var(--color-ink); }

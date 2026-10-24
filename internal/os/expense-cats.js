@@ -8,7 +8,7 @@ window.MLF_EXP_CATS = {
     ['4. Di chuyển', ['Xăng dầu', 'Bảo dưỡng', 'Taxi-Grab', 'Gửi xe', 'Giao hàng']],
     ['5. Nội bộ nhà Mộc', ['Sinh hoạt nhà Mộc', 'Hoạt động tập thể', 'Nhà hàng - cafe', 'Quà tặng nhân viên', 'Vật nuôi']],
     ['6. Quà tặng & Quyên góp', ['Quà tặng khách hàng/ đối tác', 'Từ thiện', 'Quỹ BAMM']],
-    ['7. Lương', ['Lương Quản gia', 'Lương Nhân viên', 'Bảo hiểm']],
+    ['7. Lương', ['Lương Nhân viên', 'Bảo hiểm']],
     ['8. Chi khác', ['Chi phí khác']]
   ],
   // Tuần-du chỉ chọn nhóm (không có hạng mục con): bỏ phần danh sách hạng mục.

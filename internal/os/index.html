@@ -600,6 +600,7 @@ section.blk .more>summary{color:var(--ink)}
     <form class="fgrid" id="expForm" autocomplete="off">
       <label>số tiền (đ)<input name="amount" inputmode="numeric" required placeholder="vd: 250.000"></label>
       <label>ngày chi<input name="date" type="date" required></label>
+      <label class="w2">thuộc về<select name="scope"><option>Vận hành chung</option><option>Tuần-du</option></select></label>
       <label class="w2">nhóm<select name="grp" required></select></label>
       <label class="w2">hạng mục<select name="sub" required></select></label>
       <label>người chi (đã trả tiền)<select name="who"></select></label>
@@ -1249,7 +1250,7 @@ function drawExpenses(){
     var key='ex:'+e.id;
     return h('li',{class:e.reimbursed?'rb':''},
       h('span',{class:'exp-d'},dm(e.spent_on)),
-      h('span',{class:'exp-m'},h('b',null,e.item),h('small',null,e.grp+(e.note?' · '+e.note:''))),
+      h('span',{class:'exp-m'},h('b',null,e.item),h('small',null,(e.scope==='Tuần-du'?'Tuần-du · ':'')+e.grp+(e.note?' · '+e.note:''))),
       h('span',{class:'exp-a'},vnd(e.amount)),
       h('span',{class:'exp-w'},av(e.paid_by,'sm')),
       h('span',{class:'exp-b'},
@@ -1277,7 +1278,7 @@ function resetExpForm(){
 }
 function editExp(e){
   S.expEdit=e.id;XF.elements.amount.value=Number(e.amount).toLocaleString('vi-VN');XF.elements.date.value=e.spent_on;
-  XF.elements.grp.value=e.grp;fillItems(e.item);XF.elements.who.value=e.paid_by;XF.elements.note.value=e.note||'';
+  XF.elements.grp.value=e.grp;fillItems(e.item);XF.elements.who.value=e.paid_by;XF.elements.scope.value=e.scope||'Vận hành chung';XF.elements.note.value=e.note||'';
   $('expSubmit').textContent='cập nhật khoản chi';$('expCancel').hidden=false;
   XF.scrollIntoView({block:'center',behavior:'smooth'});
 }
@@ -1286,7 +1287,7 @@ XF.addEventListener('submit',async function(ev){
   ev.preventDefault();
   var amount=Number(String(XF.elements.amount.value).replace(/\D/g,''));
   if(!amount){toast('Nhập số tiền.');return}
-  var row={spent_on:XF.elements.date.value,amount:amount,grp:XF.elements.grp.value,item:XF.elements.sub.value,paid_by:XF.elements.who.value,note:(XF.elements.note.value||'').trim()||null};
+  var row={spent_on:XF.elements.date.value,amount:amount,grp:XF.elements.grp.value,item:XF.elements.sub.value,paid_by:XF.elements.who.value,scope:XF.elements.scope.value,note:(XF.elements.note.value||'').trim()||null};
   try{
     if(S.expEdit){
       await q(sb.from('expenses').update(row).eq('id',S.expEdit));
@@ -1297,8 +1298,8 @@ XF.addEventListener('submit',async function(ev){
       S.exp=r.concat(S.exp);toast('Đã ghi '+vnd(amount)+' · '+row.item+'.');
     }
     S.expMonth=monthOf(row.spent_on);
-    var keepG=XF.elements.grp.value,keepI=XF.elements.sub.value,keepW=XF.elements.who.value;
-    resetExpForm();XF.elements.grp.value=keepG;fillItems(keepI);XF.elements.who.value=keepW;
+    var keepG=XF.elements.grp.value,keepI=XF.elements.sub.value,keepW=XF.elements.who.value,keepS=XF.elements.scope.value;
+    resetExpForm();XF.elements.grp.value=keepG;fillItems(keepI);XF.elements.who.value=keepW;XF.elements.scope.value=keepS;
     render();
   }catch(x){fail(x)}
 });
@@ -1307,8 +1308,8 @@ $('expExport').addEventListener('click',function(){
   var rows=expMonthRows().sort(function(a,b){return a.spent_on.localeCompare(b.spent_on)||String(a.created_at).localeCompare(String(b.created_at))});
   if(!rows.length){toast('Tháng này chưa có khoản chi để xuất.');return}
   function cell(v){v=v==null?'':String(v);return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
-  var lines=[['Ngày','Số tiền','Nhóm','Hạng mục','Người chi','Ghi chú','Hoàn lại']].concat(rows.map(function(e){
-    return [dmy(e.spent_on),e.amount,e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.reimbursed?'đã hoàn':'chờ hoàn']}));
+  var lines=[['Ngày','Số tiền','Thuộc về','Nhóm','Hạng mục','Người chi','Ghi chú','Hoàn lại']].concat(rows.map(function(e){
+    return [dmy(e.spent_on),e.amount,e.scope||'Vận hành chung',e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.reimbursed?'đã hoàn':'chờ hoàn']}));
   var csv='﻿'+lines.map(function(l){return l.map(cell).join(',')}).join('\r\n');
   var a=h('a',{href:URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),download:'chi-tieu-'+S.expMonth+'.csv'});
   document.body.append(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);

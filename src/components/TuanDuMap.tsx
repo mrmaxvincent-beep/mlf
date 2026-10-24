@@ -367,7 +367,7 @@ export function TuanDuMap() {
               <g key={o.name}>
                 <path
                   d={outlinePath(o)}
-                  fill="var(--color-cotton)"
+                  fill={o.tint}
                   stroke="var(--color-cham)"
                   strokeWidth={1.1 * s}
                   strokeLinejoin="round"

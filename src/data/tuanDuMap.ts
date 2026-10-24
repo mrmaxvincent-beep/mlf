@@ -105,9 +105,11 @@ export const islands: { name: string; dots: LonLat[] }[] = [
 ];
 
 /** Đường viền giản lược. Việt Nam, Ấn Độ và Nepal lấy từ dữ liệu biên giới Natural Earth (công khai), giản lược còn vài trăm điểm mỗi nước. */
-export const outlines: { name: string; label: LonLat; points: LonLat[]; parts?: LonLat[][] }[] = [
+/** `tint`: màu nền riêng của từng nước (dịu, cùng tông bảng màu của trang) để phân biệt các nước. */
+export const outlines: { name: string; tint: string; label: LonLat; points: LonLat[]; parts?: LonLat[][] }[] = [
   {
     name: "Việt Nam",
+    tint: "color-mix(in srgb, var(--color-moss) 42%, var(--color-cotton))",
     label: [104.3, 17.0],
     points: [
       [107.974, 21.508], [107.808, 21.498], [107.708, 21.406], [107.409, 21.284], [107.355, 21.055], [107.164, 20.949],
@@ -175,6 +177,7 @@ export const outlines: { name: string; label: LonLat; points: LonLat[]; parts?: 
   },
   {
     name: "Ấn Độ",
+    tint: "color-mix(in srgb, #C79A6B 38%, var(--color-cotton))",
     label: [78.2, 22.0],
     points: [
       [68.165, 23.857], [68.381, 23.951], [68.723, 23.964], [68.726, 24.266], [68.78, 24.313], [68.827, 24.265],
@@ -264,6 +267,7 @@ export const outlines: { name: string; label: LonLat; points: LonLat[]; parts?: 
   },
   {
     name: "Nepal",
+    tint: "color-mix(in srgb, var(--color-cham-suong) 60%, var(--color-cotton))",
     label: [82.6, 30.4],
     points: [
       [88.109, 27.87], [88.149, 27.843], [88.149, 27.749], [88.023, 27.409], [87.983, 27.134], [88.156, 26.808],

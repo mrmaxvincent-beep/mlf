@@ -508,7 +508,7 @@ var PN={tam:'Tâm',thuan:'Thuận',vu:'Vũ'};
 var AVL={tam:'Tâ',thuan:'Th',vu:'Vũ'};
 var PCOL={tam:'var(--p-tam)',thuan:'var(--p-thuan)',vu:'var(--p-vu)'};
 function av(p,sz){return h('span',{class:'av'+(sz?' '+sz:''),style:'background:'+PCOL[p],'aria-hidden':'true'},AVL[p])}
-var KIND={retreat:['retreat','--k-retreat'],staytalk:['stay+talk','--k-staytalk'],ntn:['người-trong-nhà','--k-ntn'],homestay:['homestay · mini retreat','--k-home'],khac:['khác','--k-khac']};
+var KIND={retreat:['retreat','--k-retreat'],staytalk:['stay+talk','--k-staytalk'],ntn:['người-trong-nhà','--k-ntn'],homestay:['homestay','--k-home'],mini:['mini retreat','--k-home'],khac:['khác','--k-khac']};
 var PAY={du:'đã thanh toán',chua:'chưa thanh toán',credit:'trừ credit',mien:'không thu phí'};
 var DOW=['CN','T2','T3','T4','T5','T6','T7'];
 var DOWF=['chủ nhật','thứ hai','thứ ba','thứ tư','thứ năm','thứ sáu','thứ bảy'];
@@ -714,7 +714,7 @@ function prepSum(e){
   return h('p',{class:'prep-sum'},'chuẩn bị '+d+'/'+ps.length+' xong',un?[' · ',h('b',null,un+' chưa ai nhận')]:null,lt?[' · ',h('b',null,lt+' đang trễ')]:null);
 }
 function roomChips(e){
-  if(e.kind!=='retreat')return null;
+  if(!tplFor(e.kind).some(function(t){return t.room}))return null;
   var cur=roomsOf(e);
   return h('div',{class:'rooms'},h('span',{class:'rooms-l'},'phòng dùng'),
     h('div',{class:'chips'},ROOMS.map(function(r){var on=cur.indexOf(r[0])>=0;

@@ -436,6 +436,7 @@ section.blk .more>summary{color:var(--ink)}
 .exp-n.due{color:var(--warn)}
 .exp-p .meta{font-size:.7rem;margin-bottom:4px}
 .exp-p .ghost{margin-top:4px;min-height:30px;padding:3px 4px;font-size:.72rem;white-space:nowrap}
+.exp-tk{margin:0 0 2px}
 .exp-before{margin:10px 0 0}
 .exp-groups{margin-top:6px}
 .exp-groups div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--mist);font-size:.88rem}
@@ -1176,12 +1177,19 @@ function drawSub(){
 }
 function setTopH(){var t=document.querySelector('.top');if(t)document.documentElement.style.setProperty('--top-h',t.offsetHeight+'px')}
 window.addEventListener('resize',setTopH);
-if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(!e.isIntersecting||curSec===e.target.id)return;
-    curSec=e.target.id;curTab=(SECS.find(function(x){return x[0]===curSec})||[0,curTab])[1];drawTabs();drawSub()})},{rootMargin:'-45% 0px -50% 0px'});
-  SECS.forEach(function(t){io.observe($(t[0]))});
+/* tab đang sáng theo vị trí cuộn: lấy mục cuối cùng có đầu mục đã qua vạch 45% màn hình; cuộn chạm đáy thì là mục cuối */
+var spyQ=false;
+function spy(){
+  spyQ=false;
+  var line=innerHeight*.45,at=SECS[0][0],bottom=scrollY+innerHeight>=document.documentElement.scrollHeight-4;
+  var pos=SECS.map(function(t){return [t[0],$(t[0]).getBoundingClientRect().top]}).sort(function(x,y){return x[1]-y[1]});
+  pos.forEach(function(x){if(x[1]<=line)at=x[0]});
+  if(bottom)at=pos[pos.length-1][0];
+  if(at===curSec)return;
+  curSec=at;curTab=(SECS.find(function(x){return x[0]===at})||[0,curTab])[1];drawTabs();drawSub();
 }
+addEventListener('scroll',function(){if(!spyQ){spyQ=true;requestAnimationFrame(spy)}},{passive:true});
+addEventListener('resize',spy);
 
 /* ─── chi tiêu: ai trả tiền thì ghi người đó (ứng trước), cuối tháng hoàn lại ─── */
 function vnd(n){return Number(n||0).toLocaleString('vi-VN')+'đ'}
@@ -1234,6 +1242,7 @@ function drawExpenses(){
   put('expSum',
     h('h2',null,'tổng kết '+monthLabel(S.expMonth)),
     h('p',{class:'exp-total'},vnd(total),h('small',null,rows.length+' khoản')),
+    h('p',{class:'meta exp-tk'},'trong đó '+vnd(fromMlf)+' trả từ TK mlf'),
     h('div',{class:'exp-people'},PEOPLE.map(function(p){
       var mine=rows.filter(function(e){return e.paid_by===p[0]}),adv=mine.reduce(function(n,e){return n+Number(e.amount)},0);
       var wait=mine.filter(function(e){return !e.reimbursed}).reduce(function(n,e){return n+Number(e.amount)},0);
@@ -1243,7 +1252,6 @@ function drawExpenses(){
         h('span',{class:'exp-n'+(wait?' due':'')},vnd(wait)),h('span',{class:'meta'},'chờ hoàn'),
         wait?h('button',{type:'button',class:'ghost',onclick:function(){reimburseAll(p[0])}},'hoàn hết'):null);
     })),
-    fromMlf?h('p',{class:'meta exp-before'},'Trả từ TK mlf: '+vnd(fromMlf)+' (tính vào tổng tháng, không cần hoàn cho ai).'):null,
     before.length?h('p',{class:'meta exp-before'},'Còn chờ hoàn từ các tháng trước: '+PEOPLE.map(function(p){
       var n=before.filter(function(e){return e.paid_by===p[0]}).reduce(function(a,e){return a+Number(e.amount)},0);return n?PN[p[0]]+' '+vnd(n):null}).filter(Boolean).join(', ')+'.'):null,
     Object.keys(byG).length?h('details',{class:'more'},h('summary',null,'theo nhóm chi'),

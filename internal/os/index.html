@@ -452,18 +452,6 @@ section.blk .more>summary{color:var(--ink)}
 .exp-b .x.armed{color:var(--warn)}
 .exp-list li.rb .exp-a,.exp-list li.rb .exp-m b{color:var(--stone)}
 .exp-export{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
-.exp-all{display:inline-block;margin-top:16px;font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
-.expall{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
-.expall[hidden]{display:none}
-.ea-top{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top,0px) + 10px) 16px 10px;background:var(--bg);border-bottom:1px solid var(--line)}
-.ea-body{max-width:640px;margin:0 auto;padding:16px 16px calc(env(safe-area-inset-bottom,0px) + 40px)}
-.ea-filters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.ea-filters select{min-width:0;width:100%}
-.ea-mh{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 0;padding-bottom:6px;border-bottom:1px solid var(--ink);font-weight:600}
-.ea-mh span{font-weight:400;font-size:.8rem;color:var(--stone)}
-.expall .exp-list{margin-top:0;border-top:0}
-.expall .exp-list li{grid-template-areas:"d m a w"}
-.exp-st{font-size:.7rem;color:var(--stone)}
 @media (max-width:420px){.exp-people{grid-template-columns:1fr}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
@@ -620,7 +608,6 @@ section.blk .more>summary{color:var(--ink)}
     </form>
     <div id="expList"></div>
     <div class="exp-export"><button class="ghost" type="button" id="expExport">xuất file tháng này (csv)</button><span class="meta">Mở được bằng Google Sheets.</span></div>
-    <a class="exp-all" id="expAllLink" href="#chi-tiet">xem tất cả khoản chi <span aria-hidden="true">→</span></a>
   </section>
 
   <footer class="foot"><span class="sig">mộc little farm</span><span>trang nội bộ cho Tâm, Thuận và Vũ. </span>
@@ -628,19 +615,6 @@ section.blk .more>summary{color:var(--ink)}
     <button class="ghost" type="button" id="logout" style="margin-top:10px">đăng xuất</button></footer>
   </div>
 </div>
-
-<section class="expall" id="expAll" hidden aria-label="tất cả khoản chi">
-  <div class="ea-top"><button type="button" class="ghost" id="eaBack">‹ quay lại</button><b>tất cả khoản chi</b></div>
-  <div class="ea-body">
-    <div class="ea-filters">
-      <select id="eaM" aria-label="tháng"></select><select id="eaG" aria-label="nhóm"></select>
-      <select id="eaP" aria-label="người chi"></select><select id="eaS" aria-label="trạng thái"></select>
-    </div>
-    <div class="card" id="eaSum"></div>
-    <div id="eaList"></div>
-    <div class="exp-export"><button class="ghost" type="button" id="eaExport">xuất danh sách đang lọc (csv)</button><span class="meta">Mở được bằng Google Sheets.</span></div>
-  </div>
-</section>
 
 <nav class="tabs" id="tabsNav" aria-label="đi tới" hidden><div id="tabs"></div></nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -801,7 +775,7 @@ var rq=false;
 function editing(){var a=document.activeElement;return a&&a.closest&&a.closest('#dayPanel,#blList,#evList,#evLater')&&/^(INPUT|SELECT)$/.test(a.tagName)&&a.type!=='checkbox'}
 function render(){if(rq)return;rq=true;requestAnimationFrame(function(){rq=false;if(editing()){S.dirty=true;return}draw()})}
 document.addEventListener('focusout',function(){setTimeout(function(){if(S.dirty&&!editing()){S.dirty=false;draw()}},0)});
-function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawExpenses();drawExpAll();drawTabs();drawSub()}
+function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawExpenses();drawTabs();drawSub()}
 
 function drawToday(){var d=parse(S.day);$('todayLine').textContent='hôm nay '+DOWF[d.getDay()]+', '+d.getDate()+' tháng '+(d.getMonth()+1)}
 function drawNotice(){put('notice',S.status==='error'?h('p',{class:'notice'},'Chưa tải được dữ liệu. Kiểm tra mạng rồi tải lại trang.'):null,drawPinned())}
@@ -1326,74 +1300,16 @@ XF.addEventListener('submit',async function(ev){
     render();
   }catch(x){fail(x)}
 });
-function csvDownload(rows,name){
-  rows=rows.slice().sort(function(a,b){return a.spent_on.localeCompare(b.spent_on)||String(a.created_at).localeCompare(String(b.created_at))});
+$('expExport').addEventListener('click',function(){
+  var rows=expMonthRows().sort(function(a,b){return a.spent_on.localeCompare(b.spent_on)||String(a.created_at).localeCompare(String(b.created_at))});
+  if(!rows.length){toast('Tháng này chưa có khoản chi để xuất.');return}
   function cell(v){v=v==null?'':String(v);return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
   var lines=[['Ngày','Số tiền','Nhóm','Hạng mục','Người chi','Ghi chú','Hoàn lại']].concat(rows.map(function(e){
     return [e.spent_on,e.amount,e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.reimbursed?'đã hoàn':'chờ hoàn']}));
   var csv='﻿'+lines.map(function(l){return l.map(cell).join(',')}).join('\r\n');
-  var a=h('a',{href:URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),download:name+'.csv'});
+  var a=h('a',{href:URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),download:'chi-tieu-'+S.expMonth+'.csv'});
   document.body.append(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);
-  toast('Đã xuất '+name+'.csv');
-}
-$('expExport').addEventListener('click',function(){
-  var rows=expMonthRows();
-  if(!rows.length){toast('Tháng này chưa có khoản chi để xuất.');return}
-  csvDownload(rows,'chi-tieu-'+S.expMonth);
-});
-
-/* ─── xem tất cả khoản chi: một trang riêng (#chi-tiet), có lọc theo tháng, nhóm, người chi, trạng thái ─── */
-var EF={m:'',g:'',p:'',s:''},eaFrom=false;
-function eaRows(){
-  return S.exp.filter(function(e){
-    return (!EF.m||monthOf(e.spent_on)===EF.m)&&(!EF.g||e.grp===EF.g)&&(!EF.p||e.paid_by===EF.p)&&(!EF.s||(EF.s==='wait')===!e.reimbursed)
-  }).sort(function(a,b){return b.spent_on.localeCompare(a.spent_on)||String(b.created_at).localeCompare(String(a.created_at))});
-}
-function eaFill(id,opts,val){
-  var el=$(id),sig=opts.map(function(o){return o[0]}).join('|');
-  if(el.getAttribute('data-sig')!==sig){
-    el.replaceChildren.apply(el,opts.map(function(o){return h('option',{value:o[0]},o[1])}));el.setAttribute('data-sig',sig);
-  }
-  el.value=val;
-}
-function drawExpAll(){
-  var on=location.hash==='#chi-tiet'&&!!S.me,box=$('expAll');
-  box.hidden=!on;document.body.style.overflow=on?'hidden':'';
-  if(!on)return;
-  var months=Array.from(new Set(S.exp.map(function(e){return monthOf(e.spent_on)}))).sort().reverse();
-  eaFill('eaM',[['','mọi tháng']].concat(months.map(function(m){return [m,monthLabel(m)]})),EF.m);
-  eaFill('eaG',[['','mọi nhóm']].concat(EXP_CATS.map(function(c){return [c[0],c[0]]})),EF.g);
-  eaFill('eaP',[['','mọi người chi']].concat(PEOPLE.map(function(x){return [x[0],x[1]]})),EF.p);
-  eaFill('eaS',[['','mọi trạng thái'],['wait','chờ hoàn'],['done','đã hoàn']],EF.s);
-  var rows=eaRows(),total=rows.reduce(function(n,e){return n+Number(e.amount)},0);
-  var wait=rows.filter(function(e){return !e.reimbursed}).reduce(function(n,e){return n+Number(e.amount)},0);
-  put('eaSum',h('p',{class:'exp-total'},vnd(total),h('small',null,rows.length+' khoản')),
-    h('p',{class:'meta',style:'margin:6px 0 0'},'Chờ hoàn lại: '+vnd(wait)+' · Đã hoàn: '+vnd(total-wait)));
-  var out=[],cur=null,list=null;
-  rows.forEach(function(e){
-    var m=monthOf(e.spent_on);
-    if(m!==cur){
-      cur=m;var sub=rows.filter(function(x){return monthOf(x.spent_on)===m}).reduce(function(n,x){return n+Number(x.amount)},0);
-      out.push(h('div',{class:'ea-mh'},monthLabel(m),h('span',null,vnd(sub))));
-      list=h('ul',{class:'exp-list'});out.push(list);
-    }
-    list.append(h('li',{class:e.reimbursed?'rb':''},
-      h('span',{class:'exp-d'},dm(e.spent_on)),
-      h('span',{class:'exp-m'},h('b',null,e.item),h('small',null,e.grp+(e.note?' · '+e.note:'')+' · '+(e.reimbursed?'đã hoàn':'chờ hoàn'))),
-      h('span',{class:'exp-a'},vnd(e.amount)),
-      h('span',{class:'exp-w'},av(e.paid_by,'sm'))));
-  });
-  put('eaList',out.length?out:h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Không có khoản chi nào khớp bộ lọc.'));
-}
-[['eaM','m'],['eaG','g'],['eaP','p'],['eaS','s']].forEach(function(x){$(x[0]).addEventListener('change',function(){EF[x[1]]=this.value;drawExpAll()})});
-$('expAllLink').addEventListener('click',function(){eaFrom=true});
-$('eaBack').addEventListener('click',function(){
-  if(eaFrom){eaFrom=false;history.back()}else{history.replaceState(null,'',location.pathname+location.search);drawExpAll()}
-});
-window.addEventListener('hashchange',function(){if(location.hash!=='#chi-tiet')eaFrom=false;drawExpAll()});
-$('eaExport').addEventListener('click',function(){
-  var rows=eaRows();if(!rows.length){toast('Không có khoản chi để xuất.');return}
-  csvDownload(rows,'chi-tieu'+(EF.m?'-'+EF.m:'-tat-ca'));
+  toast('Đã xuất chi-tieu-'+S.expMonth+'.csv');
 });
 
 /* ─── tải dữ liệu ─── */

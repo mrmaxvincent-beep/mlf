@@ -3,25 +3,25 @@
  * Dán vào Extensions → Apps Script của chính sheet 02. Finance.
  *
  * Cài một lần:
- *  1. Project Settings → Script properties → thêm SECRET = đúng chuỗi bí mật đang dùng cho script đồng bộ lịch.
+ *  1. Dán chuỗi mật khẩu (Tâm gửi riêng) vào giữa hai dấu nháy ở dòng SECRET bên dưới.
  *  2. Chọn hàm setup rồi bấm Run (cấp quyền khi được hỏi). Hàm này đổ dữ liệu ngay và đặt lịch chạy mỗi ngày.
  *
  * Mỗi lần chạy ghi đè toàn bộ tab "Chi tiêu mlf os" bằng dữ liệu mới nhất; đừng sửa tay trong tab này.
  * Các tab khác (Chi phí, Dashboard…) không bị đụng tới.
  */
+var SECRET = '';
 var SB_URL = 'https://rzwujcfmdtjbqmuizxcf.supabase.co';
 var SB_KEY = 'sb_publishable_Tg6FMPioXLz1STbLa8Lw-g_lquNRVao';
 var TAB = 'Chi tiêu mlf os';
 var NAMES = { tam: 'Tâm', thuan: 'Thuận', vu: 'Vũ' };
 
 function exportExpenses() {
-  var secret = PropertiesService.getScriptProperties().getProperty('SECRET');
-  if (!secret) throw new Error('Chưa có SECRET trong Script properties.');
+  if (!SECRET) throw new Error('Chưa dán mật khẩu vào dòng SECRET ở đầu script.');
   var res = UrlFetchApp.fetch(SB_URL + '/rest/v1/rpc/export_expenses', {
     method: 'post',
     contentType: 'application/json',
     headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY },
-    payload: JSON.stringify({ p_secret: secret }),
+    payload: JSON.stringify({ p_secret: SECRET }),
     muteHttpExceptions: true
   });
   if (res.getResponseCode() !== 200) throw new Error('Supabase ' + res.getResponseCode() + ': ' + res.getContentText());

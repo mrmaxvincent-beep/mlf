@@ -167,36 +167,47 @@ export function MlfHousePeople() {
               <Portrait p={open} />
             </div>
             <div className="mh-sheet-body">
-              <span className="mh-where">
-                {open.place} · {open.job}
-              </span>
-              <h3 className="mh-sheet-name">{open.name}</h3>
-              <span className="mh-season">
-                gặp mộc · {open.season}
-                {open.metAt ? `, ${open.metAt}` : ""}
-              </span>
-
-              <span className="mh-label">điều đã góp</span>
-              <p className="mh-text">{open.contributed}</p>
-
-              {open.quote ? <p className="mh-quote">“{open.quote}”</p> : null}
-
-              <dl className="mh-rows">
-                <div>
-                  <dt>có thể chia sẻ</dt>
-                  <dd>{open.shares.join(" · ")}</dd>
-                </div>
-              </dl>
-
-              <div className="mh-intro-btn">
-                <MailChoice
-                  label="xin được giới thiệu"
-                  draft={drafts.gioiThieu(open.name)}
-                />
+              <div className="mh-sheet-head">
+                <span className="mh-where">
+                  {open.place} · {open.job}
+                </span>
+                <h3 className="mh-sheet-name">{open.name}</h3>
+                <span className="mh-season">
+                  gặp mộc · {open.season}
+                  {open.metAt ? `, ${open.metAt}` : ""}
+                </span>
               </div>
-              <span className="mh-hint">
-                mlf sẽ hỏi ý người ấy trước khi giới thiệu.
-              </span>
+
+              <div className="mh-sheet-main">
+                <span className="mh-label">điều đã góp</span>
+                <p className="mh-text">{open.contributed}</p>
+
+                {open.quote ? <p className="mh-quote">“{open.quote}”</p> : null}
+
+                <dl className="mh-rows">
+                  <div>
+                    <dt>có thể chia sẻ</dt>
+                    <dd>{open.shares.join(" · ")}</dd>
+                  </div>
+                </dl>
+
+                <div className="mh-intro-btn">
+                  <MailChoice
+                    label="xin được giới thiệu"
+                    draft={drafts.gioiThieu(open.name)}
+                  />
+                </div>
+                <span className="mh-hint">
+                  mlf sẽ hỏi ý người ấy trước khi giới thiệu.
+                </span>
+                <button
+                  type="button"
+                  className="mh-close-bottom"
+                  onClick={() => setOpen(null)}
+                >
+                  đóng
+                </button>
+              </div>
             </div>
           </div>
         ) : null}

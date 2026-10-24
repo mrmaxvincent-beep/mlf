@@ -98,23 +98,12 @@ export const gopTay = {
 
 export const invitations: Invitation[] = [
   {
-    id: "chi-nguyet",
-    title: "xây dựng bộ chỉ-nguyệt",
+    id: "chi-nguyet-moc-ngu",
+    title: "xây dựng bộ chỉ-nguyệt và mộc-ngữ",
     status: "open",
-    why: "Cùng nhà mộc phát triển bộ 1000 câu hỏi chỉ-nguyệt cho các hoạt động cộng đồng vòng-trà-tâm. (hoạt động miễn phí)",
+    why: "Cùng nhà mộc phát triển bộ chỉ-nguyệt và quyển sách mộc-ngữ cho các hoạt động cộng đồng vòng-trà-tâm. (hoạt động miễn phí)",
     needs: "người có sự tu dưỡng, am hiểu Đạo",
-    how: "phát triển nội dung câu hỏi dựa trên khung sườn gợi ý của mlf",
-    form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
-    closes: "01.03.2027",
-    period: "01.01.2027 – 01.03.2027",
-  },
-  {
-    id: "moc-ngu",
-    title: "xây dựng bộ mộc-ngữ",
-    status: "open",
-    why: "Cùng nhà mộc phát triển bộ sách mộc-ngữ cho các hoạt động cộng đồng vòng-trà-tâm. (hoạt động miễn phí)",
-    needs: "người có sự tu dưỡng, am hiểu Đạo",
-    how: "phát triển nội dung quyển sách mộc-ngữ gồm 1000 lời gợi mở dựa trên khung sườn gợi ý của mlf",
+    how: "phát triển nội dung dựa trên khung sườn gợi ý của mlf: bộ chỉ-nguyệt gồm 1000 câu hỏi, và quyển sách mộc-ngữ gồm 1000 lời gợi mở",
     form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
     closes: "01.03.2027",
     period: "01.01.2027 – 01.03.2027",

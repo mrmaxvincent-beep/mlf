@@ -104,6 +104,17 @@ export const gopTay = {
 /** Ba lời mời dưới đây là nội dung minh hoạ để xem bố cục, thay bằng lời mời thật trước khi dùng. */
 export const invitations: Invitation[] = [
   {
+    id: "chi-nguyet",
+    title: "xây dựng bộ chỉ-nguyệt",
+    status: "open",
+    why: "Cùng nhà mộc phát triển bộ 1000 câu hỏi chỉ-nguyệt cho các hoạt động cộng đồng vòng-trà-tâm. (hoạt động miễn phí)",
+    needs: "người có sự tu dưỡng, am hiểu Đạo",
+    how: "phát triển nội dung câu hỏi dựa trên khung sườn gợi ý của mlf",
+    form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
+    closes: "01.03.2027",
+    period: "01.01.2027 – 01.03.2027",
+  },
+  {
     id: "loi-nhac-o-yen",
     title: "thiết kế bộ lời nhắc ở-yên",
     status: "open",

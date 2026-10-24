@@ -409,6 +409,29 @@ section.blk{margin-top:44px}
 .subnav button[aria-current="true"]{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
 #tuan,#phatsinh,#luanphien,#kho{scroll-margin-top:50px}
 @media (prefers-reduced-motion:reduce){.subnav{transition:none}}
+
+/* ── mỗi mục là một dải màu riêng, chạy hết chiều ngang ── */
+:root{--sec-mix:10%;--a-saptoi:#2563EB;--a-tuan:#0F766E;--a-phatsinh:#C2410C;--a-luanphien:#7C3AED;--a-kho:#475569;--a-so:#A16207;--a-mua:#15803D}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sec-mix:16%;--a-saptoi:#60A5FA;--a-tuan:#2DD4BF;--a-phatsinh:#FB923C;--a-luanphien:#A78BFA;--a-kho:#94A3B8;--a-so:#FACC15;--a-mua:#4ADE80}}
+:root[data-theme="dark"]{--sec-mix:16%;--a-saptoi:#60A5FA;--a-tuan:#2DD4BF;--a-phatsinh:#FB923C;--a-luanphien:#A78BFA;--a-kho:#94A3B8;--a-so:#FACC15;--a-mua:#4ADE80}
+body{overflow-x:clip}
+#homnay{padding-bottom:30px}
+section.blk{position:relative;isolation:isolate;margin-top:0;padding:30px 0 34px;--acc:var(--a-kho);--mist:color-mix(in srgb,var(--acc) 18%,var(--bg));--line:color-mix(in srgb,var(--acc) 28%,var(--bg))}
+section.blk::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:color-mix(in srgb,var(--acc) var(--sec-mix),var(--bg));border-top:1px solid color-mix(in srgb,var(--acc) 22%,var(--bg))}
+#saptoi{--acc:var(--a-saptoi)}
+#tuan{--acc:var(--a-tuan)}
+#phatsinh{--acc:var(--a-phatsinh)}
+#luanphien{--acc:var(--a-luanphien)}
+#kho{--acc:var(--a-kho)}
+#so{--acc:var(--a-so)}
+#mua{--acc:var(--a-mua)}
+.blk-h h2{display:flex;align-items:center;gap:10px}
+.blk-h h2::before{content:"";flex:none;width:6px;height:1.15em;border-radius:3px;background:var(--acc)}
+.blk-h p{margin-left:16px}
+section.blk .eyebrow,section.blk .sub,section.blk .rooms-l{color:var(--acc)}
+section.blk .more>summary::before{color:var(--acc)}
+section.blk .more>summary{color:var(--ink)}
+.foot{margin-top:0;padding-top:24px;border-top:0}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>

@@ -84,9 +84,9 @@ export const ketNoi = {
   ],
   /** các đoạn nội dung chính */
   body: [
-    "MLF House mở ra một không gian để những người gắn bó với Mộc có thể tìm thấy nhau, qua nơi sống, chuyên môn và những điều họ sẵn lòng chia sẻ.",
+    "mlf house mở ra một không gian để những người gắn bó với Mộc có thể tìm thấy nhau, qua nơi sống, chuyên môn và những điều họ sẵn lòng chia sẻ.",
     "Nếu muốn kết nối với ai, bạn có thể gửi lời nhắn cho nhà Mộc. Chúng tôi sẽ hỏi ý người ấy trước khi giới thiệu hai bên.",
-    "Thông tin liên hệ cá nhân không được công khai. MLF House cũng không phải nơi để chào mời hay quảng cáo dịch vụ, mà là một không gian kết nối dựa trên sự tự nguyện và tôn trọng lẫn nhau.",
+    "Thông tin liên hệ cá nhân không được công khai. mlf house cũng không phải nơi để chào mời hay quảng cáo dịch vụ, mà là một không gian kết nối dựa trên sự tự nguyện và tôn trọng lẫn nhau.",
   ],
   circle: "Xin lưu ý: chúng tôi chỉ giới thiệu những người trong mlf circle với nhau (tức đã từng có kết nối với nhà mộc).",
   offline: "Gặp nhau ngoài đời thì vẫn quý hơn, ở trăng-yên mỗi tháng tại Huế, ở các vòng-trà-tâm, hay ở một bữa cơm theo vùng mỗi năm một lần.",

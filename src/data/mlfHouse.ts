@@ -51,8 +51,6 @@ export type Person = {
   season: string;
   /** nơi gặp mộc, vd "Măng Đen" */
   metAt?: string;
-  /** để trống nếu người ấy không muốn để ảnh; ảnh hiện trắng đen */
-  img?: string;
   contributed: string;
   quote?: string;
   shares: string[];

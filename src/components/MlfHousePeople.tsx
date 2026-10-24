@@ -32,35 +32,23 @@ function byName(a: Person, b: Person) {
   return ga.localeCompare(gb, "vi") || ra.localeCompare(rb, "vi");
 }
 
-/** Chữ lồng từ hai chữ cái đầu, dùng khi người ấy không để ảnh. */
-function monogram(name: string) {
-  const words = name
+/** Chữ cái đầu của tên gọi (từ cuối), bỏ dấu để các chữ a ă â… cùng nhóm A. */
+function letterOf(name: string) {
+  const w = name
     .replace(/[^\p{L}\s]/gu, " ")
     .trim()
     .split(/\s+/)
     .filter(Boolean);
-  if (!words.length) return "·";
-  const pick =
-    words.length > 1 ? [words[0], words[words.length - 1]] : [words[0]];
-  return pick.map((w) => w.charAt(0).toUpperCase()).join("");
+  const last = w[w.length - 1] ?? "";
+  const base = last
+    .charAt(0)
+    .replace(/[đĐ]/g, "d")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
+  return (base || "·").toUpperCase();
 }
 
-function Portrait({ p }: { p: Person }) {
-  return (
-    <span className="mh-portrait">
-      {p.img ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={p.img} alt={p.name} loading="lazy" />
-      ) : (
-        <span className="mh-mono" aria-hidden="true">
-          {monogram(p.name)}
-        </span>
-      )}
-    </span>
-  );
-}
-
-/** Ghi nhận: lưới chân dung nhỏ, trắng đen, xếp theo mùa đến. Bấm một người để đọc chuyện, ngay trên trang. */
+/** Ghi nhận: danh sách tên theo abc, không dùng ảnh. Bấm một người để đọc chuyện, ngay trên trang. */
 export function MlfHousePeople() {
   const [dim, setDim] = useState<Dim>("all");
   const [val, setVal] = useState<string | null>(null);
@@ -79,6 +67,17 @@ export function MlfHousePeople() {
     !showFilter || dim === "all" || !val
       ? sorted
       : sorted.filter((p) => valuesOf(p, dim).includes(val));
+
+  const groups = useMemo(() => {
+    const out: { letter: string; items: Person[] }[] = [];
+    for (const p of shown) {
+      const l = letterOf(p.name);
+      const g = out[out.length - 1];
+      if (g && g.letter === l) g.items.push(p);
+      else out.push({ letter: l, items: [p] });
+    }
+    return out;
+  }, [shown]);
 
   useEffect(() => {
     const d = dialogRef.current;
@@ -133,24 +132,36 @@ export function MlfHousePeople() {
         </>
       ) : null}
 
-      <ul className="mh-grid">
-        {shown.map((p) => (
-          <li key={p.id}>
-            <button
-              type="button"
-              className="mh-card"
-              onClick={() => setOpen(p)}
-              aria-haspopup="dialog"
-            >
-              <Portrait p={p} />
-              <span className="mh-name">{p.name}</span>
-              <span className="mh-season">
-                {p.place} · {p.job}
-              </span>
-            </button>
-          </li>
+      <div className="mh-az">
+        {groups.map((g) => (
+          <section
+            key={g.letter}
+            className="mh-grp"
+            aria-label={`chữ ${g.letter}`}
+          >
+            <h3 className="mh-letter" aria-hidden="true">
+              {g.letter}
+            </h3>
+            <ul className="mh-names">
+              {g.items.map((p) => (
+                <li key={p.id}>
+                  <button
+                    type="button"
+                    className="mh-row"
+                    onClick={() => setOpen(p)}
+                    aria-haspopup="dialog"
+                  >
+                    <span className="mh-name">{p.name}</span>
+                    <span className="mh-pj">
+                      {p.place} · {p.job}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
-      </ul>
+      </div>
 
       <dialog
         ref={dialogRef}
@@ -169,9 +180,6 @@ export function MlfHousePeople() {
             >
               ×
             </button>
-            <div className="mh-sheet-img">
-              <Portrait p={open} />
-            </div>
             <div className="mh-sheet-body">
               <div className="mh-sheet-head">
                 <span className="mh-where">

@@ -3766,7 +3766,7 @@ details[open] > summary .acc-icon {
 .mh-propose { align-self: flex-start; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); padding: 0.5rem 0; }
 
 .mh-closing { padding: 6rem 0 4rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
-.mh-closing p { margin: 0; max-width: 34ch; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.45; color: var(--color-ink); }
+.mh-closing p { margin: 0; max-width: 44ch; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.45; color: var(--color-ink); }
 .mh-closing a { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--color-ink); padding: 0.5rem 0; }
 
 @media (max-width: 760px) {

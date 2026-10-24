@@ -191,7 +191,7 @@ ul.items{list-style:none;margin:0;padding:0}
 /* tab bar */
 .login input{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:10px 12px;font-size:16px;width:100%;margin:10px 0}
 .tabs{position:fixed;left:0;right:0;bottom:0;z-index:8;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-.tabs div{max-width:540px;margin:0 auto;display:grid;grid-template-columns:repeat(7,1fr);height:var(--tab)}
+.tabs div{max-width:540px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);height:var(--tab)}
 .tabs button{border:0;background:transparent;font-size:.68rem;white-space:nowrap;padding:0;color:var(--stone);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
 .tabs button .g{font-family:var(--serif);font-size:1.2rem;line-height:1;font-style:normal}
 .tabs button[aria-current="true"]{color:var(--ink)}
@@ -352,8 +352,8 @@ section.blk{margin-top:44px}
 
 /* thanh tab dưới: icon nét */
 .tabs{background:color-mix(in srgb,var(--panel) 90%,transparent);border-top:1px solid var(--mist)}
-.tabs button{font-family:var(--sans);font-size:.64rem;font-weight:500;gap:3px;padding:6px 0 4px;color:var(--stone)}
-.tabs button .g{font-family:var(--sans);font-style:normal;display:grid;place-items:center;width:46px;height:28px;border-radius:14px;transition:background .18s,color .18s;color:inherit}
+.tabs button{font-family:var(--sans);font-size:.72rem;font-weight:500;gap:3px;padding:6px 0 4px;color:var(--stone)}
+.tabs button .g{font-family:var(--sans);font-style:normal;display:grid;place-items:center;width:58px;height:30px;border-radius:15px;transition:background .18s,color .18s;color:inherit}
 .tabs button[aria-current="true"]{color:var(--moss);font-weight:600}
 .tabs button[aria-current="true"] .g{background:var(--moss-soft);color:var(--moss)}
 .toast{border-radius:12px;font-weight:500}
@@ -400,6 +400,15 @@ section.blk{margin-top:44px}
 .st-b .x{border:0;background:transparent;color:var(--stone);padding:2px 6px;font-size:.8rem;opacity:.75;min-width:28px}
 .st-b .x.armed{opacity:1;color:var(--warn)}
 #stForm input[type=date]{min-height:42px}
+
+/* hàng chip phụ: chỉ hiện khi đang ở nhóm việc */
+:root{--top-h:58px;--sub-h:46px}
+.subnav{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + var(--top-h));z-index:4;height:var(--sub-h);display:flex;gap:8px;align-items:center;justify-content:center;padding:0 16px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--mist);transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+.subnav.on{transform:none;opacity:1;pointer-events:auto}
+.subnav button{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 13px;font-size:.8rem;font-weight:500;min-height:34px;white-space:nowrap}
+.subnav button[aria-current="true"]{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
+#tuan,#phatsinh,#luanphien,#kho{scroll-margin-top:50px}
+@media (prefers-reduced-motion:reduce){.subnav{transition:none}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>
@@ -429,6 +438,7 @@ section.blk{margin-top:44px}
   </section>
 
   <div id="main" hidden>
+  <nav class="subnav" id="subnav" aria-label="các mục việc"></nav>
   <section id="homnay">
     <p class="today" id="todayLine"></p>
     <div id="notice"></div>
@@ -511,7 +521,7 @@ section.blk{margin-top:44px}
   </section>
 
   <section class="blk" id="kho">
-    <div class="blk-h"><h2>việc không thường xuyên</h2><p>Bấm “giao” để đưa vào một ngày của tuần đang xem.</p></div>
+    <div class="blk-h"><h2>kho việc</h2><p>Bấm “giao” để đưa vào một ngày của tuần đang xem.</p></div>
     <ul class="bl" id="blList"></ul>
     <form class="inl" id="blForm" autocomplete="off" style="margin-top:12px">
       <input name="text" placeholder="thêm việc vào kho …" required>
@@ -704,7 +714,7 @@ var rq=false;
 function editing(){var a=document.activeElement;return a&&a.closest&&a.closest('#dayPanel,#blList,#evList,#evLater')&&/^(INPUT|SELECT)$/.test(a.tagName)&&a.type!=='checkbox'}
 function render(){if(rq)return;rq=true;requestAnimationFrame(function(){rq=false;if(editing()){S.dirty=true;return}draw()})}
 document.addEventListener('focusout',function(){setTimeout(function(){if(S.dirty&&!editing()){S.dirty=false;draw()}},0)});
-function draw(){drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawTabs()}
+function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawTabs();drawSub()}
 
 function drawToday(){var d=parse(S.day);$('todayLine').textContent='hôm nay '+DOWF[d.getDay()]+', '+d.getDate()+' tháng '+(d.getMonth()+1)}
 function drawNotice(){put('notice',S.status==='error'?h('p',{class:'notice'},'Chưa tải được dữ liệu. Kiểm tra mạng rồi tải lại trang.'):null,drawPinned())}
@@ -1088,12 +1098,22 @@ var ICONS={
   bag:'<path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/>'
 };
 function iconEl(k){var e=h('span',{class:'g'});e.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICONS[k]+'</svg>';return e}
-var TABS=[['homnay','hôm nay','home'],['saptoi','sắp tới','cal'],['tuan','tuần','list'],['luanphien','định kỳ','repeat'],['kho','kho','box'],['so','sổ chung','pen'],['mua','cần mua','bag']];
-var curTab='homnay';
+var TABS=[['homnay','hôm nay','home'],['saptoi','sắp tới','cal'],['tuan','việc','list'],['so','sổ chung','pen'],['mua','cần mua','bag']];
+var SECS=[['homnay','homnay'],['saptoi','saptoi'],['tuan','tuan'],['phatsinh','tuan'],['luanphien','tuan'],['kho','tuan'],['so','so'],['mua','mua']];
+var SUBS=[['tuan','tuần'],['phatsinh','phát sinh'],['luanphien','thường xuyên'],['kho','kho việc']];
+var curTab='homnay',curSec='homnay';
 function drawTabs(){put('tabs',TABS.map(function(t){return h('button',{type:'button','aria-current':String(curTab===t[0]),onclick:function(){$(t[0]).scrollIntoView({block:'start'})}},iconEl(t[2]),t[1])}))}
+function drawSub(){
+  $('subnav').classList.toggle('on',curTab==='tuan');
+  put('subnav',SUBS.map(function(t){return h('button',{type:'button','aria-current':String(curSec===t[0]),onclick:function(){$(t[0]).scrollIntoView({block:'start'})}},t[1])}));
+}
+function setTopH(){var t=document.querySelector('.top');if(t)document.documentElement.style.setProperty('--top-h',t.offsetHeight+'px')}
+window.addEventListener('resize',setTopH);
 if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&curTab!==e.target.id){curTab=e.target.id;drawTabs()}})},{rootMargin:'-45% 0px -50% 0px'});
-  TABS.forEach(function(t){io.observe($(t[0]))});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting||curSec===e.target.id)return;
+    curSec=e.target.id;curTab=(SECS.find(function(x){return x[0]===curSec})||[0,curTab])[1];drawTabs();drawSub()})},{rootMargin:'-45% 0px -50% 0px'});
+  SECS.forEach(function(t){io.observe($(t[0]))});
 }
 
 /* ─── tải dữ liệu ─── */

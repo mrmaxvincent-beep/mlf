@@ -101,7 +101,6 @@ export const gopTay = {
   title: "góp tay",
 };
 
-/** Ba lời mời dưới đây là nội dung minh hoạ để xem bố cục, thay bằng lời mời thật trước khi dùng. */
 export const invitations: Invitation[] = [
   {
     id: "chi-nguyet",
@@ -124,36 +123,6 @@ export const invitations: Invitation[] = [
     form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
     closes: "01.03.2027",
     period: "01.01.2027 – 01.03.2027",
-  },
-  {
-    id: "mlf-hue-2027",
-    title: "dựng mlf ở Huế, năm 2027",
-    status: "open",
-    why: "Một nếp nhà thứ hai để người ở miền Trung có chỗ về ở-yên, không phải đi tận lên Măng Đen.",
-    needs: "kiến trúc sư, thợ mộc, gỗ cũ còn dùng được, tài chính theo từng đợt",
-    how: "góp công trong những đợt dựng nhà, góp vật liệu, hoặc góp tài chính",
-    form: "góp tay · có thù lao cho thợ chính",
-    closes: "30.06.2027",
-  },
-  {
-    id: "dich-sach-5am",
-    title: "dịch sách “5am” sang tiếng Anh",
-    status: "open",
-    why: "Để bạn bè ở xa, không đọc được tiếng Việt, cũng chạm được vào những buổi sáng ở-yên.",
-    needs: "người dịch Việt–Anh, một người biên tập tiếng Anh",
-    how: "nhận dịch một vài chương, hoặc đọc và góp ý bản dịch",
-    form: "góp tay",
-    closes: "31.03.2027",
-  },
-  {
-    id: "chan-dung-mlf-house",
-    title: "chụp chân dung cho mlf house",
-    status: "open",
-    why: "Để những người của nhà có một tấm ảnh giản dị trên trang ghi nhận, chụp ở chính nơi họ đang sống.",
-    needs: "người chụp ảnh ở Huế, Hà Nội, Sài Gòn",
-    how: "chụp vài người của nhà ở thành phố bạn sống, ánh sáng tự nhiên",
-    form: "có thù lao nhỏ",
-    closes: "15.01.2027",
   },
 ];
 

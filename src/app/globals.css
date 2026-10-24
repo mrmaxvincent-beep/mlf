@@ -3813,7 +3813,9 @@ details[open] > summary .acc-icon {
 .mh-sheet-img .mh-mono { font-size: 3rem; }
 
 /* góp tay: nhiều lời mời */
-.mh-invites { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; align-items: start; }
+.mh-invites { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); grid-auto-rows: 1fr; gap: 1.25rem; align-items: stretch; }
+.mh-invite > .mc { margin-top: auto; padding-top: 0.5rem; }
+.mh-invite h3 { min-height: 2.3em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .mh-more summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); padding: 0.4rem 0; list-style: none; }
 .mh-more summary::-webkit-details-marker { display: none; }
 .mh-more summary::before { content: "+ "; }

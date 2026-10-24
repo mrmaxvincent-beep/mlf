@@ -3895,3 +3895,4 @@ details[open] > summary .acc-icon {
 #gian-ket-noi .mh-caution { padding: 1rem 0 0; border-left: 0; border-top: 1px solid var(--color-mist); font-style: normal; max-width: 52ch; }
 #gian-ket-noi .mhr-aside { max-width: 62ch; width: 100%; align-items: center; }
 #gian-ket-noi .mh-links { justify-content: center; }
+.mhi-link { align-self: flex-start; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); padding: 0.4rem 0; }

@@ -1,3 +1,5 @@
+import { routes } from "@/lib/nav";
+
 export const contactEmail = "hello@moclittlefarm.com";
 
 /** Thư soạn sẵn: tiêu đề + vài dòng gợi ý để người gửi chỉ cần điền thêm. */
@@ -101,6 +103,8 @@ export type Invitation = {
   closes: string;
   /** khoảng thời gian thực hiện, vd "01.01.2027 – 01.03.2027"; có thì hiện thay cho "khép lại" */
   period?: string;
+  /** liên kết tới trang liên quan, hiện dưới phần mô tả */
+  link?: { label: string; href: string };
 };
 
 export const gopTay = {
@@ -116,6 +120,7 @@ export const gopTay = {
 export const invitations: Invitation[] = [
   {
     id: "chi-nguyet-moc-ngu",
+    link: { label: "tìm hiểu vòng-trà-tâm", href: routes.vongTraTam },
     title: "xây dựng bộ chỉ-nguyệt và mộc-ngữ",
     status: "open",
     why: "Cùng nhà mộc phát triển bộ chỉ-nguyệt và quyển sách mộc-ngữ cho các hoạt động cộng đồng vòng-trà-tâm. (hoạt động miễn phí)",
@@ -127,6 +132,7 @@ export const invitations: Invitation[] = [
   },
   {
     id: "loi-nhac-o-yen",
+    link: { label: "xem lời nhắc ở-yên", href: routes.thucTapLoiNhacOYen },
     title: "thiết kế bộ lời nhắc ở-yên",
     status: "open",
     why: "Bộ 50 hình nền điện thoại với những lời nhắc ở-yên để mọi người có thể tải về miễn phí.",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type KeyboardEvent } from "react";
+import Link from "next/link";
 import { MailChoice } from "@/components/MailChoice";
 import { drafts, invitations } from "@/data/mlfHouse";
 
@@ -8,13 +9,16 @@ import { drafts, invitations } from "@/data/mlfHouse";
 export function MlfHouseInvites() {
   const open = invitations.filter((i) => i.status === "open");
   const [cur, setCur] = useState(0);
-  if (!open.length) return <p className="mh-count">Hiện chưa có lời mời nào đang mở.</p>;
+  if (!open.length)
+    return <p className="mh-count">Hiện chưa có lời mời nào đang mở.</p>;
   const inv = open[Math.min(cur, open.length - 1)];
 
   const onKey = (e: KeyboardEvent<HTMLButtonElement>, i: number) => {
     let n = -1;
-    if (e.key === "ArrowDown" || e.key === "ArrowRight") n = (i + 1) % open.length;
-    else if (e.key === "ArrowUp" || e.key === "ArrowLeft") n = (i - 1 + open.length) % open.length;
+    if (e.key === "ArrowDown" || e.key === "ArrowRight")
+      n = (i + 1) % open.length;
+    else if (e.key === "ArrowUp" || e.key === "ArrowLeft")
+      n = (i - 1 + open.length) % open.length;
     if (n < 0) return;
     e.preventDefault();
     setCur(n);
@@ -23,7 +27,12 @@ export function MlfHouseInvites() {
 
   return (
     <div className="mhi">
-      <div className="mhi-list" role="tablist" aria-label="các lời mời đang mở" aria-orientation="vertical">
+      <div
+        className="mhi-list"
+        role="tablist"
+        aria-label="các lời mời đang mở"
+        aria-orientation="vertical"
+      >
         <p className="mh-count">{open.length} lời mời đang mở</p>
         {open.map((x, i) => {
           const on = x.id === inv.id;
@@ -42,16 +51,29 @@ export function MlfHouseInvites() {
             >
               <span className="mhi-idx">{String(i + 1).padStart(2, "0")}</span>
               <span className="mhi-title">{x.title}</span>
-              <span className="mhi-close">{x.period ? x.period : `khép lại ${x.closes}`}</span>
+              <span className="mhi-close">
+                {x.period ? x.period : `khép lại ${x.closes}`}
+              </span>
             </button>
           );
         })}
       </div>
 
-      <article key={inv.id} id="loi-moi-panel" role="tabpanel" aria-labelledby={`loi-moi-tab-${inv.id}`} className="mh-invite mhi-card">
+      <article
+        key={inv.id}
+        id="loi-moi-panel"
+        role="tabpanel"
+        aria-labelledby={`loi-moi-tab-${inv.id}`}
+        className="mh-invite mhi-card"
+      >
         <span className="mh-label">lời mời · đang mở</span>
         <h3>{inv.title}</h3>
         <p className="mhi-why">{inv.why}</p>
+        {inv.link ? (
+          <Link href={inv.link.href} className="mono-link mhi-link">
+            {inv.link.label} <span className="ar">→</span>
+          </Link>
+        ) : null}
         <dl className="mh-rows">
           <div>
             <dt>đang cần</dt>

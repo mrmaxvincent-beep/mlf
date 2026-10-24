@@ -57,7 +57,7 @@ export default function MlfHousePage() {
       <Header />
 
       {/* hiên nhà */}
-      <div className="wrap-wide" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
+      <div className="wrap-wide mh-hero" style={{ paddingTop: "6.5rem", paddingBottom: "1rem", textAlign: "center" }}>
         <Breadcrumb trail={[{ label: "mlf", href: routes.veMlf }, { label: hero.title }]} />
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           {hero.title}

@@ -3874,4 +3874,4 @@ details[open] > summary .acc-icon {
 @media (max-width: 760px) {
   .mh-close-bottom { display: block; align-self: flex-start; margin-top: 0.5rem; min-height: 44px; padding: 0.5rem 0; border: 0; background: none; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-stone); cursor: pointer; }
 }
-
+.mh-hero > div:first-child { justify-content: center; }

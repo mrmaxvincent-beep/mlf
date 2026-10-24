@@ -42,6 +42,10 @@ function polyPath(points: LonLat[]) {
   );
 }
 
+function outlinePath(o: { points: LonLat[]; parts?: LonLat[][] }) {
+  return polyPath(o.points) + (o.parts ?? []).map(polyPath).join("");
+}
+
 function boundsBox(bounds: [LonLat, LonLat], pad: number): Box {
   const [x1, y1] = proj([bounds[0][0], bounds[1][1]]);
   const [x2, y2] = proj([bounds[1][0], bounds[0][1]]);
@@ -362,14 +366,14 @@ export function TuanDuMap() {
             {outlines.map((o) => (
               <g key={o.name}>
                 <path
-                  d={polyPath(o.points)}
+                  d={outlinePath(o)}
                   fill="var(--color-cotton)"
                   stroke="var(--color-cham)"
                   strokeWidth={1.1 * s}
                   strokeLinejoin="round"
                 />
                 <path
-                  d={polyPath(o.points)}
+                  d={outlinePath(o)}
                   fill="none"
                   stroke="var(--color-cham)"
                   strokeOpacity={0.35}

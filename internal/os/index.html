@@ -370,6 +370,12 @@ section.blk{margin-top:44px}
 .rooms-n{margin:6px 0 0;font-size:.78rem;color:var(--warn)}
 .tpl-act{display:inline-flex;align-items:center;gap:6px;flex:none}
 .tpl-act select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:5px 6px;font-size:.8rem;max-width:84px}
+
+/* việc thường xuyên: danh sách tự chọn */
+.rrow{align-items:center}
+.rr-t{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.rr-t small{display:block}
+.rr-a{display:inline-flex;align-items:center;gap:6px;flex:none}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>
@@ -438,7 +444,7 @@ section.blk{margin-top:44px}
   </section>
 
   <section class="blk" id="luanphien">
-    <div class="blk-h"><h2>luân phiên</h2><p>Đầu việc nhà và vườn xoay vòng giữa ba người, mỗi tuần một lượt.</p></div>
+    <div class="blk-h"><h2>việc thường xuyên</h2><p>Việc nhà và vườn lặp lại mỗi tuần. Ai rảnh thì nhận cho cả tuần, chưa ai nhận thì hiện ở mục “chưa ai nhận”.</p></div>
     <div id="rotList"></div>
     <p class="nextwk" id="rotNext"></p>
     <details class="more" id="choreBox">
@@ -512,7 +518,7 @@ var KIND={retreat:['retreat','--k-retreat'],staytalk:['stay+talk','--k-staytalk'
 var PAY={du:'đã thanh toán',chua:'chưa thanh toán',credit:'trừ credit',mien:'không thu phí'};
 var DOW=['CN','T2','T3','T4','T5','T6','T7'];
 var DOWF=['chủ nhật','thứ hai','thứ ba','thứ tư','thứ năm','thứ sáu','thứ bảy'];
-var HZ=35, ANCHOR='2026-10-17';
+var HZ=35;
 
 function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function lsSet(k,v){try{if(v==null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
@@ -551,10 +557,8 @@ function fail(e){console.error(e);toast('Chưa lưu được, thử lại sau m�
 function arm(key){if(S.armed===key){S.armed=null;return true}S.armed=key;setTimeout(function(){if(S.armed===key){S.armed=null;render()}},3000);render();return false}
 async function q(p){var r=await p;if(r.error)throw r.error;return r.data}
 
-/* ─── luân phiên ─── */
-function wkIdx(ws){return Math.round(diff(ANCHOR,ws)/7)}
-function baseOf(c,ws){return PEOPLE[(((c.slot||0)+wkIdx(ws))%3+3)%3][0]}
-function assignee(c,ws){var o=S.swaps.get(ws+'__'+c.id);return o&&PN[o.person]?o.person:baseOf(c,ws)}
+/* ─── việc thường xuyên: ai nhận thì nhận cho cả tuần (bảng swaps lưu người nhận, không có ai thì để trống) ─── */
+function assignee(c,ws){var o=S.swaps.get(ws+'__'+c.id);return o&&PN[o.person]?o.person:null}
 function choreOn(c,s){
   var d=parse(s),w=d.getDay(),day=d.getDate(),last=new Date(d.getFullYear(),d.getMonth()+1,0).getDate();
   if(c.daily)return true;if((c.days||[]).indexOf(w)>=0)return true;
@@ -566,7 +570,6 @@ function choreLabel(c){
   if(c.month_days&&c.month_days.length)p.push('ngày '+c.month_days.join(', ')+' hằng tháng');
   return p.join(', ')||'chưa chọn ngày';
 }
-function weight(c){if(c.daily)return 7;return (c.days||[]).length+(c.month_days||[]).length*0.25}
 function sortedChores(){return S.chores.slice().sort(function(a,b){return (a.sort||0)-(b.sort||0)})}
 
 /* ─── chuẩn bị theo booking ─── */
@@ -601,10 +604,15 @@ function evShort(e){return e.who?e.who:e.title}
 function itemsFor(p,s){
   var out=[],ws=weekStart(s);
   allPrep().forEach(function(it){if(it.due===s&&it.person===p)out.push(Object.assign({},it,{person:p}))});
-  sortedChores().forEach(function(c){if(choreOn(c,s)&&assignee(c,ws)===p)out.push({kind:'c',id:c.id,text:c.text,done:S.checks.has(s+'__'+c.id),date:s,person:p})});
+  sortedChores().forEach(function(c){if(!choreOn(c,s))return;var a=assignee(c,ws),ck=S.checks.get(s+'__'+c.id);if(a===p||(!a&&ck&&ck.person===p))out.push({kind:'c',id:c.id,text:c.text,done:!!ck,date:s,person:p})});
   S.tasks.filter(function(t){return t.person===p&&t.date===s}).sort(function(a,b){return String(a.created_at||'').localeCompare(String(b.created_at||''))}).forEach(function(t){
     out.push({kind:'t',id:t.id,text:t.text,done:!!t.done,date:s,person:p})});
   return out;
+}
+function openChores(s){var ws=weekStart(s);return sortedChores().filter(function(c){return choreOn(c,s)&&!assignee(c,ws)&&!S.checks.has(s+'__'+c.id)})}
+function claimRow(c,ws){
+  return h('li',null,h('span',{class:'tx'},c.text,h('span',{class:'due'},choreLabel(c))),
+    h('button',{type:'button',class:'claim',onclick:function(){claim(c,ws,S.me)}},'nhận tuần này'));
 }
 function weekStats(p,ws){var n=0,d=0;for(var i=0;i<7;i++)itemsFor(p,add(ws,i)).forEach(function(it){n++;if(it.done)d++});return [d,n]}
 
@@ -625,7 +633,7 @@ async function toggle(it){
   try{
     if(it.kind==='c'){var k=it.date+'__'+it.id;
       if(it.done){S.checks.delete(k);render();await q(sb.from('checks').delete().match({date:it.date,chore_id:it.id}))}
-      else{S.checks.set(k,{});render();await q(sb.from('checks').upsert({date:it.date,chore_id:it.id,person:it.person,done_at:now()}))}}
+      else{S.checks.set(k,{person:it.person});render();await q(sb.from('checks').upsert({date:it.date,chore_id:it.id,person:it.person,done_at:now()}))}}
     else{var t=S.tasks.find(function(x){return x.id===it.id});if(t){t.done=!it.done;render()}
       await q(sb.from('tasks').update({done:!it.done,done_at:it.done?null:now()}).eq('id',it.id))}
   }catch(e){fail(e)}
@@ -672,6 +680,7 @@ function drawMine(){
   var ap=allPrep(),soon=add(S.day,2);
   var late=ap.filter(function(it){return it.person===S.me&&!it.done&&it.due<S.day}).sort(function(a,b){return a.due.localeCompare(b.due)});
   var free=ap.filter(function(it){return !it.person&&!it.done&&it.due<=soon}).sort(function(a,b){return a.due.localeCompare(b.due)});
+  var oc=openChores(S.day),wsT=weekStart(S.day);
   put('mine',h('h2',null,'việc của '+PN[S.me]+' hôm nay'),
     h('p',{class:'count'},its.length?(left?'còn '+left+' / '+its.length+' việc':'xong hết rồi, an nhé'):'hôm nay chưa có việc nào'),
     its.length?h('ul',{class:'items'},its.map(function(it){return itemEl(it,false)})):null,
@@ -679,13 +688,14 @@ function drawMine(){
     free.length?[h('p',{class:'sub'},'chuẩn bị đón khách, chưa ai nhận'),h('ul',{class:'prep'},free.map(function(it){
       return h('li',{class:it.due<S.day?'late':null},h('span',{class:'tx'},it.text,h('span',{class:'due'},evShort(it.ev)+' · '+dueLabel(it))),
         h('button',{type:'button',class:'claim',onclick:function(){setPrep(it,{person:S.me});toast('Đã nhận: '+it.text+'.')}},'nhận'))}))]:null,
+    oc.length?[h('p',{class:'sub'},'việc thường xuyên hôm nay, chưa ai nhận'),h('ul',{class:'prep'},oc.map(function(c){return claimRow(c,wsT)}))]:null,
     h('p',{class:'meta',style:'margin-top:8px'},'cả tuần: '+st[0]+' / '+st[1]+' việc đã xong'));
 }
 function itemEl(it,withDel){
   var key=it.kind+':'+it.id+':'+it.date;
   return h('li',{class:'it'+(it.done?' done':'')},
     h('input',{type:'checkbox',checked:it.done,'aria-label':it.text,onchange:function(){toggle(it)}}),
-    h('span',{class:'tx'},it.text,it.kind==='c'?h('span',{class:'rp',title:'đầu việc luân phiên'},'↻'):null,
+    h('span',{class:'tx'},it.text,it.kind==='c'?h('span',{class:'rp',title:'việc thường xuyên'},'↻'):null,
       it.kind==='p'?h('span',{class:'ev-l'},h('span',{class:'dot',style:'background:'+kc(it.ev.kind)+';margin-right:5px;width:6px;height:6px'}),evShort(it.ev)+(it.date!==S.day||it.due<S.day?' · '+dueLabel(it):'')):null),
     withDel&&it.kind==='t'?h('button',{type:'button',class:'x'+(S.armed===key?' armed':''),'aria-label':'xoá việc này',onclick:function(){if(arm(key))delRow('tasks',it.id)}},S.armed===key?'xoá?':'×'):null);
 }
@@ -810,9 +820,9 @@ function drawWeek(){
       return h('div',{class:'pblock'},h('h3',null,h('span',{class:'nm'},av(p[0],'sm'),p[1]),h('small',null,its.length?(left?'còn '+left:'xong hết'):'')),
         its.length?h('ul',{class:'items'},its.map(function(it){return itemEl(it,true)})):h('p',{class:'empty'},'không có việc'),
         S.addAt===k?addBox(p[0],s):h('button',{type:'button',class:'add',onclick:function(){S.addAt=k;draw()}},'+ thêm việc cho '+p[1]))}),
-    (function(){var fr=allPrep().filter(function(it){return !it.person&&it.due===s});if(!fr.length)return null;
-      return h('div',{class:'pblock'},h('h3',null,'chưa ai nhận',h('small',null,fr.length+' việc chuẩn bị')),
-        h('ul',{class:'prep'},fr.map(function(it){return h('li',{class:!it.done&&it.due<S.day?'late':null},
+    (function(){var fr=allPrep().filter(function(it){return !it.person&&it.due===s}),fc=openChores(s),wsS=weekStart(s);if(!fr.length&&!fc.length)return null;
+      return h('div',{class:'pblock'},h('h3',null,'chưa ai nhận',h('small',null,(fr.length+fc.length)+' việc')),
+        h('ul',{class:'prep'},fc.map(function(c){return claimRow(c,wsS)}),fr.map(function(it){return h('li',{class:!it.done&&it.due<S.day?'late':null},
           h('span',{class:'tx'},it.text,h('span',{class:'due'},evShort(it.ev))),
           h('button',{type:'button',class:'claim',onclick:function(){setPrep(it,{person:S.me});toast('Đã nhận: '+it.text+'.')}},'nhận'))})));})());
   var fi=document.querySelector('#dayPanel input[data-focus]');if(fi)fi.focus();
@@ -896,24 +906,29 @@ function addBox(p,s){
 function go(n){S.ws=add(S.ws,n);S.sel=S.ws;S.addAt=null;S.assignAt=null;loadRange()}
 
 function drawRot(){
-  var ws=S.ws,ch=sortedChores(),nws=add(ws,7);
-  put('rotList',ch.length?PEOPLE.map(function(p){
-    var mine=ch.filter(function(c){return assignee(c,ws)===p[0]});
-    return h('div',{class:'rot'},h('h3',null,av(p[0],'sm'),p[1]),mine.length?mine.map(function(c){
-      var sel=h('select',{'aria-label':'đổi người cho '+c.text,onchange:function(ev){swap(c,ws,ev.target.value)}},PEOPLE.map(function(x){return h('option',{value:x[0],selected:x[0]===p[0]},x[1])}));
-      return h('div',{class:'rrow'},h('span',null,c.text,h('small',null,choreLabel(c))),sel)}):h('p',{class:'empty'},'tuần này không có đầu việc'));
-  }):h('p',{class:'empty'},S.status==='loading'?'đang tải …':'chưa có đầu việc nào'));
-  put('rotNext',ch.length?['tuần sau ('+dm(nws)+'): ',PEOPLE.map(function(p,i){var n=ch.filter(function(c){return assignee(c,nws)===p[0]});return [h('b',null,p[1]),' '+(n.length?n.map(function(c){return c.text.toLowerCase()}).join(', '):'không có')+(i<2?'. ':'.')]})]:null);
+  var ws=S.ws,ch=sortedChores();
+  var open=ch.filter(function(c){return !assignee(c,ws)}),taken=ch.filter(function(c){return assignee(c,ws)});
+  function row(c){
+    var a=assignee(c,ws);
+    var sel=h('select',{'aria-label':'người nhận: '+c.text,onchange:function(ev){claim(c,ws,ev.target.value||null)}},
+      h('option',{value:'',selected:!a},'chưa ai'),PEOPLE.map(function(x){return h('option',{value:x[0],selected:a===x[0]},x[1])}));
+    return h('div',{class:'rrow'},h('span',{class:'rr-t'},a?av(a,'sm'):null,h('span',null,c.text,h('small',null,choreLabel(c)))),
+      h('span',{class:'rr-a'},a?null:h('button',{type:'button',class:'claim',onclick:function(){claim(c,ws,S.me)}},'nhận'),sel));
+  }
+  put('rotList',ch.length?[
+    open.length?[h('p',{class:'sub'},'chưa ai nhận · '+open.length),h('div',{class:'rot'},open.map(row))]:null,
+    taken.length?[h('p',{class:'sub'},'đã có người nhận · '+taken.length),h('div',{class:'rot'},taken.map(row))]:null
+  ]:h('p',{class:'empty'},S.status==='loading'?'đang tải …':'chưa có đầu việc nào'));
+  put('rotNext',h('span',null,'Đang xem tuần '+dm(ws)+' – '+dm(add(ws,6))+'. Đổi tuần ở mục “việc trong tuần”.'));
   put('choreList',ch.map(function(c){var key='ch:'+c.id;
     return h('div',{class:'chore'},h('span',null,c.text,h('small',null,choreLabel(c))),
       h('button',{type:'button',class:'ghost'+(S.armed===key?' danger':''),onclick:function(){if(arm(key))delRow('chores',c.id)}},S.armed===key?'xoá?':'bỏ'))}));
 }
-async function swap(c,ws,person){
+async function claim(c,ws,person){
   var k=ws+'__'+c.id;
   try{
-    if(person===baseOf(c,ws)){S.swaps.delete(k);render();await q(sb.from('swaps').delete().match({week_start:ws,chore_id:c.id}))}
-    else{S.swaps.set(k,{person:person});render();await q(sb.from('swaps').upsert({week_start:ws,chore_id:c.id,person:person}))}
-    toast(c.text+' tuần này: '+PN[person]+'.');
+    if(!person){S.swaps.delete(k);render();await q(sb.from('swaps').delete().match({week_start:ws,chore_id:c.id}));toast('Đã bỏ nhận: '+c.text+'.')}
+    else{S.swaps.set(k,{week_start:ws,chore_id:c.id,person:person});render();await q(sb.from('swaps').upsert({week_start:ws,chore_id:c.id,person:person}));toast(c.text+' tuần này: '+PN[person]+'.')}
   }catch(e){fail(e)}
 }
 var CF=$('choreForm');
@@ -924,9 +939,7 @@ CF.addEventListener('submit',async function(ev){
   var md=(CF.elements.md.value||'').split(/[^0-9]+/).map(Number).filter(function(n){return n>=1&&n<=31});
   var daily=CF.elements.daily.checked;
   if(!daily&&!days.length&&!md.length){toast('Chọn ít nhất một ngày cho đầu việc.');return}
-  var load=[0,0,0];S.chores.forEach(function(c){load[c.slot||0]+=weight(c)});
-  var slot=load.indexOf(Math.min.apply(null,load));
-  try{await q(sb.from('chores').insert({text:text,daily:daily,days:days,month_days:md,slot:slot,sort:Date.now()}));CF.reset();toast('Đã thêm, tự xếp vào lượt nhẹ việc nhất.');reload()}catch(e){fail(e)}
+  try{await q(sb.from('chores').insert({text:text,daily:daily,days:days,month_days:md,slot:0,sort:Date.now()}));CF.reset();toast('Đã thêm vào việc thường xuyên, chưa ai nhận.');reload()}catch(e){fail(e)}
 });
 
 function drawBacklog(){
@@ -960,7 +973,7 @@ var ICONS={
   bag:'<path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/>'
 };
 function iconEl(k){var e=h('span',{class:'g'});e.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICONS[k]+'</svg>';return e}
-var TABS=[['homnay','hôm nay','home'],['saptoi','sắp tới','cal'],['tuan','tuần','list'],['luanphien','luân phiên','repeat'],['kho','kho','box'],['so','sổ chung','pen'],['mua','cần mua','bag']];
+var TABS=[['homnay','hôm nay','home'],['saptoi','sắp tới','cal'],['tuan','tuần','list'],['luanphien','định kỳ','repeat'],['kho','kho','box'],['so','sổ chung','pen'],['mua','cần mua','bag']];
 var curTab='homnay';
 function drawTabs(){put('tabs',TABS.map(function(t){return h('button',{type:'button','aria-current':String(curTab===t[0]),onclick:function(){$(t[0]).scrollIntoView({block:'start'})}},iconEl(t[2]),t[1])}))}
 if('IntersectionObserver' in window){
@@ -975,7 +988,7 @@ async function loadRange(){
   try{
     var res=await Promise.all([
       q(sb.from('tasks').select('*').gte('date',r[0]).lte('date',r[1])),
-      q(sb.from('checks').select('date,chore_id').gte('date',r[0]).lte('date',r[1])),
+      q(sb.from('checks').select('date,chore_id,person').gte('date',r[0]).lte('date',r[1])),
       q(sb.from('swaps').select('week_start,chore_id,person').gte('week_start',r[0]).lte('week_start',r[1]))]);
     S.tasks=res[0];
     S.checks=new Map(res[1].map(function(x){return [x.date+'__'+x.chore_id,x]}));

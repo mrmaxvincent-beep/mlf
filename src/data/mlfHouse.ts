@@ -108,7 +108,7 @@ export type Invitation = {
 
 export const gopTay = {
   title: "góp tay",
-  heading: "Cùng góp tay làm nên những điều có ý nghĩa",
+  heading: "Cùng góp tay vun đắp những điều tốt đẹp.",
   /** mỗi phần tử là một đoạn */
   intro: [
     "Mộc có những ý tưởng đang chờ được thực hiện. Có việc cần thêm một người có chuyên môn, có việc cần vài bàn tay cùng làm, có việc chỉ cần một người sẵn lòng chia sẻ điều mình biết.",

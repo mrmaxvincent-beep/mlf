@@ -75,7 +75,7 @@ export const people: Person[] = Array.from({ length: 8 }, (_, i) => ({
   season: "mùa [mùa] [năm]",
   order: i,
   metAt: "[nơi gặp]",
-  contributed: "[Vài dòng nhà mộc kể về điều người ấy đã góp, kể như kể chuyện, không liệt kê thành tích.]",
+  contributed: "[Vài dòng nhà mộc kể về điều người ấy đã góp.]",
   quote: "[Một câu chính người ấy viết.]",
   shares: ["[điều có thể chia sẻ]"],
 }));

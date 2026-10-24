@@ -108,7 +108,7 @@ export const gopTay = {
   heading: "Cùng góp tay vun đắp những điều tốt đẹp.",
   /** mỗi phần tử là một đoạn */
   intro: [
-    "Mộc có những ý tưởng đang chờ được thực hiện. Có việc cần thêm một người có chuyên môn, có việc cần vài bàn tay cùng làm, có việc chỉ cần một người sẵn lòng chia sẻ điều mình biết.",
+    "Mộc có những ý tưởng đang chờ được thực hiện.",
     "Ở đây, nhà Mộc mở ra những lời mời đồng hành dành cho những ai thấy mình có thể góp một phần.",
   ],
 };

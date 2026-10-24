@@ -100,12 +100,6 @@ export default function MlfHousePage() {
         </nav>
       </div>
 
-      <Reveal className="wrap mh-intro">
-        {hero.intro.map((p) => (
-          <p key={p}>{p}</p>
-        ))}
-      </Reveal>
-
       <Reveal className="wrap mhr-porch">
         <span className="mh-label">{nguoiCuaNha.title}</span>
         <p>{nguoiCuaNha.text}</p>

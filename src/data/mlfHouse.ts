@@ -8,10 +8,6 @@ export function mailto(subject: string) {
 export const hero = {
   title: "mlf house",
   tagline: "những người làm nên mộc",
-  intro: [
-    "Mộc được dựng nên từ nhiều bàn tay. Có người dựng giúp mái hiên, có người gửi trà từ quê lên, có người góp tiền khi nhà ở Huế còn chưa có móng, có người mở một vòng-trà ở tận tỉnh xa… Phần lớn họ không biết nhau, và nhiều khi nhà mộc cũng chưa kịp nói một lời cảm ơn cho đủ.",
-    "mlf house là nơi ghi lại những người ấy, để mọi người tìm thấy nhau, rồi cùng nhau làm thêm vài việc tử tế.",
-  ],
 };
 
 export const nguoiCuaNha = {

@@ -10,11 +10,6 @@ export const hero = {
   tagline: "những người làm nên mộc",
 };
 
-export const nguoiCuaNha = {
-  title: "ai là người của nhà",
-  text: "Là những ai đã góp cho mộc một phần của mình, bằng công sức, chuyên môn, tài chính, tài nguyên, một mối quen, hay đơn giản là đã ở cạnh mộc nhiều năm. Không có nghĩa vụ gì đi kèm. Góp một lần rồi thôi cũng được, ở lại lâu cũng được.",
-};
-
 export const ghiNhan = {
   title: "ghi nhận",
 };

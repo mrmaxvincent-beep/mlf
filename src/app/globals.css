@@ -3715,9 +3715,6 @@ details[open] > summary .acc-icon {
 @media (max-width: 640px) { .tm27-intro { grid-template-columns: 1fr; } }
 
 /* ── mlf house ── */
-.mh-subnav { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; }
-.mh-subnav a { color: var(--color-stone); padding: 0.45rem 0; }
-.mh-subnav i { color: var(--color-mist); font-style: normal; }
 .mh-col { display: flex; flex-direction: column; gap: 1.4rem; min-width: 0; }
 .mh-lead { margin: 0; font-family: var(--font-sans); font-size: 1.02rem; line-height: 1.85; color: var(--color-ink); }
 .mh-note { margin: 0; font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.8; color: var(--color-ink); }
@@ -3782,10 +3779,7 @@ details[open] > summary .acc-icon {
     }
 
 /* ── mlf house · ngôi nhà ba gian ── */
-.mhr-porch { margin-top: 3rem; margin-bottom: 4.5rem; }
-.mhr-porch > * { padding-left: 1.25rem; border-left: 2px solid var(--color-cham-dem); }
-.mhr-porch p { max-width: 60ch; margin: 0; padding-top: 0.6rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.6; color: var(--color-ink); }
-.mhr { margin-bottom: 1rem; scroll-margin-top: 90px; }
+.mhr { margin-top: 2.5rem; margin-bottom: 1rem; scroll-margin-top: 90px; }
 .mhr-house { position: relative; color: var(--color-ink); }
 .mhr-roof { display: block; width: 100%; height: clamp(54px, 9vw, 112px); }
 .mhr-bays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 3%; border-left: 1.5px solid var(--color-ink); }
@@ -3813,5 +3807,4 @@ details[open] > summary .acc-icon {
   .mhr-num { font-size: 0.54rem; letter-spacing: 0.1em; }
   .mhr-cols { grid-template-columns: 1fr; gap: 1.75rem; }
   .mhr-room { padding: 2rem 1rem 2.5rem; }
-  .mhr-porch { margin-bottom: 3rem; }
-}
+  }

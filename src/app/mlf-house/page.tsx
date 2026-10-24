@@ -7,7 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import { MlfHousePeople } from "@/components/MlfHousePeople";
 import { MlfHouseRooms } from "@/components/MlfHouseRooms";
 import { routes } from "@/lib/nav";
-import { closing, contactEmail, ghiNhan, gopTay, hero, invitations, ketNoi, mailto, nguoiCuaNha } from "@/data/mlfHouse";
+import { closing, contactEmail, ghiNhan, gopTay, hero, invitations, ketNoi, mailto } from "@/data/mlfHouse";
 
 export const metadata: Metadata = {
   title: "mlf house",
@@ -91,19 +91,8 @@ export default function MlfHousePage() {
           {hero.title}
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>{hero.tagline}</p>
-        <nav className="mh-subnav" aria-label="ba gian của mlf house">
-          <a href="#ghi-nhan" className="mono-link">ghi nhận</a>
-          <i>/</i>
-          <a href="#ket-noi" className="mono-link">kết nối</a>
-          <i>/</i>
-          <a href="#gop-tay" className="mono-link">góp tay</a>
-        </nav>
       </div>
 
-      <Reveal className="wrap mhr-porch">
-        <span className="mh-label">{nguoiCuaNha.title}</span>
-        <p>{nguoiCuaNha.text}</p>
-      </Reveal>
 
       {/* ba gian */}
       <div className="wrap">

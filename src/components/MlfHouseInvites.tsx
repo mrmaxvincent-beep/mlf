@@ -62,7 +62,7 @@ export function MlfHouseInvites() {
             <dd>{inv.how}</dd>
           </div>
           <div>
-            <dt>hình thức</dt>
+            <dt>sự ghi nhận / quyền lợi</dt>
             <dd>{inv.form}</dd>
           </div>
           <div>

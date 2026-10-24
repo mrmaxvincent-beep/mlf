@@ -3,12 +3,7 @@ export const contactEmail = "hello@moclittlefarm.com";
 /** Thư soạn sẵn: tiêu đề + vài dòng gợi ý để người gửi chỉ cần điền thêm. */
 export type MailDraft = { subject: string; body: string };
 
-/** Mở khung soạn thư của Gmail trên web (phần lớn người dùng dùng Gmail). */
-export function gmailLink({ subject, body }: MailDraft) {
-  return `https://mail.google.com/mail/?view=cm&fs=1&to=${contactEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-
-/** Dành cho ai dùng ứng dụng mail cài trên máy (Outlook, Mail…). */
+/** Mở ứng dụng mail với thư đã soạn sẵn (người nhận, tiêu đề, vài dòng gợi ý). */
 export function mailtoLink({ subject, body }: MailDraft) {
   return `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }

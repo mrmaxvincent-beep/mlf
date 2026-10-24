@@ -30,6 +30,7 @@ export default function MlfHousePage() {
       <div className="mh-col">
         <p className="mh-lead">{ketNoi.intro}</p>
         <p className="mh-lead">{ketNoi.rule}</p>
+        <p className="mh-note mh-caution">{ketNoi.circle}</p>
         <MailChoice label="xin được giới thiệu" draft={drafts.gioiThieu()} />
       </div>
       <aside className="mhr-aside">

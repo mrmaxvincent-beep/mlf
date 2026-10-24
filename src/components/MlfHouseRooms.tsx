@@ -86,7 +86,6 @@ export function MlfHouseRooms({ rooms }: { rooms: Room[] }) {
                 onClick={() => open(r.id)}
                 onKeyDown={(e) => onKey(e, i)}
               >
-                <span className="mhr-num">gian {String(i + 1).padStart(2, "0")}</span>
                 <span className="mhr-name">{r.name}</span>
                 <span className="mhr-sub">{r.sub}</span>
               </button>

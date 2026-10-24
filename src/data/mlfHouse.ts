@@ -1,9 +1,38 @@
 export const contactEmail = "hello@moclittlefarm.com";
 
-/** Mở thư gửi nhà mộc, tiêu đề điền sẵn theo từng việc. */
-export function mailto(subject: string) {
-  return `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}`;
+/** Thư soạn sẵn: tiêu đề + vài dòng gợi ý để người gửi chỉ cần điền thêm. */
+export type MailDraft = { subject: string; body: string };
+
+/** Mở khung soạn thư của Gmail trên web (phần lớn người dùng dùng Gmail). */
+export function gmailLink({ subject, body }: MailDraft) {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${contactEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+/** Dành cho ai dùng ứng dụng mail cài trên máy (Outlook, Mail…). */
+export function mailtoLink({ subject, body }: MailDraft) {
+  return `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+const sign = "\n\nCảm ơn nhà mộc.";
+
+export const drafts = {
+  gioiThieu: (who?: string): MailDraft => ({
+    subject: who ? `xin được giới thiệu: ${who}` : "xin được giới thiệu",
+    body: `Chào nhà mộc,\n\nMình tên là: \nMình đang sống ở: \nMình muốn được giới thiệu với: ${who ?? "(một người, hoặc ai đó cùng nơi ở / cùng nghề)"}\nVì sao mình muốn gặp: ${sign}`,
+  }),
+  gopTay: (task: string): MailDraft => ({
+    subject: `góp tay: ${task}`,
+    body: `Chào nhà mộc,\n\nMình tên là: \nMình muốn góp tay cho việc: ${task}\nMình có thể góp bằng: \nThời gian mình có: ${sign}`,
+  }),
+  deXuat: (): MailDraft => ({
+    subject: "đề xuất một việc cần góp tay",
+    body: `Chào nhà mộc,\n\nMình tên là: \nViệc mình muốn rủ mọi người cùng làm: \nVì sao: \nĐang cần những gì: \nKhi nào: ${sign}`,
+  }),
+  nguoiCuaNha: (): MailDraft => ({
+    subject: "mình là người của nhà",
+    body: `Chào nhà mộc,\n\nMình tên là: \nMình gặp mộc vào: \nĐiều mình đã góp cho mộc: ${sign}`,
+  }),
+};
 
 export const hero = {
   title: "mlf house",
@@ -19,23 +48,22 @@ export type Person = {
   name: string;
   place: string;
   job: string;
-  /** mùa và năm gặp mộc, vd "mùa mưa 2023"; dùng để xếp thứ tự */
+  /** mùa và năm gặp mộc, vd "mùa mưa 2023" */
   season: string;
-  /** năm và thứ tự trong năm để sắp xếp (cũ trước) */
+  /** thứ tự theo mùa đến (cũ trước) */
   order: number;
   /** nơi gặp mộc, vd "Măng Đen" */
   metAt?: string;
-  /** để trống nếu người ấy không muốn để ảnh */
+  /** để trống nếu người ấy không muốn để ảnh; ảnh hiện trắng đen */
   img?: string;
   contributed: string;
   quote?: string;
   shares: string[];
-  seeks: string[];
 };
 
 /**
  * Danh sách người của nhà. Hiện là các ô mẫu để giữ chỗ, thay bằng người thật khi đã được từng người đồng ý.
- * Mỗi người: tên, nơi sống, nghề, mùa gặp mộc, điều đã góp, một câu chính người ấy viết, điều có thể chia sẻ, điều đang tìm.
+ * Mỗi người: tên, nơi sống, nghề, mùa gặp mộc, điều đã góp, một câu chính người ấy viết, điều có thể chia sẻ.
  */
 export const people: Person[] = Array.from({ length: 8 }, (_, i) => ({
   id: `mau-${i + 1}`,
@@ -48,17 +76,17 @@ export const people: Person[] = Array.from({ length: 8 }, (_, i) => ({
   contributed: "[Vài dòng nhà mộc kể về điều người ấy đã góp, kể như kể chuyện, không liệt kê thành tích.]",
   quote: "[Một câu chính người ấy viết.]",
   shares: ["[điều có thể chia sẻ]"],
-  seeks: ["[điều đang tìm]"],
 }));
 
 export const ketNoi = {
   title: "kết nối",
-  intro: "Bạn có thể tìm người theo nơi ở, theo nghề, theo điều họ có thể chia sẻ hoặc điều họ đang tìm. Người ở Huế biết ai cũng đang ở Huế, người làm kiến trúc gặp được người cùng nghề…",
+  intro: "Bạn có thể tìm người theo nơi ở, theo nghề, hay theo điều họ có thể chia sẻ. Người ở Huế biết ai cũng đang ở Huế, người làm kiến trúc gặp được người cùng nghề…",
   rule: "Nhà không để số điện thoại hay email công khai. Muốn gặp ai, bạn nhắn mlf, mlf hỏi ý người kia rồi mới giới thiệu. Danh sách này không dùng để mời chào hay bán hàng.",
   offline: "Gặp nhau ngoài đời thì vẫn quý hơn, ở trăng-yên mỗi tháng tại Huế, ở các vòng-trà-tâm, hay ở một bữa cơm theo vùng mỗi năm một lần.",
 };
 
 export type Invitation = {
+  id: string;
   title: string;
   status: "open" | "done";
   why: string;
@@ -70,11 +98,12 @@ export type Invitation = {
 
 export const gopTay = {
   title: "góp tay",
-  intro: "Đây là chỗ mlf đặt những việc đang cần thêm người, và bạn cũng có thể đề xuất việc của mình. Mỗi lời mời ghi rõ việc gì, vì sao làm, đang cần gì, góp bằng cách nào, có thù lao hay là góp tay, và khi nào khép lại. Việc làm xong, nhà mộc sẽ kể lại chuyện đã thành ra sao, và những người góp tay được ghi vào phần ghi nhận.",
+  intro: "Đây là chỗ mlf đặt những việc đang cần thêm người, và bạn cũng có thể đề xuất việc của mình. Mỗi lời mời ghi rõ việc gì, vì sao làm, đang cần gì, góp bằng cách nào, có thù lao hay là góp tay, và khi nào khép lại.",
 };
 
 export const invitations: Invitation[] = [
   {
+    id: "mlf-hue-2027",
     title: "dựng mlf ở Huế, năm 2027",
     status: "open",
     why: "[vài dòng về ý nghĩa của việc này]",

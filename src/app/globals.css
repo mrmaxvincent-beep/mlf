@@ -3734,18 +3734,18 @@ details[open] > summary .acc-icon {
 .mh-chip.on { background: var(--color-ink); border-color: var(--color-ink); color: #fff; }
 .mh-val.on { background: var(--color-cham-dem); border-color: var(--color-cham-dem); color: #fff; }
 .mh-count { margin: 1.5rem 0 1.25rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-stone); }
-.mh-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2.75rem 1.75rem; }
-.mh-card { all: unset; box-sizing: border-box; display: flex; flex-direction: column; gap: 0.55rem; width: 100%; cursor: pointer; }
+.mh-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 2.25rem 1.5rem; }
+.mh-card { all: unset; box-sizing: border-box; display: flex; flex-direction: column; gap: 0.35rem; width: 100%; cursor: pointer; text-align: center; }
 .mh-card:focus-visible { outline: 2px solid var(--color-cham); outline-offset: 4px; }
 .mh-card:hover .mh-name { color: var(--color-cham); }
 .mh-where { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-cham-dem); margin-top: 0.35rem; }
-.mh-name { font-family: var(--font-serif); font-style: italic; font-size: 1.55rem; line-height: 1.15; color: var(--color-ink); transition: color 0.2s; }
-.mh-season { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-stone); }
+.mh-name { font-family: var(--font-serif); font-style: italic; font-size: 1.12rem; line-height: 1.25; color: var(--color-ink); margin-top: 0.55rem; transition: color 0.2s; }
+.mh-season { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.04em; line-height: 1.6; color: var(--color-stone); }
 
 /* chi tiết một người, mở ngay trên trang */
 .mh-dialog { margin: auto; inset: 0; border: 0; padding: 0; width: min(880px, calc(100vw - 32px)); max-height: calc(100vh - 48px); background: #fff; color: var(--color-ink); box-shadow: 0 24px 64px rgba(35, 46, 63, 0.18); }
 .mh-dialog::backdrop { background: rgba(35, 46, 63, 0.35); }
-.mh-sheet { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 2.25rem; padding: 2.25rem; }
+.mh-sheet { position: relative; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 2.25rem; padding: 2.25rem; align-items: start; }
 .mh-close { position: absolute; top: 0.5rem; right: 0.5rem; width: 44px; height: 44px; border: 0; background: transparent; font-size: 1.6rem; line-height: 1; color: var(--color-stone); cursor: pointer; }
 .mh-close:hover { color: var(--color-ink); }
 .mh-sheet-body { display: flex; flex-direction: column; gap: 0.65rem; min-width: 0; }
@@ -3761,7 +3761,7 @@ details[open] > summary .acc-icon {
 .mh-hint { font-family: var(--font-sans); font-size: 0.8rem; color: var(--color-stone); }
 
 /* góp tay */
-.mh-invite { background: #fff; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.mh-invite { background: #fff; border: 1px solid var(--color-mist); padding: 1.6rem; display: flex; flex-direction: column; gap: 0.9rem; }
 .mh-invite h3 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3.4vw, 2.1rem); line-height: 1.15; }
 .mh-propose { align-self: flex-start; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); padding: 0.5rem 0; }
 
@@ -3771,10 +3771,10 @@ details[open] > summary .acc-icon {
 
 @media (max-width: 760px) {
     .mh-sheet { grid-template-columns: 1fr; padding: 1.5rem 1.25rem 1.75rem; gap: 1.25rem; }
-  .mh-sheet-img { max-width: 260px; }
+  .mh-sheet-img { max-width: 180px; }
   .mh-dialog { max-height: calc(100vh - 24px); }
-  .mh-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
-  .mh-name { font-size: 1.3rem; }
+  .mh-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem 0.9rem; }
+  .mh-name { font-size: 1rem; }
   .mh-invite { padding: 1.5rem 1.25rem; }
     }
 
@@ -3784,19 +3784,17 @@ details[open] > summary .acc-icon {
 .mhr-roof { display: block; width: 100%; height: clamp(54px, 9vw, 112px); }
 .mhr-bays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 3%; border-left: 1.5px solid var(--color-ink); }
 .mhr-bay { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0.35rem; min-height: 132px; padding: 1.5rem 0.75rem 1.4rem; border: 0; border-right: 1.5px solid var(--color-ink); border-bottom: 1.5px solid var(--color-ink); background: transparent; color: var(--color-ink); text-align: center; cursor: pointer; transition: background 0.25s ease; }
-.mhr-bay:hover { background: color-mix(in srgb, var(--color-cotton) 55%, transparent); }
+.mhr-bay:hover { background: rgba(255, 255, 255, 0.55); }
 .mhr-bay:focus-visible { outline: 2px solid var(--color-cham); outline-offset: -6px; }
-.mhr-bay.on { background: var(--color-cotton); border-bottom-color: transparent; }
+.mhr-bay.on { background: #fff; border-bottom-color: transparent; }
 .mhr-bay.on::before { content: ""; position: absolute; top: 0.75rem; left: 50%; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--color-cham-dem); }
-.mhr-num { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-stone); }
-.mhr-bay.on .mhr-num { color: var(--color-cham-dem); }
 .mhr-name { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.45rem, 3.4vw, 2.2rem); line-height: 1.1; }
 .mhr-sub { font-family: var(--font-sans); font-size: 0.84rem; line-height: 1.5; color: var(--color-ink); max-width: 22ch; }
-.mhr-room { margin: 0 3%; padding: 3rem clamp(1.25rem, 4vw, 3rem) 3.5rem; background: var(--color-cotton); border: 1.5px solid var(--color-ink); border-top: 0; animation: mhrIn 0.28s ease; }
+.mhr-room { margin: 0 3%; padding: 3rem clamp(1.25rem, 4vw, 3rem) 3.5rem; background: #fff; border: 1.5px solid var(--color-ink); border-top: 0; animation: mhrIn 0.28s ease; }
 .mhr-room:focus-visible { outline: 2px solid var(--color-cham); outline-offset: 2px; }
 @keyframes mhrIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .mhr-cols { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 3rem; align-items: start; }
-.mhr-aside { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.5rem; background: #fff; }
+.mhr-aside { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.5rem; border: 1px solid var(--color-mist); }
 .mhr-narrow { max-width: 62ch; }
 .mhr-room .mh-filter .mh-chip:not(.on) { background: #fff; }
 @media (prefers-reduced-motion: reduce) { .mhr-room { animation: none; } .mhr-bay { transition: none; } }
@@ -3804,7 +3802,33 @@ details[open] > summary .acc-icon {
   .mhr-bays, .mhr-room { margin: 0; }
   .mhr-bay { min-height: 112px; padding: 1.25rem 0.35rem 1rem; gap: 0.25rem; }
   .mhr-sub { display: none; }
-  .mhr-num { font-size: 0.54rem; letter-spacing: 0.1em; }
-  .mhr-cols { grid-template-columns: 1fr; gap: 1.75rem; }
+    .mhr-cols { grid-template-columns: 1fr; gap: 1.75rem; }
   .mhr-room { padding: 2rem 1rem 2.5rem; }
   }
+
+/* chân dung: khung mảnh, ảnh trắng đen; không có ảnh thì là chữ lồng */
+.mh-portrait { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; background: #f6f6f5; border: 1px solid var(--color-mist); overflow: hidden; }
+.mh-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.03); transition: filter 0.4s ease; }
+.mh-card:hover .mh-portrait img { filter: grayscale(0.6) contrast(1.03); }
+.mh-mono { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 1.9rem; letter-spacing: 0.04em; color: var(--color-stone); }
+.mh-sheet-img .mh-mono { font-size: 3rem; }
+
+/* góp tay: nhiều lời mời */
+.mh-invites { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.25rem; }
+.mh-more summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); padding: 0.4rem 0; list-style: none; }
+.mh-more summary::-webkit-details-marker { display: none; }
+.mh-more summary::before { content: "+ "; }
+.mh-more[open] summary::before { content: "– "; }
+.mh-propose { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1rem; margin-top: 0.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-mist); }
+.mh-propose p { margin: 0; font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-ink); }
+
+/* liên hệ: Gmail / ứng dụng mail / chép địa chỉ */
+.mc { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+.mc > button.cta-btn { cursor: pointer; }
+.mc-link { border: 0; background: none; padding: 0.5rem 0; cursor: pointer; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); }
+.mc-opts { display: flex; flex-direction: column; min-width: min(320px, 100%); border: 1px solid var(--color-mist); background: #fff; animation: mhrIn 0.2s ease; }
+.mc-opt { display: block; width: 100%; text-align: left; padding: 0.8rem 1rem; min-height: 44px; border: 0; border-bottom: 1px solid var(--color-mist); background: #fff; color: var(--color-ink); font-family: var(--font-sans); font-size: 0.9rem; text-decoration: none; cursor: pointer; }
+.mc-opt:hover { background: #f6f6f5; }
+.mc-opt--main { font-weight: 500; }
+.mc-hint { padding: 0.7rem 1rem; font-family: var(--font-sans); font-size: 0.78rem; line-height: 1.55; color: var(--color-stone); }
+.mh-closing .mc { align-items: center; }

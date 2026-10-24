@@ -1,28 +1,49 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
-import { mailto, people, type Person } from "@/data/mlfHouse";
+import { MailChoice } from "@/components/MailChoice";
+import { drafts, people, type Person } from "@/data/mlfHouse";
 
-type Dim = "all" | "place" | "job" | "shares" | "seeks";
+type Dim = "all" | "place" | "job" | "shares";
 
 const DIMS: { id: Dim; label: string }[] = [
   { id: "all", label: "tất cả" },
   { id: "place", label: "nơi ở" },
   { id: "job", label: "nghề" },
   { id: "shares", label: "có thể chia sẻ" },
-  { id: "seeks", label: "đang tìm" },
 ];
 
 function valuesOf(p: Person, d: Dim): string[] {
   if (d === "place") return [p.place];
   if (d === "job") return [p.job];
   if (d === "shares") return p.shares;
-  if (d === "seeks") return p.seeks;
   return [];
 }
 
-/** Lưới chân dung (ghi nhận) + bộ lọc (kết nối) + chi tiết mở ngay trên trang. */
+/** Chữ lồng từ hai chữ cái đầu, dùng khi người ấy không để ảnh. */
+function monogram(name: string) {
+  const words = name.replace(/[^\p{L}\s]/gu, " ").trim().split(/\s+/).filter(Boolean);
+  if (!words.length) return "·";
+  const pick = words.length > 1 ? [words[0], words[words.length - 1]] : [words[0]];
+  return pick.map((w) => w.charAt(0).toUpperCase()).join("");
+}
+
+function Portrait({ p }: { p: Person }) {
+  return (
+    <span className="mh-portrait">
+      {p.img ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={p.img} alt={p.name} loading="lazy" />
+      ) : (
+        <span className="mh-mono" aria-hidden="true">
+          {monogram(p.name)}
+        </span>
+      )}
+    </span>
+  );
+}
+
+/** Ghi nhận: lưới chân dung nhỏ, trắng đen, xếp theo mùa đến. Bấm một người để đọc chuyện, ngay trên trang. */
 export function MlfHousePeople() {
   const [dim, setDim] = useState<Dim>("all");
   const [val, setVal] = useState<string | null>(null);
@@ -71,18 +92,17 @@ export function MlfHousePeople() {
         </div>
       ) : null}
 
-      <p className="mh-count">{shown.length} người</p>
+      <p className="mh-count">{shown.length} người · xếp theo mùa đến</p>
 
       <ul className="mh-grid">
         {shown.map((p) => (
           <li key={p.id}>
             <button type="button" className="mh-card" onClick={() => setOpen(p)} aria-haspopup="dialog">
-              <ImagePlaceholder label={p.img ? p.name : "ảnh chân dung"} aspectRatio="4/5" src={p.img} alt={p.name} style={{ width: "100%", height: "auto" }} />
-              <span className="mh-where">
-                {p.place} · {p.job}
-              </span>
+              <Portrait p={p} />
               <span className="mh-name">{p.name}</span>
-              <span className="mh-season">{p.season}</span>
+              <span className="mh-season">
+                {p.place} · {p.season}
+              </span>
             </button>
           </li>
         ))}
@@ -95,7 +115,7 @@ export function MlfHousePeople() {
               ×
             </button>
             <div className="mh-sheet-img">
-              <ImagePlaceholder label="ảnh chân dung 4:5" aspectRatio="4/5" src={open.img} alt={open.name} style={{ width: "100%", height: "auto" }} />
+              <Portrait p={open} />
             </div>
             <div className="mh-sheet-body">
               <span className="mh-where">
@@ -117,15 +137,11 @@ export function MlfHousePeople() {
                   <dt>có thể chia sẻ</dt>
                   <dd>{open.shares.join(" · ")}</dd>
                 </div>
-                <div>
-                  <dt>đang tìm</dt>
-                  <dd>{open.seeks.join(" · ")}</dd>
-                </div>
               </dl>
 
-              <a className="cta-btn cta-btn--solid mh-intro-btn" href={mailto(`xin được giới thiệu: ${open.name}`)}>
-                xin được giới thiệu <span className="ar">→</span>
-              </a>
+              <div className="mh-intro-btn">
+                <MailChoice label="xin được giới thiệu" draft={drafts.gioiThieu(open.name)} />
+              </div>
               <span className="mh-hint">mlf sẽ hỏi ý người ấy trước khi giới thiệu.</span>
             </div>
           </div>

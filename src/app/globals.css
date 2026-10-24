@@ -3782,7 +3782,7 @@ details[open] > summary .acc-icon {
 .mhr { margin-top: 2.5rem; margin-bottom: 1rem; scroll-margin-top: 90px; }
 .mhr-house { position: relative; color: var(--color-ink); }
 .mhr-roof { display: block; width: 100%; height: clamp(54px, 9vw, 112px); }
-.mhr-bays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 3%; border-left: 1.5px solid var(--color-ink); }
+.mhr-bays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 3%; border-left: 1.5px solid var(--color-ink); border-top: 1.5px solid var(--color-ink); }
 .mhr-bay { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0.15rem; min-height: 0; padding: 0.95rem 0.75rem 0.9rem; border: 0; border-right: 1.5px solid var(--color-ink); border-bottom: 1.5px solid var(--color-ink); background: transparent; color: var(--color-ink); text-align: center; cursor: pointer; transition: background 0.25s ease; }
 .mhr-bay:hover { background: rgba(255, 255, 255, 0.55); }
 .mhr-bay:focus-visible { outline: 2px solid var(--color-cham); outline-offset: -6px; }

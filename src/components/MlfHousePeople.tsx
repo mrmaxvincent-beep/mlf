@@ -21,6 +21,17 @@ function valuesOf(p: Person, d: Dim): string[] {
   return [];
 }
 
+/** Xếp theo thứ tự abc của tên gọi (từ cuối), sau đó đến họ và tên đệm, theo cách sắp chữ tiếng Việt. */
+function byName(a: Person, b: Person) {
+  const key = (n: string) => {
+    const w = n.trim().split(/\s+/);
+    return [w[w.length - 1], w.slice(0, -1).join(" ")];
+  };
+  const [ga, ra] = key(a.name);
+  const [gb, rb] = key(b.name);
+  return ga.localeCompare(gb, "vi") || ra.localeCompare(rb, "vi");
+}
+
 /** Chữ lồng từ hai chữ cái đầu, dùng khi người ấy không để ảnh. */
 function monogram(name: string) {
   const words = name
@@ -56,10 +67,7 @@ export function MlfHousePeople() {
   const [open, setOpen] = useState<Person | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const sorted = useMemo(
-    () => [...people].sort((a, b) => a.order - b.order),
-    [],
-  );
+  const sorted = useMemo(() => [...people].sort(byName), []);
   const values = useMemo(() => {
     if (dim === "all") return [];
     return Array.from(new Set(sorted.flatMap((p) => valuesOf(p, dim)))).sort(
@@ -124,8 +132,6 @@ export function MlfHousePeople() {
           ) : null}
         </>
       ) : null}
-
-      <p className="mh-count">{shown.length} người · xếp theo mùa đến</p>
 
       <ul className="mh-grid">
         {shown.map((p) => (

@@ -35,7 +35,7 @@ export const ghiNhan = {
   heading: "Trân trọng những người đã góp phần làm nên Mộc",
   /** mỗi phần tử là một đoạn */
   thanks: [
-    "Mỗi người đến với mlf bằng một cách khác nhau. Có người đã đồng hành từ những ngày đầu, có người góp sức trong một dự án, có người nâng đỡ Mộc bằng chuyên môn, nguồn lực hay một sự hiện diện đúng lúc.",
+    "Mỗi người đến với mlf bằng một cái duyên.",
     "Chúng tôi muốn lưu lại những gương mặt ấy như một lời cảm ơn - dành cho những người đã góp một phần của mình để Mộc có thể tiếp tục lớn lên.",
   ],
 };
@@ -47,8 +47,6 @@ export type Person = {
   job: string;
   /** mùa và năm gặp mộc, vd "mùa mưa 2023" */
   season: string;
-  /** thứ tự theo mùa đến (cũ trước) */
-  order: number;
   /** nơi gặp mộc, vd "Măng Đen" */
   metAt?: string;
   /** để trống nếu người ấy không muốn để ảnh; ảnh hiện trắng đen */
@@ -68,7 +66,6 @@ export const people: Person[] = Array.from({ length: 8 }, (_, i) => ({
   place: "[nơi sống]",
   job: "[nghề]",
   season: "mùa [mùa] [năm]",
-  order: i,
   metAt: "[nơi gặp]",
   contributed: "[Vài dòng nhà mộc kể về điều người ấy đã góp.]",
   quote: "[Một câu chính người ấy viết.]",

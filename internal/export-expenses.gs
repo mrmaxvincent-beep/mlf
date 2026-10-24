@@ -29,11 +29,12 @@ function exportExpenses() {
 
   var ss = SpreadsheetApp.getActive();
   var sh = ss.getSheetByName(TAB) || ss.insertSheet(TAB);
-  var head = ['Ngày', 'Số tiền', 'Thuộc về', 'Nhóm', 'Hạng mục', 'Người chi / nguồn tiền', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
+  var head = ['Ngày', 'Số tiền', 'Nội dung', 'Thuộc về', 'Nhóm', 'Hạng mục', 'Người chi / nguồn tiền', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
   var data = rows.map(function (e) {
     return [
       new Date(e.spent_on + 'T00:00:00'),
       Number(e.amount),
+      e.noi_dung || '',
       e.scope || 'Vận hành chung',
       e.grp,
       e.item,
@@ -48,12 +49,12 @@ function exportExpenses() {
   if (data.length) {
     sh.getRange(2, 1, data.length, head.length).setValues(data);
     sh.getRange(2, 1, data.length, 1).setNumberFormat('dd/mm/yyyy');
-    sh.getRange(2, 9, data.length, 1).setNumberFormat('dd/mm/yyyy');
+    sh.getRange(2, 10, data.length, 1).setNumberFormat('dd/mm/yyyy');
     sh.getRange(2, 2, data.length, 1).setNumberFormat('#,##0');
   }
   sh.setFrozenRows(1);
   sh.autoResizeColumns(1, head.length);
-  sh.getRange(1, 11).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
+  sh.getRange(1, 12).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
 }
 
 function setup() {

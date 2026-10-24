@@ -32,26 +32,27 @@ function exportExpenses() {
   var head = ['Ngày', 'Số tiền', 'Nhóm', 'Hạng mục', 'Người chi', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
   var data = rows.map(function (e) {
     return [
-      e.spent_on,
+      new Date(e.spent_on + 'T00:00:00'),
       Number(e.amount),
       e.grp,
       e.item,
       NAMES[e.paid_by] || e.paid_by,
       e.note || '',
       e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
-      e.reimbursed_at ? Utilities.formatDate(new Date(e.reimbursed_at), 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd') : ''
+      e.reimbursed_at ? new Date(Utilities.formatDate(new Date(e.reimbursed_at), 'Asia/Ho_Chi_Minh', "yyyy-MM-dd'T'00:00:00")) : ''
     ];
   });
   sh.clear();
   sh.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold');
   if (data.length) {
     sh.getRange(2, 1, data.length, head.length).setValues(data);
-    sh.getRange(2, 1, data.length, 1).setNumberFormat('yyyy-mm-dd');
+    sh.getRange(2, 1, data.length, 1).setNumberFormat('dd/mm/yyyy');
+    sh.getRange(2, 8, data.length, 1).setNumberFormat('dd/mm/yyyy');
     sh.getRange(2, 2, data.length, 1).setNumberFormat('#,##0');
   }
   sh.setFrozenRows(1);
   sh.autoResizeColumns(1, head.length);
-  sh.getRange(1, 10).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd HH:mm'));
+  sh.getRange(1, 10).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
 }
 
 function setup() {

@@ -1302,12 +1302,13 @@ XF.addEventListener('submit',async function(ev){
     render();
   }catch(x){fail(x)}
 });
+function dmy(s){var p=s.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
 $('expExport').addEventListener('click',function(){
   var rows=expMonthRows().sort(function(a,b){return a.spent_on.localeCompare(b.spent_on)||String(a.created_at).localeCompare(String(b.created_at))});
   if(!rows.length){toast('Tháng này chưa có khoản chi để xuất.');return}
   function cell(v){v=v==null?'':String(v);return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
   var lines=[['Ngày','Số tiền','Nhóm','Hạng mục','Người chi','Ghi chú','Hoàn lại']].concat(rows.map(function(e){
-    return [e.spent_on,e.amount,e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.reimbursed?'đã hoàn':'chờ hoàn']}));
+    return [dmy(e.spent_on),e.amount,e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.reimbursed?'đã hoàn':'chờ hoàn']}));
   var csv='﻿'+lines.map(function(l){return l.map(cell).join(',')}).join('\r\n');
   var a=h('a',{href:URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),download:'chi-tieu-'+S.expMonth+'.csv'});
   document.body.append(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);

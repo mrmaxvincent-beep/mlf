@@ -3713,3 +3713,84 @@ details[open] > summary .acc-icon {
 .tm27-intro-text .tm27-mot-line { margin: 0 0 0.6rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 1.05rem; line-height: 1.75; color: var(--color-ink); }
 .tm27-intro-text .tm27-bridge-line { margin: 1.1rem 0 0; font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.9; color: var(--color-ink); }
 @media (max-width: 640px) { .tm27-intro { grid-template-columns: 1fr; } }
+
+/* ── mlf house ── */
+.mh-subnav { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.mh-subnav a { color: var(--color-stone); padding: 0.45rem 0; }
+.mh-subnav i { color: var(--color-mist); font-style: normal; }
+.mh-intro { margin-top: 3rem; margin-bottom: 5rem; }
+.mh-intro p { max-width: 62ch; margin: 0 0 1.25rem; font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.9; color: var(--color-ink); text-align: justify; }
+.mh-band { background: var(--color-cotton); padding: 4.5rem 0; }
+.mh-sec { padding: 5.5rem 0; }
+.mh-sec--line { border-top: 1px solid var(--color-mist); }
+.mh-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2.5rem; align-items: start; }
+.mh-split--end { align-items: end; margin-bottom: 2.5rem; }
+.mh-head { display: flex; flex-direction: column; gap: 0.6rem; }
+.mh-num { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; color: var(--color-cham-dem); }
+.mh-head h2 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.9rem, 4vw, 2.5rem); line-height: 1.1; color: var(--color-ink); }
+.mh-col { display: flex; flex-direction: column; gap: 1.4rem; min-width: 0; }
+.mh-lead { margin: 0; font-family: var(--font-sans); font-size: 1.02rem; line-height: 1.85; color: var(--color-ink); }
+.mh-note { margin: 0; font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.8; color: var(--color-ink); }
+.mh-label { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cham-dem); }
+.mh-links { display: flex; gap: 0.6rem; align-items: baseline; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.mh-links i { color: var(--color-mist); font-style: normal; }
+.mh-cta { align-self: flex-start; }
+
+/* bộ lọc + lưới chân dung */
+.mh-filter, .mh-values { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.mh-values { margin-top: 0.75rem; }
+.mh-chip, .mh-val { font-family: var(--font-sans); font-size: 0.88rem; font-weight: 300; min-height: 44px; padding: 0.55rem 1rem; border-radius: 999px; border: 1px solid var(--color-mist); background: #fff; color: var(--color-ink); cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.mh-val { min-height: 38px; font-size: 0.82rem; background: transparent; }
+.mh-chip:hover, .mh-val:hover { border-color: var(--color-stone); }
+.mh-chip.on { background: var(--color-ink); border-color: var(--color-ink); color: #fff; }
+.mh-val.on { background: var(--color-cham-dem); border-color: var(--color-cham-dem); color: #fff; }
+.mh-count { margin: 1.5rem 0 1.25rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-stone); }
+.mh-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2.75rem 1.75rem; }
+.mh-card { all: unset; box-sizing: border-box; display: flex; flex-direction: column; gap: 0.55rem; width: 100%; cursor: pointer; }
+.mh-card:focus-visible { outline: 2px solid var(--color-cham); outline-offset: 4px; }
+.mh-card:hover .mh-name { color: var(--color-cham); }
+.mh-where { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-cham-dem); margin-top: 0.35rem; }
+.mh-name { font-family: var(--font-serif); font-style: italic; font-size: 1.55rem; line-height: 1.15; color: var(--color-ink); transition: color 0.2s; }
+.mh-season { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-stone); }
+
+/* chi tiết một người, mở ngay trên trang */
+.mh-dialog { margin: auto; inset: 0; border: 0; padding: 0; width: min(880px, calc(100vw - 32px)); max-height: calc(100vh - 48px); background: #fff; color: var(--color-ink); box-shadow: 0 24px 64px rgba(35, 46, 63, 0.18); }
+.mh-dialog::backdrop { background: rgba(35, 46, 63, 0.35); }
+.mh-sheet { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 2.25rem; padding: 2.25rem; }
+.mh-close { position: absolute; top: 0.5rem; right: 0.5rem; width: 44px; height: 44px; border: 0; background: transparent; font-size: 1.6rem; line-height: 1; color: var(--color-stone); cursor: pointer; }
+.mh-close:hover { color: var(--color-ink); }
+.mh-sheet-body { display: flex; flex-direction: column; gap: 0.65rem; min-width: 0; }
+.mh-sheet-name { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.05; }
+.mh-sheet-body .mh-label { margin-top: 1.25rem; }
+.mh-text { margin: 0; font-family: var(--font-sans); font-size: 0.98rem; line-height: 1.8; }
+.mh-quote { margin: 1rem 0 0; padding: 1.25rem 0; border-top: 1px solid var(--color-mist); border-bottom: 1px solid var(--color-mist); font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 1.35rem; line-height: 1.45; }
+.mh-rows { margin: 0.5rem 0 0; border-top: 1px solid var(--color-mist); }
+.mh-rows div { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; padding: 0.75rem 0; border-bottom: 1px solid var(--color-mist); }
+.mh-rows dt { flex: 0 0 7rem; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; color: var(--color-stone); padding-top: 0.2rem; }
+.mh-rows dd { flex: 1 1 10rem; margin: 0; font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.6; }
+.mh-intro-btn { align-self: flex-start; margin-top: 1.25rem; }
+.mh-hint { font-family: var(--font-sans); font-size: 0.8rem; color: var(--color-stone); }
+
+/* góp tay */
+.mh-invite { background: #fff; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.mh-invite h3 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3.4vw, 2.1rem); line-height: 1.15; }
+.mh-done ul { list-style: none; margin: 0.75rem 0 0; padding: 0; border-top: 1px solid var(--color-mist); }
+.mh-done li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; padding: 0.9rem 0; border-bottom: 1px solid var(--color-mist); font-family: var(--font-sans); font-size: 0.95rem; }
+.mh-when { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-stone); }
+.mh-propose { align-self: flex-start; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink); padding: 0.5rem 0; }
+
+.mh-closing { padding: 6rem 0 4rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+.mh-closing p { margin: 0; max-width: 34ch; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.45; color: var(--color-ink); }
+.mh-closing a { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--color-ink); padding: 0.5rem 0; }
+
+@media (max-width: 760px) {
+  .mh-split { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mh-sheet { grid-template-columns: 1fr; padding: 1.5rem 1.25rem 1.75rem; gap: 1.25rem; }
+  .mh-sheet-img { max-width: 260px; }
+  .mh-dialog { max-height: calc(100vh - 24px); }
+  .mh-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+  .mh-name { font-size: 1.3rem; }
+  .mh-invite { padding: 1.5rem 1.25rem; }
+  .mh-band { padding: 3.5rem 0; }
+  .mh-sec { padding: 4rem 0; }
+}

@@ -62,6 +62,7 @@ export const routes = {
   specialTreat: "/ngay-hien/special-treat",
   nguoiTrongNha: "/ngay-hien/nguoi-trong-nha",
   lichNhaMoc: "/lich-nha-moc",
+  mlfHouse: "/mlf-house",
 } as const;
 
 export const hoatDongMenu = [
@@ -103,6 +104,7 @@ export const congDongMenu = [
 export const mlfMenu = [
   { label: "con đường mlf", href: routes.conDuongMlf },
   { label: "về mlf", href: routes.veMlf },
+  { label: "mlf house", href: routes.mlfHouse },
   { label: "lịch nhà mộc", href: routes.lichNhaMoc },
   { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
   { label: "thư-gửi-mộc", href: routes.thuGuiMoc },
@@ -203,6 +205,7 @@ export const mobileMenuSections = [
     items: [
       { label: "con đường mlf", href: routes.conDuongMlf },
       { label: "về mlf", href: routes.veMlf },
+      { label: "mlf house", href: routes.mlfHouse },
       { label: "lịch nhà mộc", href: routes.lichNhaMoc },
       { label: "biên-thư-cho-Hy", href: routes.bienThuChoHy },
       { label: "thư-gửi-mộc", href: routes.thuGuiMoc },

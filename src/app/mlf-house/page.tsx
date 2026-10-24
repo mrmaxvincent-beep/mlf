@@ -7,8 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { MlfHousePeople } from "@/components/MlfHousePeople";
 import { MlfHouseRooms } from "@/components/MlfHouseRooms";
 import { MailChoice } from "@/components/MailChoice";
+import { MlfHouseInvites } from "@/components/MlfHouseInvites";
 import { routes } from "@/lib/nav";
-import { closing, drafts, ghiNhan, gopTay, hero, invitations, ketNoi } from "@/data/mlfHouse";
+import { closing, drafts, ghiNhan, gopTay, hero, ketNoi } from "@/data/mlfHouse";
 
 export const metadata: Metadata = {
   title: "mlf house",
@@ -16,8 +17,6 @@ export const metadata: Metadata = {
 };
 
 export default function MlfHousePage() {
-  const open = invitations.filter((i) => i.status === "open");
-
   const ghiNhanRoom = (
     <>
       <p className="mh-thanks">
@@ -52,47 +51,7 @@ export default function MlfHousePage() {
     </div>
   );
 
-  const gopTayRoom = (
-    <div className="mh-col">
-      <p className="mh-count">{open.length} lời mời đang mở</p>
-      <div className="mh-invites">
-        {open.map((inv) => (
-          <article key={inv.id} id={`loi-moi-${inv.id}`} className="mh-invite">
-            <span className="mh-label">lời mời · đang mở</span>
-            <h3>{inv.title}</h3>
-            <dl className="mh-rows">
-              <div>
-                <dt>đang cần</dt>
-                <dd>{inv.needs}</dd>
-              </div>
-              <div>
-                <dt>hình thức</dt>
-                <dd>{inv.form}</dd>
-              </div>
-              <div>
-                <dt>khép lại</dt>
-                <dd>{inv.closes}</dd>
-              </div>
-            </dl>
-            <details className="mh-more">
-              <summary>vì sao, và cách góp</summary>
-              <dl className="mh-rows">
-                <div>
-                  <dt>vì sao</dt>
-                  <dd>{inv.why}</dd>
-                </div>
-                <div>
-                  <dt>cách góp</dt>
-                  <dd>{inv.how}</dd>
-                </div>
-              </dl>
-            </details>
-            <MailChoice label="tôi muốn góp tay" draft={drafts.gopTay(inv.title)} />
-          </article>
-        ))}
-      </div>
-    </div>
-  );
+  const gopTayRoom = <MlfHouseInvites />;
 
   return (
     <>

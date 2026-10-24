@@ -6,6 +6,9 @@ import { drafts, people, type Person } from "@/data/mlfHouse";
 
 type Dim = "all" | "place" | "job";
 
+/** Bộ lọc chỉ hiện khi danh sách đủ dài để cần lọc; lúc còn ít người, gian ghi nhận để thoáng. */
+const FILTER_MIN = 12;
+
 const DIMS: { id: Dim; label: string }[] = [
   { id: "all", label: "tất cả" },
   { id: "place", label: "nơi ở" },
@@ -20,9 +23,14 @@ function valuesOf(p: Person, d: Dim): string[] {
 
 /** Chữ lồng từ hai chữ cái đầu, dùng khi người ấy không để ảnh. */
 function monogram(name: string) {
-  const words = name.replace(/[^\p{L}\s]/gu, " ").trim().split(/\s+/).filter(Boolean);
+  const words = name
+    .replace(/[^\p{L}\s]/gu, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
   if (!words.length) return "·";
-  const pick = words.length > 1 ? [words[0], words[words.length - 1]] : [words[0]];
+  const pick =
+    words.length > 1 ? [words[0], words[words.length - 1]] : [words[0]];
   return pick.map((w) => w.charAt(0).toUpperCase()).join("");
 }
 
@@ -48,12 +56,21 @@ export function MlfHousePeople() {
   const [open, setOpen] = useState<Person | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const sorted = useMemo(() => [...people].sort((a, b) => a.order - b.order), []);
+  const sorted = useMemo(
+    () => [...people].sort((a, b) => a.order - b.order),
+    [],
+  );
   const values = useMemo(() => {
     if (dim === "all") return [];
-    return Array.from(new Set(sorted.flatMap((p) => valuesOf(p, dim)))).sort((a, b) => a.localeCompare(b, "vi"));
+    return Array.from(new Set(sorted.flatMap((p) => valuesOf(p, dim)))).sort(
+      (a, b) => a.localeCompare(b, "vi"),
+    );
   }, [dim, sorted]);
-  const shown = dim === "all" || !val ? sorted : sorted.filter((p) => valuesOf(p, dim).includes(val));
+  const showFilter = sorted.length >= FILTER_MIN;
+  const shown =
+    !showFilter || dim === "all" || !val
+      ? sorted
+      : sorted.filter((p) => valuesOf(p, dim).includes(val));
 
   useEffect(() => {
     const d = dialogRef.current;
@@ -64,30 +81,48 @@ export function MlfHousePeople() {
 
   return (
     <>
-      <div className="mh-filter" role="group" aria-label="lọc người của nhà">
-        {DIMS.map((d) => (
-          <button
-            key={d.id}
-            type="button"
-            className={`mh-chip${dim === d.id ? " on" : ""}`}
-            aria-pressed={dim === d.id}
-            onClick={() => {
-              setDim(d.id);
-              setVal(null);
-            }}
+      {showFilter ? (
+        <>
+          <div
+            className="mh-filter"
+            role="group"
+            aria-label="lọc người của nhà"
           >
-            {d.label}
-          </button>
-        ))}
-      </div>
-      {values.length > 0 ? (
-        <div className="mh-values" role="group" aria-label="chọn một giá trị">
-          {values.map((v) => (
-            <button key={v} type="button" className={`mh-val${val === v ? " on" : ""}`} aria-pressed={val === v} onClick={() => setVal(val === v ? null : v)}>
-              {v}
-            </button>
-          ))}
-        </div>
+            {DIMS.map((d) => (
+              <button
+                key={d.id}
+                type="button"
+                className={`mh-chip${dim === d.id ? " on" : ""}`}
+                aria-pressed={dim === d.id}
+                onClick={() => {
+                  setDim(d.id);
+                  setVal(null);
+                }}
+              >
+                {d.label}
+              </button>
+            ))}
+          </div>
+          {values.length > 0 ? (
+            <div
+              className="mh-values"
+              role="group"
+              aria-label="chọn một giá trị"
+            >
+              {values.map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  className={`mh-val${val === v ? " on" : ""}`}
+                  aria-pressed={val === v}
+                  onClick={() => setVal(val === v ? null : v)}
+                >
+                  {v}
+                </button>
+              ))}
+            </div>
+          ) : null}
+        </>
       ) : null}
 
       <p className="mh-count">{shown.length} người · xếp theo mùa đến</p>
@@ -95,7 +130,12 @@ export function MlfHousePeople() {
       <ul className="mh-grid">
         {shown.map((p) => (
           <li key={p.id}>
-            <button type="button" className="mh-card" onClick={() => setOpen(p)} aria-haspopup="dialog">
+            <button
+              type="button"
+              className="mh-card"
+              onClick={() => setOpen(p)}
+              aria-haspopup="dialog"
+            >
               <Portrait p={p} />
               <span className="mh-name">{p.name}</span>
               <span className="mh-season">
@@ -106,10 +146,21 @@ export function MlfHousePeople() {
         ))}
       </ul>
 
-      <dialog ref={dialogRef} className="mh-dialog" onClose={() => setOpen(null)} onClick={(e) => e.target === e.currentTarget && setOpen(null)} aria-label={open ? open.name : "người của nhà"}>
+      <dialog
+        ref={dialogRef}
+        className="mh-dialog"
+        onClose={() => setOpen(null)}
+        onClick={(e) => e.target === e.currentTarget && setOpen(null)}
+        aria-label={open ? open.name : "người của nhà"}
+      >
         {open ? (
           <div className="mh-sheet">
-            <button type="button" className="mh-close" onClick={() => setOpen(null)} aria-label="đóng">
+            <button
+              type="button"
+              className="mh-close"
+              onClick={() => setOpen(null)}
+              aria-label="đóng"
+            >
               ×
             </button>
             <div className="mh-sheet-img">
@@ -138,9 +189,14 @@ export function MlfHousePeople() {
               </dl>
 
               <div className="mh-intro-btn">
-                <MailChoice label="xin được giới thiệu" draft={drafts.gioiThieu(open.name)} />
+                <MailChoice
+                  label="xin được giới thiệu"
+                  draft={drafts.gioiThieu(open.name)}
+                />
               </div>
-              <span className="mh-hint">mlf sẽ hỏi ý người ấy trước khi giới thiệu.</span>
+              <span className="mh-hint">
+                mlf sẽ hỏi ý người ấy trước khi giới thiệu.
+              </span>
             </div>
           </div>
         ) : null}

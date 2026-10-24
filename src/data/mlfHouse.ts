@@ -113,7 +113,6 @@ export const gopTay = {
   intro: [
     "Mộc có những ý tưởng đang chờ được thực hiện. Có việc cần thêm một người có chuyên môn, có việc cần vài bàn tay cùng làm, có việc chỉ cần một người sẵn lòng chia sẻ điều mình biết.",
     "Ở đây, nhà Mộc mở ra những lời mời đồng hành dành cho những ai thấy mình có thể góp một phần.",
-    "Mỗi lời mời đều có mục đích, nhu cầu và cách tham gia rõ ràng. Bạn có thể chọn điều phù hợp với mình, hoặc đơn giản là lưu lại để khi hữu duyên, chúng ta cùng làm.",
   ],
 };
 

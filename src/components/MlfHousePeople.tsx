@@ -139,7 +139,7 @@ export function MlfHousePeople() {
               <Portrait p={p} />
               <span className="mh-name">{p.name}</span>
               <span className="mh-season">
-                {p.place} · {p.season}
+                {p.place} · {p.job}
               </span>
             </button>
           </li>

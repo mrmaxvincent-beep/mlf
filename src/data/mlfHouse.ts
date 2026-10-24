@@ -21,7 +21,6 @@ export const nguoiCuaNha = {
 
 export const ghiNhan = {
   title: "ghi nhận",
-  note: "Không xếp hạng, không ghi số tiền, mọi người được xếp theo mùa đến. Trang nào cũng được người ấy đọc và đồng ý trước khi đăng.",
 };
 
 export type Person = {

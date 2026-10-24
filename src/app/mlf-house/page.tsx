@@ -58,9 +58,8 @@ export default function MlfHousePage() {
 
       <section id="ghi-nhan" className="mh-sec">
         <div className="wrap">
-          <div className="mh-split mh-split--end">
+          <div style={{ marginBottom: "2.5rem" }}>
             <SecHead num="02" title={ghiNhan.title} />
-            <p className="mh-note">{ghiNhan.note}</p>
           </div>
           <MlfHousePeople />
         </div>

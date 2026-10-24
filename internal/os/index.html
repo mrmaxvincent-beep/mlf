@@ -1194,9 +1194,10 @@ var UNKNOWN_CAT='old';
 function fillCats(keep){
   var cats=(window.MLF_EXP_CATS||{})[XF.elements.scope.value]||[],sel=XF.elements.cat,pick=null;
   var groups=cats.map(function(c,gi){
+    if(!c[1]){var v0=gi+':-';if(keep&&keep.grp===c[0]&&!keep.item)pick=v0;return h('option',{value:v0},c[0])}
     return h('optgroup',{label:c[0]},c[1].map(function(it,ii){
       var v=gi+':'+ii;if(keep&&keep.grp===c[0]&&keep.item===it)pick=v;return h('option',{value:v},it)}))});
-  if(keep&&!pick)groups.unshift(h('optgroup',{label:'đã ghi trước đây'},h('option',{value:UNKNOWN_CAT},keep.item+' ('+keep.grp+')')));
+  if(keep&&!pick)groups.unshift(h('optgroup',{label:'đã ghi trước đây'},h('option',{value:UNKNOWN_CAT},keep.item?keep.item+' ('+keep.grp+')':keep.grp)));
   sel.replaceChildren.apply(sel,groups);
   sel.value=pick||(keep?UNKNOWN_CAT:'0:0');
 }
@@ -1204,7 +1205,7 @@ function catOf(){
   var v=XF.elements.cat.value;
   if(v===UNKNOWN_CAT)return S.expOld;
   var p=v.split(':'),c=((window.MLF_EXP_CATS||{})[XF.elements.scope.value]||[])[p[0]];
-  return c?{grp:c[0],item:c[1][p[1]]}:null;
+  return c?{grp:c[0],item:c[1]?c[1][p[1]]:''}:null;
 }
 (function(){
   var w=XF.elements.who;

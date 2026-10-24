@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { MlfHousePeople } from "@/components/MlfHousePeople";
 import { routes } from "@/lib/nav";
-import { closing, contactEmail, doneWorks, ghiNhan, gopTay, hero, invitations, ketNoi, mailto, nguoiCuaNha } from "@/data/mlfHouse";
+import { closing, contactEmail, ghiNhan, gopTay, hero, invitations, ketNoi, mailto, nguoiCuaNha } from "@/data/mlfHouse";
 
 export const metadata: Metadata = {
   title: "mlf house",
@@ -123,26 +123,6 @@ export default function MlfHousePage() {
                 </a>
               </Reveal>
             ))}
-
-            <div className="mh-done">
-              <span className="mh-label">việc đã thành</span>
-              <ul>
-                {doneWorks.map((w) => (
-                  <li key={w.title}>
-                    <span>{w.title}</span>
-                    <span className="mh-when">
-                      {w.when}
-                      {w.href ? (
-                        <>
-                          {" · "}
-                          <Link href={w.href} className="mono-link">đọc chuyện</Link>
-                        </>
-                      ) : null}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             <a className="mono-link mh-propose" href={mailto("đề xuất một việc cần góp tay")}>
               đề xuất việc của bạn <span className="ar">→</span>

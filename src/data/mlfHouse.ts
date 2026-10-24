@@ -94,8 +94,4 @@ export const invitations: Invitation[] = [
   },
 ];
 
-export const doneWorks: { title: string; when: string; href?: string }[] = [
-  { title: "[tên việc đã làm xong]", when: "[mùa, năm]" },
-];
-
 export const closing = "Nếu bạn nghĩ mình là người của nhà mà chưa thấy tên ở đây, cứ nhắn nhà mộc một tiếng.";

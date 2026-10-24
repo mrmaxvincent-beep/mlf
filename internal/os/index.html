@@ -426,6 +426,7 @@ section.blk .more>summary{color:var(--ink)}
 .foot{margin-top:0;padding-top:24px;border-top:0}
 
 /* chi tiêu */
+#expNav{margin-top:26px}
 .exp-total{margin:0 0 4px;font-family:var(--sans);font-weight:600;font-size:2.2rem;letter-spacing:-.03em;line-height:1.1}
 .exp-total small{margin-left:10px;font-size:.8rem;font-weight:400;letter-spacing:0;color:var(--stone)}
 .exp-people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0 4px}
@@ -595,8 +596,6 @@ section.blk .more>summary{color:var(--ink)}
 
   <section class="blk" id="chitieu">
     <div class="blk-h"><h2>chi tiêu</h2><p>Ghi khoản đã chi, người đã trả tiền là người ứng trước. Cuối tháng xuất file và hoàn lại cho người ứng.</p></div>
-    <div class="wk-nav" id="expNav"></div>
-    <div class="card" id="expSum"></div>
     <form class="fgrid" id="expForm" autocomplete="off">
       <label>số tiền (đ)<input name="amount" inputmode="numeric" required placeholder="vd: 250.000"></label>
       <label>ngày chi<input name="date" type="date" required></label>
@@ -606,6 +605,8 @@ section.blk .more>summary{color:var(--ink)}
       <label>ghi chú<input name="note" placeholder="tuỳ chọn"></label>
       <div class="factions"><button class="solid" type="submit" id="expSubmit">lưu khoản chi</button><button class="ghost" type="button" id="expCancel" hidden>huỷ sửa</button></div>
     </form>
+    <div class="wk-nav" id="expNav"></div>
+    <div class="card" id="expSum"></div>
     <div id="expList"></div>
     <div class="exp-export"><button class="ghost" type="button" id="expExport">xuất file tháng này (csv)</button><span class="meta">Mở được bằng Google Sheets.</span></div>
   </section>

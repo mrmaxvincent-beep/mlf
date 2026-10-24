@@ -177,7 +177,7 @@ export const outlines: { name: string; tint: string; label: LonLat; points: LonL
   },
   {
     name: "Ấn Độ",
-    tint: "color-mix(in srgb, #C79A6B 20%, var(--color-cotton))",
+    tint: "color-mix(in srgb, #9A9EA4 26%, #FAFAFA)",
     label: [78.2, 22.0],
     points: [
       [68.165, 23.857], [68.381, 23.951], [68.723, 23.964], [68.726, 24.266], [68.78, 24.313], [68.827, 24.265],

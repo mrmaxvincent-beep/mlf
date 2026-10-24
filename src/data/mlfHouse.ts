@@ -76,8 +76,17 @@ export const people: Person[] = Array.from({ length: 8 }, (_, i) => ({
 
 export const ketNoi = {
   title: "kết nối",
-  intro: "Để những người cùng kết nối với mlf có thể hữu duyên gặp gỡ nhau. Bạn có thể tìm người theo nơi ở, theo nghề, hay theo điều họ có thể chia sẻ.",
-  rule: "Nhà không để số điện thoại hay email công khai. Muốn gặp ai, bạn nhắn mlf bằng cách bấm vào nút Xin được giới thiệu ở profile. mlf sẽ hỏi ý người kia rồi mới giới thiệu mọi người qua mail. Danh sách này không dùng để mời chào hay bán hàng.",
+  /** hai đoạn mở đầu, viết nghiêng */
+  opening: [
+    "Có thể bạn chưa từng gặp người ấy, dù cả hai đều có một mối liên hệ với Mộc.",
+    "Người ở cùng thành phố. Người làm cùng lĩnh vực. Người có một mối quan tâm mà bạn cũng đang theo đuổi.",
+  ],
+  /** các đoạn nội dung chính */
+  body: [
+    "MLF House mở ra một không gian để những người gắn bó với Mộc có thể tìm thấy nhau, qua nơi sống, chuyên môn và những điều họ sẵn lòng chia sẻ.",
+    "Nếu muốn kết nối với ai, bạn có thể gửi lời nhắn cho nhà Mộc. Chúng tôi sẽ hỏi ý người ấy trước khi giới thiệu hai bên.",
+    "Thông tin liên hệ cá nhân không được công khai. MLF House cũng không phải nơi để chào mời hay quảng cáo dịch vụ, mà là một không gian kết nối dựa trên sự tự nguyện và tôn trọng lẫn nhau.",
+  ],
   circle: "Xin lưu ý: chúng tôi chỉ giới thiệu những người trong mlf circle với nhau (tức đã từng có kết nối với nhà mộc).",
   offline: "Gặp nhau ngoài đời thì vẫn quý hơn, ở trăng-yên mỗi tháng tại Huế, ở các vòng-trà-tâm, hay ở một bữa cơm theo vùng mỗi năm một lần.",
 };

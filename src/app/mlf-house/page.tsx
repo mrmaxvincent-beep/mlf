@@ -9,7 +9,14 @@ import { MlfHouseRooms } from "@/components/MlfHouseRooms";
 import { MailChoice } from "@/components/MailChoice";
 import { MlfHouseInvites } from "@/components/MlfHouseInvites";
 import { routes } from "@/lib/nav";
-import { closing, drafts, ghiNhan, gopTay, hero, ketNoi } from "@/data/mlfHouse";
+import {
+  closing,
+  drafts,
+  ghiNhan,
+  gopTay,
+  hero,
+  ketNoi,
+} from "@/data/mlfHouse";
 
 export const metadata: Metadata = {
   title: "mlf house",
@@ -31,17 +38,29 @@ export default function MlfHousePage() {
   const ketNoiRoom = (
     <div className="mhr-cols">
       <div className="mh-col">
-        <p className="mh-lead">{ketNoi.intro}</p>
-        <p className="mh-lead">{ketNoi.rule}</p>
+        <div className="mh-open">
+          {ketNoi.opening.map((para) => (
+            <p key={para}>{para}</p>
+          ))}
+        </div>
+        {ketNoi.body.map((para) => (
+          <p key={para} className="mh-lead">
+            {para}
+          </p>
+        ))}
         <p className="mh-note mh-caution">{ketNoi.circle}</p>
       </div>
       <aside className="mhr-aside">
         <span className="mh-label">gặp nhau ngoài đời</span>
         <p className="mh-note">{ketNoi.offline}</p>
         <div className="mh-links">
-          <Link href={routes.trangYen} className="mono-link">trăng-yên</Link>
+          <Link href={routes.trangYen} className="mono-link">
+            trăng-yên
+          </Link>
           <i>·</i>
-          <Link href={routes.vongTraTam} className="mono-link">vòng-trà-tâm</Link>
+          <Link href={routes.vongTraTam} className="mono-link">
+            vòng-trà-tâm
+          </Link>
         </div>
       </aside>
     </div>
@@ -54,12 +73,39 @@ export default function MlfHousePage() {
       <Header />
 
       {/* hiên nhà */}
-      <div className="wrap-wide mh-hero" style={{ paddingTop: "6.5rem", paddingBottom: "1rem", textAlign: "center" }}>
+      <div
+        className="wrap-wide mh-hero"
+        style={{
+          paddingTop: "6.5rem",
+          paddingBottom: "1rem",
+          textAlign: "center",
+        }}
+      >
         <Breadcrumb label={hero.title} />
-        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
+        <h1
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontStyle: "italic",
+            fontWeight: 300,
+            fontSize: "clamp(2.2rem, 6vw, 3.4rem)",
+            lineHeight: 1.15,
+            color: "var(--color-ink)",
+            margin: "0 0 0.75rem",
+          }}
+        >
           {hero.title}
         </h1>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>{hero.tagline}</p>
+        <p
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: "1rem",
+            lineHeight: 1.85,
+            color: "var(--color-ink)",
+            margin: "0 0 0.75rem",
+          }}
+        >
+          {hero.tagline}
+        </p>
       </div>
 
       {/* ba gian */}
@@ -76,9 +122,12 @@ export default function MlfHousePage() {
       {/* ngưỡng cửa */}
       <Reveal className="wrap mh-closing">
         <p>{closing}</p>
-        <MailChoice label="nhắn nhà mộc" draft={drafts.nguoiCuaNha()} variant="link" />
+        <MailChoice
+          label="nhắn nhà mộc"
+          draft={drafts.nguoiCuaNha()}
+          variant="link"
+        />
       </Reveal>
-
 
       <Footer />
     </>

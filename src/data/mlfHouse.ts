@@ -32,6 +32,7 @@ export const hero = {
 
 export const ghiNhan = {
   title: "ghi nhận",
+  heading: "Những người làm nên Mộc",
   /** mỗi phần tử là một đoạn */
   thanks: [
     "Mỗi người đến với mlf bằng một cách khác nhau. Có người đã đồng hành từ những ngày đầu, có người góp sức trong một dự án, có người nâng đỡ Mộc bằng chuyên môn, nguồn lực hay một sự hiện diện đúng lúc.",

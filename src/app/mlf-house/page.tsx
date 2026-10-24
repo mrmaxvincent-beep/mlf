@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 export default function MlfHousePage() {
   const ghiNhanRoom = (
     <>
+      <h2 className="mh-heading mh-heading--center">{ghiNhan.heading}</h2>
       <div className="mh-thanks">
         {ghiNhan.thanks.map((para) => (
           <p key={para}>{para}</p>

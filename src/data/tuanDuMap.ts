@@ -109,7 +109,7 @@ export const islands: { name: string; dots: LonLat[] }[] = [
 export const outlines: { name: string; tint: string; label: LonLat; points: LonLat[]; parts?: LonLat[][] }[] = [
   {
     name: "Việt Nam",
-    tint: "color-mix(in srgb, var(--color-moss) 42%, var(--color-cotton))",
+    tint: "color-mix(in srgb, #5FA874 52%, var(--color-cotton))",
     label: [104.3, 17.0],
     points: [
       [107.974, 21.508], [107.808, 21.498], [107.708, 21.406], [107.409, 21.284], [107.355, 21.055], [107.164, 20.949],
@@ -177,7 +177,7 @@ export const outlines: { name: string; tint: string; label: LonLat; points: LonL
   },
   {
     name: "Ấn Độ",
-    tint: "color-mix(in srgb, #C79A6B 38%, var(--color-cotton))",
+    tint: "color-mix(in srgb, #C79A6B 20%, var(--color-cotton))",
     label: [78.2, 22.0],
     points: [
       [68.165, 23.857], [68.381, 23.951], [68.723, 23.964], [68.726, 24.266], [68.78, 24.313], [68.827, 24.265],

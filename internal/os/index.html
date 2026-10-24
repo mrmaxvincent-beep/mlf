@@ -430,12 +430,12 @@ section.blk .more>summary{color:var(--ink)}
 .exp-total{margin:0 0 4px;font-family:var(--sans);font-weight:600;font-size:2.2rem;letter-spacing:-.03em;line-height:1.1}
 .exp-total small{margin-left:10px;font-size:.8rem;font-weight:400;letter-spacing:0;color:var(--stone)}
 .exp-people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0 4px}
-.exp-p{display:flex;flex-direction:column;gap:2px;padding:10px;border:1px solid var(--mist);border-radius:12px;background:var(--bg)}
+.exp-p{display:flex;flex-direction:column;gap:1px;min-width:0;padding:9px 8px;border:1px solid var(--mist);border-radius:12px;background:var(--bg)}
 .exp-p b{display:inline-flex;align-items:center;gap:6px;font-weight:600;margin-bottom:4px}
-.exp-n{font-weight:600;font-size:.98rem}
+.exp-n{font-weight:600;font-size:.86rem;white-space:nowrap}
 .exp-n.due{color:var(--warn)}
 .exp-p .meta{font-size:.7rem;margin-bottom:4px}
-.exp-p .ghost{margin-top:4px;min-height:32px;padding:4px 8px;font-size:.76rem}
+.exp-p .ghost{margin-top:4px;min-height:30px;padding:3px 4px;font-size:.72rem;white-space:nowrap}
 .exp-before{margin:10px 0 0}
 .exp-groups{margin-top:6px}
 .exp-groups div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--mist);font-size:.88rem}
@@ -453,7 +453,7 @@ section.blk .more>summary{color:var(--ink)}
 .exp-b .x.armed{color:var(--warn)}
 .exp-list li.rb .exp-a,.exp-list li.rb .exp-m b{color:var(--stone)}
 .exp-export{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
-@media (max-width:420px){.exp-people{grid-template-columns:1fr}}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>
@@ -1236,8 +1236,8 @@ function drawExpenses(){
       return h('div',{class:'exp-p'},
         h('b',null,av(p[0],'sm'),p[1]),
         h('span',{class:'exp-n'},vnd(adv)),h('span',{class:'meta'},'ứng trước'),
-        h('span',{class:'exp-n'+(wait?' due':'')},vnd(wait)),h('span',{class:'meta'},'chờ hoàn lại'),
-        wait?h('button',{type:'button',class:'ghost',onclick:function(){reimburseAll(p[0])}},'đã hoàn hết'):null);
+        h('span',{class:'exp-n'+(wait?' due':'')},vnd(wait)),h('span',{class:'meta'},'chờ hoàn'),
+        wait?h('button',{type:'button',class:'ghost',onclick:function(){reimburseAll(p[0])}},'hoàn hết'):null);
     })),
     before.length?h('p',{class:'meta exp-before'},'Còn chờ hoàn từ các tháng trước: '+PEOPLE.map(function(p){
       var n=before.filter(function(e){return e.paid_by===p[0]}).reduce(function(a,e){return a+Number(e.amount)},0);return n?PN[p[0]]+' '+vnd(n):null}).filter(Boolean).join(', ')+'.'):null,

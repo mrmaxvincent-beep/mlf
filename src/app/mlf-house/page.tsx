@@ -66,7 +66,19 @@ export default function MlfHousePage() {
     </div>
   );
 
-  const gopTayRoom = <MlfHouseInvites />;
+  const gopTayRoom = (
+    <>
+      <div className="mh-open mh-open--wide">
+        <h2>{gopTay.heading}</h2>
+        {gopTay.intro.map((para) => (
+          <p key={para} className="mh-lead">
+            {para}
+          </p>
+        ))}
+      </div>
+      <MlfHouseInvites />
+    </>
+  );
 
   return (
     <>

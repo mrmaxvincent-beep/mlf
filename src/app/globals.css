@@ -3877,4 +3877,7 @@ details[open] > summary .acc-icon {
 .mh-hero > div:first-child { justify-content: center; }
 .mh-open { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.4rem; }
 .mh-open p { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.2rem, 2.2vw, 1.45rem); line-height: 1.55; color: var(--color-ink); }
+.mh-open--wide { gap: 1rem; max-width: 62ch; margin: 0 0 2.5rem; }
+.mh-open--wide h2 { margin: 0 0 0.25rem; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; color: var(--color-ink); }
+.mh-open--wide .mh-lead { font-family: var(--font-sans); font-style: normal; font-size: 1rem; line-height: 1.85; }
 

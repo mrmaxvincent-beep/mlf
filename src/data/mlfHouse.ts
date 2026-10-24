@@ -142,4 +142,7 @@ export const invitations: Invitation[] = [
   },
 ];
 
-export const closing = "Nếu bạn nghĩ mình là người của nhà mà chưa thấy tên ở đây, cứ nhắn nhà mộc một tiếng.";
+export const closing = {
+  heading: "Bạn cũng là một phần của Mộc?",
+  text: "Nếu bạn đã từng đồng hành, góp sức hoặc nâng đỡ Mộc mà chưa thấy tên mình ở đây, hãy nhắn cho nhà Mộc một tiếng.",
+};

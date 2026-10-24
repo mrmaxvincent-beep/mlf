@@ -135,7 +135,8 @@ export default function MlfHousePage() {
 
       {/* ngưỡng cửa */}
       <Reveal className="wrap mh-closing">
-        <p>{closing}</p>
+        <h2>{closing.heading}</h2>
+        <p>{closing.text}</p>
         <MailChoice
           label="nhắn nhà mộc"
           draft={drafts.nguoiCuaNha()}

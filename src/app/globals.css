@@ -3765,7 +3765,8 @@ details[open] > summary .acc-icon {
 .mh-invite h3 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3.4vw, 2.1rem); line-height: 1.15; }
 
 .mh-closing { padding: 6rem 0 4rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
-.mh-closing p { margin: 0; max-width: 44ch; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.45; color: var(--color-ink); }
+.mh-closing h2 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; color: var(--color-ink); }
+.mh-closing p { margin: 0; max-width: 52ch; font-family: var(--font-sans); font-size: 0.98rem; line-height: 1.8; color: var(--color-ink); }
 .mh-closing a { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--color-ink); padding: 0.5rem 0; }
 
 @media (max-width: 760px) {

@@ -54,7 +54,6 @@ export default function MlfHousePage() {
 
   const gopTayRoom = (
     <div className="mh-col">
-      <p className="mh-lead mhr-narrow">{gopTay.intro}</p>
       <p className="mh-count">{open.length} lời mời đang mở</p>
       <div className="mh-invites">
         {open.map((inv) => (

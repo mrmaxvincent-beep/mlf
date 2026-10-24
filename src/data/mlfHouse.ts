@@ -97,7 +97,6 @@ export type Invitation = {
 
 export const gopTay = {
   title: "góp tay",
-  intro: "Đây là chỗ mlf đặt những việc đang cần thêm người góp tay, và bạn cũng có thể đề xuất việc của mình.",
 };
 
 /** Ba lời mời dưới đây là nội dung minh hoạ để xem bố cục, thay bằng lời mời thật trước khi dùng. */

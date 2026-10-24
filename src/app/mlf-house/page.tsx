@@ -38,6 +38,7 @@ export default function MlfHousePage() {
   const ketNoiRoom = (
     <div className="mhr-cols">
       <div className="mh-col">
+        <h2 className="mh-heading">{ketNoi.heading}</h2>
         <div className="mh-open">
           {ketNoi.opening.map((para) => (
             <p key={para}>{para}</p>

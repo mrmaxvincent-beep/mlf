@@ -76,6 +76,7 @@ export const people: Person[] = Array.from({ length: 8 }, (_, i) => ({
 
 export const ketNoi = {
   title: "kết nối",
+  heading: "Để những người cùng nhà tìm thấy nhau",
   /** hai đoạn mở đầu, viết nghiêng */
   opening: [
     "Có thể bạn chưa từng gặp người ấy, dù cả hai đều có một mối liên hệ với Mộc.",

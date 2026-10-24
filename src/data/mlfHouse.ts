@@ -93,6 +93,8 @@ export type Invitation = {
   how: string;
   form: string;
   closes: string;
+  /** khoảng thời gian thực hiện, vd "01.01.2027 – 01.03.2027"; có thì hiện thay cho "khép lại" */
+  period?: string;
 };
 
 export const gopTay = {
@@ -101,6 +103,17 @@ export const gopTay = {
 
 /** Ba lời mời dưới đây là nội dung minh hoạ để xem bố cục, thay bằng lời mời thật trước khi dùng. */
 export const invitations: Invitation[] = [
+  {
+    id: "loi-nhac-o-yen",
+    title: "thiết kế bộ lời nhắc ở-yên",
+    status: "open",
+    why: "Bộ 50 hình nền điện thoại với những lời nhắc ở-yên để mọi người có thể tải về miễn phí.",
+    needs: "graphic designer, họa sĩ",
+    how: "thiết kế dựa trên concept và nội dung mà mlf đề xuất",
+    form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
+    closes: "01.03.2027",
+    period: "01.01.2027 – 01.03.2027",
+  },
   {
     id: "mlf-hue-2027",
     title: "dựng mlf ở Huế, năm 2027",

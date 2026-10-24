@@ -42,7 +42,7 @@ export function MlfHouseInvites() {
             >
               <span className="mhi-idx">{String(i + 1).padStart(2, "0")}</span>
               <span className="mhi-title">{x.title}</span>
-              <span className="mhi-close">khép lại {x.closes}</span>
+              <span className="mhi-close">{x.period ? x.period : `khép lại ${x.closes}`}</span>
             </button>
           );
         })}
@@ -66,8 +66,8 @@ export function MlfHouseInvites() {
             <dd>{inv.form}</dd>
           </div>
           <div>
-            <dt>khép lại</dt>
-            <dd>{inv.closes}</dd>
+            <dt>{inv.period ? "thời gian" : "khép lại"}</dt>
+            <dd>{inv.period ?? inv.closes}</dd>
           </div>
         </dl>
         <MailChoice label="tôi muốn góp tay" draft={drafts.gopTay(inv.title)} />

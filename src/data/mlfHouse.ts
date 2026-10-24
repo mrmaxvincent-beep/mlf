@@ -41,6 +41,7 @@ export const hero = {
 
 export const ghiNhan = {
   title: "ghi nhận",
+  thanks: "mộc little farm xin gửi lời cảm ơn chân thành tới những bạn đã đóng góp cùng xây dựng nên mlf.",
 };
 
 export type Person = {

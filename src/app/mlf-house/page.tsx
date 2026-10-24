@@ -18,7 +18,12 @@ export const metadata: Metadata = {
 export default function MlfHousePage() {
   const open = invitations.filter((i) => i.status === "open");
 
-  const ghiNhanRoom = <MlfHousePeople />;
+  const ghiNhanRoom = (
+    <>
+      <p className="mh-thanks">{ghiNhan.thanks}</p>
+      <MlfHousePeople />
+    </>
+  );
 
   const ketNoiRoom = (
     <div className="mhr-cols">

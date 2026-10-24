@@ -20,7 +20,14 @@ export default function MlfHousePage() {
 
   const ghiNhanRoom = (
     <>
-      <p className="mh-thanks">{ghiNhan.thanks}</p>
+      <p className="mh-thanks">
+        {ghiNhan.thanks.map((line, i) => (
+          <span key={line}>
+            {i > 0 ? <br /> : null}
+            {line}
+          </span>
+        ))}
+      </p>
       <MlfHousePeople />
     </>
   );

@@ -3833,5 +3833,5 @@ details[open] > summary .acc-icon {
 .mc-opt--main { font-weight: 500; }
 .mc-hint { padding: 0.7rem 1rem; font-family: var(--font-sans); font-size: 0.78rem; line-height: 1.55; color: var(--color-stone); }
 .mh-closing .mc { align-items: center; }
-.mh-thanks { margin: 0 auto 2.25rem; max-width: 56ch; text-align: center; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.05rem, 1.8vw, 1.2rem); line-height: 1.6; color: var(--color-ink); }
+.mh-thanks { margin: 0 auto 2.25rem; max-width: 78ch; text-align: center; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.05rem, 1.8vw, 1.2rem); line-height: 1.6; color: var(--color-ink); }
 .mh-caution { padding-left: 0.9rem; border-left: 2px solid var(--color-cham-dem); font-style: italic; }

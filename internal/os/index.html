@@ -360,6 +360,16 @@ section.blk{margin-top:44px}
 .install{border-radius:12px}
 .foot .sig{font-family:var(--sans);font-style:normal;font-weight:600;font-size:.95rem}
 @media (prefers-reduced-motion:reduce){.tabs button .g{transition:none}}
+
+/* phòng dùng + người mặc định */
+.rooms{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+.rooms-l{display:block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--stone);margin-bottom:6px}
+.rooms .chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 14px;font-size:.85rem;font-weight:500;min-height:34px}
+.chip.on{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
+.rooms-n{margin:6px 0 0;font-size:.78rem;color:var(--warn)}
+.tpl-act{display:inline-flex;align-items:center;gap:6px;flex:none}
+.tpl-act select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:5px 6px;font-size:.8rem;max-width:84px}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>
@@ -411,6 +421,7 @@ section.blk{margin-top:44px}
         <label class="w2">việc<input name="text" required placeholder="vd: chuẩn bị bánh chào đón"></label>
         <label>loại chương trình<select name="kind"></select></label>
         <label>tính từ<select name="anchor"><option value="start">ngày khách đến</option><option value="end">ngày khách về</option></select></label>
+        <label class="w2">người phụ trách mặc định<select name="dp"><option value="">không</option><option value="tam">Tâm</option><option value="thuan">Thuận</option><option value="vu">Vũ</option></select></label>
         <label class="w2">lệch bao nhiêu ngày (âm là trước, 0 là đúng ngày)<input name="off" type="number" value="-1" min="-30" max="30" inputmode="numeric"></label>
         <div class="factions"><button class="solid" type="submit">thêm việc chuẩn bị</button></div>
       </form>
@@ -531,7 +542,7 @@ function put(id){var el=$(id);el.replaceChildren.apply(el,Array.prototype.slice.
 var sb=null;
 var S={me:null,email:null,status:'loading',view:lsGet('mlfos.view')||'me',
   events:[],chores:[],swaps:new Map(),backlog:[],tasks:[],checks:new Map(),syncAt:null,
-  tpl:[],prep:new Map(),notes:[],shop:[],
+  tpl:[],prep:new Map(),eset:new Map(),notes:[],shop:[],
   day:today(),ws:null,sel:null,addAt:null,assignAt:null,armed:null};
 S.ws=weekStart(S.day);S.sel=S.day;
 
@@ -560,10 +571,15 @@ function sortedChores(){return S.chores.slice().sort(function(a,b){return (a.sor
 
 /* ─── chuẩn bị theo booking ─── */
 function tplFor(kind){return S.tpl.filter(function(t){return t.kind===kind}).sort(function(a,b){return (a.sort||0)-(b.sort||0)})}
+var ROOMS=[['xuan','Xuân'],['ha','Hạ'],['thu','Thu'],['dong','Đông']];
+function roomsOf(e){var r=S.eset.get(e.id);return r&&r.rooms?r.rooms:[]}
 function prepFor(e){
-  return tplFor(e.kind).map(function(t){
-    var due=add(t.anchor==='end'?e.end:e.start,t.offset_days||0),st=S.prep.get(e.id+'__'+t.id)||{};
-    return {kind:'p',id:t.id,ev:e,text:t.text,date:due,due:due,person:st.person||null,done:!!st.done,tpl:t};
+  var rooms=roomsOf(e);
+  return tplFor(e.kind).filter(function(t){return !t.room||rooms.indexOf(t.room)>=0}).map(function(t){
+    var due=add(t.anchor==='end'?e.end:e.start,t.offset_days||0),key=e.id+'__'+t.id,has=S.prep.has(key),st=S.prep.get(key)||{};
+    // chưa có dòng prep_items thì lấy người mặc định; đã có dòng thì theo dòng đó, kể cả khi người dùng chủ động bỏ gán (null)
+    var person=has?(st.person||null):(t.default_person||null);
+    return {kind:'p',id:t.id,ev:e,text:t.text,date:due,due:due,person:person,done:!!st.done,tpl:t};
   });
 }
 function allPrep(){var out=[];S.events.forEach(function(e){out=out.concat(prepFor(e))});return out}
@@ -596,7 +612,7 @@ function weekStats(p,ws){var n=0,d=0;for(var i=0;i<7;i++)itemsFor(p,add(ws,i)).f
 function prepKey(it){return it.ev.id+'__'+it.tpl.id}
 async function setPrep(it,patch){
   var k=prepKey(it),cur=S.prep.get(k)||{person:null,done:false};
-  var row=Object.assign({event_id:it.ev.id,template_id:it.tpl.id,person:cur.person||null,done:!!cur.done,done_at:cur.done_at||null,done_by:cur.done_by||null},patch);
+  var row=Object.assign({event_id:it.ev.id,template_id:it.tpl.id,person:it.person||null,done:!!cur.done,done_at:cur.done_at||null,done_by:cur.done_by||null},patch);
   S.prep.set(k,row);render();
   try{await q(sb.from('prep_items').upsert(row))}catch(e){fail(e)}
 }
@@ -697,6 +713,20 @@ function prepSum(e){
   var d=ps.filter(function(x){return x.done}).length,un=ps.filter(function(x){return !x.done&&!x.person}).length,lt=ps.filter(function(x){return !x.done&&x.due<S.day}).length;
   return h('p',{class:'prep-sum'},'chuẩn bị '+d+'/'+ps.length+' xong',un?[' · ',h('b',null,un+' chưa ai nhận')]:null,lt?[' · ',h('b',null,lt+' đang trễ')]:null);
 }
+function roomChips(e){
+  if(e.kind!=='retreat')return null;
+  var cur=roomsOf(e);
+  return h('div',{class:'rooms'},h('span',{class:'rooms-l'},'phòng dùng'),
+    h('div',{class:'chips'},ROOMS.map(function(r){var on=cur.indexOf(r[0])>=0;
+      return h('button',{type:'button',class:'chip'+(on?' on':''),'aria-pressed':String(on),onclick:function(){toggleRoom(e,r[0])}},r[1])})),
+    cur.length?null:h('p',{class:'rooms-n'},'chưa chọn phòng dùng'));
+}
+async function toggleRoom(e,r){
+  var cur=roomsOf(e).slice(),i=cur.indexOf(r);if(i>=0)cur.splice(i,1);else cur.push(r);
+  cur.sort(function(a,b){return ROOMS.findIndex(function(x){return x[0]===a})-ROOMS.findIndex(function(x){return x[0]===b})});
+  S.eset.set(e.id,{event_id:e.id,rooms:cur});render();
+  try{await q(sb.from('event_settings').upsert({event_id:e.id,rooms:cur}))}catch(x){fail(x)}
+}
 function prepList(e){
   var ps=prepFor(e);if(!ps.length)return null;
   var d=ps.filter(function(x){return x.done}).length;
@@ -716,7 +746,7 @@ function evRow(e){
   return h('article',{class:'ev'},
     h('div',null,h('span',{class:'n'+(c.word?' word':'')},c.big),c.unit?h('span',{class:'u'},c.unit):null),
     h('div',{style:'min-width:0'},kindEl(e),h('h3',null,e.title),h('p',{class:'meta'},span(e)),whoLine(e)?h('p',{class:'meta'},whoLine(e)):null,e.note?h('p',{class:'note'},e.note):null,
-      e.pay&&PAY[e.pay]?h('div',{class:'ev-foot'},h('span',{class:'pay '+e.pay},PAY[e.pay])):null,prepList(e)));
+      e.pay&&PAY[e.pay]?h('div',{class:'ev-foot'},h('span',{class:'pay '+e.pay},PAY[e.pay])):null,roomChips(e),prepList(e)));
 }
 
 function drawTpl(){
@@ -724,16 +754,23 @@ function drawTpl(){
   put('tplList',kinds.map(function(k){var ts=tplFor(k);if(!ts.length)return null;
     return [h('p',{class:'tpl-k'},h('span',{class:'dot',style:'background:'+kc(k)+';margin-right:6px'}),KIND[k][0]),
       ts.map(function(t){var key='tpl:'+t.id;
-        return h('div',{class:'chore'},h('span',null,t.text,h('small',null,offLabel(t))),
-          h('button',{type:'button',class:'ghost'+(S.armed===key?' danger':''),onclick:function(){if(arm(key))delRow('prep_templates',t.id)}},S.armed===key?'xoá?':'bỏ'))})]}));
+        var dsel=h('select',{'aria-label':'người mặc định: '+t.text,onchange:function(ev){setDefault(t,ev.target.value||null)}},
+          h('option',{value:'',selected:!t.default_person},'không'),PEOPLE.map(function(x){return h('option',{value:x[0],selected:t.default_person===x[0]},x[1])}));
+        var rn=t.room?' · phòng '+(ROOMS.find(function(r){return r[0]===t.room})||['',t.room])[1]:'';
+        return h('div',{class:'chore'},h('span',null,t.text,h('small',null,offLabel(t)+rn)),
+          h('span',{class:'tpl-act'},dsel,h('button',{type:'button',class:'ghost'+(S.armed===key?' danger':''),onclick:function(){if(arm(key))delRow('prep_templates',t.id)}},S.armed===key?'xoá?':'bỏ')))})]}));
   var ks=TF.elements.kind;if(!ks.options.length)kinds.forEach(function(k){ks.append(h('option',{value:k},KIND[k][0]))});
+}
+async function setDefault(t,person){
+  t.default_person=person;render();
+  try{await q(sb.from('prep_templates').update({default_person:person}).eq('id',t.id))}catch(e){fail(e)}
 }
 var TF=$('tplForm');
 TF.addEventListener('submit',async function(ev){
   ev.preventDefault();
   var text=(TF.elements.text.value||'').trim();if(!text)return;
   var off=parseInt(TF.elements.off.value,10);if(isNaN(off))off=0;
-  try{await q(sb.from('prep_templates').insert({kind:TF.elements.kind.value,text:text,anchor:TF.elements.anchor.value,offset_days:off,sort:Date.now()}));
+  try{await q(sb.from('prep_templates').insert({kind:TF.elements.kind.value,text:text,anchor:TF.elements.anchor.value,offset_days:off,default_person:TF.elements.dp.value||null,sort:Date.now()}));
     TF.elements.text.value='';toast('Đã thêm vào mẫu chuẩn bị.');reload()}catch(e){fail(e)}
 });
 function drawEvents(){
@@ -955,12 +992,14 @@ async function loadAll(){
       q(sb.from('sync_meta').select('synced_at').eq('id',1)),
       q(sb.from('prep_templates').select('*')),
       q(sb.from('prep_items').select('*')),
+      q(sb.from('event_settings').select('*')),
       q(sb.from('notes').select('*').order('created_at',{ascending:false}).limit(80)),
       q(sb.from('shopping').select('*').or('done.eq.false,done_at.gte.'+new Date(Date.now()-14*864e5).toISOString()))]);
     S.events=res[0].map(function(e){return Object.assign({},e,{start:e.start_date,end:e.end_date})});
     S.chores=res[1];S.backlog=res[2];S.syncAt=res[3][0]?res[3][0].synced_at:null;
     S.tpl=res[4];S.prep=new Map(res[5].map(function(x){return [x.event_id+'__'+x.template_id,x]}));
-    S.notes=res[6];S.shop=res[7];S.status='ok';
+    S.eset=new Map(res[6].map(function(x){return [x.event_id,x]}));
+    S.notes=res[7];S.shop=res[8];S.status='ok';
   }catch(e){console.error(e);S.status='error'}
   await loadRange();
 }

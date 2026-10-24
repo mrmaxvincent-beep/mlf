@@ -27,7 +27,7 @@ export const drafts = {
 
 export const hero = {
   title: "mlf house",
-  tagline: "những người làm nên mộc",
+  tagline: "ngôi nhà của những điều dễ thương",
 };
 
 export const ghiNhan = {

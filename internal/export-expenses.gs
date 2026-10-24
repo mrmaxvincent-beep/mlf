@@ -13,7 +13,7 @@ var SECRET = '';
 var SB_URL = 'https://rzwujcfmdtjbqmuizxcf.supabase.co';
 var SB_KEY = 'sb_publishable_Tg6FMPioXLz1STbLa8Lw-g_lquNRVao';
 var TAB = 'Chi tiêu mlf os';
-var NAMES = { tam: 'Tâm', thuan: 'Thuận', vu: 'Vũ' };
+var NAMES = { tam: 'Tâm', thuan: 'Thuận', vu: 'Vũ', mlf: 'Tài khoản mlf' };
 
 function exportExpenses() {
   if (!SECRET) throw new Error('Chưa dán mật khẩu vào dòng SECRET ở đầu script.');
@@ -29,7 +29,7 @@ function exportExpenses() {
 
   var ss = SpreadsheetApp.getActive();
   var sh = ss.getSheetByName(TAB) || ss.insertSheet(TAB);
-  var head = ['Ngày', 'Số tiền', 'Thuộc về', 'Nhóm', 'Hạng mục', 'Người chi', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
+  var head = ['Ngày', 'Số tiền', 'Thuộc về', 'Nhóm', 'Hạng mục', 'Người chi / nguồn tiền', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
   var data = rows.map(function (e) {
     return [
       new Date(e.spent_on + 'T00:00:00'),
@@ -39,7 +39,7 @@ function exportExpenses() {
       e.item,
       NAMES[e.paid_by] || e.paid_by,
       e.note || '',
-      e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
+      e.paid_by === 'mlf' ? 'không cần hoàn' : e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
       e.reimbursed_at ? new Date(Utilities.formatDate(new Date(e.reimbursed_at), 'Asia/Ho_Chi_Minh', "yyyy-MM-dd'T'00:00:00")) : ''
     ];
   });

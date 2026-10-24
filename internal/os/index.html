@@ -603,7 +603,7 @@ section.blk .more>summary{color:var(--ink)}
       <label class="w2">thuộc về<select name="scope"><option>Vận hành chung</option><option>Tuần-du</option></select></label>
       <label class="w2">nhóm<select name="grp" required></select></label>
       <label class="w2">hạng mục<select name="sub" required></select></label>
-      <label>người chi (đã trả tiền)<select name="who"></select></label>
+      <label>người chi / nguồn tiền<select name="who"></select></label>
       <label>ghi chú<input name="note" placeholder="tuỳ chọn"></label>
       <div class="factions"><button class="solid" type="submit" id="expSubmit">lưu khoản chi</button><button class="ghost" type="button" id="expCancel" hidden>huỷ sửa</button></div>
     </form>
@@ -626,9 +626,9 @@ section.blk .more>summary{color:var(--ink)}
 'use strict';
 var CFG=window.MLF_OS_CONFIG||{};
 var PEOPLE=[['tam','Tâm'],['thuan','Thuận'],['vu','Vũ']];
-var PN={tam:'Tâm',thuan:'Thuận',vu:'Vũ'};
-var AVL={tam:'Tâ',thuan:'Th',vu:'Vũ'};
-var PCOL={tam:'var(--p-tam)',thuan:'var(--p-thuan)',vu:'var(--p-vu)'};
+var PN={tam:'Tâm',thuan:'Thuận',vu:'Vũ',mlf:'Tài khoản mlf'};
+var AVL={tam:'Tâ',thuan:'Th',vu:'Vũ',mlf:'m'};
+var PCOL={tam:'var(--p-tam)',thuan:'var(--p-thuan)',vu:'var(--p-vu)',mlf:'var(--moss)'};
 function av(p,sz){return h('span',{class:'av'+(sz?' '+sz:''),style:'background:'+PCOL[p],'aria-hidden':'true'},AVL[p])}
 var KIND={retreat:['retreat','--k-retreat'],staytalk:['stay+talk','--k-staytalk'],ntn:['người-trong-nhà','--k-ntn'],homestay:['homestay','--k-home'],mini:['mini retreat','--k-home'],khac:['khác','--k-khac']};
 var PAY={du:'đã thanh toán',chua:'chưa thanh toán',credit:'trừ credit',mien:'không thu phí'};
@@ -1208,7 +1208,7 @@ function fillItems(keep){
   var g=XF.elements.grp;
   g.replaceChildren.apply(g,EXP_CATS.map(function(c){return h('option',{value:c[0]},c[0])}));
   var w=XF.elements.who;
-  w.replaceChildren.apply(w,PEOPLE.map(function(x){return h('option',{value:x[0]},x[1])}));
+  w.replaceChildren.apply(w,PEOPLE.concat([['mlf','Tài khoản mlf (quỹ chung)']]).map(function(x){return h('option',{value:x[0]},x[1])}));
   fillItems();
   XF.elements.date.value=today();
   g.addEventListener('change',function(){fillItems()});
@@ -1227,8 +1227,9 @@ function drawExpenses(){
     S.expMonth!==monthOf(today())?h('button',{type:'button',class:'ghost',onclick:function(){S.expMonth=monthOf(today());draw()}},'tháng này'):null,
     h('button',{type:'button',class:'ghost','aria-label':'tháng sau',onclick:function(){S.expMonth=shiftMonth(S.expMonth,1);draw()}},'›'));
 
+  var fromMlf=rows.filter(function(e){return e.paid_by==='mlf'}).reduce(function(n,e){return n+Number(e.amount)},0);
   var byG={};rows.forEach(function(e){byG[e.grp]=(byG[e.grp]||0)+Number(e.amount)});
-  var before=S.exp.filter(function(e){return monthOf(e.spent_on)<S.expMonth&&!e.reimbursed});
+  var before=S.exp.filter(function(e){return monthOf(e.spent_on)<S.expMonth&&!e.reimbursed&&e.paid_by!=='mlf'});
   put('expSum',
     h('h2',null,'tổng kết '+monthLabel(S.expMonth)),
     h('p',{class:'exp-total'},vnd(total),h('small',null,rows.length+' khoản')),
@@ -1241,6 +1242,7 @@ function drawExpenses(){
         h('span',{class:'exp-n'+(wait?' due':'')},vnd(wait)),h('span',{class:'meta'},'chờ hoàn'),
         wait?h('button',{type:'button',class:'ghost',onclick:function(){reimburseAll(p[0])}},'hoàn hết'):null);
     })),
+    fromMlf?h('p',{class:'meta exp-before'},'Trả từ tài khoản mlf: '+vnd(fromMlf)+' (tính vào tổng tháng, không cần hoàn cho ai).'):null,
     before.length?h('p',{class:'meta exp-before'},'Còn chờ hoàn từ các tháng trước: '+PEOPLE.map(function(p){
       var n=before.filter(function(e){return e.paid_by===p[0]}).reduce(function(a,e){return a+Number(e.amount)},0);return n?PN[p[0]]+' '+vnd(n):null}).filter(Boolean).join(', ')+'.'):null,
     Object.keys(byG).length?h('details',{class:'more'},h('summary',null,'theo nhóm chi'),
@@ -1254,7 +1256,7 @@ function drawExpenses(){
       h('span',{class:'exp-a'},vnd(e.amount)),
       h('span',{class:'exp-w'},av(e.paid_by,'sm')),
       h('span',{class:'exp-b'},
-        h('button',{type:'button',class:'chip'+(e.reimbursed?' on':''),'aria-pressed':String(!!e.reimbursed),onclick:function(){toggleReimb(e)}},e.reimbursed?'đã hoàn':'chờ hoàn'),
+        e.paid_by==='mlf'?h('span',{class:'meta'},'trả từ tài khoản mlf'):h('button',{type:'button',class:'chip'+(e.reimbursed?' on':''),'aria-pressed':String(!!e.reimbursed),onclick:function(){toggleReimb(e)}},e.reimbursed?'đã hoàn':'chờ hoàn'),
         h('button',{type:'button',class:'x',onclick:function(){editExp(e)}},'sửa'),
         h('button',{type:'button',class:'x'+(S.armed===key?' armed':''),'aria-label':'xoá khoản này',onclick:function(){if(arm(key))delExp(e)}},S.armed===key?'xoá?':'×')));
   })):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa có khoản chi nào trong tháng này.'));
@@ -1308,8 +1310,8 @@ $('expExport').addEventListener('click',function(){
   var rows=expMonthRows().sort(function(a,b){return a.spent_on.localeCompare(b.spent_on)||String(a.created_at).localeCompare(String(b.created_at))});
   if(!rows.length){toast('Tháng này chưa có khoản chi để xuất.');return}
   function cell(v){v=v==null?'':String(v);return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
-  var lines=[['Ngày','Số tiền','Thuộc về','Nhóm','Hạng mục','Người chi','Ghi chú','Hoàn lại']].concat(rows.map(function(e){
-    return [dmy(e.spent_on),e.amount,e.scope||'Vận hành chung',e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.reimbursed?'đã hoàn':'chờ hoàn']}));
+  var lines=[['Ngày','Số tiền','Thuộc về','Nhóm','Hạng mục','Người chi / nguồn tiền','Ghi chú','Hoàn lại']].concat(rows.map(function(e){
+    return [dmy(e.spent_on),e.amount,e.scope||'Vận hành chung',e.grp,e.item,PN[e.paid_by]||e.paid_by,e.note||'',e.paid_by==='mlf'?'không cần hoàn':e.reimbursed?'đã hoàn':'chờ hoàn']}));
   var csv='﻿'+lines.map(function(l){return l.map(cell).join(',')}).join('\r\n');
   var a=h('a',{href:URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),download:'chi-tieu-'+S.expMonth+'.csv'});
   document.body.append(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);

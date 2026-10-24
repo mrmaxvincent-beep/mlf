@@ -80,6 +80,10 @@ export function MlfHouseInvites() {
             <dd>{inv.needs}</dd>
           </div>
           <div>
+            <dt>số người</dt>
+            <dd>{String(inv.slots).padStart(2, "0")} người</dd>
+          </div>
+          <div>
             <dt>cách góp</dt>
             <dd>{inv.how}</dd>
           </div>

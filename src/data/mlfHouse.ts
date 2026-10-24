@@ -98,6 +98,8 @@ export type Invitation = {
   status: "open" | "done";
   why: string;
   needs: string;
+  /** số người cần cho lời mời này */
+  slots: number;
   how: string;
   form: string;
   closes: string;
@@ -125,6 +127,7 @@ export const invitations: Invitation[] = [
     status: "open",
     why: "Cùng nhà mộc phát triển bộ chỉ-nguyệt và quyển sách mộc-ngữ cho các hoạt động cộng đồng vòng-trà-tâm. (hoạt động miễn phí)",
     needs: "người có sự tu dưỡng, am hiểu Đạo",
+    slots: 1,
     how: "phát triển nội dung dựa trên khung sườn gợi ý của mlf: bộ chỉ-nguyệt gồm 1000 câu hỏi, và quyển sách mộc-ngữ gồm 1000 lời gợi mở",
     form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
     closes: "01.03.2027",
@@ -137,6 +140,7 @@ export const invitations: Invitation[] = [
     status: "open",
     why: "Bộ 50 hình nền điện thoại với những lời nhắc ở-yên để mọi người có thể tải về miễn phí.",
     needs: "graphic designer, họa sĩ",
+    slots: 1,
     how: "thiết kế dựa trên concept và nội dung mà mlf đề xuất",
     form: "tặng bạn 01 chuyến retreat hàm-dưỡng của mlf",
     closes: "01.03.2027",

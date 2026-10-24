@@ -32,8 +32,11 @@ export const hero = {
 
 export const ghiNhan = {
   title: "ghi nhận",
-  /** mỗi phần tử là một dòng */
-  thanks: ["Những người có mối liên hệ sâu sắc và đã đồng hành cùng mlf qua thời gian.", "Xin gửi lời cảm ơn chân thành tới những người bạn của mlf!"],
+  /** mỗi phần tử là một đoạn */
+  thanks: [
+    "Mỗi người đến với mlf bằng một cách khác nhau. Có người đã đồng hành từ những ngày đầu, có người góp sức trong một dự án, có người nâng đỡ Mộc bằng chuyên môn, nguồn lực hay một sự hiện diện đúng lúc.",
+    "Chúng tôi muốn lưu lại những gương mặt ấy như một lời cảm ơn - dành cho những người đã góp một phần của mình để Mộc có thể tiếp tục lớn lên.",
+  ],
 };
 
 export type Person = {

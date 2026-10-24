@@ -19,14 +19,11 @@ export const metadata: Metadata = {
 export default function MlfHousePage() {
   const ghiNhanRoom = (
     <>
-      <p className="mh-thanks">
-        {ghiNhan.thanks.map((line, i) => (
-          <span key={line}>
-            {i > 0 ? <br /> : null}
-            {line}
-          </span>
+      <div className="mh-thanks">
+        {ghiNhan.thanks.map((para) => (
+          <p key={para}>{para}</p>
         ))}
-      </p>
+      </div>
       <MlfHousePeople />
     </>
   );

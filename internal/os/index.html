@@ -410,26 +410,18 @@ section.blk{margin-top:44px}
 #tuan,#phatsinh,#luanphien,#kho{scroll-margin-top:50px}
 @media (prefers-reduced-motion:reduce){.subnav{transition:none}}
 
-/* ── mỗi mục là một dải màu riêng, chạy hết chiều ngang ── */
-:root{--sec-mix:10%;--a-saptoi:#2563EB;--a-tuan:#0F766E;--a-phatsinh:#C2410C;--a-luanphien:#7C3AED;--a-kho:#475569;--a-so:#A16207;--a-mua:#15803D}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sec-mix:16%;--a-saptoi:#60A5FA;--a-tuan:#2DD4BF;--a-phatsinh:#FB923C;--a-luanphien:#A78BFA;--a-kho:#94A3B8;--a-so:#FACC15;--a-mua:#4ADE80}}
-:root[data-theme="dark"]{--sec-mix:16%;--a-saptoi:#60A5FA;--a-tuan:#2DD4BF;--a-phatsinh:#FB923C;--a-luanphien:#A78BFA;--a-kho:#94A3B8;--a-so:#FACC15;--a-mua:#4ADE80}
+/* ── các mục xen kẽ hai tông (xanh ngọc nhạt / xám nhạt), chạy hết chiều ngang ── */
 body{overflow-x:clip}
 #homnay{padding-bottom:30px}
-section.blk{position:relative;isolation:isolate;margin-top:0;padding:30px 0 34px;--acc:var(--a-kho);--mist:color-mix(in srgb,var(--acc) 18%,var(--bg));--line:color-mix(in srgb,var(--acc) 28%,var(--bg))}
-section.blk::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:color-mix(in srgb,var(--acc) var(--sec-mix),var(--bg));border-top:1px solid color-mix(in srgb,var(--acc) 22%,var(--bg))}
-#saptoi{--acc:var(--a-saptoi)}
-#tuan{--acc:var(--a-tuan)}
-#phatsinh{--acc:var(--a-phatsinh)}
-#luanphien{--acc:var(--a-luanphien)}
-#kho{--acc:var(--a-kho)}
-#so{--acc:var(--a-so)}
-#mua{--acc:var(--a-mua)}
+section.blk{position:relative;isolation:isolate;margin-top:0;padding:30px 0 34px;--acc:var(--moss);--band:color-mix(in srgb,var(--moss) 14%,var(--bg))}
+#tuan,#luanphien,#so{--acc:var(--stone);--band:color-mix(in srgb,var(--stone) 9%,var(--bg))}
+section.blk{--mist:color-mix(in srgb,var(--acc) 20%,var(--bg));--line:color-mix(in srgb,var(--acc) 30%,var(--bg))}
+section.blk::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:var(--band)}
 .blk-h h2{display:flex;align-items:center;gap:10px}
-.blk-h h2::before{content:"";flex:none;width:6px;height:1.15em;border-radius:3px;background:var(--acc)}
+.blk-h h2::before{content:"";flex:none;width:6px;height:1.15em;border-radius:3px;background:var(--moss)}
 .blk-h p{margin-left:16px}
-section.blk .eyebrow,section.blk .sub,section.blk .rooms-l{color:var(--acc)}
-section.blk .more>summary::before{color:var(--acc)}
+section.blk .eyebrow,section.blk .sub,section.blk .rooms-l{color:var(--stone)}
+section.blk .more>summary::before{color:var(--moss)}
 section.blk .more>summary{color:var(--ink)}
 .foot{margin-top:0;padding-top:24px;border-top:0}
 </style>

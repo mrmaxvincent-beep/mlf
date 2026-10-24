@@ -38,7 +38,7 @@ export const ghiNhan = {
   /** mỗi phần tử là một đoạn */
   thanks: [
     "Mỗi người đến với mlf bằng một cái duyên.",
-    "Chúng tôi muốn lưu lại những gương mặt ấy như một lời cảm ơn - dành cho những người đã góp một phần của mình để Mộc có thể tiếp tục lớn lên.",
+    "Chúng tôi muốn lưu lại những dấu ấn này như một lời cảm ơn - dành cho những người đã góp một phần của mình để Mộc có thể tiếp tục lớn lên.",
   ],
 };
 

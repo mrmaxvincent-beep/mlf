@@ -4,19 +4,17 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { MailChoice } from "@/components/MailChoice";
 import { drafts, people, type Person } from "@/data/mlfHouse";
 
-type Dim = "all" | "place" | "job" | "shares";
+type Dim = "all" | "place" | "job";
 
 const DIMS: { id: Dim; label: string }[] = [
   { id: "all", label: "tất cả" },
   { id: "place", label: "nơi ở" },
   { id: "job", label: "nghề" },
-  { id: "shares", label: "có thể chia sẻ" },
 ];
 
 function valuesOf(p: Person, d: Dim): string[] {
   if (d === "place") return [p.place];
   if (d === "job") return [p.job];
-  if (d === "shares") return p.shares;
   return [];
 }
 

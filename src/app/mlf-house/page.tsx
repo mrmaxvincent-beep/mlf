@@ -121,11 +121,6 @@ export default function MlfHousePage() {
         <MailChoice label="nhắn nhà mộc" draft={drafts.nguoiCuaNha()} variant="link" />
       </Reveal>
 
-      <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.veMlf} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
-          ← về mlf
-        </Link>
-      </div>
 
       <Footer />
     </>

@@ -109,7 +109,7 @@ export const gopTay = {
   /** mỗi phần tử là một đoạn */
   intro: [
     "Mộc có những ý tưởng đang chờ được thực hiện.",
-    "Ở đây, nhà Mộc mở ra những lời mời đồng hành dành cho những ai thấy mình có thể góp một phần.",
+    "Có những việc Mộc có thể tự mình làm. Cũng có những điều sẽ trở nên trọn vẹn hơn khi có thêm người cùng góp sức.",
   ],
 };
 

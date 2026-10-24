@@ -626,7 +626,7 @@ section.blk .more>summary{color:var(--ink)}
 'use strict';
 var CFG=window.MLF_OS_CONFIG||{};
 var PEOPLE=[['tam','Tâm'],['thuan','Thuận'],['vu','Vũ']];
-var PN={tam:'Tâm',thuan:'Thuận',vu:'Vũ',mlf:'Tài khoản mlf'};
+var PN={tam:'Tâm',thuan:'Thuận',vu:'Vũ',mlf:'TK mlf'};
 var AVL={tam:'Tâ',thuan:'Th',vu:'Vũ',mlf:'m'};
 var PCOL={tam:'var(--p-tam)',thuan:'var(--p-thuan)',vu:'var(--p-vu)',mlf:'var(--moss)'};
 function av(p,sz){return h('span',{class:'av'+(sz?' '+sz:''),style:'background:'+PCOL[p],'aria-hidden':'true'},AVL[p])}
@@ -1208,7 +1208,7 @@ function fillItems(keep){
   var g=XF.elements.grp;
   g.replaceChildren.apply(g,EXP_CATS.map(function(c){return h('option',{value:c[0]},c[0])}));
   var w=XF.elements.who;
-  w.replaceChildren.apply(w,PEOPLE.concat([['mlf','Tài khoản mlf (quỹ chung)']]).map(function(x){return h('option',{value:x[0]},x[1])}));
+  w.replaceChildren.apply(w,PEOPLE.concat([['mlf','TK mlf (quỹ chung)']]).map(function(x){return h('option',{value:x[0]},x[1])}));
   fillItems();
   XF.elements.date.value=today();
   g.addEventListener('change',function(){fillItems()});
@@ -1242,7 +1242,7 @@ function drawExpenses(){
         h('span',{class:'exp-n'+(wait?' due':'')},vnd(wait)),h('span',{class:'meta'},'chờ hoàn'),
         wait?h('button',{type:'button',class:'ghost',onclick:function(){reimburseAll(p[0])}},'hoàn hết'):null);
     })),
-    fromMlf?h('p',{class:'meta exp-before'},'Trả từ tài khoản mlf: '+vnd(fromMlf)+' (tính vào tổng tháng, không cần hoàn cho ai).'):null,
+    fromMlf?h('p',{class:'meta exp-before'},'Trả từ TK mlf: '+vnd(fromMlf)+' (tính vào tổng tháng, không cần hoàn cho ai).'):null,
     before.length?h('p',{class:'meta exp-before'},'Còn chờ hoàn từ các tháng trước: '+PEOPLE.map(function(p){
       var n=before.filter(function(e){return e.paid_by===p[0]}).reduce(function(a,e){return a+Number(e.amount)},0);return n?PN[p[0]]+' '+vnd(n):null}).filter(Boolean).join(', ')+'.'):null,
     Object.keys(byG).length?h('details',{class:'more'},h('summary',null,'theo nhóm chi'),
@@ -1256,7 +1256,7 @@ function drawExpenses(){
       h('span',{class:'exp-a'},vnd(e.amount)),
       h('span',{class:'exp-w'},av(e.paid_by,'sm')),
       h('span',{class:'exp-b'},
-        e.paid_by==='mlf'?h('span',{class:'meta'},'trả từ tài khoản mlf'):h('button',{type:'button',class:'chip'+(e.reimbursed?' on':''),'aria-pressed':String(!!e.reimbursed),onclick:function(){toggleReimb(e)}},e.reimbursed?'đã hoàn':'chờ hoàn'),
+        e.paid_by==='mlf'?h('span',{class:'meta'},'trả từ TK mlf'):h('button',{type:'button',class:'chip'+(e.reimbursed?' on':''),'aria-pressed':String(!!e.reimbursed),onclick:function(){toggleReimb(e)}},e.reimbursed?'đã hoàn':'chờ hoàn'),
         h('button',{type:'button',class:'x',onclick:function(){editExp(e)}},'sửa'),
         h('button',{type:'button',class:'x'+(S.armed===key?' armed':''),'aria-label':'xoá khoản này',onclick:function(){if(arm(key))delExp(e)}},S.armed===key?'xoá?':'×')));
   })):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa có khoản chi nào trong tháng này.'));

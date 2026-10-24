@@ -13,7 +13,7 @@ var SECRET = '';
 var SB_URL = 'https://rzwujcfmdtjbqmuizxcf.supabase.co';
 var SB_KEY = 'sb_publishable_Tg6FMPioXLz1STbLa8Lw-g_lquNRVao';
 var TAB = 'Chi tiêu mlf os';
-var NAMES = { tam: 'Tâm', thuan: 'Thuận', vu: 'Vũ', mlf: 'Tài khoản mlf' };
+var NAMES = { tam: 'Tâm', thuan: 'Thuận', vu: 'Vũ', mlf: 'TK mlf' };
 
 function exportExpenses() {
   if (!SECRET) throw new Error('Chưa dán mật khẩu vào dòng SECRET ở đầu script.');

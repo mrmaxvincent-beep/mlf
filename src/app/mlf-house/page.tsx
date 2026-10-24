@@ -92,10 +92,6 @@ export default function MlfHousePage() {
           </article>
         ))}
       </div>
-      <div className="mh-propose">
-        <p>Có một việc muốn rủ mọi người cùng làm?</p>
-        <MailChoice label="đề xuất việc của bạn" draft={drafts.deXuat()} variant="link" />
-      </div>
     </div>
   );
 

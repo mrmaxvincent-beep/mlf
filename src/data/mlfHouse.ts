@@ -24,10 +24,6 @@ export const drafts = {
     subject: `góp tay: ${task}`,
     body: `Chào nhà mộc,\n\nMình tên là: \nMình muốn góp tay cho việc: ${task}\nMình có thể góp bằng: \nThời gian mình có: ${sign}`,
   }),
-  deXuat: (): MailDraft => ({
-    subject: "đề xuất một việc cần góp tay",
-    body: `Chào nhà mộc,\n\nMình tên là: \nViệc mình muốn rủ mọi người cùng làm: \nVì sao: \nĐang cần những gì: \nKhi nào: ${sign}`,
-  }),
   nguoiCuaNha: (): MailDraft => ({
     subject: "mình là người của nhà",
     body: `Chào nhà mộc,\n\nMình tên là: \nMình gặp mộc vào: \nĐiều mình đã góp cho mộc: ${sign}`,

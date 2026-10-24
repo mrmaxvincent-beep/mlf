@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 
-export type Room = { id: string; name: string; sub: string; content: ReactNode };
+export type Room = { id: string; name: string; content: ReactNode };
 
 /**
  * Ngôi nhà ba gian: mặt tiền vẽ nét (mái + cột), mỗi gian là một tab.
@@ -87,7 +87,6 @@ export function MlfHouseRooms({ rooms }: { rooms: Room[] }) {
                 onKeyDown={(e) => onKey(e, i)}
               >
                 <span className="mhr-name">{r.name}</span>
-                <span className="mhr-sub">{r.sub}</span>
               </button>
             );
           })}

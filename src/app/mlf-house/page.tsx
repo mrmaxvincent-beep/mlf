@@ -66,9 +66,9 @@ export default function MlfHousePage() {
       <div className="wrap-wide">
         <MlfHouseRooms
           rooms={[
-            { id: "ghi-nhan", name: ghiNhan.title, sub: "những người đã góp cho mộc", content: ghiNhanRoom },
-            { id: "ket-noi", name: ketNoi.title, sub: "tìm nhau, nhờ nhà giới thiệu", content: ketNoiRoom },
-            { id: "gop-tay", name: gopTay.title, sub: "những việc đang cần thêm người", content: gopTayRoom },
+            { id: "ghi-nhan", name: ghiNhan.title, content: ghiNhanRoom },
+            { id: "ket-noi", name: ketNoi.title, content: ketNoiRoom },
+            { id: "gop-tay", name: gopTay.title, content: gopTayRoom },
           ]}
         />
       </div>

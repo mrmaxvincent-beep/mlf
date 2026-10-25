@@ -255,7 +255,12 @@ ul.items{list-style:none;margin:0;padding:0}
 .shop .x{border:0;background:transparent;color:var(--stone);padding:2px 6px;font-size:.9rem;opacity:.6;min-width:32px}
 .shop .x.armed{opacity:1;color:var(--warn)}
 .shop-g{font-family:var(--serif);font-style:normal;font-size:1.05rem;margin:16px 0 2px;display:flex;align-items:center;gap:6px}
-.shop-cat{margin-top:12px}
+.shop-main{margin-top:14px;padding:14px 16px 8px;border:2px solid var(--moss);border-radius:14px;background:var(--panel);box-shadow:var(--shadow)}
+.shop-title{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:1rem}
+.shop-count{min-width:26px;padding:2px 9px;border-radius:999px;background:var(--moss);color:var(--on-moss);font-size:.8rem;font-weight:600;text-align:center}
+.shop-main .shop li:last-child{border-bottom:0}
+.shop-cat{margin-top:22px;padding:12px 14px;border:1px dashed var(--line);border-radius:14px;background:transparent}
+.shop-cat>summary{font-weight:500}
 .shop-cat input[type=search]{display:block;width:100%;box-sizing:border-box;height:42px;margin:10px 0 4px;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
 .cat-add{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--mist)}
 .cat-add .shop-g,.cat-add button{grid-column:1/-1}
@@ -619,7 +624,12 @@ section.blk .more>summary{color:var(--ink)}
       <input name="text" required placeholder="vd: 5kg gạo lứt" aria-label="món cần mua">
       <button class="solid" type="submit">thêm</button>
     </form>
-    <details class="more shop-cat" id="shopCat"><summary>chọn từ danh mục hay mua</summary>
+    <div class="shop-main">
+      <div class="shop-title"><b>danh sách cần mua</b><span class="shop-count" id="shopCount">0</span></div>
+      <div id="shopList"></div>
+      <details class="more" id="shopDoneBox"><summary id="shopDoneSum">đã mua gần đây</summary><ul class="shop" id="shopDone"></ul></details>
+    </div>
+    <details class="more shop-cat" id="shopCat"><summary>kho món hay mua · bấm để chọn</summary>
       <input type="search" id="shopCatQ" placeholder="tìm món …" aria-label="tìm món trong danh mục" autocomplete="off">
       <div id="shopCatList"></div>
       <form class="cat-add" id="shopCatForm" autocomplete="off">
@@ -629,8 +639,6 @@ section.blk .more>summary{color:var(--ink)}
         <button class="solid" type="submit">thêm vào danh mục</button>
       </form>
     </details>
-    <div id="shopList"></div>
-    <details class="more" id="shopDoneBox"><summary id="shopDoneSum">đã mua gần đây</summary><ul class="shop" id="shopDone"></ul></details>
   </section>
 
   <section class="blk" id="thu" hidden>
@@ -1063,6 +1071,7 @@ function shopRow(x){var key='sh:'+x.id;
 function drawShop(){
   var open=S.shop.filter(function(x){return !x.done}),done=S.shop.filter(function(x){return x.done}).sort(function(a,b){return String(b.done_at).localeCompare(String(a.done_at))});
   put('shopList',open.length?h('ul',{class:'shop'},open.map(shopRow)):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa cần mua gì.'));
+  $('shopCount').textContent=open.length;
   $('shopDoneBox').hidden=!done.length;$('shopDoneSum').textContent='đã mua gần đây, '+done.length+' món';
   put('shopDone',done.map(shopRow));
 }

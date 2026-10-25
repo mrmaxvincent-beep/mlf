@@ -82,7 +82,7 @@ function exportExpenses() {
       e.item,
       NAMES[e.paid_by] || e.paid_by,
       e.note || '',
-      refund || e.paid_by === 'mlf' ? 'không cần hoàn' : e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
+      refund || e.kind === 'chuyen' || e.paid_by === 'mlf' ? 'không cần hoàn' : e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
       e.reimbursed_at ? vnDay(e.reimbursed_at) : ''
     ];
   });
@@ -91,9 +91,9 @@ function exportExpenses() {
   var fin = rows.map(function (e) {
     var refund = e.kind === 'hoan_khach';
     return [
-      refund ? 'hoan_khach' : 'chi',
+      refund ? 'hoan_khach' : e.kind === 'chuyen' ? 'chuyen' : 'chi',
       e.account || '',
-      '',
+      e.to_account || '',
       refund ? (e.noi_dung || '') : '',
       e.reimbursed ? (e.reimbursed_account || '') : ''
     ];

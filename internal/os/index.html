@@ -1322,7 +1322,7 @@ function monthEnd(m){var p=m.split('-').map(Number);return m+'-'+pad(new Date(p[
 var XF=$('expForm');
 var UNKNOWN_CAT='old';
 function fillCats(keep){
-  var cats=(window.MLF_EXP_CATS||{})[XF.elements.scope.value]||[],sel=XF.elements.cat,pick=null;
+  var cats=(window.MLF_EXP_CATS||{})['Vận hành chung']||[],sel=XF.elements.cat,pick=null;
   var groups=cats.map(function(c,gi){
     if(!c[1]){var v0=gi+':-';if(keep&&keep.grp===c[0]&&!keep.item)pick=v0;return h('option',{value:v0},c[0])}
     return h('optgroup',{label:c[0]},c[1].map(function(it,ii){
@@ -1334,7 +1334,7 @@ function fillCats(keep){
 function catOf(){
   var v=XF.elements.cat.value;
   if(v===UNKNOWN_CAT)return S.expOld;
-  var p=v.split(':'),c=((window.MLF_EXP_CATS||{})[XF.elements.scope.value]||[])[p[0]];
+  var p=v.split(':'),c=((window.MLF_EXP_CATS||{})['Vận hành chung']||[])[p[0]];
   return c?{grp:c[0],item:c[1]?c[1][p[1]]:''}:null;
 }
 function expKindUI(){
@@ -1351,7 +1351,6 @@ function expKindUI(){
   var ac=XF.elements.acc;ac.replaceChildren.apply(ac,[h('option',{value:''},'— chọn tài khoản —')].concat([['VCB_Vu','VCB (Vũ)'],['TCB_Tam','TCB (Tâm)'],['Tien_mat','Tiền mặt']].map(function(x){return h('option',{value:x[0]},x[1])})));
   fillCats();
   XF.elements.date.value=today();
-  XF.elements.scope.addEventListener('change',function(){fillCats()});
   XF.elements.kind.addEventListener('change',expKindUI);
   XF.elements.who.addEventListener('change',expKindUI);
   XF.elements.amount.addEventListener('input',function(){

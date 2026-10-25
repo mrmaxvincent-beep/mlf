@@ -1,6 +1,6 @@
 // mlf os · service worker: giữ khung trang để mở nhanh như app.
 // Ưu tiên mạng (luôn lấy bản mới), mất mạng thì dùng bản đã lưu. Dữ liệu Supabase không lưu ở đây.
-var CACHE = 'mlf-os-v4';
+var CACHE = 'mlf-os-v5';
 var SHELL = ['./', './index.html', './config.js', './expense-cats.js', './manifest.webmanifest', './icon-192.png'];
 
 self.addEventListener('install', function (e) {

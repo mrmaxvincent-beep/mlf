@@ -255,6 +255,10 @@ ul.items{list-style:none;margin:0;padding:0}
 .shop .x{border:0;background:transparent;color:var(--stone);padding:2px 6px;font-size:.9rem;opacity:.6;min-width:32px}
 .shop .x.armed{opacity:1;color:var(--warn)}
 .shop-g{font-family:var(--serif);font-style:normal;font-size:1.05rem;margin:16px 0 2px;display:flex;align-items:center;gap:6px}
+.shop-cat{margin-top:12px}
+.shop-cat input[type=search]{display:block;width:100%;box-sizing:border-box;height:42px;margin:10px 0 4px;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
+.shop-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.shop-chips .chip{min-height:32px;padding:4px 12px;font-size:.82rem}
 .sform{display:grid;grid-template-columns:1fr auto;gap:6px;margin-top:4px}
 .sform input,.sform select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:9px 10px;font-size:16px;min-width:0;width:100%}
 .sform select{grid-column:1/-1;font-size:.9rem}
@@ -478,6 +482,7 @@ section.blk .more>summary{color:var(--ink)}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="./config.js"></script>
 <script src="./expense-cats.js"></script>
+<script src="./shopping-items.js"></script>
 </head>
 <body>
 <div class="wrap" id="app">
@@ -611,6 +616,10 @@ section.blk .more>summary{color:var(--ink)}
       <button class="solid" type="submit">thêm</button>
       <select name="ev" aria-label="cho booking nào"></select>
     </form>
+    <details class="more shop-cat" id="shopCat"><summary>chọn từ danh mục hay mua</summary>
+      <input type="search" id="shopCatQ" placeholder="tìm món …" aria-label="tìm món trong danh mục" autocomplete="off">
+      <div id="shopCatList"></div>
+    </details>
     <div id="shopList"></div>
     <details class="more" id="shopDoneBox"><summary id="shopDoneSum">đã mua gần đây</summary><ul class="shop" id="shopDone"></ul></details>
   </section>
@@ -814,7 +823,7 @@ var rq=false;
 function editing(){var a=document.activeElement;return a&&a.closest&&a.closest('#dayPanel,#blList,#evList,#evLater')&&/^(INPUT|SELECT)$/.test(a.tagName)&&a.type!=='checkbox'}
 function render(){if(rq)return;rq=true;requestAnimationFrame(function(){rq=false;if(editing()){S.dirty=true;return}draw()})}
 document.addEventListener('focusout',function(){setTimeout(function(){if(S.dirty&&!editing()){S.dirty=false;draw()}},0)});
-function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawExpenses();drawIncome();drawTabs();drawSub()}
+function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawShopCat();drawExpenses();drawIncome();drawTabs();drawSub()}
 
 function drawToday(){var d=parse(S.day);$('todayLine').textContent='hôm nay '+DOWF[d.getDay()]+', '+d.getDate()+' tháng '+(d.getMonth()+1)}
 function drawNotice(){put('notice',S.status==='error'?h('p',{class:'notice'},'Chưa tải được dữ liệu. Kiểm tra mạng rồi tải lại trang.'):null,drawPinned())}
@@ -1059,6 +1068,30 @@ async function toggleShop(x){
   try{await q(sb.from('shopping').update({done:x.done,done_at:x.done_at,done_by:x.done_by}).eq('id',x.id))}catch(e){fail(e)}
 }
 var SF=$('shopForm');
+var shopPending={};
+function shopKey(t){return String(t||'').trim().toLowerCase()}
+async function addShopItem(text){
+  var k=shopKey(text);
+  if(!k||shopPending[k])return;
+  if(S.shop.some(function(x){return !x.done&&shopKey(x.text)===k})){toast('Đã có trong list: '+text+'.');return}
+  shopPending[k]=1;
+  try{
+    var r=await q(sb.from('shopping').insert({text:text,added_by:S.me,event_id:SF.elements.ev.value||null}).select());
+    S.shop=S.shop.concat(r);render();
+  }catch(e){fail(e)}
+  finally{delete shopPending[k]}
+}
+function drawShopCat(){
+  var qs=shopKey($('shopCatQ').value),have={};
+  S.shop.forEach(function(x){if(!x.done)have[shopKey(x.text)]=1});
+  var cats=(window.MLF_SHOP_ITEMS||[]).map(function(c){
+    return [c[0],c[1].filter(function(n){return !qs||shopKey(n).indexOf(qs)>=0})]}).filter(function(c){return c[1].length});
+  put('shopCatList',cats.length?cats.map(function(c){
+    return [h('p',{class:'shop-g'},c[0]),h('div',{class:'shop-chips'},c[1].map(function(n){
+      var on=!!have[shopKey(n)];
+      return h('button',{type:'button',class:'chip'+(on?' on':''),'aria-pressed':String(on),onclick:function(){addShopItem(n)}},(on?'✓ ':'+ ')+n)}))]}):h('p',{class:'empty'},'Không thấy món nào khớp. Gõ tên vào ô "thêm" phía trên để ghi tự do.'));
+}
+$('shopCatQ').addEventListener('input',drawShopCat);
 SF.addEventListener('submit',async function(ev){
   ev.preventDefault();var t=(SF.elements.text.value||'').trim();if(!t)return;
   try{var r=await q(sb.from('shopping').insert({text:t,added_by:S.me,event_id:SF.elements.ev.value||null}).select());S.shop=S.shop.concat(r);SF.elements.text.value='';render()}catch(e){fail(e)}

@@ -437,6 +437,12 @@ section.blk .more>summary{color:var(--ink)}
 .exp-p .meta{font-size:.7rem;margin-bottom:4px}
 .exp-p .ghost{margin-top:4px;min-height:30px;padding:3px 4px;font-size:.72rem;white-space:nowrap}
 .exp-tk{margin:0 0 2px}
+.exp-sub{margin:26px 0 6px;font-size:1rem;font-weight:600}
+.exp-sub.first{margin-top:16px}
+.exp-hint{margin:0 0 10px}
+.exp-by{margin:0;align-self:center}
+#incBkInfo{display:block;margin-top:4px;line-height:1.4}
+.inc-kinds{margin-top:10px}
 .exp-before{margin:10px 0 0}
 .exp-groups{margin-top:6px}
 .exp-groups div{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--mist);font-size:.88rem}
@@ -599,6 +605,20 @@ section.blk .more>summary{color:var(--ink)}
 
   <section class="blk" id="chitieu">
     <div class="blk-h"><h2>chi tiêu</h2><p>Ghi khoản đã chi, người đã trả tiền là người ứng trước. Cuối tháng xuất file và hoàn lại cho người ứng.</p></div>
+    <h3 class="exp-sub first">ghi khoản thu</h3>
+    <p class="meta exp-hint">Chỉ ghi tiền thật đã vào tài khoản. Tiền hoàn cho khách là tiền ra, ghi ở phần chi.</p>
+    <form class="fgrid" id="incForm" autocomplete="off">
+      <label>số tiền (đ)<input name="amount" inputmode="numeric" required placeholder="vd: 6.000.000"></label>
+      <label>ngày nhận<input name="date" type="date" required></label>
+      <label class="w2">tài khoản nhận<select name="acc" required></select></label>
+      <label class="w2">loại<select name="kind" required></select></label>
+      <label class="w2" id="incBk">booking<select name="bk"></select><small class="meta" id="incBkInfo"></small></label>
+      <label class="w2">nội dung<input name="content" required maxlength="160" placeholder="vd: cọc, thanh toán, bán trà"></label>
+      <p class="meta w2 exp-by">người nhập: <b id="incWho"></b></p>
+      <div class="factions"><button class="solid" type="submit" id="incSubmit">lưu khoản thu</button><button class="ghost" type="button" id="incCancel" hidden>huỷ sửa</button></div>
+    </form>
+
+    <h3 class="exp-sub">ghi khoản chi</h3>
     <form class="fgrid" id="expForm" autocomplete="off">
       <label>số tiền (đ)<input name="amount" inputmode="numeric" required placeholder="vd: 250.000"></label>
       <label>ngày chi<input name="date" type="date" required></label>
@@ -613,6 +633,11 @@ section.blk .more>summary{color:var(--ink)}
     <div class="card" id="expSum"></div>
     <div id="expList"></div>
     <div class="exp-export"><button class="ghost" type="button" id="expExport">xuất file tháng này (csv)</button><a class="meta exp-sheet" href="https://docs.google.com/spreadsheets/d/1cIZ5GBptpb5NRbrWDER1Jy91k8K34H1abjg7AYGoGX8/edit?gid=219719339#gid=219719339" target="_blank" rel="noopener">Xem chi tiết trên Google Sheets Finance ↗</a></div>
+
+    <h3 class="exp-sub" id="incHead">sổ thu</h3>
+    <div class="card" id="incSum"></div>
+    <div id="incList"></div>
+    <div class="exp-export"><button class="ghost" type="button" id="incExport">xuất file thu tháng này (csv)</button></div>
   </section>
 
   <footer class="foot"><span class="sig">mộc little farm</span><span>trang nội bộ cho Tâm, Thuận và Vũ. </span>
@@ -666,7 +691,7 @@ function put(id){var el=$(id);el.replaceChildren.apply(el,Array.prototype.slice.
 var sb=null;
 var S={me:null,email:null,status:'loading',view:lsGet('mlfos.view')||'me',
   events:[],chores:[],swaps:new Map(),backlog:[],tasks:[],checks:new Map(),syncAt:null,
-  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],expMonth:null,expEdit:null,
+  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],expMonth:null,expEdit:null,inc:[],incEdit:null,incAuto:'',
   day:today(),ws:null,sel:null,addAt:null,assignAt:null,armed:null};
 S.ws=weekStart(S.day);S.sel=S.day;
 
@@ -780,7 +805,7 @@ var rq=false;
 function editing(){var a=document.activeElement;return a&&a.closest&&a.closest('#dayPanel,#blList,#evList,#evLater')&&/^(INPUT|SELECT)$/.test(a.tagName)&&a.type!=='checkbox'}
 function render(){if(rq)return;rq=true;requestAnimationFrame(function(){rq=false;if(editing()){S.dirty=true;return}draw()})}
 document.addEventListener('focusout',function(){setTimeout(function(){if(S.dirty&&!editing()){S.dirty=false;draw()}},0)});
-function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawExpenses();drawTabs();drawSub()}
+function draw(){setTopH();drawToday();drawNotice();drawHero();drawMine();drawTimeline();drawEvents();drawSync();drawTpl();drawWeek();drawReview();drawShared();drawRot();drawBacklog();drawNotes();drawShop();drawExpenses();drawIncome();drawTabs();drawSub()}
 
 function drawToday(){var d=parse(S.day);$('todayLine').textContent='hôm nay '+DOWF[d.getDay()]+', '+d.getDate()+' tháng '+(d.getMonth()+1)}
 function drawNotice(){put('notice',S.status==='error'?h('p',{class:'notice'},'Chưa tải được dữ liệu. Kiểm tra mạng rồi tải lại trang.'):null,drawPinned())}
@@ -1330,6 +1355,139 @@ $('expExport').addEventListener('click',function(){
   toast('Đã xuất chi-tieu-'+S.expMonth+'.csv');
 });
 
+/* ─── sổ thu: tiền thật vào tài khoản (không phải doanh thu) ─── */
+var INC_ACC=[['VCB_Vu','VCB (Vũ)'],['TCB_Tam','TCB (Tâm)'],['Tien_mat','Tiền mặt']];
+var INC_KIND=[['booking','Booking'],['mua_goi','Mua gói'],['thu_khac','Thu khác']];
+var INC_ACC_N={},INC_KIND_N={};
+INC_ACC.forEach(function(x){INC_ACC_N[x[0]]=x[1]});INC_KIND.forEach(function(x){INC_KIND_N[x[0]]=x[1]});
+var NF=$('incForm');
+(function(){
+  var a=NF.elements.acc,k=NF.elements.kind;
+  a.replaceChildren.apply(a,INC_ACC.map(function(x){return h('option',{value:x[0]},x[1])}));
+  k.replaceChildren.apply(k,INC_KIND.map(function(x){return h('option',{value:x[0]},x[1])}));
+  NF.elements.date.value=today();
+  NF.elements.amount.addEventListener('input',function(){var d=this.value.replace(/\D/g,'');this.value=d?Number(d).toLocaleString('vi-VN'):''});
+})();
+function incBookings(){
+  var seen={};
+  return S.events.filter(function(e){if(!e.code||seen[e.code])return false;seen[e.code]=1;return true})
+    .sort(function(a,b){return a.start_date.localeCompare(b.start_date)});
+}
+function incBookingOf(code){return incBookings().find(function(e){return e.code===code})}
+function drawIncBookings(){
+  var sel=NF.elements.bk,list=incBookings(),cur=sel.value;
+  var sig=list.map(function(e){return e.code+e.who+e.start_date}).join('|');
+  if(sel.getAttribute('data-sig')!==sig){
+    var opts=[h('option',{value:''},'— chọn booking —')].concat(list.map(function(e){
+      return h('option',{value:e.code},e.code+' · '+(e.who||'?')+' · '+dm(e.start_date))}));
+    if(S.incEdit&&cur&&!incBookingOf(cur))opts.push(h('option',{value:cur},cur));
+    sel.replaceChildren.apply(sel,opts);sel.setAttribute('data-sig',sig);sel.value=cur;
+  }
+  incBkInfo();
+}
+function incBkInfo(){
+  var code=NF.elements.bk.value,e=code&&incBookingOf(code),el=$('incBkInfo');
+  if(!e){el.textContent='';return}
+  var got=S.inc.filter(function(r){return r.booking_id===code}).reduce(function(n,r){return n+Number(r.amount)},0);
+  el.textContent=(PAY[e.pay]?PAY[e.pay]+' · ':'')+'đã ghi trong sổ thu: '+vnd(got);
+}
+function incKindUI(){
+  var k=NF.elements.kind.value,c=NF.elements.content,e=incBookingOf(NF.elements.bk.value);
+  $('incBk').hidden=k!=='booking';NF.elements.bk.required=k==='booking';
+  c.placeholder=k==='mua_goi'?'vd: Nguyễn Văn A · gói 12 triệu':k==='thu_khac'?'vd: bán trà, tiền khách gửi thêm':'vd: cọc, thanh toán';
+  if(k==='booking'){
+    var auto=e&&e.pay==='du'?'thanh toán':'cọc';
+    if(!c.value||c.value===S.incAuto){c.value=auto;S.incAuto=auto}
+  }else if(c.value&&c.value===S.incAuto){c.value='';S.incAuto=''}
+}
+NF.elements.kind.addEventListener('change',incKindUI);
+NF.elements.bk.addEventListener('change',function(){incBkInfo();incKindUI()});
+function incRows(){return S.inc.filter(function(r){return monthOf(r.received_on)===S.expMonth})}
+function canEditInc(r){return S.me==='tam'||(r.created_by===S.me&&Date.now()-new Date(r.created_at).getTime()<7*864e5)}
+function drawIncome(){
+  if(!S.expMonth)S.expMonth=monthOf(today());
+  drawIncBookings();incKindUI();
+  var rows=incRows().sort(function(a,b){return b.received_on.localeCompare(a.received_on)||String(b.created_at).localeCompare(String(a.created_at))});
+  var total=rows.reduce(function(n,r){return n+Number(r.amount)},0);
+  function sumBy(f,v){return rows.filter(function(r){return r[f]===v}).reduce(function(n,r){return n+Number(r.amount)},0)}
+  $('incHead').textContent='sổ thu · '+monthLabel(S.expMonth);
+  put('incSum',
+    h('h2',null,'tổng thu '+monthLabel(S.expMonth)),
+    h('p',{class:'exp-total'},vnd(total),h('small',null,rows.length+' khoản')),
+    h('div',{class:'exp-people'},INC_ACC.map(function(x){
+      return h('div',{class:'exp-p'},h('b',null,x[1]),h('span',{class:'exp-n'},vnd(sumBy('account',x[0]))),h('span',{class:'meta'},'đã nhận'))})),
+    h('div',{class:'exp-groups inc-kinds'},INC_KIND.map(function(x){
+      return h('div',null,h('span',null,x[1]),h('b',null,vnd(sumBy('kind',x[0]))))})));
+  put('incList',rows.length?h('ul',{class:'exp-list'},rows.map(function(r){
+    var key='in:'+r.id;
+    return h('li',null,
+      h('span',{class:'exp-d'},dm(r.received_on)),
+      h('span',{class:'exp-m'},h('b',null,r.content),h('small',null,[INC_ACC_N[r.account]||r.account,INC_KIND_N[r.kind]||r.kind,r.booking_id].filter(Boolean).join(' · '))),
+      h('span',{class:'exp-a'},vnd(r.amount)),
+      h('span',{class:'exp-w'},av(r.created_by,'sm')),
+      canEditInc(r)?h('span',{class:'exp-b'},
+        h('button',{type:'button',class:'x',onclick:function(){editInc(r)}},'sửa'),
+        h('button',{type:'button',class:'x'+(S.armed===key?' armed':''),'aria-label':'xoá khoản thu này',onclick:function(){if(arm(key))delInc(r)}},S.armed===key?'xoá?':'×')):null);
+  })):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa có khoản thu nào trong tháng này.'));
+}
+async function delInc(r){
+  S.inc=S.inc.filter(function(x){return x.id!==r.id});if(S.incEdit===r.id)resetIncForm();render();
+  try{await q(sb.from('incomes').update({deleted:true,deleted_at:now()}).eq('id',r.id))}catch(x){fail(x)}
+}
+function resetIncForm(){
+  S.incEdit=null;S.incAuto='';NF.elements.amount.value='';NF.elements.content.value='';NF.elements.bk.value='';NF.elements.date.value=today();
+  $('incSubmit').textContent='lưu khoản thu';$('incCancel').hidden=true;incKindUI();incBkInfo();
+}
+function editInc(r){
+  S.incEdit=r.id;S.incAuto='';
+  NF.elements.amount.value=Number(r.amount).toLocaleString('vi-VN');NF.elements.date.value=r.received_on;
+  NF.elements.acc.value=r.account;NF.elements.kind.value=r.kind;drawIncBookings();NF.elements.bk.value=r.booking_id||'';
+  NF.elements.content.value=r.content;incKindUI();incBkInfo();
+  $('incSubmit').textContent='cập nhật khoản thu';$('incCancel').hidden=false;
+  NF.scrollIntoView({block:'center',behavior:'smooth'});
+}
+$('incCancel').addEventListener('click',resetIncForm);
+NF.addEventListener('submit',async function(ev){
+  ev.preventDefault();
+  var amount=Number(String(NF.elements.amount.value).replace(/\D/g,''));
+  var date=NF.elements.date.value,acc=NF.elements.acc.value,kind=NF.elements.kind.value,bk=NF.elements.bk.value,content=(NF.elements.content.value||'').trim();
+  if(!amount){toast('Nhập số tiền.');return}
+  if(!date){toast('Chọn ngày nhận.');return}
+  if(!acc){toast('Chọn tài khoản nhận.');return}
+  if(!kind){toast('Chọn loại khoản thu.');return}
+  if(kind==='booking'&&!bk){toast('Chọn booking.');return}
+  if(!content){toast('Nhập nội dung khoản thu.');NF.elements.content.focus();return}
+  var row={received_on:date,amount:amount,account:acc,kind:kind,booking_id:kind==='booking'?bk:null,content:content};
+  var future=date>today();
+  try{
+    if(S.incEdit){
+      await q(sb.from('incomes').update(row).eq('id',S.incEdit));
+      var cur=S.inc.find(function(x){return x.id===S.incEdit});if(cur)Object.assign(cur,row);
+      toast(future?'Đã cập nhật. Lưu ý: ngày nhận ở tương lai.':'Đã cập nhật khoản thu.');
+    }else{
+      var r=await q(sb.from('incomes').insert(Object.assign({created_by:S.me},row)).select());
+      S.inc=r.concat(S.inc);
+      toast(future?'Đã ghi '+vnd(amount)+'. Lưu ý: ngày nhận ở tương lai.':'Đã ghi thu '+vnd(amount)+' · '+content+'.');
+    }
+    try{localStorage.setItem('mlfos_inc_acc_'+S.me,acc)}catch(x){}
+    S.expMonth=monthOf(date);
+    var keepA=acc,keepK=kind;
+    resetIncForm();NF.elements.acc.value=keepA;NF.elements.kind.value=keepK;incKindUI();
+    render();
+  }catch(x){fail(x)}
+});
+$('incExport').addEventListener('click',function(){
+  var rows=incRows().sort(function(a,b){return a.received_on.localeCompare(b.received_on)||String(a.created_at).localeCompare(String(b.created_at))});
+  if(!rows.length){toast('Tháng này chưa có khoản thu để xuất.');return}
+  function cell(v){v=v==null?'':String(v);return /[",\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}
+  var lines=[['Ngày','Số tiền','Tài khoản nhận','Loại','Booking ID','Nội dung','Người nhập']].concat(rows.map(function(r){
+    return [dmy(r.received_on),r.amount,r.account,r.kind,r.booking_id||'',r.content,PN[r.created_by]||r.created_by]}));
+  var csv='﻿'+lines.map(function(l){return l.map(cell).join(',')}).join('\r\n');
+  var a=h('a',{href:URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),download:'thu-'+S.expMonth+'.csv'});
+  document.body.append(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);
+  toast('Đã xuất thu-'+S.expMonth+'.csv');
+});
+
 /* ─── tải dữ liệu ─── */
 function range(){var cur=weekStart(S.day),a=S.ws<cur?S.ws:cur,b1=add(S.ws,13),b2=add(cur,13);return [a,b1>b2?b1:b2]}
 async function loadRange(){
@@ -1359,12 +1517,13 @@ async function loadAll(){
       q(sb.from('shopping').select('*').or('done.eq.false,done_at.gte.'+new Date(Date.now()-14*864e5).toISOString())),
       q(sb.from('shared_tasks').select('*').order('created_at',{ascending:false}).limit(150)),
       q(sb.from('shared_task_people').select('*')),
-      q(sb.from('expenses').select('*').order('spent_on',{ascending:false}).limit(3000))]);
+      q(sb.from('expenses').select('*').order('spent_on',{ascending:false}).limit(3000)),
+      q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000))]);
     S.events=res[0].map(function(e){return Object.assign({},e,{start:e.start_date,end:e.end_date})});
     S.chores=res[1];S.backlog=res[2];S.syncAt=res[3][0]?res[3][0].synced_at:null;
     S.tpl=res[4];S.prep=new Map(res[5].map(function(x){return [x.event_id+'__'+x.template_id,x]}));
     S.eset=new Map(res[6].map(function(x){return [x.event_id,x]}));
-    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.status='ok';
+    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.inc=res[12];S.status='ok';
   }catch(e){console.error(e);S.status='error'}
   await loadRange();
 }
@@ -1398,6 +1557,9 @@ async function start(session){
   started=true;S.me=m.data.person;S.email=email;
   $('login').hidden=true;$('main').hidden=false;$('tabsNav').hidden=false;put('whoami',av(S.me),PN[S.me]);
   XF.elements.who.value=S.me;
+  $('incWho').textContent=PN[S.me];
+  var lastAcc=null;try{lastAcc=localStorage.getItem('mlfos_inc_acc_'+S.me)}catch(x){}
+  if(lastAcc&&INC_ACC_N[lastAcc])NF.elements.acc.value=lastAcc;
   var me0=STF.querySelector('input[name=who][value="'+S.me+'"]');if(me0)me0.checked=true;
   draw();await loadAll();
   channel=sb.channel('mlf-os').on('postgres_changes',{event:'*',schema:'public'},function(){reload()}).subscribe();

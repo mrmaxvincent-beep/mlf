@@ -67,7 +67,12 @@ function exportExpenses() {
   var ss = SpreadsheetApp.getActive();
   var sh = ss.getSheetByName(TAB) || ss.insertSheet(TAB);
   var head = ['Ngày', 'Số tiền', 'Nội dung', 'Thuộc về', 'Nhóm', 'Hạng mục', 'Người chi / nguồn tiền', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
+  var vnDay = function (iso) {
+    return new Date(Utilities.formatDate(new Date(iso), 'Asia/Ho_Chi_Minh', "yyyy-MM-dd'T'00:00:00"));
+  };
+  // A–J: nội dung hiển thị
   var data = rows.map(function (e) {
+    var refund = e.kind === 'hoan_khach';
     return [
       new Date(e.spent_on + 'T00:00:00'),
       Number(e.amount),
@@ -77,20 +82,36 @@ function exportExpenses() {
       e.item,
       NAMES[e.paid_by] || e.paid_by,
       e.note || '',
-      e.paid_by === 'mlf' ? 'không cần hoàn' : e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
-      e.reimbursed_at ? new Date(Utilities.formatDate(new Date(e.reimbursed_at), 'Asia/Ho_Chi_Minh', "yyyy-MM-dd'T'00:00:00")) : ''
+      refund || e.paid_by === 'mlf' ? 'không cần hoàn' : e.reimbursed ? 'đã hoàn' : 'chờ hoàn',
+      e.reimbursed_at ? vnDay(e.reimbursed_at) : ''
     ];
   });
-  sh.clear();
+  // M–Q: cột cho các công thức bên Finance (Sổ tiền, Cashflow…)
+  //   M Loại (chi | hoan_khach) · N TK chi · O Đến TK (để trống) · P Booking ID / tên khách hoàn · Q TK hoàn ứng
+  var fin = rows.map(function (e) {
+    var refund = e.kind === 'hoan_khach';
+    return [
+      refund ? 'hoan_khach' : 'chi',
+      e.account || '',
+      '',
+      refund ? (e.noi_dung || '') : '',
+      e.reimbursed ? (e.reimbursed_account || '') : ''
+    ];
+  });
+  // chỉ xoá nội dung A2:J và M2:Q, giữ nguyên tiêu đề, định dạng, các cột K–L và công thức bên Finance
+  var last = Math.max(sh.getMaxRows() - 1, 1);
+  sh.getRange(2, 1, last, 10).clearContent();
+  sh.getRange(2, 13, last, 5).clearContent();
   sh.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold');
   if (data.length) {
+    if (sh.getMaxRows() < data.length + 1) sh.insertRowsAfter(sh.getMaxRows(), data.length + 1 - sh.getMaxRows());
     sh.getRange(2, 1, data.length, head.length).setValues(data);
+    sh.getRange(2, 13, data.length, 5).setValues(fin);
     sh.getRange(2, 1, data.length, 1).setNumberFormat('dd/mm/yyyy');
     sh.getRange(2, 10, data.length, 1).setNumberFormat('dd/mm/yyyy');
     sh.getRange(2, 2, data.length, 1).setNumberFormat('#,##0');
   }
   sh.setFrozenRows(1);
-  sh.autoResizeColumns(1, head.length);
   sh.getRange(1, 12).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
 }
 

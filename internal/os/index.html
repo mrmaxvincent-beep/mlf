@@ -444,7 +444,16 @@ section.blk .more>summary{color:var(--ink)}
 .exp-sub{margin:26px 0 6px;font-size:1rem;font-weight:600}
 .exp-sub.first{margin-top:16px}
 .exp-hint{margin:0 0 10px}
-.exp-by{margin:0;align-self:center}
+#incSum .exp-p b{font-size:.8rem;white-space:nowrap}
+.exp-by{margin:0 0 0 auto;align-self:center;font-size:.76rem}
+#thu .fgrid,#chi .fgrid{gap:8px;padding:12px}
+#thu .fgrid label,#chi .fgrid label{gap:3px;font-size:.72rem}
+#thu .fgrid input,#thu .fgrid select,#chi .fgrid input,#chi .fgrid select{display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;height:42px;padding:0 10px;line-height:1.2;font-size:16px;-webkit-appearance:none;appearance:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#thu .fgrid select,#chi .fgrid select{padding:0 24px 0 9px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%237a8794' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 9px center}
+#thu .fgrid input[type=date],#chi .fgrid input[type=date]{text-align:left}
+#thu .fgrid input[type=date]::-webkit-date-and-time-value,#chi .fgrid input[type=date]::-webkit-date-and-time-value{text-align:left;min-height:1.2em}
+#thu .factions,#chi .factions{align-items:center}
+#thu .factions .solid,#chi .factions .solid,#thu .factions .ghost,#chi .factions .ghost{min-height:42px}
 .inc-kinds{margin-top:10px}
 .exp-before{margin:10px 0 0}
 .exp-groups{margin-top:6px}
@@ -611,11 +620,10 @@ section.blk .more>summary{color:var(--ink)}
     <form class="fgrid" id="incForm" autocomplete="off">
       <label>số tiền (đ)<input name="amount" inputmode="numeric" required placeholder="vd: 6.000.000"></label>
       <label>ngày nhận<input name="date" type="date" required></label>
-      <label class="w2">tài khoản nhận<select name="acc" required></select></label>
-      <label class="w2">loại<select name="kind" required></select></label>
+      <label>tài khoản nhận<select name="acc" required></select></label>
+      <label>loại<select name="kind" required></select></label>
       <label class="w2">nội dung<input name="content" required maxlength="160" placeholder="vd: cọc Nguyễn Văn A, bán trà"></label>
-      <p class="meta w2 exp-by">người nhập: <b id="incWho"></b></p>
-      <div class="factions"><button class="solid" type="submit" id="incSubmit">lưu khoản thu</button><button class="ghost" type="button" id="incCancel" hidden>huỷ sửa</button></div>
+      <div class="factions"><button class="solid" type="submit" id="incSubmit">lưu khoản thu</button><button class="ghost" type="button" id="incCancel" hidden>huỷ sửa</button><span class="meta exp-by">người nhập: <b id="incWho"></b></span></div>
     </form>
     <div class="wk-nav" id="incNav"></div>
     <div class="card" id="incSum"></div>
@@ -629,10 +637,10 @@ section.blk .more>summary{color:var(--ink)}
       <label>số tiền (đ)<input name="amount" inputmode="numeric" required placeholder="vd: 250.000"></label>
       <label>ngày chi<input name="date" type="date" required></label>
       <label class="w2">nội dung<input name="noi_dung" required maxlength="120" placeholder="vd: rau củ chợ Măng Đen, bóng đèn phòng Hạ"></label>
-      <label class="w2">thuộc về<select name="scope"><option>Vận hành chung</option><option>Tuần-du</option></select></label>
-      <label class="w2">danh mục<select name="cat" required></select></label>
+      <label>thuộc về<select name="scope"><option>Vận hành chung</option><option>Tuần-du</option></select></label>
       <label>người chi / nguồn tiền<select name="who"></select></label>
-      <label>ghi chú<input name="note" placeholder="tuỳ chọn"></label>
+      <label class="w2">danh mục<select name="cat" required></select></label>
+      <label class="w2">ghi chú<input name="note" placeholder="tuỳ chọn"></label>
       <div class="factions"><button class="solid" type="submit" id="expSubmit">lưu khoản chi</button><button class="ghost" type="button" id="expCancel" hidden>huỷ sửa</button></div>
     </form>
     <div class="wk-nav" id="expNav"></div>

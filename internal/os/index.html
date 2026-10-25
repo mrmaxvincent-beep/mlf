@@ -441,7 +441,6 @@ section.blk .more>summary{color:var(--ink)}
 .exp-sub.first{margin-top:16px}
 .exp-hint{margin:0 0 10px}
 .exp-by{margin:0;align-self:center}
-#incBkInfo{display:block;margin-top:4px;line-height:1.4}
 .inc-kinds{margin-top:10px}
 .exp-before{margin:10px 0 0}
 .exp-groups{margin-top:6px}
@@ -612,8 +611,7 @@ section.blk .more>summary{color:var(--ink)}
       <label>ngày nhận<input name="date" type="date" required></label>
       <label class="w2">tài khoản nhận<select name="acc" required></select></label>
       <label class="w2">loại<select name="kind" required></select></label>
-      <label class="w2" id="incBk">booking<select name="bk"></select><small class="meta" id="incBkInfo"></small></label>
-      <label class="w2">nội dung<input name="content" required maxlength="160" placeholder="vd: cọc, thanh toán, bán trà"></label>
+      <label class="w2">nội dung<input name="content" required maxlength="160" placeholder="vd: cọc Nguyễn Văn A, bán trà"></label>
       <p class="meta w2 exp-by">người nhập: <b id="incWho"></b></p>
       <div class="factions"><button class="solid" type="submit" id="incSubmit">lưu khoản thu</button><button class="ghost" type="button" id="incCancel" hidden>huỷ sửa</button></div>
     </form>
@@ -691,7 +689,7 @@ function put(id){var el=$(id);el.replaceChildren.apply(el,Array.prototype.slice.
 var sb=null;
 var S={me:null,email:null,status:'loading',view:lsGet('mlfos.view')||'me',
   events:[],chores:[],swaps:new Map(),backlog:[],tasks:[],checks:new Map(),syncAt:null,
-  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],expMonth:null,expEdit:null,inc:[],incEdit:null,incAuto:'',
+  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],expMonth:null,expEdit:null,inc:[],incEdit:null,
   day:today(),ws:null,sel:null,addAt:null,assignAt:null,armed:null};
 S.ws=weekStart(S.day);S.sel=S.day;
 
@@ -1368,45 +1366,16 @@ var NF=$('incForm');
   NF.elements.date.value=today();
   NF.elements.amount.addEventListener('input',function(){var d=this.value.replace(/\D/g,'');this.value=d?Number(d).toLocaleString('vi-VN'):''});
 })();
-function incBookings(){
-  var seen={};
-  return S.events.filter(function(e){if(!e.code||seen[e.code])return false;seen[e.code]=1;return true})
-    .sort(function(a,b){return a.start_date.localeCompare(b.start_date)});
-}
-function incBookingOf(code){return incBookings().find(function(e){return e.code===code})}
-function drawIncBookings(){
-  var sel=NF.elements.bk,list=incBookings(),cur=sel.value;
-  var sig=list.map(function(e){return e.code+e.who+e.start_date}).join('|');
-  if(sel.getAttribute('data-sig')!==sig){
-    var opts=[h('option',{value:''},'— chọn booking —')].concat(list.map(function(e){
-      return h('option',{value:e.code},e.code+' · '+(e.who||'?')+' · '+dm(e.start_date))}));
-    if(S.incEdit&&cur&&!incBookingOf(cur))opts.push(h('option',{value:cur},cur));
-    sel.replaceChildren.apply(sel,opts);sel.setAttribute('data-sig',sig);sel.value=cur;
-  }
-  incBkInfo();
-}
-function incBkInfo(){
-  var code=NF.elements.bk.value,e=code&&incBookingOf(code),el=$('incBkInfo');
-  if(!e){el.textContent='';return}
-  var got=S.inc.filter(function(r){return r.booking_id===code}).reduce(function(n,r){return n+Number(r.amount)},0);
-  el.textContent=(PAY[e.pay]?PAY[e.pay]+' · ':'')+'đã ghi trong sổ thu: '+vnd(got);
-}
 function incKindUI(){
-  var k=NF.elements.kind.value,c=NF.elements.content,e=incBookingOf(NF.elements.bk.value);
-  $('incBk').hidden=k!=='booking';NF.elements.bk.required=k==='booking';
-  c.placeholder=k==='mua_goi'?'vd: Nguyễn Văn A · gói 12 triệu':k==='thu_khac'?'vd: bán trà, tiền khách gửi thêm':'vd: cọc, thanh toán';
-  if(k==='booking'){
-    var auto=e&&e.pay==='du'?'thanh toán':'cọc';
-    if(!c.value||c.value===S.incAuto){c.value=auto;S.incAuto=auto}
-  }else if(c.value&&c.value===S.incAuto){c.value='';S.incAuto=''}
+  var k=NF.elements.kind.value;
+  NF.elements.content.placeholder=k==='mua_goi'?'vd: Nguyễn Văn A · gói 12 triệu':k==='thu_khac'?'vd: bán trà, tiền khách gửi thêm':'vd: cọc Nguyễn Văn A, thanh toán đợt 2';
 }
 NF.elements.kind.addEventListener('change',incKindUI);
-NF.elements.bk.addEventListener('change',function(){incBkInfo();incKindUI()});
 function incRows(){return S.inc.filter(function(r){return monthOf(r.received_on)===S.expMonth})}
 function canEditInc(r){return S.me==='tam'||(r.created_by===S.me&&Date.now()-new Date(r.created_at).getTime()<7*864e5)}
 function drawIncome(){
   if(!S.expMonth)S.expMonth=monthOf(today());
-  drawIncBookings();incKindUI();
+  incKindUI();
   var rows=incRows().sort(function(a,b){return b.received_on.localeCompare(a.received_on)||String(b.created_at).localeCompare(String(a.created_at))});
   var total=rows.reduce(function(n,r){return n+Number(r.amount)},0);
   function sumBy(f,v){return rows.filter(function(r){return r[f]===v}).reduce(function(n,r){return n+Number(r.amount)},0)}
@@ -1435,14 +1404,14 @@ async function delInc(r){
   try{await q(sb.from('incomes').update({deleted:true,deleted_at:now()}).eq('id',r.id))}catch(x){fail(x)}
 }
 function resetIncForm(){
-  S.incEdit=null;S.incAuto='';NF.elements.amount.value='';NF.elements.content.value='';NF.elements.bk.value='';NF.elements.date.value=today();
-  $('incSubmit').textContent='lưu khoản thu';$('incCancel').hidden=true;incKindUI();incBkInfo();
+  S.incEdit=null;NF.elements.amount.value='';NF.elements.content.value='';NF.elements.date.value=today();
+  $('incSubmit').textContent='lưu khoản thu';$('incCancel').hidden=true;incKindUI();
 }
 function editInc(r){
-  S.incEdit=r.id;S.incAuto='';
+  S.incEdit=r.id;
   NF.elements.amount.value=Number(r.amount).toLocaleString('vi-VN');NF.elements.date.value=r.received_on;
-  NF.elements.acc.value=r.account;NF.elements.kind.value=r.kind;drawIncBookings();NF.elements.bk.value=r.booking_id||'';
-  NF.elements.content.value=r.content;incKindUI();incBkInfo();
+  NF.elements.acc.value=r.account;NF.elements.kind.value=r.kind;
+  NF.elements.content.value=r.content;incKindUI();
   $('incSubmit').textContent='cập nhật khoản thu';$('incCancel').hidden=false;
   NF.scrollIntoView({block:'center',behavior:'smooth'});
 }
@@ -1450,14 +1419,13 @@ $('incCancel').addEventListener('click',resetIncForm);
 NF.addEventListener('submit',async function(ev){
   ev.preventDefault();
   var amount=Number(String(NF.elements.amount.value).replace(/\D/g,''));
-  var date=NF.elements.date.value,acc=NF.elements.acc.value,kind=NF.elements.kind.value,bk=NF.elements.bk.value,content=(NF.elements.content.value||'').trim();
+  var date=NF.elements.date.value,acc=NF.elements.acc.value,kind=NF.elements.kind.value,content=(NF.elements.content.value||'').trim();
   if(!amount){toast('Nhập số tiền.');return}
   if(!date){toast('Chọn ngày nhận.');return}
   if(!acc){toast('Chọn tài khoản nhận.');return}
   if(!kind){toast('Chọn loại khoản thu.');return}
-  if(kind==='booking'&&!bk){toast('Chọn booking.');return}
   if(!content){toast('Nhập nội dung khoản thu.');NF.elements.content.focus();return}
-  var row={received_on:date,amount:amount,account:acc,kind:kind,booking_id:kind==='booking'?bk:null,content:content};
+  var row={received_on:date,amount:amount,account:acc,kind:kind,content:content};
   var future=date>today();
   try{
     if(S.incEdit){

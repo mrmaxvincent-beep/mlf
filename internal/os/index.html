@@ -257,6 +257,10 @@ ul.items{list-style:none;margin:0;padding:0}
 .shop-g{font-family:var(--serif);font-style:normal;font-size:1.05rem;margin:16px 0 2px;display:flex;align-items:center;gap:6px}
 .shop-cat{margin-top:12px}
 .shop-cat input[type=search]{display:block;width:100%;box-sizing:border-box;height:42px;margin:10px 0 4px;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
+.cat-add{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--mist)}
+.cat-add .shop-g,.cat-add button{grid-column:1/-1}
+.cat-add input,.cat-add select{display:block;box-sizing:border-box;width:100%;min-width:0;height:42px;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
+.shop-chips .chip .rm{margin-left:8px;opacity:.6}
 .shop-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
 .shop-chips .chip{min-height:32px;padding:4px 12px;font-size:.82rem}
 .sform{display:grid;grid-template-columns:1fr auto;gap:6px;margin-top:4px}
@@ -619,6 +623,12 @@ section.blk .more>summary{color:var(--ink)}
     <details class="more shop-cat" id="shopCat"><summary>chọn từ danh mục hay mua</summary>
       <input type="search" id="shopCatQ" placeholder="tìm món …" aria-label="tìm món trong danh mục" autocomplete="off">
       <div id="shopCatList"></div>
+      <form class="cat-add" id="shopCatForm" autocomplete="off">
+        <span class="shop-g">thêm món vào danh mục</span>
+        <input name="name" required maxlength="80" placeholder="tên món mới, vd: Giấm gạo" aria-label="tên món mới">
+        <select name="cat" aria-label="thuộc nhóm"></select>
+        <button class="solid" type="submit">thêm vào danh mục</button>
+      </form>
     </details>
     <div id="shopList"></div>
     <details class="more" id="shopDoneBox"><summary id="shopDoneSum">đã mua gần đây</summary><ul class="shop" id="shopDone"></ul></details>
@@ -709,7 +719,7 @@ function put(id){var el=$(id);el.replaceChildren.apply(el,Array.prototype.slice.
 var sb=null;
 var S={me:null,email:null,status:'loading',view:lsGet('mlfos.view')||'me',
   events:[],chores:[],swaps:new Map(),backlog:[],tasks:[],checks:new Map(),syncAt:null,
-  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],expMonth:null,expEdit:null,inc:[],incEdit:null,
+  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],cat:[],expMonth:null,expEdit:null,inc:[],incEdit:null,
   day:today(),ws:null,sel:null,addAt:null,assignAt:null,armed:null};
 S.ws=weekStart(S.day);S.sel=S.day;
 
@@ -1081,16 +1091,42 @@ async function addShopItem(text){
   }catch(e){fail(e)}
   finally{delete shopPending[k]}
 }
-function drawShopCat(){
-  var qs=shopKey($('shopCatQ').value),have={};
-  S.shop.forEach(function(x){if(!x.done)have[shopKey(x.text)]=1});
-  var cats=(window.MLF_SHOP_ITEMS||[]).map(function(c){
-    return [c[0],c[1].filter(function(n){return !qs||shopKey(n).indexOf(qs)>=0})]}).filter(function(c){return c[1].length});
-  put('shopCatList',cats.length?cats.map(function(c){
-    return [h('p',{class:'shop-g'},c[0]),h('div',{class:'shop-chips'},c[1].map(function(n){
-      var on=!!have[shopKey(n)];
-      return h('button',{type:'button',class:'chip'+(on?' on':''),'aria-pressed':String(on),onclick:function(){addShopItem(n)}},(on?'✓ ':'+ ')+n)}))]}):h('p',{class:'empty'},'Không thấy món nào khớp. Gõ tên vào ô "thêm" phía trên để ghi tự do.'));
+function catAll(){
+  var base=(window.MLF_SHOP_ITEMS||[]).map(function(c){return [c[0],c[1].map(function(n){return {n:n}})]});
+  S.cat.forEach(function(r){
+    var c=base.find(function(x){return x[0]===r.category});
+    if(!c){c=[r.category,[]];base.push(c)}
+    if(!c[1].some(function(x){return shopKey(x.n)===shopKey(r.name)}))c[1].push({n:r.name,id:r.id});
+  });
+  return base;
 }
+function drawShopCat(){
+  var qs=shopKey($('shopCatQ').value),have={},all=catAll();
+  S.shop.forEach(function(x){if(!x.done)have[shopKey(x.text)]=1});
+  var sel=$('shopCatForm').elements.cat,sig=all.map(function(c){return c[0]}).join('|');
+  if(sel.getAttribute('data-sig')!==sig){var cur=sel.value;sel.replaceChildren.apply(sel,all.map(function(c){return h('option',{value:c[0]},c[0])}));sel.setAttribute('data-sig',sig);if(cur)sel.value=cur}
+  var cats=all.map(function(c){return [c[0],c[1].filter(function(x){return !qs||shopKey(x.n).indexOf(qs)>=0})]}).filter(function(c){return c[1].length});
+  put('shopCatList',cats.length?cats.map(function(c){
+    return [h('p',{class:'shop-g'},c[0]),h('div',{class:'shop-chips'},c[1].map(function(x){
+      var on=!!have[shopKey(x.n)],key='sc:'+x.id;
+      return h('button',{type:'button',class:'chip'+(on?' on':''),'aria-pressed':String(on),onclick:function(){addShopItem(x.n)}},(on?'✓ ':'+ ')+x.n,
+        x.id?h('span',{class:'rm',role:'button','aria-label':'bỏ khỏi danh mục',onclick:function(ev){ev.stopPropagation();if(arm(key))delCatItem(x)}},S.armed===key?'xoá?':'×'):null)}))]}):h('p',{class:'empty'},'Không thấy món nào khớp. Thêm món mới ở bên dưới, hoặc gõ tên vào ô "thêm" phía trên để ghi tự do.'));
+}
+async function delCatItem(x){
+  S.cat=S.cat.filter(function(r){return r.id!==x.id});render();
+  try{await q(sb.from('shop_catalog').delete().eq('id',x.id))}catch(e){fail(e)}
+}
+$('shopCatForm').addEventListener('submit',async function(ev){
+  ev.preventDefault();
+  var f=$('shopCatForm'),name=(f.elements.name.value||'').trim().replace(/\s+/g,' '),cat=f.elements.cat.value;
+  if(!name||!cat)return;
+  var dup=catAll().some(function(c){return c[1].some(function(x){return shopKey(x.n)===shopKey(name)})});
+  if(dup){toast('Món này đã có trong danh mục.');return}
+  try{
+    var r=await q(sb.from('shop_catalog').insert({category:cat,name:name,created_by:S.me}).select());
+    S.cat=S.cat.concat(r);f.elements.name.value='';toast('Đã thêm '+name+' vào '+cat+'.');render();
+  }catch(e){fail(e)}
+});
 $('shopCatQ').addEventListener('input',drawShopCat);
 SF.addEventListener('submit',async function(ev){
   ev.preventDefault();var t=(SF.elements.text.value||'').trim();if(!t)return;
@@ -1542,12 +1578,13 @@ async function loadAll(){
       q(sb.from('shared_tasks').select('*').order('created_at',{ascending:false}).limit(150)),
       q(sb.from('shared_task_people').select('*')),
       q(sb.from('expenses').select('*').order('spent_on',{ascending:false}).limit(3000)),
-      q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000))]);
+      q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000)),
+      q(sb.from('shop_catalog').select('*').order('created_at'))]);
     S.events=res[0].map(function(e){return Object.assign({},e,{start:e.start_date,end:e.end_date})});
     S.chores=res[1];S.backlog=res[2];S.syncAt=res[3][0]?res[3][0].synced_at:null;
     S.tpl=res[4];S.prep=new Map(res[5].map(function(x){return [x.event_id+'__'+x.template_id,x]}));
     S.eset=new Map(res[6].map(function(x){return [x.event_id,x]}));
-    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.inc=res[12];S.status='ok';
+    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.inc=res[12];S.cat=res[13];S.status='ok';
   }catch(e){console.error(e);S.status='error'}
   await loadRange();
 }

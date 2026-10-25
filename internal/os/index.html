@@ -614,11 +614,10 @@ section.blk .more>summary{color:var(--ink)}
   </section>
 
   <section class="blk" id="mua">
-    <div class="blk-h"><h2>cần mua</h2><p>Thấy hết là ghi, ai mua thì tick. Có thể gắn với một booking.</p></div>
+    <div class="blk-h"><h2>cần mua</h2><p>Thấy hết là ghi, ai mua thì tick.</p></div>
     <form class="sform" id="shopForm" autocomplete="off">
       <input name="text" required placeholder="vd: 5kg gạo lứt" aria-label="món cần mua">
       <button class="solid" type="submit">thêm</button>
-      <select name="ev" aria-label="cho booking nào"></select>
     </form>
     <details class="more shop-cat" id="shopCat"><summary>chọn từ danh mục hay mua</summary>
       <input type="search" id="shopCatQ" placeholder="tìm món …" aria-label="tìm món trong danh mục" autocomplete="off">
@@ -1063,15 +1062,9 @@ function shopRow(x){var key='sh:'+x.id;
 }
 function drawShop(){
   var open=S.shop.filter(function(x){return !x.done}),done=S.shop.filter(function(x){return x.done}).sort(function(a,b){return String(b.done_at).localeCompare(String(a.done_at))});
-  var groups={};open.forEach(function(x){var k=x.event_id&&evName(x.event_id)?x.event_id:'';(groups[k]=groups[k]||[]).push(x)});
-  var keys=Object.keys(groups).sort(function(a,b){if(!a)return -1;if(!b)return 1;var ea=S.events.find(function(e){return e.id===a}),eb=S.events.find(function(e){return e.id===b});return ea.start.localeCompare(eb.start)});
-  put('shopList',open.length?keys.map(function(k){var e=k?S.events.find(function(x){return x.id===k}):null;
-    return [h('p',{class:'shop-g'},e?[h('span',{class:'dot',style:'background:'+kc(e.kind)}),evName(k)]:'chung'),h('ul',{class:'shop'},groups[k].map(shopRow))]}):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa cần mua gì.'));
+  put('shopList',open.length?h('ul',{class:'shop'},open.map(shopRow)):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa cần mua gì.'));
   $('shopDoneBox').hidden=!done.length;$('shopDoneSum').textContent='đã mua gần đây, '+done.length+' món';
   put('shopDone',done.map(shopRow));
-  var sel=SF.elements.ev,cur=sel.value,up=upcoming().filter(function(e){return e.start<=add(S.day,HZ-1)});
-  sel.replaceChildren.apply(sel,[h('option',{value:''},'dùng chung, không gắn booking')].concat(up.map(function(e){return h('option',{value:e.id},'cho: '+evName(e.id))})));
-  sel.value=up.some(function(e){return e.id===cur})?cur:'';
 }
 async function toggleShop(x){
   x.done=!x.done;x.done_at=x.done?now():null;x.done_by=x.done?S.me:null;render();
@@ -1086,7 +1079,7 @@ async function addShopItem(text){
   if(S.shop.some(function(x){return !x.done&&shopKey(x.text)===k})){toast('Đã có trong list: '+text+'.');return}
   shopPending[k]=1;
   try{
-    var r=await q(sb.from('shopping').insert({text:text,added_by:S.me,event_id:SF.elements.ev.value||null}).select());
+    var r=await q(sb.from('shopping').insert({text:text,added_by:S.me}).select());
     S.shop=S.shop.concat(r);render();
   }catch(e){fail(e)}
   finally{delete shopPending[k]}
@@ -1130,7 +1123,7 @@ $('shopCatForm').addEventListener('submit',async function(ev){
 $('shopCatQ').addEventListener('input',drawShopCat);
 SF.addEventListener('submit',async function(ev){
   ev.preventDefault();var t=(SF.elements.text.value||'').trim();if(!t)return;
-  try{var r=await q(sb.from('shopping').insert({text:t,added_by:S.me,event_id:SF.elements.ev.value||null}).select());S.shop=S.shop.concat(r);SF.elements.text.value='';render()}catch(e){fail(e)}
+  try{var r=await q(sb.from('shopping').insert({text:t,added_by:S.me}).select());S.shop=S.shop.concat(r);SF.elements.text.value='';render()}catch(e){fail(e)}
 });
 function addBox(p,s){
   var inp=h('input',{type:'text',placeholder:'việc cho '+PN[p]+' …','data-focus':'1','aria-label':'việc mới',enterkeyhint:'done',

@@ -480,6 +480,9 @@ section.blk .more>summary{color:var(--ink)}
 .m-add{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .m-add input,.m-add select{display:block;box-sizing:border-box;width:100%;min-width:0;height:42px;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
 .m-add input{grid-column:1/-1}
+.push{display:grid;gap:8px;margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--panel);font-size:.86rem;line-height:1.45}
+.push p{margin:0}
+.push .solid,.push .ghost{justify-self:start;min-height:40px}
 .exp-sub{margin:26px 0 6px;font-size:1rem;font-weight:600}
 .exp-sub.first{margin-top:16px}
 .exp-hint{margin:0 0 10px}
@@ -713,6 +716,7 @@ section.blk .more>summary{color:var(--ink)}
   </section>
 
   <footer class="foot"><span class="sig">mộc little farm</span><span>trang nội bộ cho Tâm, Thuận và Vũ. </span>
+    <div class="push" id="pushBox"></div>
     <div class="install" id="install" hidden><b>Thêm vào màn hình chính</b> để mở như một app.<br>iPhone: mở bằng Safari, bấm nút chia sẻ rồi chọn “Thêm vào MH chính”.<br>Android: bấm ⋮ trong Chrome rồi chọn “Thêm vào màn hình chính” hoặc “Cài đặt ứng dụng”.</div>
     <button class="ghost" type="button" id="logout" style="margin-top:10px">đăng xuất</button></footer>
   </div>
@@ -1684,6 +1688,51 @@ function openMeal(d,slot){
   refresh();document.body.append(bd);
 }
 
+/* ─── thông báo đẩy 7:00 sáng (Web Push) ─── */
+var VAPID_PUB='BO2Ijq1xCePLrAsoxQXV1ABHw2xnIdYj5w0oI7vr3WnxRKLhj2s_aAVdYziv7hPXBau7jdLXIslEwgJUAhQkVes';
+function vapidKey(){var s=VAPID_PUB,b=(s+'='.repeat((4-s.length%4)%4)).replace(/-/g,'+').replace(/_/g,'/'),r=atob(b),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
+function pushReady(){
+  return Promise.race([navigator.serviceWorker.ready,new Promise(function(res){setTimeout(function(){res(null)},4000)})]);
+}
+async function drawPush(){
+  var box=$('pushBox');if(!box)return;
+  var ok='serviceWorker' in navigator&&'PushManager' in window&&'Notification' in window;
+  if(!ok){
+    put('pushBox',h('p',null,/iPhone|iPad/i.test(navigator.userAgent)&&!standalone?'Để nhận thông báo 7:00 sáng trên iPhone: bấm nút chia sẻ của Safari, chọn “Thêm vào MH chính”, rồi mở app từ biểu tượng trên màn hình chính và vào lại đây.':'Máy hoặc trình duyệt này chưa hỗ trợ thông báo.'));
+    return;
+  }
+  var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null,on=!!sub&&Notification.permission==='granted';
+  if(Notification.permission==='denied'){put('pushBox',h('p',null,'Thông báo đang bị chặn trên máy này. Hãy bật lại quyền thông báo cho mlf os trong phần cài đặt của điện thoại hoặc trình duyệt.'));return}
+  put('pushBox',
+    h('p',null,on?'Đã bật thông báo 7:00 sáng trên máy này: việc hôm nay, món mình nấu, khách đến/về.':'Nhận thông báo lúc 7:00 sáng mỗi ngày: việc của bạn hôm nay, món bạn nấu, khách đến/về.'),
+    on?h('div',{style:'display:flex;gap:8px;flex-wrap:wrap'},
+        h('button',{type:'button',class:'ghost',onclick:testPush},'gửi thử một thông báo'),
+        h('button',{type:'button',class:'ghost',onclick:disablePush},'tắt trên máy này'))
+      :h('button',{type:'button',class:'solid',onclick:enablePush},'bật thông báo 7:00 sáng'));
+}
+async function enablePush(){
+  try{
+    var perm=await Notification.requestPermission();
+    if(perm!=='granted'){toast('Chưa được cấp quyền thông báo.');drawPush();return}
+    var reg=await pushReady();if(!reg){toast('Chưa kích hoạt được thông báo trên máy này.');return}
+    var sub=await reg.pushManager.getSubscription()||await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:vapidKey()});
+    var j=sub.toJSON();
+    await q(sb.from('push_subs').upsert({person:S.me,endpoint:j.endpoint,p256dh:j.keys.p256dh,auth:j.keys.auth,user_agent:navigator.userAgent.slice(0,200)},{onConflict:'endpoint'}));
+    toast('Đã bật thông báo 7:00 sáng.');drawPush();
+  }catch(e){console.error(e);toast('Chưa bật được thông báo, thử lại sau.');drawPush()}
+}
+async function disablePush(){
+  try{
+    var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null;
+    if(sub){var ep=sub.endpoint;await sub.unsubscribe();await q(sb.from('push_subs').delete().eq('endpoint',ep))}
+    toast('Đã tắt thông báo trên máy này.');drawPush();
+  }catch(e){console.error(e);toast('Chưa tắt được, thử lại sau.')}
+}
+async function testPush(){
+  var reg=await pushReady();if(!reg)return;
+  reg.showNotification('mlf os',{body:'Thông báo hoạt động. Mỗi 7:00 sáng bạn sẽ nhận việc hôm nay ở đây.',icon:'./icon-192.png',data:{url:'/os/'}});
+}
+
 /* ─── tải dữ liệu ─── */
 function range(){var cur=weekStart(S.day),a=S.ws<cur?S.ws:cur,b1=add(S.ws,13),b2=add(cur,13);return [a,b1>b2?b1:b2]}
 async function loadRange(){
@@ -1755,6 +1804,7 @@ async function start(session){
   started=true;S.me=m.data.person;S.email=email;
   $('login').hidden=true;$('main').hidden=false;$('tabsNav').hidden=false;put('whoami',av(S.me),PN[S.me]);
   XF.elements.who.value=S.me;
+  drawPush();
   $('incWho').textContent=PN[S.me];
   var lastAcc=null;try{lastAcc=localStorage.getItem('mlfos_inc_acc_'+S.me)}catch(x){}
   if(lastAcc&&INC_ACC_N[lastAcc])NF.elements.acc.value=lastAcc;

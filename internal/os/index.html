@@ -470,6 +470,11 @@ section.blk .more>summary{color:var(--ink)}
 .m-cell.today{border-color:var(--moss)}
 .m-e{display:flex;align-items:flex-start;gap:4px;font-size:.74rem;line-height:1.25}
 .m-e .t{min-width:0;overflow-wrap:anywhere}
+.m-dots{flex:none;display:flex;flex-wrap:wrap;gap:2px;max-width:38px}
+.m-pp{display:flex;gap:6px;flex-wrap:wrap}
+.m-pp button{min-height:34px;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--stone);font-size:.8rem}
+.m-pp button.on{background:var(--moss);border-color:var(--moss);color:var(--on-moss)}
+.m-add .m-pp{grid-column:1/-1}
 .m-dot{flex:none;display:grid;place-items:center;width:16px;height:16px;border-radius:50%;color:#fff;font-size:.5rem;font-weight:600}
 .m-sum{margin:10px 0 0;text-align:center}
 .m-sheet-list{display:grid;gap:6px;margin:0 0 4px}
@@ -1633,6 +1638,7 @@ $('incExport').addEventListener('click',function(){
 var MEAL_SLOTS=[['sang','sáng'],['trua','trưa'],['toi','tối']];
 function mondayOf(d){return weekStart(d)}
 function mealDot(p){return h('span',{class:'m-dot',style:'background:'+PCOL[p],'aria-hidden':'true'},AVL[p])}
+function mealCooks(m){return m.cooks&&m.cooks.length?m.cooks:(m.cook?[m.cook]:[])}
 function mealEntries(d,slot){return S.meals.filter(function(m){return m.day===d&&m.slot===slot})}
 function drawMeals(){
   if(!S.mealWs)S.mealWs=mondayOf(today());
@@ -1648,7 +1654,7 @@ function drawMeals(){
     MEAL_SLOTS.forEach(function(m){
       var es=mealEntries(d,m[0]);
       cells.push(h('button',{type:'button',class:'m-cell'+(es.length?'':' empty')+(d===td?' today':''),'aria-label':DOW[parse(d).getDay()]+' '+dm(d)+' '+m[1],onclick:function(){openMeal(d,m[0])}},
-        es.length?es.map(function(e){return h('span',{class:'m-e'},mealDot(e.cook),h('span',{class:'t'},e.dish))}):'+'));
+        es.length?es.map(function(e){return h('span',{class:'m-e'},h('span',{class:'m-dots'},mealCooks(e).map(mealDot)),h('span',{class:'t'},e.dish))}):'+'));
     });
   });
   put('mealGrid',cells);
@@ -1656,81 +1662,48 @@ function drawMeals(){
   $('mealSum').textContent=n?n+' món đã đăng ký trong tuần này':'Chưa có món nào được đăng ký trong tuần này.';
 }
 function openMeal(d,slot){
-  var bd,armed=null;
+  var bd,armed=null,pick=[S.me];
   var slotName=MEAL_SLOTS.find(function(m){return m[0]===slot})[1];
   var inp=h('input',{type:'text',required:true,maxlength:'80',placeholder:'món nấu, vd: canh bí đỏ, đậu hũ sốt cà','aria-label':'tên món',enterkeyhint:'done'});
-  var who=h('select',{'aria-label':'ai nấu'},PEOPLE.map(function(p){return h('option',{value:p[0],selected:S.me===p[0]},p[1])}));
   function close(){bd.remove()}
+  function people(sel,onToggle){
+    return h('div',{class:'m-pp',role:'group','aria-label':'ai nấu'},PEOPLE.map(function(p){
+      var on=sel.indexOf(p[0])>=0;
+      return h('button',{type:'button',class:on?'on':'','aria-pressed':String(on),onclick:function(){onToggle(p[0])}},p[1])}));
+  }
+  async function toggleCook(e,pid){
+    var cur=mealCooks(e).slice(),i=cur.indexOf(pid);
+    if(i>=0){if(cur.length===1){toast('Món cần ít nhất một người nấu.');return}cur.splice(i,1)}else cur.push(pid);
+    e.cooks=cur;e.cook=cur[0];render();refresh();
+    try{await q(sb.from('meals').update({cooks:cur,cook:cur[0]}).eq('id',e.id))}catch(x){fail(x)}
+  }
   function body(){
     var es=mealEntries(d,slot);
     return [
       h('p',null,DOW[parse(d).getDay()]+' '+dm(d)+' · '+slotName),
       es.length?h('div',{class:'m-sheet-list'},es.map(function(e){
-        return h('div',{class:'m-row'},mealDot(e.cook),h('span',{class:'t'},e.dish,' ',h('small',{class:'meta'},PN[e.cook])),
+        return h('div',{class:'m-row',style:'flex-wrap:wrap'},h('span',{class:'t'},e.dish),
           h('button',{type:'button',class:'x'+(armed===e.id?' armed':''),'aria-label':'xoá món này',onclick:function(){
             if(armed!==e.id){armed=e.id;refresh();return}
             S.meals=S.meals.filter(function(m){return m.id!==e.id});armed=null;render();refresh();
             q(sb.from('meals').delete().eq('id',e.id)).catch(fail);
-          }},armed===e.id?'xoá?':'×'))})):h('p',{class:'meta',style:'margin:0'},'Chưa ai đăng ký buổi này.'),
+          }},armed===e.id?'xoá?':'×'),
+          h('div',{style:'flex-basis:100%'},people(mealCooks(e),function(pid){toggleCook(e,pid)})))})):h('p',{class:'meta',style:'margin:0'},'Chưa ai đăng ký buổi này.'),
       h('form',{class:'m-add',onsubmit:async function(ev){
         ev.preventDefault();var dish=(inp.value||'').trim();if(!dish)return;
+        if(!pick.length){toast('Chọn ít nhất một người nấu.');return}
         try{
-          var r=await q(sb.from('meals').insert({day:d,slot:slot,dish:dish,cook:who.value,created_by:S.me}).select());
+          var r=await q(sb.from('meals').insert({day:d,slot:slot,dish:dish,cook:pick[0],cooks:pick,created_by:S.me}).select());
           S.meals=S.meals.concat(r);inp.value='';armed=null;render();refresh();
         }catch(e){fail(e)}
-      }},inp,who,h('button',{type:'submit',class:'solid'},'đăng ký')),
+      }},inp,people(pick,function(pid){var i=pick.indexOf(pid);if(i>=0)pick.splice(i,1);else pick.push(pid);refresh()}),h('button',{type:'submit',class:'solid',style:'grid-column:1/-1'},'đăng ký món')),
       h('button',{type:'button',class:'ghost',onclick:close},'xong')
     ];
   }
   var box=h('div',{class:'pick-box',role:'dialog','aria-label':'đăng ký nấu ăn'});
-  function refresh(){box.replaceChildren.apply(box,body())}
+  function refresh(){var v=inp.value;box.replaceChildren.apply(box,body());inp.value=v}
   bd=h('div',{class:'pick-bd',onclick:function(ev){if(ev.target===bd)close()}},box);
   refresh();document.body.append(bd);
-}
-
-/* ─── thông báo đẩy 7:00 sáng (Web Push) ─── */
-var VAPID_PUB='BO2Ijq1xCePLrAsoxQXV1ABHw2xnIdYj5w0oI7vr3WnxRKLhj2s_aAVdYziv7hPXBau7jdLXIslEwgJUAhQkVes';
-function vapidKey(){var s=VAPID_PUB,b=(s+'='.repeat((4-s.length%4)%4)).replace(/-/g,'+').replace(/_/g,'/'),r=atob(b),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
-function pushReady(){
-  return Promise.race([navigator.serviceWorker.ready,new Promise(function(res){setTimeout(function(){res(null)},4000)})]);
-}
-async function drawPush(){
-  var box=$('pushBox');if(!box)return;
-  var ok='serviceWorker' in navigator&&'PushManager' in window&&'Notification' in window;
-  if(!ok){
-    put('pushBox',h('p',null,/iPhone|iPad/i.test(navigator.userAgent)&&!standalone?'Để nhận thông báo 7:00 sáng trên iPhone: bấm nút chia sẻ của Safari, chọn “Thêm vào MH chính”, rồi mở app từ biểu tượng trên màn hình chính và vào lại đây.':'Máy hoặc trình duyệt này chưa hỗ trợ thông báo.'));
-    return;
-  }
-  var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null,on=!!sub&&Notification.permission==='granted';
-  if(Notification.permission==='denied'){put('pushBox',h('p',null,'Thông báo đang bị chặn trên máy này. Hãy bật lại quyền thông báo cho mlf os trong phần cài đặt của điện thoại hoặc trình duyệt.'));return}
-  put('pushBox',
-    h('p',null,on?'Đã bật thông báo 7:00 sáng trên máy này: việc hôm nay, món mình nấu, khách đến/về.':'Nhận thông báo lúc 7:00 sáng mỗi ngày: việc của bạn hôm nay, món bạn nấu, khách đến/về.'),
-    on?h('div',{style:'display:flex;gap:8px;flex-wrap:wrap'},
-        h('button',{type:'button',class:'ghost',onclick:testPush},'gửi thử một thông báo'),
-        h('button',{type:'button',class:'ghost',onclick:disablePush},'tắt trên máy này'))
-      :h('button',{type:'button',class:'solid',onclick:enablePush},'bật thông báo 7:00 sáng'));
-}
-async function enablePush(){
-  try{
-    var perm=await Notification.requestPermission();
-    if(perm!=='granted'){toast('Chưa được cấp quyền thông báo.');drawPush();return}
-    var reg=await pushReady();if(!reg){toast('Chưa kích hoạt được thông báo trên máy này.');return}
-    var sub=await reg.pushManager.getSubscription()||await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:vapidKey()});
-    var j=sub.toJSON();
-    await q(sb.from('push_subs').upsert({person:S.me,endpoint:j.endpoint,p256dh:j.keys.p256dh,auth:j.keys.auth,user_agent:navigator.userAgent.slice(0,200)},{onConflict:'endpoint'}));
-    toast('Đã bật thông báo 7:00 sáng.');drawPush();
-  }catch(e){console.error(e);toast('Chưa bật được thông báo, thử lại sau.');drawPush()}
-}
-async function disablePush(){
-  try{
-    var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null;
-    if(sub){var ep=sub.endpoint;await sub.unsubscribe();await q(sb.from('push_subs').delete().eq('endpoint',ep))}
-    toast('Đã tắt thông báo trên máy này.');drawPush();
-  }catch(e){console.error(e);toast('Chưa tắt được, thử lại sau.')}
-}
-async function testPush(){
-  var reg=await pushReady();if(!reg)return;
-  reg.showNotification('mlf os',{body:'Thông báo hoạt động. Mỗi 7:00 sáng bạn sẽ nhận việc hôm nay ở đây.',icon:'./icon-192.png',data:{url:'/os/'}});
 }
 
 /* ─── tải dữ liệu ─── */

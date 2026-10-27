@@ -496,7 +496,14 @@ section.blk .more>summary{color:var(--ink)}
 .rec-q{display:block;box-sizing:border-box;width:100%;height:42px;margin:10px 0;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
 .rec-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:2px}
 .rec-total .shop li.done .tx b{color:var(--stone)}
-.rec-total .shop .qty{white-space:nowrap;font-weight:600}
+.rec-total .shop li{min-width:0}
+.rec-total .shop .tx{min-width:0;overflow-wrap:anywhere}
+.rec-total .shop .tx small{overflow-wrap:anywhere}
+.rec-total .shop .tx b,.rec-sel-row .t,.rec-saved .t,.rec-saved .t small{white-space:normal}
+.rec-total .shop .qty{flex:none;max-width:42%;text-align:right;white-space:normal;overflow-wrap:anywhere;font-weight:600}
+.shop-main{min-width:0;overflow:hidden}
+.rec-sel-row,.rec-saved{min-width:0}
+.rec-saved .t,.rec-sel-row .t{overflow-wrap:anywhere}
 .rec-total .shop li.done .qty{color:var(--stone);text-decoration:line-through;text-decoration-color:var(--line)}
 .rec-sel{display:grid;gap:6px;margin-top:12px}
 .rec-sel-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:10px}

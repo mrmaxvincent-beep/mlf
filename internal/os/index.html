@@ -493,6 +493,11 @@ section.blk .more>summary{color:var(--ink)}
 .rec-row{display:grid;grid-template-columns:minmax(0,1fr) 64px 78px 32px;gap:6px;margin-bottom:6px}
 .rec-row input{display:block;box-sizing:border-box;width:100%;min-width:0;height:42px;padding:0 8px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
 .rec-row .x{border:0;background:transparent;color:var(--stone);font-size:1.1rem;min-height:42px}
+.rec-q{display:block;box-sizing:border-box;width:100%;height:42px;margin:10px 0;padding:0 10px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:16px}
+.rec-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:2px}
+.rec-total .shop li.done .tx b{color:var(--stone)}
+.rec-total .shop .qty{white-space:nowrap;font-weight:600}
+.rec-total .shop li.done .qty{color:var(--stone);text-decoration:line-through;text-decoration-color:var(--line)}
 .rec-sel{display:grid;gap:6px;margin-top:12px}
 .rec-sel-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:10px}
 .rec-sel-row .t{flex:1;min-width:0;overflow-wrap:anywhere}
@@ -701,7 +706,9 @@ section.blk .more>summary{color:var(--ink)}
     <div class="blk-h"><h2>nguyên liệu nấu ăn</h2><p>Chọn món và khẩu phần để biết cần mua gì. Món mới thêm ở phần bên dưới, nguyên liệu tính cho 1 người ăn.</p></div>
     <div class="shop-main" id="recPick">
       <div class="shop-title"><b>chọn món để nấu</b></div>
-      <div id="recChips" class="shop-chips" style="margin-top:10px"></div>
+      <input type="search" id="recQ" class="rec-q" placeholder="tìm món …" aria-label="tìm món" autocomplete="off">
+      <div id="recChips" class="shop-chips"></div>
+      <p class="meta" id="recMore" style="margin:0 0 4px"></p>
       <div id="recSel"></div>
       <div id="recTotal"></div>
     </div>
@@ -815,7 +822,7 @@ function put(id){var el=$(id);el.replaceChildren.apply(el,Array.prototype.slice.
 var sb=null;
 var S={me:null,email:null,status:'loading',view:lsGet('mlfos.view')||'me',
   events:[],chores:[],swaps:new Map(),backlog:[],tasks:[],checks:new Map(),syncAt:null,
-  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],cat:[],rec:[],recSel:{},recEdit:null,meals:[],mealWs:null,expMonth:null,expEdit:null,inc:[],incEdit:null,
+  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],cat:[],rec:[],plan:[],ticks:new Map(),recSel:{},recQ:'',recEdit:null,meals:[],mealWs:null,expMonth:null,expEdit:null,inc:[],incEdit:null,
   day:today(),ws:null,sel:null,addAt:null,assignAt:null,armed:null};
 S.ws=weekStart(S.day);S.sel=S.day;
 
@@ -1786,47 +1793,80 @@ function recTotals(){
   });
 }
 function recLine(e){return e.name+(e.q!=null?' '+recQtyText(e.q,e.unit):(e.any?'':''))}
+function recTickKey(e){return e.name.toLowerCase()+'|'+e.unit}
+function recLimit(){return 24}
 function drawRecipes(){
   if(!$('recChips'))return;
-  var recs=S.rec.slice().sort(function(a,b){return a.name.localeCompare(b.name,'vi')});
-  Object.keys(S.recSel).forEach(function(id){if(!S.rec.some(function(r){return r.id===id}))delete S.recSel[id]});
-  put('recChips',recs.length?recs.map(function(r){
+  S.recSel={};S.plan.forEach(function(x){S.recSel[x.recipe_id]=x.servings});
+  var qs=shopKey($('recQ').value),all=S.rec.slice().sort(function(a,b){return a.name.localeCompare(b.name,'vi')});
+  var match=all.filter(function(r){return !qs||shopKey(r.name).indexOf(qs)>=0});
+  var shown=match.slice(0,recLimit());
+  put('recChips',all.length?(shown.length?shown.map(function(r){
     var on=S.recSel[r.id]!=null;
-    return h('button',{type:'button',class:'chip'+(on?' on':''),'aria-pressed':String(on),onclick:function(){
-      if(on)delete S.recSel[r.id];else S.recSel[r.id]=recLastServ();
-      drawRecipes()}},(on?'✓ ':'')+r.name)}):h('p',{class:'empty'},'Chưa có món nào. Thêm món ở phần "thêm / sửa món ăn" bên dưới.'));
-  var ids=Object.keys(S.recSel);
+    return h('button',{type:'button',class:'chip'+(on?' on':''),'aria-pressed':String(on),onclick:function(){toggleRecipe(r,on)}},(on?'✓ ':'')+r.name)}):h('p',{class:'empty'},'Không thấy món nào khớp.')):h('p',{class:'empty'},'Chưa có món nào. Thêm món ở phần "thêm / sửa món ăn" bên dưới.'));
+  $('recMore').textContent=match.length>shown.length?'Đang hiện '+shown.length+'/'+match.length+' món, gõ thêm để tìm chính xác hơn.':(all.length>recLimit()&&!qs?all.length+' món, gõ tên để tìm nhanh.':'');
+  // món đã chọn + khẩu phần (luôn hiện, bất kể ô tìm)
+  var ids=S.plan.map(function(x){return x.recipe_id}).filter(function(id){return S.rec.some(function(r){return r.id===id})});
   put('recSel',ids.length?h('div',{class:'rec-sel'},ids.map(function(id){
     var r=S.rec.find(function(x){return x.id===id}),n=S.recSel[id];
     return h('div',{class:'rec-sel-row'},h('span',{class:'t'},r.name),
       h('span',{class:'rec-step'},'khẩu phần',
-        h('button',{type:'button','aria-label':'giảm khẩu phần',onclick:function(){if(n>1){S.recSel[id]=n-1;recRememberServ(n-1);drawRecipes()}}},'−'),
+        h('button',{type:'button','aria-label':'giảm khẩu phần',onclick:function(){if(n>1)setServings(r,n-1)}},'−'),
         h('b',null,String(n)),
-        h('button',{type:'button','aria-label':'tăng khẩu phần',onclick:function(){S.recSel[id]=n+1;recRememberServ(n+1);drawRecipes()}},'+')))
+        h('button',{type:'button','aria-label':'tăng khẩu phần',onclick:function(){if(n<50)setServings(r,n+1)}},'+')))
   })):null);
+  // danh sách mua nguyên liệu: có tick
   var tot=recTotals();
+  var tk=tot.map(function(e){var t=S.ticks.get(recTickKey(e));return {e:e,done:!!(t&&t.done)}});
+  tk.sort(function(a,b){return (a.done?1:0)-(b.done?1:0)});
+  var got=tk.filter(function(x){return x.done}).length;
   put('recTotal',tot.length?h('div',{class:'rec-total'},
-    h('p',{class:'shop-g',style:'margin:0'},'cần mua cho '+ids.length+' món'),
-    h('ul',null,tot.map(function(e){return h('li',null,h('span',null,e.name,h('small',null,e.from.join(', '))),h('b',null,e.q!=null?recQtyText(e.q,e.unit)+(e.any?' + tuỳ ý':''):'tuỳ ý'))})),
-    h('button',{type:'button',class:'solid',onclick:function(){recToShopping(tot)}},'thêm vào danh sách cần mua')):null);
-  // danh sách món đã lưu
-  put('recList',recs.length?recs.map(function(r){
+    h('div',{class:'rec-bar'},h('p',{class:'shop-g',style:'margin:0'},'cần mua · '+got+'/'+tot.length+' món đã mua'),
+      h('button',{type:'button',class:'ghost'+(S.armed==='rc-clear'?' armed':''),onclick:function(){if(arm('rc-clear'))clearRecipePlan()}},S.armed==='rc-clear'?'xoá hết?':'làm mới')),
+    h('ul',{class:'shop'},tk.map(function(x){
+      var e=x.e;
+      return h('li',{class:x.done?'done':null},
+        h('input',{type:'checkbox',checked:x.done,'aria-label':e.name,onchange:function(){tickRecipe(e,this.checked)}}),
+        h('span',{class:'tx'},h('b',{style:'font-weight:500'},e.name),h('small',null,e.from.join(', '))),
+        h('span',{class:'qty'},e.q!=null?recQtyText(e.q,e.unit)+(e.any?' + tuỳ ý':''):'tuỳ ý'))
+    }))):null);
+  // danh sách món đã lưu (cũng lọc theo ô tìm)
+  var saved=all.filter(function(r){return !qs||shopKey(r.name).indexOf(qs)>=0}).slice(0,60);
+  put('recList',saved.length?saved.map(function(r){
     var key='rc:'+r.id;
     return h('div',{class:'rec-saved'},h('span',{class:'t'},r.name,h('small',null,(r.ingredients||[]).map(function(i){return i.n+(i.q!=null?' '+recQtyText(Number(i.q),i.u):'')}).join(' · '))),
       h('button',{type:'button',class:'x',onclick:function(){editRecipe(r)}},'sửa'),
       h('button',{type:'button',class:'x'+(S.armed===key?' armed':''),'aria-label':'xoá món này',onclick:function(){if(arm(key))delRecipe(r)}},S.armed===key?'xoá?':'×'))
-  }):h('p',{class:'empty'},'Chưa có món nào được lưu.'));
-  var box=$('recAddBox');if(!recs.length&&!box.getAttribute('data-seen')){box.open=true;box.setAttribute('data-seen','1')}
+  }):h('p',{class:'empty'},all.length?'Không thấy món nào khớp.':'Chưa có món nào được lưu.'));
+  var box=$('recAddBox');if(!all.length&&!box.getAttribute('data-seen')){box.open=true;box.setAttribute('data-seen','1')}
 }
+async function toggleRecipe(r,on){
+  try{
+    if(on){S.plan=S.plan.filter(function(x){return x.recipe_id!==r.id});render();await q(sb.from('recipe_plan').delete().eq('recipe_id',r.id))}
+    else{var row={recipe_id:r.id,servings:recLastServ(),added_by:S.me};S.plan=S.plan.concat([row]);render();await q(sb.from('recipe_plan').upsert(row))}
+  }catch(e){fail(e)}
+}
+async function setServings(r,n){
+  var x=S.plan.find(function(p){return p.recipe_id===r.id});if(!x)return;
+  x.servings=n;recRememberServ(n);render();
+  try{await q(sb.from('recipe_plan').update({servings:n}).eq('recipe_id',r.id))}catch(e){fail(e)}
+}
+async function tickRecipe(e,done){
+  var key=recTickKey(e),row={key:key,done:done,done_by:S.me,done_at:now()};
+  S.ticks.set(key,row);render();
+  try{await q(sb.from('recipe_ticks').upsert(row))}catch(x){fail(x)}
+}
+async function clearRecipePlan(){
+  S.plan=[];S.ticks=new Map();render();
+  try{
+    await q(sb.from('recipe_plan').delete().not('recipe_id','is',null));
+    await q(sb.from('recipe_ticks').delete().not('key','is',null));
+    toast('Đã làm mới danh sách nguyên liệu.');
+  }catch(e){fail(e)}
+}
+$('recQ').addEventListener('input',drawRecipes);
 function recLastServ(){var v=1;try{v=parseInt(localStorage.getItem('mlfos_rec_serv'),10)||1}catch(x){}return Math.min(Math.max(v,1),50)}
 function recRememberServ(n){try{localStorage.setItem('mlfos_rec_serv',String(n))}catch(x){}}
-async function recToShopping(tot){
-  var have={};S.shop.forEach(function(x){if(!x.done)have[shopKey(x.text)]=1});
-  var rows=[],seen={};
-  tot.forEach(function(e){var t=recLine(e);var k=shopKey(t);if(have[k]||seen[k])return;seen[k]=1;rows.push({text:t,added_by:S.me})});
-  if(!rows.length){toast('Các nguyên liệu này đã có trong danh sách cần mua.');return}
-  try{var r=await q(sb.from('shopping').insert(rows).select());S.shop=S.shop.concat(r);render();toast('Đã thêm '+rows.length+' nguyên liệu vào danh sách cần mua.')}catch(e){fail(e)}
-}
 /* form thêm / sửa món */
 function recRowEl(v){
   v=v||{};
@@ -1846,7 +1886,7 @@ function editRecipe(r){
   $('recAddBox').open=true;$('recForm').scrollIntoView({block:'center',behavior:'smooth'});
 }
 async function delRecipe(r){
-  S.rec=S.rec.filter(function(x){return x.id!==r.id});delete S.recSel[r.id];if(S.recEdit===r.id)resetRecipeForm();render();
+  S.rec=S.rec.filter(function(x){return x.id!==r.id});S.plan=S.plan.filter(function(x){return x.recipe_id!==r.id});if(S.recEdit===r.id)resetRecipeForm();render();
   try{await q(sb.from('recipes').delete().eq('id',r.id))}catch(e){fail(e)}
 }
 $('recAddRow').addEventListener('click',function(){var row=recRowEl();$('recRows').append(row);row.querySelector('input').focus()});
@@ -1913,12 +1953,14 @@ async function loadAll(){
       q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000)),
       q(sb.from('shop_catalog').select('*').order('created_at')),
       q(sb.from('meals').select('*').gte('day',add(S.day,-120)).order('created_at')),
-      q(sb.from('recipes').select('*').order('name'))]);
+      q(sb.from('recipes').select('*').order('name')),
+      q(sb.from('recipe_plan').select('*')),
+      q(sb.from('recipe_ticks').select('*'))]);
     S.events=res[0].map(function(e){return Object.assign({},e,{start:e.start_date,end:e.end_date})});
     S.chores=res[1];S.backlog=res[2];S.syncAt=res[3][0]?res[3][0].synced_at:null;
     S.tpl=res[4];S.prep=new Map(res[5].map(function(x){return [x.event_id+'__'+x.template_id,x]}));
     S.eset=new Map(res[6].map(function(x){return [x.event_id,x]}));
-    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.inc=res[12];S.cat=res[13];S.meals=res[14];S.rec=res[15];S.status='ok';
+    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.inc=res[12];S.cat=res[13];S.meals=res[14];S.rec=res[15];S.plan=res[16];S.ticks=new Map(res[17].map(function(x){return [x.key,x]}));S.status='ok';
   }catch(e){console.error(e);S.status='error'}
   await loadRange();
 }

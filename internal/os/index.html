@@ -1756,6 +1756,51 @@ function openMeal(d,slot){
   refresh();document.body.append(bd);
 }
 
+/* ─── thông báo đẩy 7:00 sáng (Web Push) ─── */
+var VAPID_PUB='BO2Ijq1xCePLrAsoxQXV1ABHw2xnIdYj5w0oI7vr3WnxRKLhj2s_aAVdYziv7hPXBau7jdLXIslEwgJUAhQkVes';
+function vapidKey(){var s=VAPID_PUB,b=(s+'='.repeat((4-s.length%4)%4)).replace(/-/g,'+').replace(/_/g,'/'),r=atob(b),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
+function pushReady(){
+  return Promise.race([navigator.serviceWorker.ready,new Promise(function(res){setTimeout(function(){res(null)},4000)})]);
+}
+async function drawPush(){
+  var box=$('pushBox');if(!box)return;
+  var ok='serviceWorker' in navigator&&'PushManager' in window&&'Notification' in window;
+  if(!ok){
+    put('pushBox',h('p',null,/iPhone|iPad/i.test(navigator.userAgent)&&!standalone?'Để nhận thông báo 7:00 sáng trên iPhone: bấm nút chia sẻ của Safari, chọn “Thêm vào MH chính”, rồi mở app từ biểu tượng trên màn hình chính và vào lại đây.':'Máy hoặc trình duyệt này chưa hỗ trợ thông báo.'));
+    return;
+  }
+  var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null,on=!!sub&&Notification.permission==='granted';
+  if(Notification.permission==='denied'){put('pushBox',h('p',null,'Thông báo đang bị chặn trên máy này. Hãy bật lại quyền thông báo cho mlf os trong phần cài đặt của điện thoại hoặc trình duyệt.'));return}
+  put('pushBox',
+    h('p',null,on?'Đã bật thông báo 7:00 sáng trên máy này: việc hôm nay, món mình nấu, khách đến/về.':'Nhận thông báo lúc 7:00 sáng mỗi ngày: việc của bạn hôm nay, món bạn nấu, khách đến/về.'),
+    on?h('div',{style:'display:flex;gap:8px;flex-wrap:wrap'},
+        h('button',{type:'button',class:'ghost',onclick:testPush},'gửi thử một thông báo'),
+        h('button',{type:'button',class:'ghost',onclick:disablePush},'tắt trên máy này'))
+      :h('button',{type:'button',class:'solid',onclick:enablePush},'bật thông báo 7:00 sáng'));
+}
+async function enablePush(){
+  try{
+    var perm=await Notification.requestPermission();
+    if(perm!=='granted'){toast('Chưa được cấp quyền thông báo.');drawPush();return}
+    var reg=await pushReady();if(!reg){toast('Chưa kích hoạt được thông báo trên máy này.');return}
+    var sub=await reg.pushManager.getSubscription()||await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:vapidKey()});
+    var j=sub.toJSON();
+    await q(sb.from('push_subs').upsert({person:S.me,endpoint:j.endpoint,p256dh:j.keys.p256dh,auth:j.keys.auth,user_agent:navigator.userAgent.slice(0,200)},{onConflict:'endpoint'}));
+    toast('Đã bật thông báo 7:00 sáng.');drawPush();
+  }catch(e){console.error(e);toast('Chưa bật được thông báo, thử lại sau.');drawPush()}
+}
+async function disablePush(){
+  try{
+    var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null;
+    if(sub){var ep=sub.endpoint;await sub.unsubscribe();await q(sb.from('push_subs').delete().eq('endpoint',ep))}
+    toast('Đã tắt thông báo trên máy này.');drawPush();
+  }catch(e){console.error(e);toast('Chưa tắt được, thử lại sau.')}
+}
+async function testPush(){
+  var reg=await pushReady();if(!reg)return;
+  reg.showNotification('mlf os',{body:'Thông báo hoạt động. Mỗi 7:00 sáng bạn sẽ nhận việc hôm nay ở đây.',icon:'./icon-192.png',data:{url:'/os/'}});
+}
+
 /* ─── nguyên liệu nấu ăn: món + nguyên liệu cho 1 người; chọn món và khẩu phần thì ra danh sách cần mua ─── */
 function recNum(v){var n=parseFloat(String(v==null?'':v).replace(',','.'));return isFinite(n)&&n>0?n:null}
 function recFmt(q){return String(Math.round(q*100)/100).replace('.',',')}
@@ -1922,49 +1967,71 @@ recFillRows();
 
 /* ─── tải dữ liệu ─── */
 function range(){var cur=weekStart(S.day),a=S.ws<cur?S.ws:cur,b1=add(S.ws,13),b2=add(cur,13);return [a,b1>b2?b1:b2]}
-async function loadRange(){
-  var r=range();
-  try{
-    var res=await Promise.all([
-      q(sb.from('tasks').select('*').gte('date',r[0]).lte('date',r[1])),
-      q(sb.from('checks').select('date,chore_id,person').gte('date',r[0]).lte('date',r[1])),
-      q(sb.from('swaps').select('week_start,chore_id,person').gte('week_start',r[0]).lte('week_start',r[1]))]);
-    S.tasks=res[0];
-    S.checks=new Map(res[1].map(function(x){return [x.date+'__'+x.chore_id,x]}));
-    S.swaps=new Map(res[2].map(function(x){return [x.week_start+'__'+x.chore_id,x]}));
-  }catch(e){console.error(e);S.status='error'}
-  render();
+/* mỗi bảng một hàm nạp riêng. Mở app: nạp tất cả cùng lúc (song song).
+   Khi có người sửa một bảng: chỉ nạp lại đúng bảng đó. */
+var LOAD={
+  events:async function(){var r=await q(sb.from('events').select('id,title,kind,start_date,end_date,who,people,pay,note,code').gte('end_date',add(weekStart(S.day),-14)).order('start_date'));S.events=r.map(function(e){return Object.assign({},e,{start:e.start_date,end:e.end_date})})},
+  chores:async function(){S.chores=await q(sb.from('chores').select('*'))},
+  backlog:async function(){S.backlog=await q(sb.from('backlog').select('*'))},
+  sync_meta:async function(){var r=await q(sb.from('sync_meta').select('synced_at').eq('id',1));S.syncAt=r[0]?r[0].synced_at:null},
+  prep_templates:async function(){S.tpl=await q(sb.from('prep_templates').select('*'))},
+  prep_items:async function(){var r=await q(sb.from('prep_items').select('*'));S.prep=new Map(r.map(function(x){return [x.event_id+'__'+x.template_id,x]}))},
+  event_settings:async function(){var r=await q(sb.from('event_settings').select('*'));S.eset=new Map(r.map(function(x){return [x.event_id,x]}))},
+  notes:async function(){S.notes=await q(sb.from('notes').select('*').order('created_at',{ascending:false}).limit(80))},
+  shopping:async function(){S.shop=await q(sb.from('shopping').select('*').or('done.eq.false,done_at.gte.'+new Date(Date.now()-14*864e5).toISOString()))},
+  shared_tasks:async function(){S.st=await q(sb.from('shared_tasks').select('*').order('created_at',{ascending:false}).limit(150))},
+  shared_task_people:async function(){S.stp=await q(sb.from('shared_task_people').select('*'))},
+  expenses:async function(){S.exp=await q(sb.from('expenses').select('*').order('spent_on',{ascending:false}).limit(3000))},
+  incomes:async function(){S.inc=await q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000))},
+  shop_catalog:async function(){S.cat=await q(sb.from('shop_catalog').select('*').order('created_at'))},
+  meals:async function(){S.meals=await q(sb.from('meals').select('*').gte('day',add(S.day,-120)).order('created_at'))},
+  recipes:async function(){S.rec=await q(sb.from('recipes').select('*').order('name'))},
+  recipe_plan:async function(){S.plan=await q(sb.from('recipe_plan').select('*'))},
+  recipe_ticks:async function(){var r=await q(sb.from('recipe_ticks').select('*'));S.ticks=new Map(r.map(function(x){return [x.key,x]}))},
+  tasks:async function(){var r=range();S.tasks=await q(sb.from('tasks').select('*').gte('date',r[0]).lte('date',r[1]))},
+  checks:async function(){var r=range(),d=await q(sb.from('checks').select('date,chore_id,person').gte('date',r[0]).lte('date',r[1]));S.checks=new Map(d.map(function(x){return [x.date+'__'+x.chore_id,x]}))},
+  swaps:async function(){var r=range(),d=await q(sb.from('swaps').select('week_start,chore_id,person').gte('week_start',r[0]).lte('week_start',r[1]));S.swaps=new Map(d.map(function(x){return [x.week_start+'__'+x.chore_id,x]}))}
+};
+var ALL_TABLES=Object.keys(LOAD);
+async function loadTables(names){
+  var failed=false;
+  await Promise.all(names.map(function(n){return LOAD[n]().catch(function(e){console.error(n,e);failed=true})}));
+  if(failed)S.status='error';else if(names.length===ALL_TABLES.length||S.status==='loading'&&names.length>=ALL_TABLES.length)S.status='ok';
+  if(S.me){saveCache();render()}
 }
-async function loadAll(){
-  try{
-    var res=await Promise.all([
-      q(sb.from('events').select('id,title,kind,start_date,end_date,who,people,pay,note,code').gte('end_date',add(weekStart(S.day),-14)).order('start_date')),
-      q(sb.from('chores').select('*')),
-      q(sb.from('backlog').select('*')),
-      q(sb.from('sync_meta').select('synced_at').eq('id',1)),
-      q(sb.from('prep_templates').select('*')),
-      q(sb.from('prep_items').select('*')),
-      q(sb.from('event_settings').select('*')),
-      q(sb.from('notes').select('*').order('created_at',{ascending:false}).limit(80)),
-      q(sb.from('shopping').select('*').or('done.eq.false,done_at.gte.'+new Date(Date.now()-14*864e5).toISOString())),
-      q(sb.from('shared_tasks').select('*').order('created_at',{ascending:false}).limit(150)),
-      q(sb.from('shared_task_people').select('*')),
-      q(sb.from('expenses').select('*').order('spent_on',{ascending:false}).limit(3000)),
-      q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000)),
-      q(sb.from('shop_catalog').select('*').order('created_at')),
-      q(sb.from('meals').select('*').gte('day',add(S.day,-120)).order('created_at')),
-      q(sb.from('recipes').select('*').order('name')),
-      q(sb.from('recipe_plan').select('*')),
-      q(sb.from('recipe_ticks').select('*'))]);
-    S.events=res[0].map(function(e){return Object.assign({},e,{start:e.start_date,end:e.end_date})});
-    S.chores=res[1];S.backlog=res[2];S.syncAt=res[3][0]?res[3][0].synced_at:null;
-    S.tpl=res[4];S.prep=new Map(res[5].map(function(x){return [x.event_id+'__'+x.template_id,x]}));
-    S.eset=new Map(res[6].map(function(x){return [x.event_id,x]}));
-    S.notes=res[7];S.shop=res[8];S.st=res[9];S.stp=res[10];S.exp=res[11];S.inc=res[12];S.cat=res[13];S.meals=res[14];S.rec=res[15];S.plan=res[16];S.ticks=new Map(res[17].map(function(x){return [x.key,x]}));S.status='ok';
-  }catch(e){console.error(e);S.status='error'}
-  await loadRange();
+function loadAll(){return loadTables(ALL_TABLES)}
+function loadRange(){return loadTables(['tasks','checks','swaps'])}
+var rt,pend={};
+function reload(tbl){
+  if(tbl&&LOAD[tbl])pend[tbl]=1;else if(!tbl)pend.__all=1;
+  clearTimeout(rt);rt=setTimeout(function(){
+    var names=Object.keys(pend);pend={};if(!names.length)return;
+    if(names.indexOf('__all')>=0)loadAll();else loadTables(names);
+  },300);
 }
-var rt;function reload(){clearTimeout(rt);rt=setTimeout(loadAll,300)}
+
+/* bản chụp dữ liệu lưu trên máy: mở app là có dữ liệu ngay, dữ liệu mới tải ngầm rồi tự cập nhật */
+var ct;
+function cacheKey(email){return 'mlfos_cache_v1_'+email}
+function saveCache(){
+  if(!S.email||!S.me||S.status!=='ok')return;
+  clearTimeout(ct);ct=setTimeout(function(){
+    try{
+      localStorage.setItem(cacheKey(S.email),JSON.stringify({me:S.me,at:Date.now(),events:S.events,chores:S.chores,backlog:S.backlog,syncAt:S.syncAt,tpl:S.tpl,
+        prep:Array.from(S.prep),eset:Array.from(S.eset),notes:S.notes,shop:S.shop,st:S.st,stp:S.stp,exp:S.exp.slice(0,600),inc:S.inc.slice(0,600),cat:S.cat,
+        meals:S.meals,rec:S.rec,plan:S.plan,ticks:Array.from(S.ticks),tasks:S.tasks,checks:Array.from(S.checks),swaps:Array.from(S.swaps)}));
+    }catch(x){}
+  },1200);
+}
+function readCache(email){
+  try{var raw=localStorage.getItem(cacheKey(email));if(!raw)return null;var c=JSON.parse(raw);return c&&c.me&&PN[c.me]?c:null}catch(x){return null}
+}
+function hydrate(c){
+  S.events=c.events||[];S.chores=c.chores||[];S.backlog=c.backlog||[];S.syncAt=c.syncAt||null;S.tpl=c.tpl||[];
+  S.prep=new Map(c.prep||[]);S.eset=new Map(c.eset||[]);S.notes=c.notes||[];S.shop=c.shop||[];S.st=c.st||[];S.stp=c.stp||[];
+  S.exp=c.exp||[];S.inc=c.inc||[];S.cat=c.cat||[];S.meals=c.meals||[];S.rec=c.rec||[];S.plan=c.plan||[];S.ticks=new Map(c.ticks||[]);
+  S.tasks=c.tasks||[];S.checks=new Map(c.checks||[]);S.swaps=new Map(c.swaps||[]);S.status='ok';
+}
 
 /* ─── đăng nhập ─── */
 function showLogin(msg){$('login').hidden=false;$('main').hidden=true;$('tabsNav').hidden=true;$('whoami').textContent='';$('loginMsg').textContent=msg||''}
@@ -1982,16 +2049,10 @@ $('pwForm').addEventListener('submit',async function(ev){
   $('loginMsg').textContent=r.error?'Email hoặc mật khẩu chưa đúng.':'';
   if(!r.error)f.elements.password.value='';
 });
-$('logout').addEventListener('click',async function(){await sb.auth.signOut();location.reload()});
+$('logout').addEventListener('click',async function(){try{if(S.email)localStorage.removeItem(cacheKey(S.email))}catch(x){}await sb.auth.signOut();location.reload()});
 
-var started=false,channel=null;
-async function start(session){
-  if(!session){showLogin();return}
-  if(started)return;
-  var email=String(session.user.email||'').toLowerCase();
-  var m=await sb.from('members').select('person').eq('email',email).maybeSingle();
-  if(m.error||!m.data){await sb.auth.signOut();showLogin('Email '+email+' chưa có trong danh sách của nhà mộc.');return}
-  started=true;S.me=m.data.person;S.email=email;
+var started=false,starting=false,channel=null;
+function enterApp(){
   $('login').hidden=true;$('main').hidden=false;$('tabsNav').hidden=false;put('whoami',av(S.me),PN[S.me]);
   XF.elements.who.value=S.me;
   drawPush();
@@ -1999,8 +2060,37 @@ async function start(session){
   var lastAcc=null;try{lastAcc=localStorage.getItem('mlfos_inc_acc_'+S.me)}catch(x){}
   if(lastAcc&&INC_ACC_N[lastAcc])NF.elements.acc.value=lastAcc;
   var me0=STF.querySelector('input[name=who][value="'+S.me+'"]');if(me0)me0.checked=true;
-  draw();await loadAll();
-  channel=sb.channel('mlf-os').on('postgres_changes',{event:'*',schema:'public'},function(){reload()}).subscribe();
+}
+function listen(){
+  if(channel)return;
+  channel=sb.channel('mlf-os').on('postgres_changes',{event:'*',schema:'public'},function(p){
+    var t=p&&p.table;if(t&&!LOAD[t])return;reload(t);
+  }).subscribe();
+}
+async function start(session){
+  if(!session){showLogin();return}
+  if(started||starting)return;
+  starting=true;
+  var email=String(session.user.email||'').toLowerCase();
+  S.email=email;
+  var cached=readCache(email);
+  var mp=sb.from('members').select('person').eq('email',email).maybeSingle();
+  if(cached){
+    // đã từng vào: hiện ngay bản chụp, kiểm tra thành viên và nạp mới chạy song song
+    S.me=cached.me;hydrate(cached);started=true;enterApp();draw();
+    var lp=loadAll(),m=await mp;
+    if(m.error||!m.data){
+      try{localStorage.removeItem(cacheKey(email))}catch(x){}
+      await sb.auth.signOut();location.reload();return;
+    }
+    if(m.data.person!==S.me){S.me=m.data.person;enterApp();draw()}
+    listen();await lp;
+  }else{
+    var lp2=loadAll(),m2=await mp;
+    if(m2.error||!m2.data){starting=false;await sb.auth.signOut();showLogin('Email '+email+' chưa có trong danh sách của nhà mộc.');return}
+    started=true;S.me=m2.data.person;enterApp();draw();
+    listen();await lp2;saveCache();
+  }
 }
 function boot(){
   if(!window.supabase||!CFG.supabaseUrl||!CFG.supabaseAnonKey){showLogin('Trang chưa được cấu hình (config.js).');$('loginForm').hidden=true;$('pwForm').hidden=true;return}
@@ -2009,7 +2099,12 @@ function boot(){
   sb.auth.onAuthStateChange(function(evt,session){if(evt==='SIGNED_IN')start(session);if(evt==='SIGNED_OUT')showLogin()});
 }
 setInterval(function(){var t=today();if(t!==S.day&&started){var was=weekStart(S.day)===S.ws;S.day=t;if(was){S.ws=weekStart(t);S.sel=t}loadAll()}},5*60*1000);
-document.addEventListener('visibilitychange',function(){if(!document.hidden&&started)reload()});
+var hiddenAt=0;
+document.addEventListener('visibilitychange',function(){
+  if(document.hidden){hiddenAt=Date.now();return}
+  // quay lại sau hơn 30 giây thì nạp lại để chắc chắn mới; ngắn hơn thì đã có realtime lo
+  if(started&&(!hiddenAt||Date.now()-hiddenAt>30000))reload();
+});
 
 /* ─── app trên màn hình chính ─── */
 var standalone=(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;

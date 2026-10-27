@@ -56,14 +56,35 @@ function SignIn() {
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [info, setInfo] = useState("");
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setBusy(true);
     setError("");
+    setInfo("");
     const { error } = await supabase!.auth.signInWithPassword({ email, password });
     if (error) setError("email hoặc mật khẩu chưa đúng.");
     setBusy(false);
+  }
+
+  /** Quên mật khẩu: gửi link đăng nhập về email (không tạo tài khoản mới), bấm link là vào thẳng. */
+  async function sendLink() {
+    const mail = email.trim().toLowerCase();
+    setError("");
+    setInfo("");
+    if (!mail) {
+      setError("nhập email ở trên trước, rồi bấm lại.");
+      return;
+    }
+    setBusy(true);
+    const { error } = await supabase!.auth.signInWithOtp({
+      email: mail,
+      options: { emailRedirectTo: window.location.origin + window.location.pathname, shouldCreateUser: false },
+    });
+    setBusy(false);
+    if (error) setError("email này chưa có quyền vào, hoặc gửi chưa được. thử lại sau ít phút.");
+    else setInfo("đã gửi. mở hộp thư và bấm vào link để vào.");
   }
 
   return (
@@ -78,11 +99,19 @@ function SignIn() {
         <input type="password" required autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} style={inputStyle} />
       </label>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
-        <span style={mono}>{error || "đăng nhập một lần, lần sau vào thẳng"}</span>
+        <span style={mono}>{error || info || "đăng nhập một lần, lần sau vào thẳng"}</span>
         <button type="submit" disabled={busy} className="cta-btn cta-btn--outline" style={{ cursor: "pointer", borderRadius: "999px", flex: "none" }}>
           {busy ? "đang mở…" : "vào"}
         </button>
       </div>
+      <button
+        type="button"
+        onClick={sendLink}
+        disabled={busy}
+        style={{ ...mono, alignSelf: "flex-start", background: "none", border: "none", padding: 0, cursor: "pointer", borderBottom: "1px solid var(--color-mist)" }}
+      >
+        quên mật khẩu? nhận link đăng nhập qua email
+      </button>
     </form>
   );
 }

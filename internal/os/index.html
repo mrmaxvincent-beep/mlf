@@ -530,6 +530,14 @@ section.blk .more>summary{color:var(--ink)}
 .pull-ind.show{transition:opacity .15s,transform .2s;opacity:1;transform:translateY(0)}
 html{overscroll-behavior-y:contain}
 @media (prefers-reduced-motion:reduce){.refresh.spin svg,.pull-ind.spin svg{animation-duration:2s}}
+.mine-wk{margin-top:12px}
+.mine-wk>.ghost{width:100%;min-height:42px}
+.mw{margin-top:10px}
+.mw-day{margin-top:12px;padding-top:8px;border-top:1px solid var(--mist)}
+.mw-h{display:flex;align-items:baseline;gap:8px;margin:0 0 4px;font-weight:600;font-size:.92rem}
+.mw-h small{font-weight:400;font-size:.72rem;color:var(--stone)}
+.mw-day.today .mw-h{color:var(--moss)}
+.mw-none{margin:0;font-size:.8rem;color:var(--stone)}
 .exp-sub{margin:26px 0 6px;font-size:1rem;font-weight:600}
 .exp-sub.first{margin-top:16px}
 .exp-hint{margin:0 0 10px}
@@ -994,7 +1002,34 @@ function drawMine(){
       return h('li',{class:it.due<S.day?'late':null},h('span',{class:'tx'},it.text,h('span',{class:'due'},evShort(it.ev)+' · '+dueLabel(it))),
         h('button',{type:'button',class:'claim',onclick:function(){setPrep(it,{person:S.me});toast('Đã nhận: '+it.text+'.')}},'nhận'))}))]:null,
     oc.length?[h('p',{class:'sub'},'việc thường xuyên hôm nay, chưa ai nhận'),h('ul',{class:'prep'},oc.map(function(c){return claimRow(c,wsT)}))]:null,
-    h('p',{class:'meta',style:'margin-top:8px'},'cả tuần: '+st[0]+' / '+st[1]+' việc đã xong'));
+    h('div',{class:'mine-wk'},
+      h('button',{type:'button',class:'ghost','aria-expanded':String(!!S.mineWeek),onclick:function(){S.mineWeek=!S.mineWeek;render()}},
+        (S.mineWeek?'ẩn việc cả tuần':'xem việc cả tuần')+' · '+st[0]+'/'+st[1]+' đã xong'),
+      S.mineWeek?mineWeekView():null));
+}
+/* việc của mình trong cả tuần (thứ 2 đến chủ nhật), chia theo ngày; đổi tuần bằng nút ‹ › */
+function mineWeekView(){
+  var cur=weekStart(S.day),ws=S.mineWs||cur,days=[0,1,2,3,4,5,6].map(function(i){return add(ws,i)});
+  var total=0,done=0;
+  var rows=days.map(function(d){
+    var its=itemsFor(S.me,d);total+=its.length;its.forEach(function(it){if(it.done)done++});
+    return h('div',{class:'mw-day'+(d===S.day?' today':'')},
+      h('p',{class:'mw-h'},DOW[dow(d)]+' '+dm(d),d===S.day?h('small',null,'hôm nay'):null,its.length?h('small',null,its.filter(function(i){return i.done}).length+'/'+its.length):null),
+      its.length?h('ul',{class:'items'},its.map(function(it){return itemEl(it,false)})):h('p',{class:'mw-none'},'không có việc'));
+  });
+  return h('div',{class:'mw'},
+    h('div',{class:'wk-nav'},
+      h('button',{type:'button',class:'ghost','aria-label':'tuần trước',onclick:function(){S.mineWs=add(ws,-7);loadWeekFor(S.mineWs)}},'‹'),
+      h('span',{class:'lbl'},(ws===cur?'tuần này · ':'')+dm(ws)+' – '+dm(days[6])),
+      ws!==cur?h('button',{type:'button',class:'ghost',onclick:function(){S.mineWs=null;render()}},'tuần này'):null,
+      h('button',{type:'button',class:'ghost','aria-label':'tuần sau',onclick:function(){S.mineWs=add(ws,7);loadWeekFor(S.mineWs)}},'›')),
+    h('p',{class:'meta',style:'margin:6px 0 0;text-align:center'},total?done+'/'+total+' việc đã xong trong tuần':'tuần này chưa có việc nào'),
+    rows,
+    h('button',{type:'button',class:'ghost',style:'margin-top:10px',onclick:function(){go('todo','tuan')}},'xem cả nhà ở trang tuần ›'));
+}
+/* tuần khác với tuần đang nạp: nạp việc theo ngày/đầu việc/nhận việc của tuần đó rồi vẽ lại */
+function loadWeekFor(ws){
+  if(S.ws!==ws){S.ws=ws;S.sel=ws;loadRange()}else render();
 }
 function itemEl(it,withDel){
   var key=it.kind+':'+it.id+':'+it.date;

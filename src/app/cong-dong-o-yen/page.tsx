@@ -7,11 +7,10 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { VoiceCarousel } from "@/components/VoiceCarousel";
-import { FaqShowMore } from "@/components/FaqShowMore";
 import { OyenAppShowcase } from "@/components/OyenAppShowcase";
 import { Disclosure } from "@/components/Disclosure";
 import { routes } from "@/lib/nav";
-import { pillars, spaces, reasons, keepers, voices, faqs, webAppTabs, membershipTerms, membershipTermsTitle } from "@/data/congDongOYen";
+import { pillars, spaces, reasons, keepers, voices, webAppTabs, membershipTerms, membershipTermsTitle } from "@/data/congDongOYen";
 
 export const metadata: Metadata = {
   title: "cộng đồng ở-yên",
@@ -301,11 +300,6 @@ export default function CongDongOYenPage() {
           </Disclosure>
         </div>
       </Reveal>
-
-      {/* FAQ */}
-      <div className="wrap" style={{ marginBottom: "5rem", marginTop: "3rem" }}>
-        <FaqShowMore items={faqs} />
-      </div>
 
       <Footer />
     </>

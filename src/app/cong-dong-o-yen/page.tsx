@@ -244,12 +244,13 @@ export default function CongDongOYenPage() {
         <span className="sec-label">lifetime membership</span>
         <div className="mem-box">
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "2.2rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>990.000đ</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>quyền truy cập web app ở-yên</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>Thành viên đóng phí một lần và được hưởng các quyền lợi:</span>
           <div style={{ marginBottom: "1.5rem" }}>
-            <p className="mem-item">hơn 200 bài viết được hệ thống theo 4 không gian</p>
-            <p className="mem-item">thực hành định kỳ</p>
-            <p className="mem-item">workshop &amp; livestream hỏi đáp cùng mlf</p>
-            <p className="mem-item">cộng đồng thành viên: chia sẻ, kết nối, đồng hành</p>
+            <p className="mem-item">truy cập không thời hạn vào cộng đồng ở-yên</p>
+            <p className="mem-item">truy cập các nội dung, tài liệu và thư viện thực hành dành cho thành viên</p>
+            <p className="mem-item">tham gia các hoạt động trực tuyến dành cho cộng đồng</p>
+            <p className="mem-item">được tiếp cận những nội dung mới được mlf bổ sung trong quá trình vận hành cộng đồng</p>
+            <p className="mem-item">không phải đóng phí duy trì hoặc gia hạn thành viên hằng năm</p>
           </div>
           <a className="cta-solid" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
             tham gia ở-yên

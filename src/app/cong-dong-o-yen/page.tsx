@@ -139,6 +139,10 @@ export default function CongDongOYenPage() {
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0, maxWidth: "34ch" }}>Nội dung được tổ chức theo 4 không gian, mỗi không gian gồm nhiều unit.</p>
         </div>
 
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "58ch", margin: "0 0 1.8rem" }}>
+          Nội dung đang được phát triển và hoàn thiện dần. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian.
+        </p>
+
         <div style={{ textAlign: "center", marginTop: "0.5rem" }}>
           <Link className="cta-solid" href={routes.deMucChiTiet}>
             xem đầy đủ 200+ đề mục <span className="ar">→</span>

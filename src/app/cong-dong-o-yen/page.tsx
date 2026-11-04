@@ -270,6 +270,17 @@ export default function CongDongOYenPage() {
           >
             {membershipTerms.map((para, k) => {
               const head = para.startsWith("**") && para.endsWith("**");
+              if (para.startsWith("* ")) {
+                return (
+                  <p
+                    key={k}
+                    style={{ position: "relative", paddingLeft: "1.1rem", fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0.4rem 0 0" }}
+                  >
+                    <span aria-hidden style={{ position: "absolute", left: 0, color: "var(--color-cham)" }}>—</span>
+                    {para.slice(2)}
+                  </p>
+                );
+              }
               return (
                 <p
                   key={k}

@@ -211,9 +211,6 @@ export default function CongDongOYenPage() {
           </div>
         </div>
 
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", maxWidth: "58ch", margin: "3.5rem auto 0" }}>
-          Cùng nhau, ba người giữ cho ở-yên không chỉ là một web app để đọc bài, mà thật sự là một tổ ấm chung - nơi họ chia sẻ những gì mình đang học được: về cách sống với tâm yên hơn, về cách dừng lại giữa sự vội vã, về cách ở lại với chính mình. Cả ba đều đang sống tại mộc little farm, thực hành đời sống chánh niệm, và sống thong dong giữa một cuộc đời đầy những biến chuyển.
-        </p>
       </div>
 
       {/* TIẾNG NÓI */}

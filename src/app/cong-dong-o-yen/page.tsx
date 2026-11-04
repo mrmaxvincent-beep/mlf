@@ -59,8 +59,8 @@ export default function CongDongOYenPage() {
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.8rem, 5vw, 2.6rem)", lineHeight: 1.3, color: "var(--color-ink)", textAlign: "center", margin: "0 0 1rem" }}>
           ở-yên, nằm gọn trong túi áo bạn
         </h2>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "center", maxWidth: "46ch", margin: "0 auto 2.8rem" }}>
-          Một nơi để ở-yên thêm một chút: ngồi, đọc, viết, uống trà, gặp gỡ.
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "center", maxWidth: "52ch", margin: "0 auto 2.8rem" }}>
+          Cộng đồng ở-yên giờ có một ứng dụng nhỏ của riêng mình. Ở đó vắng bảng tin, không thúc ép, ai cũng có một chỗ đủ riêng tư để học, viết, ngồi thở, thực hành... và một nơi chung để gặp nhau.
         </p>
         <OyenAppShowcase tabs={webAppTabs} />
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.2rem", flexWrap: "wrap", marginTop: "2.8rem" }}>

@@ -80,7 +80,6 @@ export const membershipTerms: string[] = [
   "Quyền thành viên không có ngày hết hạn cố định và được duy trì trong thời gian MLF tiếp tục vận hành cộng đồng ở-yên.",
   "MLF có thể thay đổi, nâng cấp hoặc chuyển đổi nền tảng công nghệ nhằm cải thiện trải nghiệm và duy trì hoạt động của cộng đồng. Những thay đổi này không làm mất quyền thành viên đã được cấp.",
   "Trong trường hợp cần tạm ngừng dịch vụ để bảo trì, nâng cấp hoặc xử lý sự cố, MLF sẽ thông báo cho thành viên trong phạm vi có thể.",
-  "Trong trường hợp MLF không còn khả năng tiếp tục vận hành cộng đồng, MLF sẽ thông báo trước trong điều kiện cho phép và có phương án phù hợp nhằm bảo vệ quyền lợi của các thành viên hiện hữu.",
   "**Trong trường hợp ngừng vận hành cộng đồng**",
   "MLF luôn nỗ lực duy trì hoạt động lâu dài của cộng đồng ở-yên. Tuy nhiên, trong trường hợp vì lý do khách quan hoặc không còn đủ điều kiện vận hành, MLF buộc phải ngừng cung cấp dịch vụ, MLF cam kết:",
   "* Thông báo trước cho thành viên trong thời gian sớm nhất có thể.",

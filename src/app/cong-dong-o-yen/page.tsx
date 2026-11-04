@@ -155,7 +155,7 @@ export default function CongDongOYenPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "52ch", margin: "0 auto 2.2rem" }}>
           Nội dung đang được phát triển và hoàn thiện dần. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian.
         </p>
-        <Link className="cta-solid" href={routes.deMucChiTiet}>
+        <Link className="cta-btn" href={routes.deMucChiTiet}>
           xem đầy đủ 200+ đề mục <span className="ar">→</span>
         </Link>
       </div>

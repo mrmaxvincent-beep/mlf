@@ -9,8 +9,9 @@ import { Reveal, RevealStagger } from "@/components/Reveal";
 import { VoiceCarousel } from "@/components/VoiceCarousel";
 import { FaqShowMore } from "@/components/FaqShowMore";
 import { OyenAppShowcase } from "@/components/OyenAppShowcase";
+import { Disclosure } from "@/components/Disclosure";
 import { routes } from "@/lib/nav";
-import { pillars, spaces, reasons, keepers, voices, faqs, webAppTabs } from "@/data/congDongOYen";
+import { pillars, spaces, reasons, keepers, voices, faqs, webAppTabs, membershipTerms, membershipTermsTitle } from "@/data/congDongOYen";
 
 export const metadata: Metadata = {
   title: "cộng đồng ở-yên",
@@ -261,6 +262,31 @@ export default function CongDongOYenPage() {
               mở web app ở-yên →
             </a>
           </p>
+        </div>
+
+        <div style={{ marginTop: "1.6rem" }}>
+          <Disclosure
+            trigger={<span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)" }}>{membershipTermsTitle}</span>}
+          >
+            {membershipTerms.map((para, k) => {
+              const head = para.startsWith("**") && para.endsWith("**");
+              return (
+                <p
+                  key={k}
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontWeight: head ? 500 : 300,
+                    fontSize: "0.9rem",
+                    lineHeight: 1.85,
+                    color: head ? "var(--color-ink)" : "var(--color-stone)",
+                    margin: k === 0 ? 0 : head ? "1.4rem 0 0" : "0.7rem 0 0",
+                  }}
+                >
+                  {head ? para.slice(2, -2) : para}
+                </p>
+              );
+            })}
+          </Disclosure>
         </div>
       </Reveal>
 

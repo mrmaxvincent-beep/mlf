@@ -56,7 +56,6 @@ export const voices = [
 export const faqs = [
   { q: `"nội dung ở đây khác gì những gì tôi tự tìm được?"`, a: "Ngoài kia có rất nhiều thông tin về slow living, mindfulness. ở-yên khác ở chỗ: mọi nội dung đều được đúc kết từ thực hành thật, từ chính nếp sống của mlf và từ những gì mlf quan sát qua nhiều năm làm việc với khách trú tại Măng Đen. Không phải lý thuyết mà là những gì đã sống qua." },
   { q: `"cộng đồng này có thật không hay chỉ là admin đăng bài?"`, a: "ở-yên được thiết kế như một tổ ấm. Ngoài bài viết được cập nhật định kỳ trên web app ở-yên, các hướng dẫn thực hành, cộng đồng còn có các buổi chia sẻ online cùng nhau. Tiếng nói của bạn là một phần của ở-yên, không chỉ là người đọc." },
-  { q: `"quyền lợi thành viên gồm những gì?"`, a: "**Quyền thành viên trọn đời**\n\nMức phí thành viên ở-yên là 990.000đ, thanh toán một lần duy nhất.\n\nThành viên được cấp quyền truy cập không thời hạn vào cộng đồng ở-yên, không phải thanh toán phí gia hạn hoặc phí duy trì định kỳ.\n\nQuyền truy cập bao gồm các nội dung, tài liệu, thư viện thực hành và hoạt động dành cho thành viên theo phạm vi quyền lợi được MLF công bố tại thời điểm tham gia.\n\n**Về thời hạn và duy trì dịch vụ**\n\nQuyền thành viên không có ngày hết hạn cố định và được duy trì trong thời gian MLF tiếp tục vận hành cộng đồng ở-yên.\n\nMLF có thể thay đổi, nâng cấp hoặc chuyển đổi nền tảng công nghệ nhằm cải thiện trải nghiệm và duy trì hoạt động của cộng đồng. Những thay đổi này không làm mất quyền thành viên đã được cấp.\n\nTrong trường hợp cần tạm ngừng dịch vụ để bảo trì, nâng cấp hoặc xử lý sự cố, MLF sẽ thông báo cho thành viên trong phạm vi có thể.\n\nTrong trường hợp MLF không còn khả năng tiếp tục vận hành cộng đồng, MLF sẽ thông báo trước trong điều kiện cho phép và có phương án phù hợp nhằm bảo vệ quyền lợi của các thành viên hiện hữu.\n\n**Về việc sử dụng tài khoản**\n\nQuyền thành viên được cấp cho một cá nhân, không được chuyển nhượng, mua bán hoặc chia sẻ tài khoản cho người khác.\n\nMLF có quyền tạm khóa hoặc chấm dứt quyền truy cập đối với những tài khoản có hành vi vi phạm nghiêm trọng quy định cộng đồng, xâm phạm quyền lợi của thành viên khác hoặc sử dụng nền tảng trái pháp luật." },
   { q: `"tôi sẽ nhận được gì cụ thể?"`, a: "ở-yên không hứa một kết quả đo được. Nhưng người ở trong đó thường bắt đầu nhận ra: họ biết cách dừng lại hơn, biết nghe cơ thể hơn, và ít cô đơn hơn trong hành trình này - vì có người đang đi cùng." },
   { q: `"200 bài viết có sẵn hết ngay không?"`, a: "Nội dung đang được phát triển và hoàn thiện dần. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian." },
 ];
@@ -69,4 +68,20 @@ export const webAppTabs: { name: string; line: string; desc: string; shot?: stri
   { name: "viết", line: "tôi nhìn lại.", desc: "Viết cho chính mình, chỉ mình bạn đọc. Giữ lại những đoạn tâm đắc và những điều đã viết.", shot: "/assets/appoyen4.jpg" },
   { name: "trà", line: "tôi thưởng thức.", desc: "Một chén trà cho mình: năm bước chậm, khoảng 5 phút. Đun nước, tráng chén, cho trà, đợi, rồi uống.", shot: "/assets/appoyen5.jpg" },
   { name: "gặp", line: "tôi kết nối.", desc: "Gặp nhau bên một chén trà: meetup ở-yên hai tháng một lần (online), và các dịp gặp khác như clari-tea 1-1.", shot: "/assets/appoyen6.jpg" },
+];
+
+/** Điều khoản "Quyền thành viên trọn đời", hiện dạng xổ ra dưới box lifetime membership. Dòng bọc trong ** ** là tiêu đề nhỏ. */
+export const membershipTermsTitle = "quyền thành viên trọn đời";
+export const membershipTerms: string[] = [
+  "Mức phí thành viên ở-yên là 990.000đ, thanh toán một lần duy nhất.",
+  "Thành viên được cấp quyền truy cập không thời hạn vào cộng đồng ở-yên, không phải thanh toán phí gia hạn hoặc phí duy trì định kỳ.",
+  "Quyền truy cập bao gồm các nội dung, tài liệu, thư viện thực hành và hoạt động dành cho thành viên theo phạm vi quyền lợi được MLF công bố tại thời điểm tham gia.",
+  "**Về thời hạn và duy trì dịch vụ**",
+  "Quyền thành viên không có ngày hết hạn cố định và được duy trì trong thời gian MLF tiếp tục vận hành cộng đồng ở-yên.",
+  "MLF có thể thay đổi, nâng cấp hoặc chuyển đổi nền tảng công nghệ nhằm cải thiện trải nghiệm và duy trì hoạt động của cộng đồng. Những thay đổi này không làm mất quyền thành viên đã được cấp.",
+  "Trong trường hợp cần tạm ngừng dịch vụ để bảo trì, nâng cấp hoặc xử lý sự cố, MLF sẽ thông báo cho thành viên trong phạm vi có thể.",
+  "Trong trường hợp MLF không còn khả năng tiếp tục vận hành cộng đồng, MLF sẽ thông báo trước trong điều kiện cho phép và có phương án phù hợp nhằm bảo vệ quyền lợi của các thành viên hiện hữu.",
+  "**Về việc sử dụng tài khoản**",
+  "Quyền thành viên được cấp cho một cá nhân, không được chuyển nhượng, mua bán hoặc chia sẻ tài khoản cho người khác.",
+  "MLF có quyền tạm khóa hoặc chấm dứt quyền truy cập đối với những tài khoản có hành vi vi phạm nghiêm trọng quy định cộng đồng, xâm phạm quyền lợi của thành viên khác hoặc sử dụng nền tảng trái pháp luật.",
 ];

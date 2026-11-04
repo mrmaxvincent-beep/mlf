@@ -251,10 +251,10 @@ export default function CongDongOYenPage() {
           <a className="cta-solid" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
             tham gia ở-yên
           </a>
-          <p style={{ margin: "1.1rem 0 0", textAlign: "center", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)" }}>
+          <p style={{ margin: "1.2rem 0 0", textAlign: "center", fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone)" }}>
             đã là thành viên?{" "}
-            <a className="go mono-link" href="https://oyen.moclittlefarm.com/dang-nhap/" target="_blank" rel="noopener" style={{ color: "var(--color-ink)" }}>
-              mở web app ở-yên <span className="ar">→</span>
+            <a href="https://oyen.moclittlefarm.com/dang-nhap/" target="_blank" rel="noopener" style={{ color: "var(--color-ink)", textDecoration: "underline", textUnderlineOffset: "3px", whiteSpace: "nowrap" }}>
+              mở web app ở-yên →
             </a>
           </p>
         </div>

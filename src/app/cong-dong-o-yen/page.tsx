@@ -67,7 +67,7 @@ export default function CongDongOYenPage() {
           ở-yên, nằm gọn trong túi áo bạn
         </h2>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "center", maxWidth: "46ch", margin: "0 auto 2.8rem" }}>
-          Không phải một dòng tin để cuộn. Mở lên là một nơi để dừng lại: ngồi, đọc, viết, uống trà, gặp gỡ. Thêm vào màn hình chính, ở-yên luôn cách bạn một chạm.
+          Một nơi để ở-yên thêm một chút: ngồi, đọc, viết, uống trà, gặp gỡ.
         </p>
         <OyenAppShowcase tabs={webAppTabs} />
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.2rem", flexWrap: "wrap", marginTop: "2.8rem" }}>

@@ -215,7 +215,6 @@ export default function CongDongOYenPage() {
                   0{i + 1} · {k.role}
                 </span>
                 <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.7rem", color: "var(--color-ink)", marginBottom: "0.7rem" }}>{k.name}</span>
-                <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)" }}>{k.desc}</span>
               </Reveal>
             ))}
           </div>

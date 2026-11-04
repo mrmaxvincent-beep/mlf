@@ -10,7 +10,7 @@ import { VoiceCarousel } from "@/components/VoiceCarousel";
 import { FaqShowMore } from "@/components/FaqShowMore";
 import { OyenAppShowcase } from "@/components/OyenAppShowcase";
 import { routes } from "@/lib/nav";
-import { pillars, spaces, unitGroups, reasons, keepers, voices, faqs, webAppTabs } from "@/data/congDongOYen";
+import { pillars, spaces, reasons, keepers, voices, faqs, webAppTabs } from "@/data/congDongOYen";
 
 export const metadata: Metadata = {
   title: "cộng đồng ở-yên",
@@ -145,15 +145,8 @@ export default function CongDongOYenPage() {
           <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0, maxWidth: "34ch" }}>Nội dung được tổ chức theo 4 không gian, mỗi không gian gồm nhiều unit.</p>
         </div>
 
-        {unitGroups.map((grp) => (
-          <div key={grp.title} style={{ padding: "1.4rem 0", borderTop: "1px solid var(--color-mist)" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.9rem" }}>{grp.title}</span>
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{grp.unitNames}</p>
-          </div>
-        ))}
-
-        <div style={{ textAlign: "right", marginTop: "1.5rem" }}>
-          <Link className="go mono-link" href={routes.deMucChiTiet} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+        <div style={{ textAlign: "center", marginTop: "0.5rem" }}>
+          <Link className="cta-solid" href={routes.deMucChiTiet}>
             xem đầy đủ 200+ đề mục <span className="ar">→</span>
           </Link>
         </div>

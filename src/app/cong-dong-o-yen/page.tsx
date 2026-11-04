@@ -190,10 +190,7 @@ export default function CongDongOYenPage() {
 
       {/* NGƯỜI GIỮ LỬA */}
       <div className="wrap" style={{ marginBottom: "4rem", paddingBottom: "3rem", paddingTop: "3rem" }}>
-        <span className="sec-label" style={{ textAlign: "center" }}>những người giữ lửa cho ở-yên</span>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "center", maxWidth: "48ch", margin: "0 auto 3.5rem" }}>
-          ở-yên có ba người bạn đồng hành - mỗi người một vai, một sắc thái, cùng hoà thành một dòng chảy chung.
-        </p>
+        <span className="sec-label" style={{ textAlign: "center", marginBottom: "3rem" }}>những người giữ lửa cho ở-yên</span>
 
         <div style={{ position: "relative", maxWidth: "900px", margin: "0 auto" }}>
           <div style={{ position: "absolute", top: "5px", left: "8%", right: "8%", height: "1px", background: "var(--color-mist)" }} />

@@ -275,7 +275,7 @@ export default function CongDongOYenPage() {
                   key={k}
                   style={{
                     fontFamily: "var(--font-sans)",
-                    fontWeight: head ? 500 : 300,
+                    fontWeight: head ? 700 : 300,
                     fontSize: "0.9rem",
                     lineHeight: 1.85,
                     color: "var(--color-ink)",

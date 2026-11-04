@@ -36,29 +36,22 @@ export default function CongDongOYenPage() {
       </div>
 
       {/* POEM */}
-      <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "4rem" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "center", maxWidth: "44ch", margin: "0 auto 1.5rem" }}>
-          giữa một ngày dài, phố xá vội vã, bất giác thấy lòng mình vơi đi.
-          <br />
-          <br />
-          ngôi nhà đủ đầy nhưng không làm ta thấy ấm áp.
-          <br />
-          <br />
-          những buổi tập luyện làm ta thấy khỏe, mà có gì đó vẫn chưa thật sự được chạm tới.
-          <br />
-          <br />
-          một tâm trí nhạy bén, nhưng lắm lúc cũng chòng chành.
-        </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "center", marginTop: "2.5rem", marginBottom: "2.5rem" }}>
+      <Reveal className="wrap" style={{ marginTop: "2.6rem", marginBottom: "2.6rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", textAlign: "center", maxWidth: "42ch", margin: "0 auto" }}>
+          <p style={{ margin: 0 }}>giữa một ngày dài, phố xá vội vã, bất giác thấy lòng mình vơi đi.</p>
+          <p style={{ margin: 0 }}>ngôi nhà đủ đầy nhưng không làm ta thấy ấm áp.</p>
+          <p style={{ margin: 0 }}>những buổi tập luyện làm ta thấy khỏe, mà có gì đó vẫn chưa thật sự được chạm tới.</p>
+          <p style={{ margin: 0 }}>một tâm trí nhạy bén, nhưng lắm lúc cũng chòng chành.</p>
+        </div>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "center", margin: "1.6rem 0 1.4rem" }}>
           Chính từ những khoảng lưng chừng ấy, <strong style={{ fontWeight: 500 }}>ở-yên ra đời.</strong>
         </p>
-      </Reveal>
-
-      <div className="wrap" style={{ display: "flex", justifyContent: "center", marginBottom: "4rem" }}>
-        <div style={{ position: "relative", width: "180px", height: "140px" }}>
-          <Image src="/assets/comnam.webp" alt="comnam" fill sizes="180px" style={{ objectFit: "contain" }} />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ position: "relative", width: "120px", height: "92px" }}>
+            <Image src="/assets/comnam.webp" alt="comnam" fill sizes="120px" style={{ objectFit: "contain" }} />
+          </div>
         </div>
-      </div>
+      </Reveal>
 
       {/* WEB APP Ở-YÊN */}
       <div className="wrap" style={{ marginBottom: "5rem" }}>

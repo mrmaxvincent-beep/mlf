@@ -18,7 +18,24 @@ export function FaqShowMore({ items, initialCount = 6 }: { items: { q: string; a
       {shown.map((item) => (
         <div key={item.q} style={{ paddingLeft: "1.5rem" }}>
           <Disclosure trigger={<span style={{ fontFamily: "var(--font-sans)", fontWeight: 400, fontSize: "0.9rem", color: "var(--color-ink)" }}>{item.q}</span>}>
-            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-stone)", margin: 0 }}>{item.a}</p>
+            {item.a.split("\n\n").map((para, k) => {
+              const head = para.startsWith("**") && para.endsWith("**");
+              return (
+                <p
+                  key={k}
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontWeight: head ? 500 : 300,
+                    fontSize: "0.88rem",
+                    lineHeight: 1.85,
+                    color: head ? "var(--color-ink)" : "var(--color-stone)",
+                    margin: k === 0 ? 0 : head ? "1.3rem 0 0" : "0.7rem 0 0",
+                  }}
+                >
+                  {head ? para.slice(2, -2) : para}
+                </p>
+              );
+            })}
           </Disclosure>
         </div>
       ))}

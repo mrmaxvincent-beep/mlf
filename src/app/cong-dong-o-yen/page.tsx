@@ -253,7 +253,7 @@ export default function CongDongOYenPage() {
           </a>
           <p style={{ margin: "1.1rem 0 0", textAlign: "center", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)" }}>
             đã là thành viên?{" "}
-            <a className="go mono-link" href="https://oyen.moclittlefarm.com" target="_blank" rel="noopener" style={{ color: "var(--color-ink)" }}>
+            <a className="go mono-link" href="https://oyen.moclittlefarm.com/dang-nhap/" target="_blank" rel="noopener" style={{ color: "var(--color-ink)" }}>
               mở web app ở-yên <span className="ar">→</span>
             </a>
           </p>

@@ -60,7 +60,7 @@ export default function CongDongOYenPage() {
           ở-yên, nằm gọn trong túi áo bạn
         </h2>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "center", maxWidth: "52ch", margin: "0 auto 2.8rem" }}>
-          Cộng đồng ở-yên giờ có một ứng dụng nhỏ của riêng mình. Ở đó vắng bảng tin, không thúc ép, ai cũng có một chỗ đủ riêng tư để học, viết, ngồi thở, thực hành... và một nơi chung để gặp nhau.
+          Cộng đồng ở-yên giờ có một ứng dụng nhỏ của riêng mình. Ở đó vắng bảng tin, không thúc ép, ai cũng có một chỗ đủ riêng tư để học, viết, ngồi thở, pha trà... và một nơi chung vừa đủ an toàn để gặp nhau &amp; giải bày.
         </p>
         <OyenAppShowcase tabs={webAppTabs} />
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.2rem", flexWrap: "wrap", marginTop: "2.8rem" }}>

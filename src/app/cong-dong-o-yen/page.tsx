@@ -131,22 +131,33 @@ export default function CongDongOYenPage() {
       </div>
 
       {/* 200+ ĐỀ MỤC */}
-      <div className="wrap" style={{ marginBottom: "4rem" }}>
-        <span className="sec-label">đề mục nội dung</span>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "1.5rem", marginBottom: "2rem", flexWrap: "wrap" }}>
-          <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.2rem, 8vw, 4.8rem)", lineHeight: 1, color: "var(--color-ink)" }}>200+</span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0, maxWidth: "34ch" }}>Nội dung được tổ chức theo 4 không gian, mỗi không gian gồm nhiều unit.</p>
-        </div>
-
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "58ch", margin: "0 0 1.8rem" }}>
+      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
+        <span className="sec-label" style={{ textAlign: "center" }}>đề mục nội dung</span>
+        <span
+          style={{
+            display: "block",
+            fontFamily: "var(--font-serif)",
+            fontStyle: "italic",
+            fontWeight: 300,
+            fontSize: "clamp(5rem, 18vw, 8.5rem)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.02em",
+            color: "var(--color-ink)",
+            margin: "0.6rem 0 1.4rem",
+          }}
+        >
+          200+
+        </span>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", maxWidth: "34ch", margin: "0 auto" }}>
+          Nội dung được tổ chức theo 4 không gian, mỗi không gian gồm nhiều unit.
+        </p>
+        <div aria-hidden style={{ width: "2.5rem", height: "1px", background: "var(--color-cham-dem)", opacity: 0.5, margin: "1.8rem auto" }} />
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "52ch", margin: "0 auto 2.2rem" }}>
           Nội dung đang được phát triển và hoàn thiện dần. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian.
         </p>
-
-        <div style={{ textAlign: "center", marginTop: "0.5rem" }}>
-          <Link className="cta-solid" href={routes.deMucChiTiet}>
-            xem đầy đủ 200+ đề mục <span className="ar">→</span>
-          </Link>
-        </div>
+        <Link className="cta-solid" href={routes.deMucChiTiet}>
+          xem đầy đủ 200+ đề mục <span className="ar">→</span>
+        </Link>
       </div>
 
       {/* VÌ SAO CÓ Ở-YÊN */}

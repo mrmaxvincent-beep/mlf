@@ -208,7 +208,7 @@ export default function CongDongOYenPage() {
         </div>
 
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", maxWidth: "58ch", margin: "3.5rem auto 0" }}>
-          Cùng nhau, ba người giữ cho ở-yên không chỉ là một group online, mà thật sự là một tổ ấm chung - nơi họ chia sẻ những gì mình đang học được: về cách sống với tâm yên hơn, về cách dừng lại giữa sự vội vã, về cách ở lại với chính mình. Cả ba đều đang sống tại mộc little farm, thực hành đời sống chánh niệm, và sống thong dong giữa một cuộc đời đầy những biến chuyển.
+          Cùng nhau, ba người giữ cho ở-yên không chỉ là một web app để đọc bài, mà thật sự là một tổ ấm chung - nơi họ chia sẻ những gì mình đang học được: về cách sống với tâm yên hơn, về cách dừng lại giữa sự vội vã, về cách ở lại với chính mình. Cả ba đều đang sống tại mộc little farm, thực hành đời sống chánh niệm, và sống thong dong giữa một cuộc đời đầy những biến chuyển.
         </p>
       </div>
 
@@ -216,7 +216,7 @@ export default function CongDongOYenPage() {
       <Reveal className="wrap" style={{ marginBottom: "4rem", marginTop: "2rem" }}>
         <span className="sec-label">tiếng nói từ ở-yên</span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: "0 0 2rem" }}>
-          Những dòng dưới đây là phản hồi thật, được viết bởi người đang tham gia cộng đồng ở-yên, sau khi đọc các bài viết trong nhóm.
+          Những dòng dưới đây là phản hồi thật, được viết bởi người đang tham gia cộng đồng ở-yên, sau khi đọc các bài viết trong web app ở-yên.
         </p>
         <VoiceCarousel voices={voices} />
       </Reveal>
@@ -241,7 +241,7 @@ export default function CongDongOYenPage() {
         <span className="sec-label">lifetime membership</span>
         <div className="mem-box">
           <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "2.2rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>990.000đ</span>
-          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>quyền truy cập private facebook group</span>
+          <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", marginBottom: "1.5rem" }}>quyền truy cập web app ở-yên</span>
           <div style={{ marginBottom: "1.5rem" }}>
             <p className="mem-item">hơn 200 bài viết được hệ thống theo 4 không gian</p>
             <p className="mem-item">thực hành định kỳ</p>
@@ -251,6 +251,12 @@ export default function CongDongOYenPage() {
           <a className="cta-solid" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
             tham gia ở-yên
           </a>
+          <p style={{ margin: "1.1rem 0 0", textAlign: "center", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)" }}>
+            đã là thành viên?{" "}
+            <a className="go mono-link" href="https://oyen.moclittlefarm.com" target="_blank" rel="noopener" style={{ color: "var(--color-ink)" }}>
+              mở web app ở-yên <span className="ar">→</span>
+            </a>
+          </p>
         </div>
       </Reveal>
 

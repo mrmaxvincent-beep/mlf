@@ -33,11 +33,11 @@ export function OyenAppShowcase({ tabs }: { tabs: AppTab[] }) {
     <div className="oya">
       <div className="oya-phone" aria-hidden="true">
         <div className="oya-notch" />
-        <div className="oya-screen">
+        <div className={`oya-screen${t.shot ? " has-shot" : ""}`}>
           <div className="oya-top">ở-yên</div>
           {t.shot ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img className="oya-shot" src={t.shot} alt="" />
+            <img className="oya-shot" src={t.shot} alt="" width={364} height={788} key={t.shot} />
           ) : (
             <div className="oya-body" key={t.name}>
               <span className="oya-tag">{t.name}</span>

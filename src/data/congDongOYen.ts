@@ -60,3 +60,13 @@ export const faqs = [
   { q: `"tôi sẽ nhận được gì cụ thể?"`, a: "ở-yên không hứa một kết quả đo được. Nhưng người ở trong đó thường bắt đầu nhận ra: họ biết cách dừng lại hơn, biết nghe cơ thể hơn, và ít cô đơn hơn trong hành trình này - vì có người đang đi cùng." },
   { q: `"200 bài viết có sẵn hết ngay không?"`, a: "Nội dung đang được phát triển và hoàn thiện dần. Không phải tất cả 200 bài đều có mặt ngay khi bạn tham gia, nhưng sẽ được cập nhật liên tục theo thời gian." },
 ];
+
+/** Sáu tab của web app ở-yên (thứ tự như thanh điều hướng trong app). Thêm `shot: "/assets/..."` để thay khung minh hoạ bằng ảnh chụp thật. */
+export const webAppTabs: { name: string; line: string; desc: string; shot?: string }[] = [
+  { name: "hiên nhà", line: "tôi bước vào.", desc: "Nơi bạn bước vào mỗi lần mở app, nhẹ nhàng như đứng trước hiên." },
+  { name: "lắng", line: "tôi dừng lại.", desc: "Ngồi yên vài phút, nhìn vòng tròn và thở theo. Màn hình ở lại với bạn suốt buổi ngồi." },
+  { name: "đọc", line: "tôi lắng nghe.", desc: "Hơn 200 bài viết theo 4 không gian ở-yên. Bài mới luôn nằm ở đầu." },
+  { name: "viết", line: "tôi nhìn lại.", desc: "Một cuốn sổ tay riêng cho bạn: viết ra điều đang ở trong lòng, giữ lại điều đáng giữ." },
+  { name: "trà", line: "tôi thưởng thức.", desc: "Một chén trà cho mình: thực hành một mình, chậm và không cần ai bên cạnh." },
+  { name: "gặp", line: "tôi kết nối.", desc: "Các buổi gặp cùng mlf và những người giữ lửa của ở-yên." },
+];

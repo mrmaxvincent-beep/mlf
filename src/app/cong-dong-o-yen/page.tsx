@@ -8,8 +8,9 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal, RevealStagger } from "@/components/Reveal";
 import { VoiceCarousel } from "@/components/VoiceCarousel";
 import { FaqShowMore } from "@/components/FaqShowMore";
+import { OyenAppShowcase } from "@/components/OyenAppShowcase";
 import { routes } from "@/lib/nav";
-import { pillars, spaces, unitGroups, reasons, keepers, voices, faqs } from "@/data/congDongOYen";
+import { pillars, spaces, unitGroups, reasons, keepers, voices, faqs, webAppTabs } from "@/data/congDongOYen";
 
 export const metadata: Metadata = {
   title: "cộng đồng ở-yên",
@@ -56,6 +57,26 @@ export default function CongDongOYenPage() {
       <div className="wrap" style={{ display: "flex", justifyContent: "center", marginBottom: "4rem" }}>
         <div style={{ position: "relative", width: "180px", height: "140px" }}>
           <Image src="/assets/comnam.webp" alt="comnam" fill sizes="180px" style={{ objectFit: "contain" }} />
+        </div>
+      </div>
+
+      {/* WEB APP Ở-YÊN */}
+      <div className="wrap" style={{ marginBottom: "5rem" }}>
+        <span className="sec-label" style={{ textAlign: "center" }}>web app ở-yên</span>
+        <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.8rem, 5vw, 2.6rem)", lineHeight: 1.3, color: "var(--color-ink)", textAlign: "center", margin: "0 0 1rem" }}>
+          ở-yên, nằm gọn trong túi áo bạn
+        </h2>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.02rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "center", maxWidth: "46ch", margin: "0 auto 2.8rem" }}>
+          Không phải một dòng tin để cuộn. Mở lên là một nơi để dừng lại: ngồi, đọc, viết, uống trà, gặp gỡ. Thêm vào màn hình chính, ở-yên luôn cách bạn một chạm.
+        </p>
+        <OyenAppShowcase tabs={webAppTabs} />
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.2rem", flexWrap: "wrap", marginTop: "2.8rem" }}>
+          <a className="cta-solid" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
+            tham gia ở-yên
+          </a>
+          <a href="https://oyen.moclittlefarm.com/dang-nhap/" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", color: "var(--color-ink)", textDecoration: "underline", textUnderlineOffset: "3px", whiteSpace: "nowrap" }}>
+            đã là thành viên? mở web app →
+          </a>
         </div>
       </div>
 

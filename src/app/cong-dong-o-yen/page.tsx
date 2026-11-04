@@ -64,7 +64,7 @@ export default function CongDongOYenPage() {
         </p>
         <OyenAppShowcase tabs={webAppTabs} />
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.2rem", flexWrap: "wrap", marginTop: "2.8rem" }}>
-          <a className="cta-solid" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
+          <a className="cta-btn" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
             tham gia ở-yên
           </a>
           <a href="https://oyen.moclittlefarm.com/dang-nhap/" target="_blank" rel="noopener" style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", color: "var(--color-ink)", textDecoration: "underline", textUnderlineOffset: "3px", whiteSpace: "nowrap" }}>
@@ -264,9 +264,11 @@ export default function CongDongOYenPage() {
             <p className="mem-item">được tiếp cận những nội dung mới được mlf bổ sung trong quá trình vận hành cộng đồng</p>
             <p className="mem-item">không phải đóng phí duy trì hoặc gia hạn thành viên hằng năm</p>
           </div>
-          <a className="cta-solid" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
-            tham gia ở-yên
-          </a>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <a className="cta-btn" href="https://forms.gle/uPn47wFfNREZU2FFA" target="_blank" rel="noopener">
+              tham gia ở-yên
+            </a>
+          </div>
           <p style={{ margin: "1.2rem 0 0", textAlign: "center", fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-stone)" }}>
             đã là thành viên?{" "}
             <a href="https://oyen.moclittlefarm.com/dang-nhap/" target="_blank" rel="noopener" style={{ color: "var(--color-ink)", textDecoration: "underline", textUnderlineOffset: "3px", whiteSpace: "nowrap" }}>

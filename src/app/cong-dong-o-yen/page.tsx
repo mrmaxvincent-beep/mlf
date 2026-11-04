@@ -266,7 +266,7 @@ export default function CongDongOYenPage() {
 
         <div style={{ marginTop: "1.6rem" }}>
           <Disclosure
-            trigger={<span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>{membershipTermsTitle}</span>}
+            trigger={<span className="eyebrow" style={{ marginBottom: 0 }}>{membershipTermsTitle}</span>}
           >
             {membershipTerms.map((para, k) => {
               const head = para.startsWith("**") && para.endsWith("**");

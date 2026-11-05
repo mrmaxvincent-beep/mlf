@@ -27,6 +27,9 @@ export default function CongDongOYenPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.2, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           một tổ ấm tinh thần
         </h1>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.12em", color: "var(--color-stone)", margin: "0 0 0.5rem" }}>
+          cộng đồng ở-yên được tạo ra từ 29.09.2025
+        </p>
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>

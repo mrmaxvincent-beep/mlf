@@ -3949,7 +3949,7 @@ details[open] > summary .acc-icon {
 /* ── mlf journal: in chung, bộ đếm trực tiếp + form đặt in ── */
 .jo-counter { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.35rem; padding: 1.8rem 1.4rem; border: 1px solid var(--color-mist); background: #fff; }
 .jo-live { display: inline-flex; align-items: center; gap: 0.45rem; font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-stone); }
-.jo-live i { width: 6px; height: 6px; border-radius: 50%; background: var(--color-cham-dem); animation: jo-pulse 1.8s ease-in-out infinite; }
+.jo-live i { width: 7px; height: 7px; border-radius: 50%; background: #2fb36a; box-shadow: 0 0 0 3px rgba(47, 179, 106, 0.18); animation: jo-pulse 1.8s ease-in-out infinite; }
 .jo-num { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(4rem, 14vw, 6rem); line-height: 1; color: var(--color-ink); margin-top: 0.4rem; }
 .jo-cap { font-family: var(--font-sans); font-size: 0.95rem; color: var(--color-ink); }
 .jo-bar { position: relative; width: min(100%, 22rem); height: 4px; margin: 1.2rem 0 0.6rem; border-radius: 999px; background: var(--color-mist); }

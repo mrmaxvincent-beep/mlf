@@ -185,7 +185,11 @@ export default function InChungPage() {
                   <b>{r.price}</b>
                 </div>
               ))}
-              <p>Giá đã bao gồm 8% VAT, chưa gồm phí vận chuyển.</p>
+              <div className="ic-price-extra">
+                <span>Chi phí đóng gói</span>
+                <b>10.000đ</b>
+              </div>
+              <p>Giá đã bao gồm 8% VAT, chưa gồm chi phí đóng gói và phí vận chuyển.</p>
             </div>
           </div>
         </div>

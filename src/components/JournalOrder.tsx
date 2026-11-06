@@ -184,7 +184,7 @@ export function JournalOrderForm() {
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
 
       <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-stone)", margin: 0 }}>
-        Thông tin của bạn chỉ dùng để gửi tạp chí và liên hệ về đơn in này. Chi phí đóng gói 10.000đ; phí vận chuyển bạn thanh toán khi nhận hàng.
+        Thông tin của bạn chỉ dùng để gửi tạp chí và liên hệ về đơn in này. Chi phí đóng gói (hộp giấy) 5.000đ/quyển; phí vận chuyển bạn thanh toán khi nhận hàng.
       </p>
       <div>
         <button type="submit" disabled={state === "sending"} className="cta-btn" style={{ cursor: "pointer" }}>

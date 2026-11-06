@@ -35,17 +35,9 @@ const specs = [
   "Phát hành: Bản in giới hạn theo số lượng đặt trước.",
 ];
 
-const steps = [
-  "Điền thông tin nhận sách và số lượng.",
-  "Thanh toán chi phí in theo hướng dẫn.",
-  "mlf tổng hợp số lượng và tiến hành đặt in.",
-  "Tạp chí được gửi đến địa chỉ của bạn trước ngày 29 Tết.",
-];
-
 const nav = [
   { id: "loi-moi", label: "lời mời" },
   { id: "thong-tin", label: "ấn phẩm & chi phí" },
-  { id: "cach-dat", label: "cách đặt" },
   { id: "dat-in", label: "đặt in" },
 ];
 
@@ -210,25 +202,10 @@ export default function InChungPage() {
         </div>
       </Reveal>
 
-      {/* 03 CÁCH ĐẶT */}
-      <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
-        <div id="cach-dat" />
-        <SecHead n="03" title="cách đặt tạp chí" />
-        <div className="ic-steps">
-          {steps.map((t, i) => (
-            <div key={t}>
-              <span>0{i + 1}</span>
-              <p>{t}</p>
-            </div>
-          ))}
-        </div>
-        <p style={{ ...small, margin: "1.2rem 0 0" }}>Phí vận chuyển sẽ do bạn thanh toán khi nhận hàng.</p>
-      </Reveal>
-
-      {/* 04 ĐẶT IN */}
+      {/* 03 ĐẶT IN */}
       <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
         <div id="dat-in" />
-        <SecHead n="04" title="đặt in mlf journal" />
+        <SecHead n="03" title="đặt in mlf journal" />
         <div className="ic-order">
           <div>
             <JournalLiveCounter tiers={tiers} />

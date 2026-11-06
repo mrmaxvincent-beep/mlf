@@ -75,18 +75,19 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
           <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 6vw, 3.6rem)", lineHeight: 1.05, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>{issue.title}</h2>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.65, color: "var(--color-ink)", maxWidth: "34ch", margin: "0 0 2rem" }}>{issue.pullQuote}</p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a
-              className="cta-btn cta-btn--solid"
-              href={issue.published ? issue.ebookHref : undefined}
-              aria-disabled={!issue.published}
-              target={issue.published ? "_blank" : undefined}
-              rel={issue.published ? "noopener noreferrer" : undefined}
-              onClick={() => issue.published && trackEvent("journal_download", { issue: issue.num, link_url: issue.ebookHref })}
-            >
-              {issue.published ? "tải ebook" : "sắp ra mắt"}
-            </a>
+            {issue.published && (
+              <a
+                className="cta-btn cta-btn--solid"
+                href={issue.ebookHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("journal_download", { issue: issue.num, link_url: issue.ebookHref })}
+              >
+                tải ebook
+              </a>
+            )}
             {!issue.published && (
-              <Link className="cta-btn" href={routes.journalInChung}>
+              <Link className="cta-btn cta-btn--solid" href={routes.journalInChung}>
                 đăng ký in chung
               </Link>
             )}

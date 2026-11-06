@@ -35,7 +35,6 @@ const specs = [
 ];
 
 const steps = [
-  "Chọn quyển tạp chí bạn muốn đặt.",
   "Điền thông tin nhận sách và số lượng.",
   "Thanh toán chi phí in theo hướng dẫn.",
   "mlf tổng hợp số lượng và tiến hành đặt in.",

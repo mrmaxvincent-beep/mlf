@@ -3,11 +3,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal, RevealStagger } from "@/components/Reveal";
+import Link from "next/link";
 import { JournalIssue } from "@/components/JournalIssue";
 import { ExpandableContent } from "@/components/ExpandableContent";
 import { RevealEmailButton } from "@/components/RevealEmailButton";
 import { JournalThanks } from "@/components/JournalThanks";
 import { issues, defaultIssueIndex, columns } from "@/data/journal";
+import { routes } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "mlf journal",
@@ -24,6 +26,12 @@ export default function JournalPage() {
       </div>
 
       <JournalIssue issues={issues} defaultIndex={defaultIssueIndex} />
+
+      <div className="wrap" style={{ marginTop: "2.5rem", display: "flex", justifyContent: "center" }}>
+        <Link className="cta-btn" href={routes.journalInChung}>
+          đăng ký in chung <span className="ar">→</span>
+        </Link>
+      </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "4rem", maxWidth: "60ch" }}>
         <span className="folio" style={{ display: "block", marginBottom: "1.25rem" }}>

@@ -3978,7 +3978,8 @@ details[open] > summary .acc-icon {
 .ic-cols--top { align-items: start; }
 .ic-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; margin-top: 2rem; }
 .ic-card { border: 1px solid var(--color-mist); background: #fff; padding: 1.4rem; border-radius: 2px; }
-.ic-card--on { border-color: var(--color-ink); }
+.ic-card--on { border-color: var(--color-cham-dem); background: var(--color-cham-dem); }
+.ic-card--on .ic-card-t, .ic-card--on p { color: #fff !important; }
 .ic-card-t { display: block; font-family: var(--font-serif); font-style: italic; font-size: 1.35rem; color: var(--color-ink); margin-bottom: 0.6rem; }
 .ic-sub { display: block; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-stone); margin-bottom: 1rem; }
 .ic-price { border: 1px solid var(--color-mist); background: #fff; }

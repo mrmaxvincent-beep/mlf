@@ -217,22 +217,23 @@ export default function InChungPage() {
       </Reveal>
 
       {/* MỘT LỜI NHỎ */}
-      <Reveal className="wrap" style={{ maxWidth: "46rem", marginBottom: "6rem" }}>
-        <Disclosure trigger={trig("một lời nhỏ")}>
-          <p style={small}>Chúng tôi không biết có bao nhiêu người muốn cầm mlf journal trên tay. Có thể là vài chục, vài trăm, hoặc nhiều hơn thế.</p>
-          <p style={small}>
-            Nhưng dù số lượng là bao nhiêu, chúng tôi vẫn muốn thử thực hiện điều này, để những trang viết được làm ra bằng sự góp sức của nhiều người có thể đến với nhiều ngôi nhà hơn.
-          </p>
-          <p style={small}>
-            Nếu bạn cũng thích đọc sách giấy, muốn lưu giữ một quyển mlf journal trên kệ sách của mình, hãy cùng chúng tôi đặt in nhé.
-          </p>
-          <p style={small}>
-            Và nếu bạn không có nhu cầu sở hữu bản in, ebook vẫn sẽ được phát hành miễn phí vào ngày 29 Tết như mọi năm.
-          </p>
-          <p style={{ ...small, marginBottom: "1.6rem" }}>Cảm ơn bạn đã đọc, đã thương và đã cùng mlf nuôi dưỡng những điều nhỏ bé này.</p>
-          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.2rem" }}>mộc little farm</p>
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", margin: 0 }}>một quyển tạp chí, nhiều tấm lòng.</p>
-        </Disclosure>
+      <Reveal className="wrap" style={{ maxWidth: "42rem", marginTop: "4.5rem", marginBottom: "6rem" }}>
+        <div className="ic-head">
+          <span className="folio">một lời nhỏ</span>
+        </div>
+        <p style={small}>Chúng tôi không biết có bao nhiêu người muốn cầm mlf journal trên tay. Có thể là vài chục, vài trăm, hoặc nhiều hơn thế.</p>
+        <p style={small}>
+          Nhưng dù số lượng là bao nhiêu, chúng tôi vẫn muốn thử thực hiện điều này, để những trang viết được làm ra bằng sự góp sức của nhiều người có thể đến với nhiều ngôi nhà hơn.
+        </p>
+        <p style={small}>
+          Nếu bạn cũng thích đọc sách giấy, muốn lưu giữ một quyển mlf journal trên kệ sách của mình, hãy cùng chúng tôi đặt in nhé.
+        </p>
+        <p style={small}>
+          Và nếu bạn không có nhu cầu sở hữu bản in, ebook vẫn sẽ được phát hành miễn phí vào ngày 29 Tết như mọi năm.
+        </p>
+        <p style={{ ...small, marginBottom: "1.6rem" }}>Cảm ơn bạn đã đọc, đã thương và đã cùng mlf nuôi dưỡng những điều nhỏ bé này.</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.2rem" }}>mộc little farm</p>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", margin: 0 }}>một quyển tạp chí, nhiều tấm lòng.</p>
         <div style={{ marginTop: "2.2rem" }}>
           <Link className="mono-link" href={routes.journal} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
             ← về mlf journal

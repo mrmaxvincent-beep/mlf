@@ -200,7 +200,7 @@ export default function InChungPage() {
                 <span>Chi phí đóng gói (túi chống sốc)</span>
                 <b>5.000đ / quyển</b>
               </div>
-              <p>Giá đã bao gồm 8% VAT, chưa gồm chi phí đóng gói và phí vận chuyển.</p>
+              <p>Giá đã bao gồm 8% VAT, chưa gồm chi phí đóng gói. Chi phí đóng gói được cộng vào phí in; phí vận chuyển thanh toán khi nhận hàng.</p>
             </div>
             <p style={{ ...small, marginTop: "0.9rem", marginBottom: 0 }}>
               <a

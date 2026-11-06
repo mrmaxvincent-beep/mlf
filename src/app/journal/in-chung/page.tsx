@@ -30,6 +30,7 @@ const specs = [
   "Bìa: couche 300, in 2 mặt, cán mờ 1 mặt.",
   "Ruột: kraft 120gsm, in 2 mặt.",
   "Đóng cuốn may chỉ, keo gáy.",
+  "Hình thức: Tạp chí in màu.",
   "Phát hành: Bản in giới hạn theo số lượng đặt trước.",
 ];
 

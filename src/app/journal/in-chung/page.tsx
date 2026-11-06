@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
+import { Disclosure } from "@/components/Disclosure";
 import { routes } from "@/lib/nav";
 import { JournalLiveCounter, JournalOrderForm } from "@/components/JournalOrder";
 
@@ -41,179 +42,221 @@ const steps = [
   "Tạp chí được gửi đến địa chỉ của bạn trước ngày 29 Tết.",
 ];
 
+const nav = [
+  { id: "loi-moi", label: "lời mời" },
+  { id: "thong-tin", label: "ấn phẩm & chi phí" },
+  { id: "cach-dat", label: "cách đặt" },
+  { id: "dat-in", label: "đặt in" },
+];
+
 const body: React.CSSProperties = {
   fontFamily: "var(--font-sans)",
-  fontSize: "1.05rem",
-  lineHeight: 1.9,
+  fontSize: "1.02rem",
+  lineHeight: 1.85,
   color: "var(--color-ink)",
-  margin: "0 0 1.25rem",
+  margin: "0 0 1.1rem",
 };
 
-const sectionLabel: React.CSSProperties = { display: "block", marginBottom: "1.25rem" };
+const small: React.CSSProperties = { ...body, fontSize: "0.92rem", lineHeight: 1.8 };
+
+/** Tiêu đề phần: số thứ tự + tên, giúp người đọc biết mình đang ở đâu. */
+function SecHead({ n, title }: { n: string; title: string }) {
+  return (
+    <div className="ic-head">
+      <span className="ic-n">{n}</span>
+      <span className="folio">{title}</span>
+    </div>
+  );
+}
+
+const trig = (t: string) => <span className="eyebrow" style={{ marginBottom: 0 }}>{t}</span>;
 
 export default function InChungPage() {
   return (
     <>
       <Header />
 
-      <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "0.5rem" }}>
+      {/* ĐẦU TRANG: tiêu đề, con số trực tiếp, nút đặt in */}
+      <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "0.5rem", maxWidth: "60rem" }}>
         <Breadcrumb trail={[{ label: "mlf journal", href: routes.journal }, { label: "đăng ký in chung" }]} />
-        <span className="folio" style={sectionLabel}>cùng in mlf journal</span>
-        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.1rem, 6vw, 3.2rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.2rem" }}>
+        <span className="folio" style={{ display: "block", marginBottom: "1rem" }}>cùng in mlf journal</span>
+        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2rem, 5.4vw, 3rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 2rem", maxWidth: "24ch" }}>
           một quyển tạp chí ở-yên, được in bằng sự góp sức của nhiều người
         </h1>
-      </div>
-
-      <div className="wrap" style={{ marginTop: "1rem", maxWidth: "60ch" }}>
-        <JournalLiveCounter tiers={tiers} />
-        <div style={{ textAlign: "center", marginTop: "1.4rem" }}>
-          <a className="cta-btn" href="#dat-in">
-            đặt in mlf journal <span className="ar">→</span>
-          </a>
+        <div className="ic-hero">
+          <JournalLiveCounter tiers={tiers} />
+          <div className="ic-facts">
+            <div>
+              <span className="ic-k">ấn phẩm</span>
+              <span className="ic-v">Quyển 02 – Xanh lại</span>
+            </div>
+            <div>
+              <span className="ic-k">giá từ</span>
+              <span className="ic-v">{tiers[tiers.length - 1].price} / quyển</span>
+            </div>
+            <div>
+              <span className="ic-k">nhận sách</span>
+              <span className="ic-v">trước ngày 29 Tết</span>
+            </div>
+            <a className="cta-btn" href="#dat-in" style={{ alignSelf: "flex-start" }}>
+              đặt in mlf journal <span className="ar">→</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* LỜI MỜI */}
-      <Reveal className="wrap" style={{ marginTop: "2rem", marginBottom: "4.5rem", maxWidth: "60ch" }}>
-        <p className="drop-cap" style={{ ...body, textAlign: "justify" }}>
-          Mọi năm, mlf journal được phát hành dưới dạng ebook để mọi người có thể đọc và lưu giữ những ghi chép về một đời sống ở-yên.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>Năm nay, chúng tôi muốn làm thêm một điều nhỏ: in mlf journal thành một quyển tạp chí giấy.</p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Bởi có lẽ, vẫn có những người thích cảm giác cầm một quyển sách trên tay, thong thả lật từng trang, đọc một bài viết vào buổi sáng hay đặt nó ở một góc nhỏ trong nhà để thỉnh thoảng lại tìm đến.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>Vì vậy, mlf quyết định tổ chức một đợt in chung mlf journal.</p>
-        <p style={{ ...body, textAlign: "justify", margin: 0 }}>
-          Đây không phải là một hoạt động kinh doanh, mà đơn giản là một lời mời dành cho những ai muốn có một bản in của riêng mình, và cùng chúng tôi đưa những trang viết này vào đời sống.
-        </p>
-      </Reveal>
+      {/* MỤC LỤC NHANH */}
+      <nav className="wrap ic-nav" aria-label="các phần của trang" style={{ maxWidth: "60rem" }}>
+        {nav.map((x) => (
+          <a key={x.id} href={`#${x.id}`}>
+            {x.label}
+          </a>
+        ))}
+      </nav>
 
-      {/* VỀ MLF JOURNAL */}
-      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch" }}>
-        <span className="folio" style={sectionLabel}>về mlf journal</span>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>một ghi chép để ở yên.</p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          mlf journal là một ấn phẩm được ươm mầm bởi mộc little farm, ghi chép về những điều bình dị trong đời sống, về con người, thiên nhiên và hành trình trở về với chính mình.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Mỗi số tạp chí là một chủ đề, một hành trình quan sát và suy ngẫm, được góp nhặt từ nhiều góc nhìn và những câu chuyện khác nhau.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Đây là một dự án cộng đồng phi lợi nhuận. Ban biên tập gồm những thành viên mlf và những người bạn cùng nhau cộng tác, viết, biên tập, chụp ảnh và thực hiện ấn phẩm.
-        </p>
-        <p style={{ ...body, textAlign: "justify", margin: 0 }}>
-          Mọi người đều góp sức bằng tình yêu dành cho những trang viết và mong muốn chia sẻ những điều tốt lành.
-        </p>
-      </Reveal>
-
-      {/* LẦN NÀY, CHÚNG TA SẼ CÙNG IN */}
-      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch" }}>
-        <span className="folio" style={sectionLabel}>lần này, chúng ta sẽ cùng in</span>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
-          <div style={{ border: "1px solid var(--color-mist)", background: "#fff", borderRadius: "2px", padding: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-ink)", marginBottom: "0.6rem" }}>Ebook</span>
-            <p style={{ ...body, fontSize: "0.95rem", margin: 0 }}>Phát hành vào ngày 29 Tết. Mọi người có thể đọc miễn phí như mọi năm.</p>
+      {/* 01 LỜI MỜI */}
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+        <div id="loi-moi" />
+        <SecHead n="01" title="lời mời" />
+        <div className="ic-cols">
+          <div>
+            <p className="drop-cap" style={body}>
+              Mọi năm, mlf journal được phát hành dưới dạng ebook để mọi người có thể đọc và lưu giữ những ghi chép về một đời sống ở-yên.
+            </p>
+            <p style={body}>Năm nay, chúng tôi muốn làm thêm một điều nhỏ: in mlf journal thành một quyển tạp chí giấy.</p>
+            <p style={{ ...body, margin: 0 }}>
+              Bởi có lẽ, vẫn có những người thích cảm giác cầm một quyển sách trên tay, thong thả lật từng trang, đọc một bài viết vào buổi sáng hay đặt nó ở một góc nhỏ trong nhà để thỉnh thoảng lại tìm đến.
+            </p>
           </div>
-          <div style={{ border: "1px solid var(--color-ink)", background: "#fff", borderRadius: "2px", padding: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-ink)", marginBottom: "0.6rem" }}>Bản in</span>
-            <p style={{ ...body, fontSize: "0.95rem", margin: 0 }}>
+          <div>
+            <p style={body}>Vì vậy, mlf quyết định tổ chức một đợt in chung mlf journal.</p>
+            <p style={{ ...body, margin: 0 }}>
+              Đây không phải là một hoạt động kinh doanh, mà đơn giản là một lời mời dành cho những ai muốn có một bản in của riêng mình, và cùng chúng tôi đưa những trang viết này vào đời sống.
+            </p>
+          </div>
+        </div>
+
+        <div className="ic-two">
+          <div className="ic-card">
+            <span className="ic-card-t">Ebook</span>
+            <p style={{ ...small, margin: 0 }}>Phát hành vào ngày 29 Tết. Mọi người có thể đọc miễn phí như mọi năm.</p>
+          </div>
+          <div className="ic-card ic-card--on">
+            <span className="ic-card-t">Bản in</span>
+            <p style={{ ...small, margin: 0 }}>
               Được in theo hình thức đặt trước và in chung. Những quyển tạp chí sẽ được gửi đến nhà bạn trước ngày 29 Tết, để bạn có thể đón Tết cùng một ấn phẩm mới.
             </p>
           </div>
         </div>
-        <p style={{ ...body, textAlign: "justify" }}>Chúng tôi chọn cách in chung vì muốn mọi người có thể sở hữu một bản in với chi phí hợp lý nhất.</p>
-        <p style={{ ...body, textAlign: "justify", margin: 0 }}>Số lượng đặt in càng nhiều, đơn giá từ nhà in càng giảm.</p>
-      </Reveal>
+        <p style={{ ...small, margin: "1.4rem 0 0" }}>
+          Chúng tôi chọn cách in chung vì muốn mọi người có thể sở hữu một bản in với chi phí hợp lý nhất. Số lượng đặt in càng nhiều, đơn giá từ nhà in càng giảm.
+        </p>
 
-      {/* THÔNG TIN ẤN PHẨM */}
-      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch" }}>
-        <span className="folio" style={sectionLabel}>thông tin ấn phẩm</span>
-        <div>
-          {specs.map((t) => (
-            <p key={t} className="mem-item" style={{ fontSize: "0.95rem" }}>
-              {t}
+        <div style={{ marginTop: "1.6rem" }}>
+          <Disclosure trigger={trig("về mlf journal")}>
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--color-ink)", margin: "0 0 1rem" }}>một ghi chép để ở yên.</p>
+            <p style={small}>
+              mlf journal là một ấn phẩm được ươm mầm bởi mộc little farm, ghi chép về những điều bình dị trong đời sống, về con người, thiên nhiên và hành trình trở về với chính mình.
             </p>
-          ))}
+            <p style={small}>
+              Mỗi số tạp chí là một chủ đề, một hành trình quan sát và suy ngẫm, được góp nhặt từ nhiều góc nhìn và những câu chuyện khác nhau.
+            </p>
+            <p style={small}>
+              Đây là một dự án cộng đồng phi lợi nhuận. Ban biên tập gồm những thành viên mlf và những người bạn cùng nhau cộng tác, viết, biên tập, chụp ảnh và thực hiện ấn phẩm.
+            </p>
+            <p style={{ ...small, margin: 0 }}>
+              Mọi người đều góp sức bằng tình yêu dành cho những trang viết và mong muốn chia sẻ những điều tốt lành.
+            </p>
+          </Disclosure>
         </div>
       </Reveal>
 
-      {/* CHI PHÍ IN CHUNG */}
-      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch" }}>
-        <span className="folio" style={sectionLabel}>chi phí in chung</span>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Đây là dự án phi lợi nhuận. mlf không có bất kỳ khoản lợi nhuận nào từ hoạt động in chung này.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Chi phí bạn đóng góp chính là chi phí sản xuất tại nhà in, được tính theo số lượng đặt in thực tế.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>Chúng tôi công khai bảng báo giá từ nhà in để mọi người cùng tham khảo.</p>
-
-        {priceRows.length ? (
-          <div style={{ border: "1px solid var(--color-mist)", background: "#fff", margin: "1.5rem 0" }}>
-            {priceRows.map((r, i) => (
-              <div key={r.qty} style={{ display: "flex", justifyContent: "space-between", gap: "1rem", padding: "0.85rem 1.2rem", borderTop: i ? "1px solid var(--color-mist)" : undefined, fontFamily: "var(--font-sans)", fontSize: "0.95rem", color: "var(--color-ink)" }}>
-                <span>{r.qty}</span>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.85rem" }}>{r.price}</span>
-              </div>
+      {/* 02 ẤN PHẨM & CHI PHÍ */}
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+        <div id="thong-tin" />
+        <SecHead n="02" title="ấn phẩm & chi phí" />
+        <div className="ic-cols ic-cols--top">
+          <div>
+            <span className="ic-sub">thông tin ấn phẩm</span>
+            {specs.map((t) => (
+              <p key={t} className="mem-item" style={{ fontSize: "0.95rem" }}>
+                {t}
+              </p>
             ))}
-            <p style={{ margin: 0, padding: "0.7rem 1.2rem", borderTop: "1px solid var(--color-mist)", fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-stone)" }}>
-              Giá đã bao gồm 8% VAT, chưa gồm phí vận chuyển.
-            </p>
           </div>
-        ) : (
-          <div style={{ border: "1px dashed var(--color-mist)", padding: "1.4rem", margin: "1.5rem 0", textAlign: "center", fontFamily: "var(--font-sans)", fontSize: "0.9rem", color: "var(--color-stone)" }}>
-            Bảng báo giá in theo số lượng sẽ được cập nhật tại đây.
+          <div>
+            <span className="ic-sub">báo giá in chung</span>
+            <div className="ic-price">
+              {priceRows.map((r) => (
+                <div key={r.qty}>
+                  <span>{r.qty}</span>
+                  <b>{r.price}</b>
+                </div>
+              ))}
+              <p>Giá đã bao gồm 8% VAT, chưa gồm phí vận chuyển.</p>
+            </div>
           </div>
-        )}
+        </div>
 
-        <p style={{ ...body, textAlign: "justify" }}>Đơn giá cuối cùng sẽ được xác định dựa trên tổng số lượng đặt trước.</p>
-        <p style={{ ...body, textAlign: "justify", margin: 0 }}>
-          Một lưu ý nhỏ: nếu số lượng đặt trước không đạt mức tối thiểu để tiến hành in, chúng tôi sẽ không thực hiện đợt in này.
-        </p>
+        <div style={{ marginTop: "2rem", maxWidth: "46rem" }}>
+          <span className="ic-sub">về chi phí</span>
+          <p style={small}>
+            Đây là dự án phi lợi nhuận. mlf không có bất kỳ khoản lợi nhuận nào từ hoạt động in chung này. Chi phí bạn đóng góp chính là chi phí sản xuất tại nhà in, được tính theo số lượng đặt in thực tế.
+          </p>
+          <p style={small}>Chúng tôi công khai bảng báo giá từ nhà in để mọi người cùng tham khảo. Đơn giá cuối cùng sẽ được xác định dựa trên tổng số lượng đặt trước.</p>
+          <p style={{ ...small, margin: 0 }}>
+            Một lưu ý nhỏ: nếu số lượng đặt trước không đạt mức tối thiểu để tiến hành in, chúng tôi sẽ không thực hiện đợt in này.
+          </p>
+        </div>
       </Reveal>
 
-      {/* CÁCH ĐẶT TẠP CHÍ */}
-      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch" }}>
-        <span className="folio" style={sectionLabel}>cách đặt tạp chí</span>
-        <div style={{ marginBottom: "1.5rem" }}>
+      {/* 03 CÁCH ĐẶT */}
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+        <div id="cach-dat" />
+        <SecHead n="03" title="cách đặt tạp chí" />
+        <div className="ic-steps">
           {steps.map((t, i) => (
-            <div key={t} style={{ display: "flex", gap: "1.2rem", padding: "0.9rem 0", borderTop: "1px solid var(--color-mist)", alignItems: "baseline" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--color-stone)", flex: "none", width: "1.6rem" }}>0{i + 1}</span>
-              <span style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.7, color: "var(--color-ink)" }}>{t}</span>
+            <div key={t}>
+              <span>0{i + 1}</span>
+              <p>{t}</p>
             </div>
           ))}
-          <div style={{ borderTop: "1px solid var(--color-mist)" }} />
         </div>
-        <p style={{ ...body, textAlign: "justify", margin: 0 }}>Phí vận chuyển sẽ do bạn thanh toán khi nhận hàng.</p>
+        <p style={{ ...small, margin: "1.2rem 0 0" }}>Phí vận chuyển sẽ do bạn thanh toán khi nhận hàng.</p>
       </Reveal>
 
-      {/* ĐẶT IN */}
-      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch", scrollMarginTop: "6rem" }}>
-        <div id="dat-in" style={{ scrollMarginTop: "6rem" }} />
-        <span className="folio" style={sectionLabel}>đặt in mlf journal</span>
-        <JournalLiveCounter tiers={tiers} />
-        <div style={{ height: "2rem" }} />
-        <JournalOrderForm />
+      {/* 04 ĐẶT IN */}
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+        <div id="dat-in" />
+        <SecHead n="04" title="đặt in mlf journal" />
+        <div className="ic-order">
+          <div>
+            <JournalLiveCounter tiers={tiers} />
+          </div>
+          <div>
+            <JournalOrderForm />
+          </div>
+        </div>
       </Reveal>
 
       {/* MỘT LỜI NHỎ */}
-      <Reveal className="wrap" style={{ marginBottom: "6rem", maxWidth: "60ch" }}>
-        <span className="folio" style={sectionLabel}>một lời nhỏ</span>
-        <p style={{ ...body, textAlign: "justify" }}>Chúng tôi không biết có bao nhiêu người muốn cầm mlf journal trên tay.</p>
-        <p style={{ ...body, textAlign: "justify" }}>Có thể là vài chục, vài trăm, hoặc nhiều hơn thế.</p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Nhưng dù số lượng là bao nhiêu, chúng tôi vẫn muốn thử thực hiện điều này, để những trang viết được làm ra bằng sự góp sức của nhiều người có thể đến với nhiều ngôi nhà hơn.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Nếu bạn cũng thích đọc sách giấy, muốn lưu giữ một quyển mlf journal trên kệ sách của mình, hãy cùng chúng tôi đặt in nhé.
-        </p>
-        <p style={{ ...body, textAlign: "justify" }}>
-          Và nếu bạn không có nhu cầu sở hữu bản in, ebook vẫn sẽ được phát hành miễn phí vào ngày 29 Tết như mọi năm.
-        </p>
-        <p style={{ ...body, textAlign: "justify", marginBottom: "2rem" }}>Cảm ơn bạn đã đọc, đã thương và đã cùng mlf nuôi dưỡng những điều nhỏ bé này.</p>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", color: "var(--color-ink)", margin: "0 0 0.2rem" }}>mộc little farm</p>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", color: "var(--color-ink)", margin: 0 }}>một quyển tạp chí, nhiều tấm lòng.</p>
-        <div style={{ marginTop: "2.5rem" }}>
+      <Reveal className="wrap" style={{ maxWidth: "46rem", marginBottom: "6rem" }}>
+        <Disclosure trigger={trig("một lời nhỏ")}>
+          <p style={small}>Chúng tôi không biết có bao nhiêu người muốn cầm mlf journal trên tay. Có thể là vài chục, vài trăm, hoặc nhiều hơn thế.</p>
+          <p style={small}>
+            Nhưng dù số lượng là bao nhiêu, chúng tôi vẫn muốn thử thực hiện điều này, để những trang viết được làm ra bằng sự góp sức của nhiều người có thể đến với nhiều ngôi nhà hơn.
+          </p>
+          <p style={small}>
+            Nếu bạn cũng thích đọc sách giấy, muốn lưu giữ một quyển mlf journal trên kệ sách của mình, hãy cùng chúng tôi đặt in nhé.
+          </p>
+          <p style={small}>
+            Và nếu bạn không có nhu cầu sở hữu bản in, ebook vẫn sẽ được phát hành miễn phí vào ngày 29 Tết như mọi năm.
+          </p>
+          <p style={{ ...small, marginBottom: "1.6rem" }}>Cảm ơn bạn đã đọc, đã thương và đã cùng mlf nuôi dưỡng những điều nhỏ bé này.</p>
+          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.2rem" }}>mộc little farm</p>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", margin: 0 }}>một quyển tạp chí, nhiều tấm lòng.</p>
+        </Disclosure>
+        <div style={{ marginTop: "2.2rem" }}>
           <Link className="mono-link" href={routes.journal} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
             ← về mlf journal
           </Link>

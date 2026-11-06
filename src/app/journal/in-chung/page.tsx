@@ -79,9 +79,9 @@ export default function InChungPage() {
       {/* ĐẦU TRANG: tiêu đề, con số trực tiếp, nút đặt in */}
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "0.5rem", maxWidth: "60rem" }}>
         <Breadcrumb trail={[{ label: "mlf journal", href: routes.journal }, { label: "đăng ký in chung" }]} />
-        <span className="folio" style={{ display: "block", marginBottom: "1rem" }}>cùng in mlf journal</span>
-        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2rem, 5.4vw, 3rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 2rem", maxWidth: "24ch" }}>
-          một quyển tạp chí ở-yên, được in bằng sự góp sức của nhiều người
+        <span className="folio" style={{ display: "block", marginBottom: "1rem", textAlign: "center" }}>cùng in mlf journal</span>
+        <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2rem, 5.4vw, 3rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 auto 2.2rem", maxWidth: "26ch", textAlign: "center" }}>
+          một quyển tạp chí được in bằng sự góp sức của nhiều người
         </h1>
         <div className="ic-hero">
           <JournalLiveCounter tiers={tiers} />

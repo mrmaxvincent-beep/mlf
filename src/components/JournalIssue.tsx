@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { routes } from "@/lib/nav";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { JournalCountdown } from "@/components/JournalCountdown";
 import type { Issue } from "@/data/journal";
@@ -83,6 +85,11 @@ export function JournalIssue({ issues, defaultIndex }: { issues: Issue[]; defaul
             >
               {issue.published ? "tải ebook" : "sắp ra mắt"}
             </a>
+            {!issue.published && (
+              <Link className="cta-btn" href={routes.journalInChung}>
+                đăng ký in chung
+              </Link>
+            )}
             {issue.flipbookHref && (
               <a className="cta-btn" href={issue.flipbookHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("journal_flipbook_open", { issue: issue.num })}>
                 xem flipbook

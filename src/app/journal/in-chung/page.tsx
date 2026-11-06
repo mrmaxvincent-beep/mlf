@@ -115,7 +115,7 @@ export default function InChungPage() {
       </nav>
 
       {/* 01 LỜI MỜI */}
-      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
         <div id="loi-moi" />
         <SecHead n="01" title="lời mời" />
         <div className="ic-cols">
@@ -172,7 +172,7 @@ export default function InChungPage() {
       </Reveal>
 
       {/* 02 ẤN PHẨM & CHI PHÍ */}
-      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
         <div id="thong-tin" />
         <SecHead n="02" title="ấn phẩm & chi phí" />
         <div className="ic-cols ic-cols--top">
@@ -211,7 +211,7 @@ export default function InChungPage() {
       </Reveal>
 
       {/* 03 CÁCH ĐẶT */}
-      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
         <div id="cach-dat" />
         <SecHead n="03" title="cách đặt tạp chí" />
         <div className="ic-steps">
@@ -226,7 +226,7 @@ export default function InChungPage() {
       </Reveal>
 
       {/* 04 ĐẶT IN */}
-      <Reveal className="wrap ic-sec" style={{ maxWidth: "60rem", scrollMarginTop: "6rem" }}>
+      <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
         <div id="dat-in" />
         <SecHead n="04" title="đặt in mlf journal" />
         <div className="ic-order">

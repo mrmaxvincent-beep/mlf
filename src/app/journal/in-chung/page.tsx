@@ -15,15 +15,21 @@ export const metadata: Metadata = {
 const ORDER_URL = "";
 const ORDER_MAIL = "mailto:hello@moclittlefarm.com?subject=" + encodeURIComponent("Đặt in mlf journal – quyển 02 Xanh lại");
 
-/** Bảng báo giá in theo số lượng, điền vào đây là trang tự hiện bảng. Ví dụ: { qty: "50 quyển", price: "000.000đ / quyển" } */
-const priceRows: { qty: string; price: string }[] = [];
+/** Báo giá nhà in theo số lượng, đã cộng 8% VAT (giá nhà in: 202.000 / 190.000 / 189.000 / 136.000đ chưa VAT). */
+const priceRows: { qty: string; price: string }[] = [
+  { qty: "100 quyển", price: "218.160đ / quyển" },
+  { qty: "200 quyển", price: "205.200đ / quyển" },
+  { qty: "300 quyển", price: "204.120đ / quyển" },
+  { qty: "500 quyển", price: "146.880đ / quyển" },
+];
 
 const specs = [
   "Quyển 02 – Xanh lại.",
   "Kích thước: A4.",
-  "Giấy ruột: Offset 120gsm.",
-  "Số trang: 180 trang.",
-  "Hình thức: Tạp chí in màu.",
+  "Số trang: 184 trang, gồm bìa.",
+  "Bìa: couche 300, in 2 mặt, cán mờ 1 mặt.",
+  "Ruột: kraft 120gsm, in 2 mặt.",
+  "Đóng cuốn may chỉ, keo gáy.",
   "Phát hành: Bản in giới hạn theo số lượng đặt trước.",
 ];
 
@@ -141,6 +147,9 @@ export default function InChungPage() {
                 <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.85rem" }}>{r.price}</span>
               </div>
             ))}
+            <p style={{ margin: 0, padding: "0.7rem 1.2rem", borderTop: "1px solid var(--color-mist)", fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-stone)" }}>
+              Giá đã bao gồm 8% VAT, chưa gồm phí vận chuyển.
+            </p>
           </div>
         ) : (
           <div style={{ border: "1px dashed var(--color-mist)", padding: "1.4rem", margin: "1.5rem 0", textAlign: "center", fontFamily: "var(--font-sans)", fontSize: "0.9rem", color: "var(--color-stone)" }}>

@@ -202,6 +202,16 @@ export default function InChungPage() {
               </div>
               <p>Giá đã bao gồm 8% VAT, chưa gồm chi phí đóng gói và phí vận chuyển.</p>
             </div>
+            <p style={{ ...small, marginTop: "0.9rem", marginBottom: 0 }}>
+              <a
+                href="https://drive.google.com/drive/folders/13dDSbpOOiVhEekGYA3LWJPJCvD-zsMfG?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--color-ink)", textDecoration: "underline", textUnderlineOffset: "0.2em" }}
+              >
+                xem và tải báo giá gốc từ xưởng in →
+              </a>
+            </p>
           </div>
         </div>
 

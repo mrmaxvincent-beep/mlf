@@ -147,3 +147,27 @@ create policy "public can insert submissions with consent" on vuon_tam_submissio
   for insert with check (consent = true);
 -- Riêng tư: không có policy select — nhà mộc đọc, duyệt và gom vào loài hạt từ Table
 -- Editor theo tuần (mùa đầu vận hành thủ công, đúng như đề xuất ban đầu).
+
+-- 5. journal_orders — đơn đặt in chung mlf journal (trang /journal/in-chung).
+-- Khách chỉ ghi được đơn mới; chỉ tài khoản đăng nhập xem/cập nhật. Tổng số quyển công khai qua journal_order_total().
+create table journal_orders (
+  id uuid primary key default gen_random_uuid(),
+  issue text not null default 'quyen-02',
+  full_name text not null check (char_length(btrim(full_name)) between 2 and 80),
+  phone text not null check (char_length(btrim(phone)) between 8 and 20),
+  email text not null check (char_length(email) between 5 and 120 and position('@' in email) > 1),
+  address text not null check (char_length(btrim(address)) between 8 and 300),
+  quantity integer not null check (quantity between 1 and 50),
+  note text check (char_length(note) <= 500),
+  status text not null default 'moi' check (status in ('moi','da_thanh_toan','huy')),
+  created_at timestamptz not null default now()
+);
+alter table journal_orders enable row level security;
+create policy "public can place journal orders" on journal_orders for insert to anon, authenticated with check (status = 'moi' and issue = 'quyen-02');
+create policy "authenticated can read journal orders" on journal_orders for select to authenticated using (true);
+create policy "authenticated can update journal orders" on journal_orders for update to authenticated using (true) with check (true);
+create or replace function journal_order_total(p_issue text default 'quyen-02') returns bigint language sql security definer set search_path = public stable as $$
+  select coalesce(sum(quantity), 0)::bigint from journal_orders where issue = p_issue and status <> 'huy';
+$$;
+revoke all on function journal_order_total(text) from public;
+grant execute on function journal_order_total(text) to anon, authenticated;

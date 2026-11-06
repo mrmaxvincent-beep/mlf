@@ -5,23 +5,23 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Reveal } from "@/components/Reveal";
 import { routes } from "@/lib/nav";
+import { JournalLiveCounter, JournalOrderForm } from "@/components/JournalOrder";
 
 export const metadata: Metadata = {
   title: "cùng in mlf journal",
   description: "một quyển tạp chí ở-yên, được in bằng sự góp sức của nhiều người. Đăng ký in chung mlf journal quyển 02 – Xanh lại.",
 };
 
-/** Link form đặt in. Để trống thì nút "đặt in" mở email tới mlf (tạm thời). */
-const ORDER_URL = "";
-const ORDER_MAIL = "mailto:hello@moclittlefarm.com?subject=" + encodeURIComponent("Đặt in mlf journal – quyển 02 Xanh lại");
-
-/** Báo giá nhà in theo số lượng, đã cộng 8% VAT (giá nhà in: 202.000 / 190.000 / 189.000 / 136.000đ chưa VAT). */
-const priceRows: { qty: string; price: string }[] = [
-  { qty: "100 quyển", price: "218.160đ / quyển" },
-  { qty: "200 quyển", price: "205.200đ / quyển" },
-  { qty: "300 quyển", price: "204.120đ / quyển" },
-  { qty: "500 quyển", price: "146.880đ / quyển" },
+/** Báo giá nhà in theo số lượng (đơn giá chưa VAT). Giá hiển thị cho khách = giá nhà in + 8% VAT. */
+const quote: [number, number][] = [
+  [100, 202000],
+  [200, 190000],
+  [300, 189000],
+  [500, 136000],
 ];
+const vnd = (n: number) => n.toLocaleString("vi-VN").replace(/,/g, ".") + "đ";
+const tiers = quote.map(([qty, p]) => ({ qty, price: vnd(Math.round(p * 1.08)) }));
+const priceRows = tiers.map((t) => ({ qty: `${t.qty} quyển`, price: `${t.price} / quyển` }));
 
 const specs = [
   "Quyển 02 – Xanh lại.",
@@ -62,6 +62,15 @@ export default function InChungPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.1rem, 6vw, 3.2rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: "0 0 1.2rem" }}>
           một quyển tạp chí ở-yên, được in bằng sự góp sức của nhiều người
         </h1>
+      </div>
+
+      <div className="wrap" style={{ marginTop: "1rem", maxWidth: "60ch" }}>
+        <JournalLiveCounter tiers={tiers} />
+        <div style={{ textAlign: "center", marginTop: "1.4rem" }}>
+          <a className="cta-btn" href="#dat-in">
+            đặt in mlf journal <span className="ar">→</span>
+          </a>
+        </div>
       </div>
 
       {/* LỜI MỜI */}
@@ -175,12 +184,16 @@ export default function InChungPage() {
           ))}
           <div style={{ borderTop: "1px solid var(--color-mist)" }} />
         </div>
-        <p style={{ ...body, textAlign: "justify" }}>Phí vận chuyển sẽ do bạn thanh toán khi nhận hàng.</p>
-        <div style={{ textAlign: "center", marginTop: "2rem" }}>
-          <a className="cta-btn" href={ORDER_URL || ORDER_MAIL} {...(ORDER_URL ? { target: "_blank", rel: "noopener" } : {})}>
-            đặt in mlf journal <span className="ar">→</span>
-          </a>
-        </div>
+        <p style={{ ...body, textAlign: "justify", margin: 0 }}>Phí vận chuyển sẽ do bạn thanh toán khi nhận hàng.</p>
+      </Reveal>
+
+      {/* ĐẶT IN */}
+      <Reveal className="wrap" style={{ marginBottom: "4.5rem", maxWidth: "60ch", scrollMarginTop: "6rem" }}>
+        <div id="dat-in" style={{ scrollMarginTop: "6rem" }} />
+        <span className="folio" style={sectionLabel}>đặt in mlf journal</span>
+        <JournalLiveCounter tiers={tiers} />
+        <div style={{ height: "2rem" }} />
+        <JournalOrderForm />
       </Reveal>
 
       {/* MỘT LỜI NHỎ */}

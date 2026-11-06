@@ -35,6 +35,13 @@ const specs = [
   "Phát hành: Bản in giới hạn theo số lượng đặt trước.",
 ];
 
+const flow = [
+  { when: "đến 01.01.2027", text: "Bạn đăng ký số lượng muốn đặt. Lúc này chưa cần thanh toán." },
+  { when: "02.01.2027", text: "mlf xác định việc có in hay không, và nếu có thì đơn giá cuối là bao nhiêu." },
+  { when: "sau đó", text: "Bạn thanh toán 100% chi phí." },
+  { when: "khi nhận hàng", text: "Chi phí vận chuyển thanh toán khi nhận hàng." },
+];
+
 const nav = [
   { id: "loi-moi", label: "lời mời" },
   { id: "thong-tin", label: "ấn phẩm & chi phí" },
@@ -214,6 +221,14 @@ export default function InChungPage() {
       <Reveal className="wrap ic-sec" style={{ maxWidth: "42rem", scrollMarginTop: "6rem" }}>
         <div id="dat-in" />
         <SecHead n="03" title="đặt in mlf journal" />
+        <ol className="ic-flow" aria-label="quy trình đặt in">
+          {flow.map((f) => (
+            <li key={f.when}>
+              <span>{f.when}</span>
+              <p>{f.text}</p>
+            </li>
+          ))}
+        </ol>
         <div className="ic-order">
           <div>
             <JournalLiveCounter tiers={tiers} />

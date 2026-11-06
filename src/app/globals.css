@@ -4000,3 +4000,10 @@ details[open] > summary .acc-icon {
   .ic-cols { gap: 0; }
   .ic-sec { margin-top: 3.4rem; }
 }
+.ic-flow { list-style: none; margin: 0 0 2rem; padding: 0; position: relative; }
+.ic-flow li { position: relative; padding: 0 0 1.4rem 1.7rem; border-left: 1px solid var(--color-mist); margin-left: 0.35rem; }
+.ic-flow li:last-child { padding-bottom: 0; border-left-color: transparent; }
+.ic-flow li::before { content: ""; position: absolute; left: -0.36rem; top: 0.25rem; width: 0.7rem; height: 0.7rem; border-radius: 50%; background: #fff; border: 1px solid var(--color-cham-dem); }
+.ic-flow li:nth-child(2)::before { background: var(--color-cham-dem); }
+.ic-flow span { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-cham-dem); margin-bottom: 0.3rem; }
+.ic-flow p { margin: 0; font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; color: var(--color-ink); }

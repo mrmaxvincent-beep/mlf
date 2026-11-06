@@ -158,7 +158,7 @@ export function JournalOrderForm() {
           cảm ơn bạn đã đặt in.
         </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.98rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
-          mlf đã nhận đơn của bạn. Khi tổng hợp xong số lượng và đơn giá cuối, mlf sẽ liên hệ qua email và số điện thoại bạn để lại để gửi hướng dẫn thanh toán.
+          mlf đã nhận đơn của bạn. Ngày 02.01.2027, mlf sẽ xác định việc có in hay không và đơn giá cuối. Lúc đó mlf sẽ liên hệ qua email và số điện thoại bạn để lại để gửi hướng dẫn thanh toán 100% chi phí. Chi phí vận chuyển bạn thanh toán khi nhận hàng.
         </p>
       </div>
     );
@@ -201,7 +201,7 @@ export function JournalOrderForm() {
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
 
       <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-stone)", margin: 0 }}>
-        Thông tin của bạn chỉ dùng để gửi tạp chí và liên hệ về đơn in này. Chi phí đóng gói (hộp giấy) 5.000đ/quyển; phí vận chuyển bạn thanh toán khi nhận hàng.
+        Đăng ký lúc này chưa cần thanh toán. Thông tin của bạn chỉ dùng để gửi tạp chí và liên hệ về đơn in này. Chi phí đóng gói (hộp giấy) 5.000đ/quyển; phí vận chuyển bạn thanh toán khi nhận hàng.
       </p>
       <div>
         <button type="submit" disabled={state === "sending"} className="cta-btn" style={{ cursor: "pointer" }}>

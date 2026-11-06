@@ -13,6 +13,17 @@ export type Issue = {
 
 export const issues: Issue[] = [
   {
+    num: "02",
+    label: "quyển 02",
+    folioNum: "QUYỂN 02",
+    title: "xanh lại",
+    pullQuote: "gieo lại những mầm xanh bên trong mỗi người",
+    coverPlaceholder: "ảnh bìa · quyển 02 — xanh lại",
+    coverImageSrc: "/assets/mlfjournal_demo0.webp",
+    ebookHref: "https://www.moclittlefarm.com/ấn-phẩm/mlf-journal/mlf-journal-02",
+    published: false,
+  },
+  {
     num: "01",
     label: "quyển 01",
     folioNum: "số 01 · quyển 01",
@@ -23,17 +34,6 @@ export const issues: Issue[] = [
     ebookHref: "https://drive.google.com/drive/folders/1ylKJak4PLy9dOmXDKED8WWnhsdPUEGeX?usp=sharing",
     flipbookHref: "/journal/flipbook-01.html",
     published: true,
-  },
-  {
-    num: "02",
-    label: "quyển 02",
-    folioNum: "QUYỂN 02",
-    title: "xanh lại",
-    pullQuote: "gieo lại những mầm xanh bên trong mỗi người",
-    coverPlaceholder: "ảnh bìa · quyển 02 — xanh lại",
-    coverImageSrc: "/assets/mlfjournal_demo0.webp",
-    ebookHref: "https://www.moclittlefarm.com/ấn-phẩm/mlf-journal/mlf-journal-02",
-    published: false,
   },
 ];
 

@@ -87,6 +87,10 @@ export default function InChungPage() {
               <span className="ic-v">{tiers[tiers.length - 1].price} / quyển</span>
             </div>
             <div>
+              <span className="ic-k">hạn chót đăng ký</span>
+              <span className="ic-v">01.01.2027</span>
+            </div>
+            <div>
               <span className="ic-k">nhận sách</span>
               <span className="ic-v">trước ngày 29 Tết</span>
             </div>
@@ -215,6 +219,9 @@ export default function InChungPage() {
             <JournalLiveCounter tiers={tiers} />
           </div>
           <div>
+            <p style={{ ...small, margin: "0 0 1.4rem" }}>
+              Hạn chót đăng ký: <b style={{ fontWeight: 600 }}>01.01.2027</b>.
+            </p>
             <JournalOrderForm />
           </div>
         </div>

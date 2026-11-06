@@ -93,12 +93,19 @@ const labelStyle: React.CSSProperties = {
   marginBottom: "0.4rem",
 };
 
+/** Hết ngày 01.01.2027 (giờ Việt Nam) thì ngừng nhận đơn trên form. */
+const CLOSES_AT = new Date("2027-01-02T00:00:00+07:00").getTime();
+
 const FALLBACK_MAIL = "mailto:hello@moclittlefarm.com?subject=" + encodeURIComponent("Đặt in mlf journal – quyển 02 Xanh lại");
 
 /** Form đặt in: lưu đơn vào Supabase (khách chỉ ghi được, không đọc được đơn nào). */
 export function JournalOrderForm() {
   const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [qty, setQty] = useState(1);
+  const [closed, setClosed] = useState(false);
+  useEffect(() => {
+    setClosed(Date.now() >= CLOSES_AT);
+  }, []);
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -131,6 +138,16 @@ export function JournalOrderForm() {
         </a>{" "}
         để đặt in.
       </p>
+    );
+  }
+
+  if (closed) {
+    return (
+      <div style={{ border: "1px solid var(--color-mist)", background: "#fff", padding: "1.8rem 1.4rem", textAlign: "center" }}>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
+          Đợt đăng ký in chung đã kết thúc vào ngày 01.01.2027. Cảm ơn bạn đã quan tâm đến mlf journal.
+        </p>
+      </div>
     );
   }
 

@@ -61,13 +61,13 @@ export const faqs = [
 ];
 
 /** Sáu tab của web app ở-yên (thứ tự như thanh điều hướng trong app). Thêm `shot: "/assets/..."` để thay khung minh hoạ bằng ảnh chụp thật. */
-export const webAppTabs: { name: string; line: string; desc: string; shot?: string }[] = [
-  { name: "hiên nhà", line: "tôi bước vào.", desc: "Hít vào, thở ra cùng một vòng tròn, rồi chọn xem hôm nay trong bạn thế nào: lặng, rối, mỏi hay đầy.", shot: "/assets/appoyen1.jpg" },
-  { name: "lắng", line: "tôi dừng lại.", desc: "Lắng lại bằng hơi thở và thân thể: nhìn vòng tròn thở theo, hoặc cất điện thoại đi. Màn hình ở lại với bạn suốt buổi.", shot: "/assets/appoyen2.jpg" },
-  { name: "đọc", line: "tôi lắng nghe.", desc: "Bốn không gian: sống, cơ thể, nội tâm, kết nối. Hơn 200 bài, đọc theo cách bạn muốn: mới, thong thả, ngẫm lâu hay đánh thức.", shot: "/assets/appoyen3.jpg" },
-  { name: "viết", line: "tôi nhìn lại.", desc: "Viết cho chính mình, chỉ mình bạn đọc. Giữ lại những đoạn tâm đắc và những điều đã viết.", shot: "/assets/appoyen4.jpg" },
-  { name: "trà", line: "tôi thưởng thức.", desc: "Một chén trà cho mình: năm bước chậm, khoảng 5 phút. Đun nước, tráng chén, cho trà, đợi, rồi uống.", shot: "/assets/appoyen5.jpg" },
-  { name: "gặp", line: "tôi kết nối.", desc: "Gặp nhau bên một chén trà: meetup ở-yên hai tháng một lần (online), và các dịp gặp khác như clari-tea 1-1.", shot: "/assets/appoyen6.jpg" },
+export const webAppTabs: { name: string; line: string; desc: string; shots?: string[] }[] = [
+  { name: "hiên nhà", line: "tôi bước vào.", desc: "Hít vào, thở ra cùng một vòng tròn, rồi chọn xem hôm nay trong bạn thế nào: lặng, rối, mỏi hay đầy.", shots: ["/assets/appoyen01.webp"] },
+  { name: "lắng", line: "tôi dừng lại.", desc: "Lắng lại bằng hơi thở và thân thể: nhìn vòng tròn thở theo, hoặc cất điện thoại đi. Màn hình ở lại với bạn suốt buổi.", shots: ["/assets/appoyen05.webp"] },
+  { name: "đọc", line: "tôi lắng nghe.", desc: "Bốn không gian: sống, cơ thể, nội tâm, kết nối. Hơn 200 bài, đọc theo cách bạn muốn: mới, thong thả, ngẫm lâu hay đánh thức.", shots: ["/assets/appoyen02.webp"] },
+  { name: "viết", line: "tôi nhìn lại.", desc: "Viết cho chính mình, chỉ mình bạn đọc. Giữ lại những đoạn tâm đắc và những điều đã viết.", shots: ["/assets/appoyen04.webp"] },
+  { name: "trà", line: "tôi thưởng thức.", desc: "Một chén trà cho mình: năm bước chậm, khoảng 5 phút. Đun nước, tráng chén, cho trà, đợi, rồi uống.", shots: ["/assets/appoyen03.webp"] },
+  { name: "gặp", line: "tôi kết nối.", desc: "Gặp nhau bên một chén trà: meetup ở-yên hai tháng một lần (online), và các dịp gặp khác như clari-tea 1-1.", shots: ["/assets/appoyen06.webp", "/assets/appoyen10.webp", "/assets/appoyen09.webp", "/assets/appoyen08.webp", "/assets/appoyen07.webp"] },
 ];
 
 /** Điều khoản "Quyền thành viên trọn đời", hiện dạng xổ ra dưới box lifetime membership. Dòng bọc trong ** ** là tiêu đề nhỏ. */

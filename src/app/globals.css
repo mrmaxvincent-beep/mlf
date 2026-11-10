@@ -3910,9 +3910,11 @@ details[open] > summary .acc-icon {
 .oya { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 3rem; align-items: center; max-width: 900px; margin: 0 auto; }
 .oya-phone { position: relative; width: 100%; max-width: 280px; aspect-ratio: 9 / 19; margin: 0 auto; border-radius: 2.4rem; padding: 0.7rem; background: var(--color-ink); box-shadow: 0 28px 60px -24px rgba(0, 0, 0, 0.35); }
 .oya-stage { display: flex; flex-direction: column; align-items: center; gap: 1rem; min-width: 0; }
-.oya-subdots { display: flex; gap: 0.45rem; height: 0.5rem; }
-.oya-subdots i { width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--color-mist); transition: background 0.3s ease, transform 0.3s ease; }
-.oya-subdots i.on { background: var(--color-cham-dem); transform: scale(1.25); }
+.oya-subdots { display: flex; gap: 0.2rem; }
+.oya-subdots button { position: relative; width: 1.6rem; height: 1.6rem; padding: 0; border: 0; background: none; cursor: pointer; }
+.oya-subdots button::after { content: ""; position: absolute; top: 50%; left: 50%; width: 0.5rem; height: 0.5rem; margin: -0.25rem 0 0 -0.25rem; border-radius: 50%; background: var(--color-mist); transition: background 0.3s ease, transform 0.3s ease; }
+.oya-subdots button.on::after { background: var(--color-cham-dem); transform: scale(1.3); }
+.oya-subdots button:focus-visible { outline: 2px solid var(--color-cham-dem); border-radius: 50%; }
 .oya-notch { position: absolute; top: 0.95rem; left: 50%; width: 32%; height: 0.8rem; margin-left: -16%; border-radius: 999px; background: var(--color-ink); z-index: 2; }
 .oya-screen { position: relative; display: flex; flex-direction: column; height: 100%; border-radius: 1.8rem; overflow: hidden; background: #fbfaf6; }
 .oya-top { padding: 1.7rem 0 0.5rem; text-align: center; font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; color: var(--color-stone); }

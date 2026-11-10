@@ -25,11 +25,10 @@ export function OyenAppShowcase({ tabs }: { tabs: AppTab[] }) {
     const reduce = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
     const id = window.setInterval(() => {
-      if (touched.current) return;
       const { i: a, j: b } = cur.current;
       const len = tabs[a].shots?.length ?? 1;
-      if (b + 1 < len) setJ(b + 1);
-      else {
+      if (len > 1 && (touched.current || b + 1 < len)) setJ((b + 1) % len);
+      else if (!touched.current) {
         setI((a + 1) % tabs.length);
         setJ(0);
       }
@@ -43,7 +42,18 @@ export function OyenAppShowcase({ tabs }: { tabs: AppTab[] }) {
   return (
     <div className="oya">
       <div className="oya-stage">
-      <div className="oya-phone" aria-hidden="true">
+      <div
+        className="oya-phone"
+        aria-hidden="true"
+        onClick={() => {
+          const len = t.shots?.length ?? 1;
+          if (len > 1) {
+            touched.current = true;
+            setJ((j + 1) % len);
+          }
+        }}
+        style={(t.shots?.length ?? 0) > 1 ? { cursor: "pointer" } : undefined}
+      >
         <div className="oya-notch" />
         <div className={`oya-screen${shot ? " has-shot" : ""}`}>
           <div className="oya-top">ở-yên</div>
@@ -71,9 +81,20 @@ export function OyenAppShowcase({ tabs }: { tabs: AppTab[] }) {
         </div>
       </div>
       {(t.shots?.length ?? 0) > 1 && (
-        <div className="oya-subdots" aria-hidden="true">
+        <div className="oya-subdots" role="tablist" aria-label={`các màn hình của tab ${t.name}`}>
           {t.shots!.map((_, k) => (
-            <i key={k} className={k === j ? "on" : ""} />
+            <button
+              key={k}
+              type="button"
+              role="tab"
+              aria-selected={k === j}
+              aria-label={`màn hình ${k + 1}`}
+              className={k === j ? "on" : ""}
+              onClick={() => {
+                touched.current = true;
+                setJ(k);
+              }}
+            />
           ))}
         </div>
       )}

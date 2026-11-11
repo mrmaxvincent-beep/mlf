@@ -46,6 +46,18 @@ function report_(ok, err, started) {
 }
 
 // started: thời điểm yêu cầu (chuỗi ISO) khi gọi từ webhook; trigger theo giờ truyền object nên bỏ qua.
+// Cảnh báo (không chặn) khi ai đó sửa tay vùng dữ liệu: mọi chỉnh sửa sẽ bị ghi đè ở lần đồng bộ sau.
+var WARN_DESC = 'mlf os tự đồng bộ';
+function warn_(sh, cols) {
+  sh.getProtections(SpreadsheetApp.ProtectionType.RANGE).forEach(function (p) {
+    if (p.getDescription() === WARN_DESC) p.remove();
+  });
+  var rows = Math.max(sh.getMaxRows() - 1, 1);
+  cols.forEach(function (c) {
+    sh.getRange(2, c[0], rows, c[1]).protect().setDescription(WARN_DESC).setWarningOnly(true);
+  });
+}
+
 function exportAll(started) {
   started = typeof started === 'string' ? started : new Date().toISOString();
   try {
@@ -92,6 +104,7 @@ function exportIncomes() {
     sh.getRange(2, 2, data.length, 1).setNumberFormat('#,##0');
   }
   sh.getRange(1, 9).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
+  warn_(sh, [[1, 7]]);
 }
 
 function exportExpenses() {
@@ -146,6 +159,7 @@ function exportExpenses() {
   }
   sh.setFrozenRows(1);
   sh.getRange(1, 12).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
+  warn_(sh, [[1, 10], [13, 5]]);
 }
 
 function setup() {

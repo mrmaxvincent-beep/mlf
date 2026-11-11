@@ -67,7 +67,7 @@ export function LetterReader({ letters, initialSlug }: { letters: Letter[]; init
         <div ref={headerRef} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1.5rem", marginBottom: "2rem", flexWrap: "wrap" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem" }}>
             <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>Măng Đen, {current.date}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>Măng Đen, {current.date}</span>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ export function LetterReader({ letters, initialSlug }: { letters: Letter[]; init
           {active > 0 ? (
             <button
               onClick={() => selectAndScroll(active - 1)}
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, display: "flex", alignItems: "baseline", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, display: "flex", alignItems: "baseline", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
               ← thư trước
             </button>
@@ -93,7 +93,7 @@ export function LetterReader({ letters, initialSlug }: { letters: Letter[]; init
           {active < letters.length - 1 ? (
             <button
               onClick={() => selectAndScroll(active + 1)}
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, display: "flex", alignItems: "baseline", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, display: "flex", alignItems: "baseline", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
               thư cũ hơn →
             </button>

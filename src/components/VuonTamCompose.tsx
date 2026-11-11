@@ -101,7 +101,7 @@ export function VuonTamCompose() {
           resize: "vertical",
           fontFamily: "var(--font-sans)",
           fontWeight: 300,
-          fontSize: "0.95rem",
+          fontSize: "1rem",
           color: "var(--color-ink)",
           background: "transparent",
           border: "none",
@@ -130,7 +130,7 @@ export function VuonTamCompose() {
             style={{
               flex: "1 1 10rem",
               fontFamily: "var(--font-sans)",
-              fontSize: "0.85rem",
+              fontSize: "1rem",
               color: "var(--color-ink)",
               background: "transparent",
               border: "none",
@@ -153,7 +153,7 @@ export function VuonTamCompose() {
           className="one-day-btn"
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.62rem",
+            fontSize: "0.72rem",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             background: "none",

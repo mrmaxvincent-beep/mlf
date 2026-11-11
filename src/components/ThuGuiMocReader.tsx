@@ -64,12 +64,12 @@ export function ThuGuiMocReader({ entries: unsorted, initialNo }: { entries: Ent
       <div className="lb-content" style={{ opacity: fading ? 0 : 1, transition: "opacity .18s ease" }}>
         <div ref={dateRef} style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.5rem" }}>
           <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>{current.date}</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>{current.date}</span>
         </div>
         <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.5rem, 4vw, 2.1rem)", lineHeight: 1.3, color: "var(--color-ink)", margin: "0 0 0.4rem" }}>
           lời thì thầm của {current.name}
         </h2>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginBottom: "1.75rem" }}>{current.role}</span>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginBottom: "1.75rem" }}>{current.role}</span>
 
         {current.blocks.map((b, i) =>
           b.type === "p" ? (
@@ -87,7 +87,7 @@ export function ThuGuiMocReader({ entries: unsorted, initialNo }: { entries: Ent
           {active > 0 ? (
             <button
               onClick={() => select(active - 1)}
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
               ← thư trước
             </button>
@@ -97,7 +97,7 @@ export function ThuGuiMocReader({ entries: unsorted, initialNo }: { entries: Ent
           {active < entries.length - 1 ? (
             <button
               onClick={() => select(active + 1)}
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
               thư sau →
             </button>

@@ -54,7 +54,7 @@ export function UpcomingEvents({ fallback }: { fallback: Event[] }) {
             borderRight: i < 2 ? "1px solid var(--color-mist)" : "none",
           }}
         >
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", color: "var(--color-stone)", display: "block", marginBottom: "0.75rem" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", color: "var(--color-stone)", display: "block", marginBottom: "0.75rem" }}>
             {u.when}
           </span>
           <span style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.5rem" }}>

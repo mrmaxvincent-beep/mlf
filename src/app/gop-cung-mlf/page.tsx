@@ -41,17 +41,17 @@ export default function UngHoMlfPage() {
         <span className="eyebrow" style={{ color: "var(--color-ink)" }}>01 · mua trước dịch vụ</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           để về Huế, chúng tôi cần khá nhiều nguồn lực để xây dựng lại một nơi mới. bạn có thể góp sức cùng mlf bằng cách mua trước các sản phẩm và dịch vụ của mộc little farm.
         </p>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           số tiền bạn đặt trước sẽ trở thành credit, dùng được cho tất cả chương trình và dịch vụ của chúng tôi trong hiện tại và tương lai. không có thời hạn. và được giảm 20%.
         </p>
         <p style={{ ...proseP, margin: 0 }}>bạn mua trước những gì bạn sẽ dùng, mà từ đó giúp chúng tôi có nguồn lực để xây dựng nên mlf ở Huế.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "0.6rem" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
           các mức tham gia
         </span>
       </div>
@@ -68,7 +68,7 @@ export default function UngHoMlfPage() {
       </RevealStagger>
 
       <div className="wrap" style={{ marginBottom: "0.6rem" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
           credit dùng được cho
         </span>
       </div>
@@ -90,7 +90,7 @@ export default function UngHoMlfPage() {
           tham gia gieo mlf ở Huế <span className="ar">→</span>
         </RegistrationLink>
         <div style={{ marginTop: "1rem" }}>
-          <Link className="go mono-link" href={routes.giua} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="go mono-link tap" href={routes.giua} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             đọc thêm về giữa · Huế <span className="ar">→</span>
           </Link>
         </div>
@@ -108,7 +108,7 @@ export default function UngHoMlfPage() {
       <Reveal className="wrap-wide" style={{ marginBottom: "2.5rem" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }} className="info-grid">
           <div style={{ padding: "1.5rem", border: "1px solid var(--color-mist)" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>
               muốn tài trợ
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
@@ -126,7 +126,7 @@ export default function UngHoMlfPage() {
             </p>
           </div>
           <div style={{ padding: "1.5rem", border: "1px solid var(--color-mist)" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>
               muốn nhận hỗ trợ
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
@@ -144,19 +144,19 @@ export default function UngHoMlfPage() {
           tham khảo thêm các chương trình được trợ duyên
         </span>
         <div style={{ display: "flex", justifyContent: "center", gap: "0.6rem 1rem", flexWrap: "wrap" }}>
-          <Link className="mono-link" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat ở-yên
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.retreatHamDuong} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.retreatHamDuong} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat hàm-dưỡng
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.retreatAnVui} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.retreatAnVui} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat an-vui
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.khaiTam} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.khaiTam} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             khai tâm
           </Link>
         </div>

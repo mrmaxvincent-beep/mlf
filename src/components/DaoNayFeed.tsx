@@ -6,7 +6,7 @@ import { useToday, useTraces } from "@/lib/useTraces";
 
 const monoLabel: React.CSSProperties = {
   fontFamily: "var(--font-mono)",
-  fontSize: "0.62rem",
+  fontSize: "0.72rem",
   letterSpacing: "0.1em",
   color: "var(--color-stone)",
 };

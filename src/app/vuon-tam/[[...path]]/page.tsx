@@ -98,7 +98,7 @@ export default async function VuonTamPage({ params }: { params: Promise<{ path?:
             const list = stories.filter((s) => s.speciesId === sp.id);
             return (
               <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "6rem", maxWidth: "40rem" }}>
-                <Link href={routes.vuonTam} className="mono-link" style={{ display: "block", marginBottom: "1.6rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+                <Link href={routes.vuonTam} className="mono-link" style={{ display: "block", marginBottom: "1.6rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
                   ← về khu vườn
                 </Link>
                 <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", color: "var(--color-ink)", margin: "0 0 2rem" }}>
@@ -138,17 +138,17 @@ export default async function VuonTamPage({ params }: { params: Promise<{ path?:
             return (
               <>
                 <Reveal className="wrap" style={{ marginTop: "3rem", marginBottom: "3.5rem", maxWidth: "40rem" }}>
-                  <Link href={`/vuon-tam/${sp.id}`} className="mono-link" style={{ display: "block", marginBottom: "1.6rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+                  <Link href={`/vuon-tam/${sp.id}`} className="mono-link" style={{ display: "block", marginBottom: "1.6rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
                     ← về {sp.name}
                   </Link>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
                     {sp.name}
                   </span>
                   <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
                     {story.seedName}
                   </h2>
                   <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-stone)", marginBottom: "2rem" }}>— {story.author}</span>
-                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+                  <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
                     {story.body}
                   </p>
                 </Reveal>

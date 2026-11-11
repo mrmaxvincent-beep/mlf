@@ -88,7 +88,7 @@ export default function TrangYenPage() {
           >
             {hero.title}
           </h1>
-          <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.12em", lineHeight: 1.8, color: "var(--color-cham-suong)", margin: "0 0 2.25rem" }}>
+          <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", lineHeight: 1.8, color: "var(--color-cham-suong)", margin: "0 0 2.25rem" }}>
             {hero.sub}
           </p>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1rem, 3vw, 1.45rem)", lineHeight: 1.75, color: "var(--text-on-night)", whiteSpace: "nowrap", margin: 0 }}>
@@ -207,7 +207,7 @@ export default function TrangYenPage() {
                 borderBottom: "1px solid var(--border-night)",
               }}
             >
-              <dt style={{ flex: "none", width: "6.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)" }}>{row.label}</dt>
+              <dt style={{ flex: "none", width: "6.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)" }}>{row.label}</dt>
               <dd style={{ flex: "1 1 14rem", minWidth: 0, margin: 0, fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.75, color: "var(--text-on-night)" }}>{row.value}</dd>
             </div>
           ))}
@@ -230,7 +230,7 @@ export default function TrangYenPage() {
                     borderBottom: "1px solid var(--border-night)",
                   }}
                 >
-                  <span style={{ flex: "none", width: "6.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)" }}>{r.weekday}</span>
+                  <span style={{ flex: "none", width: "6.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-cham-suong)" }}>{r.weekday}</span>
                   <span style={{ flex: "1 1 8rem", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.25rem", color: "var(--text-on-night)" }}>{r.date}</span>
                   <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "var(--color-cham-suong)" }}>{r.lunar} âm lịch</span>
                 </li>

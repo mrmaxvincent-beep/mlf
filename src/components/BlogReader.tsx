@@ -49,7 +49,7 @@ export function BlogReader({ posts, initialSlug }: { posts: Post[]; initialSlug:
       <div className="cv-content" style={{ opacity: fading ? 0 : 1, transition: "opacity .18s ease" }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.5rem" }}>
           <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
             {current.tag} — {current.date}
           </span>
         </div>
@@ -75,7 +75,7 @@ export function BlogReader({ posts, initialSlug }: { posts: Post[]; initialSlug:
           {active > 0 ? (
             <button
               onClick={() => selectPost(active - 1)}
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
               ← bài trước
             </button>
@@ -85,7 +85,7 @@ export function BlogReader({ posts, initialSlug }: { posts: Post[]; initialSlug:
           {active < posts.length - 1 ? (
             <button
               onClick={() => selectPost(active + 1)}
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
             >
               bài sau →
             </button>

@@ -51,7 +51,7 @@ export function KhoLoiNhan({ notesFallback }: { notesFallback: Note[] }) {
         {notes.map((n, i) => (
           <div key={i} style={{ borderTop: i === 0 ? "none" : "1px solid var(--color-mist)", paddingTop: i === 0 ? 0 : "2rem" }}>
             <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", lineHeight: 1.85, color: "var(--color-ink)", display: "block" }}>&ldquo;{n.body}&rdquo;</span>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginTop: "1rem", display: "block" }}>— {n.from}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginTop: "1rem", display: "block" }}>— {n.from}</span>
           </div>
         ))}
       </Reveal>

@@ -124,7 +124,7 @@ export default function TamBietMangDenPage() {
           style={{
             display: "block",
             fontFamily: "var(--font-mono)",
-            fontSize: "0.58rem",
+            fontSize: "0.72rem",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
             color: "var(--color-stone-alt)",
@@ -175,7 +175,7 @@ export default function TamBietMangDenPage() {
                   style={{
                     display: "block",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.58rem",
+                    fontSize: "0.72rem",
                     letterSpacing: "0.38em",
                     textTransform: "uppercase",
                     color: "var(--text-on-night-secondary)",

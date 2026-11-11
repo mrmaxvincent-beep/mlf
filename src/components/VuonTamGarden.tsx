@@ -67,7 +67,7 @@ export function VuonTamGarden({ species, stories }: { species: Species[]; storie
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.15rem", color: "var(--color-ink)", marginBottom: "0.6rem" }}>
               {s.name}
             </span>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-stone)" }}>
               {n > 0 ? `đang nảy trong ${n} người` : "chưa có ai nuôi hạt này"}
             </span>
           </Link>

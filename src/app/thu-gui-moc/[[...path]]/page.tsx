@@ -46,7 +46,7 @@ export default async function ThuGuiMocPage({ params }: { params: Promise<{ path
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           thư-gửi-mộc
         </h1>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>những lời thì thầm gửi tới nhà mộc</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>những lời thì thầm gửi tới nhà mộc</span>
       </div>
 
       {/* MỜI GỬI THƯ — thư nhận qua email (không giới hạn độ dài), được chọn và đăng thủ công vào khung đọc bên dưới */}

@@ -34,7 +34,7 @@ export default function VeMlfPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           mộc little farm
         </h1>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>một hành trình, một cấu trúc</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>một hành trình, một cấu trúc</span>
       </div>
 
       <div className="wrap" style={{ marginTop: "3rem" }}>
@@ -44,7 +44,7 @@ export default function VeMlfPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "5rem", marginBottom: "5rem" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", maxWidth: "60ch", margin: "0 auto 3rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", maxWidth: "60ch", margin: "0 auto 3rem" }}>
           mlf là một khoảng dừng dịu dàng giữa những lao xao, một không gian để mình được hàm dưỡng lại chính mình.
         </p>
         <div style={{ textAlign: "center", maxWidth: "32ch", margin: "0 auto" }}>
@@ -63,7 +63,7 @@ export default function VeMlfPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5.5rem", maxWidth: "60ch" }}>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           chúng tôi tin rằng, có một cách sống giản dị mà không sơ sài, yên mà không buông xuôi, ở giữa đời mà không lạc mất mình. Một cách sống mà mỗi bước chân đều là trở về, mỗi việc làm đều là một nghi lễ nhỏ để gần hơn với chính mình.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>chúng tôi gọi mộc little farm là một nông trại nhỏ, nơi mọi thứ nảy mầm.</p>
@@ -100,7 +100,7 @@ export default function VeMlfPage() {
                   <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2.2rem", lineHeight: 1, color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>{m.year}</span>
                   <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "1.05rem", fontWeight: 700, color: "var(--color-ink)", marginBottom: "0.65rem" }}>{m.title}</span>
                   {m.desc ? (
-                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "52ch" }}>{m.desc}</p>
+                    <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "justify", margin: 0, maxWidth: "52ch" }}>{m.desc}</p>
                   ) : null}
                   {m.tag ? (
                     <span
@@ -111,7 +111,7 @@ export default function VeMlfPage() {
                         border: "1px solid var(--color-cham-dem)",
                         borderRadius: "999px",
                         fontFamily: "var(--font-mono)",
-                        fontSize: "0.58rem",
+                        fontSize: "0.72rem",
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
                         color: "var(--color-cham-dem)",
@@ -138,8 +138,8 @@ export default function VeMlfPage() {
         <span className="eyebrow" style={{ color: "var(--color-ink)" }}>cấu trúc — vì sao có nhiều nhánh?</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "60ch" }}>
-        <p style={proseP}>mlf có một gốc — gọi là ở-yên: một cách sống hiện diện, thong dong, thấy rõ. Và có nhiều cách khác nhau để chạm vào gốc đó, tùy vào nơi bạn đang đứng trong đời sống mình.</p>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>mlf có một gốc — gọi là ở-yên: một cách sống hiện diện, thong dong, thấy rõ. Và có nhiều cách khác nhau để chạm vào gốc đó, tùy vào nơi bạn đang đứng trong đời sống mình.</p>
+        <p className="pj" style={proseP}>
           Trước khi đi vào bất cứ nhánh nào - có{" "}
           <Link href={routes.congDongOYen} style={{ fontFamily: "var(--font-sans)", color: "var(--color-ink)" }}>
             cộng đồng ở-yên
@@ -160,7 +160,7 @@ export default function VeMlfPage() {
             borderRadius: "999px",
             border: "1px solid var(--color-mist)",
             fontFamily: "var(--font-mono)",
-            fontSize: "0.62rem",
+            fontSize: "0.72rem",
             letterSpacing: "0.16em",
             textTransform: "uppercase",
             color: "var(--color-cham-dem)",
@@ -203,7 +203,7 @@ export default function VeMlfPage() {
             </div>
             <div style={{ flex: 1, paddingTop: "0.35rem" }}>
             <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.9rem" }}>{b.name}</span>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem", maxWidth: "56ch" }}>{b.lead}</p>
+            <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem", maxWidth: "56ch" }}>{b.lead}</p>
             {b.programs.map((p) => (
               <div key={p.name}>
                 <Link href={p.href} className="mlf-prog-row">
@@ -211,7 +211,7 @@ export default function VeMlfPage() {
                     <span className="nm" style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1.05rem", color: "var(--color-ink)" }}>
                       {p.name}
                     </span>
-                    {p.place ? <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)" }}>{p.place}</span> : null}
+                    {p.place ? <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-stone)" }}>{p.place}</span> : null}
                     <span className="ar" style={{ color: "var(--color-cham)", fontSize: "0.85rem" }}>
                       →
                     </span>
@@ -243,9 +243,9 @@ export default function VeMlfPage() {
         <div style={{ border: "1px solid var(--color-mist)", borderRadius: "1.2rem", padding: "2.4rem 2.2rem" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1.25rem" }}>
             <span style={{ width: 3, height: 3, borderRadius: "50%", background: "var(--color-stone)", display: "block" }} />
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>một gốc, ba cách trở về</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>một gốc, ba cách trở về</span>
           </div>
-          <p style={proseP}>
+          <p className="pj" style={proseP}>
             Có người chỉ cần đọc vài dòng trong cộng đồng ở-yên. Có người cần dừng lại 5 ngày ở Măng Đen. Có người cần một chuyến đi xa để thấy lại mình. Có người chỉ cần ở lại với cơ thể mình 60 phút mỗi sáng.
           </p>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>

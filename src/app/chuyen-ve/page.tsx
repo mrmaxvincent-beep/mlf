@@ -24,7 +24,7 @@ export default function ChuyenVePage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           chuyện-về
         </h1>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>những cuộc trò chuyện cùng người bạn thân quen của mlf</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>những cuộc trò chuyện cùng người bạn thân quen của mlf</span>
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
@@ -36,7 +36,7 @@ export default function ChuyenVePage() {
       <div className="cv-shell" style={{ marginTop: "3.5rem", marginBottom: "3rem" }}>
         <div />
         <Reveal style={{ maxWidth: "60ch" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
             Mỗi kỳ, mlf ngồi lại cùng một người bạn thân quen - người đã ghé mlf nhiều lần, mang theo một câu chuyện riêng. Chọn một kỳ ở khung bên trái để đọc.
           </p>
           <div id="cv-motif" style={{ textAlign: "center", marginTop: "1.5rem" }}>

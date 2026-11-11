@@ -46,7 +46,7 @@ export function LichKhoa({ items }: { items: Khoa[] }) {
                 textAlign: "right",
                 whiteSpace: "nowrap",
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.58rem",
+                fontSize: "0.72rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 color: st === "sắp tới" || st === "đang diễn ra" ? "var(--color-cham-dem)" : "var(--color-stone)",

@@ -20,6 +20,7 @@ export function ImageCarousel({ images, showCounter = true, showDots = true }: {
   );
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; // không tự chuyển ảnh khi người dùng bật giảm chuyển động
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 4500);
@@ -68,8 +69,8 @@ export function ImageCarousel({ images, showCounter = true, showDots = true }: {
             top: "50%",
             left: "0.8rem",
             transform: "translateY(-50%)",
-            width: "2.2rem",
-            height: "2.2rem",
+            width: "2.75rem",
+            height: "2.75rem",
             borderRadius: "50%",
             border: "1px solid var(--color-mist)",
             background: "var(--color-paper)",
@@ -94,8 +95,8 @@ export function ImageCarousel({ images, showCounter = true, showDots = true }: {
             top: "50%",
             right: "0.8rem",
             transform: "translateY(-50%)",
-            width: "2.2rem",
-            height: "2.2rem",
+            width: "2.75rem",
+            height: "2.75rem",
             borderRadius: "50%",
             border: "1px solid var(--color-mist)",
             background: "var(--color-paper)",
@@ -119,7 +120,7 @@ export function ImageCarousel({ images, showCounter = true, showDots = true }: {
               bottom: "0.8rem",
               right: "0.9rem",
               fontFamily: "var(--font-mono)",
-              fontSize: "0.62rem",
+              fontSize: "0.72rem",
               letterSpacing: "0.06em",
               color: "var(--color-ink)",
               background: "var(--color-paper)",
@@ -142,11 +143,12 @@ export function ImageCarousel({ images, showCounter = true, showDots = true }: {
               aria-label={`xem ${im.label}`}
               onClick={() => goTo(i)}
               style={{
-                width: i === current ? "1.6rem" : "0.4rem",
-                height: "0.4rem",
+                width: i === current ? "2.4rem" : "1.2rem",
+                height: "1.6rem",
                 borderRadius: "999px",
                 border: "none",
-                padding: 0,
+                padding: "0.6rem 0.4rem",
+                backgroundClip: "content-box",
                 cursor: "pointer",
                 background: i === current ? "var(--color-cham-dem)" : "var(--color-mist)",
                 transition: "width 0.3s ease, background 0.3s ease",

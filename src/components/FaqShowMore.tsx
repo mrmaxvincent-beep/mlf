@@ -43,7 +43,7 @@ export function FaqShowMore({ items, initialCount = 6 }: { items: { q: string; a
         <button
           onClick={() => setExpanded(true)}
           className="mono-link faq-show-more"
-          style={{ display: "block", marginTop: "1.4rem", background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", transition: "color 0.2s ease" }}
+          style={{ display: "block", marginTop: "1.4rem", background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", transition: "color 0.2s ease" }}
         >
           xem thêm câu hỏi <span className="ar">→</span>
         </button>

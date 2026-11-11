@@ -21,7 +21,7 @@ export function DayItinerary({ day, first, total }: { day: Day; first?: boolean;
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 6vw, 3.2rem)", lineHeight: 1, color: "var(--color-cham-dem)" }}>
           {day.n}
         </span>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           ngày {day.n}{total ? ` / ${String(total).padStart(2, "0")}` : ""}
         </span>
       </div>

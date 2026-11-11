@@ -66,7 +66,7 @@ export function ScrollExtras() {
         }}
       >
         <span style={{ position: "absolute", inset: 0, borderRadius: 999, border: "1px solid var(--color-mist)" }} />
-        <span style={{ position: "relative", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-ink)" }}>ASK AI</span>
+        <span style={{ position: "relative", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-ink)" }}>ASK AI</span>
       </a>
     </>
   );

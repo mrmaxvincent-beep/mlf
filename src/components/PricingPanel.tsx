@@ -21,7 +21,7 @@ export function PricingPanel({
   return (
     <div className="pricing-panel">
       <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-ink)", marginBottom: "0.3rem" }}>{label}</span>
-      <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginBottom: "1.2rem" }}>{subtitle}</span>
+      <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginBottom: "1.2rem" }}>{subtitle}</span>
       <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-cham-dem)", marginBottom: "1.2rem" }}>{price}</span>
       <div style={{ marginBottom: "1.5rem", flex: 1 }}>
         {items.map((item) => (

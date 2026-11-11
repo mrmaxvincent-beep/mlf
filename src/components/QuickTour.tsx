@@ -89,7 +89,7 @@ export function QuickTour() {
           borderRadius: "999px",
           cursor: "pointer",
           fontFamily: "var(--font-mono)",
-          fontSize: "0.58rem",
+          fontSize: "0.72rem",
           letterSpacing: "0.14em",
           textTransform: "uppercase",
           color: "var(--color-paper-dem)",
@@ -140,7 +140,7 @@ export function QuickTour() {
           đóng ✕
         </button>
 
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1.5rem" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1.5rem" }}>
           quick tour · {slide + 1}/{total}
         </span>
 

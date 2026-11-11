@@ -43,10 +43,10 @@ const proseP: React.CSSProperties = {
 };
 
 const kvRow: React.CSSProperties = { display: "flex", justifyContent: "space-between", gap: "1rem" };
-const kvKey: React.CSSProperties = { fontFamily: "var(--font-mono)", fontSize: "0.66rem", color: "var(--color-stone)", flexShrink: 0 };
+const kvKey: React.CSSProperties = { fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-stone)", flexShrink: 0 };
 const kvVal: React.CSSProperties = { fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-ink)", textAlign: "right" };
-const tagStyle: React.CSSProperties = { fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-stone)", border: "1px solid var(--color-mist)", padding: "0.3rem 0.6rem", borderRadius: 2 };
-const subLabel: React.CSSProperties = { display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" };
+const tagStyle: React.CSSProperties = { fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-stone)", border: "1px solid var(--color-mist)", padding: "0.3rem 0.6rem", borderRadius: 2 };
+const subLabel: React.CSSProperties = { display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" };
 
 export default function SoTayKhachPage() {
   return (
@@ -79,8 +79,8 @@ export default function SoTayKhachPage() {
         <span className="eyebrow" style={{ color: "var(--color-cham-dem)" }}>trước tiên</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: "56ch" }}>
-        <p style={proseP}>một lúc, ta chợt nhận ra hình như trên bước đường của mình, ta đã đánh rơi một điều gì đó.</p>
-        <p style={proseP}>trong khi cứ mải miết chạy theo nhịp của deadline, mục tiêu, bao vai trò và kỳ vọng chồng lên nhau, ngày này qua ngày khác.</p>
+        <p className="pj" style={proseP}>một lúc, ta chợt nhận ra hình như trên bước đường của mình, ta đã đánh rơi một điều gì đó.</p>
+        <p className="pj" style={proseP}>trong khi cứ mải miết chạy theo nhịp của deadline, mục tiêu, bao vai trò và kỳ vọng chồng lên nhau, ngày này qua ngày khác.</p>
 
         <div style={{ textAlign: "center", margin: "1.5rem 0" }}>
           <span style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--color-ink)", display: "inline-block" }} />
@@ -97,11 +97,11 @@ export default function SoTayKhachPage() {
 
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", margin: "1.75rem 0" }}>
           <span style={{ flex: 1, height: 1, background: "var(--color-mist)" }} />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>và rồi</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>và rồi</span>
           <span style={{ flex: 1, height: 1, background: "var(--color-mist)" }} />
         </div>
 
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           chỉ khi thật sự chịu để mình yên, một khoảng dừng mới hé mở để ta nhìn lại rằng mình đang thực sự ở đâu và đang đi về đâu.
           <br />
           <br />
@@ -160,7 +160,7 @@ export default function SoTayKhachPage() {
             <ImagePlaceholder label="zalo mlf" aspectRatio="1" src="/assets/zalomoc.webp" style={{ width: "100%", height: "100%" }} />
           </div>
           <div>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.3rem" }}>zalo</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.3rem" }}>zalo</span>
             <div style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "var(--color-ink)", marginBottom: "0.2rem" }}>mộc little farm</div>
             <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", color: "var(--color-stone)", lineHeight: 1.6 }}>thông tin chuyến đi, lịch trình, liên lạc trực tiếp với nhà mlf</div>
           </div>
@@ -236,7 +236,7 @@ export default function SoTayKhachPage() {
         <div className="grid2">
           {weatherCells.map((w) => (
             <div key={w.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>{w.label}</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>{w.label}</span>
               <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 300, color: "var(--color-ink)", textAlign: "right" }}>
                 {w.val} <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", color: "var(--color-stone)" }}>· {w.note}</span>
               </span>
@@ -273,12 +273,12 @@ export default function SoTayKhachPage() {
         <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.3rem", color: "var(--color-ink)", margin: 0 }}>một ngày ở mlf.</h3>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>Một ngày thường bắt đầu trước khi mặt trời lên cao.</p>
-        <p style={proseP}>Sáng sớm, khi sương còn đọng là lúc yên tĩnh nhất. Nhiều người chọn ngồi thiền, viết nhật ký, hay ngồi với tách trà nhìn ra vườn.</p>
+        <p className="pj" style={proseP}>Một ngày thường bắt đầu trước khi mặt trời lên cao.</p>
+        <p className="pj" style={proseP}>Sáng sớm, khi sương còn đọng là lúc yên tĩnh nhất. Nhiều người chọn ngồi thiền, viết nhật ký, hay ngồi với tách trà nhìn ra vườn.</p>
 
-        <p style={proseP}>Bữa sáng được dọn ra sau khi mọi người thức dậy và sẵn sàng.</p>
-        <p style={proseP}>Buổi sáng thường có một hoạt động: đi rừng, đi suối, thăm bản làng.</p>
-        <p style={proseP}>Buổi chiều thường yên hơn: các buổi trà, workshop, buổi trò chuyện sâu.</p>
+        <p className="pj" style={proseP}>Bữa sáng được dọn ra sau khi mọi người thức dậy và sẵn sàng.</p>
+        <p className="pj" style={proseP}>Buổi sáng thường có một hoạt động: đi rừng, đi suối, thăm bản làng.</p>
+        <p className="pj" style={proseP}>Buổi chiều thường yên hơn: các buổi trà, workshop, buổi trò chuyện sâu.</p>
         <p style={{ ...proseP, marginBottom: "2rem" }}>Tối - ăn cùng nhau, ngồi lại trước khi ngủ, và đi ngủ khi chuông đã điểm.</p>
 
         <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
@@ -301,7 +301,7 @@ export default function SoTayKhachPage() {
       <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {activityGroups.map((g) => (
           <div key={g.label} className="row-b">
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.5rem" }}>{g.label}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.5rem" }}>{g.label}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>{g.line}</p>
           </div>
         ))}
@@ -355,7 +355,7 @@ export default function SoTayKhachPage() {
           {roomCells.map((r) => (
             <div key={r.name} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
               <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", color: "var(--color-cham-dem)" }}>{r.name}</span>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-ink)" }}>{r.view}</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-ink)" }}>{r.view}</span>
             </div>
           ))}
         </div>
@@ -363,7 +363,7 @@ export default function SoTayKhachPage() {
       <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "56ch" }}>
         {roomInfo.map((i) => (
           <div key={i.k} className="row-b" style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", color: "var(--color-ink)", flex: "none" }}>{i.k}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-ink)", flex: "none" }}>{i.k}</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-ink)", textAlign: "right" }}>{i.v}</span>
           </div>
         ))}
@@ -402,7 +402,7 @@ export default function SoTayKhachPage() {
       <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         {foodInfo.map((i) => (
           <div key={i.k} className="row-b" style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", color: "var(--color-stone)", flex: "none" }}>{i.k}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-stone)", flex: "none" }}>{i.k}</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-ink)", textAlign: "right" }}>{i.v}</span>
           </div>
         ))}
@@ -443,7 +443,7 @@ export default function SoTayKhachPage() {
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.2rem" }}>
           <Motif name="dom-muc" size={42} />
         </div>
-        <Link className="mono-link" href={routes.ngayHien} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="mono-link tap" href={routes.ngayHien} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang ngày-hiền →
         </Link>
       </Reveal>

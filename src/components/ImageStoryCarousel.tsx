@@ -10,6 +10,7 @@ export function ImageStoryCarousel({ stories, showCounter = true }: { stories: {
 
   function start() {
     if (timerRef.current) clearInterval(timerRef.current);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; // không tự chuyển khi bật giảm chuyển động
     timerRef.current = setInterval(() => setIndex((i) => (i + 1) % stories.length), 10000);
   }
 
@@ -86,7 +87,7 @@ export function ImageStoryCarousel({ stories, showCounter = true }: { stories: {
             top: "0.9rem",
             right: "0.9rem",
             fontFamily: "var(--font-mono)",
-            fontSize: "0.58rem",
+            fontSize: "0.72rem",
             letterSpacing: "0.08em",
             color: "#E9E4D8",
             background: "rgba(35,46,63,.35)",

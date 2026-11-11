@@ -56,14 +56,14 @@ export function HeroClock() {
     };
   }, []);
 
-  if (!now) return <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-paper-dem)", opacity: 0.85 }}>—</span>;
+  if (!now) return <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-paper-dem)", opacity: 0.85 }}>—</span>;
 
   const date = `${pad(now.getDate())}.${pad(now.getMonth() + 1)}.${now.getFullYear()}`;
   const time = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
   const wLabel = weather ? `${weather.label} · ${weather.temp}°C` : "—";
 
   return (
-    <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-paper-dem)", opacity: 0.85 }}>
+    <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-paper-dem)", opacity: 0.85 }}>
       {date} {DAYS[now.getDay()]} {time} · {wLabel}
     </span>
   );

@@ -46,7 +46,7 @@ export function Testimonials({
         <span
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.62rem",
+            fontSize: "0.72rem",
             letterSpacing: "0.14em",
             textTransform: "uppercase",
             color: "var(--color-stone)",
@@ -72,7 +72,7 @@ export function Testimonials({
               <span
                 style={{
                   fontFamily: "var(--font-mono)",
-                  fontSize: "0.58rem",
+                  fontSize: "0.72rem",
                   letterSpacing: "0.1em",
                   color: active === i ? "var(--color-ink)" : "var(--color-stone)",
                   transition: "color .3s var(--ease-standard)",

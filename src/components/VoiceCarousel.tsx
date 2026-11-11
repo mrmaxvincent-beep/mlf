@@ -52,7 +52,7 @@ export function VoiceCarousel({ voices }: { voices: Voice[] }) {
                 <span
                   style={{
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.58rem",
+                    fontSize: "0.72rem",
                     letterSpacing: "0.1em",
                     height: "1.6rem",
                     padding: "0 0.5rem",

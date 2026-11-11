@@ -16,7 +16,7 @@ export function AmenityTabs({ vehicles, amenities }: { vehicles: string[]; ameni
             onClick={() => setTab(i)}
             style={{
               fontFamily: "var(--font-mono)",
-              fontSize: "0.62rem",
+              fontSize: "0.72rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               background: "none",

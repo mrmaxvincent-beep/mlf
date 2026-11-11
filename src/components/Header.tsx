@@ -40,8 +40,11 @@ function usePanelA11y(open: boolean, onClose: () => void) {
       }
     }
 
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden"; // khoá cuộn nền khi panel đang mở
     document.addEventListener("keydown", onKeyDown);
     return () => {
+      document.body.style.overflow = prevOverflow;
       document.removeEventListener("keydown", onKeyDown);
       triggerRef.current?.focus();
     };
@@ -400,9 +403,10 @@ function ProgramsPanel({ open, onClose, isMobile }: { open: boolean; onClose: ()
               background: "none",
               border: "none",
               cursor: "pointer",
-              padding: 0,
+              padding: "0.8rem",
+              margin: "-0.8rem",
               fontFamily: "var(--font-mono)",
-              fontSize: "0.55rem",
+              fontSize: "0.9rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               color: "#fff",
@@ -411,14 +415,14 @@ function ProgramsPanel({ open, onClose, isMobile }: { open: boolean; onClose: ()
             ✕
           </button>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem 2.5rem", fontSize: "0.75rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem 2.5rem", fontSize: "0.9rem" }}>
           {programsPanel.map((section) => (
             <div key={section.group}>
               <span
                 style={{
                   display: "block",
                   fontFamily: "var(--font-mono)",
-                  fontSize: "0.5rem",
+                  fontSize: "0.7rem",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   color: "var(--text-on-night-secondary)",
@@ -437,8 +441,8 @@ function ProgramsPanel({ open, onClose, isMobile }: { open: boolean; onClose: ()
                     style={{
                       display: "block",
                       color: "#fff",
-                      padding: "0.45rem 0",
-                      fontSize: "0.75rem",
+                      padding: "0.6rem 0",
+                      fontSize: "0.9rem",
                     }}
                   >
                     {item.label}
@@ -487,9 +491,10 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
             background: "none",
             border: "none",
             cursor: "pointer",
-            padding: 0,
+            padding: "0.8rem",
+            margin: "-0.8rem",
             fontFamily: "var(--font-mono)",
-            fontSize: "0.55rem",
+            fontSize: "0.9rem",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             color: "var(--color-ink)",
@@ -498,13 +503,13 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
           ✕
         </button>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem 2.5rem", fontSize: "0.75rem" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem 2.5rem", fontSize: "0.9rem" }}>
         {mobileMenuSections.map((section) => (
           <div key={section.heading}>
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.5rem",
+                fontSize: "0.7rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 color: "var(--color-cham-dem)",
@@ -523,8 +528,8 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
                   onClick={onClose}
                   style={{
                     color: "var(--color-ink)",
-                    padding: "0.45rem 0",
-                    fontSize: "0.75rem",
+                    padding: "0.6rem 0",
+                    fontSize: "0.9rem",
                     display: "block",
                   }}
                 >

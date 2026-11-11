@@ -14,6 +14,7 @@ export function DiaryCarousel() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; // không tự chuyển khi bật giảm chuyển động
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % images.length);
     }, 4000);

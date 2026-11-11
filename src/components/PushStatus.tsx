@@ -7,7 +7,7 @@ const MAX = 140;
 
 const mono: React.CSSProperties = {
   fontFamily: "var(--font-mono)",
-  fontSize: "0.62rem",
+  fontSize: "0.72rem",
   letterSpacing: "0.08em",
   color: "var(--color-stone)",
 };

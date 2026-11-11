@@ -27,7 +27,7 @@ export function SessionTabs({ sessions, total }: { sessions: Session[]; total?: 
                 color: isActive ? "var(--color-paper-dem)" : "var(--color-stone)",
                 cursor: "pointer",
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.62rem",
+                fontSize: "0.72rem",
               }}
             >
               {s.n}

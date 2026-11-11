@@ -19,7 +19,7 @@ export function FaqAccordion({ items, initialCount = 6, collapsible = true }: { 
                 +
               </span>
             </summary>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0.8rem 0 0", textAlign: "justify" }}>
+            <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0.8rem 0 0", textAlign: "justify" }}>
               {item.a}
             </p>
           </details>
@@ -30,7 +30,7 @@ export function FaqAccordion({ items, initialCount = 6, collapsible = true }: { 
           <button
             className="go mono-link"
             onClick={() => setShowAll((v) => !v)}
-            style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
+            style={{ background: "none", border: "none", cursor: "pointer", padding: 0, fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}
           >
             {showAll ? "thu gọn" : `xem thêm ${items.length - initialCount} câu hỏi`} <span className="ar">↓</span>
           </button>

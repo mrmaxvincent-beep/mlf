@@ -73,7 +73,7 @@ function exportIncomes() {
   if (!sh) throw new Error('Không thấy tab "' + INCOME_TAB + '".');
   var data = rows.map(function (r) {
     return [
-      new Date(r.received_on + 'T00:00:00'),
+      r.received_on, // chuỗi yyyy-mm-dd: Sheets tự nhận là ngày, không bị lệch múi giờ
       Number(r.amount),
       r.account,
       r.kind,
@@ -88,6 +88,8 @@ function exportIncomes() {
   if (data.length) {
     if (sh.getMaxRows() < data.length + 1) sh.insertRowsAfter(sh.getMaxRows(), data.length + 1 - sh.getMaxRows());
     sh.getRange(2, 1, data.length, 7).setValues(data);
+    sh.getRange(2, 1, data.length, 1).setNumberFormat('yyyy-mm-dd');
+    sh.getRange(2, 2, data.length, 1).setNumberFormat('#,##0');
   }
   sh.getRange(1, 9).setValue('Cập nhật ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'dd/MM/yyyy HH:mm'));
 }
@@ -99,13 +101,13 @@ function exportExpenses() {
   var sh = ss.getSheetByName(TAB) || ss.insertSheet(TAB);
   var head = ['Ngày', 'Số tiền', 'Nội dung', 'Thuộc về', 'Nhóm', 'Hạng mục', 'Người chi / nguồn tiền', 'Ghi chú', 'Hoàn lại', 'Ngày hoàn'];
   var vnDay = function (iso) {
-    return new Date(Utilities.formatDate(new Date(iso), 'Asia/Ho_Chi_Minh', "yyyy-MM-dd'T'00:00:00"));
+    return Utilities.formatDate(new Date(iso), 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd');
   };
   // A–J: nội dung hiển thị
   var data = rows.map(function (e) {
     var refund = e.kind === 'hoan_khach';
     return [
-      new Date(e.spent_on + 'T00:00:00'),
+      e.spent_on,
       Number(e.amount),
       e.noi_dung || '',
       e.scope || 'Vận hành chung',
@@ -138,8 +140,8 @@ function exportExpenses() {
     if (sh.getMaxRows() < data.length + 1) sh.insertRowsAfter(sh.getMaxRows(), data.length + 1 - sh.getMaxRows());
     sh.getRange(2, 1, data.length, head.length).setValues(data);
     sh.getRange(2, 13, data.length, 5).setValues(fin);
-    sh.getRange(2, 1, data.length, 1).setNumberFormat('dd/mm/yyyy');
-    sh.getRange(2, 10, data.length, 1).setNumberFormat('dd/mm/yyyy');
+    sh.getRange(2, 1, data.length, 1).setNumberFormat('yyyy-mm-dd');
+    sh.getRange(2, 10, data.length, 1).setNumberFormat('yyyy-mm-dd');
     sh.getRange(2, 2, data.length, 1).setNumberFormat('#,##0');
   }
   sh.setFrozenRows(1);

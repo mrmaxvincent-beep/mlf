@@ -127,7 +127,7 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
           {current ? (
             <div>
               <div style={{ textAlign: "center", padding: "0.5rem 0 2.6rem" }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.8rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.8rem" }}>
                   từ điển ở-yên · mộc little farm
                 </span>
 
@@ -148,11 +148,11 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
                 <SectionLabel num="01" title="định nghĩa" />
                 <div style={{ display: "flex", gap: "2.2rem", flexWrap: "wrap", marginBottom: "1.4rem" }}>
                   <div>
-                    <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.3rem" }}>nguồn gốc</div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.3rem" }}>nguồn gốc</div>
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-stone-alt)", letterSpacing: "0.02em" }}>{current.origin}</div>
                   </div>
                   <div>
-                    <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.3rem" }}>nhóm từ</div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.3rem" }}>nhóm từ</div>
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", color: "var(--color-stone-alt)", letterSpacing: "0.02em" }}>{current.group}</div>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export function TuDienReader({ entries }: { entries: DictEntry[] }) {
 
               {current.variants ? (
                 <div style={{ marginTop: "1rem", padding: "1.4rem 1.6rem", background: "var(--color-paper)", border: "1px solid var(--color-mist)", borderRadius: "4px" }}>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.56rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
                     tham chiếu trong hệ từ ở-yên
                   </span>
                   {current.variants.map((v) => (

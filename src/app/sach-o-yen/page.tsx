@@ -48,7 +48,7 @@ export default function SachOYenPage() {
               <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.7rem", color: "var(--color-ink)", margin: "0 0 1rem" }}>
                 {book.title}
               </h2>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem", textAlign: "justify" }}>
+              <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem", textAlign: "justify" }}>
                 {book.desc}
               </p>
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.7rem", marginBottom: "1.5rem" }}>
@@ -70,7 +70,7 @@ export default function SachOYenPage() {
                     borderRadius: "999px",
                     border: "1px solid var(--color-mist)",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.62rem",
+                    fontSize: "0.72rem",
                     letterSpacing: "0.16em",
                     textTransform: "uppercase",
                     color: "var(--color-stone)",

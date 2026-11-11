@@ -36,7 +36,7 @@ function TrailerFrame({ film }: { film: Phim }) {
   if (!film.youtubeId) {
     return (
       <div style={{ position: "absolute", inset: 0, background: "var(--color-cham-dem)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", color: "var(--color-paper)" }}>
           ĐANG CẬP NHẬT
         </span>
       </div>

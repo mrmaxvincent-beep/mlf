@@ -14,7 +14,7 @@ const bigStyle: React.CSSProperties = {
 
 const captionStyle: React.CSSProperties = {
   fontFamily: "var(--font-mono)",
-  fontSize: "0.66rem",
+  fontSize: "0.72rem",
   letterSpacing: "0.12em",
   color: "var(--color-stone)",
   margin: 0,

@@ -20,7 +20,7 @@ export default function TuDienOYenPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.2rem, 6vw, 3.4rem)", lineHeight: 1.15, color: "var(--color-ink)", margin: "0 0 0.75rem" }}>
           từ điển ở-yên
         </h1>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>tra từ theo thứ tự A, B, C</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>tra từ theo thứ tự A, B, C</span>
       </div>
 
       <div style={{ marginTop: "3.5rem", marginBottom: "5rem" }}>

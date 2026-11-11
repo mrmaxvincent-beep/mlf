@@ -271,7 +271,7 @@ export default function InChungPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.2rem" }}>mộc little farm</p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", margin: 0 }}>một quyển tạp chí, nhiều tấm lòng.</p>
         <div style={{ marginTop: "2.2rem" }}>
-          <Link className="mono-link" href={routes.journal} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+          <Link className="mono-link tap" href={routes.journal} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
             ← về mlf journal
           </Link>
         </div>

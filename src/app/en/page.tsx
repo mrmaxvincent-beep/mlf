@@ -80,7 +80,7 @@ const services = [
 
 export default function EnglishPage() {
   return (
-    <>
+    <div lang="en" style={{ display: "contents" }}>
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem", paddingBottom: "1rem" }}>
@@ -92,7 +92,7 @@ export default function EnglishPage() {
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 0.8rem" }}>
           a small retreat farm rooted in <em style={{ fontStyle: "italic" }}>ở-yên</em> — a way of living that is present, unhurried, clear-eyed.
         </p>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>Măng Đen, Quang Ngai · Vietnam</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>Măng Đen, Quang Ngai · Vietnam</span>
       </div>
 
       <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
@@ -102,13 +102,13 @@ export default function EnglishPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "5rem", marginBottom: "5rem", maxWidth: "60ch" }}>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           mộc little farm began in 2016 as a small home bakery in Saigon. It grew into a quiet retreat café tucked into the city, and in 2023 moved to the highlands of Măng Đen - becoming a retreat farm surrounded by pine forest, mist, and the slow rhythm of mountain weather.
         </p>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           We believe there is a way of living that is simple without being careless, still without giving up, present in the middle of life without losing yourself. We call mộc little farm a small farm - a place where everything is left to grow.
         </p>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           ở-yên combines two Vietnamese words: <em style={{ fontStyle: "italic" }}>ở</em> - to stay, to dwell - and <em style={{ fontStyle: "italic" }}>yên</em> - to be calm, to be still. It isn&rsquo;t a retreat from life, and it isn&rsquo;t the pursuit of permanent calm either. It&rsquo;s the practice of staying present exactly where you are, steady enough to meet whatever the moment holds, without needing to escape it or control it. At mộc little farm, ở-yên shows up as slowness without idleness, openness without losing your center, and the willingness to sit with both the ease and the discomfort of being fully here.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
@@ -144,7 +144,7 @@ export default function EnglishPage() {
         <span className="eyebrow" style={{ color: "var(--color-ink)" }}>for english speakers</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           For guests who don&rsquo;t read Vietnamese, mlf also runs dedicated retreat programs - guided, hosted, and explained in English from arrival to departure.
         </p>
         <p style={{ ...proseP, margin: 0 }}>Please reach out to us to learn more - dates, group size, and what a stay looks like for you.</p>
@@ -168,12 +168,12 @@ export default function EnglishPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.home} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.home} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           xem bản tiếng việt <span className="ar">→</span>
         </Link>
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }

@@ -33,7 +33,7 @@ export default function JournalPage() {
         <p className="drop-cap" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Đi qua nhiều nhà, nhiều người, nhiều vùng đất nhưng rốt cuộc là đi sâu vào mình.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "1.25rem 0 0" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "1.25rem 0 0" }}>
           Một quyển tạp chí có 03 chuyên mục, như một hành trình để cảm và hiểu về ở-yên.
         </p>
       </Reveal>
@@ -77,7 +77,7 @@ export default function JournalPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "60ch" }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1rem" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>lời mời cộng tác · quyển 02</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>lời mời cộng tác · quyển 02</span>
         </div>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.55rem", lineHeight: 1.55, color: "var(--color-ink)", textAlign: "center", margin: "0 0 2rem" }}>
           &ldquo;mỗi con người đều mang trong mình một ngọn lửa nhỏ — đủ để thắp sáng những điều tốt lành quanh mình.&rdquo;
@@ -85,43 +85,43 @@ export default function JournalPage() {
         <p className="drop-cap" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Khi dư âm của cơn bão ngoài xa vẫn còn giăng lối trên nền trời ban trưa, tôi đang thủ thỉ chia sẻ cho một người bạn về màu xanh mà chúng tôi đang ấp ủ cho mlf journal 2.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Bạn chăm chú lắng nghe, và nói với tôi rằng, thật tình cờ quá, đó cũng là điều em thường hay suy ngẫm gần đây. Rồi nghĩ một chút, bạn lại nói, em có thể chia sẻ thêm cho những người bạn khác, cũng là người thích viết được không.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Sau đó, chúng tôi tiếp tục trò chuyện hàng giờ về câu chuyện có màu xanh ruộng vườn nơi núi đồi, mà ở đó có một mầm cây vừa đâm chồi, chứa chan hy vọng và tình cảm bạn hằng ấp ủ.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Niềm vui từ bạn làm tôi thêm tin rằng, trong mỗi con người, đều đang nuôi dưỡng một ngọn lửa nhỏ, sẵn sàng sẻ chia sự ấm áp và ánh sáng đến xung quanh.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Vì vậy, nếu bạn cũng đang sống, đang quan sát, đang lắng nghe cuộc đời bằng một trái tim mở, chúng tôi mong rằng có thể được cảm nhận và chia sẻ tiếng nói, góc nhìn, hay thậm chí chỉ là mảnh cảm xúc của bạn trong mlf journal quyển 02, phát hành Tết 2027 (29 tháng Chạp).
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Từ ý tưởng giản dị về một khu vườn, nơi mọi người có thể gieo trồng và nuôi dưỡng mầm xanh trong mình, mlf journal 2 dần trở thành một chuyến hành trình, mà mỗi người, vừa có không gian riêng, lại vừa có cơ hội cùng nhau lắng lại, cảm nhận và suy ngẫm về mối liên hệ giữa con người và thiên nhiên.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           &ldquo;xanh lại&rdquo;, là cái tên chúng tôi đặt tên cho mlf journal số 02.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Bắt đầu với câu hỏi, sẽ ra sao nếu con người sống như một phần của tự nhiên, thay vì đứng ngoài nhìn vào?
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           khoảng xanh không ở đâu xa xôi. một mầm trong ly nhựa trên ban công, một cây ổi ông để lại, một màu xanh dịu mắt trong một chuyến đi, một tô canh rau của vườn nhà trồng…
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           khoảng xanh ấy đôi khi không ở ngoài, mà nằm ngay trong đời sống, trong những mối quan hệ, trong chính tâm mình.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           và liệu &ldquo;khoảng xanh&rdquo; bên trong mình có còn xanh?
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Trên chuyến hành trình tìm lời đáp cho vô vàn suy tưởng về mối quan hệ giữa con người và thiên nhiên, chúng tôi hy vọng có thể tìm được những tâm hồn đồng điệu có thể cùng đồng hành.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           nếu bạn mang một mầm xanh muốn chia sẻ — một bài viết, vài hình chụp, hay bức vẽ, mlf journal đang chờ, bạn nhé!
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.5rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.5rem" }}>
           bbt mlf journal
         </p>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-stone-alt)", margin: "0 0 1.5rem" }}>

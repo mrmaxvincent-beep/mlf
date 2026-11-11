@@ -237,7 +237,7 @@ export default function RetreatAnVuiPage() {
         />
       </Reveal>
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1rem" }}>
           nếu bạn đang đọc trang này cho bố mẹ mình! an-vui chỉ 4 khách mỗi chuyến, thong dong và luôn có người ở cạnh: Thuận, Tâm, Vũ - là người đồng hành theo sát suốt hành trình. 3 người đã đi dẫn dắt hơn 80 chuyến retreat, trong đó có rất nhiều người lớn tuổi.
         </p>
         <p style={{ ...proseP, margin: 0 }}>mlf là nơi đủ an toàn, dịu dàng để bố mẹ được là chính mình một chút.</p>
@@ -320,7 +320,7 @@ export default function RetreatAnVuiPage() {
       <div className="wrap" style={{ marginBottom: "1rem" }}>
         <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH TRỢ DUYÊN</span>}>
           <div>
-            <p style={proseP}>
+            <p className="pj" style={proseP}>
               Chúng tôi mong rằng các chương trình của mộc little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng, retreat ở-yên, retreat an-vui &amp; online retreat khai tâm.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>

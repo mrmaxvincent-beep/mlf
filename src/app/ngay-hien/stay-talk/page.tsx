@@ -180,16 +180,16 @@ export default function StayTalkPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.1rem", fontStyle: "italic" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.1rem", fontStyle: "italic" }}>
           .... đó sẽ là những bữa ngồi xuống ăn cơm chung, những buổi trà chánh niệm hay buổi trò chuyện lãng đãng bên suối.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.1rem", fontStyle: "italic" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.1rem", fontStyle: "italic" }}>
           mỗi ngày, nhà mộc nấu 2 bữa chay sáng-tối còn buổi trưa bạn có thể chạy xe ra ngoài và thử các món địa phương.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.1rem", fontStyle: "italic" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.1rem", fontStyle: "italic" }}>
           thiết nghĩ trong stay+talk, người tham gia có thể được đi chơi thong dong theo ý mình, vừa có lúc neo mình lại giữa những điều giản dị. để đến Măng Đen không chỉ là những chuyến đi nối dài từ điểm này sang điểm khác, mà còn có những khoảng lặng, những lúc thảnh thơi, có ai đó đợi cơm mình. nơi đó cũng đủ cái nhẫn để lắng nghe một ai tâm sự, đủ thì giờ kể cho mình nghe chuyện núi đồi, chuyện thương nhớ, chuyện nọ chuyện kia.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0, fontStyle: "italic" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0, fontStyle: "italic" }}>
           stay+talk, chút đủ đầy của giản đơn.
         </p>
       </Reveal>

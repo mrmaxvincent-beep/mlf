@@ -61,22 +61,14 @@ export default function NgayHienPage() {
             dạo một vòng
           </Link>
         </div>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 auto 0.75rem" }}>
-          <br />
-          <br />
-          ngày-hiền,
-          <br />
-          <br />
-          là những ngày ta tập sống chậm,
-          <br />
-          <br />
-          nhẹ và lành với chính mình.
-        </p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 auto 1.8rem", paddingTop: "1.8rem" }}>ngày-hiền,</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 auto 1.8rem" }}>là những ngày ta tập sống chậm,</p>
+        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "46ch", margin: "0 auto 1.8rem" }}>nhẹ và lành với chính mình.</p>
       </div>
 
       <div style={{ marginTop: "2.5rem", height: "60vh", minHeight: 360, maxHeight: 580, position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ position: "relative", width: "100%", height: "100%" }}>
-          <Image src="/assets/ngayhien_01.webp" alt="nhà mộc giữa sương Măng Đen" fill style={{ objectFit: "contain" }} />
+          <Image src="/assets/ngayhien_01.webp" alt="nhà mộc giữa sương Măng Đen" fill sizes="100vw" priority style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -86,13 +78,13 @@ export default function NgayHienPage() {
         </span>
       </Reveal>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.2rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.2rem" }}>
           có người đến mlf để nghỉ ngơi. có người chỉ cần một khoảng không gian cho riêng mình.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.2rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.2rem" }}>
           mlf không phải là nơi chữa lành hay trị liệu, và không thay cho sự hỗ trợ y tế hay tư vấn chuyên môn.
         </p>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p className="pj" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           điều có thể làm,  là tạo một không gian an trú, để mỗi người tự thấy rõ mình hơn một chút.
         </p>
       </Reveal>
@@ -203,15 +195,7 @@ export default function NgayHienPage() {
                     <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
                       {num} / 09
                     </span>
-                    {i === 1 ? (
-                      <div style={{ position: "relative", width: "100%", aspectRatio: "4/5", overflow: "hidden" }}>
-                        <div style={{ position: "absolute", top: "50%", left: "50%", width: "125%", height: "80%", transform: "translate(-50%, -50%) rotate(-90deg)" }}>
-                          <ImagePlaceholder label={m.imgLabel} aspectRatio="5/4" src={m.src} style={{ width: "100%", height: "100%" }} />
-                        </div>
-                      </div>
-                    ) : (
-                      <ImagePlaceholder label={m.imgLabel} aspectRatio="4/5" src={m.src} />
-                    )}
+                    <ImagePlaceholder label={m.imgLabel} aspectRatio="4/5" src={m.src} />
                   </div>
                   <div style={variant === 1 ? { paddingRight: "1.5rem" } : { order: 1, paddingLeft: "1.5rem", textAlign: "right" }}>
                     <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>

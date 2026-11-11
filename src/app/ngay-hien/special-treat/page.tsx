@@ -134,7 +134,7 @@ export default function SpecialTreatPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center", marginTop: "4rem" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify" }}>
           Hãy nhắn cho mộc biết qua cho Zalo nhé!
         </p>
       </div>

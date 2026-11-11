@@ -14,6 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* đoạn căn đều hai bên chỉ giữ trên màn hình rộng; cột hẹp trên điện thoại căn trái để khỏi giãn chữ */
+@media (max-width: 680px) {
+  .pj { text-align: left !important; }
+}
+
 /* hero trang chủ: 100svh để không giật khi thanh địa chỉ trên điện thoại co giãn (100vh là phương án dự phòng) */
 .home-hero {
   height: 100vh;

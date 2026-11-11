@@ -477,7 +477,7 @@ export default function RetreatHamDuongPage() {
       <div className="wrap" style={{ marginBottom: "1rem" }}>
         <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH TRỢ DUYÊN</span>}>
           <div>
-            <p style={proseP}>
+            <p className="pj" style={proseP}>
               Nhà mộc mong rằng các chương trình của mlf little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng, retreat ở-yên, retreat an-vui &amp; online retreat khai tâm.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 0.9rem" }}>

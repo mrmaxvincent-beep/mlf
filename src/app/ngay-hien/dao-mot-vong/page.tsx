@@ -51,7 +51,7 @@ export default function DaoMotVongPage() {
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.8rem, 4.5vw, 2.6rem)", color: "var(--color-ink)" }}>điểm nhìn</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           ⸺ <strong>retreat</strong> là tạm thời rời khỏi cuộc sống bận rộn thường nhật, bước vào một không gian dịu dàng để nghỉ ngơi, để thở, để suy ngẫm, để tưởng tượng, để nạp lại năng lượng… hoặc đơn giản là ngồi im.
         </p>
         <p style={{ ...proseP, fontWeight: 500 }}>retreat ở mlf:</p>

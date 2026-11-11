@@ -4,7 +4,9 @@
  *
  * Cài một lần:
  *  1. Dán chuỗi mật khẩu (Tâm gửi riêng) vào giữa hai dấu nháy ở dòng SECRET bên dưới.
- *  2. Chọn hàm setup rồi bấm Run (cấp quyền khi được hỏi). Hàm này đổ dữ liệu ngay và đặt lịch chạy mỗi ngày.
+ *  2. Chọn hàm setup rồi bấm Run (cấp quyền khi được hỏi). Hàm này đổ dữ liệu ngay và đặt lịch chạy mỗi 15 phút.
+ *  3. Deploy → New deployment → Web app (Execute as: Me, Who has access: Anyone), copy URL kết thúc bằng /exec
+ *     và gửi cho Claude để gắn vào Supabase (app_secrets.sheet_webhook). Từ đó mỗi lần lưu/sửa/xoá sẽ đồng bộ trong vài giây.
  *
  * Mỗi lần chạy ghi đè toàn bộ tab "Chi tiêu mlf os" bằng dữ liệu mới nhất; đừng sửa tay trong tab này.
  * Tab "Thu mlf os" phải có sẵn (dòng 1 là tiêu đề A–G). Script chỉ ghi nội dung A2:G và ô I1,
@@ -31,9 +33,38 @@ function fetchRows_(fn) {
   return JSON.parse(res.getContentText());
 }
 
-function exportAll() {
-  exportExpenses();
-  exportIncomes();
+function report_(ok, err, started) {
+  try {
+    UrlFetchApp.fetch(SB_URL + '/rest/v1/rpc/sheet_sync_report', {
+      method: 'post',
+      contentType: 'application/json',
+      headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY },
+      payload: JSON.stringify({ p_secret: SECRET, p_ok: ok, p_error: err || null, p_started: started || null }),
+      muteHttpExceptions: true
+    });
+  } catch (e) {}
+}
+
+// started: thời điểm yêu cầu (chuỗi ISO) khi gọi từ webhook; trigger theo giờ truyền object nên bỏ qua.
+function exportAll(started) {
+  started = typeof started === 'string' ? started : new Date().toISOString();
+  try {
+    exportExpenses();
+    exportIncomes();
+    report_(true, null, started);
+  } catch (e) {
+    report_(false, String((e && e.message) || e), started);
+    throw e;
+  }
+}
+
+// Web app: Supabase gọi vào đây sau mỗi lần lưu/sửa/xoá khoản thu chi và khi bấm "đồng bộ ngay".
+function doPost(e) {
+  var body = {};
+  try { body = JSON.parse(e.postData.contents); } catch (x) {}
+  if (!SECRET || body.secret !== SECRET) return ContentService.createTextOutput('unauthorized');
+  exportAll(body.started);
+  return ContentService.createTextOutput('ok');
 }
 
 function exportIncomes() {
@@ -119,6 +150,6 @@ function setup() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
     if (['exportExpenses', 'exportAll'].indexOf(t.getHandlerFunction()) >= 0) ScriptApp.deleteTrigger(t);
   });
-  ScriptApp.newTrigger('exportAll').timeBased().everyDays(1).atHour(6).inTimezone('Asia/Ho_Chi_Minh').create();
+  ScriptApp.newTrigger('exportAll').timeBased().everyMinutes(15).create();
   exportAll();
 }

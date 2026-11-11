@@ -32,7 +32,7 @@ export default function TouchPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           touch
         </h1>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginBottom: "1.6rem" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginBottom: "1.6rem" }}>
           chạm vào thuần nhất
         </span>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", justifyContent: "center", gap: "0.9rem", marginBottom: "2.5rem" }}>
@@ -96,7 +96,7 @@ export default function TouchPage() {
               target="_blank"
               rel="noopener"
               className="mono-link"
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
             >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />
@@ -110,7 +110,7 @@ export default function TouchPage() {
               target="_blank"
               rel="noopener"
               className="mono-link"
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
             >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <path d="M15.5 8.5h-2a1 1 0 0 0-1 1V12h3l-.4 3h-2.6v7h-3v-7H8v-3h2.5V9.2C10.5 6.9 12 5 14.6 5h1.9v3.5Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
@@ -122,7 +122,7 @@ export default function TouchPage() {
               target="_blank"
               rel="noopener"
               className="mono-link"
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
             >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <path
@@ -142,7 +142,7 @@ export default function TouchPage() {
             <a
               href="tel:0988039296"
               className="mono-link"
-              style={{ fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
+              style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}
             >
               098 803 92 96
             </a>

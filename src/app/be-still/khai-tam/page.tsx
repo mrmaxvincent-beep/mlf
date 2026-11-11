@@ -121,7 +121,7 @@ export default function KhaiTamPage() {
                     alignItems: "center",
                     justifyContent: "center",
                     fontFamily: "var(--font-mono)",
-                    fontSize: "0.58rem",
+                    fontSize: "0.72rem",
                     color: "var(--color-cham-dem)",
                   }}
                 >
@@ -186,7 +186,7 @@ export default function KhaiTamPage() {
         {writeups.map((w) => (
           <div key={w.href} style={{ ...li, justifyContent: "center" }}>
             <span className="li-mark">—</span>
-            <a className="go mono-link" href={w.href} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-sans)", color: "var(--color-ink)" }}>
+            <a className="go mono-link tap" href={w.href} target="_blank" rel="noopener" style={{ fontFamily: "var(--font-sans)", color: "var(--color-ink)" }}>
               {w.title} <span className="ar">→</span>
             </a>
           </div>
@@ -201,10 +201,10 @@ export default function KhaiTamPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "58ch", borderTop: "1px solid var(--color-mist)", paddingTop: "2rem" }}>
         <span className="eyebrow-serif" style={{ color: "var(--color-ink)" }}>! một điều cần biết trước khi bước vào hành trình</span>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-stone-alt)", textAlign: "justify", margin: "0 0 1rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-stone-alt)", textAlign: "justify", margin: "0 0 1rem" }}>
           Khai tâm là một không gian sâu, không phải trị liệu tâm lý, và người đồng hành không phải là nhà trị liệu. Những gì được viết trong nhật ký khai tâm và chia sẻ trong các buổi 1-1 được giữ kín, trong phạm vi cho phép của pháp luật.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-stone-alt)", textAlign: "justify", margin: 0 }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-stone-alt)", textAlign: "justify", margin: 0 }}>
           Mọi quyết định đưa ra trong hoặc sau hành trình là của riêng người tham gia. khai tâm chỉ đồng hành để nhìn rõ hơn, không dẫn dắt hay chịu trách nhiệm cho những lựa chọn ấy.
         </p>
       </div>
@@ -223,22 +223,22 @@ export default function KhaiTamPage() {
           tham khảo thêm hành trình khác
         </span>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: "1rem", flexWrap: "wrap" }}>
-          <Link className="mono-link" href={routes.imLangChuNghia} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.imLangChuNghia} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             im lặng, chữ nghĩa
           </Link>
           <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.clariTea} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.clariTea} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             clari-tea
           </Link>
           <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.phiaSang} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.phiaSang} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             phía sáng
           </Link>
         </div>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang be-still <span className="ar">→</span>
         </Link>
       </div>

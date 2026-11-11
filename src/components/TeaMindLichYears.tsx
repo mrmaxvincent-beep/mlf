@@ -30,7 +30,7 @@ function Edition2026() {
         <p style={{ fontFamily: sans, fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", maxWidth: "48ch", margin: "0 0 1.5rem" }}>
           bước tới 365 ngày bằng sự có mặt - 12 mùa tâm được vẽ nên như những điểm dừng nhỏ giữa nhịp sống nhiều chuyển động.
         </p>
-        <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem", marginBottom: "2.5rem" }}>
+        <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem", marginBottom: "2.5rem" }}>
           hiện bộ lịch 2026 đã kết thúc đặt hàng — hẹn gặp lại 2027
         </span>
       </div>
@@ -41,10 +41,10 @@ function Edition2026() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: sans, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: sans, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Mỗi tháng là một chén trà, một mùa trong tâm, một lời nhắc rất khẽ để quay về với hơi thở và sự sống đang có mặt.
         </p>
-        <p style={{ fontFamily: sans, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p className="pj" style={{ fontFamily: sans, fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Mỗi khi ánh mắt chạm vào chiếc chén trà, tự nhiên có một khoảng dừng nhẹ trong ngày - mười hai mùa tâm, mười hai nhịp thở, để năm mới đi qua một cách hiền hòa, tĩnh lặng và tròn đầy.
         </p>
       </Reveal>
@@ -55,7 +55,7 @@ function Edition2026() {
       <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
         {seasons.map((s) => (
           <div key={s.num} className="season-row">
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: "var(--color-stone)", flex: "none", width: "1.5rem" }}>{s.num}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-stone)", flex: "none", width: "1.5rem" }}>{s.num}</span>
             <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.98rem", color: "var(--color-ink)" }}>{s.name}</span>
           </div>
         ))}
@@ -109,7 +109,7 @@ function Edition2027() {
       <Theme title={theme2027.title} sub={theme2027.sub} />
 
       <div className="wrap" style={{ marginBottom: "2rem", textAlign: "center" }}>
-        <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem" }}>
+        <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem" }}>
           sắp ra mắt · 2027
         </span>
       </div>

@@ -50,7 +50,7 @@ export default function ThuanUpcyclePage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <Link className="mono-link" href={routes.touch} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="mono-link tap" href={routes.touch} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           ← xem lại touch
         </Link>
       </div>

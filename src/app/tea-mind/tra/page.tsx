@@ -45,10 +45,10 @@ export default function TeaMindTraPage() {
         <span className="eyebrow">về buổi trà</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           Buổi trà này là một khoảng lặng để nhìn lại nhịp tay mình đang vội vã đến đâu.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           Vũ sẽ đồng hành cùng bạn qua từng bước: chọn trà, đun nước, rót và mời để học cách ở lại trọn vẹn trong từng cử chỉ.
         </p>
       </Reveal>
@@ -83,22 +83,22 @@ export default function TeaMindTraPage() {
           tham khảo thêm
         </span>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: "1rem", flexWrap: "wrap" }}>
-          <Link className="mono-link" href={routes.teaMindGom} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.teaMindGom} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             gốm
           </Link>
           <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.teaMindTranh} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.teaMindTranh} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             tranh
           </Link>
           <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.teaMindLich} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.teaMindLich} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             lịch
           </Link>
         </div>
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <Link className="mono-link" href={routes.teaMind} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="mono-link tap" href={routes.teaMind} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           ← xem lại tea.mind
         </Link>
       </div>

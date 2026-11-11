@@ -61,14 +61,14 @@ export default function TeaMindPage() {
         </p>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>Ở đây, có mùi đất, mùi lửa, mùi lá trà khẽ bay trong chiều tĩnh.</p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>Ở đây, có mùi đất, mùi lửa, mùi lá trà khẽ bay trong chiều tĩnh.</p>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           tea·mind kể chuyện bằng màu, bằng men gốm, bằng tiếng nước sôi. Những mẩu chuyện nhặt nhạnh từ hành trình tìm cái-đẹp.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 1.25rem" }}>
           Cái-đẹp không ồn ào. Nó ẩn mình trong dáng ngồi yên, ánh sáng rơi qua kẽ lá, trong vệt men chảy tự nhiên như nước mắt, trong một chén trà nóng đặt lặng lẽ giữa ngày.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           tea·mind là nơi để lắng nghe bản thân qua 4 mạch: trà, gốm, tranh, lịch và từ đó, hiểu rằng: cái-đẹp không phải để giữ, mà để cảm.
         </p>
       </Reveal>
@@ -97,7 +97,7 @@ export default function TeaMindPage() {
               <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.5rem" }}>{d.tagline}</span>
               <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", color: "var(--color-ink)", margin: "0 0 0.9rem" }}>{d.name}</h3>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.8, color: "var(--color-ink)", margin: "0 0 1.2rem", maxWidth: "42ch" }}>{d.desc}</p>
-              <Link className="go" href={d.href} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+              <Link className="go tap" href={d.href} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
                 {d.cta} <span className="ar">→</span>
               </Link>
             </div>
@@ -130,7 +130,7 @@ export default function TeaMindPage() {
               target="_blank"
               rel="noopener"
               className="mono-link"
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
             >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <path d="M5 4h10l4 4v12H5V4Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
@@ -144,7 +144,7 @@ export default function TeaMindPage() {
               target="_blank"
               rel="noopener"
               className="mono-link"
-              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
             >
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
                 <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />

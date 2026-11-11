@@ -54,7 +54,7 @@ export default function CachTiepCanPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
         <h2 style={sectionTitle}>các vấn đề phổ biến của học viên</h2>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           Những điểm kẹt thường gặp được phân loại theo 6 lĩnh vực. Nhận biết vấn đề của mình là bước đầu tiên để vượt qua.
         </p>
       </Reveal>
@@ -62,7 +62,7 @@ export default function CachTiepCanPage() {
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "70ch" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
           <div style={{ borderTop: "2px solid var(--color-cham-dem)", paddingTop: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>01 · Tâm</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>01 · Tâm</span>
             <ul style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0", paddingLeft: "0", listStyle: "none" }}>
               <li style={{ marginBottom: "0.7rem" }}>· Sợ viết dở, sợ bị đánh giá</li>
               <li style={{ marginBottom: "0.7rem" }}>· Cố viết hay → chữ gồng</li>
@@ -72,7 +72,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderTop: "2px solid var(--color-cham-dem)", paddingTop: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>02 · Thân</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>02 · Thân</span>
             <ul style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0", paddingLeft: "0", listStyle: "none" }}>
               <li style={{ marginBottom: "0.7rem" }}>· Không nghe và cảm được chữ</li>
               <li style={{ marginBottom: "0.7rem" }}>· Hơi thở không hòa với nhịp câu</li>
@@ -82,7 +82,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderTop: "2px solid var(--color-cham-dem)", paddingTop: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>03 · Kỹ Thuật</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>03 · Kỹ Thuật</span>
             <ul style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0", paddingLeft: "0", listStyle: "none" }}>
               <li style={{ marginBottom: "0.7rem" }}>· Viết lan man – thiếu trụ</li>
               <li style={{ marginBottom: "0.7rem" }}>· Nhiều chữ thừa – câu dài</li>
@@ -92,7 +92,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderTop: "2px solid var(--color-cham-dem)", paddingTop: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>04 · Khí</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>04 · Khí</span>
             <ul style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0", paddingLeft: "0", listStyle: "none" }}>
               <li style={{ marginBottom: "0.7rem" }}>· Chữ phẳng – thiếu lực</li>
               <li style={{ marginBottom: "0.7rem" }}>· Một màu: chỉ mềm/tĩnh/lý trí</li>
@@ -102,7 +102,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderTop: "2px solid var(--color-cham-dem)", paddingTop: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>05 · Tốc Độ</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>05 · Tốc Độ</span>
             <ul style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0", paddingLeft: "0", listStyle: "none" }}>
               <li style={{ marginBottom: "0.7rem" }}>· Viết lâu nhưng không ra chữ</li>
               <li style={{ marginBottom: "0.7rem" }}>· Quá kiểm soát → nghẽn flow</li>
@@ -111,7 +111,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderTop: "2px solid var(--color-cham-dem)", paddingTop: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>06 · Bản Ngã</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "1rem", fontWeight: 600 }}>06 · Bản Ngã</span>
             <ul style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0", paddingLeft: "0", listStyle: "none" }}>
               <li style={{ marginBottom: "0.7rem" }}>· Không cảm thấy "thuộc về" chữ</li>
               <li style={{ marginBottom: "0.7rem" }}>· Nhìn thấy nhưng không sống cùng</li>
@@ -131,7 +131,7 @@ export default function CachTiepCanPage() {
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "70ch" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>01 · Hơi Thở</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>01 · Hơi Thở</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Breath-based Writing</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Hơi thở là đơn vị nhịp đầu tiên của chữ. Luyện gắn nhịp câu với nhịp thở, nhận ra đoạn nào "nghẽn", để chữ theo một hơi thở trọn vẹn.
@@ -139,7 +139,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>02 · Thân</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>02 · Thân</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Body-based Writing</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Kích hoạt bốn trung tâm: tim (ấm, mở, mềm), bụng (vững, có trụ), gan (mạnh, quyết đoán), phổi (thoáng, nhẹ). Chữ không còn đơn điệu.
@@ -147,7 +147,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>03 · Khí</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>03 · Khí</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Energy-based Writing</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Khí là năng lượng sống trong câu chữ. Luyện nghe khí: có đẩy, có trụ, có ngân không. Chỉnh khí trước khi chỉnh kỹ thuật.
@@ -155,7 +155,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>04 · Cây Sống</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>04 · Cây Sống</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Living Tree Model</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Gốc (tâm) → Thân (khí) → Cành (kỹ thuật) → Lá (thể loại). Nếu gốc yếu, thân gãy. Giữ sự đồng bộ thân-khí-chữ.
@@ -163,7 +163,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>05 · Thiên Nhiên</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>05 · Thiên Nhiên</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Elemental Writing</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Chuyển đổi khí tính: Đất (trầm, vững), Nước (mềm, trôi), Lửa (dồn, bật), Gió (thoáng, nhẹ). Bài viết linh hoạt và giàu biểu cảm.
@@ -171,7 +171,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>06 · Nghe</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>06 · Nghe</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Listening to Words</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Nghe thân khi đọc chữ. Cảm nhịp tim, ngực, bụng. Phân biệt chữ có điểm rơi, điểm sáng, điểm trụ. Định vị năng lượng trong văn bản.
@@ -179,7 +179,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>07 · Tạng Phủ</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>07 · Tạng Phủ</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Organ-based Writing</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.8rem" }}>
               Viết từ tim (cảm xúc), bụng (chắc), gan (lực), phổi (rộng, nhẹ). Bài viết giàu sắc thái, có sức nén/bung, chiều sâu cảm xúc.
@@ -187,7 +187,7 @@ export default function CachTiepCanPage() {
           </div>
 
           <div style={{ borderLeft: "3px solid var(--color-cham-dem)", paddingLeft: "1.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>08 · Im Lặng</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.8rem", fontWeight: 600 }}>08 · Im Lặng</span>
             <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", margin: "0 0 0.8rem" }}>Silence as Method</h3>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0" }}>
               Kỹ thuật quan trọng nhất. Im lặng giúp thu năng lượng, lắng vào phần sâu, nghe chữ rơi. <strong>Không có im lặng → không thể có chữ thật.</strong>
@@ -371,7 +371,7 @@ export default function CachTiepCanPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
         <h2 style={sectionTitle}>phản hồi đề mục</h2>
-        <p style={proseP}>
+        <p className="pj" style={proseP}>
           Dưới đây là những phản hồi chi tiết dành cho các tình huống viết phổ biến, giúp bạn nhận ra điểm kẹt của mình và cách vượt qua.
         </p>
       </Reveal>

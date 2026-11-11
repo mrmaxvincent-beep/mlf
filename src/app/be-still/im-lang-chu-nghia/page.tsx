@@ -204,7 +204,7 @@ export default function ImLangChuNghiaPage() {
                   alignItems: "center",
                   justifyContent: "center",
                   fontFamily: "var(--font-mono)",
-                  fontSize: "0.58rem",
+                  fontSize: "0.72rem",
                   color: "var(--color-cham-dem)",
                 }}
               >
@@ -233,7 +233,7 @@ export default function ImLangChuNghiaPage() {
               <div key={w.n} className="week-block" style={{ display: "grid", gridTemplateColumns: "3.5rem 1fr", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem" }}>
                 <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2.2rem", color: "var(--color-ink)", lineHeight: 1 }}>{w.n}</span>
                 <div>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.4rem" }}>{w.week}</span>
+                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.4rem" }}>{w.week}</span>
                   <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.05rem", color: "var(--color-ink)", marginBottom: "0.7rem" }}>{w.title}</span>
                   {w.items.map((it) => (
                     <div key={it} className="li-item" style={{ padding: "0.3rem 0" }}>
@@ -284,7 +284,7 @@ export default function ImLangChuNghiaPage() {
         </div>
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", textAlign: "justify", margin: 0, fontStyle: "italic" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", textAlign: "justify", margin: 0, fontStyle: "italic" }}>
           *Trong trường hợp vì lý do bất khả kháng, bạn bỏ lỡ bất kỳ buổi học nào, chúng tôi sẽ gửi bạn tài liệu và bản ghi của buổi học đó.
         </p>
       </div>
@@ -336,11 +336,11 @@ export default function ImLangChuNghiaPage() {
           ].map((tier) => (
             <div key={tier.d} style={{ background: "var(--color-paper)", padding: "1.6rem", textAlign: "center" }}>
               <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>{tier.p}</span>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>{tier.d}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>{tier.d}</span>
             </div>
           ))}
         </div>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", textAlign: "justify", margin: "1.25rem 0 0", fontStyle: "italic" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-stone-alt)", textAlign: "justify", margin: "1.25rem 0 0", fontStyle: "italic" }}>
           *Chương trình đồng hành này chỉ dành cho người sau khi đã học lớp im lặng, chữ nghĩa.
         </p>
       </div>
@@ -367,7 +367,7 @@ export default function ImLangChuNghiaPage() {
             <br />
             Anh Tâm đã đưa chữ trở về trong em.
           </p>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>— học viên khóa một</span>
+          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>— học viên khóa một</span>
         </div>
       </Reveal>
 
@@ -394,22 +394,22 @@ export default function ImLangChuNghiaPage() {
           tham khảo thêm hành trình khác
         </span>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "baseline", gap: "1rem", flexWrap: "wrap" }}>
-          <Link className="mono-link" href={routes.khaiTam} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.khaiTam} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             khai tâm
           </Link>
           <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.clariTea} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.clariTea} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             clari-tea
           </Link>
           <span style={{ color: "var(--color-mist)", fontSize: "0.7rem" }}>·</span>
-          <Link className="mono-link" href={routes.phiaSang} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.phiaSang} style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             phía sáng
           </Link>
         </div>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.beStill} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang be-still <span className="ar">→</span>
         </Link>
       </div>

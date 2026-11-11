@@ -68,9 +68,9 @@ export default function ThuanDuongPage() {
           gốc rễ vẫn là Hatha Yoga cổ điển — nơi hơi thở là trung tâm, tư thế chỉ là phương tiện, và tâm mới là đích đến.
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: "2.2rem", marginTop: "1.6rem" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>thở</span>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>asana</span>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>tâm</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>thở</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>asana</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>tâm</span>
         </div>
         <div style={{ textAlign: "center", marginTop: "1.6rem" }}>
           <Motif name="thien-toa" size={90} />
@@ -214,7 +214,7 @@ export default function ThuanDuongPage() {
               </div>
             </div>
           </div>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
             + 1 buổi tập PT 1-1 với từng học viên/trong tháng - để giải quyết những vấn đề riêng mà buổi tập chung chưa giải quyết hết được, và để trao đổi về sức khỏe, tinh thần, giấc ngủ, chế độ ăn uống và các phương pháp dưỡng sinh.
           </p>
         </div>
@@ -239,7 +239,7 @@ export default function ThuanDuongPage() {
         <div>
           <span style={{ display: "block", fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.05rem", color: "var(--color-ink)", marginBottom: "0.9rem" }}>4 · học phí</span>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap", maxWidth: "500px", margin: "0 auto", padding: "0.9rem 0", borderTop: "1px solid var(--color-mist)", borderBottom: "1px solid var(--color-mist)" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}>lớp cộng đồng</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-stone)" }}>lớp cộng đồng</span>
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.15rem", color: "var(--color-ink)" }}>1.000.000 đ / tháng</span>
           </div>
         </div>
@@ -295,7 +295,7 @@ export default function ThuanDuongPage() {
       <div className="wrap-wide" style={{ marginBottom: "5rem", maxWidth: "672px" }}>
         <div style={{ border: "1px solid var(--color-mist)", padding: "2.5rem 2rem" }}>
           <span className="eyebrow" style={{ color: "var(--color-ink)" }}>tập luyện cá nhân (PT)</span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 2rem" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 2rem" }}>
             Lớp PT được thiết kế riêng dựa trên mục tiêu, thể trạng và nhu cầu cá nhân của từng học viên - đảm bảo hiệu quả cao hơn so với các lớp cộng đồng có chương trình chung cho nhiều người. Thời gian tập: 03 buổi/tuần, mỗi buổi 1 tiếng 15 phút, linh hoạt theo thời gian của người tập, trong 01 đến 03 tháng.
           </p>
           <span className="eyebrow" style={{ color: "var(--color-ink)" }}>tập trung giải quyết</span>
@@ -308,7 +308,7 @@ export default function ThuanDuongPage() {
             ))}
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem", flexWrap: "wrap", borderTop: "1px solid var(--color-mist)", paddingTop: "1.2rem" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-ink)" }}>học phí lớp cá nhân hoá</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-ink)" }}>học phí lớp cá nhân hoá</span>
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", color: "var(--color-ink)" }}>600.000 đ / buổi</span>
           </div>
           <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.82rem", color: "var(--color-ink)", margin: "0.6rem 0 0" }}>Lớp nhóm: 2 người — 4,2 triệu/người/12 buổi · 3 người — 3,6 triệu/người/12 buổi.</p>
@@ -318,7 +318,7 @@ export default function ThuanDuongPage() {
             liên hệ tư vấn <span className="ar">→</span>
           </a>
           <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap", marginTop: "1.5rem" }}>
-            <a className="mono-link" href="tel:0988039296" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}>
+            <a className="mono-link tap" href="tel:0988039296" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-ink)" }}>
               098 803 92 96 · zalo/sms/call
             </a>
           </div>
@@ -334,7 +334,7 @@ export default function ThuanDuongPage() {
             key={t.name}
             trigger={
               <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1.05rem", color: "var(--color-ink)" }}>
-                {t.name} <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.04em", color: "var(--color-stone)", fontWeight: 400 }}>— {t.meta}</span>
+                {t.name} <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.04em", color: "var(--color-stone)", fontWeight: 400 }}>— {t.meta}</span>
               </span>
             }
           >
@@ -348,7 +348,7 @@ export default function ThuanDuongPage() {
       </RevealStagger>
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <Link className="mono-link" href={routes.touch} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="mono-link tap" href={routes.touch} style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           ← xem lại touch
         </Link>
       </div>

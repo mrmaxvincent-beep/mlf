@@ -32,7 +32,7 @@ export default function BeStillPage() {
         <h1 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(2.4rem, 7vw, 3.8rem)", lineHeight: 1.1, color: "var(--color-ink)", margin: "0 0 0.6rem" }}>
           be-still
         </h1>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginBottom: "1.6rem" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginBottom: "1.6rem" }}>
           làm việc với tâm
         </span>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "0.9rem", marginBottom: "2.5rem" }}>
@@ -65,8 +65,8 @@ export default function BeStillPage() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "5rem", maxWidth: "56ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>be-still không phải nơi chữa lành, cũng không phải nơi tu học.</p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>be-still không phải nơi chữa lành, cũng không phải nơi tu học.</p>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.25rem" }}>
           be-still là một không gian an tĩnh để bạn tự thấy rõ, tự quyết định, tự chịu trách nhiệm cho con đường của mình.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>
@@ -97,7 +97,7 @@ export default function BeStillPage() {
         <span className="eyebrow" style={{ color: "var(--color-ink)" }}>người hướng dẫn</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "52ch" }}>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.5rem" }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", textAlign: "justify", margin: "0 0 1.5rem" }}>
           tôi là Hồ Thành Tâm, người sáng lập mộc little farm.
         </p>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.8, color: "var(--color-ink)", textAlign: "center", margin: "0 0 1.5rem" }}>
@@ -112,10 +112,10 @@ export default function BeStillPage() {
           <br />
           cũng không mang đạo học ra khỏi đời sống.
         </p>
-        <p style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+        <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.85, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
           nếu đủ duyên, ta cùng đồng hành để tự thấy rõ chính mình và quanh mình.
         </p>
-        <span style={{ display: "block", textAlign: "center", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginTop: "1.5rem" }}>
+        <span style={{ display: "block", textAlign: "center", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone-alt)", marginTop: "1.5rem" }}>
           tâm · mộc little farm
         </span>
       </Reveal>
@@ -129,7 +129,7 @@ export default function BeStillPage() {
             target="_blank"
             rel="noopener"
             className="mono-link"
-            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
           >
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
               <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" />
@@ -143,7 +143,7 @@ export default function BeStillPage() {
             target="_blank"
             rel="noopener"
             className="mono-link"
-            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}
           >
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
               <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.4" />
@@ -155,7 +155,7 @@ export default function BeStillPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch" }}>
-        <a className="go mono-link" href="https://www.bestill.life/" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+        <a className="go mono-link tap" href="https://www.bestill.life/" target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path d="M5 4h10l4 4v12H5V4Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
             <path d="M15 4v4h4" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />

@@ -53,7 +53,7 @@ export function OYenCanBanPicker({
                 cursor: "pointer",
                 padding: 0,
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.62rem",
+                fontSize: "0.72rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 color: "var(--color-stone)",
@@ -61,7 +61,7 @@ export function OYenCanBanPicker({
             >
               ← quay lại danh sách bài
             </button>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
               phần {current.roman} · {current.name} · bài {String(lesson.num).padStart(2, "0")}
             </span>
             <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.4, color: "var(--color-ink)", margin: lesson.subtitle ? "0 0 0.4rem" : "0 0 1.4rem" }}>
@@ -72,7 +72,7 @@ export function OYenCanBanPicker({
                 {lesson.subtitle}
               </span>
             ) : null}
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.98rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+            <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.98rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
               {lesson.body}
             </p>
           </>

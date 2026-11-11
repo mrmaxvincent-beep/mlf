@@ -59,7 +59,7 @@ export function HoiDuongCompose({ topicId }: { topicId?: string }) {
           resize: "vertical",
           fontFamily: "var(--font-sans)",
           fontWeight: 300,
-          fontSize: "0.95rem",
+          fontSize: "1rem",
           color: "var(--color-ink)",
           background: "transparent",
           border: "none",
@@ -78,7 +78,7 @@ export function HoiDuongCompose({ topicId }: { topicId?: string }) {
           fontFamily: "var(--font-sans)",
           fontStyle: "italic",
           fontWeight: 300,
-          fontSize: "0.95rem",
+          fontSize: "1rem",
           color: "var(--color-ink)",
           background: "transparent",
           border: "none",
@@ -88,20 +88,21 @@ export function HoiDuongCompose({ topicId }: { topicId?: string }) {
         }}
       />
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.4rem" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: question.length > 900 ? "#b5715c" : "var(--color-stone)" }}>{question.length} / 1000</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: question.length > 900 ? "#b5715c" : "var(--color-stone)" }}>{question.length} / 1000</span>
         <button
           onClick={send}
           disabled={!question.trim() || sending}
           className="one-day-btn"
           style={{
             fontFamily: "var(--font-mono)",
-            fontSize: "0.62rem",
+            fontSize: "0.72rem",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             background: "none",
             border: "none",
             color: "var(--color-stone)",
-            padding: 0,
+            padding: "0.75rem 0.6rem",
+            margin: "-0.75rem -0.6rem",
             cursor: question.trim() && !sending ? "pointer" : "default",
             opacity: question.trim() ? 1 : 0.5,
           }}

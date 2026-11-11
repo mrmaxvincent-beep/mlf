@@ -92,7 +92,7 @@ export function NepNhaPicker({
                 cursor: "pointer",
                 padding: 0,
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.62rem",
+                fontSize: "0.72rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 color: "var(--color-stone)",
@@ -100,13 +100,13 @@ export function NepNhaPicker({
             >
               ← quay lại danh sách bài
             </button>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
               {current.roman} · {current.name}
             </span>
             <h2 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.5rem", lineHeight: 1.4, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
               {article.title}
             </h2>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.98rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
+            <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.98rem", lineHeight: 1.95, color: "var(--color-ink)", textAlign: "justify", margin: 0 }}>
               {article.body}
             </p>
           </>
@@ -119,7 +119,7 @@ export function NepNhaPicker({
               <div style={{ display: "flex", flexDirection: "column", gap: "2.2rem" }}>
                 {current.groups.map((g) => (
                   <div key={g.letter}>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
+                    <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
                       {g.letter}. {g.name}
                     </span>
                     <div>

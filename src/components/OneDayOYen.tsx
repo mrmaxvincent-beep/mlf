@@ -330,18 +330,18 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
                   onChange={(e) => setNoteValue(e.target.value.slice(0, 300))}
                   maxLength={300}
                   placeholder="hôm nay của bạn thế nào…"
-                  style={{ width: "100%", minHeight: 120, resize: "vertical", fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "0.95rem", color: "var(--color-ink)", background: "transparent", border: "none", borderBottom: "1px solid var(--color-mist)", padding: "0.4rem 0 0.9rem", lineHeight: 1.95 }}
+                  style={{ width: "100%", minHeight: 120, resize: "vertical", fontFamily: "var(--font-sans)", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", background: "transparent", border: "none", borderBottom: "1px solid var(--color-mist)", padding: "0.4rem 0 0.9rem", lineHeight: 1.95 }}
                 />
                 <input
                   value={noteWhere}
                   onChange={(e) => setNoteWhere(e.target.value.slice(0, 40))}
                   maxLength={40}
                   placeholder="bạn đang ở đâu?"
-                  style={{ width: "100%", fontFamily: "var(--font-sans)", fontStyle: "italic", fontWeight: 300, fontSize: "0.95rem", color: "var(--color-ink)", background: "transparent", border: "none", borderBottom: "1px solid var(--color-mist)", padding: "0.5rem 0", marginTop: "0.9rem" }}
+                  style={{ width: "100%", fontFamily: "var(--font-sans)", fontStyle: "italic", fontWeight: 300, fontSize: "1rem", color: "var(--color-ink)", background: "transparent", border: "none", borderBottom: "1px solid var(--color-mist)", padding: "0.5rem 0", marginTop: "0.9rem" }}
                 />
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.4rem" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", color: noteValue.length > 255 ? "#b5715c" : "var(--color-stone)" }}>{noteValue.length} / 300</span>
-                  <button onClick={sendNote} className="one-day-btn" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.12em", textTransform: "uppercase", background: "none", border: "none", color: "var(--color-stone)", padding: 0, cursor: "pointer", whiteSpace: "nowrap" }}>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: noteValue.length > 255 ? "#b5715c" : "var(--color-stone)" }}>{noteValue.length} / 300</span>
+                  <button onClick={sendNote} className="one-day-btn" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", background: "none", border: "none", color: "var(--color-stone)", padding: "0.75rem 0.6rem", margin: "-0.75rem -0.6rem", cursor: "pointer", whiteSpace: "nowrap" }}>
                     gửi đi →
                   </button>
                 </div>

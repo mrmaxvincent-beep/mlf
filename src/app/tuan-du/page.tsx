@@ -102,7 +102,7 @@ export default function TuanDuPage() {
             const labelWeight = t.tier === "next" ? 700 : t.tier === "current" ? 600 : 400;
             const captionStyle: React.CSSProperties = {
               fontFamily: "var(--font-mono)",
-              fontSize: "0.56rem",
+              fontSize: "0.72rem",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
               whiteSpace: "nowrap",
@@ -111,7 +111,7 @@ export default function TuanDuPage() {
             const inner = (
               <>
                 <span style={{ display: "block", width: dotSize, height: dotSize, borderRadius: "50%", background: dotColor, margin: "0 auto 0.65rem" }} />
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.06em", whiteSpace: "nowrap", color: labelColor, fontWeight: labelWeight }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", whiteSpace: "nowrap", color: labelColor, fontWeight: labelWeight }}>
                   tuần-du {t.n}
                 </span>
                 {t.href ? (
@@ -275,7 +275,7 @@ export default function TuanDuPage() {
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <div style={{ display: "flex", alignItems: "stretch", justifyContent: "center" }}>
           <div style={{ flex: "1 1 220px", textAlign: "right", paddingRight: "1.8rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
               ở nhà mộc
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
@@ -290,7 +290,7 @@ export default function TuanDuPage() {
           </div>
 
           <div style={{ flex: "1 1 220px", textAlign: "left", paddingLeft: "1.8rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
               tuần-du
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", lineHeight: 1.8, color: "var(--color-ink)", margin: 0 }}>
@@ -372,7 +372,7 @@ export default function TuanDuPage() {
         <span className="eyebrow" style={{ marginBottom: 0, color: "var(--color-cham-dem)" }}>
           những nơi tuần-du đã đi qua
         </span>
-        <Link className="go mono-link" href={routes.chuoiTuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.chuoiTuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           xem toàn bộ chuỗi <span className="ar">→</span>
         </Link>
       </div>
@@ -385,7 +385,7 @@ export default function TuanDuPage() {
             <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-stone-alt)" }}>{ky.num}</span>
             <div>
               <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "1.05rem", fontWeight: 500, color: "var(--color-ink)" }}>{ky.title}</span>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.3rem" }}>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-stone)", marginTop: "0.3rem" }}>
                 {ky.places}
               </span>
             </div>
@@ -409,7 +409,7 @@ export default function TuanDuPage() {
         <span className="eyebrow" style={{ marginBottom: 0, color: "var(--color-cham-dem)" }}>
           người tham gia viết về tuần-du
         </span>
-        <Link className="go mono-link" href={routes.tuanDuBlog} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.tuanDuBlog} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           đọc thêm ở tuần-du ký <span className="ar">→</span>
         </Link>
       </div>
@@ -420,26 +420,26 @@ export default function TuanDuPage() {
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "48ch", textAlign: "center" }}>
-        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
           không kích hoạt cảm xúc tập thể, không nhảy múa, hô gọi, nắm tay, ôm để tạo cao trào, không dẫn dắt hoặc thúc đẩy cảm xúc.
-          <br />
-          <br />
+        </p>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.4rem" }}>
           mà mọi điều chậm rãi, có ý thức và rất giản đơn. mỗi người được ở yên với nhịp cảm của riêng mình.
-          <br />
-          <br />
+        </p>
+        <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.9rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0" }}>
           chúng tôi tin rằng sự chạm sâu nhất luôn đến từ im lặng, từ sự hiện diện chân thật, và từ một không gian đủ dịu để mỗi người tự lắng nghe chính mình.
         </p>
       </div>
 
       <div className="wrap" style={{ marginTop: "5rem", marginBottom: "6rem", maxWidth: "52ch" }}>
         <div style={{ borderTop: "1px solid var(--color-mist)", paddingTop: "1.75rem" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", lineHeight: 1.9, color: "var(--color-stone)", margin: "0 0 1rem", textAlign: "justify" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", lineHeight: 1.9, color: "var(--color-stone)", margin: "0 0 1rem", textAlign: "justify" }}>
             các chương trình retreat / tuần-du tại mlf được tổ chức như những hành trình trải nghiệm đời sống và thực hành sự hiện diện, trong đó việc đi – ở – dừng lại – quan sát là một phần của quá trình quay về với chính mình. đây không phải là hoạt động kinh doanh lữ hành, không phải tour du lịch trọn gói, và không mang tính tham quan – thuyết minh điểm đến. đội ngũ mlf không đảm nhiệm vai trò hướng dẫn viên du lịch hay đơn vị cung cấp dịch vụ du lịch.
           </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", lineHeight: 1.9, color: "var(--color-stone)", margin: 0, textAlign: "justify" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", lineHeight: 1.9, color: "var(--color-stone)", margin: 0, textAlign: "justify" }}>
             phí tham gia được hiểu là sự đóng góp cho không gian thực hành, nội dung dẫn dắt và sự hiện diện chung. việc di chuyển, ăn ở và các chi phí phát sinh trong hành trình được người tham gia cùng nhau chia sẻ, dựa trên tinh thần tự nguyện và đồng thuận.
           </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", lineHeight: 1.9, color: "var(--color-stone)", margin: 0, textAlign: "justify" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.68rem", lineHeight: 1.9, color: "var(--color-stone)", margin: 0, textAlign: "justify" }}>
             không gian này được mở ra để cùng đi – cùng ở – cùng nhìn lại cách mình đang sống, chứ không nhằm cung cấp dịch vụ du lịch hay trải nghiệm giải trí thuần túy.
           </p>
         </div>

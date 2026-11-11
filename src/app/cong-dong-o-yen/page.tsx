@@ -117,7 +117,7 @@ export default function CongDongOYenPage() {
                   />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginBottom: "0.6rem" }}>
+                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginBottom: "0.6rem" }}>
                     {s.num} · {s.en}
                   </span>
                   <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.4rem", color: "var(--color-ink)", marginBottom: "0.6rem" }}>
@@ -193,10 +193,10 @@ export default function CongDongOYenPage() {
               </span>
               <div style={{ position: "relative", maxWidth: "58ch" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.9rem", marginBottom: "0.9rem" }}>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink)" }}>{r.en}</span>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink)" }}>{r.en}</span>
                 </div>
                 <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.4rem", color: "var(--color-ink)", margin: "0 0 0.9rem" }}>{r.title}</h3>
-                <p style={{ fontSize: "1rem", color: "var(--color-ink)", lineHeight: 1.85, textAlign: "justify", margin: 0 }}>{r.desc}</p>
+                <p className="pj" style={{ fontSize: "1rem", color: "var(--color-ink)", lineHeight: 1.85, textAlign: "justify", margin: 0 }}>{r.desc}</p>
               </div>
               {i < reasons.length - 1 ? (
                 <div style={{ marginTop: "1.9rem", height: "1px", background: "var(--color-mist)" }} />
@@ -219,7 +219,7 @@ export default function CongDongOYenPage() {
                 <div style={{ width: "100%", maxWidth: "110px", aspectRatio: "3/4", margin: "0 auto 1.2rem", borderRadius: "0.5rem", overflow: "hidden" }}>
                   <ImagePlaceholder label={k.label} src={k.src} aspectRatio="3/4" style={{ width: "100%", height: "100%" }} />
                 </div>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", lineHeight: 1.5, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem", minHeight: "1.75rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", lineHeight: 1.5, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem", minHeight: "1.75rem" }}>
                   0{i + 1} · {k.role}
                 </span>
                 <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.7rem", color: "var(--color-ink)", marginBottom: "0.7rem" }}>{k.name}</span>

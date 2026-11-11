@@ -64,7 +64,7 @@ export default function GiuaPage() {
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.4rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>
           stillness + culture
         </span>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
           câu chuyện của mộc little farm ở Huế
         </span>
       </div>
@@ -94,7 +94,7 @@ export default function GiuaPage() {
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         <p style={bodyText}>
           một điều thú vị chúng tôi sẽ làm ở Huế:{" "}
-          <a className="mono-link" href="https://www.instagram.com/giua.middle" target="_blank" rel="noopener" style={{ verticalAlign: "baseline", display: "inline" }}>
+          <a className="mono-link tap" href="https://www.instagram.com/giua.middle" target="_blank" rel="noopener" style={{ verticalAlign: "baseline", display: "inline" }}>
             ÷ giữa
           </a>
         </p>
@@ -122,7 +122,7 @@ export default function GiuaPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "0.6rem" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
           các mức tham gia
         </span>
       </div>
@@ -139,7 +139,7 @@ export default function GiuaPage() {
       </RevealStagger>
 
       <div className="wrap" style={{ marginBottom: "0.6rem" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>
           credit dùng được cho
         </span>
       </div>

@@ -69,7 +69,7 @@ export default function ChuoiTuanDuPage() {
                           border: "1px solid var(--color-ink)",
                           borderRadius: "999px",
                           fontFamily: "var(--font-mono)",
-                          fontSize: "0.55rem",
+                          fontSize: "0.72rem",
                           letterSpacing: "0.1em",
                           textTransform: "uppercase",
                           color: "var(--color-cham-dem)",
@@ -80,7 +80,7 @@ export default function ChuoiTuanDuPage() {
                       </span>
                     ) : null}
                   </div>
-                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.05em", color: "var(--color-stone)", marginBottom: "0.6rem" }}>
+                  <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.05em", color: "var(--color-stone)", marginBottom: "0.6rem" }}>
                     {c.places} · {c.duration}
                   </span>
                   {c.tagline ? <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.02rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0, maxWidth: "42ch" }}>{c.tagline}</p> : null}

@@ -43,11 +43,11 @@ export default function TuanDu04Page() {
         </span>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(9rem, 1fr))", gap: "1.5rem", borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-stone)" }}>địa điểm</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-stone)" }}>địa điểm</span>
             <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", color: "var(--color-ink)" }}>An The Village · Thôn 2, Xã Suối Rao, Huyện Châu Đức, Tỉnh Bà Rịa - Vũng Tàu</span>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-stone)" }}>thời gian</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-stone)" }}>thời gian</span>
             <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", color: "var(--color-ink)" }}>10.10 - 11.10.2026</span>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function TuanDu04Page() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "4.5rem", marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>Bữa cơm. Căn bếp. Việc ngồi cạnh một người mà không phải đóng vai gì.</p>
+        <p className="pj" style={proseP}>Bữa cơm. Căn bếp. Việc ngồi cạnh một người mà không phải đóng vai gì.</p>
         <p style={{ ...proseP, margin: 0 }}>Chất liệu của chuyến này — là chính mình, khi được để yên.</p>
       </Reveal>
 
@@ -71,18 +71,18 @@ export default function TuanDu04Page() {
       </div>
 
       <Reveal className="wrap" style={{ marginTop: "3.5rem", marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>bạn có nhận ra rằng phần lớn thời gian, ta chỉ đóng vai một con người: vai công việc, vai người hiểu biết, vai người đang cố gắng trở nên tốt hơn…</p>
-        <p style={proseP}>nhiều khi ta nói chuyện, nhưng không thật sự nói điều mình nghĩ.</p>
-        <p style={proseP}>cười, nhưng không biết mình có đang vui không.</p>
-        <p style={proseP}>mệt, nhưng không dừng lại, vì &ldquo;ai cũng vậy&rdquo;.</p>
-        <p style={proseP}>dần dần,</p>
-        <p style={proseP}>mình không còn biết:</p>
+        <p className="pj" style={proseP}>bạn có nhận ra rằng phần lớn thời gian, ta chỉ đóng vai một con người: vai công việc, vai người hiểu biết, vai người đang cố gắng trở nên tốt hơn…</p>
+        <p className="pj" style={proseP}>nhiều khi ta nói chuyện, nhưng không thật sự nói điều mình nghĩ.</p>
+        <p className="pj" style={proseP}>cười, nhưng không biết mình có đang vui không.</p>
+        <p className="pj" style={proseP}>mệt, nhưng không dừng lại, vì &ldquo;ai cũng vậy&rdquo;.</p>
+        <p className="pj" style={proseP}>dần dần,</p>
+        <p className="pj" style={proseP}>mình không còn biết:</p>
         <p style={{ ...proseP, margin: 0 }}>cảm giác &ldquo;chỉ là mình&rdquo; nó như thế nào.</p>
       </Reveal>
 
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>cũng mấy khi ta chủ động dừng lại để nghỉ ngơi, nhưng:</p>
-        <p style={proseP}>hình như vẫn đang cố trở thành một phiên bản tốt hơn</p>
+        <p className="pj" style={proseP}>cũng mấy khi ta chủ động dừng lại để nghỉ ngơi, nhưng:</p>
+        <p className="pj" style={proseP}>hình như vẫn đang cố trở thành một phiên bản tốt hơn</p>
         <p style={{ ...proseP, margin: 0 }}>lúc đó, thật ra mình chỉ đổi vai.</p>
       </Reveal>
 
@@ -93,7 +93,7 @@ export default function TuanDu04Page() {
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "56ch" }}>
-        <p style={proseP}>chỉ:</p>
+        <p className="pj" style={proseP}>chỉ:</p>
         <div style={{ marginBottom: "1.15rem" }}>
           {["ăn khi đói", "nói khi muốn nói", "im khi không muốn nói", "ở cạnh người khác mà không phải dè chừng"].map((item) => (
             <div key={item} style={{ display: "flex", gap: "0.7rem", padding: "0.3rem 0", fontFamily: "var(--font-sans)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)" }}>
@@ -166,7 +166,7 @@ export default function TuanDu04Page() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.tuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.tuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang tuần-du <span className="ar">→</span>
         </Link>
       </div>

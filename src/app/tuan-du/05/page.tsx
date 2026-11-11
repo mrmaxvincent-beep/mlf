@@ -48,7 +48,7 @@ const bodyP: React.CSSProperties = {
 const label: React.CSSProperties = {
   display: "block",
   fontFamily: "var(--font-mono)",
-  fontSize: "0.58rem",
+  fontSize: "0.72rem",
   letterSpacing: "0.16em",
   textTransform: "uppercase",
   color: "var(--color-stone)",
@@ -140,7 +140,7 @@ export default function TuanDu05Page() {
         {features.map((f) => (
           <div key={f.title}>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.6rem", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>{f.icon}</span>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.5rem" }}>{f.title}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.5rem" }}>{f.title}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.75, color: "var(--color-stone-alt)", margin: 0 }}>{f.desc}</p>
           </div>
         ))}
@@ -174,7 +174,7 @@ export default function TuanDu05Page() {
                 alignItems: "center",
                 justifyContent: "center",
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.62rem",
+                fontSize: "0.72rem",
                 color: d.pause ? "var(--color-paper)" : "var(--color-stone)",
               }}
             >
@@ -202,7 +202,7 @@ export default function TuanDu05Page() {
         {routeStats.map((s) => (
           <div key={s.label} style={{ textAlign: "center" }}>
             <span style={{ display: "block", fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "1.9rem", color: "var(--color-ink)", lineHeight: 1.1 }}>{s.value}</span>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginTop: "0.5rem" }}>{s.label}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)", marginTop: "0.5rem" }}>{s.label}</span>
           </div>
         ))}
       </div>
@@ -215,7 +215,7 @@ export default function TuanDu05Page() {
         <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.25, color: "var(--color-ink)", margin: 0 }}>
           nơi chạm tâm
         </h2>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           vuốt để đi tiếp →
         </span>
       </Reveal>
@@ -242,7 +242,7 @@ export default function TuanDu05Page() {
         <div>
           <ImagePlaceholder label="ảnh · am Ngọa Vân trong sương" aspectRatio="2048/1075" objectPosition="top" src="/assets/langthiengoavan.webp" alt="am Ngọa Vân trong sương" />
         </div>
-        <span className="wrap" style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginTop: "0.7rem" }}>
+        <span className="wrap" style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginTop: "0.7rem" }}>
           góc nhìn từ Ngọa Vân Am
         </span>
       </div>
@@ -294,7 +294,7 @@ export default function TuanDu05Page() {
         <div className="info-grid" style={{ border: "1px solid var(--color-mist)", background: "var(--color-paper)", padding: "1.75rem 2rem" }}>
           {practical.map((p) => (
             <div key={p.label}>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>{p.label}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.45rem" }}>{p.label}</span>
               <span style={{ display: "block", fontFamily: "var(--font-serif)", fontSize: "1.15rem", color: "var(--color-ink)", lineHeight: 1.4 }}>{p.value}</span>
               {p.note ? (
                 <span style={{ display: "block", fontFamily: "var(--font-sans)", fontSize: "0.76rem", color: "var(--color-stone-alt)", marginTop: "0.25rem" }}>{p.note}</span>
@@ -388,16 +388,16 @@ export default function TuanDu05Page() {
       </div>
       <div className="wrap" style={{ marginBottom: "2.5rem" }}>
         <div style={{ border: "1px solid var(--color-mist)", background: "var(--color-paper)", padding: "1.75rem 2rem" }}>
-          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.9rem" }}>
+          <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.9rem" }}>
             về chi phí
           </span>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
             Đây là một chuyến đi riêng, không phải tour thương mại có giá cố định, mà là một hành trình nhỏ nơi cả đoàn cùng chia sẻ chi phí tổ chức với nhau. Vì vậy chi phí mỗi người đóng sẽ gắn với số lượng người tham gia thật sự của chuyến, chứ không phải một con số cố định từ đầu — đoàn đông thì phần chi phí chung (xe, đội tổ chức, các khoản vận hành khác) được san sẻ cho nhiều người hơn nên mỗi người nhẹ hơn; đoàn ít người thì phần đó dồn lại trên số người ít hơn.
           </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1rem", textAlign: "justify" }}>
             Cụ thể, nếu đủ 9–10 người tham gia, mức đóng góp là 13.000.000đ/người; nếu chỉ 6–8 người, mức đóng góp là 15.000.000đ/người.
           </p>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
+          <p className="pj" style={{ fontFamily: "var(--font-sans)", fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0, textAlign: "justify" }}>
             Để bạn có thể đăng ký sớm mà không phải chờ đến sát ngày mới biết chi phí cụ thể, bạn đóng trước ở mức 13.000.000đ khi đăng ký. Đến ngày 26.02.2027, khi số lượng người tham gia được chốt lại, nếu đoàn cuối cùng chỉ đạt 6–8 người thì bạn đóng thêm phần chênh lệch trước ngày khởi hành; còn nếu đoàn đủ 9–10 người, mức bạn đã đóng chính là mức cuối cùng.
           </p>
         </div>
@@ -439,7 +439,7 @@ export default function TuanDu05Page() {
           <div key={n.title} style={{ borderTop: i === 0 ? "1px solid var(--color-mist)" : "none", borderBottom: "1px solid var(--color-mist)" }}>
             <details>
               <summary style={{ cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem", padding: "1.1rem 0" }}>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>{n.title}</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>{n.title}</span>
                 <span className="acc-icon" style={{ fontSize: "0.95rem" }}>+</span>
               </summary>
               <div style={{ paddingBottom: "1.6rem" }}>
@@ -460,7 +460,7 @@ export default function TuanDu05Page() {
       <div className="wrap" style={{ marginBottom: "3.5rem" }}>
         <Accordion label="chính sách hoàn hủy">
           <div style={{ marginBottom: "2.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.9rem" }}>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.9rem" }}>
               1. huỷ từ phía người tham gia
             </span>
             {refunds.map((r) => (
@@ -474,15 +474,15 @@ export default function TuanDu05Page() {
             </div>
           </div>
           <div style={{ borderTop: "1px solid var(--color-mist)", paddingTop: "2.5rem", marginBottom: "2.5rem" }}>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>2. huỷ do bất khả kháng</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>2. huỷ do bất khả kháng</span>
             <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "0.85rem", color: "var(--color-stone)", margin: "0 0 1.25rem" }}>Dịch bệnh, thiên tai, chiến tranh, chính sách nhà nước…</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }} className="info-grid">
               <div style={{ padding: "1.5rem", border: "1px solid var(--color-mist)" }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>từ phía BTC</span>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>từ phía BTC</span>
                 <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>Nếu BTC buộc phải huỷ chương trình, 100% chi phí sẽ được bảo lưu hoặc hoàn lại theo lựa chọn của người tham gia.</p>
               </div>
               <div style={{ padding: "1.5rem", border: "1px solid var(--color-mist)" }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>từ phía người tham gia</span>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.7rem" }}>từ phía người tham gia</span>
                 <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.7rem" }}>Nếu không thể đến do lệnh cấm di chuyển hoặc lý do bất khả kháng, 100% chi phí được bảo lưu cho chương trình sau.</p>
                 <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>Nếu tự quyết định huỷ do lo ngại cá nhân, áp dụng chính sách huỷ thông thường ở mục 1.</p>
               </div>
@@ -509,11 +509,11 @@ export default function TuanDu05Page() {
             đăng ký tuần-du 05 <span className="ar">→</span>
           </RegistrationLink>
         </div>
-        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", color: "var(--color-stone)", margin: "1rem 0 0" }}>hạn chót đăng ký: 26.02.2027</p>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-stone)", margin: "1rem 0 0" }}>hạn chót đăng ký: 26.02.2027</p>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link className="go mono-link" href={routes.tuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link className="go mono-link tap" href={routes.tuanDu} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang tuần-du <span className="ar">→</span>
         </Link>
       </div>

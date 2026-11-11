@@ -764,13 +764,14 @@ html{overscroll-behavior-y:contain}
       <label>ngày nhận<input name="date" type="date" required></label>
       <label>tài khoản nhận<select name="acc" required></select></label>
       <label>loại<select name="kind" required></select></label>
+      <label class="w2" id="incBkWrap" hidden>booking ID<select name="bk"></select></label>
       <label class="w2">nội dung<input name="content" required maxlength="160" placeholder="vd: cọc Nguyễn Văn A, bán trà"></label>
       <div class="factions"><button class="solid" type="submit" id="incSubmit">lưu khoản thu</button><button class="ghost" type="button" id="incCancel" hidden>huỷ sửa</button><span class="meta exp-by">người nhập: <b id="incWho"></b></span></div>
     </form>
     <div class="wk-nav" id="incNav"></div>
     <div class="card" id="incSum"></div>
     <div id="incList"></div>
-    <div class="exp-export"><button class="ghost" type="button" id="incExport">xuất file thu tháng này (csv)</button><a class="meta exp-sheet" href="https://docs.google.com/spreadsheets/d/1cIZ5GBptpb5NRbrWDER1Jy91k8K34H1abjg7AYGoGX8/edit?gid=880005#gid=880005" target="_blank" rel="noopener">Xem chi tiết trên Google Sheets Finance ↗</a></div>
+    <div class="exp-export"><button class="ghost" type="button" id="incExport">xuất file thu tháng này (csv)</button><a class="meta exp-sheet" href="https://docs.google.com/spreadsheets/d/1cIZ5GBptpb5NRbrWDER1Jy91k8K34H1abjg7AYGoGX8/edit?gid=880005#gid=880005" target="_blank" rel="noopener">Xem chi tiết trên Google Sheets Finance ↗</a><button class="ghost syncNow" type="button">đồng bộ ngay</button><span class="meta syncStat"></span></div>
   </section>
 
   <section class="blk" id="chi" hidden>
@@ -791,7 +792,7 @@ html{overscroll-behavior-y:contain}
     <div class="wk-nav" id="expNav"></div>
     <div class="card" id="expSum"></div>
     <div id="expList"></div>
-    <div class="exp-export"><button class="ghost" type="button" id="expExport">xuất file tháng này (csv)</button><a class="meta exp-sheet" href="https://docs.google.com/spreadsheets/d/1cIZ5GBptpb5NRbrWDER1Jy91k8K34H1abjg7AYGoGX8/edit?gid=219719339#gid=219719339" target="_blank" rel="noopener">Xem chi tiết trên Google Sheets Finance ↗</a></div>
+    <div class="exp-export"><button class="ghost" type="button" id="expExport">xuất file tháng này (csv)</button><a class="meta exp-sheet" href="https://docs.google.com/spreadsheets/d/1cIZ5GBptpb5NRbrWDER1Jy91k8K34H1abjg7AYGoGX8/edit?gid=219719339#gid=219719339" target="_blank" rel="noopener">Xem chi tiết trên Google Sheets Finance ↗</a><button class="ghost syncNow" type="button">đồng bộ ngay</button><span class="meta syncStat"></span></div>
   </section>
 
   <footer class="foot"><span class="sig">mộc little farm</span><span>trang nội bộ cho Tâm, Thuận và Vũ. </span>
@@ -1646,14 +1647,56 @@ var NF=$('incForm');
   NF.elements.date.value=today();
   NF.elements.amount.addEventListener('input',function(){var d=this.value.replace(/\D/g,'');this.value=d?Number(d).toLocaleString('vi-VN'):''});
 })();
+/* danh sách booking cho ô Booking ID: lấy từ cùng danh sách trang "sắp tới" (upcoming), chỉ những mục có mã */
+function bkGuest(e){
+  var t=String(e.title||''),i=t.indexOf(' · ');
+  if(i>=0)return t.slice(i+3).replace(/\s*\(\d+\s*ng\)\s*$/,'').trim();
+  var w=String(e.who||'').trim();
+  return /thanh toán|^$/i.test(w)?t.split(':')[0].trim():w;
+}
+function bkLabel(e){return e.code+' · '+bkGuest(e)+' · '+dm(e.start)+(e.end&&e.end!==e.start?' – '+dm(e.end):'')}
+function bkFill(keep){
+  var sel=NF.elements.bk,opts=upcoming().filter(function(e){return e.code}).map(function(e){return [e.code,bkLabel(e)]});
+  if(keep&&!opts.some(function(o){return o[0]===keep})){
+    var ev=S.events.find(function(e){return e.code===keep});opts.push([keep,ev?bkLabel(ev):keep])}
+  sel.replaceChildren.apply(sel,[h('option',{value:''},'— chọn booking —')].concat(opts.map(function(o){return h('option',{value:o[0]},o[1])})));
+  if(keep)sel.value=keep;
+}
 function incKindUI(){
   var k=NF.elements.kind.value;
+  var bkOn=k==='booking';$('incBkWrap').hidden=!bkOn;NF.elements.bk.required=bkOn;
+  if(bkOn&&NF.elements.bk.options.length<2)bkFill(NF.elements.bk.value);
   NF.elements.content.placeholder=k==='mua_goi'?'vd: Nguyễn Văn A · gói 12 triệu':k==='thu_khac'?'vd: bán trà, tiền khách gửi thêm':'vd: cọc Nguyễn Văn A, thanh toán đợt 2';
 }
 NF.elements.kind.addEventListener('change',incKindUI);
 function incRows(){return S.inc.filter(function(r){return monthOf(r.received_on)===S.expMonth})}
 function canEditInc(r){return S.me==='tam'||(r.created_by===S.me&&Date.now()-new Date(r.created_at).getTime()<7*864e5)}
+/* trạng thái đồng bộ sang Google Sheet Finance */
+var SYNC={row:null,at:0};
+function syncFmt(t){var d=new Date(t);return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
+function drawSyncStat(){
+  var r=SYNC.row,txt='',bad=false;
+  if(r){
+    txt=r.last_ok_at?'đồng bộ lần cuối '+syncFmt(r.last_ok_at):'chưa đồng bộ lần nào';
+    if(r.dirty_at)txt+=' · có thay đổi đang chờ đồng bộ';
+    if(r.last_error){txt+=' · lỗi: '+r.last_error;bad=true}
+    else if(r.dirty_at&&Date.now()-new Date(r.dirty_at).getTime()>20*60e3){txt+=' · quá 20 phút chưa đồng bộ';bad=true}
+  }
+  document.querySelectorAll('.syncStat').forEach(function(el){el.textContent=txt;el.style.color=bad?'#b3261e':''});
+}
+async function loadSync(force){
+  if(!sb||(!force&&Date.now()-SYNC.at<15000))return;
+  SYNC.at=Date.now();
+  try{var r=await q(sb.from('sheet_sync').select('*').eq('id',1).maybeSingle());SYNC.row=r;drawSyncStat()}catch(x){}
+}
+document.querySelectorAll('.syncNow').forEach(function(b){b.addEventListener('click',async function(){
+  b.disabled=true;
+  try{await q(sb.rpc('sheet_sync_request'));toast('Đã gửi yêu cầu đồng bộ.')}catch(x){fail(x)}
+  b.disabled=false;setTimeout(function(){loadSync(true)},4000);loadSync(true);
+})});
+setInterval(function(){loadSync(false)},20000);
 function drawIncome(){
+  loadSync(false);
   if(!S.expMonth)S.expMonth=monthOf(today());
   incKindUI();
   var rows=incRows().sort(function(a,b){return b.received_on.localeCompare(a.received_on)||String(b.created_at).localeCompare(String(a.created_at))});
@@ -1684,14 +1727,14 @@ async function delInc(r){
   try{await q(sb.from('incomes').update({deleted:true,deleted_at:now()}).eq('id',r.id))}catch(x){fail(x)}
 }
 function resetIncForm(){
-  S.incEdit=null;NF.elements.amount.value='';NF.elements.content.value='';NF.elements.date.value=today();
+  S.incEdit=null;NF.elements.amount.value='';NF.elements.content.value='';NF.elements.date.value=today();bkFill('');
   $('incSubmit').textContent='lưu khoản thu';$('incCancel').hidden=true;incKindUI();
 }
 function editInc(r){
   S.incEdit=r.id;
   NF.elements.amount.value=Number(r.amount).toLocaleString('vi-VN');NF.elements.date.value=r.received_on;
   NF.elements.acc.value=r.account;NF.elements.kind.value=r.kind;
-  NF.elements.content.value=r.content;incKindUI();
+  NF.elements.content.value=r.content;bkFill(r.booking_id||'');incKindUI();
   $('incSubmit').textContent='cập nhật khoản thu';$('incCancel').hidden=false;
   NF.scrollIntoView({block:'center',behavior:'smooth'});
 }
@@ -1705,7 +1748,9 @@ NF.addEventListener('submit',async function(ev){
   if(!acc){toast('Chọn tài khoản nhận.');return}
   if(!kind){toast('Chọn loại khoản thu.');return}
   if(!content){toast('Nhập nội dung khoản thu.');NF.elements.content.focus();return}
-  var row={received_on:date,amount:amount,account:acc,kind:kind,content:content};
+  var bk=kind==='booking'?NF.elements.bk.value:'';
+  if(kind==='booking'&&!bk){toast('Chọn booking ID cho khoản thu loại Booking.');NF.elements.bk.focus();return}
+  var row={received_on:date,amount:amount,account:acc,kind:kind,content:content,booking_id:bk||null};
   var future=date>today();
   try{
     if(S.incEdit){

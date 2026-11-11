@@ -1789,12 +1789,12 @@ function bkFill(keep){
   var sel=NF.elements.bk,opts=upcoming().filter(function(e){return e.code}).map(function(e){return [e.code,bkLabel(e)]});
   if(keep&&!opts.some(function(o){return o[0]===keep})){
     var ev=S.events.find(function(e){return e.code===keep});opts.push([keep,ev?bkLabel(ev):keep])}
-  sel.replaceChildren.apply(sel,[h('option',{value:''},'— chọn booking —')].concat(opts.map(function(o){return h('option',{value:o[0]},o[1])})));
+  sel.replaceChildren.apply(sel,[h('option',{value:''},'— không chọn —')].concat(opts.map(function(o){return h('option',{value:o[0]},o[1])})));
   if(keep)sel.value=keep;
 }
 function incKindUI(){
   var k=NF.elements.kind.value;
-  var bkOn=k==='booking';$('incBkWrap').hidden=!bkOn;NF.elements.bk.required=bkOn;
+  var bkOn=k==='booking';$('incBkWrap').hidden=!bkOn;NF.elements.bk.required=false;
   if(bkOn&&NF.elements.bk.options.length<2)bkFill(NF.elements.bk.value);
   NF.elements.content.placeholder=k==='mua_goi'?'vd: Nguyễn Văn A · gói 12 triệu':k==='thu_khac'?'vd: bán trà, tiền khách gửi thêm':'vd: cọc Nguyễn Văn A, thanh toán đợt 2';
 }
@@ -1879,7 +1879,6 @@ NF.addEventListener('submit',async function(ev){
   if(!kind){toast('Chọn loại khoản thu.');return}
   if(!content){toast('Nhập nội dung khoản thu.');NF.elements.content.focus();return}
   var bk=kind==='booking'?NF.elements.bk.value:'';
-  if(kind==='booking'&&!bk){toast('Chọn booking ID cho khoản thu loại Booking.');NF.elements.bk.focus();return}
   var row={received_on:date,amount:amount,account:acc,kind:kind,content:content,booking_id:bk||null};
   var future=date>today();
   try{

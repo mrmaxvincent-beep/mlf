@@ -80,7 +80,7 @@ export default function DaoMotVongPage() {
         <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(1.8rem, 4.5vw, 2.6rem)", color: "var(--color-ink)", display: "block", marginBottom: "0.6rem" }}>
           hiểu về mlf
         </span>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>kể chuyện bằng hình ảnh</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-stone)" }}>kể chuyện bằng hình ảnh</span>
       </div>
 
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: 800 }}>
@@ -114,11 +114,11 @@ export default function DaoMotVongPage() {
 
       <Reveal className="wrap" style={{ marginBottom: "3rem", maxWidth: 900, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
         <div style={{ display: "flex", gap: "0.4rem 0.6rem", flexWrap: "wrap", alignItems: "baseline" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>chung ·</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>chung ·</span>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-ink)", lineHeight: 1.6 }}>{sharedSpaces.join(" · ")}</span>
         </div>
         <div style={{ display: "flex", gap: "0.4rem 0.6rem", flexWrap: "wrap", alignItems: "baseline" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>riêng ·</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)" }}>riêng ·</span>
           <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "var(--color-ink)", lineHeight: 1.6 }}>{privateSpaces.join(" · ")}</span>
         </div>
       </Reveal>
@@ -165,7 +165,7 @@ export default function DaoMotVongPage() {
             <div style={{ marginBottom: "0.4rem" }}>
               <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.2rem", color: "var(--color-ink)", margin: 0 }}>phòng {r.name}</h3>
             </div>
-            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{r.aspect}</span>
+            <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.6rem" }}>{r.aspect}</span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.82rem", lineHeight: 1.7, color: "var(--color-ink)", margin: 0 }}>{r.mood}</p>
           </div>
         ))}
@@ -231,7 +231,7 @@ export default function DaoMotVongPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.8rem" }}>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "0.8rem" }}>
           tự tay làm
         </span>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.85, color: "var(--color-ink)", margin: 0 }}>

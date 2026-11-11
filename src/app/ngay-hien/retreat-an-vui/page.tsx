@@ -59,7 +59,7 @@ export default function RetreatAnVuiPage() {
           role="note"
           style={{ display: "flex", alignItems: "baseline", justifyContent: "center", flexWrap: "wrap", gap: "0.4rem 0.9rem", textAlign: "center", padding: "0.9rem 1.25rem", marginBottom: "2rem", border: "1px solid var(--color-mist)", background: "color-mix(in srgb, var(--color-cham-dem) 5%, transparent)" }}
         >
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>lưu ý</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>lưu ý</span>
           <span style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6, color: "var(--color-ink)" }}>retreat an-vui sẽ bắt đầu tại Huế, từ tháng 04.2027.</span>
         </div>
         <Breadcrumb trail={[{ label: "ngày-hiền", href: routes.ngayHien }, { label: "retreat an-vui" }]} />
@@ -138,7 +138,7 @@ export default function RetreatAnVuiPage() {
         <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
           {threeSpaces.map((s, idx) => (
             <Reveal key={s.title} style={{ flex: "1 1 200px", maxWidth: "240px", padding: "0 1.6rem", textAlign: "center", borderLeft: idx > 0 ? "1px solid var(--color-mist)" : "none" }}>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "0.8rem" }}>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-stone)", marginBottom: "0.8rem" }}>
                 0{idx + 1}
               </span>
               <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.6rem", color: "var(--color-ink)", marginBottom: "0.7rem" }}>
@@ -158,7 +158,7 @@ export default function RetreatAnVuiPage() {
       <div className="wrap" style={{ marginBottom: "5rem", maxWidth: "56ch" }}>
         {rhythmBlocks.map((b, idx) => (
           <Reveal key={b.title} style={{ display: "flex", gap: "1.4rem", padding: "1.5rem 0", borderBottom: idx < rhythmBlocks.length - 1 ? "1px solid var(--color-mist)" : "none" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.06em", color: "var(--color-stone)", flexShrink: 0, paddingTop: "0.2rem" }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.06em", color: "var(--color-stone)", flexShrink: 0, paddingTop: "0.2rem" }}>
               0{idx + 1}
             </span>
             <div>
@@ -256,7 +256,7 @@ export default function RetreatAnVuiPage() {
                 <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "2.4rem", lineHeight: 1, color: "var(--color-cham-dem)", marginBottom: "0.6rem" }}>
                   {dayFrom}–{dayTo}
                 </span>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.8rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ink)", marginBottom: "0.8rem" }}>
                   tháng {month} · {year}
                 </span>
                 <span style={{ display: "inline-block", fontFamily: "var(--font-sans)", fontSize: "0.78rem", color: "var(--color-stone-alt)", padding: "0.3rem 0.8rem", border: "1px solid var(--color-mist)", borderRadius: "999px" }}>
@@ -275,7 +275,7 @@ export default function RetreatAnVuiPage() {
       <Reveal className="wrap" style={{ marginBottom: "5rem", maxWidth: "52ch", textAlign: "center" }}>
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "clamp(3.6rem, 10vw, 5.5rem)", lineHeight: 0.85, color: "var(--color-cham-dem)", marginBottom: "0.5rem" }}>+80</span>
         <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.4rem", color: "var(--color-ink)", marginBottom: "0.4rem" }}>chuyến retreat</span>
-        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.66rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.6rem" }}>trong 3 năm qua</span>
+        <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", marginBottom: "1.6rem" }}>trong 3 năm qua</span>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
           mlf không hứa hẹn một điều gì lớn lao. chỉ là một không gian đủ dịu dàng, để cô chú tự khám phá điều mình thực sự cần.
         </p>
@@ -318,7 +318,7 @@ export default function RetreatAnVuiPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "1rem" }}>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH TRỢ DUYÊN</span>}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH TRỢ DUYÊN</span>}>
           <div>
             <p style={proseP}>
               Chúng tôi mong rằng các chương trình của mộc little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng, retreat ở-yên, retreat an-vui &amp; online retreat khai tâm.
@@ -337,7 +337,7 @@ export default function RetreatAnVuiPage() {
             </p>
           </div>
         </Disclosure>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH HỦY / HOÀN</span>}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CHÍNH SÁCH HỦY / HOÀN</span>}>
           <div>
             {policyLines.map((line) => (
               <p key={line} style={proseP}>
@@ -346,11 +346,11 @@ export default function RetreatAnVuiPage() {
             ))}
           </div>
         </Disclosure>
-        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CÁCH DI CHUYỂN TỚI HUẾ</span>}>
+        <Disclosure trigger={<span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)" }}>CÁCH DI CHUYỂN TỚI HUẾ</span>}>
           <div>
             {travelGroups.map((group) => (
               <div key={group.title} style={{ marginBottom: "1.4rem" }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-moss)", marginBottom: "0.5rem" }}>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-moss)", marginBottom: "0.5rem" }}>
                   {group.title}
                 </span>
                 {group.lines.map((line) => (
@@ -362,7 +362,7 @@ export default function RetreatAnVuiPage() {
             ))}
           </div>
         </Disclosure>
-        <Link href={routes.specialTreat} style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)", textDecoration: "none", marginTop: "0.8rem", paddingBottom: "0.8rem", borderBottom: "1px solid var(--color-mist)" }} className="mono-link">
+        <Link href={routes.specialTreat} style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-cham-dem)", textDecoration: "none", marginTop: "0.8rem", paddingBottom: "0.8rem", borderBottom: "1px solid var(--color-mist)" }} className="mono-link">
           special treat: dành cho khách quen <span className="ar">→</span>
         </Link>
       </div>
@@ -381,26 +381,26 @@ export default function RetreatAnVuiPage() {
           tham khảo thêm hành trình khác
         </span>
         <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0.6rem 1rem" }}>
-          <Link className="mono-link" href={routes.stayTalk} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.stayTalk} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             stay+talk
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.nguoiTrongNha} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.nguoiTrongNha} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             người-trong-nhà
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.retreatOYen} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat ở-yên
           </Link>
           <span style={{ color: "var(--color-mist)" }}>·</span>
-          <Link className="mono-link" href={routes.retreatHamDuong} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+          <Link className="mono-link tap" href={routes.retreatHamDuong} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
             retreat hàm-dưỡng
           </Link>
         </div>
       </div>
 
       <div className="wrap" style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <Link href={routes.ngayHien} className="go mono-link" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+        <Link href={routes.ngayHien} className="go mono-link" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
           về trang ngày-hiền <span className="ar">→</span>
         </Link>
       </div>

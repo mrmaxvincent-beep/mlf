@@ -35,7 +35,7 @@ export default function RetreatOYenLichTrinhPage() {
           {journeyNav.map((d) => (
             <a key={d.anchor} href={d.anchor} style={{ textAlign: "center" }}>
               <span style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.5rem", color: "var(--color-cham-dem)", marginBottom: "0.3rem" }}>{d.num}</span>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>{d.short}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>{d.short}</span>
             </a>
           ))}
         </div>
@@ -52,7 +52,7 @@ export default function RetreatOYenLichTrinhPage() {
       </div>
 
       <div className="wrap" style={{ marginBottom: "5rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-        <Link href={routes.retreatOYen} className="go mono-link" style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: 2, padding: "0.85rem 1.4rem" }}>
+        <Link href={routes.retreatOYen} className="go mono-link" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: 2, padding: "0.85rem 1.4rem" }}>
           ← xem lại retreat ở-yên
         </Link>
         <RegistrationLink href="https://forms.gle/Ra77c8s5cH6WeL5e7" programName="retreat ở-yên" className="cta-btn cta-btn--solid">

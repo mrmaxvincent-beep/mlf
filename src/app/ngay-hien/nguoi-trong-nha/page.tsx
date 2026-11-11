@@ -168,13 +168,13 @@ export default function NguoiTrongNhaPage() {
         <div className="ntn-others">
           <span>tham khảo thêm hành trình khác</span>
           <div>
-            <Link className="mono-link" href={routes.stayTalk}>stay+talk</Link>
+            <Link className="mono-link tap" href={routes.stayTalk}>stay+talk</Link>
             <i>·</i>
-            <Link className="mono-link" href={routes.retreatOYen}>retreat ở-yên</Link>
+            <Link className="mono-link tap" href={routes.retreatOYen}>retreat ở-yên</Link>
             <i>·</i>
-            <Link className="mono-link" href={routes.retreatHamDuong}>retreat hàm-dưỡng</Link>
+            <Link className="mono-link tap" href={routes.retreatHamDuong}>retreat hàm-dưỡng</Link>
             <i>·</i>
-            <Link className="mono-link" href={routes.retreatAnVui}>retreat an-vui</Link>
+            <Link className="mono-link tap" href={routes.retreatAnVui}>retreat an-vui</Link>
           </div>
           <Link href={routes.ngayHien} className="go mono-link ntn-back">
             về trang ngày-hiền <span className="ar">→</span>

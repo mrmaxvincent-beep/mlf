@@ -140,21 +140,21 @@ export default function NgayHienPage() {
               <ImagePlaceholder label={p.imgLabel} aspectRatio="1/1" src={p.imgSrc} objectFit={p.imgObjectFit} scale={p.imgScale} />
             </div>
             <div style={{ flex: "1 1 280px", maxWidth: "100%" }}>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.35rem" }}>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-cham-dem)", marginBottom: "0.35rem" }}>
                 {p.tagline}
               </span>
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.8rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
                 <h3 style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 300, fontSize: "1.25rem", color: "var(--color-ink)", margin: 0 }}>
                   {p.name}
                 </h3>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.05em", color: "var(--color-cham-dem)" }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.05em", color: "var(--color-cham-dem)" }}>
                   {p.duration}
                 </span>
               </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.84rem", lineHeight: 1.7, color: "var(--color-ink)", margin: "0 0 0.6rem", maxWidth: "42ch" }}>
                 {p.desc}
               </p>
-              <Link className="go" href={p.href} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+              <Link className="go tap" href={p.href} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
                 {p.name} <span className="ar">→</span>
               </Link>
             </div>
@@ -177,7 +177,7 @@ export default function NgayHienPage() {
               {variant === 0 ? (
                 <div style={{ marginBottom: "5.5rem" }}>
                   <div style={{ maxWidth: 640, margin: "0 auto 1.5rem" }}>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+                    <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
                       {num} / 09
                     </span>
                     <ImagePlaceholder label={m.imgLabel} aspectRatio="3/2" src={m.src} />
@@ -200,7 +200,7 @@ export default function NgayHienPage() {
                   }}
                 >
                   <div style={variant === 2 ? { order: 2 } : undefined}>
-                    <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.14em", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
+                    <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.14em", color: "var(--color-stone)", marginBottom: "0.9rem" }}>
                       {num} / 09
                     </span>
                     {i === 1 ? (
@@ -239,7 +239,7 @@ export default function NgayHienPage() {
           <Testimonials items={testimonials} showDots={false} fontSize="1.2rem" />
         </div>
         <div style={{ textAlign: "center", marginTop: "2rem" }}>
-          <Link className="go mono-link" href={routes.thuGuiMoc} style={{ fontFamily: "var(--font-mono)", fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
+          <Link className="go mono-link tap" href={routes.thuGuiMoc} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-ink)" }}>
             đọc thêm thư-gửi-mộc <span className="ar">→</span>
           </Link>
         </div>

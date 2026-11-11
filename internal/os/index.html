@@ -1808,7 +1808,7 @@ function openMeal(d,slot){
   refresh();document.body.append(bd);
 }
 
-/* ─── thông báo đẩy 7:00 sáng (Web Push) ─── */
+/* ─── thông báo đẩy 5:30 sáng (Web Push) ─── */
 var VAPID_PUB='BO2Ijq1xCePLrAsoxQXV1ABHw2xnIdYj5w0oI7vr3WnxRKLhj2s_aAVdYziv7hPXBau7jdLXIslEwgJUAhQkVes';
 function vapidKey(){var s=VAPID_PUB,b=(s+'='.repeat((4-s.length%4)%4)).replace(/-/g,'+').replace(/_/g,'/'),r=atob(b),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
 function pushReady(){
@@ -1818,17 +1818,17 @@ async function drawPush(){
   var box=$('pushBox');if(!box)return;
   var ok='serviceWorker' in navigator&&'PushManager' in window&&'Notification' in window;
   if(!ok){
-    put('pushBox',h('p',null,/iPhone|iPad/i.test(navigator.userAgent)&&!standalone?'Để nhận thông báo 7:00 sáng trên iPhone: bấm nút chia sẻ của Safari, chọn “Thêm vào MH chính”, rồi mở app từ biểu tượng trên màn hình chính và vào lại đây.':'Máy hoặc trình duyệt này chưa hỗ trợ thông báo.'));
+    put('pushBox',h('p',null,/iPhone|iPad/i.test(navigator.userAgent)&&!standalone?'Để nhận thông báo 5:30 sáng trên iPhone: bấm nút chia sẻ của Safari, chọn “Thêm vào MH chính”, rồi mở app từ biểu tượng trên màn hình chính và vào lại đây.':'Máy hoặc trình duyệt này chưa hỗ trợ thông báo.'));
     return;
   }
   var reg=await pushReady(),sub=reg?await reg.pushManager.getSubscription():null,on=!!sub&&Notification.permission==='granted';
   if(Notification.permission==='denied'){put('pushBox',h('p',null,'Thông báo đang bị chặn trên máy này. Hãy bật lại quyền thông báo cho mlf os trong phần cài đặt của điện thoại hoặc trình duyệt.'));return}
   put('pushBox',
-    h('p',null,on?'Đã bật thông báo 7:00 sáng trên máy này: việc hôm nay, món mình nấu, khách đến/về.':'Nhận thông báo lúc 7:00 sáng mỗi ngày: việc của bạn hôm nay, món bạn nấu, khách đến/về.'),
+    h('p',null,on?'Đã bật thông báo 5:30 sáng trên máy này: việc hôm nay, món mình nấu, khách đến/về.':'Nhận thông báo lúc 5:30 sáng mỗi ngày: việc của bạn hôm nay, món bạn nấu, khách đến/về.'),
     on?h('div',{style:'display:flex;gap:8px;flex-wrap:wrap'},
         h('button',{type:'button',class:'ghost',onclick:testPush},'gửi thử một thông báo'),
         h('button',{type:'button',class:'ghost',onclick:disablePush},'tắt trên máy này'))
-      :h('button',{type:'button',class:'solid',onclick:enablePush},'bật thông báo 7:00 sáng'));
+      :h('button',{type:'button',class:'solid',onclick:enablePush},'bật thông báo 5:30 sáng'));
 }
 async function enablePush(){
   try{
@@ -1838,7 +1838,7 @@ async function enablePush(){
     var sub=await reg.pushManager.getSubscription()||await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:vapidKey()});
     var j=sub.toJSON();
     await q(sb.from('push_subs').upsert({person:S.me,endpoint:j.endpoint,p256dh:j.keys.p256dh,auth:j.keys.auth,user_agent:navigator.userAgent.slice(0,200)},{onConflict:'endpoint'}));
-    toast('Đã bật thông báo 7:00 sáng.');drawPush();
+    toast('Đã bật thông báo 5:30 sáng.');drawPush();
   }catch(e){console.error(e);toast('Chưa bật được thông báo, thử lại sau.');drawPush()}
 }
 async function disablePush(){
@@ -1850,7 +1850,7 @@ async function disablePush(){
 }
 async function testPush(){
   var reg=await pushReady();if(!reg)return;
-  reg.showNotification('mlf os',{body:'Thông báo hoạt động. Mỗi 7:00 sáng bạn sẽ nhận việc hôm nay ở đây.',icon:'./icon-192.png',data:{url:'/os/'}});
+  reg.showNotification('mlf os',{body:'Thông báo hoạt động. Mỗi 5:30 sáng bạn sẽ nhận việc hôm nay ở đây.',icon:'./icon-192.png',data:{url:'/os/'}});
 }
 
 /* ─── nguyên liệu nấu ăn: món + nguyên liệu cho 1 người; chọn món và khẩu phần thì ra danh sách cần mua ─── */

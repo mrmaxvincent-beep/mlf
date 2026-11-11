@@ -79,7 +79,7 @@ export default function RetreatOYenPage() {
         </div>
       </div>
 
-      <div style={{ marginTop: "2.5rem", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)", width: "100vw", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
+      <div style={{ margin: "2.5rem auto 0", width: "min(100vw, 1500px)", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0" }}>
         <ImagePlaceholder label="ảnh · retreat ở-yên 1" aspectRatio="16/12" src="/assets/ngayhien_oyen_01.webp" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
         <ImagePlaceholder label="ảnh · retreat ở-yên 2" aspectRatio="16/12" src="/assets/ngayhien_oyen_02.webp" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />
         <ImagePlaceholder label="ảnh · retreat ở-yên 3" aspectRatio="16/12" src="/assets/ngayhien_oyen_03.webp" alt="retreat ở-yên" style={{ width: "100%", height: "auto" }} />

@@ -14,6 +14,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* màn hình lớn: phóng nhẹ cỡ chữ gốc (mọi rem và ch cùng nở theo) để bố cục không bị nhỏ xíu giữa khoảng trắng */
+@media (min-width: 1500px) {
+  html { font-size: 112.5%; }
+}
+@media (min-width: 1900px) {
+  html { font-size: 125%; }
+}
+
 /* Demo: handmade-paper grain — pure SVG noise, no image asset. Swap for a
    real giấy dó scan later if this reads too generic (see chat: fiber-strand
    texture is hard to fake convincingly with generated noise alone). */
@@ -47,12 +55,12 @@ a:hover {
 }
 
 .wrap {
-  max-width: 740px;
+  max-width: 46.25rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 .wrap-wide {
-  max-width: 960px;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }

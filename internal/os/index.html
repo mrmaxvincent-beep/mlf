@@ -621,7 +621,7 @@ html{overscroll-behavior-y:contain}
     <div class="blk-h"><h2>năm tuần tới</h2><p>Lấy tự động từ lịch hello@, đếm ngược từ hôm nay.</p></div>
     <div class="tl" id="timeline"></div>
     <div class="legend" id="legend"></div>
-    <div class="blk-h" style="margin-top:18px"><h2>lịch nội bộ</h2><p>Ai off, ai đi đâu. Cả nhà cùng thấy, hiện chung trên dòng thời gian ở trên.</p></div>
+    <div class="blk-h" style="margin-top:18px"><h2>lịch nội bộ</h2><p>Ai off, ai đi đâu. Lịch nội bộ trên Google Calendar hello@ (tiêu đề có off, nghỉ, đi, về quê, họp, gửi thư…) tự vào đây; cũng có thể thêm tay ở dưới.</p></div>
     <div id="teamList"></div>
     <details class="more" id="teamBox">
       <summary id="teamSum">+ thêm lịch nội bộ (off, đi đâu…)</summary>
@@ -1215,6 +1215,7 @@ function drawTeamList(){
     var key='team:'+e.id;
     return h('div',{class:'chore team-row'},
       h('span',null,tAvs(e),h('span',{class:'dot',style:'background:'+tkc(e.kind)+';margin-right:6px'}),tTitle(e),h('small',null,span(e))),
+      e.source==='gcal'?h('span',{class:'meta',title:'Sửa hoặc xoá trên Google Calendar hello@, app tự cập nhật theo'},'từ Google Calendar'):
       h('span',{class:'tpl-act'},h('button',{type:'button',class:'ghost',onclick:function(){editTeam(e)}},'sửa'),
         h('button',{type:'button',class:'ghost'+(S.armed===key?' danger':''),onclick:function(){if(arm(key))delRow('team_events',e.id)}},S.armed===key?'xoá?':'xoá')));
   }):h('p',{class:'empty'},S.status==='loading'?'đang tải …':'Chưa có lịch nội bộ nào phía trước.'));

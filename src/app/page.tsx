@@ -38,9 +38,9 @@ export default function HomePage() {
 
       {/* HERO */}
       <div
+        className="home-hero"
         style={{
           position: "relative",
-          height: "100vh",
           minHeight: 460,
           overflow: "hidden",
           display: "flex",
@@ -99,19 +99,19 @@ export default function HomePage() {
                 }}
               />
             </span>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.735rem", lineHeight: 1.4, color: "var(--color-paper-dem)", margin: "0 0 0.2rem", maxWidth: "22ch" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.875rem", lineHeight: 1.4, color: "var(--color-paper-dem)", margin: "0 0 0.2rem", maxWidth: "22ch" }}>
               nơi mọi thứ nảy mầm
             </p>
-            <span style={{ fontFamily: "var(--font-sans)", color: "var(--color-paper-dem)", fontSize: "0.56rem", lineHeight: 1.4 }}>
+            <span style={{ fontFamily: "var(--font-sans)", color: "var(--color-paper-dem)", fontSize: "0.75rem", lineHeight: 1.5 }}>
               một không gian tinh thần dựa trên triết lý ở-yên.
             </span>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: "2.4rem", marginBottom: "1.4rem" }}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: "2.4rem", marginBottom: "1.4rem" }}>
               <span style={{ color: "var(--color-paper-dem)", position: "relative", paddingBottom: "0.5rem" }}>
                 vietnamese
                 <span style={{ position: "absolute", left: "50%", bottom: 0, transform: "translateX(-50%)", width: 3, height: 3, borderRadius: "50%", background: "var(--color-paper-dem)", display: "block" }} />
               </span>
               <span style={{ color: "var(--color-cham-suong)" }}>|</span>
-              <Link href={routes.en} style={{ color: "var(--color-paper-dem)" }}>
+              <Link href={routes.en} className="tap" style={{ color: "var(--color-paper-dem)" }}>
                 english
               </Link>
             </div>
@@ -184,7 +184,7 @@ export default function HomePage() {
             <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.625rem", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "var(--color-ink)" }}>
               sắp diễn ra
             </span>
-            <Link className="go mono-link" href={routes.lichNhaMoc} style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
+            <Link className="go mono-link tap" href={routes.lichNhaMoc} style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--color-stone)" }}>
               lịch cả năm <span className="ar">→</span>
             </Link>
           </div>
@@ -254,7 +254,7 @@ export default function HomePage() {
                   <Image src={`/assets/${v.src}`} alt={v.label} fill sizes="(max-width: 600px) 50vw, 33vw" style={{ objectFit: "cover" }} />
                 )}
               </div>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--color-stone)", display: "block", marginTop: "0.4rem" }}>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.1em", color: "var(--color-stone)", display: "block", marginTop: "0.4rem" }}>
                 ( {String(i + 1).padStart(2, "0")} )
               </span>
             </div>
@@ -283,7 +283,7 @@ export default function HomePage() {
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
               <Image src="/assets/home_phatra.webp" alt="rót trà" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", display: "block", lineHeight: 1.7 }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-ink)", letterSpacing: "0.04em", display: "block", lineHeight: 1.7 }}>
               &ldquo;Vũ nhấc ấm, chuyền từ tay nọ sang tay kia, rót nước vào bình trà. Nước chảy mềm, thành một dòng, không xoắn, không xòe. Như thể mỗi giọt nước, đều biết chỗ của mình.&rdquo;
               <br />
               <span style={{ fontStyle: "normal" }}>có những buổi trà kéo tới khuya - chỉ vì hiếm khi nào người ta thật tâm ngồi xuống cùng nhau.</span>
@@ -295,7 +295,7 @@ export default function HomePage() {
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
               <Image src="/assets/home_anhchieu.webp" alt="bàn ăn nhà mộc" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
               Trong cái bầu không khí ấy, một buổi chiều nắng vàng ươm rọi xuống khung cửa, trong tiếng nhạc dịu êm, trong sự tĩnh lặng và dịu dàng đó, có ai đó thả mình mà nghe tiếng lòng chảy thành từng giọt.
             </span>
           </div>
@@ -305,7 +305,7 @@ export default function HomePage() {
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
               <Image src="/assets/home_cogai.webp" alt="nhà mộc · măng đen" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
-            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7, margin: 0 }}>
               một cô gái từng lên đây hai lần, nhắn lúc tối muộn: &ldquo;nhớ nhà mình ghê gớm. em chuẩn bị lên đây.&rdquo;
               <br />
               <span style={{ display: "block" }}>chúng tôi không biết từ lúc nào, người ta gọi nơi này là nhà mình.</span>
@@ -317,7 +317,7 @@ export default function HomePage() {
             <div style={{ position: "relative", width: "100%", height: "280px", marginBottom: "1rem", flex: "none" }}>
               <Image src="/assets/home_buaan.webp" alt="hiên nhà" fill sizes="(max-width: 600px) 100vw, 280px" style={{ objectFit: "cover" }} />
             </div>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--color-ink)", letterSpacing: "0.04em", lineHeight: 1.7 }}>
               ở đây luôn có đủ thời gian để nấu ba bữa một ngày · trên bàn ăn bao giờ cũng có vài bông hoa nhỏ hái ngoài vườn.
             </span>
           </div>
@@ -354,7 +354,7 @@ export default function HomePage() {
         <div style={{ marginTop: "1.5rem" }}>
           {veMlfExits.map((x) => (
             <div key={x.href} style={{ display: "flex", gap: "0.9rem", alignItems: "flex-start", padding: "0.7rem 0" }}>
-              <Link href={x.href} className="link-sweep" aria-label={x.name} style={{ display: "block" }}>
+              <Link href={x.href} className="link-sweep tap" aria-label={x.name} style={{ display: "block" }}>
                 <DotIcon />
               </Link>
               <Link href={x.href} className="link-sweep" style={{ display: "block" }}>
@@ -493,7 +493,7 @@ function DotIcon() {
 function IconLink({ href, eyebrow, title, description }: { href: string; eyebrow?: string; title: string; description?: string }) {
   return (
     <div style={{ display: "flex", gap: "0.9rem", alignItems: "flex-start", padding: "0.7rem 0" }}>
-      <Link href={href} className="link-sweep" aria-label={title} style={{ display: "block" }}>
+      <Link href={href} className="link-sweep tap" aria-label={title} style={{ display: "block" }}>
         <DotIcon />
       </Link>
       <Link href={href} className="link-sweep" style={{ display: "block" }}>

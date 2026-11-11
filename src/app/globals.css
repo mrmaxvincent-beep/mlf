@@ -14,6 +14,31 @@ html {
   scroll-behavior: smooth;
 }
 
+/* hero trang chủ: 100svh để không giật khi thanh địa chỉ trên điện thoại co giãn (100vh là phương án dự phòng) */
+.home-hero {
+  height: 100vh;
+  height: 100svh;
+}
+
+/* mở rộng vùng bấm lên tối thiểu ~44px mà không đổi bố cục (padding cộng, margin âm trừ lại) */
+.tap {
+  padding: 0.75rem 0.6rem;
+  margin: -0.75rem -0.6rem;
+}
+
+/* phản hồi ngay khi chạm/bấm xuống (điện thoại không có hover) */
+a:active,
+button:active {
+  opacity: 0.6;
+  transition: opacity 80ms ease-out;
+}
+.cta-btn:active {
+  transform: scale(0.98);
+}
+@media (hover: none) {
+  a, button { -webkit-tap-highlight-color: transparent; }
+}
+
 /* màn hình lớn: phóng nhẹ cỡ chữ gốc (mọi rem và ch cùng nở theo) để bố cục không bị nhỏ xíu giữa khoảng trắng */
 @media (min-width: 1500px) {
   html { font-size: 112.5%; }

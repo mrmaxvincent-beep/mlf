@@ -33,7 +33,6 @@ export const routes = {
   motNgayOYen: "/mot-ngay-o-yen",
   congDongOYen: "/cong-dong-o-yen",
   vongTraTam: "/vong-tra-tam",
-  vuonTam: "/vuon-tam",
   thucTapOYenCanBan: "/o-yen-can-ban",
   thucTapOYenGiuaDoi: "/o-yen-giua-doi",
   thucTapNepNha: "/nep-nha",

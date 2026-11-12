@@ -37,7 +37,6 @@ export const routes = {
   thucTapOYenGiuaDoi: "/o-yen-giua-doi",
   thucTapNepNha: "/nep-nha",
   thucTapLoiNhacOYen: "/loi-nhac-o-yen",
-  thucTapHoiDuong: "/hoi-duong",
   conDuongMlf: "/con-duong-mlf",
   veMlf: "/ve-mlf",
   tamBietMangDen: "/ve-mlf/tam-biet-mang-den",
@@ -82,7 +81,6 @@ export const thucTapMenu = [
   { label: "ở-yên giữa đời", href: routes.thucTapOYenGiuaDoi },
   { label: "nếp nhà", href: routes.thucTapNepNha },
   { label: "lời nhắc ở-yên", href: routes.thucTapLoiNhacOYen },
-  { label: "hỏi-đường", href: routes.thucTapHoiDuong },
   { label: "nhất-hiện", href: routes.nhatHien },
 ];
 
@@ -177,7 +175,6 @@ export const mobileMenuSections = [
       { label: "ở-yên giữa đời", href: routes.thucTapOYenGiuaDoi },
       { label: "nếp nhà", href: routes.thucTapNepNha },
       { label: "lời nhắc ở-yên", href: routes.thucTapLoiNhacOYen },
-      { label: "hỏi-đường", href: routes.thucTapHoiDuong },
       { label: "nhất-hiện", href: routes.nhatHien },
     ],
   },

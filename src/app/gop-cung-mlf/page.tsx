@@ -10,7 +10,7 @@ import { tiers, creditUses } from "@/data/giua";
 
 export const metadata: Metadata = {
   title: "góp cùng mlf",
-  description: "bạn có thể đồng hành cùng mlf bằng cách mua trước dịch vụ, hoặc trợ duyên cho người hữu duyên.",
+  description: "bạn có thể đồng hành cùng mlf bằng cách mua trước, hoặc trợ duyên cho người hữu duyên.",
 };
 
 const proseP: React.CSSProperties = {
@@ -33,21 +33,21 @@ export default function UngHoMlfPage() {
           góp cùng mlf
         </h1>
         <p style={{ fontFamily: "var(--font-sans)", fontSize: "1rem", lineHeight: 1.85, color: "var(--color-ink)", maxWidth: "48ch", margin: 0 }}>
-          có hai cách bạn có thể đồng hành cùng mlf: mua trước dịch vụ, hoặc trợ duyên cho người hữu duyên.
+          có hai cách bạn có thể đồng hành cùng mlf: mua trước, hoặc trợ duyên cho người hữu duyên.
         </p>
       </div>
 
       <div className="wrap" style={{ marginTop: "3.5rem", marginBottom: "1.2rem" }}>
-        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>01 · mua trước dịch vụ</span>
+        <span className="eyebrow" style={{ color: "var(--color-ink)" }}>01 · mua trước</span>
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2.5rem", maxWidth: "56ch" }}>
         <p className="pj" style={proseP}>
-          để về Huế, chúng tôi cần khá nhiều nguồn lực để xây dựng lại một nơi mới. bạn có thể góp sức cùng mlf bằng cách mua trước các sản phẩm và dịch vụ của mộc little farm.
+          để về Huế, nhà mộc cần khá nhiều nguồn lực để dựng lại một nơi mới. bạn có thể góp sức bằng cách mua trước những chương trình của mộc little farm mà mình sẽ dùng.
         </p>
         <p className="pj" style={proseP}>
-          số tiền bạn đặt trước sẽ trở thành credit, dùng được cho tất cả chương trình và dịch vụ của chúng tôi trong hiện tại và tương lai. không có thời hạn. và được giảm 20%.
+          số tiền bạn đặt trước sẽ trở thành credit, được cộng thêm 20%, dùng cho các chương trình của nhà mộc bây giờ và sau này. credit không có ngày hết hạn.
         </p>
-        <p style={{ ...proseP, margin: 0 }}>bạn mua trước những gì bạn sẽ dùng, mà từ đó giúp chúng tôi có nguồn lực để xây dựng nên mlf ở Huế.</p>
+        <p style={{ ...proseP, margin: 0 }}>bạn mua trước những gì mình sẽ dùng, và từ đó nhà mộc có thêm nguồn lực để dựng nên mlf ở Huế.</p>
       </Reveal>
 
       <div className="wrap" style={{ marginBottom: "0.6rem" }}>
@@ -101,7 +101,7 @@ export default function UngHoMlfPage() {
       </div>
       <Reveal className="wrap" style={{ marginBottom: "2rem", maxWidth: "56ch" }}>
         <p style={{ ...proseP, margin: 0 }}>
-          Nhà mộc mong rằng các chương trình của mlf little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. Nếu bạn cảm thấy có sự kết nối và muốn góp phần lan tỏa hành trình của mlf đến với nhiều người hơn, bạn có thể chung tay trợ duyên cho người hữu duyên thông qua các chương trình retreat hàm-dưỡng, retreat ở-yên, retreat an-vui &amp; online retreat khai tâm.
+          nhà mộc mong rằng các chương trình của mộc little farm ít nhiều sẽ mang lại sự lợi lạc cho mọi người. nếu bạn thấy có sự kết nối và muốn mlf đến được với nhiều người hơn, bạn có thể trợ duyên cho người hữu duyên qua các chương trình retreat hàm-dưỡng, retreat ở-yên, retreat an-vui và online retreat khai tâm.
         </p>
       </Reveal>
 
@@ -112,10 +112,10 @@ export default function UngHoMlfPage() {
               muốn tài trợ
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
-              tài trợ tùy duyên - bạn có thể trợ duyên cho các chương trình retreat, giúp mlf mở rộng vòng tay đến nhiều người cần sự bình an và chuyển hóa hơn.
+              tài trợ tùy duyên: bạn có thể trợ duyên cho các chương trình retreat, để thêm nhiều người đang cần một khoảng dừng có thể đến được với mlf.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 0.7rem" }}>
-              mọi đóng góp, dù lớn dù nhỏ, đều có ý nghĩa rất lớn đối với chúng tôi. Xin hoan hỷ ghi rõ nội dung đóng góp &ldquo;trợ duyên mlf&rdquo; khi chuyển khoản.
+              mỗi đóng góp, dù lớn hay nhỏ, đều quý với nhà mộc. khi chuyển khoản, bạn ghi giúp nội dung &ldquo;trợ duyên mlf&rdquo; nhé.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
               Ngân hàng Vietcombank
@@ -130,10 +130,10 @@ export default function UngHoMlfPage() {
               muốn nhận hỗ trợ
             </span>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--color-ink)", margin: "0 0 1rem" }}>
-              nhận hỗ trợ - những ai thật sự cần đến retreat có thể nhận trợ duyên để tham gia các chương trình của mlf.
+              nhận hỗ trợ: những ai thật sự cần đến retreat có thể nhận trợ duyên để tham gia các chương trình của mlf.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.78rem", lineHeight: 1.75, color: "var(--color-ink)", margin: 0 }}>
-              khi đăng ký chương trình retreat, bạn có thể cân nhắc lựa chọn các mức hỗ trợ (10% – 20%) phù hợp với nhu cầu của bản thân. Chúng tôi sẽ xác nhận việc hỗ trợ dựa trên mức sẵn có của quỹ trợ duyên.
+              khi đăng ký retreat, bạn có thể chọn mức hỗ trợ từ 10% đến 20% tùy nhu cầu của mình. nhà mộc sẽ xác nhận dựa trên số tiền hiện có trong quỹ trợ duyên.
             </p>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function UngHoMlfPage() {
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "1.05rem", color: "var(--color-ink)", margin: 0 }}>
-          Xin chân thành cám ơn sự ủng hộ dành cho mlf!
+          cảm ơn bạn đã góp cùng mlf.
         </p>
       </div>
 

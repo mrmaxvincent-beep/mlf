@@ -9,7 +9,7 @@ export const tiers = [
 export const creditUses = [
   "tất cả chương trình hiện tại của mộc little farm (ngày-hiền, tuần-du, ở-yên, be-still, tea-mind, touch)",
   "cafe và đồ ăn tại giữa (trong tương lai)",
-  "các sản phẩm & dịch vụ khác trong tương lai của mlf",
+  "những gì mlf làm ra về sau",
 ];
 
 export const spaceCriteria = [

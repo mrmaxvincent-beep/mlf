@@ -89,21 +89,6 @@ create policy "authenticated can write traces" on traces
 
 alter publication supabase_realtime add table traces;
 
--- 5. hoi_duong_questions — câu hỏi gửi trực tiếp từ trang /hoi-duong, không qua email.
---    Riêng tư: không có policy select công khai, chỉ đọc/trả lời từ Table Editor
---    cho tới khi có luồng hiển thị câu hỏi đã trả lời công khai.
-create table hoi_duong_questions (
-  id uuid primary key default gen_random_uuid(),
-  topic_id text,
-  question text not null check (char_length(question) <= 1000),
-  from_label text,
-  created_at timestamptz not null default now()
-);
-
-alter table hoi_duong_questions enable row level security;
-create policy "public can insert questions" on hoi_duong_questions
-  for insert with check (true);
-
 -- 5. journal_orders — đơn đặt in chung mlf journal (trang /journal/in-chung).
 -- Khách chỉ ghi được đơn mới; chỉ tài khoản đăng nhập xem/cập nhật. Tổng số quyển công khai qua journal_order_total().
 create table journal_orders (

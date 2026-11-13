@@ -980,6 +980,12 @@ function itemsFor(p,s){
     out.push({kind:'t',id:t.id,text:t.text,done:!!t.done,date:s,person:p})});
   return out;
 }
+/* việc đề xuất chưa ai nhận (s: chỉ lấy việc rơi vào ngày s; bỏ s để lấy tất cả) */
+function proposals(s){return S.st.filter(function(t){return !stRows(t).length&&(!s||(t.due?t.due===s:s===S.day))}).sort(function(a,b){return (a.due||'9999-99-99').localeCompare(b.due||'9999-99-99')})}
+function proposalRow(t){
+  return h('li',{class:t.due&&t.due<S.day?'late':null},h('span',{class:'tx'},t.text,h('span',{class:'due'},stDue(t))),
+    h('button',{type:'button',class:'claim',onclick:function(){joinShared(t)}},'nhận'));
+}
 function openChores(s){var ws=weekStart(s);return sortedChores().filter(function(c){return choreOn(c,s)&&!assignee(c,ws)&&!S.checks.has(s+'__'+c.id)})}
 function claimRow(c,ws){
   return h('li',null,h('span',{class:'tx'},c.text,h('span',{class:'due'},choreLabel(c))),
@@ -1066,6 +1072,7 @@ function drawMine(){
     free.length?[h('p',{class:'sub'},'chuẩn bị đón khách, chưa ai nhận'),h('ul',{class:'prep'},free.map(function(it){
       return h('li',{class:it.due<S.day?'late':null},h('span',{class:'tx'},it.text,h('span',{class:'due'},evShort(it.ev)+' · '+dueLabel(it))),
         h('button',{type:'button',class:'claim',onclick:function(){setPrep(it,{person:S.me});toast('Đã nhận: '+it.text+'.')}},'nhận'))}))]:null,
+    proposals().length?[h('p',{class:'sub'},'việc đề xuất, ai nhận thì bấm nhận'),h('ul',{class:'prep'},proposals().map(proposalRow))]:null,
     oc.length?[h('p',{class:'sub'},'việc thường xuyên hôm nay, chưa ai nhận'),h('ul',{class:'prep'},oc.map(function(c){return claimRow(c,wsT)}))]:null,
     h('div',{class:'mine-wk'},
       h('button',{type:'button',class:'ghost','aria-expanded':String(!!S.mineWeek),onclick:function(){S.mineWeek=!S.mineWeek;render()}},
@@ -1292,9 +1299,9 @@ function drawWeek(){
       return h('div',{class:'pblock'},h('h3',null,h('span',{class:'nm'},av(p[0],'sm'),p[1]),h('small',null,its.length?(left?'còn '+left:'xong hết'):'')),
         its.length?h('ul',{class:'items'},its.map(function(it){return itemEl(it,true)})):h('p',{class:'empty'},'không có việc'),
         S.addAt===k?addBox(p[0],s):h('button',{type:'button',class:'add',onclick:function(){S.addAt=k;draw()}},'+ thêm việc cho '+p[1]))}),
-    (function(){var fr=allPrep().filter(function(it){return !it.person&&it.due===s}),fc=openChores(s),wsS=weekStart(s);if(!fr.length&&!fc.length)return null;
-      return h('div',{class:'pblock'},h('h3',null,'chưa ai nhận',h('small',null,(fr.length+fc.length)+' việc')),
-        h('ul',{class:'prep'},fc.map(function(c){return claimRow(c,wsS)}),fr.map(function(it){return h('li',{class:!it.done&&it.due<S.day?'late':null},
+    (function(){var fr=allPrep().filter(function(it){return !it.person&&it.due===s}),fc=openChores(s),wsS=weekStart(s),fp=proposals(s);if(!fr.length&&!fc.length&&!fp.length)return null;
+      return h('div',{class:'pblock'},h('h3',null,'chưa ai nhận',h('small',null,(fr.length+fc.length+fp.length)+' việc')),
+        h('ul',{class:'prep'},fp.map(proposalRow),fc.map(function(c){return claimRow(c,wsS)}),fr.map(function(it){return h('li',{class:!it.done&&it.due<S.day?'late':null},
           h('span',{class:'tx'},it.text,h('span',{class:'due'},evShort(it.ev))),
           h('button',{type:'button',class:'claim',onclick:function(){setPrep(it,{person:S.me});toast('Đã nhận: '+it.text+'.')}},'nhận'))})));})());
   var fi=document.querySelector('#dayPanel input[data-focus]');if(fi)fi.focus();

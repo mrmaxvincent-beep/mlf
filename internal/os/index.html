@@ -707,18 +707,18 @@ details.more[open]>:not(summary){animation:mlf-in .28s var(--ease-out)}
   </section>
 
   <section class="blk" id="phatsinh">
-    <div class="blk-h"><h2>việc phát sinh</h2><p>Việc đột xuất cần nhiều người cùng làm. Mỗi người tick phần của mình.</p></div>
+    <div class="blk-h"><h2>việc phát sinh</h2><p>Đề xuất việc đột xuất, không cần giao ai. Ai làm được thì bấm “tham gia” rồi tick phần của mình.</p></div>
     <form class="fgrid" id="stForm" autocomplete="off">
       <label class="w2">việc<input name="text" required placeholder="vd: chuẩn bị phòng cho khách đến sớm"></label>
       <label class="w2">hạn (không bắt buộc)<input name="due" type="date"></label>
-      <div class="w2"><span class="rooms-l">giao cho</span>
+      <div class="w2"><span class="rooms-l">ai làm (không bắt buộc, để trống thì mọi người tự nhận)</span>
         <div class="chips">
           <label><input type="checkbox" name="who" value="tam"> Tâm</label>
           <label><input type="checkbox" name="who" value="thuan"> Thuận</label>
           <label><input type="checkbox" name="who" value="vu"> Vũ</label>
         </div>
       </div>
-      <div class="factions"><button class="solid" type="submit">thêm việc</button></div>
+      <div class="factions"><button class="solid" type="submit">đề xuất việc</button></div>
     </form>
     <div id="stList"></div>
     <details class="more" id="stDoneBox"><summary id="stDoneSum">đã xong gần đây</summary><div id="stDone"></div></details>
@@ -1435,7 +1435,7 @@ function stCard(t){
   var d=rs.filter(function(r){return r.done}).length,mine=stMine(t,S.me),key='st:'+t.id,fin=stDone(t);
   return h('article',{class:'stcard'+(fin?' done':'')},
     h('div',{class:'st-h'},h('h3',null,t.text),h('span',{class:'st-due'+(!fin&&t.due&&t.due<S.day?' late':'')},fin?'xong':stDue(t))),
-    h('div',{class:'st-p'},rs.length?rs.map(function(r){return h('span',{class:'stp'+(r.done?' ok':'')},av(r.person,'sm'+(r.done?' ok':' wait')),PN[r.person])}):h('span',{class:'meta'},'chưa giao cho ai')),
+    h('div',{class:'st-p'},rs.length?rs.map(function(r){return h('span',{class:'stp'+(r.done?' ok':'')},av(r.person,'sm'+(r.done?' ok':' wait')),PN[r.person])}):h('span',{class:'meta'},'chưa ai nhận, bấm “tham gia” để nhận')),
     h('div',{class:'st-f'},
       h('span',{class:'meta'},d+'/'+rs.length+' xong'+(t.created_by?' · '+PN[t.created_by]+' giao':'')),
       h('span',{class:'st-b'},
@@ -1468,15 +1468,15 @@ var STF=$('stForm');
 STF.addEventListener('submit',async function(ev){
   ev.preventDefault();var text=(STF.elements.text.value||'').trim();if(!text)return;
   var who=Array.prototype.filter.call(STF.querySelectorAll('input[name=who]'),function(x){return x.checked}).map(function(x){return x.value});
-  if(!who.length){toast('Chọn ít nhất một người.');return}
   var due=STF.elements.due.value||null;
   try{
     var r=await q(sb.from('shared_tasks').insert({text:text,due:due,created_by:S.me}).select()),t=r[0];
     var rows=who.map(function(w){return {task_id:t.id,person:w,done:false}});
-    await q(sb.from('shared_task_people').insert(rows));
+    if(rows.length)await q(sb.from('shared_task_people').insert(rows));
     S.st=[t].concat(S.st);S.stp=S.stp.concat(rows);
-    STF.elements.text.value='';STF.elements.due.value='';render();
-    toast('Đã thêm, giao cho '+who.map(function(w){return PN[w]}).join(', ')+'.');
+    STF.elements.text.value='';STF.elements.due.value='';
+    Array.prototype.forEach.call(STF.querySelectorAll('input[name=who]'),function(x){x.checked=false});render();
+    toast(rows.length?'Đã thêm, giao cho '+who.map(function(w){return PN[w]}).join(', ')+'.':'Đã đề xuất, mọi người tự nhận.');
   }catch(e){fail(e)}
 });
 

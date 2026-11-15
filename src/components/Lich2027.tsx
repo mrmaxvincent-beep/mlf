@@ -107,7 +107,7 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
       <section className="l27-hero">
         <div className="l27-hero-img">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/calendar2027_1.webp" alt="bộ lịch tea.mind 2027 trên bàn trà, tờ tháng 06 · một cơn mưa" draggable={false} onContextMenu={noSave} fetchPriority="high" />
+          <img src="/assets/calendar2027_header.webp" alt="bộ lịch tea.mind 2027 trên bàn trà, tờ tháng 06 · một cơn mưa" draggable={false} onContextMenu={noSave} fetchPriority="high" />
         </div>
         <div className="l27-hero-text">
           <span className="l27-kicker">tea.mind calendar · 2027</span>

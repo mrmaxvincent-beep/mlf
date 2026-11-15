@@ -205,7 +205,7 @@ function Edition2027() {
 }
 
 export function TeaMindLichYears() {
-  const [year, setYear] = useState<LichYear>(lichYears[0]);
+  const [year, setYear] = useState<LichYear>(lichYears[lichYears.length - 1]);
 
   useEffect(() => {
     const q = Number(new URLSearchParams(window.location.search).get("nam"));

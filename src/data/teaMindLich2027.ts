@@ -103,7 +103,7 @@ export const stages2027: Stage2027[] = [
       {
         num: "08",
         title: "một bữa cơm",
-        en: "A Round Table",
+        en: "Around the Table",
         theme: "gắn kết",
         reminder: "ở bên nhau, trọn vẹn",
         text: "Ăn chậm thôi, để câu chuyện bên mâm cơm được kéo dài thêm một chút nữa.",

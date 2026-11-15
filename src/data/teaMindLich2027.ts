@@ -167,7 +167,7 @@ export const look2027: Record<string, { tint: string; wash: string; card?: strin
   "09": { tint: "#DDE9D5", wash: "#6FA35A", card: "/assets/lich2027_09.webp" },
   "10": { tint: "#F3E6D8", wash: "#D4A373", card: "/assets/lich2027_10.webp" },
   "11": { tint: "#EDE4D3", wash: "#B9975B", card: "/assets/lich2027_11.webp" },
-  "12": { tint: "#E9E1DA", wash: "#A47E6B" },
+  "12": { tint: "#E9E1DA", wash: "#A47E6B", card: "/assets/lich2027_12.webp" },
 };
 
 // mặt sau mỗi tờ lịch

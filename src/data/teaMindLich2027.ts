@@ -162,7 +162,7 @@ export const look2027: Record<string, { tint: string; wash: string; card?: strin
   "04": { tint: "#F4E1E1", wash: "#D98C9A", card: "/assets/lich2027_04.webp" },
   "05": { tint: "#F7EDC8", wash: "#F0C24B", card: "/assets/lich2027_05.webp" },
   "06": { tint: "#DCEBE6", wash: "#5AA9C9", card: "/assets/lich2027_06.webp", shot: "/assets/calendar2027_1.webp" },
-  "07": { tint: "#E4E3EE", wash: "#8C88B8" },
+  "07": { tint: "#E4E3EE", wash: "#8C88B8", card: "/assets/lich2027_07.webp" },
   "08": { tint: "#F1E2D2", wash: "#D99A62", shot: "/assets/calendar2027_2.webp" },
   "09": { tint: "#DDE9D5", wash: "#6FA35A" },
   "10": { tint: "#F3E6D8", wash: "#D4A373" },

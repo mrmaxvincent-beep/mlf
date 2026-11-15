@@ -77,7 +77,7 @@ export const stages2027: Stage2027[] = [
         en: "A Sunlit Day",
         theme: "đón nhận",
         reminder: "mở lòng với những điều dịu dàng",
-        text: "Nắng rót mật xuống hiên nhà, cứ ra ngồi hong mình thêm chút nữa. Đất trời vẫn hào phóng trao đi như thế, chỉ đợi ta chậm lại một chút để đưa tay ra nhận lấy.",
+        text: "Nắng rót mật xuống hiên nhà, cứ ra ngồi hong mình thêm chút nữa. Đất trời vẫn hào phóng trao đi như thế, chỉ đợi ta chậm lại.",
       },
       {
         num: "06",
@@ -160,7 +160,7 @@ export const look2027: Record<string, { tint: string; wash: string; card?: strin
   "02": { tint: "#E3EAD3", wash: "#8FB573", card: "/assets/lich2027_02.webp" },
   "03": { tint: "#F2E0CF", wash: "#D9895B", card: "/assets/lich2027_03.webp" },
   "04": { tint: "#F4E1E1", wash: "#D98C9A", card: "/assets/lich2027_04.webp" },
-  "05": { tint: "#F7EDC8", wash: "#F0C24B" },
+  "05": { tint: "#F7EDC8", wash: "#F0C24B", card: "/assets/lich2027_05.webp" },
   "06": { tint: "#DCEBE6", wash: "#5AA9C9", shot: "/assets/calendar2027_1.webp" },
   "07": { tint: "#E4E3EE", wash: "#8C88B8" },
   "08": { tint: "#F1E2D2", wash: "#D99A62", shot: "/assets/calendar2027_2.webp" },

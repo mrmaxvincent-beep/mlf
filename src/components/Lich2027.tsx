@@ -106,8 +106,12 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
       {/* 1 · mở đầu: để bộ lịch tự nói */}
       <section className="l27-hero">
         <div className="l27-hero-img">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/calendar2027_header.webp" alt="bộ lịch tea.mind 2027 trên bàn trà, tờ tháng 06 · một cơn mưa" draggable={false} onContextMenu={noSave} fetchPriority="high" />
+          {/* điện thoại dùng ảnh dọc 4:5, máy tính dùng ảnh ngang 2:1 */}
+          <picture>
+            <source media="(max-width: 760px)" srcSet="/assets/calendar2027_header_mobile.webp" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/calendar2027_header.webp" alt="bộ lịch tea.mind 2027 trên bàn trà, tờ tháng 06 · một cơn mưa" draggable={false} onContextMenu={noSave} fetchPriority="high" />
+          </picture>
         </div>
         <div className="l27-hero-text">
           <span className="l27-kicker">tea.mind calendar · 2027</span>

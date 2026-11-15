@@ -4075,7 +4075,7 @@ details[open] > summary .acc-icon {
 .l27-hero-meta { margin: 1.2rem 0 1.6rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--l27-soft); }
 @media (max-width: 760px) {
   .l27-hero-img { aspect-ratio: 4 / 5; } /* điện thoại: khung dọc, canh giữa tờ lịch */
-  .l27-hero-img img { object-position: 82% 50%; }
+  .l27-hero-img img { object-position: 50% 50%; }
   .l27-hero-text { position: static; transform: none; max-width: none; padding: 2rem 1.25rem 0; text-align: center; }
 }
 

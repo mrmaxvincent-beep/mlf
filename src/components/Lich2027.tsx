@@ -124,7 +124,7 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
           <span className="l27-kicker">tea.mind calendar · 2027</span>
           <h2 className="l27-hero-title">{theme2027.title}</h2>
           <p className="l27-hero-sub">{theme2027.sub}</p>
-          <p className="l27-hero-meta">12 tháng · 12 điều nhỏ · vẽ tay</p>
+          <p className="l27-hero-meta">13 tờ · bìa và 12 điều nhỏ · vẽ tay</p>
           <OrderButton />
         </div>
       </section>

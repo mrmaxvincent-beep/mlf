@@ -4180,3 +4180,5 @@ body.l27-page .site-header { background: #F6F2EA !important; border-bottom-color
 body.l27-page footer { border-top-color: rgba(43, 37, 34, 0.1) !important; }
 
 .l27-back-shot { display: block; width: 100%; height: auto; border-radius: 2px; box-shadow: 0 24px 50px -30px rgba(43, 37, 34, 0.55); user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+
+.l27-flat { display: block; height: 88%; width: auto; aspect-ratio: 1240 / 1748; border-radius: 2px; box-shadow: 0 1.5cqw 3.5cqw -1.5cqw rgba(43, 37, 34, 0.5); user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }

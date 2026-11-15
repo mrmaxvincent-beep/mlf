@@ -15,6 +15,14 @@ type Spec = { k: string; v: string };
 /** Ảnh bày bàn của tháng; tháng chưa có ảnh thì hiện một tờ lịch vẽ tạm bằng màu nước của tháng. */
 function MonthVisual({ m, small = false }: { m: Month2027; small?: boolean }) {
   const look = look2027[m.num];
+  if (look?.card) {
+    return (
+      <div className="l27-card-scene">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="l27-flat" src={look.card} alt={`tờ lịch tháng ${m.num} · ${m.title}`} loading={small ? "lazy" : "eager"} draggable={false} onContextMenu={noSave} />
+      </div>
+    );
+  }
   if (look?.shot) {
     return (
       // eslint-disable-next-line @next/next/no-img-element

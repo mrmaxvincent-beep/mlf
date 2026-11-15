@@ -152,13 +152,14 @@ export const stages2027: Stage2027[] = [
 // mỗi chặng giới thiệu một tháng tiêu biểu (mặt trước + mặt sau)
 export const featured2027 = ["02", "06", "08", "12"];
 
+// card = ảnh thiết kế mặt trước (thu nhỏ 720px, không đủ để in); shot = ảnh bày bàn dự phòng.
 // màu nền (tint) và màu nước (wash) theo tranh của từng tháng; shot = ảnh bày bàn của tháng.
 // Chỉ dùng ảnh bày bàn (tờ lịch nhỏ trong khung, độ phân giải web) để tránh bị lấy tranh đi in lại.
-export const look2027: Record<string, { tint: string; wash: string; shot?: string }> = {
-  "01": { tint: "#F5EBD3", wash: "#E9C46A" },
-  "02": { tint: "#E3EAD3", wash: "#8FB573" },
-  "03": { tint: "#F2E0CF", wash: "#D9895B" },
-  "04": { tint: "#F4E1E1", wash: "#D98C9A" },
+export const look2027: Record<string, { tint: string; wash: string; card?: string; shot?: string }> = {
+  "01": { tint: "#F5EBD3", wash: "#E9C46A", card: "/assets/lich2027_01.webp" },
+  "02": { tint: "#E3EAD3", wash: "#8FB573", card: "/assets/lich2027_02.webp" },
+  "03": { tint: "#F2E0CF", wash: "#D9895B", card: "/assets/lich2027_03.webp" },
+  "04": { tint: "#F4E1E1", wash: "#D98C9A", card: "/assets/lich2027_04.webp" },
   "05": { tint: "#F7EDC8", wash: "#F0C24B" },
   "06": { tint: "#DCEBE6", wash: "#5AA9C9", shot: "/assets/calendar2027_1.webp" },
   "07": { tint: "#E4E3EE", wash: "#8C88B8" },

@@ -108,11 +108,6 @@ function Edition2027() {
     <>
       <Theme title={theme2027.title} sub={theme2027.sub} />
 
-      <div className="wrap" style={{ marginBottom: "2rem", textAlign: "center" }}>
-        <span style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.08em", color: "var(--color-stone)", border: "1px solid var(--color-mist)", borderRadius: "var(--radius-sharp)", padding: "0.5rem 0.9rem" }}>
-          sắp ra mắt · 2027
-        </span>
-      </div>
 
       <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "48ch" }}>
         <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>

@@ -45,7 +45,7 @@ export const stages2027: Stage2027[] = [
       {
         num: "02",
         title: "một chén trà",
-        en: "A Cup of Tea",
+        en: "A cup of Tea",
         theme: "hiện diện",
         reminder: "trọn vẹn với điều đang ở trong tay",
         text: "Nước nghiêng xuống, lá trà khẽ trở mình, hương vừa dậy lên. Có khi ta đã đi qua bao điều đẹp đẽ chỉ vì lòng còn mải miết ở nơi xa.",
@@ -53,10 +53,10 @@ export const stages2027: Stage2027[] = [
       {
         num: "03",
         title: "một góc bếp",
-        en: "The Kitchen",
+        en: "The Kitchen Corner",
         theme: "chăm nom",
         reminder: "gửi thương vào những điều bình thường",
-        text: "Nồi cơm vừa reo, bát đũa lách cách gọi nhau về. Chẳng có việc gì là nhỏ khi ta làm nó bằng sự chú tâm, và căn bếp cứ thế ấm dần lên qua từng ngày.",
+        text: "Bàn tay vo gạo, nêm chút muối, canh lửa cho vừa, rồi nồi cơm reo, bát đũa lách cách gọi nhau về. Một mái ấm được nhóm lên từ chính những việc nhỏ làm bằng cả tấm lòng.",
       },
     ],
   },
@@ -69,7 +69,7 @@ export const stages2027: Stage2027[] = [
         en: "A Little Flower",
         theme: "tự thành",
         reminder: "để mọi điều được là chính nó",
-        text: "Lòng đủ rộng, nhành hoa nào cũng tìm được một khoảng trời để nở. Có những điều trong ta cũng vậy, chỉ cần được đối đãi dịu dàng, rồi sẽ đến ngày tự bung cánh theo cách của riêng mình.",
+        text: "Lòng đủ rộng thì nhành hoa nào cũng tìm được một khoảng trời để nở.",
       },
       {
         num: "05",
@@ -82,10 +82,10 @@ export const stages2027: Stage2027[] = [
       {
         num: "06",
         title: "một cơn mưa",
-        en: "A Passing Rain",
+        en: "A Rainy Day",
         theme: "thuận theo",
         reminder: "để mọi điều đến theo cách của nó",
-        text: "Mưa về gột mát từng phiến lá, đất trời dịu lại, lòng người cũng thôi níu giữ những điều chẳng thể đổi thay.",
+        text: "Mưa về gột mát từng phiến lá, nhắc mình chậm lại mà nghe trời đất đang thầm thì.",
       },
     ],
   },
@@ -103,10 +103,10 @@ export const stages2027: Stage2027[] = [
       {
         num: "08",
         title: "một bữa cơm",
-        en: "Around the Table",
+        en: "A Round Table",
         theme: "gắn kết",
         reminder: "ở bên nhau, trọn vẹn",
-        text: "Mâm cơm đã vơi, câu chuyện vẫn còn đầy. Mình ngồi lại thêm chút nữa, cho trọn một bữa sum vầy.",
+        text: "Ăn chậm thôi, để câu chuyện bên mâm cơm được kéo dài thêm một chút nữa.",
       },
       {
         num: "09",

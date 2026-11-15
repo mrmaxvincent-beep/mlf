@@ -151,3 +151,27 @@ export const stages2027: Stage2027[] = [
 
 // mỗi chặng giới thiệu một tháng tiêu biểu (mặt trước + mặt sau)
 export const featured2027 = ["02", "06", "08", "12"];
+
+// màu nền (tint) và màu nước (wash) theo tranh của từng tháng; shot = ảnh bày bàn của tháng.
+// Chỉ dùng ảnh bày bàn (tờ lịch nhỏ trong khung, độ phân giải web) để tránh bị lấy tranh đi in lại.
+export const look2027: Record<string, { tint: string; wash: string; shot?: string }> = {
+  "01": { tint: "#F5EBD3", wash: "#E9C46A" },
+  "02": { tint: "#E3EAD3", wash: "#8FB573" },
+  "03": { tint: "#F2E0CF", wash: "#D9895B" },
+  "04": { tint: "#F4E1E1", wash: "#D98C9A" },
+  "05": { tint: "#F7EDC8", wash: "#F0C24B" },
+  "06": { tint: "#DCEBE6", wash: "#5AA9C9", shot: "/assets/calendar2027_1.webp" },
+  "07": { tint: "#E4E3EE", wash: "#8C88B8" },
+  "08": { tint: "#F1E2D2", wash: "#D99A62", shot: "/assets/calendar2027_2.webp" },
+  "09": { tint: "#DDE9D5", wash: "#6FA35A" },
+  "10": { tint: "#F3E6D8", wash: "#D4A373" },
+  "11": { tint: "#EDE4D3", wash: "#B9975B" },
+  "12": { tint: "#E9E1DA", wash: "#A47E6B" },
+};
+
+// mặt sau mỗi tờ lịch
+export const back2027 = [
+  { k: "lịch âm", v: "ngày âm lịch của cả tháng, để biết rằm, mùng một, và nhịp trăng đi qua." },
+  { k: "thông điệp", v: "một lời nhắn nhỏ cho tháng ấy, đọc chậm, mang theo trong ngày." },
+  { k: "chỗ ghi chú", v: "một khoảng trống để viết: một hẹn, một điều biết ơn, hay chỉ một dòng cho riêng mình." },
+];

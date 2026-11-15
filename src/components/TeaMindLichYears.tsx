@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
-import { RegistrationLink } from "@/components/RegistrationLink";
 import { seasons, specs, lichYears, type LichYear } from "@/data/teaMindLich";
-import { theme2027, motLines, bridge, concept2027, stages2027, featured2027 } from "@/data/teaMindLich2027";
+import { Lich2027 } from "@/components/Lich2027";
 
 // 2027 giữ nguyên chất liệu, kích thước, giá; chỉ đổi dòng số lượng cho đúng chủ đề.
 const specs2027 = specs.map((sp) => (sp.k === "số lượng" ? { ...sp, v: "12 tờ - 12 tháng, 12 lát cắt đời sống" } : sp));
@@ -105,113 +104,7 @@ function Edition2026() {
 }
 
 function Edition2027() {
-  return (
-    <>
-      <Theme title={theme2027.title} sub={theme2027.sub} />
-
-
-      <Reveal className="wrap" style={{ marginBottom: "3.5rem", maxWidth: "48ch" }}>
-        <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", margin: 0 }}>
-          {concept2027}
-        </p>
-      </Reveal>
-
-      <Reveal className="wrap-wide" style={{ marginBottom: "4rem" }}>
-        <ImagePlaceholder label="bộ lịch tea.mind calendar 2027" alt="bộ lịch tea.mind calendar 2027" aspectRatio="3/2" src="/assets/calendar2027_1.webp" style={{ width: "100%", height: "auto" }} />
-      </Reveal>
-
-      <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>
-        <RegistrationLink href="https://forms.gle/Mkn4fEbdLGtj1hQD6" programName="tea.mind calendar 2027" className="cta-btn cta-btn--solid">
-           đặt hàng <span className="ar">→</span>
-         </RegistrationLink>
-      </div>
-
-      <div className="wrap tm27-intro">
-        <ImagePlaceholder label="ảnh · trang lời tựa" aspectRatio="3/4" />
-        <Reveal className="tm27-intro-text">
-          <p className="tm27-lead">{theme2027.lead}</p>
-          {motLines.map((line) => (
-            <p key={line} className="tm27-mot-line">{line}</p>
-          ))}
-          {bridge.map((p) => (
-            <p key={p} className="tm27-bridge-line">{p}</p>
-          ))}
-        </Reveal>
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">mười hai tháng · bốn chặng</span>
-      </div>
-      <div className="wrap tm27-stages">
-        {stages2027.map((st, i) => {
-          const m = st.months.find((x) => featured2027.includes(x.num)) ?? st.months[0];
-          return (
-            <Reveal key={st.name} className="tm27-stage">
-              <div className="tm27-stage-head">
-                <span>{`chặng 0${i + 1}`}</span>
-                <h3>{st.name}</h3>
-              </div>
-              {st.months.map((mo) => (
-                <div key={mo.num} className="tm27-row">
-                  <span className="tm27-num">{mo.num}</span>
-                  <span className="tm27-title">
-                    {mo.title}
-                    <i>{mo.en}</i>
-                    <em>{mo.reminder}</em>
-                  </span>
-                  <span className="tm27-theme">{mo.theme}</span>
-                </div>
-              ))}
-              <div className="tm27-pair" style={{ marginTop: "1.6rem" }}>
-                <ImagePlaceholder label={`ảnh · tháng ${m.num} · mặt trước`} aspectRatio="3/4" />
-                <ImagePlaceholder label={`ảnh · tháng ${m.num} · mặt sau`} aspectRatio="3/4" />
-              </div>
-              <p className="tm27-cap">
-                tháng {m.num} · {m.title}
-                <i>{m.en}</i>
-              </p>
-              <p className="tm27-story">{m.text}</p>
-            </Reveal>
-          );
-        })}
-      </div>
-
-      <div className="wrap tm27-pair" style={{ marginBottom: "4rem" }}>
-        <ImagePlaceholder label="ảnh · bộ lịch thực tế" aspectRatio="3/4" />
-        <ImagePlaceholder label="ảnh · bìa lịch" aspectRatio="3/4" />
-      </div>
-
-      <div className="wrap" style={{ marginBottom: "1.2rem" }}>
-        <span className="eyebrow">thông tin sản phẩm</span>
-      </div>
-      <Reveal className="wrap" style={{ marginBottom: "5rem" }}>
-        {specs2027.map((sp) => (
-          <div key={sp.k} className="spec-row">
-            <span style={{ color: "var(--color-stone-alt)" }}>{sp.k}</span>
-            <span style={{ color: "var(--color-ink)", textAlign: "right" }}>{sp.v}</span>
-          </div>
-        ))}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", paddingTop: "1.4rem" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-stone)" }}>giá</span>
-          <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.3rem", color: "var(--color-stone-alt)" }}>150.000đ</span>
-        </div>
-      </Reveal>
-
-      <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
-        <p style={{ fontFamily: sans, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
-          đặt bộ lịch 2027 qua form, hoặc theo dõi tea.mind để cập nhật thêm.
-        </p>
-        <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
-          <RegistrationLink href="https://forms.gle/Mkn4fEbdLGtj1hQD6" programName="tea.mind calendar 2027" className="cta-btn cta-btn--solid">
-            đặt hàng <span className="ar">→</span>
-          </RegistrationLink>
-          <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">
-            theo dõi tại ig <span className="ar">→</span>
-          </a>
-        </div>
-      </div>
-    </>
-  );
+  return <Lich2027 specs={specs2027} />;
 }
 
 export function TeaMindLichYears() {

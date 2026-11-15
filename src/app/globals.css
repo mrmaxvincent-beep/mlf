@@ -4173,3 +4173,8 @@ details[open] > summary .acc-icon {
 @media (prefers-reduced-motion: reduce) {
   .l27-flip, .l27-frame, .l27-stage, .l27-layer, .l27-ticks span, .l27-tile-img, .l27-order, .l27-bar { transition: none !important; }
 }
+
+/* trang lịch 2027: header, phần đầu và footer cùng nền giấy kem với thân trang */
+body.l27-page { background-image: none; background-color: #F6F2EA; }
+body.l27-page .site-header { background: #F6F2EA !important; border-bottom-color: rgba(43, 37, 34, 0.08) !important; }
+body.l27-page footer { border-top-color: rgba(43, 37, 34, 0.1) !important; }

@@ -58,6 +58,12 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
   const flipRef = useRef<HTMLElement | null>(null);
   const buyRef = useRef<HTMLElement | null>(null);
 
+  // cả trang (header, phần đầu, footer) dùng chung nền giấy kem của bộ lịch; trả lại nền cũ khi rời bản 2027
+  useEffect(() => {
+    document.body.classList.add("l27-page");
+    return () => document.body.classList.remove("l27-page");
+  }, []);
+
   // tháng nào đang nằm giữa màn hình thì tờ lịch và màu nền đổi theo tháng đó
   useEffect(() => {
     const io = new IntersectionObserver(

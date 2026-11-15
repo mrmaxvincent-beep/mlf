@@ -7,7 +7,7 @@ import { seasons, specs, lichYears, type LichYear } from "@/data/teaMindLich";
 import { Lich2027 } from "@/components/Lich2027";
 
 // 2027 giữ nguyên chất liệu, kích thước, giá; chỉ đổi dòng số lượng cho đúng chủ đề.
-const specs2027 = specs.map((sp) => (sp.k === "số lượng" ? { ...sp, v: "12 tờ - 12 tháng, 12 lát cắt đời sống" } : sp));
+const specs2027 = specs.filter((sp) => sp.k !== "mặt sau").map((sp) => (sp.k === "số lượng" ? { ...sp, v: "12 tờ - 12 tháng, 12 lát cắt đời sống" } : sp));
 
 const serif = "var(--font-serif)";
 const sans = "var(--font-sans)";

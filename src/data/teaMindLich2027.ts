@@ -171,7 +171,7 @@ export const look2027: Record<string, { tint: string; wash: string; shot?: strin
 
 // mặt sau mỗi tờ lịch
 export const back2027 = [
-  { k: "lịch âm", v: "ngày âm lịch của cả tháng, để biết rằm, mùng một, và nhịp trăng đi qua." },
-  { k: "thông điệp", v: "một lời nhắn nhỏ cho tháng ấy, đọc chậm, mang theo trong ngày." },
-  { k: "chỗ ghi chú", v: "một khoảng trống để viết: một hẹn, một điều biết ơn, hay chỉ một dòng cho riêng mình." },
+  { k: "lịch âm" },
+  { k: "thông điệp" },
+  { k: "chỗ ghi chú" },
 ];

@@ -174,7 +174,6 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
             {back2027.map((b) => (
               <div key={b.k}>
                 <dt>{b.k}</dt>
-                <dd>{b.v}</dd>
               </div>
             ))}
           </dl>

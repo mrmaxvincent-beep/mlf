@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from "react";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { fontHand } from "@/lib/fontHand";
@@ -174,11 +173,12 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
       {/* 4 · mặt sau mỗi tờ lịch */}
       <section className="l27-back wrap-wide">
         <div className="l27-back-img">
-          <ImagePlaceholder label="ảnh · mặt sau tờ lịch" aspectRatio="3/4" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="l27-back-shot" src="/assets/calendar2027_back.webp" alt="mặt sau tờ lịch tháng 09: lịch âm, thông điệp và chỗ ghi chú" width={720} height={1015} loading="lazy" draggable={false} onContextMenu={noSave} />
         </div>
         <div className="l27-back-text">
           <span className="l27-label">lật ra mặt sau</span>
-          <h3 className="l27-h3">mỗi tờ lịch có hai mặt</h3>
+          <h3 className="l27-h3">từng tờ lịch có hai mặt</h3>
           <p className="l27-p">mặt trước là tranh và lịch dương. mặt sau dành cho những điều chậm hơn:</p>
           <dl className="l27-back-list">
             {back2027.map((b) => (

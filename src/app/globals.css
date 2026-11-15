@@ -4178,3 +4178,5 @@ details[open] > summary .acc-icon {
 body.l27-page { background-image: none; background-color: #F6F2EA; }
 body.l27-page .site-header { background: #F6F2EA !important; border-bottom-color: rgba(43, 37, 34, 0.08) !important; }
 body.l27-page footer { border-top-color: rgba(43, 37, 34, 0.1) !important; }
+
+.l27-back-shot { display: block; width: 100%; height: auto; border-radius: 2px; box-shadow: 0 24px 50px -30px rgba(43, 37, 34, 0.55); user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }

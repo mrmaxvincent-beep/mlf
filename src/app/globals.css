@@ -4155,10 +4155,10 @@ details[open] > summary .acc-icon {
 @media (max-width: 560px) { .l27-stages { grid-template-columns: 1fr; } }
 
 /* 6 · cầm trên tay */
-.l27-buy { padding: clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem); text-align: center; }
+.l27-buy { padding-top: clamp(5rem, 10vw, 8rem); padding-bottom: clamp(4rem, 8vw, 6rem); text-align: center; } /* chỉ chỉnh trên/dưới để giữ lề trái phải của .wrap */
 .l27-specs { max-width: 30rem; margin: 0 auto; text-align: left; }
 .l27-spec { display: flex; justify-content: space-between; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid rgba(43, 37, 34, 0.12); font-family: var(--font-sans); font-size: 0.92rem; }
-.l27-spec span:first-child { color: var(--l27-soft); }
+.l27-spec span:first-child { color: var(--l27-soft); flex: none; white-space: nowrap; }
 .l27-spec span:last-child { text-align: right; }
 .l27-price { margin: 2rem 0 1.4rem; font-size: 2.4rem; color: var(--l27-plum); }
 .l27-ig { display: block; margin-top: 1.4rem; padding: 0.6rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--l27-soft); }

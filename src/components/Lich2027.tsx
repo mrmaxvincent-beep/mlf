@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties, type MouseEvent } from
 import { Reveal } from "@/components/Reveal";
 import { RegistrationLink } from "@/components/RegistrationLink";
 import { fontHand } from "@/lib/fontHand";
-import { theme2027, motLines, bridge, concept2027, stages2027, look2027, back2027, type Month2027 } from "@/data/teaMindLich2027";
+import { theme2027, bridge, concept2027, stages2027, look2027, back2027, type Month2027 } from "@/data/teaMindLich2027";
 
 const ORDER_FORM = "https://forms.gle/Mkn4fEbdLGtj1hQD6";
 const months: Month2027[] = stages2027.flatMap((st) => st.months);
@@ -129,6 +129,11 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
         </div>
       </section>
 
+      {/* giới thiệu ngắn ngay dưới ảnh đầu trang */}
+      <section className="l27-intro wrap">
+        <p>{concept2027}</p>
+      </section>
+
       {/* 2 · lật lịch: kéo xuống đến đâu, năm trôi qua đến đó */}
       <section className="l27-flip" ref={flipRef} style={{ "--tint": look2027[cur.num]?.tint } as CSSProperties} aria-label="mười hai tháng của bộ lịch">
         <div className="l27-flip-inner">
@@ -202,15 +207,11 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
       <section className="l27-story wrap">
         <Reveal>
           <p className="l27-lead">{theme2027.lead}</p>
-          {motLines.map((line) => (
-            <p key={line} className="l27-line">{line}</p>
-          ))}
         </Reveal>
         <Reveal className="l27-story-body">
           {bridge.map((p) => (
             <p key={p} className="l27-p">{p}</p>
           ))}
-          <p className="l27-p l27-concept">{concept2027}</p>
         </Reveal>
       </section>
 

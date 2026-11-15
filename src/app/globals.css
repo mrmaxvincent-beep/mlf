@@ -4182,3 +4182,9 @@ body.l27-page footer { border-top-color: rgba(43, 37, 34, 0.1) !important; }
 .l27-back-shot { display: block; width: 100%; height: auto; border-radius: 2px; box-shadow: 0 24px 50px -30px rgba(43, 37, 34, 0.55); user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 
 .l27-flat { display: block; height: 88%; width: auto; aspect-ratio: 1240 / 1748; border-radius: 2px; box-shadow: 0 1.5cqw 3.5cqw -1.5cqw rgba(43, 37, 34, 0.5); user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+
+/* câu dẫn dùng chữ nghiêng của mlf: font viết tay vẽ sai dấu ở một số chữ (kể, bằng) */
+.l27 .l27-lead { font-family: var(--font-serif); font-style: italic; font-weight: 300; }
+
+.l27-intro { padding-top: clamp(2.5rem, 6vw, 4.5rem); text-align: center; }
+.l27-intro p { max-width: 44ch; margin: 0 auto; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.15rem, 2.6vw, 1.4rem); line-height: 1.85; color: var(--l27-ink); }

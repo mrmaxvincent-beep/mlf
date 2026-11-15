@@ -187,7 +187,7 @@ export function Lich2027({ specs }: { specs: Spec[] }) {
       <section className="l27-back wrap-wide">
         <div className="l27-back-img">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="l27-back-shot" src="/assets/calendar2027_back.webp" alt="mặt sau tờ lịch tháng 09: lịch âm, thông điệp và chỗ ghi chú" width={720} height={1015} loading="lazy" draggable={false} onContextMenu={noSave} />
+          <img className="l27-back-shot" src="/assets/calendar2027_back.webp" alt="mặt sau tờ lịch tháng 09: lịch âm, thông điệp và chỗ ghi chú" width={520} height={733} loading="lazy" draggable={false} onContextMenu={noSave} />
         </div>
         <div className="l27-back-text">
           <span className="l27-label">lật ra mặt sau</span>

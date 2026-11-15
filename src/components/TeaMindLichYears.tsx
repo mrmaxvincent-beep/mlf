@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { Reveal } from "@/components/Reveal";
+import { RegistrationLink } from "@/components/RegistrationLink";
 import { seasons, specs, lichYears, type LichYear } from "@/data/teaMindLich";
 import { theme2027, motLines, bridge, concept2027, stages2027, featured2027 } from "@/data/teaMindLich2027";
 
@@ -119,6 +120,12 @@ function Edition2027() {
         <ImagePlaceholder label="bộ lịch tea.mind calendar 2027" alt="bộ lịch tea.mind calendar 2027" aspectRatio="3/2" src="/assets/calendar2027_1.webp" style={{ width: "100%", height: "auto" }} />
       </Reveal>
 
+      <div className="wrap" style={{ marginBottom: "4rem", textAlign: "center" }}>
+        <RegistrationLink href="https://forms.gle/Mkn4fEbdLGtj1hQD6" programName="tea.mind calendar 2027" className="cta-btn cta-btn--solid">
+           đặt hàng <span className="ar">→</span>
+         </RegistrationLink>
+      </div>
+
       <div className="wrap tm27-intro">
         <ImagePlaceholder label="ảnh · trang lời tựa" aspectRatio="3/4" />
         <Reveal className="tm27-intro-text">
@@ -192,9 +199,12 @@ function Edition2027() {
 
       <div className="wrap" style={{ marginBottom: "5rem", textAlign: "center" }}>
         <p style={{ fontFamily: sans, fontSize: "0.88rem", lineHeight: 1.85, color: "var(--color-ink)", margin: "0 0 1.5rem" }}>
-          bộ lịch 2027 sắp ra mắt - theo dõi tea.mind để biết ngày mở đặt trước.
+          đặt bộ lịch 2027 qua form, hoặc theo dõi tea.mind để cập nhật thêm.
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+          <RegistrationLink href="https://forms.gle/Mkn4fEbdLGtj1hQD6" programName="tea.mind calendar 2027" className="cta-btn cta-btn--solid">
+            đặt hàng <span className="ar">→</span>
+          </RegistrationLink>
           <a href="http://instagram.com/tea.mind/" target="_blank" rel="noopener" className="cta-btn">
             theo dõi tại ig <span className="ar">→</span>
           </a>

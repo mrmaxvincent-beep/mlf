@@ -103,10 +103,10 @@ export const stages2027: Stage2027[] = [
       {
         num: "08",
         title: "một bữa cơm",
-        en: "Around the Table",
+        en: "Around The Table",
         theme: "gắn kết",
         reminder: "ở bên nhau, trọn vẹn",
-        text: "Ăn chậm thôi, để câu chuyện bên mâm cơm được kéo dài thêm một chút nữa.",
+        text: "Mâm cơm đã vơi, câu chuyện vẫn còn đầy. Mình ngồi lại thêm chút nữa, cho trọn một bữa sum vầy.",
       },
       {
         num: "09",
@@ -163,7 +163,7 @@ export const look2027: Record<string, { tint: string; wash: string; card?: strin
   "05": { tint: "#F7EDC8", wash: "#F0C24B", card: "/assets/lich2027_05.webp" },
   "06": { tint: "#DCEBE6", wash: "#5AA9C9", card: "/assets/lich2027_06.webp", shot: "/assets/calendar2027_1.webp" },
   "07": { tint: "#E4E3EE", wash: "#8C88B8", card: "/assets/lich2027_07.webp" },
-  "08": { tint: "#F1E2D2", wash: "#D99A62", shot: "/assets/calendar2027_2.webp" },
+  "08": { tint: "#F1E2D2", wash: "#D99A62", card: "/assets/lich2027_08.webp", shot: "/assets/calendar2027_2.webp" },
   "09": { tint: "#DDE9D5", wash: "#6FA35A" },
   "10": { tint: "#F3E6D8", wash: "#D4A373" },
   "11": { tint: "#EDE4D3", wash: "#B9975B" },

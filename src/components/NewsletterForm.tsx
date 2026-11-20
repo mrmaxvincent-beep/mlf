@@ -57,11 +57,11 @@ export function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="email của bạn"
+          className="newsletter-input"
           style={{
             width: "13rem",
             maxWidth: "50vw",
             fontFamily: "var(--font-mono)",
-            fontSize: "1rem",
             letterSpacing: 0,
             color: "var(--color-ink)",
             background: "transparent",

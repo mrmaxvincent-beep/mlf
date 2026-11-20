@@ -230,6 +230,17 @@ a:hover .ar {
   border-color: var(--color-cham-dem);
 }
 
+/* Newsletter email field — small on desktop to sit with the 0.6rem label and button;
+   16px on phones so iOS Safari does not zoom the page when the field is focused. */
+.newsletter-input {
+  font-size: 0.72rem;
+}
+@media (max-width: 760px) {
+  .newsletter-input {
+    font-size: 16px;
+  }
+}
+
 /* Newsletter submit — plain color/border shift, no shimmer (the background-clip
    shimmer trick washes out on a button this small/tight, reading as text
    disappearing on hover). */

@@ -189,7 +189,6 @@ export const SEED_DAYS: DaySeed[] = [
         title: "Trò chuyện",
         shots: [
           k("interview", "Phỏng vấn Tâm", "Vì sao nơi này có mặt"),
-          k("interview", "Trò chuyện cùng Cà Chua", "Nếu chưa xong ngày 2"),
         ],
       },
       {

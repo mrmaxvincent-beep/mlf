@@ -78,3 +78,13 @@ export function currentSlotId(daySlots: Slot[], now = new Date()): string | null
   }
   return cur;
 }
+
+/** Bỏ dấu tiếng Việt, hạ chữ thường — để tìm "ngam chan" ra "Ngâm chân". */
+export function norm(s: string): string {
+  return s
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "d")
+    .toLowerCase();
+}

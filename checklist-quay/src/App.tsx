@@ -9,6 +9,7 @@ import { SlotForm } from "./components/SlotForm";
 import { AddShot } from "./components/AddShot";
 import { MenuSheet } from "./components/MenuSheet";
 import { DayForm } from "./components/DayForm";
+import { SearchResults } from "./components/SearchResults";
 import { Progress, btnPrimary } from "./components/ui";
 import { statsOf, shotsOfDay } from "./lib/stats";
 import { fmtDate, todayDayId } from "./lib/util";
@@ -80,6 +81,7 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
   const [tab, setTab] = useState<number | null>(null);
   const [filter, setFilter] = useState(false);
   const [allDays, setAllDays] = useState(false);
+  const [query, setQuery] = useState("");
   const [modal, setModal] = useState<Modal>(null);
   const [now, setNow] = useState(() => new Date());
 
@@ -165,7 +167,15 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
     }
   };
 
-  const showAll = filter && allDays;
+  const searching = query.trim().length > 0;
+  const showAll = !searching && filter && allDays;
+  const goto = (dayId: number, slotId: string) => {
+    setQuery("");
+    setTab(dayId);
+    window.setTimeout(() => {
+      document.getElementById(`slot-${slotId}`)?.scrollIntoView({ block: "start", behavior: "smooth" });
+    }, 120);
+  };
 
   return (
     <div className="mx-auto min-h-dvh max-w-2xl pb-24">
@@ -213,6 +223,26 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
             </button>
           )}
         </div>
+        <div className="relative mt-3">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Tìm cảnh: tên, mã #, ghi chú, khung giờ…"
+            aria-label="Tìm cảnh"
+            enterKeyHint="search"
+            className="min-h-12 w-full rounded-xl border-2 border-sand bg-white py-2 pr-12 pl-3 text-ink placeholder:text-ink/50 focus:border-moss focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+          />
+          {query && (
+            <button
+              onClick={() => setQuery("")}
+              aria-label="Xóa nội dung tìm"
+              className="absolute top-0 right-0 grid h-12 w-12 place-items-center text-xl"
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </header>
 
       {store.mode === "local" && (
@@ -230,7 +260,7 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
         </div>
       ) : (
         <>
-          {!showAll && (
+          {!showAll && !searching && (
             <nav className="sticky top-0 z-30 -mt-px border-y-2 border-sand bg-cream/95 backdrop-blur" aria-label="Chọn ngày">
               <div className="flex overflow-x-auto">
                 {days.map((d) => {
@@ -260,7 +290,9 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
             </nav>
           )}
 
-          {showAll ? (
+          {searching ? (
+            <SearchResults store={store} query={query} gemOnly={filter} actions={actions} onGoto={goto} />
+          ) : showAll ? (
             days.map((d) => (
               <div key={d.id} className="mb-4">
                 <DayView store={store} dayId={d.id} filter heading isToday={false} now={now} actions={actions} />

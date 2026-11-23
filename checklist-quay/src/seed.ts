@@ -97,12 +97,6 @@ export const SEED_DAYS: DaySeed[] = [
           ),
         ],
       },
-      {
-        time: "21:30",
-        title: "Chuyến xe đêm",
-        note: "Nếu có chặng đi đêm",
-        shots: [g(24, "Chuyến xe đêm", "Tiếng radio văng vẳng")],
-      },
     ],
   },
   {
@@ -184,6 +178,12 @@ export const SEED_DAYS: DaySeed[] = [
           k("interview", "Phỏng vấn Tâm", "Vì sao nơi này có mặt"),
           k("interview", "Trò chuyện cùng Cà Chua", "Nếu chưa xong ngày 2"),
         ],
+      },
+      {
+        time: "21:30",
+        title: "Chuyến xe đêm",
+        note: "Nếu có chặng đi đêm",
+        shots: [g(24, "Chuyến xe đêm", "Tiếng radio văng vẳng")],
       },
     ],
   },

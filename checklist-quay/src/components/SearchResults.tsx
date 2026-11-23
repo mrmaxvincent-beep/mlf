@@ -48,7 +48,7 @@ export function SearchResults({
     <div className="px-3 pb-6">
       <p className="px-1 py-3 font-semibold" role="status">
         {count > 0 ? `${count} cảnh khớp “${query.trim()}”` : `Không có cảnh nào khớp “${query.trim()}”`}
-        {gemOnly && " (đang lọc ⭐ còn thiếu)"}
+        {gemOnly && " (đang lọc ⭐ đắt giá còn thiếu)"}
       </p>
       <div className="grid gap-3">
         {groups.map(({ day, slot, shots }) => (

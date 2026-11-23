@@ -74,7 +74,7 @@ export function DayView({
         <div className="mt-3 flex items-center gap-3">
           <Progress done={dayStats.done} total={dayStats.total} className="flex-1" />
           <span className="text-sm font-semibold tabular-nums">
-            {dayStats.done}/{dayStats.total} · ⭐ còn {dayStats.gemMissing}
+            {dayStats.done}/{dayStats.total} · ⭐ đắt giá còn {dayStats.gemMissing}
           </span>
         </div>
         {!filter && (

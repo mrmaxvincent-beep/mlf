@@ -64,7 +64,7 @@ export function ShotRow({
           {shot.code != null && <span className="mr-2 font-bold text-moss tabular-nums">{code(shot.code)}</span>}
           <span className={`mr-2 font-semibold ${done ? "text-ink/60" : ""}`}>{shot.title}</span>
           {gem && (
-            <span className="mr-2" aria-label="Cảnh đắt giá">
+            <span className="mr-2" aria-label="Cảnh đắt giá" title="Cảnh đắt giá">
               ⭐
             </span>
           )}

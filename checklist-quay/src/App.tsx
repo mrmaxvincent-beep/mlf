@@ -200,7 +200,9 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
             {total.done}/{total.total} đã quay
           </span>
         </div>
-        <p className="mt-1 text-sm font-semibold">⭐ còn thiếu {total.gemMissing}/{total.gemTotal}</p>
+        <p className="mt-1 text-sm font-semibold">
+          ⭐ = cảnh đắt giá · còn thiếu {total.gemMissing}/{total.gemTotal}
+        </p>
         <div className="mt-2 flex flex-wrap gap-2">
           <button
             aria-pressed={filter}
@@ -209,7 +211,7 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
               filter ? "border-moss bg-moss text-cream" : "border-sand bg-card"
             }`}
           >
-            ⭐ còn thiếu
+            ⭐ đắt giá còn thiếu
           </button>
           {filter && (
             <button

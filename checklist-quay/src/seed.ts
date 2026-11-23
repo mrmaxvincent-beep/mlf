@@ -166,7 +166,26 @@ export const SEED_DAYS: DaySeed[] = [
         ],
       },
       {
-        time: "16:30",
+        time: "15:00",
+        title: "Bàn may của Thuận",
+        shots: [
+          g(28, "Thuận · Ngồi may"),
+          g(29, "Thuận · Đôi tay của Thuận"),
+          k("interview", "Phỏng vấn Thuận", "Yoga, thuận dưỡng, thuần"),
+        ],
+      },
+      {
+        time: "16:00",
+        title: "Bếp và bàn trà của Vũ",
+        shots: [
+          g(31, "Vũ · Trong căn bếp"),
+          g(7, "Làm bánh, chờ lò"),
+          g(32, "Vũ · Đôi tay của Vũ"),
+          k("interview", "Phỏng vấn Vũ", "Bếp, bánh, trà, tranh"),
+        ],
+      },
+      {
+        time: "17:00",
         title: "Trò chuyện",
         shots: [
           k("interview", "Phỏng vấn Tâm", "Vì sao nơi này có mặt"),
@@ -195,22 +214,9 @@ export const SEED_DAYS: DaySeed[] = [
       },
       {
         time: "08:00",
-        title: "Bàn may của Thuận",
-        shots: [
-          g(28, "Thuận · Ngồi may"),
-          g(29, "Thuận · Đôi tay của Thuận"),
-          k("interview", "Phỏng vấn Thuận", "Yoga, thuận dưỡng, thuần"),
-        ],
-      },
-      {
-        time: "10:30",
-        title: "Bếp và bàn trà của Vũ",
-        shots: [
-          g(31, "Vũ · Trong căn bếp"),
-          g(7, "Làm bánh, chờ lò"),
-          g(32, "Vũ · Đôi tay của Vũ"),
-          k("interview", "Phỏng vấn Vũ", "Bếp, bánh, trà, tranh"),
-        ],
+        title: "Quay backup",
+        note: "Bù các cảnh chưa kịp từ ngày 1–3 (kể cả phỏng vấn Tâm, Vũ, Thuận nếu thiếu)",
+        shots: [],
       },
       {
         time: "12:30",
@@ -220,12 +226,6 @@ export const SEED_DAYS: DaySeed[] = [
           s("Một khoảnh khắc chăm sóc hoặc lặng im cuối cùng", "Không cần cảnh chia tay"),
           s("Cảnh kết", "Đời sống vẫn tiếp tục"),
         ],
-      },
-      {
-        time: "15:00",
-        title: "Nếu còn thời gian: đi rừng, thác Diekla",
-        note: "Chỉ dùng khi còn thời gian; có thể dời cảnh từ ngày khác sang đây",
-        shots: [s("Bù các cảnh rừng, suối chưa kịp", "#35, #39, #41, #42, #40")],
       },
     ],
   },

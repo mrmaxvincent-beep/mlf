@@ -114,7 +114,7 @@ export const SEED_DAYS: DaySeed[] = [
         time: "09:30",
         title: "Thác Lô 3",
         shots: [
-          g(39, "Thác Deikla / Thác Lô 3", undefined, "Cần chốt địa điểm thật"),
+          g(39, "Thác Lô 3", undefined, "Đã chốt địa điểm: Thác Lô 3"),
           g(41, "Bàn chân trên đá"),
           g(42, "Bóng mây"),
           k("interview", "Trò chuyện cùng Như, Khanh và Cà Chua", "Sáng, bên suối ở Thác Lô 3"),

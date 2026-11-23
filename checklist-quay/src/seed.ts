@@ -61,12 +61,12 @@ export const SEED_DAYS: DaySeed[] = [
         shots: [
           g(36, "Đường vào làng", "Góc máy thấp ngang bước chân, June chạy trước"),
           g(17, "Những đứa trẻ ở trường mầm non", "Bàn tay, gương mặt, tiếng cười, trò chơi"),
-          g(
-            16,
-            "Cảnh #16 (chưa chốt tên)",
-            "Trước là “Bữa cơm tại nhà người bạn H'rê”, deck hiện chỉ còn số",
-            "Cần chốt bỏ hay giữ",
-          ),
+          {
+            code: 16,
+            title: "Đã hủy",
+            description: "Trước là “Bữa cơm tại nhà người bạn H'rê”",
+            note: "Đã hủy, không quay",
+          },
           s("Nhà chứa thóc, cầu gỗ", "Cảnh phụ để cắt nối"),
         ],
       },

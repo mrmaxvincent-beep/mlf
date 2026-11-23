@@ -222,8 +222,6 @@ export const SEED_DAYS: DaySeed[] = [
         title: "Bữa cơm chào nhau",
         shots: [
           s("Bữa cơm chào nhau", "Cả nhà quây quần"),
-          s("Một khoảnh khắc chăm sóc hoặc lặng im cuối cùng", "Không cần cảnh chia tay"),
-          s("Cảnh kết", "Đời sống vẫn tiếp tục"),
         ],
       },
     ],

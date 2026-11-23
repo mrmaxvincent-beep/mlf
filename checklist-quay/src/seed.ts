@@ -120,7 +120,6 @@ export const SEED_DAYS: DaySeed[] = [
           g(1, "Ô cửa bếp sáng đèn", "Hình mở và hình khép của phim"),
           g(3, "Nhiều đôi tay trong một khung bếp"),
           g(12, "Một khoảnh khắc chăm sóc"),
-          k("interview", "Trò chuyện cùng Như & Khanh", "Trước khi hai bạn rời MLF"),
         ],
       },
       {
@@ -130,6 +129,7 @@ export const SEED_DAYS: DaySeed[] = [
           g(39, "Thác Deikla / Thác Lô 3", undefined, "Cần chốt địa điểm thật"),
           g(41, "Bàn chân trên đá"),
           g(42, "Bóng mây"),
+          k("interview", "Trò chuyện cùng Như, Khanh và Cà Chua", "Sáng, bên suối ở Thác Lô 3"),
         ],
       },
       { time: "13:00", title: "Đường đèo cũ", shots: [g(40, "Cà Chua trên đèo cũ")] },

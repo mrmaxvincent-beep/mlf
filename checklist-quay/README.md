@@ -45,7 +45,6 @@ Khi chưa có biến Supabase, app chạy **chế độ thử trên máy** (lưu
 - Chạm ô vuông bên trái để tick **đã quay**; chạm lại để bỏ tick. Nhấn giữ ô tick hoặc chạm `⋯` để chọn *đã quay dư* / *chưa quay*.
 - Chạm vào hàng cảnh để mở chi tiết: sửa tên, mô tả, ghi chú (tự lưu), ⭐, loại, mã, **Dời tới…**, xóa.
 - "⭐ còn thiếu" lọc cảnh đắt giá chưa quay; bật thêm "Mọi ngày" để xem gộp cả phim.
-- "Sao chép tóm tắt" (đầu mỗi ngày) tạo văn bản gửi nhóm chat.
 - Khung giờ hiện tại của hôm nay (24–27.11) được tô sáng và tự cuộn tới.
 
 ## Bảo mật

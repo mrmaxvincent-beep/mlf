@@ -3,7 +3,6 @@ import type { Shot } from "../types";
 import type { Store } from "../lib/store";
 import { currentSlotId, fmtDate, shotsOfSlot, slotsOfDay } from "../lib/util";
 import { isMissingGem, shotsOfDay, statsOf } from "../lib/stats";
-import { copyText, daySummary } from "../lib/summary";
 import { btnGhost, Progress } from "./ui";
 import { SlotCard } from "./SlotCard";
 
@@ -60,11 +59,6 @@ export function DayView({
 
   const onTick = (s: Shot) => void store.setStatus(s.id, s.status === "todo" ? "done" : "todo");
 
-  const copy = async () => {
-    const ok = await copyText(daySummary(data, dayId));
-    store.showToast(ok ? "Đã sao chép tóm tắt, dán vào nhóm chat." : "Không sao chép được.");
-  };
-
   return (
     <div>
       <div className="px-4 pt-4 pb-3">
@@ -84,14 +78,12 @@ export function DayView({
           </span>
         </div>
         {!filter && (
-          <div className="mt-3 grid grid-cols-[1fr_auto] gap-2">
-            <button className={btnGhost} onClick={copy}>
-              Sao chép tóm tắt
-            </button>
-            <button className={btnGhost} onClick={() => actions.editDay(dayId)} aria-label="Sửa thông tin ngày">
-              ✎
-            </button>
-          </div>
+          <button
+            className={`${btnGhost} mt-3 w-full`}
+            onClick={() => actions.editDay(dayId)}
+          >
+            ✎ Sửa thông tin ngày
+          </button>
         )}
       </div>
 

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // app checklist-quay là dự án độc lập (Vite), có cấu hình riêng
+    "checklist-quay/**",
   ]),
 ]);
 

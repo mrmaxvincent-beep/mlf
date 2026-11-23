@@ -6,11 +6,17 @@ const ICON: Record<Status, string> = { todo: "○", done: "✓", extra_take: "�
 export function StatusPicker({
   shot,
   onPick,
+  canUp,
+  canDown,
+  onMove,
   onEdit,
   onDelete,
   onClose,
 }: {
   shot: Shot;
+  canUp: boolean;
+  canDown: boolean;
+  onMove: (dir: -1 | 1) => void;
   onPick: (s: Status) => void;
   onEdit: () => void;
   onDelete: () => void;
@@ -36,6 +42,12 @@ export function StatusPicker({
         ))}
       </div>
       <div className="mt-3 grid grid-cols-2 gap-2 border-t-2 border-sand pt-3">
+        <button className={btnGhost} disabled={!canUp} onClick={() => onMove(-1)}>
+          ▲ Lên
+        </button>
+        <button className={btnGhost} disabled={!canDown} onClick={() => onMove(1)}>
+          ▼ Xuống
+        </button>
         <button className={btnGhost} onClick={onEdit}>
           ✎ Sửa cảnh
         </button>

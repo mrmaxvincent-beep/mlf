@@ -12,7 +12,7 @@ import { DayForm } from "./components/DayForm";
 import { SearchResults } from "./components/SearchResults";
 import { Progress, btnPrimary } from "./components/ui";
 import { statsOf, shotsOfDay } from "./lib/stats";
-import { fmtDate, todayDayId } from "./lib/util";
+import { fmtDate, sortShots, todayDayId } from "./lib/util";
 
 const read = (k: string) => {
   try {
@@ -122,9 +122,15 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
       }
       case "status": {
         const s = shot(modal.id);
-        return s ? (
+        if (!s) return null;
+        const sib = sortShots(data.shots.filter((x) => x.slot_id === s.slot_id));
+        const pos = sib.findIndex((x) => x.id === s.id);
+        return (
           <StatusPicker
             shot={s}
+            canUp={pos > 0}
+            canDown={pos >= 0 && pos < sib.length - 1}
+            onMove={(dir) => void store.moveShotOrder(s.id, dir)}
             onPick={(st) => void store.setStatus(s.id, st)}
             onEdit={() => setModal({ t: "shot", id: s.id })}
             onDelete={() => {
@@ -135,7 +141,7 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
             }}
             onClose={close}
           />
-        ) : null;
+        );
       }
       case "move": {
         const s = shot(modal.id);

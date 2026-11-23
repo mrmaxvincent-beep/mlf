@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { Data, Shot, Slot, Status, Table } from "../types";
 import { backend, type ChangeEvent } from "./backend";
 import { buildSeed, uid } from "../seed";
+import { sortShots } from "./util";
 
 const EMPTY: Data = { days: [], slots: [], shots: [] };
 
@@ -150,6 +151,31 @@ export function useStore(userName: string) {
         (d) => applyEvent(d, { table: "shots", type: "delete", id }),
         () => backend.remove("shots", id),
       ),
+
+    /** Đổi chỗ cảnh với cảnh liền kề trong cùng khung (dir -1 = lên, 1 = xuống). */
+    moveShotOrder(id: string, dir: -1 | 1) {
+      const shot = ref.current.shots.find((x) => x.id === id);
+      if (!shot) return;
+      const list = sortShots(ref.current.shots.filter((x) => x.slot_id === shot.slot_id));
+      const i = list.findIndex((x) => x.id === id);
+      const j = i + dir;
+      if (i < 0 || j < 0 || j >= list.length) return;
+      [list[i], list[j]] = [list[j], list[i]];
+      // đánh số lại 0..n-1 để không bị trùng thứ tự
+      const changes = list.map((x, idx) => ({ id: x.id, sort: idx, was: x.sort })).filter((c) => c.sort !== c.was);
+      return run(
+        (d) => ({
+          ...d,
+          shots: d.shots.map((x) => {
+            const c = changes.find((y) => y.id === x.id);
+            return c ? { ...x, sort: c.sort } : x;
+          }),
+        }),
+        async () => {
+          for (const c of changes) await backend.update("shots", c.id, { sort: c.sort });
+        },
+      );
+    },
 
     moveShot(id: string, slotId: string) {
       return patchRow("shots", id, { slot_id: slotId, sort: nextSortInSlot(slotId) });

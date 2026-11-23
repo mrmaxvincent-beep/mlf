@@ -122,7 +122,20 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
       }
       case "status": {
         const s = shot(modal.id);
-        return s ? <StatusPicker shot={s} onPick={(st) => void store.setStatus(s.id, st)} onClose={close} /> : null;
+        return s ? (
+          <StatusPicker
+            shot={s}
+            onPick={(st) => void store.setStatus(s.id, st)}
+            onEdit={() => setModal({ t: "shot", id: s.id })}
+            onDelete={() => {
+              if (confirm(`Xóa cảnh “${s.title}”?`)) {
+                void store.deleteShot(s.id);
+                close();
+              }
+            }}
+            onClose={close}
+          />
+        ) : null;
       }
       case "move": {
         const s = shot(modal.id);

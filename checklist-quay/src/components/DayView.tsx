@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Shot } from "../types";
 import type { Store } from "../lib/store";
 import { currentSlotId, fmtDate, shotsOfSlot, slotsOfDay } from "../lib/util";
-import { isMissingGem, shotsOfDay, statsOf } from "../lib/stats";
+import { shotsOfDay, statsOf } from "../lib/stats";
 import { btnGhost, Progress } from "./ui";
 import { SlotCard } from "./SlotCard";
 
@@ -18,16 +18,12 @@ export interface Actions {
 export function DayView({
   store,
   dayId,
-  filter,
-  heading,
   isToday,
   now,
   actions,
 }: {
   store: Store;
   dayId: number;
-  filter: boolean;
-  heading: boolean;
   isToday: boolean;
   now: Date;
   actions: Actions;
@@ -42,20 +38,15 @@ export function DayView({
   const cur = isToday ? currentSlotId(slots, now) : null;
 
   useEffect(() => {
-    if (scrolled.current || !cur || filter) return;
+    if (scrolled.current || !cur) return;
     scrolled.current = true;
     document.getElementById(`slot-${cur}`)?.scrollIntoView({ block: "start" });
-  }, [cur, filter]);
+  }, [cur]);
 
   if (!day) return null;
   const dayStats = statsOf(shotsOfDay(data, dayId));
 
-  const rows = slots
-    .map((slot) => {
-      const all = shotsOfSlot(data, slot.id);
-      return { slot, all, shown: filter ? all.filter(isMissingGem) : all };
-    })
-    .filter((r) => !filter || r.shown.length > 0);
+  const rows = slots.map((slot) => ({ slot, all: shotsOfSlot(data, slot.id) }));
 
   const onTick = (s: Shot) => void store.setStatus(s.id, s.status === "todo" ? "done" : "todo");
 
@@ -77,28 +68,23 @@ export function DayView({
             {dayStats.done}/{dayStats.total} · ⭐ đắt giá còn {dayStats.gemMissing}
           </span>
         </div>
-        {!filter && (
-          <button
-            className={`${btnGhost} mt-3 w-full`}
-            onClick={() => actions.editDay(dayId)}
-          >
-            ✎ Sửa thông tin ngày
-          </button>
-        )}
+        <button className={`${btnGhost} mt-3 w-full`} onClick={() => actions.editDay(dayId)}>
+          ✎ Sửa thông tin ngày
+        </button>
       </div>
 
       <div className="grid gap-3 px-3">
-        {rows.map(({ slot, all, shown }) => {
+        {rows.map(({ slot, all }) => {
           const isCur = slot.id === cur;
           const st = statsOf(all);
           if (!(slot.id in initiallyDone.current)) initiallyDone.current[slot.id] = st.total > 0 && st.done === st.total && !isCur;
-          const open = filter ? true : (overrides[slot.id] ?? !initiallyDone.current[slot.id]);
+          const open = overrides[slot.id] ?? !initiallyDone.current[slot.id];
           return (
             <SlotCard
               key={slot.id}
               slot={slot}
               allShots={all}
-              shots={shown}
+              shots={all}
               current={isCur}
               open={open}
               onToggle={() => setOverrides((o) => ({ ...o, [slot.id]: !open }))}
@@ -110,19 +96,12 @@ export function DayView({
             />
           );
         })}
-        {filter && rows.length === 0 && (
-          <p className="rounded-2xl border-2 border-sand bg-card p-4 text-center font-semibold">
-            Không còn cảnh ⭐ nào thiếu {heading ? "" : "trong tab này"} 🎉
-          </p>
-        )}
-        {!filter && (
-          <button
-            onClick={() => actions.addSlot(dayId)}
-            className="min-h-14 rounded-2xl border-2 border-dashed border-moss font-bold text-moss active:bg-sand/30"
-          >
-            + Thêm khung giờ
-          </button>
-        )}
+        <button
+          onClick={() => actions.addSlot(dayId)}
+          className="min-h-14 rounded-2xl border-2 border-dashed border-moss font-bold text-moss active:bg-sand/30"
+        >
+          + Thêm khung giờ
+        </button>
       </div>
     </div>
   );

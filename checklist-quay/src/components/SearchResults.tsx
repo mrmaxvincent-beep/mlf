@@ -1,20 +1,17 @@
 import type { Shot } from "../types";
 import type { Store } from "../lib/store";
 import { fmtDate, hhmm, norm, shotsOfSlot, slotsOfDay } from "../lib/util";
-import { isMissingGem } from "../lib/stats";
 import { ShotRow } from "./ShotRow";
 import type { Actions } from "./DayView";
 
 export function SearchResults({
   store,
   query,
-  gemOnly,
   actions,
   onGoto,
 }: {
   store: Store;
   query: string;
-  gemOnly: boolean;
   actions: Actions;
   onGoto: (dayId: number, slotId: string) => void;
 }) {
@@ -37,7 +34,7 @@ export function SearchResults({
           day,
           slot,
           shots: shotsOfSlot(data, slot.id).filter(
-            (s) => matches(s, slot.title) && (!gemOnly || isMissingGem(s)),
+            (s) => matches(s, slot.title),
           ),
         }))
         .filter((g) => g.shots.length > 0),
@@ -48,7 +45,6 @@ export function SearchResults({
     <div className="px-3 pb-6">
       <p className="px-1 py-3 font-semibold" role="status">
         {count > 0 ? `${count} cảnh khớp “${query.trim()}”` : `Không có cảnh nào khớp “${query.trim()}”`}
-        {gemOnly && " (đang lọc ⭐ đắt giá còn thiếu)"}
       </p>
       <div className="grid gap-3">
         {groups.map(({ day, slot, shots }) => (

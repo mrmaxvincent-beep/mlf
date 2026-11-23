@@ -79,8 +79,6 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
   const store = useStore(name);
   const { data } = store;
   const [tab, setTab] = useState<number | null>(null);
-  const [filter, setFilter] = useState(false);
-  const [allDays, setAllDays] = useState(false);
   const [query, setQuery] = useState("");
   const [modal, setModal] = useState<Modal>(null);
   const [now, setNow] = useState(() => new Date());
@@ -168,7 +166,6 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
   };
 
   const searching = query.trim().length > 0;
-  const showAll = !searching && filter && allDays;
   const goto = (dayId: number, slotId: string) => {
     setQuery("");
     setTab(dayId);
@@ -203,28 +200,6 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
         <p className="mt-1 text-sm font-semibold">
           ⭐ = cảnh đắt giá · còn thiếu {total.gemMissing}/{total.gemTotal}
         </p>
-        <div className="mt-2 flex flex-wrap gap-2">
-          <button
-            aria-pressed={filter}
-            onClick={() => setFilter(!filter)}
-            className={`min-h-12 rounded-xl border-2 px-4 font-bold ${
-              filter ? "border-moss bg-moss text-cream" : "border-sand bg-card"
-            }`}
-          >
-            ⭐ đắt giá còn thiếu
-          </button>
-          {filter && (
-            <button
-              aria-pressed={allDays}
-              onClick={() => setAllDays(!allDays)}
-              className={`min-h-12 rounded-xl border-2 px-4 font-bold ${
-                allDays ? "border-moss bg-moss text-cream" : "border-sand bg-card"
-              }`}
-            >
-              Mọi ngày
-            </button>
-          )}
-        </div>
         <div className="relative mt-3">
           <input
             type="search"
@@ -262,7 +237,7 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
         </div>
       ) : (
         <>
-          {!showAll && !searching && (
+          {!searching && (
             <nav className="sticky top-0 z-30 -mt-px border-y-2 border-sand bg-cream/95 backdrop-blur" aria-label="Chọn ngày">
               <div className="flex overflow-x-auto">
                 {days.map((d) => {
@@ -293,20 +268,12 @@ function Main({ name, onRename, onLogout }: { name: string; onRename: (n: string
           )}
 
           {searching ? (
-            <SearchResults store={store} query={query} gemOnly={filter} actions={actions} onGoto={goto} />
-          ) : showAll ? (
-            days.map((d) => (
-              <div key={d.id} className="mb-4">
-                <DayView store={store} dayId={d.id} filter heading isToday={false} now={now} actions={actions} />
-              </div>
-            ))
+            <SearchResults store={store} query={query} actions={actions} onGoto={goto} />
           ) : (
             <DayView
               key={current}
               store={store}
               dayId={current}
-              filter={filter}
-              heading={false}
               isToday={current === today}
               now={now}
               actions={actions}

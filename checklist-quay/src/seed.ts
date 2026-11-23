@@ -89,12 +89,6 @@ export const SEED_DAYS: DaySeed[] = [
           g(14, "Khi không ai nói gì"),
           g(11, "Một người nói, một người nghe"),
           g(18, "Gương mặt người nghe"),
-          k(
-            "interview",
-            "Trò chuyện cùng Như & Khanh (và Cà Chua)",
-            "Bộ câu hỏi “đôi mắt của người xem”",
-            "Như & Khanh chỉ ở đến trưa ngày 2, ưu tiên xong sớm",
-          ),
         ],
       },
     ],

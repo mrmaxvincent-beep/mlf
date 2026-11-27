@@ -565,6 +565,18 @@ html{overscroll-behavior-y:contain}
 .tq-bar .row{display:flex;justify-content:space-between;gap:10px;font-size:14px}
 .tq-bar .trk{height:6px;border-radius:3px;background:var(--mist);margin-top:4px;overflow:hidden}
 .tq-bar .trk i{display:block;height:100%;background:var(--ink);opacity:.75;border-radius:3px}
+.tq-trend{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:10px}
+.tq-col{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
+.tq-col small{font-size:12px;opacity:.7}
+.tq-col.cur small:not(.v){opacity:1;font-weight:500}
+.tq-col .v{font-size:10px;white-space:nowrap}
+.tq-pair{height:96px;width:100%;display:flex;align-items:flex-end;justify-content:center;gap:3px}
+.tq-pair i{display:block;width:40%;max-width:16px;border-radius:3px 3px 0 0;opacity:.55}
+.tq-col.cur .tq-pair i{opacity:1}
+.tq-pair .in{background:#2f6b3f}
+.tq-pair .out{background:#b3261e}
+.tq-leg{margin:10px 0 0;display:flex;align-items:center;gap:4px}
+.tq-leg .dot{display:inline-block;width:8px;height:8px;border-radius:50%}
 .tq-todo{display:flex;flex-direction:column;gap:8px;margin-top:8px;font-size:14px}
 .tq-todo .ok{opacity:.7}
 .tq-todo button{margin-left:8px}
@@ -1911,7 +1923,24 @@ function drawDash(){
         h('div',{class:'tq-own'},PEOPLE.map(function(p){var n=sumA(owe.filter(function(e){return e.paid_by===p[0]}));return h('span',null,av(p[0],'sm'),n?vnd(n):'0')})))),
     h('div',{class:'card'},h('h2',null,'chi theo nhóm'),
       gl.length?h('div',{class:'tq-bars'},gl.map(function(g){var pc=te?Math.round(g[1]/te*100):0;
-        return h('div',{class:'tq-bar'},h('div',{class:'row'},h('span',null,g[0]),h('b',null,vnd(g[1])+' · '+pc+'%')),h('div',{class:'trk'},h('i',{style:'width:'+pc+'%'})))})):h('p',{class:'empty'},'Chưa có khoản chi trong tháng này.')));
+        return h('div',{class:'tq-bar'},h('div',{class:'row'},h('span',null,g[0]),h('b',null,vnd(g[1])+' · '+pc+'%')),h('div',{class:'trk'},h('i',{style:'width:'+pc+'%'})))})):h('p',{class:'empty'},'Chưa có khoản chi trong tháng này.')),
+    trendCard(m,sumA,isChi));
+}
+/* xu hướng 6 tháng: cột thu và cột chi, tháng đang xem ở ngoài cùng bên phải */
+function trendCard(m,sumA,isChi){
+  var ms=[];for(var i=5;i>=0;i--)ms.push(shiftMonth(m,-i));
+  var data=ms.map(function(x){return {m:x,t:sumA(S.inc.filter(function(r){return monthOf(r.received_on)===x})),c:sumA(S.exp.filter(function(e){return monthOf(e.spent_on)===x&&isChi(e)}))}});
+  var mx=Math.max.apply(null,data.map(function(d){return Math.max(d.t,d.c)}).concat([1]));
+  function short(n){return n>=1e6?(Math.round(n/1e5)/10)+'tr':n>=1e3?Math.round(n/1e3)+'k':String(n)}
+  return h('div',{class:'card'},h('h2',null,'xu hướng 6 tháng'),
+    h('div',{class:'tq-trend'},data.map(function(d){
+      return h('div',{class:'tq-col'+(d.m===m?' cur':'')},
+        h('div',{class:'tq-pair'},
+          h('i',{class:'in',style:'height:'+Math.max(Math.round(d.t/mx*100),d.t?2:0)+'%',title:'thu '+vnd(d.t)}),
+          h('i',{class:'out',style:'height:'+Math.max(Math.round(d.c/mx*100),d.c?2:0)+'%',title:'chi '+vnd(d.c)})),
+        h('small',null,'T'+Number(d.m.slice(5))),
+        h('small',{class:'v'},short(d.t)+' / '+short(d.c)))})),
+    h('p',{class:'meta tq-leg'},h('span',{class:'dot',style:'background:#2f6b3f'}),' thu  ',h('span',{class:'dot',style:'background:#b3261e'}),' chi'));
 }
 async function delInc(r){
   S.inc=S.inc.filter(function(x){return x.id!==r.id});if(S.incEdit===r.id)resetIncForm();render();

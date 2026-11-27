@@ -1883,7 +1883,7 @@ function drawIncome(){
         h('button',{type:'button',class:'x'+(S.armed===key?' armed':''),'aria-label':'xoá khoản thu này',onclick:function(){if(arm(key))delInc(r)}},S.armed===key?'xoá?':'×')):null);
   })):h('p',{class:'empty',style:'margin-top:14px'},S.status==='loading'?'đang tải …':'Chưa có khoản thu nào trong tháng này.'));
 }
-/* thu chi tổng quan: 7 chỉ số (thu, chi, còn lại, nợ hoàn ứng, chi theo nhóm, thu theo loại, cần xử lý) */
+/* thu chi tổng quan: thu, chi, còn lại, nợ hoàn ứng, chi theo nhóm */
 function drawDash(){
   if(!S.expMonth)S.expMonth=monthOf(today());
   monthNav('tqNav');
@@ -1902,13 +1902,6 @@ function drawDash(){
   var byG={};expM.forEach(function(e){var k=(e.scope==='Tuần-du'?'Tuần-du · ':'')+e.grp;byG[k]=(byG[k]||0)+Number(e.amount)});
   var gk=Object.keys(byG).sort(function(a,b){return byG[b]-byG[a]}),top=gk.slice(0,5),other=gk.slice(5).reduce(function(n,k){return n+byG[k]},0);
   var gl=top.map(function(k){return [k,byG[k]]});if(other)gl.push(['Nhóm khác',other]);
-  /* cần xử lý */
-  var noBk=S.inc.filter(function(r){return r.kind==='booking'&&!r.booking_id});
-  var late=owe.filter(function(e){return diff(e.spent_on,S.day)>14});
-  var todo=[];
-  if(noBk.length)todo.push(h('span',null,noBk.length+' khoản thu Booking chưa gán Booking ID',h('button',{type:'button',class:'ghost',onclick:function(){go('thu')}},'mở sổ thu')));
-  if(late.length)todo.push(h('span',null,late.length+' khoản chi chờ hoàn quá 14 ngày ('+vnd(sumA(late))+')',h('button',{type:'button',class:'ghost',onclick:function(){go('chi')}},'mở sổ chi')));
-  if(!todo.length)todo.push(h('span',{class:'ok'},'Không có khoản nào cần xử lý.'));
   put('tqBody',
     h('div',{class:'tq-tiles'},
       h('div',{class:'tq-t'},h('span',{class:'k'},'thu '+monthLabel(m)),h('b',null,vnd(ti)),delta(ti,tip)),
@@ -1918,12 +1911,7 @@ function drawDash(){
         h('div',{class:'tq-own'},PEOPLE.map(function(p){var n=sumA(owe.filter(function(e){return e.paid_by===p[0]}));return h('span',null,av(p[0],'sm'),n?vnd(n):'0')})))),
     h('div',{class:'card'},h('h2',null,'chi theo nhóm'),
       gl.length?h('div',{class:'tq-bars'},gl.map(function(g){var pc=te?Math.round(g[1]/te*100):0;
-        return h('div',{class:'tq-bar'},h('div',{class:'row'},h('span',null,g[0]),h('b',null,vnd(g[1])+' · '+pc+'%')),h('div',{class:'trk'},h('i',{style:'width:'+pc+'%'})))})):h('p',{class:'empty'},'Chưa có khoản chi trong tháng này.')),
-    h('div',{class:'card'},h('h2',null,'thu theo loại'),
-      ti?h('div',{class:'tq-bars'},INC_KIND.map(function(x){var n=sumA(incM.filter(function(r){return r.kind===x[0]})),pc=Math.round(n/ti*100);
-        return h('div',{class:'tq-bar'},h('div',{class:'row'},h('span',null,x[1]),h('b',null,vnd(n)+' · '+pc+'%')),h('div',{class:'trk'},h('i',{style:'width:'+pc+'%'})))})):h('p',{class:'empty'},'Chưa có khoản thu trong tháng này.')),
-    h('div',{class:'card'},h('h2',null,'cần xử lý'),h('div',{class:'tq-todo'},todo,h('span',{class:'meta syncStat'}))));
-  drawSyncStat();
+        return h('div',{class:'tq-bar'},h('div',{class:'row'},h('span',null,g[0]),h('b',null,vnd(g[1])+' · '+pc+'%')),h('div',{class:'trk'},h('i',{style:'width:'+pc+'%'})))})):h('p',{class:'empty'},'Chưa có khoản chi trong tháng này.')));
 }
 async function delInc(r){
   S.inc=S.inc.filter(function(x){return x.id!==r.id});if(S.incEdit===r.id)resetIncForm();render();

@@ -26,6 +26,13 @@ html {
   height: 100svh;
 }
 
+/* viền focus cho người dùng bàn phím: chỉ hiện khi dùng phím (không hiện khi bấm chuột);
+   các thành phần có viền riêng (.mhr-room, .l27-tile...) ghi đè được vì đứng sau và cụ thể hơn */
+:focus-visible {
+  outline: 2px solid var(--color-cham-dem);
+  outline-offset: 3px;
+}
+
 /* mở rộng vùng bấm lên tối thiểu ~44px mà không đổi bố cục (padding cộng, margin âm trừ lại) */
 .tap {
   padding: 0.75rem 0.6rem;
@@ -1475,6 +1482,7 @@ details[open] > summary .acc-icon {
   top: 6.5rem;
   align-self: start;
   max-height: calc(100vh - 8rem);
+  max-height: calc(100dvh - 8rem);
   display: flex;
   flex-direction: column;
 }
@@ -1895,7 +1903,10 @@ details[open] > summary .acc-icon {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--color-stone);
-  transition: all 0.2s var(--ease-standard);
+  transition:
+    color 0.2s var(--ease-standard),
+    background-color 0.2s var(--ease-standard),
+    border-color 0.2s var(--ease-standard);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1951,7 +1962,9 @@ details[open] > summary .acc-icon {
   font-family: var(--font-sans);
   font-size: 0.92rem;
   color: var(--color-stone);
-  transition: all 0.2s var(--ease-standard);
+  transition:
+    color 0.2s var(--ease-standard),
+    border-color 0.2s var(--ease-standard);
 }
 .hd-topic:hover {
   color: var(--color-ink);
@@ -2355,7 +2368,9 @@ details[open] > summary .acc-icon {
 }
 
 .register-button {
-  transition: all 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .register-button:hover {
   background: #1a2d3a !important;
@@ -3788,7 +3803,7 @@ details[open] > summary .acc-icon {
 .mh-season { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.04em; line-height: 1.6; color: var(--color-stone); }
 
 /* chi tiết một người, mở ngay trên trang */
-.mh-dialog { margin: auto; inset: 0; border: 0; padding: 0; width: min(880px, calc(100vw - 32px)); max-height: calc(100vh - 48px); background: #fff; color: var(--color-ink); box-shadow: 0 24px 64px rgba(35, 46, 63, 0.18); }
+.mh-dialog { margin: auto; inset: 0; border: 0; padding: 0; width: min(880px, calc(100vw - 32px)); max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); background: #fff; color: var(--color-ink); box-shadow: 0 24px 64px rgba(35, 46, 63, 0.18); }
 .mh-dialog::backdrop { background: rgba(35, 46, 63, 0.35); }
 .mh-sheet { position: relative; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 2.25rem; padding: 2.25rem; align-items: start; }
 .mh-close { position: absolute; top: 0.5rem; right: 0.5rem; width: 44px; height: 44px; border: 0; background: transparent; font-size: 1.6rem; line-height: 1; color: var(--color-stone); cursor: pointer; }
@@ -3815,7 +3830,7 @@ details[open] > summary .acc-icon {
 .mh-closing a { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--color-ink); padding: 0.5rem 0; }
 
 @media (max-width: 760px) {
-    .mh-dialog { max-height: calc(100vh - 24px); }
+    .mh-dialog { max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); }
     .mh-name { font-size: 1rem; }
   .mh-invite { padding: 1.5rem 1.25rem; }
     }
@@ -3969,7 +3984,7 @@ details[open] > summary .acc-icon {
 .oya-screen { position: absolute; inset: 0.7rem; display: flex; flex-direction: column; border-radius: 1.8rem; overflow: hidden; background: #fbfaf6; }
 .oya-top { padding: 1.7rem 0 0.5rem; text-align: center; font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; color: var(--color-stone); }
 .oya-body { flex: 1; display: flex; flex-direction: column; gap: 0.7rem; padding: 1.2rem 1.2rem 0; animation: oya-in 0.5s ease both; }
-.oya-tag { font-family: var(--font-mono); font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cham-dem); }
+.oya-tag { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cham-dem); }
 .oya-line { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 1.7rem; line-height: 1.25; color: var(--color-ink); margin-bottom: 0.5rem; }
 .oya-skel { display: block; height: 0.55rem; border-radius: 999px; background: var(--color-mist); }
 .oya-card { display: block; flex: 1; max-height: 6.5rem; margin-top: 0.7rem; border-radius: 0.9rem; background: color-mix(in srgb, var(--color-cham-dem) 12%, #fbfaf6); }
@@ -4199,3 +4214,21 @@ body.l27-page footer { border-top-color: rgba(43, 37, 34, 0.1) !important; }
 
 .l27-intro { padding-top: clamp(2.5rem, 6vw, 4.5rem); text-align: center; }
 .l27-intro p { max-width: 44ch; margin: 0 auto; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(1.15rem, 2.6vw, 1.4rem); line-height: 1.85; color: var(--l27-ink); }
+
+/* Giảm chuyển động (người dùng bật trong hệ điều hành): nội dung hiện ngay tại chỗ thay vì trượt lên,
+   cuộn nhảy thẳng thay vì cuộn mượt. Đặt cuối file để thắng các quy tắc [data-reveal] ở trên. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal],
+  [data-reveal-child] {
+    transform: none;
+    transition: opacity 0.2s linear;
+  }
+}
+
+/* trang đêm: viền focus màu chàm-đậm gần như chìm trên nền chàm-đêm, nên đổi sang màu giấy */
+.night-page :focus-visible {
+  outline-color: var(--color-cotton);
+}

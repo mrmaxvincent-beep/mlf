@@ -12,17 +12,19 @@ const images = [
 
 export function DiaryCarousel() {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false); // rê chuột vào thì dừng để đọc trang nhật ký
 
   useEffect(() => {
+    if (paused) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; // không tự chuyển khi bật giảm chuyển động
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [paused]);
 
   return (
-    <div style={{ maxWidth: "24rem", margin: "0 auto" }}>
+    <div style={{ maxWidth: "24rem", margin: "0 auto" }} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       <ImagePlaceholder label={images[active].label} aspectRatio="3/4" src={images[active].src} style={{ width: "100%", height: "100%" }} objectFit="contain" />
     </div>
   );

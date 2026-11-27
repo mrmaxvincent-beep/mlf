@@ -188,7 +188,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
                     transition: "all 0.3s ease",
                   }}
                 />
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.52rem", letterSpacing: "0.06em", color: i === period ? "var(--color-cham-dem)" : "var(--color-stone)" }}>{label}</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.64rem", letterSpacing: "0.06em", color: i === period ? "var(--color-cham-dem)" : "var(--color-stone)" }}>{label}</span>
               </div>
             ))}
           </div>
@@ -249,7 +249,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
             {line}
           </p>
         ))}
-        <span style={{ display: "block", marginTop: "1rem", fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>— {dayPoem.attribution}</span>
+        <span style={{ display: "block", marginTop: "1rem", fontFamily: "var(--font-mono)", fontSize: "0.64rem", letterSpacing: "0.1em", color: "var(--color-stone)" }}>— {dayPoem.attribution}</span>
       </Reveal>
 
       {/* GÓP MỘT NGÀY */}
@@ -374,7 +374,7 @@ export function OneDayOYen({ hints, notesFallback, dayPoem, startingTotal }: { h
           <div style={{ transition: "opacity .7s var(--ease-standard), transform .7s var(--ease-standard)", opacity: fading ? 0 : 1, transform: fading ? "translateY(-8px)" : "translateY(0)" }}>
             <span aria-hidden style={{ display: "block", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "2.2rem", lineHeight: 1, color: "var(--color-cham)", marginBottom: "0.3rem" }}>&ldquo;</span>
             <span style={{ fontFamily: "var(--font-serif)", fontSize: "1.05rem", lineHeight: 1.9, color: "var(--color-ink)", display: "block", maxWidth: "40ch", margin: "0 auto" }}>{currentNote?.body}</span>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginTop: "1.6rem", display: "block" }}>— {currentNote?.from}</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.64rem", letterSpacing: "0.1em", color: "var(--color-stone)", marginTop: "1.6rem", display: "block" }}>— {currentNote?.from}</span>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", marginTop: "2.6rem" }}>

@@ -290,7 +290,7 @@ function NavDropdown({
           padding: 0,
         }}
       >
-        {label} <span style={{ fontSize: "0.55rem", transform: open ? "rotate(180deg)" : "none" }}>▾</span>
+        {label} <span style={{ fontSize: "0.64rem", transform: open ? "rotate(180deg)" : "none" }}>▾</span>
       </button>
       {open ? (
         <div style={{ position: "absolute", top: "100%", [align]: 0, paddingTop: "0.9rem" }}>

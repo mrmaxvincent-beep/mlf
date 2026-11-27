@@ -10,9 +10,9 @@ export function FaqPlusList({ items }: { items: { q: string; a: string }[] }) {
     <>
       {items.map((item, i) => (
         <div key={item.q} className="faq-row">
-          <button className="faq-q" onClick={() => setOpen(open === i ? null : i)}>
+          <button className="faq-q" aria-expanded={open === i} onClick={() => setOpen(open === i ? null : i)}>
             <span>{item.q}</span>
-            <span style={{ flex: "none", transform: open === i ? "rotate(45deg)" : "rotate(0deg)", transition: "transform .2s ease", fontFamily: "var(--font-sans)", color: "var(--color-stone)" }}>+</span>
+            <span aria-hidden="true" style={{ flex: "none", transform: open === i ? "rotate(45deg)" : "rotate(0deg)", transition: "transform .2s ease", fontFamily: "var(--font-sans)", color: "var(--color-stone)" }}>+</span>
           </button>
           {open === i ? <p className="faq-a">{item.a}</p> : null}
         </div>

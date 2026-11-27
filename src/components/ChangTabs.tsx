@@ -16,12 +16,14 @@ export function ChangTabs({ chang }: { chang: Chang[] }) {
 
   return (
     <div>
-      <div style={{ display: "flex", gap: 0, flexWrap: "wrap", borderBottom: "1px solid var(--color-mist)", marginBottom: "1.5rem" }}>
+      <div role="tablist" aria-label="các chặng" style={{ display: "flex", gap: 0, flexWrap: "wrap", borderBottom: "1px solid var(--color-mist)", marginBottom: "1.5rem" }}>
         {chang.map((c) => {
           const isActive = active === c.num;
           return (
             <button
               key={c.num}
+              role="tab"
+              aria-selected={isActive}
               onClick={() => setActive(c.num)}
               style={{
                 fontFamily: "var(--font-mono)",

@@ -11,12 +11,15 @@ export function SessionTabs({ sessions, total }: { sessions: Session[]; total?: 
 
   return (
     <div>
-      <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+      <div role="tablist" aria-label="các buổi" style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
         {sessions.map((s) => {
           const isActive = active === s.n;
           return (
             <button
               key={s.n}
+              role="tab"
+              aria-selected={isActive}
+              aria-label={`buổi ${s.n}`}
               onClick={() => setActive(s.n)}
               style={{
                 width: "2.1rem",

@@ -30,7 +30,15 @@ export function ImageStoryCarousel({ stories, showCounter = true }: { stories: {
   const current = stories[index];
 
   return (
-    <div style={{ position: "relative", aspectRatio: "16/9" }} onMouseEnter={() => timerRef.current && clearInterval(timerRef.current)} onMouseLeave={start}>
+    <div
+      style={{ position: "relative", aspectRatio: "16/9" }}
+      onMouseEnter={() => timerRef.current && clearInterval(timerRef.current)}
+      onMouseLeave={start}
+      onFocus={() => timerRef.current && clearInterval(timerRef.current)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) start();
+      }}
+    >
       <ImagePlaceholder label={current.label} src={current.src} aspectRatio="16/9" style={{ height: "100%" }} />
       <button
         onClick={() => go(index - 1)}

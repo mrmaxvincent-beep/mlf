@@ -91,7 +91,7 @@ export function NewsletterForm() {
         </button>
       </div>
       {status === "error" ? (
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.58rem", color: "var(--color-stone)" }}>có lỗi xảy ra, thử lại giúp mình nhé.</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.64rem", color: "var(--color-stone)" }}>có lỗi xảy ra, thử lại giúp mình nhé.</span>
       ) : null}
     </form>
   );

@@ -11,6 +11,7 @@ interface CarouselImage {
 
 export function ImageCarousel({ images, showCounter = true, showDots = true }: { images: CarouselImage[]; showCounter?: boolean; showDots?: boolean }) {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false); // dừng tự chuyển khi rê chuột hoặc đang focus vào carousel
 
   const goTo = useCallback(
     (i: number) => {
@@ -20,17 +21,26 @@ export function ImageCarousel({ images, showCounter = true, showDots = true }: {
   );
 
   useEffect(() => {
+    if (paused) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; // không tự chuyển ảnh khi người dùng bật giảm chuyển động
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 4500);
     return () => clearInterval(interval);
-  }, [images.length, current]);
+  }, [images.length, current, paused]);
 
   const img = images[current];
 
   return (
-    <div style={{ width: "100%" }}>
+    <div
+      style={{ width: "100%" }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) setPaused(false);
+      }}
+    >
       <div style={{ position: "relative", width: "100%", overflow: "hidden", borderRadius: "0.4rem" }}>
         {img.src ? (
           <Image

@@ -16,6 +16,7 @@ export function ExpandableContent({ title, subtitle, content }: ExpandableConten
     <Reveal>
       <div style={{ borderTop: "1px solid var(--color-mist)", paddingTop: "1.5rem" }}>
         <button
+          aria-expanded={isExpanded}
           onClick={() => setIsExpanded(!isExpanded)}
           style={{
             background: "none",
@@ -56,6 +57,7 @@ export function ExpandableContent({ title, subtitle, content }: ExpandableConten
             )}
           </div>
           <span
+            aria-hidden="true"
             style={{
               fontSize: "0.7rem",
               flexShrink: 0,

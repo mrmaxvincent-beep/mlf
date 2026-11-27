@@ -126,7 +126,7 @@ export default function HomePage() {
         </div>
 
         <div className="scroll-hint-wrap" style={{ position: "absolute", bottom: "2.5rem", left: "50%", transform: "translateX(-50%)", zIndex: 2, display: "flex", flexDirection: "column", alignItems: "center", gap: "0.6rem", color: "var(--color-paper-dem)" }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>scroll</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.64rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>scroll</span>
           <span className="scroll-hint-line" />
         </div>
       </div>

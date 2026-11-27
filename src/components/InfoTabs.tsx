@@ -9,10 +9,12 @@ export function InfoTabs({ tabs }: { tabs: { label: string; content: ReactNode }
   return (
     <div>
       <div className="wrap-wide" style={{ marginBottom: "2rem", maxWidth: "672px" }}>
-        <div style={{ display: "flex", gap: "2rem", borderBottom: "1px solid var(--color-mist)" }}>
+        <div role="tablist" style={{ display: "flex", gap: "2rem", borderBottom: "1px solid var(--color-mist)" }}>
           {tabs.map((t, i) => (
             <button
               key={t.label}
+              role="tab"
+              aria-selected={active === i}
               onClick={() => setActive(i)}
               className="tab-btn"
               style={{
@@ -33,7 +35,7 @@ export function InfoTabs({ tabs }: { tabs: { label: string; content: ReactNode }
           ))}
         </div>
       </div>
-      <div className="wrap-wide" style={{ marginBottom: "5rem", maxWidth: "672px" }}>
+      <div role="tabpanel" className="wrap-wide" style={{ marginBottom: "5rem", maxWidth: "672px" }}>
         {tabs[active].content}
       </div>
     </div>

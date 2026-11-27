@@ -9,10 +9,12 @@ export function AmenityTabs({ vehicles, amenities }: { vehicles: string[]; ameni
 
   return (
     <div>
-      <div style={{ display: "flex", gap: "2rem", borderBottom: "1px solid var(--color-mist)", marginBottom: "1.5rem" }}>
+      <div role="tablist" style={{ display: "flex", gap: "2rem", borderBottom: "1px solid var(--color-mist)", marginBottom: "1.5rem" }}>
         {["phương tiện", "trang thiết bị khác"].map((label, i) => (
           <button
             key={label}
+            role="tab"
+            aria-selected={tab === i}
             onClick={() => setTab(i)}
             style={{
               fontFamily: "var(--font-mono)",

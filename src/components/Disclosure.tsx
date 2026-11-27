@@ -18,6 +18,7 @@ export function Disclosure({
   return (
     <div style={{ borderBottom: border ? "1px solid var(--color-mist)" : undefined }}>
       <button
+        aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
         style={{
           width: "100%",
@@ -35,6 +36,7 @@ export function Disclosure({
       >
         {trigger}
         <span
+          aria-hidden="true"
           style={{
             fontSize: "0.7rem",
             flexShrink: 0,

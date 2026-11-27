@@ -28,7 +28,7 @@ export function DaoNayLine({ fallback }: { fallback: Trace[] }) {
       <div className="dn-card">
         <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.9rem" }}>
           <span className="dn-avatar">
-            <img src="/icon.png" alt="" />
+            <img src="/icon.png" alt="" width={40} height={40} />
           </span>
           <div style={{ display: "flex", alignItems: "center", gap: "0.55rem" }}>
             <span className="dn-dot" aria-hidden />

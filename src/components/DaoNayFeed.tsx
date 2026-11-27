@@ -48,7 +48,7 @@ export function DaoNayFeed({ fallback }: { fallback: Trace[] }) {
           <article key={t.d + t.body} className="dn-card" style={{ marginBottom: "1.1rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.9rem" }}>
               <span className="dn-avatar">
-                <img src="/icon.png" alt="" />
+                <img src="/icon.png" alt="" width={40} height={40} />
               </span>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.15rem" }}>
                 <span style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", fontWeight: 600, color: "var(--color-ink)" }}>mộc little farm</span>

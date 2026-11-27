@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Crimson_Text, JetBrains_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_URL, organizationSchema, webSiteSchema } from "@/lib/seo";
 import "@/styles/tokens.css";
 import "./globals.css";
 
@@ -28,6 +30,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "mộc little farm — slow stay & retreat ở-yên, Măng Đen",
     template: "%s · mộc little farm",
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
     description: "Retreat farm giữa Măng Đen, theo triết lý ở-yên — cho ai muốn một chuyến đi chậm (slow stay), không lịch trình dày.",
     type: "website",
     locale: "vi_VN",
-    url: "https://moclittlefarm.com",
+    url: "./", // mỗi trang tự lấy địa chỉ của chính nó (không phải mọi trang đều trỏ về trang chủ)
     images: [
       {
         url: "https://moclittlefarm.com/og-image.jpg",
@@ -58,7 +61,9 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   alternates: {
-    canonical: "https://moclittlefarm.com",
+    // "./" được Next đổi thành địa chỉ đầy đủ của từng trang. Trước đây ghi cứng trang chủ,
+    // khiến mọi trang không tự khai canonical đều bảo Google "tôi chỉ là bản sao của trang chủ".
+    canonical: "./",
   },
 };
 
@@ -68,7 +73,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <GoogleAnalytics />
       </head>
-      <body>{children}</body>
+      <body>
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={webSiteSchema} />
+        {children}
+      </body>
     </html>
   );
 }

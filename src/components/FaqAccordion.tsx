@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Accordion } from "./Accordion";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema } from "@/lib/seo";
 
 export function FaqAccordion({ items, initialCount = 6, collapsible = true }: { items: { q: string; a: string }[]; initialCount?: number; collapsible?: boolean }) {
   const [showAll, setShowAll] = useState(false);
@@ -10,6 +12,7 @@ export function FaqAccordion({ items, initialCount = 6, collapsible = true }: { 
 
   const list = (
     <div style={{ display: "flex", flexDirection: "column" }}>
+      <JsonLd data={faqSchema(items)} />
       {shown.map((item) => (
         <div key={item.q} style={{ borderTop: "1px solid var(--color-mist)", padding: "0.95rem 0" }}>
           <details>

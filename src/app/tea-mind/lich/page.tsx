@@ -5,6 +5,8 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { routes } from "@/lib/nav";
 import { TeaMindLichYears } from "@/components/TeaMindLichYears";
+import { JsonLd } from "@/components/JsonLd";
+import { calendar2027Schema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "tea.mind calendar",
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 export default function TeaMindLichPage() {
   return (
     <>
+      <JsonLd data={calendar2027Schema} />
       <Header />
 
       <div className="wrap" style={{ paddingTop: "6.5rem" }}>

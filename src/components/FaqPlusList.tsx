@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema } from "@/lib/seo";
 
 /** Flat FAQ list with a "+" marker that rotates 45° on open — cộng đồng ở-yên FAQ. */
 export function FaqPlusList({ items }: { items: { q: string; a: string }[] }) {
@@ -8,6 +10,7 @@ export function FaqPlusList({ items }: { items: { q: string; a: string }[] }) {
 
   return (
     <>
+      <JsonLd data={faqSchema(items)} />
       {items.map((item, i) => (
         <div key={item.q} className="faq-row">
           <button className="faq-q" aria-expanded={open === i} onClick={() => setOpen(open === i ? null : i)}>

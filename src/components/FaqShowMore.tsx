@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Disclosure } from "./Disclosure";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema } from "@/lib/seo";
 
 /** Flat FAQ list, each row independently toggleable, with a "show more" reveal past the initial count. */
 export function FaqShowMore({ items, initialCount = 6 }: { items: { q: string; a: string }[]; initialCount?: number }) {
@@ -10,6 +12,7 @@ export function FaqShowMore({ items, initialCount = 6 }: { items: { q: string; a
 
   return (
     <div>
+      <JsonLd data={faqSchema(items)} />
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", padding: "0.9rem 0", marginBottom: "1.6rem" }}>
         <span className="eyebrow" style={{ marginBottom: 0 }}>
           câu hỏi thường gặp

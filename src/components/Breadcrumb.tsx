@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { routes } from "@/lib/nav";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/seo";
 
 type Crumb = { label: string; href?: string };
 
@@ -8,6 +10,8 @@ type Crumb = { label: string; href?: string };
 export function Breadcrumb({ label, trail }: { label?: string; trail?: Crumb[] }) {
   const items: Crumb[] = trail ?? (label ? [{ label }] : []);
   return (
+    <>
+      <JsonLd data={breadcrumbSchema(items.map((it) => ({ name: it.label, href: it.href })))} />
     <div
       style={{
         display: "flex",
@@ -38,5 +42,6 @@ export function Breadcrumb({ label, trail }: { label?: string; trail?: Crumb[] }
         </span>
       ))}
     </div>
+    </>
   );
 }

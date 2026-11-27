@@ -580,6 +580,23 @@ html{overscroll-behavior-y:contain}
 .tq-todo{display:flex;flex-direction:column;gap:8px;margin-top:8px;font-size:14px}
 .tq-todo .ok{opacity:.7}
 .tq-todo button{margin-left:8px}
+.tq-rows{display:flex;flex-direction:column;gap:9px;margin-top:8px}
+.tq-r{display:grid;grid-template-columns:1fr auto;gap:0 10px;align-items:baseline;font-size:14px}
+.tq-r b{font-size:17px;font-weight:500;white-space:nowrap}
+.tq-r small{grid-column:1/-1;font-size:12px;opacity:.7}
+.tq-r.sum{border-top:1px solid var(--line);padding-top:9px}
+.tq-list{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:14px}
+.tq-list li{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.tq-list .tx{display:flex;flex-direction:column;min-width:0}
+.tq-list .due{font-size:12px;opacity:.7}
+.tq-list b{font-weight:500;white-space:nowrap}
+.tq-warn{margin:10px 0 0;font-size:13px;color:#b3261e}
+.tq-src{margin:10px 0 0;font-size:12px}
+.tq-src.bad{color:#b3261e}
+.tq-trend.y12{grid-template-columns:repeat(12,1fr);gap:3px;margin-top:14px}
+.tq-trend.y12 .tq-pair{height:78px;gap:2px}
+.tq-trend.y12 .tq-pair i{width:46%;max-width:9px}
+.tq-trend.y12 small{font-size:10px}
 #thu .fgrid input,#thu .fgrid select,#chi .fgrid input,#chi .fgrid select{display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;height:42px;padding:0 10px;line-height:1.2;font-size:16px;-webkit-appearance:none;appearance:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #thu .fgrid select,#chi .fgrid select{padding:0 24px 0 9px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%237a8794' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 9px center}
 #thu .fgrid input[type=date],#chi .fgrid input[type=date]{text-align:center;text-align-last:center}
@@ -948,7 +965,7 @@ function put(id){var el=$(id);el.replaceChildren.apply(el,Array.prototype.slice.
 var sb=null;
 var S={me:null,email:null,status:'loading',view:lsGet('mlfos.view')||'me',
   events:[],team:[],teamEdit:null,teamInit:0,chores:[],swaps:new Map(),backlog:[],tasks:[],checks:new Map(),syncAt:null,
-  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],cat:[],rec:[],plan:[],ticks:new Map(),recSel:{},recQ:'',recEdit:null,meals:[],mealWs:null,expMonth:null,expEdit:null,inc:[],incEdit:null,
+  tpl:[],prep:new Map(),eset:new Map(),st:[],stp:[],notes:[],shop:[],exp:[],cat:[],rec:[],plan:[],ticks:new Map(),recSel:{},recQ:'',recEdit:null,meals:[],mealWs:null,expMonth:null,expEdit:null,inc:[],incEdit:null,fin:null,
   day:today(),ws:null,sel:null,addAt:null,assignAt:null,armed:null};
 S.ws=weekStart(S.day);S.sel=S.day;
 
@@ -1907,9 +1924,13 @@ function drawDash(){
   var expM=S.exp.filter(function(e){return monthOf(e.spent_on)===m&&isChi(e)}),expP=S.exp.filter(function(e){return monthOf(e.spent_on)===pm&&isChi(e)});
   var ti=sumA(incM),te=sumA(expM),tip=sumA(incP),tep=sumA(expP),net=ti-te;
   function delta(c,p){if(!p)return h('small',{class:'tq-d'},'tháng trước chưa có số');var pc=Math.round((c-p)/p*100);return h('small',{class:'tq-d'},(pc>=0?'▲ ':'▼ ')+Math.abs(pc)+'% so với tháng trước')}
-  /* nợ hoàn ứng: mọi tháng, người ứng trước chưa được hoàn */
+  /* nợ hoàn ứng: lấy từ tab Công nợ; chưa nhận được số liệu Finance thì tự tính từ sổ chi */
+  var F=S.fin&&S.fin.data?S.fin.data:null,CN=F&&F.cong_no?F.cong_no:null;
   var owe=S.exp.filter(function(e){return isChi(e)&&!e.reimbursed&&e.paid_by!=='mlf'});
-  var oweT=sumA(owe);
+  var oweT=CN?Number(CN.owe_advance||0):sumA(owe);
+  var oweL=CN&&CN.advancers&&CN.advancers.length
+    ?CN.advancers.map(function(a){return [pKey(a.name),a.name,Number(a.amount||0)]})
+    :PEOPLE.map(function(p){return [p[0],p[1],sumA(owe.filter(function(e){return e.paid_by===p[0]}))]});
   /* chi theo nhóm */
   var byG={};expM.forEach(function(e){var k=(e.scope==='Tuần-du'?'Tuần-du · ':'')+e.grp;byG[k]=(byG[k]||0)+Number(e.amount)});
   var gk=Object.keys(byG).sort(function(a,b){return byG[b]-byG[a]}),top=gk.slice(0,5),other=gk.slice(5).reduce(function(n,k){return n+byG[k]},0);
@@ -1920,27 +1941,88 @@ function drawDash(){
       h('div',{class:'tq-t'},h('span',{class:'k'},'chi '+monthLabel(m)),h('b',null,vnd(te)),delta(te,tep)),
       h('div',{class:'tq-t'},h('span',{class:'k'},'còn lại (thu − chi)'),h('b',{class:net<0?'neg':'pos'},(net<0?'−':'')+vnd(Math.abs(net))),h('small',{class:'tq-d'},net<0?'tháng này đang âm':'tháng này đang dư')),
       h('div',{class:'tq-t'},h('span',{class:'k'},'đang nợ hoàn ứng'),h('b',{class:oweT?'neg':''},vnd(oweT)),
-        h('div',{class:'tq-own'},PEOPLE.map(function(p){var n=sumA(owe.filter(function(e){return e.paid_by===p[0]}));return h('span',null,av(p[0],'sm'),n?vnd(n):'0')})))),
+        h('div',{class:'tq-own'},oweL.map(function(a){return h('span',null,a[0]?av(a[0],'sm'):h('span',null,a[1]+' '),a[2]?vnd(a[2]):'0')})))),
+    moneyCard(F,m),
+    flowCard(F,m),
+    debtCard(CN),
     h('div',{class:'card'},h('h2',null,'chi theo nhóm'),
       gl.length?h('div',{class:'tq-bars'},gl.map(function(g){var pc=te?Math.round(g[1]/te*100):0;
         return h('div',{class:'tq-bar'},h('div',{class:'row'},h('span',null,g[0]),h('b',null,vnd(g[1])+' · '+pc+'%')),h('div',{class:'trk'},h('i',{style:'width:'+pc+'%'})))})):h('p',{class:'empty'},'Chưa có khoản chi trong tháng này.')),
-    trendCard(m,sumA,isChi));
+    finNote());
 }
-/* xu hướng 6 tháng: cột thu và cột chi, tháng đang xem ở ngoài cùng bên phải */
-function trendCard(m,sumA,isChi){
-  var ms=[];for(var i=5;i>=0;i--)ms.push(shiftMonth(m,-i));
-  var data=ms.map(function(x){return {m:x,t:sumA(S.inc.filter(function(r){return monthOf(r.received_on)===x})),c:sumA(S.exp.filter(function(e){return monthOf(e.spent_on)===x&&isChi(e)}))}});
-  var mx=Math.max.apply(null,data.map(function(d){return Math.max(d.t,d.c)}).concat([1]));
-  function short(n){return n>=1e6?(Math.round(n/1e5)/10)+'tr':n>=1e3?Math.round(n/1e3)+'k':String(n)}
-  return h('div',{class:'card'},h('h2',null,'xu hướng 6 tháng'),
-    h('div',{class:'tq-trend'},data.map(function(d){
-      return h('div',{class:'tq-col'+(d.m===m?' cur':'')},
+/* ─── số liệu lấy từ Google Sheet Finance (một chiều, chỉ hiển thị) ─── */
+function pKey(name){var k=null,n=String(name||'').trim();Object.keys(PN).forEach(function(x){if(PN[x]===n)k=x});return k}
+/* ngày khác năm nay thì ghi thêm năm, vì công nợ có cả 2025 và 2027 */
+function finDate(s){
+  s=String(s||'');if(!/^\d{4}-\d{2}-\d{2}$/.test(s))return s;
+  return dm(s)+(s.slice(0,4)===S.day.slice(0,4)?'':'/'+s.slice(0,4));
+}
+function finEmpty(name){return h('div',{class:'card'},h('h2',null,name),h('p',{class:'empty'},'Chưa nhận được số liệu từ Google Sheet Finance. Số sẽ hiện sau lần đồng bộ tới.'))}
+function finNote(){
+  if(!S.fin||!S.fin.updated_at)return null;
+  var old=Date.now()-new Date(S.fin.updated_at).getTime()>3*36e5;
+  return h('p',{class:'meta tq-src'+(old?' bad':'')},'Sổ tiền, dòng tiền và công nợ lấy từ Google Sheet Finance, cập nhật '+syncFmt(S.fin.updated_at)+(old?'. Đã lâu chưa cập nhật, kiểm tra script trong sheet.':'.'));
+}
+function finBar(n,mx){return Math.max(Math.round(n/mx*100),n?2:0)}
+function finDot(c){return h('span',{class:'dot',style:'background:'+c})}
+/* số dư từng tài khoản cuối tháng đang xem */
+function moneyCard(F,m){
+  var ST=F&&F.so_tien?F.so_tien:null;
+  if(!ST)return finEmpty('sổ tiền');
+  var y=Number(m.slice(0,4)),mi=Number(m.slice(5));
+  if(Number(ST.year)!==y)return h('div',{class:'card'},h('h2',null,'sổ tiền'),h('p',{class:'empty'},'Sheet Finance đang theo năm '+ST.year+', chưa có số dư cho '+monthLabel(m)+'.'));
+  function pick(ms){for(var i=0;i<(ms||[]).length;i++)if(Number(ms[i].m)===mi)return ms[i];return null}
+  var tot=pick(ST.total),rows=(ST.accounts||[]).map(function(a){return [a.name,pick(a.months)]}).filter(function(x){return x[1]});
+  if(!rows.length&&!tot)return h('div',{class:'card'},h('h2',null,'sổ tiền'),h('p',{class:'empty'},'Chưa có số dư cho '+monthLabel(m)+'.'));
+  var warn=[];
+  if(Number(ST.no_account||0)>0)warn.push(Number(ST.no_account)+' dòng chưa có tài khoản, cần sửa trên mlf os');
+  rows.concat(tot?[['tổng',tot]]:[]).forEach(function(x){if(x[1].diff!=null&&Number(x[1].diff)!==0)warn.push(x[0]+' lệch sao kê '+vnd(Math.abs(Number(x[1].diff))))});
+  function line(nm,d,cls){return h('div',{class:'tq-r'+(cls?' '+cls:'')},h('span',null,nm),h('b',null,vnd(d.end)),h('small',null,'vào '+vnd(d.inn)+' · ra '+vnd(d.out)+(Number(d.move)?' · chuyển '+vnd(d.move):'')))}
+  return h('div',{class:'card'},h('h2',null,'sổ tiền cuối '+monthLabel(m)),
+    h('div',{class:'tq-rows'},rows.map(function(x){return line(x[0],x[1])}),tot?line('tổng các tài khoản',tot,'sum'):null),
+    warn.length?h('p',{class:'tq-warn'},warn.join(' · ')+'.'):null);
+}
+/* dòng tiền 12 tháng của năm đang xem */
+function flowCard(F,m){
+  var CF=F&&F.cashflow?F.cashflow:null;
+  if(!CF)return finEmpty('dòng tiền');
+  var y=Number(m.slice(0,4)),cur=Number(m.slice(5));
+  var blk=(CF.by_year||[]).filter(function(b){return Number(b.year)===y})[0];
+  var yr=(CF.years||[]).filter(function(b){return Number(b.year)===y})[0];
+  if(!blk||!(blk.months||[]).length)return h('div',{class:'card'},h('h2',null,'dòng tiền'),h('p',{class:'empty'},'Sheet Finance chưa có dòng tiền cho năm '+y+'.'));
+  var ms=blk.months,mx=Math.max.apply(null,ms.map(function(d){return Math.max(d.inn,d.out)}).concat([1]));
+  return h('div',{class:'card'},h('h2',null,'dòng tiền '+y),
+    yr?h('div',{class:'tq-rows'},
+      h('div',{class:'tq-r'},h('span',null,'thực thu cả năm'),h('b',null,vnd(yr.inn))),
+      h('div',{class:'tq-r'},h('span',null,'thực chi cả năm'),h('b',null,vnd(yr.out))),
+      h('div',{class:'tq-r'},h('span',null,'dòng tiền thuần'),h('b',{class:Number(yr.net)<0?'neg':'pos'},(Number(yr.net)<0?'−':'')+vnd(Math.abs(Number(yr.net))))),
+      Number(yr.receivable)?h('div',{class:'tq-r'},h('span',null,'còn phải thu'),h('b',null,vnd(yr.receivable))):null):null,
+    h('div',{class:'tq-trend y12'},ms.map(function(d){
+      return h('div',{class:'tq-col'+(Number(d.m)===cur?' cur':'')},
         h('div',{class:'tq-pair'},
-          h('i',{class:'in',style:'height:'+Math.max(Math.round(d.t/mx*100),d.t?2:0)+'%',title:'thu '+vnd(d.t)}),
-          h('i',{class:'out',style:'height:'+Math.max(Math.round(d.c/mx*100),d.c?2:0)+'%',title:'chi '+vnd(d.c)})),
-        h('small',null,'T'+Number(d.m.slice(5))),
-        h('small',{class:'v'},short(d.t)+' / '+short(d.c)))})),
-    h('p',{class:'meta tq-leg'},h('span',{class:'dot',style:'background:#2f6b3f'}),' thu  ',h('span',{class:'dot',style:'background:#b3261e'}),' chi'));
+          h('i',{class:'in',style:'height:'+finBar(d.inn,mx)+'%',title:'thực thu '+vnd(d.inn)}),
+          h('i',{class:'out',style:'height:'+finBar(d.out,mx)+'%',title:'thực chi '+vnd(d.out)})),
+        h('small',null,d.m))})),
+    h('p',{class:'meta tq-leg'},finDot('#2f6b3f'),' thực thu  ',finDot('#b3261e'),' thực chi · lũy kế '+vnd(ms[ms.length-1].cum)),
+    h('p',{class:'meta tq-src'},'Thực thu đã trừ tiền hoàn khách, nên không bằng ô thu ở trên.'));
+}
+/* ba khoản nợ: khách nợ mlf, mlf nợ khách, mlf nợ người ứng */
+function debtCard(CN){
+  if(!CN)return finEmpty('công nợ');
+  var g=CN.guests||[],s=CN.services||[],rc=(CN.recon||[]).filter(function(x){return Number(x.diff)!==0});
+  function list(a,sub){return h('ul',{class:'tq-list'},a.map(function(x){
+    return h('li',null,h('span',{class:'tx'},x.name||x.id,h('span',{class:'due'},sub(x))),h('b',null,vnd(x.left)))}))}
+  return h('div',{class:'card'},h('h2',null,'công nợ'),
+    h('div',{class:'tq-rows'},
+      h('div',{class:'tq-r'},h('span',null,'khách còn nợ mlf'),h('b',{class:'pos'},vnd(CN.guest_owes)),h('small',null,g.length+' booking')),
+      h('div',{class:'tq-r'},h('span',null,'mlf còn nợ khách'),h('b',{class:Number(CN.owe_guest)?'neg':''},vnd(CN.owe_guest)),h('small',null,'gói trả trước và booking tạm hoãn')),
+      h('div',{class:'tq-r'},h('span',null,'mlf còn nợ người ứng'),h('b',{class:Number(CN.owe_advance)?'neg':''},vnd(CN.owe_advance)),
+        h('small',null,(CN.advancers||[]).map(function(a){return a.name+' '+vnd(a.amount)}).join(' · ')))),
+    g.length?h('details',{class:'more'},h('summary',null,'khách còn nợ, '+g.length+' booking'),
+      list(g,function(x){return [x.id,finDate(x.date)].filter(Boolean).join(' · ')})):null,
+    s.length?h('details',{class:'more'},h('summary',null,'mlf nợ khách, '+s.length+' khoản'),
+      list(s,function(x){return [x.type,finDate(x.date)].filter(Boolean).join(' · ')})):null,
+    rc.length?h('p',{class:'tq-warn'},'Đối chiếu booking với sổ thu đang lệch: '+rc.map(function(x){return x.id+' '+vnd(Math.abs(Number(x.diff)))}).join(', ')+'. Sổ thu hoặc Mastersheet còn thiếu hoặc nhầm một khoản.'):null);
 }
 async function delInc(r){
   S.inc=S.inc.filter(function(x){return x.id!==r.id});if(S.incEdit===r.id)resetIncForm();render();
@@ -2300,6 +2382,7 @@ var LOAD={
   shared_task_people:async function(){S.stp=await q(sb.from('shared_task_people').select('*'))},
   expenses:async function(){S.exp=await q(sb.from('expenses').select('*').order('spent_on',{ascending:false}).limit(3000))},
   incomes:async function(){S.inc=await q(sb.from('incomes').select('*').eq('deleted',false).order('received_on',{ascending:false}).limit(3000))},
+  finance_snapshot:async function(){var r=await q(sb.from('finance_snapshot').select('data,updated_at').eq('id',1));S.fin=r[0]||null},
   shop_catalog:async function(){S.cat=await q(sb.from('shop_catalog').select('*').order('created_at'))},
   meals:async function(){S.meals=await q(sb.from('meals').select('*').gte('day',add(S.day,-120)).order('created_at'))},
   recipes:async function(){S.rec=await q(sb.from('recipes').select('*').order('name'))},
@@ -2342,7 +2425,7 @@ function saveCache(){
   clearTimeout(ct);ct=setTimeout(function(){
     try{
       localStorage.setItem(cacheKey(S.email),JSON.stringify({me:S.me,at:Date.now(),events:S.events,team:S.team,chores:S.chores,backlog:S.backlog,syncAt:S.syncAt,tpl:S.tpl,
-        prep:Array.from(S.prep),eset:Array.from(S.eset),notes:S.notes,shop:S.shop,st:S.st,stp:S.stp,exp:S.exp.slice(0,600),inc:S.inc.slice(0,600),cat:S.cat,
+        prep:Array.from(S.prep),eset:Array.from(S.eset),notes:S.notes,shop:S.shop,st:S.st,stp:S.stp,exp:S.exp.slice(0,600),inc:S.inc.slice(0,600),cat:S.cat,fin:S.fin,
         meals:S.meals,rec:S.rec,plan:S.plan,ticks:Array.from(S.ticks),tasks:S.tasks,checks:Array.from(S.checks),swaps:Array.from(S.swaps)}));
     }catch(x){}
   },1200);
@@ -2353,7 +2436,7 @@ function readCache(email){
 function hydrate(c){
   S.events=c.events||[];S.team=c.team||[];S.chores=c.chores||[];S.backlog=c.backlog||[];S.syncAt=c.syncAt||null;S.tpl=c.tpl||[];
   S.prep=new Map(c.prep||[]);S.eset=new Map(c.eset||[]);S.notes=c.notes||[];S.shop=c.shop||[];S.st=c.st||[];S.stp=c.stp||[];
-  S.exp=c.exp||[];S.inc=c.inc||[];S.cat=c.cat||[];S.meals=c.meals||[];S.rec=c.rec||[];S.plan=c.plan||[];S.ticks=new Map(c.ticks||[]);
+  S.exp=c.exp||[];S.inc=c.inc||[];S.fin=c.fin||null;S.cat=c.cat||[];S.meals=c.meals||[];S.rec=c.rec||[];S.plan=c.plan||[];S.ticks=new Map(c.ticks||[]);
   S.tasks=c.tasks||[];S.checks=new Map(c.checks||[]);S.swaps=new Map(c.swaps||[]);S.status='ok';
 }
 
